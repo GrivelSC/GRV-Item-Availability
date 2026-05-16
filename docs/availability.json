@@ -723,25 +723,13 @@
       "next_available_qty": 5,
       "limiting_components": [
         {
-          "item_id": "420",
-          "item_name": "0NRD05I241",
-          "supportable_fg_units": 0,
-          "next_po_date": null,
-          "next_po_qty": 0
-        },
-        {
-          "item_id": "425",
-          "item_name": "0PUNINC45.VN",
-          "supportable_fg_units": 0,
-          "next_po_date": null,
-          "next_po_qty": 0
-        },
-        {
-          "item_id": "564",
-          "item_name": "0NRD05O74",
-          "supportable_fg_units": 0,
-          "next_po_date": null,
-          "next_po_qty": 0
+          "item_id": "6815",
+          "item_name": "PIGOSA.BG53",
+          "po_number": "PO-US-2600004",
+          "supportable_fg_units": 5,
+          "next_po_date": "2026-05-18",
+          "next_po_qty": 5.0,
+          "overdue": false
         }
       ],
       "availability_staircase": [
@@ -753,25 +741,13 @@
           "net_available": 0,
           "limiting_components": [
             {
-              "item_id": "420",
-              "item_name": "0NRD05I241",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
-            },
-            {
-              "item_id": "425",
-              "item_name": "0PUNINC45.VN",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
-            },
-            {
-              "item_id": "564",
-              "item_name": "0NRD05O74",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
+              "item_id": "6815",
+              "item_name": "PIGOSA.BG53",
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-05-18",
+              "next_po_qty": 5.0,
+              "overdue": false
             }
           ]
         },
@@ -783,25 +759,13 @@
           "net_available": 5,
           "limiting_components": [
             {
-              "item_id": "420",
-              "item_name": "0NRD05I241",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
-            },
-            {
-              "item_id": "425",
-              "item_name": "0PUNINC45.VN",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
-            },
-            {
-              "item_id": "564",
-              "item_name": "0NRD05O74",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
+              "item_id": "6815",
+              "item_name": "PIGOSA.BG53",
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-05-18",
+              "next_po_qty": 5.0,
+              "overdue": false
             }
           ]
         }
@@ -1469,25 +1433,22 @@
       "next_available_qty": 14,
       "limiting_components": [
         {
-          "item_id": "420",
-          "item_name": "0NRD05I241",
-          "supportable_fg_units": 0,
-          "next_po_date": null,
-          "next_po_qty": 0
+          "item_id": "6817",
+          "item_name": "PIGOSA.BG66",
+          "po_number": "PO-US-2600004",
+          "supportable_fg_units": 14,
+          "next_po_date": "2026-05-18",
+          "next_po_qty": 14.0,
+          "overdue": false
         },
         {
-          "item_id": "425",
-          "item_name": "0PUNINC45.VN",
-          "supportable_fg_units": 0,
-          "next_po_date": null,
-          "next_po_qty": 0
-        },
-        {
-          "item_id": "564",
-          "item_name": "0NRD05O74",
-          "supportable_fg_units": 0,
-          "next_po_date": null,
-          "next_po_qty": 0
+          "item_id": "6817",
+          "item_name": "PIGOSA.BG66",
+          "po_number": "PO-US-2600006",
+          "supportable_fg_units": 5,
+          "next_po_date": "2026-11-01",
+          "next_po_qty": 5.0,
+          "overdue": false
         }
       ],
       "availability_staircase": [
@@ -1499,25 +1460,22 @@
           "net_available": 0,
           "limiting_components": [
             {
-              "item_id": "420",
-              "item_name": "0NRD05I241",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
+              "item_id": "6817",
+              "item_name": "PIGOSA.BG66",
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 14,
+              "next_po_date": "2026-05-18",
+              "next_po_qty": 14.0,
+              "overdue": false
             },
             {
-              "item_id": "425",
-              "item_name": "0PUNINC45.VN",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
-            },
-            {
-              "item_id": "564",
-              "item_name": "0NRD05O74",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
+              "item_id": "6817",
+              "item_name": "PIGOSA.BG66",
+              "po_number": "PO-US-2600006",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-11-01",
+              "next_po_qty": 5.0,
+              "overdue": false
             }
           ]
         },
@@ -1529,25 +1487,22 @@
           "net_available": 14,
           "limiting_components": [
             {
-              "item_id": "420",
-              "item_name": "0NRD05I241",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
+              "item_id": "6817",
+              "item_name": "PIGOSA.BG66",
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 14,
+              "next_po_date": "2026-05-18",
+              "next_po_qty": 14.0,
+              "overdue": false
             },
             {
-              "item_id": "425",
-              "item_name": "0PUNINC45.VN",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
-            },
-            {
-              "item_id": "564",
-              "item_name": "0NRD05O74",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
+              "item_id": "6817",
+              "item_name": "PIGOSA.BG66",
+              "po_number": "PO-US-2600006",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-11-01",
+              "next_po_qty": 5.0,
+              "overdue": false
             }
           ]
         },
@@ -1559,25 +1514,22 @@
           "net_available": 11,
           "limiting_components": [
             {
-              "item_id": "420",
-              "item_name": "0NRD05I241",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
+              "item_id": "6817",
+              "item_name": "PIGOSA.BG66",
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 14,
+              "next_po_date": "2026-05-18",
+              "next_po_qty": 14.0,
+              "overdue": false
             },
             {
-              "item_id": "425",
-              "item_name": "0PUNINC45.VN",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
-            },
-            {
-              "item_id": "564",
-              "item_name": "0NRD05O74",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
+              "item_id": "6817",
+              "item_name": "PIGOSA.BG66",
+              "po_number": "PO-US-2600006",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-11-01",
+              "next_po_qty": 5.0,
+              "overdue": false
             }
           ]
         },
@@ -1589,25 +1541,22 @@
           "net_available": 0,
           "limiting_components": [
             {
-              "item_id": "420",
-              "item_name": "0NRD05I241",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
+              "item_id": "6817",
+              "item_name": "PIGOSA.BG66",
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 14,
+              "next_po_date": "2026-05-18",
+              "next_po_qty": 14.0,
+              "overdue": false
             },
             {
-              "item_id": "425",
-              "item_name": "0PUNINC45.VN",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
-            },
-            {
-              "item_id": "564",
-              "item_name": "0NRD05O74",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
+              "item_id": "6817",
+              "item_name": "PIGOSA.BG66",
+              "po_number": "PO-US-2600006",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-11-01",
+              "next_po_qty": 5.0,
+              "overdue": false
             }
           ]
         },
@@ -1619,25 +1568,22 @@
           "net_available": 0,
           "limiting_components": [
             {
-              "item_id": "420",
-              "item_name": "0NRD05I241",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
+              "item_id": "6817",
+              "item_name": "PIGOSA.BG66",
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 14,
+              "next_po_date": "2026-05-18",
+              "next_po_qty": 14.0,
+              "overdue": false
             },
             {
-              "item_id": "425",
-              "item_name": "0PUNINC45.VN",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
-            },
-            {
-              "item_id": "564",
-              "item_name": "0NRD05O74",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
+              "item_id": "6817",
+              "item_name": "PIGOSA.BG66",
+              "po_number": "PO-US-2600006",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-11-01",
+              "next_po_qty": 5.0,
+              "overdue": false
             }
           ]
         },
@@ -1649,25 +1595,22 @@
           "net_available": 0,
           "limiting_components": [
             {
-              "item_id": "420",
-              "item_name": "0NRD05I241",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
+              "item_id": "6817",
+              "item_name": "PIGOSA.BG66",
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 14,
+              "next_po_date": "2026-05-18",
+              "next_po_qty": 14.0,
+              "overdue": false
             },
             {
-              "item_id": "425",
-              "item_name": "0PUNINC45.VN",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
-            },
-            {
-              "item_id": "564",
-              "item_name": "0NRD05O74",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
+              "item_id": "6817",
+              "item_name": "PIGOSA.BG66",
+              "po_number": "PO-US-2600006",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-11-01",
+              "next_po_qty": 5.0,
+              "overdue": false
             }
           ]
         },
@@ -1679,25 +1622,22 @@
           "net_available": 0,
           "limiting_components": [
             {
-              "item_id": "420",
-              "item_name": "0NRD05I241",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
+              "item_id": "6817",
+              "item_name": "PIGOSA.BG66",
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 14,
+              "next_po_date": "2026-05-18",
+              "next_po_qty": 14.0,
+              "overdue": false
             },
             {
-              "item_id": "425",
-              "item_name": "0PUNINC45.VN",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
-            },
-            {
-              "item_id": "564",
-              "item_name": "0NRD05O74",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
+              "item_id": "6817",
+              "item_name": "PIGOSA.BG66",
+              "po_number": "PO-US-2600006",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-11-01",
+              "next_po_qty": 5.0,
+              "overdue": false
             }
           ]
         },
@@ -1709,25 +1649,22 @@
           "net_available": 0,
           "limiting_components": [
             {
-              "item_id": "420",
-              "item_name": "0NRD05I241",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
+              "item_id": "6817",
+              "item_name": "PIGOSA.BG66",
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 14,
+              "next_po_date": "2026-05-18",
+              "next_po_qty": 14.0,
+              "overdue": false
             },
             {
-              "item_id": "425",
-              "item_name": "0PUNINC45.VN",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
-            },
-            {
-              "item_id": "564",
-              "item_name": "0NRD05O74",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_qty": 0
+              "item_id": "6817",
+              "item_name": "PIGOSA.BG66",
+              "po_number": "PO-US-2600006",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-11-01",
+              "next_po_qty": 5.0,
+              "overdue": false
             }
           ]
         }

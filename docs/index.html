@@ -123,6 +123,29 @@ td.r{text-align:right;font-family:var(--mono);font-size:12px;}
 .spinner{width:24px;height:24px;border:2px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .7s linear infinite;}
 .err-box{background:var(--red-bg);border:1px solid var(--red);border-radius:var(--r);padding:.75rem 1rem;color:var(--red);font-size:12px;max-width:400px;text-align:center;}
 .empty-row td{text-align:center;padding:3rem;color:var(--dim);}
+
+/* ADMIN */
+.admin-btn{background:none;border:1px solid var(--border);border-radius:4px;color:var(--muted);cursor:pointer;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:14px;transition:all .15s;}
+.admin-btn:hover{border-color:var(--border2);color:var(--text);background:var(--surface2);}
+.modal-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.7);z-index:200;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
+.modal-overlay.open{display:flex;}
+.modal{background:var(--surface);border:1px solid var(--border);border-radius:10px;width:520px;max-width:90vw;max-height:85vh;overflow:auto;box-shadow:0 20px 60px rgba(0,0,0,.5);}
+.modal-header{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1.25rem;border-bottom:1px solid var(--border);}
+.modal-title{font-size:14px;font-weight:600;color:var(--text);}
+.modal-close{background:none;border:none;color:var(--muted);cursor:pointer;font-size:16px;width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:4px;}
+.modal-close:hover{background:var(--surface2);color:var(--text);}
+.modal-body{padding:1rem 1.25rem;}
+.admin-section{padding-bottom:1rem;margin-bottom:1rem;border-bottom:1px solid var(--border);}
+.admin-section-title{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--text);margin-bottom:.35rem;}
+.admin-section-desc{font-size:11px;color:var(--dim);margin-bottom:.5rem;line-height:1.5;}
+.admin-row{display:flex;align-items:center;gap:.5rem;}
+.admin-label{font-size:12px;color:var(--muted);}
+.admin-value{font-size:12px;color:var(--text);}
+.upload-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.35rem .75rem;border-radius:var(--r);border:1px solid var(--border);background:var(--bg);color:var(--muted);font-size:11px;font-family:var(--sans);cursor:pointer;transition:all .15s;}
+.upload-btn:hover{border-color:var(--border2);color:var(--text);}
+.download-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.45rem 1rem;border-radius:var(--r);border:1px solid var(--accent);background:var(--accent-s);color:var(--accent);font-size:12px;font-weight:500;font-family:var(--sans);cursor:pointer;transition:all .15s;}
+.download-btn:hover{background:var(--accent);color:#fff;}
+.fg-preview-list{font-size:10px;color:var(--muted);background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:.5rem;margin-top:.4rem;max-height:120px;overflow:auto;line-height:1.6;white-space:pre-wrap;}
 </style>
 </head>
 <body>
@@ -136,6 +159,7 @@ td.r{text-align:right;font-family:var(--mono);font-size:12px;}
   <div class="h-sep"></div>
   <span class="h-title">Item Availability</span>
   <div class="h-right">
+    <button class="admin-btn" onclick="openAdmin()" title="Admin Panel">⚙</button>
     <div class="freshness">
       <div class="f-dot"></div>
       <span id="freshness-text">loading…</span>
@@ -170,6 +194,78 @@ td.r{text-align:right;font-family:var(--mono);font-size:12px;}
 
 <div id="content">
   <div class="state-wrap"><div class="spinner"></div><span>Loading availability data…</span></div>
+</div>
+
+<!-- Admin Modal -->
+<div class="modal-overlay" id="admin-modal" onclick="if(event.target===this)closeAdmin()">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="modal-title">Admin Panel</span>
+      <button class="modal-close" onclick="closeAdmin()">✕</button>
+    </div>
+    <div class="modal-body">
+
+      <div class="admin-section">
+        <div class="admin-section-title">Finished Goods List</div>
+        <div class="admin-section-desc">Upload a CSV file with NetSuite internal IDs (one ID per row, no header). The lifecycle is pulled from NetSuite during refresh.</div>
+        <div class="admin-row">
+          <span class="admin-label">Current FG count:</span>
+          <span class="admin-value mono" id="fg-count">0</span>
+        </div>
+        <div class="admin-row" style="margin-top:.5rem;">
+          <label class="upload-btn">
+            📄 Upload FG List CSV
+            <input type="file" accept=".csv,.txt" id="fg-csv-input" onchange="handleFgCsv(this)" style="display:none">
+          </label>
+        </div>
+        <div id="fg-preview" style="display:none;">
+          <div class="admin-row" style="margin-top:.5rem;">
+            <span class="admin-label">IDs parsed:</span>
+            <span class="admin-value mono" id="fg-parsed-count">0</span>
+          </div>
+          <div class="fg-preview-list mono" id="fg-preview-list"></div>
+        </div>
+      </div>
+
+      <div class="admin-section">
+        <div class="admin-section-title">Exclusion List</div>
+        <div class="admin-section-desc">Items excluded from BOM constraint calculations (treated as unconstrained supply).</div>
+        <div class="admin-row">
+          <span class="admin-label">Excluded items:</span>
+          <span class="admin-value mono" id="excl-count">0</span>
+        </div>
+        <div class="fg-preview-list mono" id="excl-list" style="max-height:100px;"></div>
+        <div class="admin-row" style="margin-top:.5rem;">
+          <label class="upload-btn">
+            📄 Upload Exclusion CSV
+            <input type="file" accept=".csv,.txt" id="excl-csv-input" onchange="handleExclCsv(this)" style="display:none">
+          </label>
+        </div>
+      </div>
+
+      <div class="admin-section">
+        <div class="admin-section-title">Embargo List</div>
+        <div class="admin-section-desc">SKUs with availability gated until a specific date. CSV format: internal_id,embargo_date (YYYY-MM-DD)</div>
+        <div class="admin-row">
+          <span class="admin-label">Embargoed items:</span>
+          <span class="admin-value mono" id="emb-count">0</span>
+        </div>
+        <div class="fg-preview-list mono" id="emb-list" style="max-height:100px;"></div>
+        <div class="admin-row" style="margin-top:.5rem;">
+          <label class="upload-btn">
+            📄 Upload Embargo CSV
+            <input type="file" accept=".csv,.txt" id="emb-csv-input" onchange="handleEmbCsv(this)" style="display:none">
+          </label>
+        </div>
+      </div>
+
+      <div class="admin-section" style="border-bottom:none;">
+        <button class="download-btn" onclick="downloadConfig()">⬇ Download Updated config.json</button>
+        <div class="admin-section-desc" style="margin-top:.5rem;">After downloading, upload this file to GitHub at <span class="mono">docs/config.json</span> and trigger a refresh in Claude.</div>
+      </div>
+
+    </div>
+  </div>
 </div>
 
 </div>
@@ -335,7 +431,108 @@ function esc(s){
   return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
+// ── ADMIN PANEL ──────────────────────────────────────────────────────────
+var cfg = { settings:{}, fg_list:[], exclusion_list:[], embargo_list:[] };
+
+async function loadConfig(){
+  try{
+    var base='/GRV-Item-Availability/';
+    var r=await fetch(base+'config.json');
+    if(r.ok) cfg=await r.json();
+  }catch(e){}
+  refreshAdminDisplay();
+}
+
+function refreshAdminDisplay(){
+  document.getElementById('fg-count').textContent=cfg.fg_list.length;
+  document.getElementById('excl-count').textContent=cfg.exclusion_list.length;
+  document.getElementById('emb-count').textContent=cfg.embargo_list.length;
+  var el=document.getElementById('excl-list');
+  if(cfg.exclusion_list.length)
+    el.textContent=cfg.exclusion_list.map(function(e){return e.item_id+' — '+(e.item_name||'')+(e.reason?' ('+e.reason+')':'');}).join('\n');
+  else el.textContent='(none)';
+  var eb=document.getElementById('emb-list');
+  if(cfg.embargo_list.length)
+    eb.textContent=cfg.embargo_list.map(function(e){return e.item_id+' — '+(e.item_name||'')+' → '+(e.embargo_date||'');}).join('\n');
+  else eb.textContent='(none)';
+}
+
+function openAdmin(){ document.getElementById('admin-modal').classList.add('open'); }
+function closeAdmin(){ document.getElementById('admin-modal').classList.remove('open'); }
+
+function parseCsvIds(text){
+  return text.split(/[\r\n,]+/).map(function(s){return s.trim().replace(/['"]/g,'');}).filter(function(s){return s&&/^\d+$/.test(s);});
+}
+
+function parseCsvIdName(text){
+  var rows=text.split(/[\r\n]+/).filter(function(s){return s.trim();});
+  return rows.map(function(row){
+    var cols=row.split(',').map(function(s){return s.trim().replace(/['"]/g,'');});
+    return {item_id:cols[0]||'', item_name:cols[1]||''};
+  }).filter(function(r){return r.item_id&&/^\d+$/.test(r.item_id);});
+}
+
+function parseCsvEmbargo(text){
+  var rows=text.split(/[\r\n]+/).filter(function(s){return s.trim();});
+  return rows.map(function(row){
+    var cols=row.split(',').map(function(s){return s.trim().replace(/['"]/g,'');});
+    return {item_id:cols[0]||'', item_name:cols[1]||'', embargo_date:cols[2]||cols[1]||''};
+  }).filter(function(r){return r.item_id&&/^\d+$/.test(r.item_id);});
+}
+
+function handleFgCsv(input){
+  var file=input.files[0];
+  if(!file)return;
+  var reader=new FileReader();
+  reader.onload=function(e){
+    var ids=parseCsvIds(e.target.result);
+    cfg.fg_list=ids.map(function(id){return{item_id:id,item_name:''};});
+    document.getElementById('fg-count').textContent=ids.length;
+    document.getElementById('fg-preview').style.display='block';
+    document.getElementById('fg-parsed-count').textContent=ids.length;
+    var preview=ids.slice(0,50).join(', ');
+    if(ids.length>50) preview+=' … +'+(ids.length-50)+' more';
+    document.getElementById('fg-preview-list').textContent=preview;
+  };
+  reader.readAsText(file);
+}
+
+function handleExclCsv(input){
+  var file=input.files[0];
+  if(!file)return;
+  var reader=new FileReader();
+  reader.onload=function(e){
+    var items=parseCsvIdName(e.target.result);
+    cfg.exclusion_list=items.map(function(r){return{item_id:r.item_id,item_name:r.item_name,reason:''};});
+    refreshAdminDisplay();
+  };
+  reader.readAsText(file);
+}
+
+function handleEmbCsv(input){
+  var file=input.files[0];
+  if(!file)return;
+  var reader=new FileReader();
+  reader.onload=function(e){
+    var items=parseCsvEmbargo(e.target.result);
+    cfg.embargo_list=items;
+    refreshAdminDisplay();
+  };
+  reader.readAsText(file);
+}
+
+function downloadConfig(){
+  var blob=new Blob([JSON.stringify(cfg,null,2)],{type:'application/json'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  a.href=url; a.download='config.json';
+  document.body.appendChild(a); a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
 boot();
+loadConfig();
 </script>
 </body>
 </html>
