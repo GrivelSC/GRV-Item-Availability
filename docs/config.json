@@ -3,7 +3,8 @@
     "planning_horizon_days": 90,
     "verrayes_pad_days": 7,
     "usa3pl_pad_days": 7,
-    "usa3pl_embargo_pad_days": 0
+    "usa3pl_embargo_pad_days": 0,
+    "overdue_po_buffer_days": 7
   },
   "fg_list": [
     { "item_id": "6815", "item_name": "PIGOSA.BG53" },

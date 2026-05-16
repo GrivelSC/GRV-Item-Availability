@@ -13,9 +13,9 @@
       "status": "in_stock",
       "available_today": 148,
       "total_open_demand": 143,
-      "committable": 91,
+      "committable": 161,
       "max_buildable_today": 154,
-      "max_buildable_horizon": 234,
+      "max_buildable_horizon": 304,
       "next_available_date": "2026-05-29",
       "next_available_qty": 137,
       "limiting_components": [
@@ -24,19 +24,19 @@
           "item_name": "0MAGOSA.BG49",
           "supportable_fg_units": 88,
           "next_po_date": "2026-07-17",
-          "next_po_qty": 80.0
+          "next_po_qty": 50.0
+        },
+        {
+          "item_id": "2315",
+          "item_name": "0TE021.01GN",
+          "supportable_fg_units": 539,
+          "next_po_date": null,
+          "next_po_qty": 0
         },
         {
           "item_id": "2288",
           "item_name": "0INP27",
           "supportable_fg_units": 1011,
-          "next_po_date": null,
-          "next_po_qty": 0
-        },
-        {
-          "item_id": "2294",
-          "item_name": "0INT12",
-          "supportable_fg_units": 1026,
           "next_po_date": null,
           "next_po_qty": 0
         }
@@ -54,19 +54,19 @@
               "item_name": "0MAGOSA.BG49",
               "supportable_fg_units": 88,
               "next_po_date": "2026-07-17",
-              "next_po_qty": 80.0
+              "next_po_qty": 50.0
+            },
+            {
+              "item_id": "2315",
+              "item_name": "0TE021.01GN",
+              "supportable_fg_units": 539,
+              "next_po_date": null,
+              "next_po_qty": 0
             },
             {
               "item_id": "2288",
               "item_name": "0INP27",
               "supportable_fg_units": 1011,
-              "next_po_date": null,
-              "next_po_qty": 0
-            },
-            {
-              "item_id": "2294",
-              "item_name": "0INT12",
-              "supportable_fg_units": 1026,
               "next_po_date": null,
               "next_po_qty": 0
             }
@@ -84,7 +84,37 @@
               "item_name": "0MAGOSA.BG49",
               "supportable_fg_units": 88,
               "next_po_date": "2026-07-17",
-              "next_po_qty": 80.0
+              "next_po_qty": 50.0
+            },
+            {
+              "item_id": "2315",
+              "item_name": "0TE021.01GN",
+              "supportable_fg_units": 539,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-05-23",
+          "display_date": "2026-05-30",
+          "buildable": 174,
+          "cumulative_demand": 17,
+          "net_available": 157,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
+              "supportable_fg_units": 108,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 50.0
             },
             {
               "item_id": "2288",
@@ -105,16 +135,16 @@
         {
           "date": "2026-05-29",
           "display_date": "2026-06-05",
-          "buildable": 154,
+          "buildable": 174,
           "cumulative_demand": 32,
-          "net_available": 122,
+          "net_available": 142,
           "limiting_components": [
             {
               "item_id": "7506",
               "item_name": "0MAGOSA.BG49",
-              "supportable_fg_units": 88,
+              "supportable_fg_units": 108,
               "next_po_date": "2026-07-17",
-              "next_po_qty": 80.0
+              "next_po_qty": 50.0
             },
             {
               "item_id": "2288",
@@ -135,16 +165,16 @@
         {
           "date": "2026-06-01",
           "display_date": "2026-06-08",
-          "buildable": 154,
+          "buildable": 174,
           "cumulative_demand": 35,
-          "net_available": 119,
+          "net_available": 139,
           "limiting_components": [
             {
               "item_id": "7506",
               "item_name": "0MAGOSA.BG49",
-              "supportable_fg_units": 88,
+              "supportable_fg_units": 108,
               "next_po_date": "2026-07-17",
-              "next_po_qty": 80.0
+              "next_po_qty": 50.0
             },
             {
               "item_id": "2288",
@@ -165,16 +195,16 @@
         {
           "date": "2026-06-05",
           "display_date": "2026-06-12",
-          "buildable": 154,
+          "buildable": 174,
           "cumulative_demand": 36,
-          "net_available": 118,
+          "net_available": 138,
           "limiting_components": [
             {
               "item_id": "7506",
               "item_name": "0MAGOSA.BG49",
-              "supportable_fg_units": 88,
+              "supportable_fg_units": 108,
               "next_po_date": "2026-07-17",
-              "next_po_qty": 80.0
+              "next_po_qty": 50.0
             },
             {
               "item_id": "2288",
@@ -195,16 +225,16 @@
         {
           "date": "2026-06-08",
           "display_date": "2026-06-15",
-          "buildable": 154,
+          "buildable": 174,
           "cumulative_demand": 37,
-          "net_available": 117,
+          "net_available": 137,
           "limiting_components": [
             {
               "item_id": "7506",
               "item_name": "0MAGOSA.BG49",
-              "supportable_fg_units": 88,
+              "supportable_fg_units": 108,
               "next_po_date": "2026-07-17",
-              "next_po_qty": 80.0
+              "next_po_qty": 50.0
             },
             {
               "item_id": "2288",
@@ -225,16 +255,16 @@
         {
           "date": "2026-07-01",
           "display_date": "2026-07-08",
-          "buildable": 154,
+          "buildable": 174,
           "cumulative_demand": 38,
-          "net_available": 116,
+          "net_available": 136,
           "limiting_components": [
             {
               "item_id": "7506",
               "item_name": "0MAGOSA.BG49",
-              "supportable_fg_units": 88,
+              "supportable_fg_units": 108,
               "next_po_date": "2026-07-17",
-              "next_po_qty": 80.0
+              "next_po_qty": 50.0
             },
             {
               "item_id": "2288",
@@ -255,16 +285,16 @@
         {
           "date": "2026-07-17",
           "display_date": "2026-07-24",
-          "buildable": 234,
+          "buildable": 304,
           "cumulative_demand": 38,
-          "net_available": 196,
+          "net_available": 266,
           "limiting_components": [
             {
               "item_id": "7506",
               "item_name": "0MAGOSA.BG49",
-              "supportable_fg_units": 168,
+              "supportable_fg_units": 238,
               "next_po_date": "2026-07-17",
-              "next_po_qty": 80.0
+              "next_po_qty": 50.0
             },
             {
               "item_id": "2288",
@@ -285,16 +315,376 @@
         {
           "date": "2026-08-03",
           "display_date": "2026-08-10",
-          "buildable": 234,
+          "buildable": 304,
           "cumulative_demand": 39,
+          "net_available": 265,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
+              "supportable_fg_units": 238,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 50.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-09-01",
+          "display_date": "2026-09-08",
+          "buildable": 304,
+          "cumulative_demand": 104,
+          "net_available": 200,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
+              "supportable_fg_units": 238,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 50.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-09-07",
+          "display_date": "2026-09-14",
+          "buildable": 304,
+          "cumulative_demand": 105,
+          "net_available": 199,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
+              "supportable_fg_units": 238,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 50.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-09-08",
+          "display_date": "2026-09-15",
+          "buildable": 304,
+          "cumulative_demand": 107,
+          "net_available": 197,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
+              "supportable_fg_units": 238,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 50.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-09-15",
+          "display_date": "2026-09-22",
+          "buildable": 304,
+          "cumulative_demand": 109,
           "net_available": 195,
           "limiting_components": [
             {
               "item_id": "7506",
               "item_name": "0MAGOSA.BG49",
-              "supportable_fg_units": 168,
+              "supportable_fg_units": 238,
               "next_po_date": "2026-07-17",
-              "next_po_qty": 80.0
+              "next_po_qty": 50.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-09-16",
+          "display_date": "2026-09-23",
+          "buildable": 304,
+          "cumulative_demand": 112,
+          "net_available": 192,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
+              "supportable_fg_units": 238,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 50.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-10-01",
+          "display_date": "2026-10-08",
+          "buildable": 304,
+          "cumulative_demand": 123,
+          "net_available": 181,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
+              "supportable_fg_units": 238,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 50.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-10-05",
+          "display_date": "2026-10-12",
+          "buildable": 304,
+          "cumulative_demand": 125,
+          "net_available": 179,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
+              "supportable_fg_units": 238,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 50.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-10-13",
+          "display_date": "2026-10-20",
+          "buildable": 304,
+          "cumulative_demand": 126,
+          "net_available": 178,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
+              "supportable_fg_units": 238,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 50.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-11-02",
+          "display_date": "2026-11-09",
+          "buildable": 304,
+          "cumulative_demand": 128,
+          "net_available": 176,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
+              "supportable_fg_units": 238,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 50.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-12-02",
+          "display_date": "2026-12-09",
+          "buildable": 304,
+          "cumulative_demand": 132,
+          "net_available": 172,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
+              "supportable_fg_units": 238,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 50.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-12-15",
+          "display_date": "2026-12-22",
+          "buildable": 304,
+          "cumulative_demand": 142,
+          "net_available": 162,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
+              "supportable_fg_units": 238,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 50.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-12-31",
+          "display_date": "2027-01-07",
+          "buildable": 304,
+          "cumulative_demand": 143,
+          "net_available": 161,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
+              "supportable_fg_units": 238,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 50.0
             },
             {
               "item_id": "2288",
@@ -429,9 +819,9 @@
       "status": "in_stock",
       "available_today": 45,
       "total_open_demand": 253,
-      "committable": 0,
+      "committable": 145,
       "max_buildable_today": 58,
-      "max_buildable_horizon": 198,
+      "max_buildable_horizon": 398,
       "next_available_date": "2026-05-25",
       "next_available_qty": 44,
       "limiting_components": [
@@ -443,16 +833,16 @@
           "next_po_qty": 140.0
         },
         {
-          "item_id": "2288",
-          "item_name": "0INP27",
-          "supportable_fg_units": 1011,
+          "item_id": "2315",
+          "item_name": "0TE021.01GN",
+          "supportable_fg_units": 539,
           "next_po_date": null,
           "next_po_qty": 0
         },
         {
-          "item_id": "2294",
-          "item_name": "0INT12",
-          "supportable_fg_units": 1026,
+          "item_id": "2288",
+          "item_name": "0INP27",
+          "supportable_fg_units": 1011,
           "next_po_date": null,
           "next_po_qty": 0
         }
@@ -473,16 +863,16 @@
               "next_po_qty": 140.0
             },
             {
-              "item_id": "2288",
-              "item_name": "0INP27",
-              "supportable_fg_units": 1011,
+              "item_id": "2315",
+              "item_name": "0TE021.01GN",
+              "supportable_fg_units": 539,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
-              "item_id": "2294",
-              "item_name": "0INT12",
-              "supportable_fg_units": 1026,
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
               "next_po_date": null,
               "next_po_qty": 0
             }
@@ -491,6 +881,36 @@
         {
           "date": "2026-05-18",
           "display_date": "2026-05-25",
+          "buildable": 58,
+          "cumulative_demand": 14,
+          "net_available": 44,
+          "limiting_components": [
+            {
+              "item_id": "7508",
+              "item_name": "0MAGOSA.BG62",
+              "supportable_fg_units": 2,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 140.0
+            },
+            {
+              "item_id": "2315",
+              "item_name": "0TE021.01GN",
+              "supportable_fg_units": 539,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-05-23",
+          "display_date": "2026-05-30",
           "buildable": 58,
           "cumulative_demand": 14,
           "net_available": 44,
@@ -611,14 +1031,14 @@
         {
           "date": "2026-07-17",
           "display_date": "2026-07-24",
-          "buildable": 198,
+          "buildable": 398,
           "cumulative_demand": 49,
-          "net_available": 149,
+          "net_available": 349,
           "limiting_components": [
             {
               "item_id": "7508",
               "item_name": "0MAGOSA.BG62",
-              "supportable_fg_units": 142,
+              "supportable_fg_units": 342,
               "next_po_date": "2026-07-17",
               "next_po_qty": 140.0
             },
@@ -641,14 +1061,374 @@
         {
           "date": "2026-08-03",
           "display_date": "2026-08-10",
-          "buildable": 198,
+          "buildable": 398,
           "cumulative_demand": 51,
+          "net_available": 347,
+          "limiting_components": [
+            {
+              "item_id": "7508",
+              "item_name": "0MAGOSA.BG62",
+              "supportable_fg_units": 342,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 140.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-09-01",
+          "display_date": "2026-09-08",
+          "buildable": 398,
+          "cumulative_demand": 193,
+          "net_available": 205,
+          "limiting_components": [
+            {
+              "item_id": "7508",
+              "item_name": "0MAGOSA.BG62",
+              "supportable_fg_units": 342,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 140.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-09-07",
+          "display_date": "2026-09-14",
+          "buildable": 398,
+          "cumulative_demand": 195,
+          "net_available": 203,
+          "limiting_components": [
+            {
+              "item_id": "7508",
+              "item_name": "0MAGOSA.BG62",
+              "supportable_fg_units": 342,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 140.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-09-08",
+          "display_date": "2026-09-15",
+          "buildable": 398,
+          "cumulative_demand": 198,
+          "net_available": 200,
+          "limiting_components": [
+            {
+              "item_id": "7508",
+              "item_name": "0MAGOSA.BG62",
+              "supportable_fg_units": 342,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 140.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-09-15",
+          "display_date": "2026-09-22",
+          "buildable": 398,
+          "cumulative_demand": 204,
+          "net_available": 194,
+          "limiting_components": [
+            {
+              "item_id": "7508",
+              "item_name": "0MAGOSA.BG62",
+              "supportable_fg_units": 342,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 140.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-09-16",
+          "display_date": "2026-09-23",
+          "buildable": 398,
+          "cumulative_demand": 209,
+          "net_available": 189,
+          "limiting_components": [
+            {
+              "item_id": "7508",
+              "item_name": "0MAGOSA.BG62",
+              "supportable_fg_units": 342,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 140.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-10-01",
+          "display_date": "2026-10-08",
+          "buildable": 398,
+          "cumulative_demand": 225,
+          "net_available": 173,
+          "limiting_components": [
+            {
+              "item_id": "7508",
+              "item_name": "0MAGOSA.BG62",
+              "supportable_fg_units": 342,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 140.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-10-05",
+          "display_date": "2026-10-12",
+          "buildable": 398,
+          "cumulative_demand": 229,
+          "net_available": 169,
+          "limiting_components": [
+            {
+              "item_id": "7508",
+              "item_name": "0MAGOSA.BG62",
+              "supportable_fg_units": 342,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 140.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-10-13",
+          "display_date": "2026-10-20",
+          "buildable": 398,
+          "cumulative_demand": 230,
+          "net_available": 168,
+          "limiting_components": [
+            {
+              "item_id": "7508",
+              "item_name": "0MAGOSA.BG62",
+              "supportable_fg_units": 342,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 140.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-11-02",
+          "display_date": "2026-11-09",
+          "buildable": 398,
+          "cumulative_demand": 233,
+          "net_available": 165,
+          "limiting_components": [
+            {
+              "item_id": "7508",
+              "item_name": "0MAGOSA.BG62",
+              "supportable_fg_units": 342,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 140.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-12-02",
+          "display_date": "2026-12-09",
+          "buildable": 398,
+          "cumulative_demand": 236,
+          "net_available": 162,
+          "limiting_components": [
+            {
+              "item_id": "7508",
+              "item_name": "0MAGOSA.BG62",
+              "supportable_fg_units": 342,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 140.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-12-15",
+          "display_date": "2026-12-22",
+          "buildable": 398,
+          "cumulative_demand": 251,
           "net_available": 147,
           "limiting_components": [
             {
               "item_id": "7508",
               "item_name": "0MAGOSA.BG62",
-              "supportable_fg_units": 142,
+              "supportable_fg_units": 342,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 140.0
+            },
+            {
+              "item_id": "2288",
+              "item_name": "0INP27",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "item_name": "0INT12",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-12-31",
+          "display_date": "2027-01-07",
+          "buildable": 398,
+          "cumulative_demand": 253,
+          "net_available": 145,
+          "limiting_components": [
+            {
+              "item_id": "7508",
+              "item_name": "0MAGOSA.BG62",
+              "supportable_fg_units": 342,
               "next_po_date": "2026-07-17",
               "next_po_qty": 140.0
             },
@@ -684,7 +1464,7 @@
       "total_open_demand": 47,
       "committable": 0,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 14,
+      "max_buildable_horizon": 19,
       "next_available_date": "2026-05-25",
       "next_available_qty": 14,
       "limiting_components": [
@@ -806,6 +1586,126 @@
           "display_date": "2026-08-12",
           "buildable": 14,
           "cumulative_demand": 41,
+          "net_available": 0,
+          "limiting_components": [
+            {
+              "item_id": "420",
+              "item_name": "0NRD05I241",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "425",
+              "item_name": "0PUNINC45.VN",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "564",
+              "item_name": "0NRD05O74",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-08-31",
+          "display_date": "2026-09-07",
+          "buildable": 14,
+          "cumulative_demand": 42,
+          "net_available": 0,
+          "limiting_components": [
+            {
+              "item_id": "420",
+              "item_name": "0NRD05I241",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "425",
+              "item_name": "0PUNINC45.VN",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "564",
+              "item_name": "0NRD05O74",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-09-05",
+          "display_date": "2026-09-12",
+          "buildable": 14,
+          "cumulative_demand": 43,
+          "net_available": 0,
+          "limiting_components": [
+            {
+              "item_id": "420",
+              "item_name": "0NRD05I241",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "425",
+              "item_name": "0PUNINC45.VN",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "564",
+              "item_name": "0NRD05O74",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-11-01",
+          "display_date": "2026-11-08",
+          "buildable": 19,
+          "cumulative_demand": 46,
+          "net_available": 0,
+          "limiting_components": [
+            {
+              "item_id": "420",
+              "item_name": "0NRD05I241",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "425",
+              "item_name": "0PUNINC45.VN",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "564",
+              "item_name": "0NRD05O74",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-12-10",
+          "display_date": "2026-12-17",
+          "buildable": 19,
+          "cumulative_demand": 47,
           "net_available": 0,
           "limiting_components": [
             {
