@@ -1,0 +1,19 @@
+{
+  "settings": {
+    "planning_horizon_days": 90,
+    "verrayes_pad_days": 7,
+    "usa3pl_pad_days": 7,
+    "usa3pl_embargo_pad_days": 0
+  },
+  "fg_list": [
+    { "item_id": "6815", "item_name": "PIGOSA.BG53" },
+    { "item_id": "6817", "item_name": "PIGOSA.BG66" }
+  ],
+  "exclusion_list": [
+    { "item_id": "7783", "item_name": "0GUTRN.BLADE",      "reason": "blade accessory - excluded pending full dataset" },
+    { "item_id": "7799", "item_name": "0PACK.ENV",         "reason": "packaging envelope - treated as unconstrained" },
+    { "item_id": "7805", "item_name": "0LAB.PIGOSA.BG53",  "reason": "product label - treated as unconstrained" },
+    { "item_id": "7807", "item_name": "0LAB.PIGOSA.BG66",  "reason": "product label - treated as unconstrained" }
+  ],
+  "embargo_list": []
+}
