@@ -12,25 +12,30 @@
       "embargo_date": null,
       "status": "in_stock",
       "available_today": 148,
-      "open_demand_today": 6,
+      "total_open_demand": 143,
+      "committable": 91,
       "max_buildable_today": 154,
+      "max_buildable_horizon": 234,
       "next_available_date": "2026-05-29",
       "next_available_qty": 137,
       "limiting_components": [
         {
           "item_id": "7506",
+          "item_name": "0MAGOSA.BG49",
           "supportable_fg_units": 88,
           "next_po_date": "2026-07-17",
           "next_po_qty": 80.0
         },
         {
           "item_id": "2288",
+          "item_name": "0INP27",
           "supportable_fg_units": 1011,
           "next_po_date": null,
           "next_po_qty": 0
         },
         {
           "item_id": "2294",
+          "item_name": "0INT12",
           "supportable_fg_units": 1026,
           "next_po_date": null,
           "next_po_qty": 0
@@ -46,18 +51,21 @@
           "limiting_components": [
             {
               "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
               "supportable_fg_units": 88,
               "next_po_date": "2026-07-17",
               "next_po_qty": 80.0
             },
             {
               "item_id": "2288",
+              "item_name": "0INP27",
               "supportable_fg_units": 1011,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "2294",
+              "item_name": "0INT12",
               "supportable_fg_units": 1026,
               "next_po_date": null,
               "next_po_qty": 0
@@ -73,18 +81,21 @@
           "limiting_components": [
             {
               "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
               "supportable_fg_units": 88,
               "next_po_date": "2026-07-17",
               "next_po_qty": 80.0
             },
             {
               "item_id": "2288",
+              "item_name": "0INP27",
               "supportable_fg_units": 1011,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "2294",
+              "item_name": "0INT12",
               "supportable_fg_units": 1026,
               "next_po_date": null,
               "next_po_qty": 0
@@ -100,18 +111,21 @@
           "limiting_components": [
             {
               "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
               "supportable_fg_units": 88,
               "next_po_date": "2026-07-17",
               "next_po_qty": 80.0
             },
             {
               "item_id": "2288",
+              "item_name": "0INP27",
               "supportable_fg_units": 1011,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "2294",
+              "item_name": "0INT12",
               "supportable_fg_units": 1026,
               "next_po_date": null,
               "next_po_qty": 0
@@ -127,18 +141,21 @@
           "limiting_components": [
             {
               "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
               "supportable_fg_units": 88,
               "next_po_date": "2026-07-17",
               "next_po_qty": 80.0
             },
             {
               "item_id": "2288",
+              "item_name": "0INP27",
               "supportable_fg_units": 1011,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "2294",
+              "item_name": "0INT12",
               "supportable_fg_units": 1026,
               "next_po_date": null,
               "next_po_qty": 0
@@ -154,18 +171,21 @@
           "limiting_components": [
             {
               "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
               "supportable_fg_units": 88,
               "next_po_date": "2026-07-17",
               "next_po_qty": 80.0
             },
             {
               "item_id": "2288",
+              "item_name": "0INP27",
               "supportable_fg_units": 1011,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "2294",
+              "item_name": "0INT12",
               "supportable_fg_units": 1026,
               "next_po_date": null,
               "next_po_qty": 0
@@ -181,18 +201,21 @@
           "limiting_components": [
             {
               "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
               "supportable_fg_units": 88,
               "next_po_date": "2026-07-17",
               "next_po_qty": 80.0
             },
             {
               "item_id": "2288",
+              "item_name": "0INP27",
               "supportable_fg_units": 1011,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "2294",
+              "item_name": "0INT12",
               "supportable_fg_units": 1026,
               "next_po_date": null,
               "next_po_qty": 0
@@ -208,18 +231,21 @@
           "limiting_components": [
             {
               "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
               "supportable_fg_units": 88,
               "next_po_date": "2026-07-17",
               "next_po_qty": 80.0
             },
             {
               "item_id": "2288",
+              "item_name": "0INP27",
               "supportable_fg_units": 1011,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "2294",
+              "item_name": "0INT12",
               "supportable_fg_units": 1026,
               "next_po_date": null,
               "next_po_qty": 0
@@ -235,18 +261,21 @@
           "limiting_components": [
             {
               "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
               "supportable_fg_units": 168,
               "next_po_date": "2026-07-17",
               "next_po_qty": 80.0
             },
             {
               "item_id": "2288",
+              "item_name": "0INP27",
               "supportable_fg_units": 1011,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "2294",
+              "item_name": "0INT12",
               "supportable_fg_units": 1026,
               "next_po_date": null,
               "next_po_qty": 0
@@ -262,18 +291,21 @@
           "limiting_components": [
             {
               "item_id": "7506",
+              "item_name": "0MAGOSA.BG49",
               "supportable_fg_units": 168,
               "next_po_date": "2026-07-17",
               "next_po_qty": 80.0
             },
             {
               "item_id": "2288",
+              "item_name": "0INP27",
               "supportable_fg_units": 1011,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "2294",
+              "item_name": "0INT12",
               "supportable_fg_units": 1026,
               "next_po_date": null,
               "next_po_qty": 0
@@ -293,25 +325,30 @@
       "embargo_date": null,
       "status": "incoming",
       "available_today": 0,
-      "open_demand_today": 0,
+      "total_open_demand": 0,
+      "committable": 5,
       "max_buildable_today": 0,
+      "max_buildable_horizon": 5,
       "next_available_date": "2026-05-25",
       "next_available_qty": 5,
       "limiting_components": [
         {
           "item_id": "420",
+          "item_name": "0NRD05I241",
           "supportable_fg_units": 0,
           "next_po_date": null,
           "next_po_qty": 0
         },
         {
           "item_id": "425",
+          "item_name": "0PUNINC45.VN",
           "supportable_fg_units": 0,
           "next_po_date": null,
           "next_po_qty": 0
         },
         {
           "item_id": "564",
+          "item_name": "0NRD05O74",
           "supportable_fg_units": 0,
           "next_po_date": null,
           "next_po_qty": 0
@@ -327,18 +364,21 @@
           "limiting_components": [
             {
               "item_id": "420",
+              "item_name": "0NRD05I241",
               "supportable_fg_units": 0,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "425",
+              "item_name": "0PUNINC45.VN",
               "supportable_fg_units": 0,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "564",
+              "item_name": "0NRD05O74",
               "supportable_fg_units": 0,
               "next_po_date": null,
               "next_po_qty": 0
@@ -354,18 +394,21 @@
           "limiting_components": [
             {
               "item_id": "420",
+              "item_name": "0NRD05I241",
               "supportable_fg_units": 0,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "425",
+              "item_name": "0PUNINC45.VN",
               "supportable_fg_units": 0,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "564",
+              "item_name": "0NRD05O74",
               "supportable_fg_units": 0,
               "next_po_date": null,
               "next_po_qty": 0
@@ -385,25 +428,30 @@
       "embargo_date": null,
       "status": "in_stock",
       "available_today": 45,
-      "open_demand_today": 13,
+      "total_open_demand": 253,
+      "committable": 0,
       "max_buildable_today": 58,
+      "max_buildable_horizon": 198,
       "next_available_date": "2026-05-25",
       "next_available_qty": 44,
       "limiting_components": [
         {
           "item_id": "7508",
+          "item_name": "0MAGOSA.BG62",
           "supportable_fg_units": 2,
           "next_po_date": "2026-07-17",
           "next_po_qty": 140.0
         },
         {
           "item_id": "2288",
+          "item_name": "0INP27",
           "supportable_fg_units": 1011,
           "next_po_date": null,
           "next_po_qty": 0
         },
         {
           "item_id": "2294",
+          "item_name": "0INT12",
           "supportable_fg_units": 1026,
           "next_po_date": null,
           "next_po_qty": 0
@@ -419,18 +467,21 @@
           "limiting_components": [
             {
               "item_id": "7508",
+              "item_name": "0MAGOSA.BG62",
               "supportable_fg_units": 2,
               "next_po_date": "2026-07-17",
               "next_po_qty": 140.0
             },
             {
               "item_id": "2288",
+              "item_name": "0INP27",
               "supportable_fg_units": 1011,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "2294",
+              "item_name": "0INT12",
               "supportable_fg_units": 1026,
               "next_po_date": null,
               "next_po_qty": 0
@@ -446,18 +497,21 @@
           "limiting_components": [
             {
               "item_id": "7508",
+              "item_name": "0MAGOSA.BG62",
               "supportable_fg_units": 2,
               "next_po_date": "2026-07-17",
               "next_po_qty": 140.0
             },
             {
               "item_id": "2288",
+              "item_name": "0INP27",
               "supportable_fg_units": 1011,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "2294",
+              "item_name": "0INT12",
               "supportable_fg_units": 1026,
               "next_po_date": null,
               "next_po_qty": 0
@@ -473,18 +527,21 @@
           "limiting_components": [
             {
               "item_id": "7508",
+              "item_name": "0MAGOSA.BG62",
               "supportable_fg_units": 2,
               "next_po_date": "2026-07-17",
               "next_po_qty": 140.0
             },
             {
               "item_id": "2288",
+              "item_name": "0INP27",
               "supportable_fg_units": 1011,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "2294",
+              "item_name": "0INT12",
               "supportable_fg_units": 1026,
               "next_po_date": null,
               "next_po_qty": 0
@@ -500,18 +557,21 @@
           "limiting_components": [
             {
               "item_id": "7508",
+              "item_name": "0MAGOSA.BG62",
               "supportable_fg_units": 2,
               "next_po_date": "2026-07-17",
               "next_po_qty": 140.0
             },
             {
               "item_id": "2288",
+              "item_name": "0INP27",
               "supportable_fg_units": 1011,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "2294",
+              "item_name": "0INT12",
               "supportable_fg_units": 1026,
               "next_po_date": null,
               "next_po_qty": 0
@@ -527,18 +587,21 @@
           "limiting_components": [
             {
               "item_id": "7508",
+              "item_name": "0MAGOSA.BG62",
               "supportable_fg_units": 2,
               "next_po_date": "2026-07-17",
               "next_po_qty": 140.0
             },
             {
               "item_id": "2288",
+              "item_name": "0INP27",
               "supportable_fg_units": 1011,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "2294",
+              "item_name": "0INT12",
               "supportable_fg_units": 1026,
               "next_po_date": null,
               "next_po_qty": 0
@@ -554,18 +617,21 @@
           "limiting_components": [
             {
               "item_id": "7508",
+              "item_name": "0MAGOSA.BG62",
               "supportable_fg_units": 142,
               "next_po_date": "2026-07-17",
               "next_po_qty": 140.0
             },
             {
               "item_id": "2288",
+              "item_name": "0INP27",
               "supportable_fg_units": 1011,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "2294",
+              "item_name": "0INT12",
               "supportable_fg_units": 1026,
               "next_po_date": null,
               "next_po_qty": 0
@@ -581,18 +647,21 @@
           "limiting_components": [
             {
               "item_id": "7508",
+              "item_name": "0MAGOSA.BG62",
               "supportable_fg_units": 142,
               "next_po_date": "2026-07-17",
               "next_po_qty": 140.0
             },
             {
               "item_id": "2288",
+              "item_name": "0INP27",
               "supportable_fg_units": 1011,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "2294",
+              "item_name": "0INT12",
               "supportable_fg_units": 1026,
               "next_po_date": null,
               "next_po_qty": 0
@@ -612,25 +681,30 @@
       "embargo_date": null,
       "status": "incoming",
       "available_today": 0,
-      "open_demand_today": 0,
+      "total_open_demand": 47,
+      "committable": 0,
       "max_buildable_today": 0,
+      "max_buildable_horizon": 14,
       "next_available_date": "2026-05-25",
       "next_available_qty": 14,
       "limiting_components": [
         {
           "item_id": "420",
+          "item_name": "0NRD05I241",
           "supportable_fg_units": 0,
           "next_po_date": null,
           "next_po_qty": 0
         },
         {
           "item_id": "425",
+          "item_name": "0PUNINC45.VN",
           "supportable_fg_units": 0,
           "next_po_date": null,
           "next_po_qty": 0
         },
         {
           "item_id": "564",
+          "item_name": "0NRD05O74",
           "supportable_fg_units": 0,
           "next_po_date": null,
           "next_po_qty": 0
@@ -646,18 +720,21 @@
           "limiting_components": [
             {
               "item_id": "420",
+              "item_name": "0NRD05I241",
               "supportable_fg_units": 0,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "425",
+              "item_name": "0PUNINC45.VN",
               "supportable_fg_units": 0,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "564",
+              "item_name": "0NRD05O74",
               "supportable_fg_units": 0,
               "next_po_date": null,
               "next_po_qty": 0
@@ -673,18 +750,21 @@
           "limiting_components": [
             {
               "item_id": "420",
+              "item_name": "0NRD05I241",
               "supportable_fg_units": 0,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "425",
+              "item_name": "0PUNINC45.VN",
               "supportable_fg_units": 0,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "564",
+              "item_name": "0NRD05O74",
               "supportable_fg_units": 0,
               "next_po_date": null,
               "next_po_qty": 0
@@ -700,18 +780,21 @@
           "limiting_components": [
             {
               "item_id": "420",
+              "item_name": "0NRD05I241",
               "supportable_fg_units": 0,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "425",
+              "item_name": "0PUNINC45.VN",
               "supportable_fg_units": 0,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "564",
+              "item_name": "0NRD05O74",
               "supportable_fg_units": 0,
               "next_po_date": null,
               "next_po_qty": 0
@@ -727,18 +810,21 @@
           "limiting_components": [
             {
               "item_id": "420",
+              "item_name": "0NRD05I241",
               "supportable_fg_units": 0,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "425",
+              "item_name": "0PUNINC45.VN",
               "supportable_fg_units": 0,
               "next_po_date": null,
               "next_po_qty": 0
             },
             {
               "item_id": "564",
+              "item_name": "0NRD05O74",
               "supportable_fg_units": 0,
               "next_po_date": null,
               "next_po_qty": 0

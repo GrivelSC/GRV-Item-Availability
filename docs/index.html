@@ -235,7 +235,7 @@ function render(){
   shown.forEach(function(i){if(s[i.status]!==undefined)s[i.status]++;});
   var rows='';
   if(shown.length===0){
-    rows='<tr class="empty-row"><td colspan="10">No items match the current filters</td></tr>';
+    rows='<tr class="empty-row"><td colspan="11">No items match the current filters</td></tr>';
   }else{
     shown.forEach(function(i){rows+=row(i);});
   }
@@ -257,7 +257,8 @@ function render(){
     '<th>Class</th>'+
     th('status','Status')+
     th('available_today','Avail Today','r')+
-    th('open_demand_today','Open Demand','r')+
+    th('total_open_demand','Open Demand','r')+
+    th('committable','Committable','r')+
     th('max_buildable_today','Max Build','r')+
     th('next_available_date','Next Avail')+
     '<th class="r">Next Qty</th>'+
@@ -274,7 +275,7 @@ function row(i){
     ?'<span class="'+(i.next_available_qty>0?'pos':'dim')+'">'+i.next_available_qty+'</span>'
     :'<span class="dim">—</span>';
   var ch=lc
-    ?'<div class="c-name">'+esc(lc.item_id)+'</div><div class="c-po">'+(lc.next_po_date?'📦 '+fd(lc.next_po_date):'<span class="dim">no PO</span>')+'</div>'
+    ?'<div class="c-name">'+esc(lc.item_name||lc.item_id)+'</div><div class="c-po">'+(lc.next_po_date?'📦 '+fd(lc.next_po_date):'<span class="dim">no PO</span>')+'</div>'
     :'<span class="dim">—</span>';
   var avail_cls=i.available_today>0?'pos':i.available_today<0?'neg':'dim';
   var main='<tr class="'+(isOpen?'expanded':'')+'">'+
@@ -282,7 +283,8 @@ function row(i){
     '<td><span class="cls-pill">'+esc(i.item_class||'—')+'</span></td>'+
     '<td><span class="badge '+i.status+'">'+sl(i.status)+'</span></td>'+
     '<td class="r '+avail_cls+'">'+i.available_today+'</td>'+
-    '<td class="r muted">'+i.open_demand_today+'</td>'+
+    '<td class="r muted">'+(i.total_open_demand||0)+'</td>'+
+    '<td class="r '+((i.committable||0)>0?'pos':'neg')+'">'+(i.committable||0)+'</td>'+
     '<td class="r dim">'+i.max_buildable_today+'</td>'+
     '<td>'+nd+'</td>'+
     '<td class="r">'+nq+'</td>'+
@@ -300,10 +302,10 @@ function row(i){
       '<td>'+s.buildable+'</td>'+
       '<td>'+s.cumulative_demand+'</td>'+
       '<td class="'+(s.net_available>0?'np':'nz')+'">'+s.net_available+'<div class="bar-wrap"><div class="bar-fill" style="width:'+bw+'%"></div></div></td>'+
-      '<td class="dim">'+(lcn?esc(lcn.item_id):'—')+'</td>'+
+      '<td class="dim">'+(lcn?esc(lcn.item_name||lcn.item_id):'—')+'</td>'+
       '</tr>';
   }).join('');
-  var detail='<tr class="detail-row"><td class="detail-cell" colspan="10">'+
+  var detail='<tr class="detail-row"><td class="detail-cell" colspan="11">'+
     '<div class="sc-title">Availability staircase · '+stairs.length+' step'+(stairs.length!==1?'s':'')+'</div>'+
     '<table class="sc-table"><thead><tr>'+
     '<th>Date (+pad)</th><th>Buildable</th><th>Cum. Demand</th><th>Net Available</th><th>Limiting item</th>'+
