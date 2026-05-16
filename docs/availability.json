@@ -1,0 +1,751 @@
+{
+  "generated_at": "2026-05-16",
+  "items": [
+    {
+      "item_id": "6815",
+      "item_name": "PIGOSA.BG53",
+      "item_display_name": "G1 SA Burgundy 53",
+      "item_class": "Ice Axes",
+      "lifecycle": "Active",
+      "location": "verrayes",
+      "embargoed": false,
+      "embargo_date": null,
+      "status": "in_stock",
+      "available_today": 148,
+      "open_demand_today": 6,
+      "max_buildable_today": 154,
+      "next_available_date": "2026-05-29",
+      "next_available_qty": 137,
+      "limiting_components": [
+        {
+          "item_id": "7506",
+          "supportable_fg_units": 88,
+          "next_po_date": "2026-07-17",
+          "next_po_qty": 80.0
+        },
+        {
+          "item_id": "2288",
+          "supportable_fg_units": 1011,
+          "next_po_date": null,
+          "next_po_qty": 0
+        },
+        {
+          "item_id": "2294",
+          "supportable_fg_units": 1026,
+          "next_po_date": null,
+          "next_po_qty": 0
+        }
+      ],
+      "availability_staircase": [
+        {
+          "date": "2026-05-16",
+          "display_date": "2026-05-16",
+          "buildable": 154,
+          "cumulative_demand": 6,
+          "net_available": 148,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "supportable_fg_units": 88,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 80.0
+            },
+            {
+              "item_id": "2288",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-05-22",
+          "display_date": "2026-05-29",
+          "buildable": 154,
+          "cumulative_demand": 17,
+          "net_available": 137,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "supportable_fg_units": 88,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 80.0
+            },
+            {
+              "item_id": "2288",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-05-29",
+          "display_date": "2026-06-05",
+          "buildable": 154,
+          "cumulative_demand": 32,
+          "net_available": 122,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "supportable_fg_units": 88,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 80.0
+            },
+            {
+              "item_id": "2288",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-06-01",
+          "display_date": "2026-06-08",
+          "buildable": 154,
+          "cumulative_demand": 35,
+          "net_available": 119,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "supportable_fg_units": 88,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 80.0
+            },
+            {
+              "item_id": "2288",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-06-05",
+          "display_date": "2026-06-12",
+          "buildable": 154,
+          "cumulative_demand": 36,
+          "net_available": 118,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "supportable_fg_units": 88,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 80.0
+            },
+            {
+              "item_id": "2288",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-06-08",
+          "display_date": "2026-06-15",
+          "buildable": 154,
+          "cumulative_demand": 37,
+          "net_available": 117,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "supportable_fg_units": 88,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 80.0
+            },
+            {
+              "item_id": "2288",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-07-01",
+          "display_date": "2026-07-08",
+          "buildable": 154,
+          "cumulative_demand": 38,
+          "net_available": 116,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "supportable_fg_units": 88,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 80.0
+            },
+            {
+              "item_id": "2288",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-07-17",
+          "display_date": "2026-07-24",
+          "buildable": 234,
+          "cumulative_demand": 38,
+          "net_available": 196,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "supportable_fg_units": 168,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 80.0
+            },
+            {
+              "item_id": "2288",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-08-03",
+          "display_date": "2026-08-10",
+          "buildable": 234,
+          "cumulative_demand": 39,
+          "net_available": 195,
+          "limiting_components": [
+            {
+              "item_id": "7506",
+              "supportable_fg_units": 168,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 80.0
+            },
+            {
+              "item_id": "2288",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "6815",
+      "item_name": "PIGOSA.BG53",
+      "item_display_name": "G1 SA Burgundy 53",
+      "item_class": "Ice Axes",
+      "lifecycle": "Active",
+      "location": "usa3pl",
+      "embargoed": false,
+      "embargo_date": null,
+      "status": "incoming",
+      "available_today": 0,
+      "open_demand_today": 0,
+      "max_buildable_today": 0,
+      "next_available_date": "2026-05-25",
+      "next_available_qty": 5,
+      "limiting_components": [
+        {
+          "item_id": "420",
+          "supportable_fg_units": 0,
+          "next_po_date": null,
+          "next_po_qty": 0
+        },
+        {
+          "item_id": "425",
+          "supportable_fg_units": 0,
+          "next_po_date": null,
+          "next_po_qty": 0
+        },
+        {
+          "item_id": "564",
+          "supportable_fg_units": 0,
+          "next_po_date": null,
+          "next_po_qty": 0
+        }
+      ],
+      "availability_staircase": [
+        {
+          "date": "2026-05-16",
+          "display_date": "2026-05-16",
+          "buildable": 0,
+          "cumulative_demand": 0,
+          "net_available": 0,
+          "limiting_components": [
+            {
+              "item_id": "420",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "425",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "564",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-05-18",
+          "display_date": "2026-05-25",
+          "buildable": 5,
+          "cumulative_demand": 0,
+          "net_available": 5,
+          "limiting_components": [
+            {
+              "item_id": "420",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "425",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "564",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "6817",
+      "item_name": "PIGOSA.BG66",
+      "item_display_name": "G1 SA Burgundy 66",
+      "item_class": "Ice Axes",
+      "lifecycle": "Active",
+      "location": "verrayes",
+      "embargoed": false,
+      "embargo_date": null,
+      "status": "in_stock",
+      "available_today": 45,
+      "open_demand_today": 13,
+      "max_buildable_today": 58,
+      "next_available_date": "2026-05-25",
+      "next_available_qty": 44,
+      "limiting_components": [
+        {
+          "item_id": "7508",
+          "supportable_fg_units": 2,
+          "next_po_date": "2026-07-17",
+          "next_po_qty": 140.0
+        },
+        {
+          "item_id": "2288",
+          "supportable_fg_units": 1011,
+          "next_po_date": null,
+          "next_po_qty": 0
+        },
+        {
+          "item_id": "2294",
+          "supportable_fg_units": 1026,
+          "next_po_date": null,
+          "next_po_qty": 0
+        }
+      ],
+      "availability_staircase": [
+        {
+          "date": "2026-05-16",
+          "display_date": "2026-05-16",
+          "buildable": 58,
+          "cumulative_demand": 13,
+          "net_available": 45,
+          "limiting_components": [
+            {
+              "item_id": "7508",
+              "supportable_fg_units": 2,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 140.0
+            },
+            {
+              "item_id": "2288",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-05-18",
+          "display_date": "2026-05-25",
+          "buildable": 58,
+          "cumulative_demand": 14,
+          "net_available": 44,
+          "limiting_components": [
+            {
+              "item_id": "7508",
+              "supportable_fg_units": 2,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 140.0
+            },
+            {
+              "item_id": "2288",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-05-29",
+          "display_date": "2026-06-05",
+          "buildable": 58,
+          "cumulative_demand": 36,
+          "net_available": 22,
+          "limiting_components": [
+            {
+              "item_id": "7508",
+              "supportable_fg_units": 2,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 140.0
+            },
+            {
+              "item_id": "2288",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-06-01",
+          "display_date": "2026-06-08",
+          "buildable": 58,
+          "cumulative_demand": 39,
+          "net_available": 19,
+          "limiting_components": [
+            {
+              "item_id": "7508",
+              "supportable_fg_units": 2,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 140.0
+            },
+            {
+              "item_id": "2288",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-06-05",
+          "display_date": "2026-06-12",
+          "buildable": 58,
+          "cumulative_demand": 44,
+          "net_available": 14,
+          "limiting_components": [
+            {
+              "item_id": "7508",
+              "supportable_fg_units": 2,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 140.0
+            },
+            {
+              "item_id": "2288",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-07-17",
+          "display_date": "2026-07-24",
+          "buildable": 198,
+          "cumulative_demand": 49,
+          "net_available": 149,
+          "limiting_components": [
+            {
+              "item_id": "7508",
+              "supportable_fg_units": 142,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 140.0
+            },
+            {
+              "item_id": "2288",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-08-03",
+          "display_date": "2026-08-10",
+          "buildable": 198,
+          "cumulative_demand": 51,
+          "net_available": 147,
+          "limiting_components": [
+            {
+              "item_id": "7508",
+              "supportable_fg_units": 142,
+              "next_po_date": "2026-07-17",
+              "next_po_qty": 140.0
+            },
+            {
+              "item_id": "2288",
+              "supportable_fg_units": 1011,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "2294",
+              "supportable_fg_units": 1026,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "6817",
+      "item_name": "PIGOSA.BG66",
+      "item_display_name": "G1 SA Burgundy 66",
+      "item_class": "Ice Axes",
+      "lifecycle": "Active",
+      "location": "usa3pl",
+      "embargoed": false,
+      "embargo_date": null,
+      "status": "incoming",
+      "available_today": 0,
+      "open_demand_today": 0,
+      "max_buildable_today": 0,
+      "next_available_date": "2026-05-25",
+      "next_available_qty": 14,
+      "limiting_components": [
+        {
+          "item_id": "420",
+          "supportable_fg_units": 0,
+          "next_po_date": null,
+          "next_po_qty": 0
+        },
+        {
+          "item_id": "425",
+          "supportable_fg_units": 0,
+          "next_po_date": null,
+          "next_po_qty": 0
+        },
+        {
+          "item_id": "564",
+          "supportable_fg_units": 0,
+          "next_po_date": null,
+          "next_po_qty": 0
+        }
+      ],
+      "availability_staircase": [
+        {
+          "date": "2026-05-16",
+          "display_date": "2026-05-16",
+          "buildable": 0,
+          "cumulative_demand": 0,
+          "net_available": 0,
+          "limiting_components": [
+            {
+              "item_id": "420",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "425",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "564",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-05-18",
+          "display_date": "2026-05-25",
+          "buildable": 14,
+          "cumulative_demand": 0,
+          "net_available": 14,
+          "limiting_components": [
+            {
+              "item_id": "420",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "425",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "564",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-07-15",
+          "display_date": "2026-07-22",
+          "buildable": 14,
+          "cumulative_demand": 3,
+          "net_available": 11,
+          "limiting_components": [
+            {
+              "item_id": "420",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "425",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "564",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-08-05",
+          "display_date": "2026-08-12",
+          "buildable": 14,
+          "cumulative_demand": 41,
+          "net_available": 0,
+          "limiting_components": [
+            {
+              "item_id": "420",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "425",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            },
+            {
+              "item_id": "564",
+              "supportable_fg_units": 0,
+              "next_po_date": null,
+              "next_po_qty": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
