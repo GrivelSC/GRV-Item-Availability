@@ -179,7 +179,7 @@ var all=[], shown=[], loc='verrayes', sk='item_name', sd=1, open_=new Set();
 
 async function boot(){
   try{
-    const base=location.pathname.replace(/\/[^/]*$/,'/');
+    const base='/GRV-Item-Availability/';
     const [av,me]=await Promise.all([fetch(base+'availability.json').then(r=>r.json()),fetch(base+'metadata.json').then(r=>r.json())]);
     all=av.items||[];
     if(me.refreshed_at){
