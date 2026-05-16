@@ -179,7 +179,8 @@ var all=[], shown=[], loc='verrayes', sk='item_name', sd=1, open_=new Set();
 
 async function boot(){
   try{
-    const [av,me]=await Promise.all([fetch('availability.json').then(r=>r.json()),fetch('metadata.json').then(r=>r.json())]);
+    const base=location.pathname.replace(/\/[^/]*$/,'/');
+    const [av,me]=await Promise.all([fetch(base+'availability.json').then(r=>r.json()),fetch(base+'metadata.json').then(r=>r.json())]);
     all=av.items||[];
     if(me.refreshed_at){
       const d=new Date(me.refreshed_at);
