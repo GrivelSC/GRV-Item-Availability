@@ -1,0 +1,334 @@
+{
+  "settings": {
+    "planning_horizon_days": 90,
+    "verrayes_pad_days": 7,
+    "usa3pl_pad_days": 7,
+    "usa3pl_embargo_pad_days": 0,
+    "overdue_po_buffer_days": 7
+  },
+  "fg_list": [
+    {
+      "item_id": "1026",
+      "item_name": ""
+    },
+    {
+      "item_id": "1027",
+      "item_name": ""
+    },
+    {
+      "item_id": "1028",
+      "item_name": ""
+    },
+    {
+      "item_id": "1029",
+      "item_name": ""
+    },
+    {
+      "item_id": "1030",
+      "item_name": ""
+    },
+    {
+      "item_id": "1031",
+      "item_name": ""
+    },
+    {
+      "item_id": "1032",
+      "item_name": ""
+    },
+    {
+      "item_id": "1033",
+      "item_name": ""
+    },
+    {
+      "item_id": "1034",
+      "item_name": ""
+    },
+    {
+      "item_id": "1035",
+      "item_name": ""
+    },
+    {
+      "item_id": "1036",
+      "item_name": ""
+    },
+    {
+      "item_id": "1037",
+      "item_name": ""
+    },
+    {
+      "item_id": "1038",
+      "item_name": ""
+    },
+    {
+      "item_id": "1039",
+      "item_name": ""
+    },
+    {
+      "item_id": "1040",
+      "item_name": ""
+    },
+    {
+      "item_id": "1041",
+      "item_name": ""
+    },
+    {
+      "item_id": "1042",
+      "item_name": ""
+    },
+    {
+      "item_id": "1043",
+      "item_name": ""
+    },
+    {
+      "item_id": "1044",
+      "item_name": ""
+    },
+    {
+      "item_id": "1045",
+      "item_name": ""
+    },
+    {
+      "item_id": "1046",
+      "item_name": ""
+    },
+    {
+      "item_id": "1047",
+      "item_name": ""
+    },
+    {
+      "item_id": "1048",
+      "item_name": ""
+    },
+    {
+      "item_id": "1049",
+      "item_name": ""
+    },
+    {
+      "item_id": "1050",
+      "item_name": ""
+    },
+    {
+      "item_id": "1051",
+      "item_name": ""
+    },
+    {
+      "item_id": "1052",
+      "item_name": ""
+    },
+    {
+      "item_id": "1053",
+      "item_name": ""
+    },
+    {
+      "item_id": "1054",
+      "item_name": ""
+    },
+    {
+      "item_id": "1055",
+      "item_name": ""
+    },
+    {
+      "item_id": "1056",
+      "item_name": ""
+    },
+    {
+      "item_id": "1057",
+      "item_name": ""
+    },
+    {
+      "item_id": "1449",
+      "item_name": ""
+    },
+    {
+      "item_id": "1531",
+      "item_name": ""
+    },
+    {
+      "item_id": "1566",
+      "item_name": ""
+    },
+    {
+      "item_id": "1567",
+      "item_name": ""
+    },
+    {
+      "item_id": "1568",
+      "item_name": ""
+    },
+    {
+      "item_id": "1569",
+      "item_name": ""
+    },
+    {
+      "item_id": "1570",
+      "item_name": ""
+    },
+    {
+      "item_id": "1571",
+      "item_name": ""
+    },
+    {
+      "item_id": "1572",
+      "item_name": ""
+    },
+    {
+      "item_id": "1573",
+      "item_name": ""
+    },
+    {
+      "item_id": "1574",
+      "item_name": ""
+    },
+    {
+      "item_id": "1575",
+      "item_name": ""
+    },
+    {
+      "item_id": "1608",
+      "item_name": ""
+    },
+    {
+      "item_id": "1609",
+      "item_name": ""
+    },
+    {
+      "item_id": "1610",
+      "item_name": ""
+    },
+    {
+      "item_id": "1611",
+      "item_name": ""
+    },
+    {
+      "item_id": "4773",
+      "item_name": ""
+    },
+    {
+      "item_id": "6515",
+      "item_name": ""
+    },
+    {
+      "item_id": "6516",
+      "item_name": ""
+    },
+    {
+      "item_id": "6895",
+      "item_name": ""
+    },
+    {
+      "item_id": "6896",
+      "item_name": ""
+    },
+    {
+      "item_id": "6897",
+      "item_name": ""
+    },
+    {
+      "item_id": "6898",
+      "item_name": ""
+    },
+    {
+      "item_id": "6899",
+      "item_name": ""
+    },
+    {
+      "item_id": "6900",
+      "item_name": ""
+    },
+    {
+      "item_id": "6901",
+      "item_name": ""
+    },
+    {
+      "item_id": "6902",
+      "item_name": ""
+    },
+    {
+      "item_id": "6903",
+      "item_name": ""
+    },
+    {
+      "item_id": "6904",
+      "item_name": ""
+    },
+    {
+      "item_id": "6905",
+      "item_name": ""
+    },
+    {
+      "item_id": "6906",
+      "item_name": ""
+    },
+    {
+      "item_id": "6907",
+      "item_name": ""
+    },
+    {
+      "item_id": "6908",
+      "item_name": ""
+    },
+    {
+      "item_id": "6909",
+      "item_name": ""
+    },
+    {
+      "item_id": "6910",
+      "item_name": ""
+    },
+    {
+      "item_id": "6911",
+      "item_name": ""
+    },
+    {
+      "item_id": "6912",
+      "item_name": ""
+    },
+    {
+      "item_id": "6913",
+      "item_name": ""
+    },
+    {
+      "item_id": "6914",
+      "item_name": ""
+    },
+    {
+      "item_id": "6915",
+      "item_name": ""
+    },
+    {
+      "item_id": "6916",
+      "item_name": ""
+    },
+    {
+      "item_id": "6917",
+      "item_name": ""
+    },
+    {
+      "item_id": "7199",
+      "item_name": ""
+    }
+  ],
+  "exclusion_list": [
+    {
+      "item_id": "7783",
+      "item_name": "0GUTRN.BLADE",
+      "reason": "blade accessory - excluded pending full dataset"
+    },
+    {
+      "item_id": "7799",
+      "item_name": "0PACK.ENV",
+      "reason": "packaging envelope - treated as unconstrained"
+    },
+    {
+      "item_id": "7805",
+      "item_name": "0LAB.PIGOSA.BG53",
+      "reason": "product label - treated as unconstrained"
+    },
+    {
+      "item_id": "7807",
+      "item_name": "0LAB.PIGOSA.BG66",
+      "reason": "product label - treated as unconstrained"
+    }
+  ],
+  "embargo_list": []
+}
