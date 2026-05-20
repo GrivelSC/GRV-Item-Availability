@@ -2851,6 +2851,356 @@
       "item_id": "8227",
       "item_name": "0PACK.UPC_HERITAGE",
       "reason": ""
+    },
+    {
+      "item_id": "3765",
+      "item_name": "WELD_NEPAL",
+      "reason": ""
+    },
+    {
+      "item_id": "3766",
+      "item_name": "SEW_EVO",
+      "reason": ""
+    },
+    {
+      "item_id": "3767",
+      "item_name": "SEW_DRAG_SPRING",
+      "reason": ""
+    },
+    {
+      "item_id": "3768",
+      "item_name": "SEW_CRAMP",
+      "reason": ""
+    },
+    {
+      "item_id": "3769",
+      "item_name": "SEW_ESPRESSO",
+      "reason": ""
+    },
+    {
+      "item_id": "3770",
+      "item_name": "SEW_DRAG_SS",
+      "reason": ""
+    },
+    {
+      "item_id": "3771",
+      "item_name": "GOMM_MATRIX",
+      "reason": ""
+    },
+    {
+      "item_id": "3772",
+      "item_name": "GOMM_EVO",
+      "reason": ""
+    },
+    {
+      "item_id": "3773",
+      "item_name": "COAT_SHAFT",
+      "reason": ""
+    },
+    {
+      "item_id": "3774",
+      "item_name": "SEW_CONDOR",
+      "reason": ""
+    },
+    {
+      "item_id": "3775",
+      "item_name": "SEW_DRAG_DSE",
+      "reason": ""
+    },
+    {
+      "item_id": "3776",
+      "item_name": "SEW_DRAG_SSE",
+      "reason": ""
+    },
+    {
+      "item_id": "3777",
+      "item_name": "SEW_DRAG_SSL",
+      "reason": ""
+    },
+    {
+      "item_id": "3778",
+      "item_name": "CARBON_DARK_SHAFT",
+      "reason": ""
+    },
+    {
+      "item_id": "3779",
+      "item_name": "CARBON_DARK_HANDL",
+      "reason": ""
+    },
+    {
+      "item_id": "3780",
+      "item_name": "SVERN_MAN",
+      "reason": ""
+    },
+    {
+      "item_id": "3781",
+      "item_name": "SVERN_MAN_X",
+      "reason": ""
+    },
+    {
+      "item_id": "3869",
+      "item_name": "ASSIPPJR",
+      "reason": ""
+    },
+    {
+      "item_id": "3870",
+      "item_name": "ASSIPVJR",
+      "reason": ""
+    },
+    {
+      "item_id": "3871",
+      "item_name": "ASSIPPSR",
+      "reason": ""
+    },
+    {
+      "item_id": "3872",
+      "item_name": "ASSIPVWC",
+      "reason": ""
+    },
+    {
+      "item_id": "3873",
+      "item_name": "ASSIPVDF",
+      "reason": ""
+    },
+    {
+      "item_id": "3874",
+      "item_name": "ASSIPPXC",
+      "reason": ""
+    },
+    {
+      "item_id": "3875",
+      "item_name": "ASSTOR",
+      "reason": ""
+    },
+    {
+      "item_id": "3876",
+      "item_name": "ASSCLOC",
+      "reason": ""
+    },
+    {
+      "item_id": "3877",
+      "item_name": "ASSCXC",
+      "reason": ""
+    },
+    {
+      "item_id": "3878",
+      "item_name": "ASSCCOU",
+      "reason": ""
+    },
+    {
+      "item_id": "3879",
+      "item_name": "ASSCDES",
+      "reason": ""
+    },
+    {
+      "item_id": "3880",
+      "item_name": "SUBL18108",
+      "reason": ""
+    },
+    {
+      "item_id": "3881",
+      "item_name": "SUBL18113",
+      "reason": ""
+    },
+    {
+      "item_id": "3882",
+      "item_name": "SUBL18118",
+      "reason": ""
+    },
+    {
+      "item_id": "3883",
+      "item_name": "SUBL18123",
+      "reason": ""
+    },
+    {
+      "item_id": "3884",
+      "item_name": "SUBL18128",
+      "reason": ""
+    },
+    {
+      "item_id": "3885",
+      "item_name": "SUBL18133",
+      "reason": ""
+    },
+    {
+      "item_id": "3886",
+      "item_name": "SUBL18138",
+      "reason": ""
+    },
+    {
+      "item_id": "3887",
+      "item_name": "SUBL18143",
+      "reason": ""
+    },
+    {
+      "item_id": "3888",
+      "item_name": "SUBL16083",
+      "reason": ""
+    },
+    {
+      "item_id": "3889",
+      "item_name": "SUBL16088",
+      "reason": ""
+    },
+    {
+      "item_id": "3890",
+      "item_name": "SUBL16093",
+      "reason": ""
+    },
+    {
+      "item_id": "3891",
+      "item_name": "SUBL16098",
+      "reason": ""
+    },
+    {
+      "item_id": "3892",
+      "item_name": "SUBL16103",
+      "reason": ""
+    },
+    {
+      "item_id": "3893",
+      "item_name": "SUBL16108",
+      "reason": ""
+    },
+    {
+      "item_id": "3894",
+      "item_name": "SUBL16113",
+      "reason": ""
+    },
+    {
+      "item_id": "3895",
+      "item_name": "SUBL16118",
+      "reason": ""
+    },
+    {
+      "item_id": "3896",
+      "item_name": "SUBL16123",
+      "reason": ""
+    },
+    {
+      "item_id": "3897",
+      "item_name": "SUBL16128",
+      "reason": ""
+    },
+    {
+      "item_id": "3898",
+      "item_name": "SUBL16133",
+      "reason": ""
+    },
+    {
+      "item_id": "3899",
+      "item_name": "SUBL16138",
+      "reason": ""
+    },
+    {
+      "item_id": "3900",
+      "item_name": "SUBL16143",
+      "reason": ""
+    },
+    {
+      "item_id": "3901",
+      "item_name": "SUBL16148",
+      "reason": ""
+    },
+    {
+      "item_id": "3902",
+      "item_name": "SUBL16153",
+      "reason": ""
+    },
+    {
+      "item_id": "3903",
+      "item_name": "SUBL14082",
+      "reason": ""
+    },
+    {
+      "item_id": "3904",
+      "item_name": "SUBL14098",
+      "reason": ""
+    },
+    {
+      "item_id": "3905",
+      "item_name": "SUBL14118",
+      "reason": ""
+    },
+    {
+      "item_id": "3906",
+      "item_name": "SUBL14126",
+      "reason": ""
+    },
+    {
+      "item_id": "3907",
+      "item_name": "SUBL12082",
+      "reason": ""
+    },
+    {
+      "item_id": "4761",
+      "item_name": "COAT_WELD_BLADE",
+      "reason": ""
+    },
+    {
+      "item_id": "5867",
+      "item_name": "ASSIPVSR",
+      "reason": ""
+    },
+    {
+      "item_id": "5893",
+      "item_name": "SUBL18082",
+      "reason": ""
+    },
+    {
+      "item_id": "5909",
+      "item_name": "CSTM_CPAD",
+      "reason": ""
+    },
+    {
+      "item_id": "5912",
+      "item_name": "ASS_TDK",
+      "reason": ""
+    },
+    {
+      "item_id": "6024",
+      "item_name": "SEW_0ASEXP.MON25",
+      "reason": ""
+    },
+    {
+      "item_id": "6501",
+      "item_name": "R&D Samples & Development",
+      "reason": ""
+    },
+    {
+      "item_id": "6612",
+      "item_name": "DRK_KNF_ASSY",
+      "reason": ""
+    },
+    {
+      "item_id": "7181",
+      "item_name": "SUBL18095",
+      "reason": ""
+    },
+    {
+      "item_id": "7231",
+      "item_name": "CSTM_CSAFE",
+      "reason": ""
+    },
+    {
+      "item_id": "7460",
+      "item_name": "GOMM_CONDOR_Handle",
+      "reason": ""
+    },
+    {
+      "item_id": "8114",
+      "item_name": "ASSTIP",
+      "reason": ""
+    },
+    {
+      "item_id": "8221",
+      "item_name": "GOLD_PLATING_MONTEBIANCO",
+      "reason": ""
+    },
+    {
+      "item_id": "8229",
+      "item_name": "SUBL16102",
+      "reason": ""
     }
   ],
   "embargo_list": []
