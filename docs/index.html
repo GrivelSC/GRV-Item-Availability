@@ -35,7 +35,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 /* HEADER */
 header{background:var(--surface);border-bottom:1px solid var(--border);padding:0 1.5rem;display:flex;align-items:center;gap:1.5rem;height:52px;position:sticky;top:0;z-index:100;}
 .logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;}
-.logo-mark{width:26px;height:26px;background:var(--accent);border-radius:4px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:#fff;letter-spacing:-.5px;}
+.logo-mark{width:26px;height:26px;border-radius:4px;object-fit:contain;}
 .logo-text{font-size:13px;font-weight:600;color:var(--text);letter-spacing:.06em;text-transform:uppercase;}
 .h-sep{width:1px;height:20px;background:var(--border);}
 .h-title{font-size:13px;color:var(--muted);}
@@ -153,7 +153,7 @@ td.r{text-align:right;font-family:var(--mono);font-size:12px;}
 
 <header>
   <a class="logo" href="#">
-    <div class="logo-mark">G</div>
+    <img class="logo-mark" src="logo.png" alt="Grivel">
     <span class="logo-text">Grivel</span>
   </a>
   <div class="h-sep"></div>
