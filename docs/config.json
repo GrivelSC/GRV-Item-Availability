@@ -3221,6 +3221,56 @@
       "item_id": "8229",
       "item_name": "SUBL16102",
       "reason": ""
+    },
+    {
+      "item_id": "596",
+      "item_name": "[3M - scotch 23]",
+      "reason": ""
+    },
+    {
+      "item_id": "602",
+      "item_name": "[tessuto gommato]",
+      "reason": ""
+    },
+    {
+      "item_id": "609",
+      "item_name": "[colla legno]",
+      "reason": ""
+    },
+    {
+      "item_id": "718",
+      "item_name": "[washer]",
+      "reason": ""
+    },
+    {
+      "item_id": "730",
+      "item_name": "[testa NRL36C11]",
+      "reason": ""
+    },
+    {
+      "item_id": "731",
+      "item_name": "[olgo NRL36C11]",
+      "reason": ""
+    },
+    {
+      "item_id": "733",
+      "item_name": "[keychain ring]",
+      "reason": ""
+    },
+    {
+      "item_id": "2409",
+      "item_name": "[tappo ghost tech]",
+      "reason": ""
+    },
+    {
+      "item_id": "2517",
+      "item_name": "[impugnatura pala]",
+      "reason": ""
+    },
+    {
+      "item_id": "7464",
+      "item_name": "[IC] ART.33.40",
+      "reason": ""
     }
   ],
   "embargo_list": []
