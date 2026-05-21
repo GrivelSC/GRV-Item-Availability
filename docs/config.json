@@ -1,9 +1,9 @@
 {
   "settings": {
-    "planning_horizon_days": 90,
+    "planning_horizon_days": 120,
     "verrayes_pad_days": 7,
     "usa3pl_pad_days": 7,
-    "usa3pl_embargo_pad_days": 0,
+    "usa3pl_embargo_pad_days": 90,
     "overdue_po_buffer_days": 7
   },
   "fg_list": [
