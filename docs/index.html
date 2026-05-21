@@ -149,7 +149,15 @@ td.r{text-align:right;font-family:var(--mono);font-size:12px;}
 .stat-pct{font-size:11px;font-family:var(--mono);color:var(--dim);font-weight:400;margin-top:.15rem;}
 .dl-csv-btn{background:none;border:1px solid var(--border);border-radius:4px;color:var(--muted);cursor:pointer;padding:.25rem .6rem;font-size:11px;font-family:var(--sans);transition:all .15s;white-space:nowrap;}
 .dl-csv-btn:hover{border-color:var(--border2);color:var(--text);background:var(--surface2);}
+.charts-bar{display:none;grid-template-columns:1fr 1.5fr 1fr;gap:.75rem;padding:0 1rem .75rem;}
+.charts-bar.visible{display:grid;}
+.chart-panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:.6rem .75rem .5rem;}
+.chart-title{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:.4rem;}
+.chart-subtitle{font-size:10px;color:var(--dim);margin-bottom:.25rem;text-align:center;}
+.chart-dual{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;}
+.chart-half{min-height:0;}
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 </head>
 <body>
 <div class="app">
@@ -157,7 +165,7 @@ td.r{text-align:right;font-family:var(--mono);font-size:12px;}
 <header>
   <a class="logo" href="#">
     <img class="logo-mark" src="logo.png" alt="Grivel">
-    <span class="logo-text">GRV SUPPLY CHAIN CONTROL TOWER</span>
+    <span class="logo-text">Grivel</span>
   </a>
   <div class="h-sep"></div>
   <span class="h-title">Item Availability</span>
@@ -199,6 +207,30 @@ td.r{text-align:right;font-family:var(--mono);font-size:12px;}
   </div>
   <span class="f-count" id="f-count"></span>
   <button class="dl-csv-btn" onclick="downloadCsv()" title="Download CSV">⬇ CSV</button>
+</div>
+
+<div class="charts-bar" id="charts-bar">
+  <div class="chart-panel">
+    <div class="chart-title">Top Bottleneck Components</div>
+    <div class="chart-dual">
+      <div class="chart-half">
+        <div class="chart-subtitle">By # FGs constrained</div>
+        <canvas id="chart-bn-fg" height="150"></canvas>
+      </div>
+      <div class="chart-half">
+        <div class="chart-subtitle">By backlogged demand</div>
+        <canvas id="chart-bn-bl" height="150"></canvas>
+      </div>
+    </div>
+  </div>
+  <div class="chart-panel">
+    <div class="chart-title">Demand Coverage Timeline</div>
+    <canvas id="chart-demand" height="150"></canvas>
+  </div>
+  <div class="chart-panel">
+    <div class="chart-title">Committable Distribution</div>
+    <canvas id="chart-commit" height="150"></canvas>
+  </div>
 </div>
 
 <div id="content">
@@ -373,6 +405,7 @@ function render(){
     '<th>Top Constraint</th>'+
     '<th></th>'+
     '</tr></thead><tbody>'+rows+'</tbody></table></div>';
+  renderCharts();
 }
 
 function row(i){
@@ -479,6 +512,174 @@ function downloadCsv(){
   document.body.appendChild(a);a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
+}
+
+// ── CHARTS ──────────────────────────────────────────────────────────────
+var chartBnFg=null,chartBnBl=null,chartDemand=null,chartCommit=null;
+var chartTheme={
+  text:'#9ca3af',dim:'#6b7280',grid:'#1f2937',
+  green:'#22c55e',greenBg:'rgba(34,197,94,.15)',
+  orange:'#f97316',orangeBg:'rgba(249,115,22,.25)',
+  accent:'#e8864a',bars:['#e8864a','#f59e0b','#3b82f6','#8b5cf6','#06b6d4']
+};
+var chartDefaults={
+  responsive:true,maintainAspectRatio:false,
+  plugins:{legend:{display:false}},
+  scales:{x:{ticks:{color:chartTheme.dim,font:{size:9}},grid:{color:chartTheme.grid}},
+          y:{ticks:{color:chartTheme.dim,font:{size:9}},grid:{color:chartTheme.grid}}}
+};
+
+function renderCharts(){
+  var bar=document.getElementById('charts-bar');
+  if(!shown||shown.length===0){bar.classList.remove('visible');return;}
+  bar.classList.add('visible');
+  renderBottlenecks();
+  renderDemandCoverage();
+  renderCommittable();
+}
+
+function renderBottlenecks(){
+  // Compute bottleneck data from visible items
+  var byFg={},byBl={};
+  shown.forEach(function(i){
+    var lc=(i.limiting_components||[])[0];
+    if(!lc)return;
+    var name=lc.item_name||lc.item_id||'unknown';
+    if(!byFg[name])byFg[name]=0;
+    byFg[name]++;
+    var backlog=Math.max(0,(i.total_open_demand||0)-(i.max_buildable_horizon||0));
+    if(backlog>0){
+      if(!byBl[name])byBl[name]=0;
+      byBl[name]+=backlog;
+    }
+  });
+  // Top 5 by FG count
+  var topFg=Object.entries(byFg).sort(function(a,b){return b[1]-a[1];}).slice(0,5);
+  // Top 5 by backlog
+  var topBl=Object.entries(byBl).sort(function(a,b){return b[1]-a[1];}).slice(0,5);
+
+  if(chartBnFg)chartBnFg.destroy();
+  if(chartBnBl)chartBnBl.destroy();
+
+  var ctxFg=document.getElementById('chart-bn-fg').getContext('2d');
+  chartBnFg=new Chart(ctxFg,{type:'bar',
+    data:{labels:topFg.map(function(e){return e[0].length>14?e[0].slice(0,13)+'…':e[0];}),
+          datasets:[{data:topFg.map(function(e){return e[1];}),
+                     backgroundColor:chartTheme.bars,borderRadius:3,barThickness:14}]},
+    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.raw+' FGs';}}}},
+      scales:{x:{ticks:{color:chartTheme.dim,font:{size:9}},grid:{color:chartTheme.grid},beginAtZero:true},
+              y:{ticks:{color:chartTheme.text,font:{size:9,family:'DM Mono'}},grid:{display:false}}}}
+  });
+
+  var ctxBl=document.getElementById('chart-bn-bl').getContext('2d');
+  chartBnBl=new Chart(ctxBl,{type:'bar',
+    data:{labels:topBl.map(function(e){return e[0].length>14?e[0].slice(0,13)+'…':e[0];}),
+          datasets:[{data:topBl.map(function(e){return e[1];}),
+                     backgroundColor:chartTheme.bars,borderRadius:3,barThickness:14}]},
+    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.raw+' units';}}}},
+      scales:{x:{ticks:{color:chartTheme.dim,font:{size:9}},grid:{color:chartTheme.grid},beginAtZero:true},
+              y:{ticks:{color:chartTheme.text,font:{size:9,family:'DM Mono'}},grid:{display:false}}}}
+  });
+}
+
+function renderDemandCoverage(){
+  // Collect all unique dates from visible FGs' staircases
+  var dateSet={};
+  shown.forEach(function(i){
+    (i.availability_staircase||[]).forEach(function(s){
+      dateSet[s.display_date]=1;
+    });
+  });
+  var dates=Object.keys(dateSet).sort();
+  if(dates.length<2){
+    if(chartDemand)chartDemand.destroy();chartDemand=null;return;
+  }
+
+  // For each date, aggregate across all visible FGs
+  var metData=[],blData=[];
+  dates.forEach(function(d){
+    var met=0,bl=0;
+    shown.forEach(function(i){
+      var stairs=i.availability_staircase||[];
+      // Find applicable step: last step where display_date <= d
+      var step=null;
+      for(var j=0;j<stairs.length;j++){
+        if(stairs[j].display_date<=d)step=stairs[j];
+        else break;
+      }
+      if(!step)return;
+      var demand=step.cumulative_demand||0;
+      var build=step.buildable||0;
+      met+=Math.min(build,demand);
+      bl+=Math.max(0,demand-build);
+    });
+    metData.push(met);
+    blData.push(bl);
+  });
+
+  // Format date labels
+  var mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var labels=dates.map(function(d){
+    var p=d.split('-');
+    return parseInt(p[2])+' '+mo[parseInt(p[1])-1];
+  });
+
+  if(chartDemand)chartDemand.destroy();
+  var ctx=document.getElementById('chart-demand').getContext('2d');
+  chartDemand=new Chart(ctx,{type:'line',
+    data:{labels:labels,
+      datasets:[
+        {label:'Met Demand',data:metData,fill:true,
+         backgroundColor:chartTheme.greenBg,borderColor:chartTheme.green,
+         borderWidth:1.5,pointRadius:0,tension:.3},
+        {label:'Backlogged Demand',data:blData,fill:true,
+         backgroundColor:chartTheme.orangeBg,borderColor:chartTheme.orange,
+         borderWidth:1.5,pointRadius:0,tension:.3}
+      ]},
+    options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+      plugins:{legend:{display:true,position:'bottom',labels:{color:chartTheme.text,font:{size:10},boxWidth:12,padding:8}},
+               tooltip:{callbacks:{label:function(c){return c.dataset.label+': '+c.raw.toLocaleString()+' units';}}}},
+      scales:{
+        x:{ticks:{color:chartTheme.dim,font:{size:8},maxRotation:45,autoSkip:true,maxTicksLimit:12},grid:{color:chartTheme.grid}},
+        y:{stacked:true,ticks:{color:chartTheme.dim,font:{size:9}},grid:{color:chartTheme.grid},beginAtZero:true}
+      }}
+  });
+}
+
+function renderCommittable(){
+  var buckets=[
+    {label:'0',min:0,max:0,count:0},
+    {label:'1–50',min:1,max:50,count:0},
+    {label:'51–200',min:51,max:200,count:0},
+    {label:'201–500',min:201,max:500,count:0},
+    {label:'500+',min:501,max:Infinity,count:0}
+  ];
+  shown.forEach(function(i){
+    var c=i.committable||0;
+    for(var j=0;j<buckets.length;j++){
+      if(c>=buckets[j].min&&c<=buckets[j].max){buckets[j].count++;break;}
+    }
+  });
+
+  if(chartCommit)chartCommit.destroy();
+  var ctx=document.getElementById('chart-commit').getContext('2d');
+  chartCommit=new Chart(ctx,{type:'bar',
+    data:{labels:buckets.map(function(b){return b.label;}),
+          datasets:[{data:buckets.map(function(b){return b.count;}),
+                     backgroundColor:['#ef4444','#f97316','#eab308','#22c55e','#10b981'],
+                     borderRadius:3}]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},
+               tooltip:{callbacks:{label:function(c){return c.raw+' SKUs';}}}},
+      scales:{
+        x:{ticks:{color:chartTheme.text,font:{size:10}},grid:{display:false},
+           title:{display:true,text:'Committable units',color:chartTheme.dim,font:{size:9}}},
+        y:{ticks:{color:chartTheme.dim,font:{size:9},stepSize:1},grid:{color:chartTheme.grid},beginAtZero:true,
+           title:{display:true,text:'# SKUs',color:chartTheme.dim,font:{size:9}}}
+      }}
+  });
 }
 
 // ── ADMIN PANEL ──────────────────────────────────────────────────────────
