@@ -155,7 +155,8 @@ td.r{text-align:right;font-family:var(--mono);font-size:12px;}
 .chart-title{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:.4rem;}
 .chart-subtitle{font-size:10px;color:var(--dim);margin-bottom:.25rem;text-align:center;}
 .chart-dual{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;}
-.chart-half{min-height:0;}
+.chart-half{position:relative;height:140px;}
+.chart-wrap{position:relative;height:160px;}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 </head>
@@ -215,21 +216,21 @@ td.r{text-align:right;font-family:var(--mono);font-size:12px;}
     <div class="chart-dual">
       <div class="chart-half">
         <div class="chart-subtitle">By # FGs constrained</div>
-        <canvas id="chart-bn-fg" height="150"></canvas>
+        <canvas id="chart-bn-fg"></canvas>
       </div>
       <div class="chart-half">
         <div class="chart-subtitle">By backlogged demand</div>
-        <canvas id="chart-bn-bl" height="150"></canvas>
+        <canvas id="chart-bn-bl"></canvas>
       </div>
     </div>
   </div>
   <div class="chart-panel">
     <div class="chart-title">Demand Coverage Timeline</div>
-    <canvas id="chart-demand" height="150"></canvas>
+    <div class="chart-wrap"><canvas id="chart-demand"></canvas></div>
   </div>
   <div class="chart-panel">
     <div class="chart-title">Committable Distribution</div>
-    <canvas id="chart-commit" height="150"></canvas>
+    <div class="chart-wrap"><canvas id="chart-commit"></canvas></div>
   </div>
 </div>
 
