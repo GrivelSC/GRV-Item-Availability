@@ -1338,6 +1338,21 @@
   ],
   "exclusion_list": [
     {
+      "item_id": "419",
+      "item_name": "9DP490_ADESEPO",
+      "reason": ""
+    },
+    {
+      "item_id": "598",
+      "item_name": "0GUTRN.27D",
+      "reason": ""
+    },
+    {
+      "item_id": "3666",
+      "item_name": "0LCOLB.279690G",
+      "reason": ""
+    },
+    {
       "item_id": "4916",
       "item_name": "0LABSN.STAR190",
       "reason": ""
@@ -2830,6 +2845,11 @@
     {
       "item_id": "8085",
       "item_name": "0LAB.RBFP.G20+.K",
+      "reason": ""
+    },
+    {
+      "item_id": "8105",
+      "item_name": "0GUTRN.DM",
       "reason": ""
     },
     {
