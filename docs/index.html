@@ -146,6 +146,9 @@ td.r{text-align:right;font-family:var(--mono);font-size:12px;}
 .download-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.45rem 1rem;border-radius:var(--r);border:1px solid var(--accent);background:var(--accent-s);color:var(--accent);font-size:12px;font-weight:500;font-family:var(--sans);cursor:pointer;transition:all .15s;}
 .download-btn:hover{background:var(--accent);color:#fff;}
 .fg-preview-list{font-size:10px;color:var(--muted);background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:.5rem;margin-top:.4rem;max-height:120px;overflow:auto;line-height:1.6;white-space:pre-wrap;}
+.stat-pct{font-size:11px;font-family:var(--mono);color:var(--dim);font-weight:400;margin-top:.15rem;}
+.dl-csv-btn{background:none;border:1px solid var(--border);border-radius:4px;color:var(--muted);cursor:pointer;padding:.25rem .6rem;font-size:11px;font-family:var(--sans);transition:all .15s;white-space:nowrap;}
+.dl-csv-btn:hover{border-color:var(--border2);color:var(--text);background:var(--surface2);}
 </style>
 </head>
 <body>
@@ -177,6 +180,11 @@ td.r{text-align:right;font-family:var(--mono);font-size:12px;}
     <option value="Active">Active</option>
     <option value="">All lifecycles</option>
     <option value="Discontinued">Discontinued</option>
+    <option value="New Product">New Product</option>
+    <option value="End Of Life">End Of Life</option>
+  </select>
+  <select id="cl-sel" onchange="filter()">
+    <option value="">All classes</option>
   </select>
   <select id="st-sel" onchange="filter()">
     <option value="">All statuses</option>
@@ -190,6 +198,7 @@ td.r{text-align:right;font-family:var(--mono);font-size:12px;}
     <input type="text" id="srch" placeholder="Search SKU or name…" oninput="filter()">
   </div>
   <span class="f-count" id="f-count"></span>
+  <button class="dl-csv-btn" onclick="downloadCsv()" title="Download CSV">⬇ CSV</button>
 </div>
 
 <div id="content">
@@ -278,6 +287,7 @@ async function boot(){
     const base='/GRV-Item-Availability/';
     const [av,me]=await Promise.all([fetch(base+'availability.json').then(r=>r.json()),fetch(base+'metadata.json').then(r=>r.json())]);
     all=av.items||[];
+    populateClassFilter();
     if(me.refreshed_at){
       const d=new Date(me.refreshed_at);
       const mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -300,11 +310,13 @@ function setLoc(l){
 
 function filter(){
   var lc=document.getElementById('lc-sel').value;
+  var cl=document.getElementById('cl-sel').value;
   var st=document.getElementById('st-sel').value;
   var q=document.getElementById('srch').value.toLowerCase().trim();
   shown=all.filter(function(i){
     if(i.location!==loc)return false;
     if(lc&&i.lifecycle!==lc)return false;
+    if(cl&&i.item_class!==cl)return false;
     if(st&&i.status!==st)return false;
     if(q&&!i.item_name.toLowerCase().includes(q)&&!(i.item_display_name||'').toLowerCase().includes(q))return false;
     return true;
@@ -342,10 +354,10 @@ function render(){
   document.getElementById('content').innerHTML=
     '<div class="summary">'+
     '<div class="stat s-all"><div class="stat-label">Total SKUs</div><div class="stat-val">'+s.total+'</div></div>'+
-    '<div class="stat s-ok"><div class="stat-label">In Stock</div><div class="stat-val">'+s.in_stock+'</div></div>'+
-    '<div class="stat s-in"><div class="stat-label">Incoming</div><div class="stat-val">'+s.incoming+'</div></div>'+
-    '<div class="stat s-out"><div class="stat-label">Out of Stock</div><div class="stat-val">'+s.out_of_stock+'</div></div>'+
-    '<div class="stat s-emb"><div class="stat-label">Embargoed</div><div class="stat-val">'+s.embargoed+'</div></div>'+
+    '<div class="stat s-ok"><div class="stat-label">In Stock</div><div class="stat-val">'+s.in_stock+'<div class="stat-pct">'+(s.total?Math.round(s.in_stock/s.total*100):0)+'%</div></div></div>'+
+    '<div class="stat s-in"><div class="stat-label">Incoming</div><div class="stat-val">'+s.incoming+'<div class="stat-pct">'+(s.total?Math.round(s.incoming/s.total*100):0)+'%</div></div></div>'+
+    '<div class="stat s-out"><div class="stat-label">Out of Stock</div><div class="stat-val">'+s.out_of_stock+'<div class="stat-pct">'+(s.total?Math.round(s.out_of_stock/s.total*100):0)+'%</div></div></div>'+
+    '<div class="stat s-emb"><div class="stat-label">Embargoed</div><div class="stat-val">'+s.embargoed+'<div class="stat-pct">'+(s.total?Math.round(s.embargoed/s.total*100):0)+'%</div></div></div>'+
     '</div>'+
     '<div class="tbl-wrap"><table>'+
     '<thead><tr>'+
@@ -429,6 +441,44 @@ function fd(d){
 }
 function esc(s){
   return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function populateClassFilter(){
+  var classes={};
+  all.forEach(function(i){if(i.item_class)classes[i.item_class]=1;});
+  var sel=document.getElementById('cl-sel');
+  sel.innerHTML='<option value="">All classes</option>';
+  Object.keys(classes).sort().forEach(function(c){
+    sel.innerHTML+='<option value="'+esc(c)+'">'+esc(c)+'</option>';
+  });
+}
+
+function downloadCsv(){
+  var rows=[['SKU','Display Name','Class','Lifecycle','Location','Status','Avail Today','Open Demand','Committable','Max Build','Next Avail Date','Next Qty']];
+  all.forEach(function(i){
+    rows.push([
+      i.item_name||'',
+      (i.item_display_name||'').replace(/,/g,' '),
+      i.item_class||'',
+      i.lifecycle||'',
+      i.location==='verrayes'?'Verrayes':'USA-3PL',
+      sl(i.status),
+      i.available_today||0,
+      i.total_open_demand||0,
+      i.committable||0,
+      i.max_buildable_today||0,
+      i.next_available_date||'',
+      i.next_available_qty!=null?i.next_available_qty:''
+    ]);
+  });
+  var csv=rows.map(function(r){return r.join(',');}).join('\n');
+  var blob=new Blob([csv],{type:'text/csv'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  a.href=url;a.download='grv_availability_'+new Date().toISOString().slice(0,10)+'.csv';
+  document.body.appendChild(a);a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 }
 
 // ── ADMIN PANEL ──────────────────────────────────────────────────────────
