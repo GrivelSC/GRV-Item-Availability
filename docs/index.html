@@ -157,6 +157,49 @@ td.r{text-align:right;font-family:var(--mono);font-size:12px;}
 .chart-dual{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;}
 .chart-half{position:relative;height:220px;}
 .chart-wrap{position:relative;height:240px;}
+
+/* ── VIEW NAVIGATION ───────────────────────────────────────────── */
+.view-nav{display:flex;gap:2px;background:var(--bg);border-radius:var(--r);padding:2px;}
+.view-tab{padding:.3rem .9rem;border-radius:4px;font-size:12px;font-weight:500;cursor:pointer;color:var(--muted);border:none;background:transparent;transition:all .15s;font-family:var(--sans);white-space:nowrap;}
+.view-tab.active{background:var(--surface2);color:var(--text);box-shadow:0 1px 3px rgba(0,0,0,.4);}
+.view-tab.intel-tab.active{color:var(--accent);}
+
+/* ── INTELLIGENCE PANEL ────────────────────────────────────────── */
+.intel-panel{padding:.85rem 1.5rem 4rem;display:none;}
+.intel-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid var(--border);}
+.intel-title{font-size:14px;font-weight:700;color:var(--text);}
+.intel-ctx{font-size:11px;color:var(--dim);font-family:var(--mono);margin-top:.15rem;display:block;}
+.intel-recalc{background:none;border:1px solid var(--border);border-radius:4px;color:var(--muted);cursor:pointer;padding:.3rem .7rem;font-size:11px;font-family:var(--sans);transition:all .15s;}
+.intel-recalc:hover{border-color:var(--border2);color:var(--text);}
+.intel-section{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);margin-bottom:.75rem;overflow:hidden;}
+.intel-sec-hdr{display:flex;align-items:center;gap:.6rem;padding:.6rem 1rem;cursor:pointer;user-select:none;transition:background .1s;}
+.intel-sec-hdr:hover{background:var(--surface2);}
+.intel-sec-icon{font-size:12px;flex-shrink:0;}
+.intel-sec-name{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--text);}
+.intel-sec-sum{font-size:11px;color:var(--muted);font-family:var(--mono);flex:1;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.intel-sec-tog{font-size:10px;color:var(--dim);flex-shrink:0;transition:transform .2s;margin-left:.4rem;}
+.intel-sec-tog.open{transform:rotate(180deg);}
+.intel-sec-body{padding:.6rem 1rem .85rem;border-top:1px solid var(--border);display:none;}
+.intel-sec-body.open{display:block;}
+.intel-cg{margin-bottom:.85rem;}
+.intel-cg:last-child{margin-bottom:0;}
+.intel-ct{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:.3rem 0 .4rem;border-bottom:1px solid var(--border);margin-bottom:.25rem;}
+.intel-ct.push{color:var(--green);}
+.intel-ct.prepare{color:var(--blue);}
+.intel-ct.hold{color:var(--red);}
+.intel-ct.watch{color:var(--amber);}
+.intel-ct.neutral{color:var(--muted);}
+.intel-row{display:flex;align-items:center;justify-content:space-between;padding:.32rem 0;border-bottom:1px solid var(--border);gap:1rem;}
+.intel-row:last-child{border-bottom:none;}
+.intel-rl{flex:1;min-width:0;display:flex;flex-direction:column;gap:.05rem;}
+.intel-rr{text-align:right;flex-shrink:0;}
+.intel-sku{font-family:var(--mono);font-size:11px;color:var(--muted);}
+.intel-nm{font-size:11px;color:var(--text);}
+.intel-ac{font-size:10px;color:var(--dim);font-style:italic;}
+.intel-rv{display:block;font-family:var(--mono);font-size:13px;font-weight:700;color:var(--text);}
+.intel-un{display:block;font-size:10px;color:var(--dim);}
+.intel-more{font-size:10px;color:var(--dim);padding:.3rem 0;}
+.intel-empty{font-size:12px;color:var(--dim);padding:.85rem 0;text-align:center;}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 </head>
@@ -169,7 +212,10 @@ td.r{text-align:right;font-family:var(--mono);font-size:12px;}
     <span class="logo-text">GRV SUPPLY CHAIN CONTROL TOWER</span>
   </a>
   <div class="h-sep"></div>
-  <span class="h-title">Item Availability</span>
+  <div class="view-nav">
+    <button class="view-tab active" id="vtab-avail" onclick="switchView('availability')">Item Availability</button>
+    <button class="view-tab intel-tab" id="vtab-intel" onclick="switchView('intelligence')">✦ Intelligence</button>
+  </div>
   <div class="h-right">
     <button class="admin-btn" onclick="openAdmin()" title="Admin Panel">⚙</button>
     <div class="freshness">
@@ -209,6 +255,59 @@ td.r{text-align:right;font-family:var(--mono);font-size:12px;}
   <span class="f-count" id="f-count"></span>
   <button class="dl-csv-btn" onclick="downloadCsv()" title="Download CSV">⬇ CSV</button>
 </div>
+
+<!-- ── Intelligence Panel ──────────────────────────────────── -->
+<div id="intel-panel" class="intel-panel">
+
+  <div class="intel-hdr">
+    <div>
+      <span class="intel-title">✦ Supply Chain Intelligence</span>
+      <span class="intel-ctx" id="intel-ctx">—</span>
+    </div>
+    <button class="intel-recalc" onclick="generateIntel()">↺ Recalculate</button>
+  </div>
+
+  <!-- Section 1: Demand Shaping -->
+  <div class="intel-section">
+    <div class="intel-sec-hdr" onclick="toggleIS('ds')">
+      <span class="intel-sec-icon">↗</span>
+      <span class="intel-sec-name">Demand Shaping</span>
+      <span class="intel-sec-sum" id="ds-sum">—</span>
+      <span class="intel-sec-tog open" id="ds-tog">▼</span>
+    </div>
+    <div class="intel-sec-body open" id="ds-body">
+      <div class="intel-empty">Switch to ✦ Intelligence to generate insights.</div>
+    </div>
+  </div>
+
+  <!-- Section 2: Vendor OpEx -->
+  <div class="intel-section">
+    <div class="intel-sec-hdr" onclick="toggleIS('vx')">
+      <span class="intel-sec-icon">⚙</span>
+      <span class="intel-sec-name">Vendor OpEx</span>
+      <span class="intel-sec-sum" id="vx-sum">—</span>
+      <span class="intel-sec-tog open" id="vx-tog">▼</span>
+    </div>
+    <div class="intel-sec-body open" id="vx-body">
+      <div class="intel-empty">Switch to ✦ Intelligence to generate insights.</div>
+    </div>
+  </div>
+
+  <!-- Section 3: Overstock -->
+  <div class="intel-section">
+    <div class="intel-sec-hdr" onclick="toggleIS('os')">
+      <span class="intel-sec-icon">📦</span>
+      <span class="intel-sec-name">Overstock</span>
+      <span class="intel-sec-sum" id="os-sum">—</span>
+      <span class="intel-sec-tog open" id="os-tog">▼</span>
+    </div>
+    <div class="intel-sec-body open" id="os-body">
+      <div class="intel-empty">Switch to ✦ Intelligence to generate insights.</div>
+    </div>
+  </div>
+
+</div>
+<!-- ── end Intelligence Panel ─────────────────────────────── -->
 
 <div class="charts-bar" id="charts-bar">
   <div class="chart-panel">
@@ -339,6 +438,7 @@ function setLoc(l){
   document.getElementById('tab-v').classList.toggle('active',l==='verrayes');
   document.getElementById('tab-u').classList.toggle('active',l==='usa3pl');
   open_.clear();filter();
+  if(activeView==='intelligence')generateIntel();
 }
 
 function filter(){
@@ -363,6 +463,7 @@ function filter(){
   });
   var total=all.filter(function(i){return i.location===loc;}).length;
   document.getElementById('f-count').textContent=shown.length+' / '+total+' SKUs';
+  if(activeView==='intelligence'){generateIntel();return;}
   render();
 }
 
@@ -781,6 +882,238 @@ function downloadConfig(){
   document.body.appendChild(a); a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
+}
+
+// ── VIEW SWITCHING ────────────────────────────────────────────
+var activeView='availability';
+function switchView(v){
+  activeView=v;
+  var isA=v==='availability';
+  document.getElementById('vtab-avail').classList.toggle('active',isA);
+  document.getElementById('vtab-intel').classList.toggle('active',!isA);
+  document.getElementById('intel-panel').style.display=isA?'none':'block';
+  var bar=document.getElementById('charts-bar');
+  if(!isA){
+    bar.classList.remove('visible');
+    document.getElementById('content').style.display='none';
+    generateIntel();
+  }else{
+    document.getElementById('content').style.display='';
+    filter();
+  }
+}
+
+// ── INTELLIGENCE HELPERS ──────────────────────────────────────
+function iPf(){return loc==='verrayes'?'avg_eur_per_unit':'avg_usd_per_unit';}
+function iCur(){return loc==='verrayes'?'€':'$';}
+function iPD(s){if(!s)return null;var p=s.split('-');return new Date(parseInt(p[0]),parseInt(p[1])-1,parseInt(p[2]));}
+function iDD(a,b){return Math.round((b-a)/86400000);}
+function iFR(v,cur){
+  if(v==null||isNaN(v))return cur+'0';
+  if(v>=1000000)return cur+(v/1000000).toFixed(1)+'M';
+  if(v>=1000)return cur+Math.round(v/1000)+'k';
+  return cur+Math.round(v);
+}
+function iBk(d){if(d<=30)return 1;if(d<=60)return 2;if(d<=120)return 3;return 4;}
+var iBkL=['','Month 1 (next 30 days)','Month 2 (31–60 days)','Months 3–4 (61–120 days)','Beyond 120 days'];
+function toggleIS(id){
+  var b=document.getElementById(id+'-body');
+  var t=document.getElementById(id+'-tog');
+  b.classList.toggle('open',!b.classList.contains('open'));
+  t.classList.toggle('open',b.classList.contains('open'));
+}
+
+// ── MAIN INTELLIGENCE GENERATOR ──────────────────────────────
+function generateIntel(){
+  if(!all||!all.length)return;
+  var pf=iPf(),cur=iCur(),PTHR=5000,WTHR=16,today=new Date();
+  today.setHours(0,0,0,0);
+  var items=shown;
+  var otherLoc=loc==='verrayes'?'usa3pl':'verrayes';
+  var otherMap={};
+  all.filter(function(i){return i.location===otherLoc;}).forEach(function(i){otherMap[i.item_id]=i;});
+  var lc=document.getElementById('lc-sel').value||'All lifecycles';
+  var cl=document.getElementById('cl-sel').value||'All classes';
+  document.getElementById('intel-ctx').textContent=
+    (loc==='verrayes'?'VERRAYES':'USA-3PL')+' · '+lc+' · '+cl+' · '+items.length+' SKUs';
+  iDS(items,pf,cur,PTHR,today);
+  iVX(items,pf,cur,today,otherMap);
+  iOS(items,pf,cur,WTHR,PTHR);
+}
+
+// ── SECTION 1: DEMAND SHAPING ─────────────────────────────────
+function iDS(items,pf,cur,thr,today){
+  var push=[],prep=[],watch=[],hold=[];
+  items.forEach(function(item){
+    var price=item[pf]||0;
+    if(!price||item.status==='embargoed')return;
+    var avail=item.available_today||0;
+    var demand=item.total_open_demand||0;
+    var commit=item.committable||0;
+    var rC=commit*price,rD=demand*price;
+    if(avail>0&&rC>=thr){
+      push.push({item:item,revP:rC,units:commit,bucket:1,date:null,daysTo:0});
+    }else if(item.next_available_date){
+      var nd=iPD(item.next_available_date),nq=item.next_available_qty||0,rN=nq*price;
+      var dt=iDD(today,nd);
+      if(rN>=thr)prep.push({item:item,revP:rN,units:nq,bucket:iBk(dt),date:item.next_available_date,daysTo:dt});
+    }else if(avail>0&&commit<=0&&rD>=thr){
+      watch.push({item:item,revP:rD,units:demand,bucket:1,date:null,daysTo:0});
+    }else if(item.status==='out_of_stock'&&rD>=thr){
+      hold.push({item:item,revP:rD,units:demand,bucket:1,date:null,daysTo:0});
+    }
+  });
+  push.sort(function(a,b){return b.revP-a.revP;});
+  prep.sort(function(a,b){return(a.daysTo||9999)-(b.daysTo||9999)||b.revP-a.revP;});
+  watch.sort(function(a,b){return b.revP-a.revP;});
+  hold.sort(function(a,b){return b.revP-a.revP;});
+  var parts=[];
+  if(push.length)parts.push(push.length+' push · '+iFR(push.reduce(function(s,i){return s+i.revP;},0),cur));
+  if(prep.length)parts.push(prep.length+' incoming · '+iFR(prep.reduce(function(s,i){return s+i.revP;},0),cur));
+  if(hold.length)parts.push(hold.length+' at risk · '+iFR(hold.reduce(function(s,i){return s+i.revP;},0),cur));
+  document.getElementById('ds-sum').textContent=parts.join('  ·  ')||'No signals above '+iFR(thr,cur);
+  var h='';
+  if(push.length){h+='<div class="intel-cg"><div class="intel-ct push">↗ PUSH NOW — Available to commit</div>'+iRows(push,'revP','units',null,cur)+'</div>';}
+  if(prep.length){
+    var byBk={};prep.forEach(function(pi){if(!byBk[pi.bucket])byBk[pi.bucket]=[];byBk[pi.bucket].push(pi);});
+    Object.keys(byBk).sort(function(a,b){return a-b;}).forEach(function(bk){
+      h+='<div class="intel-cg"><div class="intel-ct prepare">⏳ PREPARE — '+iBkL[bk]+'</div>'+iRows(byBk[bk],'revP','units','date',cur)+'</div>';
+    });
+  }
+  if(watch.length){h+='<div class="intel-cg"><div class="intel-ct watch">⚠ WATCH — Supply being consumed, none incoming</div>'+iRows(watch,'revP','units',null,cur)+'</div>';}
+  if(hold.length){h+='<div class="intel-cg"><div class="intel-ct hold">🛑 DO NOT COMMIT — OOS, no supply in horizon</div>'+iRows(hold,'revP','units',null,cur)+'</div>';}
+  if(!h)h='<div class="intel-empty">No demand signals above '+iFR(thr,cur)+' in current filter.</div>';
+  document.getElementById('ds-body').innerHTML=h;
+}
+function iRows(arr,rf,uf,df,cur){
+  var h='';
+  arr.slice(0,8).forEach(function(si){
+    var item=si.item,ds=df&&si[df]?' · Available '+fd(si[df]):'';
+    h+='<div class="intel-row"><div class="intel-rl"><span class="intel-sku">'+esc(item.item_name)+'</span>';
+    h+='<span class="intel-nm">'+esc((item.item_display_name||'').slice(0,44))+ds+'</span></div>';
+    h+='<div class="intel-rr"><span class="intel-rv">'+iFR(si[rf],cur)+'</span><span class="intel-un">'+si[uf]+' units</span></div></div>';
+  });
+  if(arr.length>8)h+='<div class="intel-more">+'+(arr.length-8)+' more items</div>';
+  return h;
+}
+
+// ── SECTION 2: VENDOR OPEX ────────────────────────────────────
+function iVX(items,pf,cur,today,otherMap){
+  var cm={};
+  items.forEach(function(item){
+    var price=item[pf]||0;
+    var lc=(item.limiting_components||[])[0];
+    if(!lc)return;
+    var name=lc.item_name||lc.item_id||'?';
+    if(!cm[name])cm[name]={name:name,fgs:0,uRisk:0,rRisk:0,poDate:lc.next_po_date||null,poQty:lc.next_po_qty||0};
+    cm[name].fgs++;
+    var risk=Math.max(0,(item.total_open_demand||0)-(item.max_buildable_horizon||item.max_buildable_today||0));
+    cm[name].uRisk+=risk;cm[name].rRisk+=risk*price;
+  });
+  var comps=Object.values(cm).sort(function(a,b){return b.rRisk-a.rRisk;});
+  var crit=[],urg=[],warn=[];
+  comps.forEach(function(c){
+    if(!c.poDate){crit.push(c);return;}
+    var days=iDD(today,iPD(c.poDate));
+    if(days<=7){urg.push(c);}else if(c.rRisk>0){warn.push(c);}
+  });
+  var interco=[];
+  if(loc==='usa3pl'){
+    items.forEach(function(usaItem){
+      if(!['out_of_stock','incoming'].includes(usaItem.status)||(usaItem.total_open_demand||0)<=0)return;
+      var vItem=otherMap[usaItem.item_id];
+      if(!vItem||(vItem.committable||0)<=0)return;
+      var price=usaItem[pf]||0;if(!price)return;
+      var tr=Math.min(usaItem.total_open_demand,vItem.committable),rP=tr*price;
+      if(rP>0)interco.push({item:usaItem,vC:vItem.committable,tr:tr,rP:rP});
+    });
+    interco.sort(function(a,b){return b.rP-a.rP;});
+  }
+  var totalRisk=comps.reduce(function(s,c){return s+c.rRisk;},0);
+  var parts=[crit.length+' critical · '+(urg.length+warn.length)+' warnings · '+iFR(totalRisk,cur)+' at risk'];
+  if(interco.length)parts.push(interco.length+' intercompany gaps');
+  document.getElementById('vx-sum').textContent=parts.join('  ·  ');
+  function cRow(c,action){
+    var det=c.fgs+' SKU'+(c.fgs!==1?'s':'')+' constrained'+(c.poDate?' · PO '+fd(c.poDate):' · No PO on record');
+    return '<div class="intel-row"><div class="intel-rl"><span class="intel-sku">'+esc(c.name)+'</span>'+
+      '<span class="intel-nm">'+det+'</span><span class="intel-ac">'+action+'</span></div>'+
+      '<div class="intel-rr"><span class="intel-rv" style="color:var(--red)">'+iFR(c.rRisk,cur)+'</span>'+
+      '<span class="intel-un">'+Math.round(c.uRisk)+' units at risk</span></div></div>';
+  }
+  var h='';
+  if(crit.length){h+='<div class="intel-cg"><div class="intel-ct hold">🔴 CRITICAL — No purchase order on record</div>';crit.slice(0,6).forEach(function(c){h+=cRow(c,'Raise PO immediately');});if(crit.length>6)h+='<div class="intel-more">+'+(crit.length-6)+' more</div>';h+='</div>';}
+  if(urg.length){h+='<div class="intel-cg"><div class="intel-ct watch">🟠 URGENT — Overdue or due this week</div>';urg.slice(0,6).forEach(function(c){h+=cRow(c,'Chase vendor — confirm firm delivery date');});h+='</div>';}
+  if(warn.length){h+='<div class="intel-cg"><div class="intel-ct prepare">🟡 WARNING — PO on record, demand still at risk</div>';warn.slice(0,6).forEach(function(c){h+=cRow(c,'Monitor — request partial early delivery if possible');});h+='</div>';}
+  if(!crit.length&&!urg.length&&!warn.length&&!interco.length){h='<div class="intel-empty">No component alerts in current filter.</div>';}
+  if(interco.length){
+    h+='<div class="intel-cg"><div class="intel-ct prepare">📦 INTERNAL TRANSFERS PENDING — Italy has stock, no intercompany PO raised</div>';
+    interco.slice(0,6).forEach(function(ic){
+      h+='<div class="intel-row"><div class="intel-rl"><span class="intel-sku">'+esc(ic.item.item_name)+'</span>'+
+        '<span class="intel-nm">VERRAYES: '+ic.vC+' committable · Transfer '+ic.tr+' to cover US demand</span>'+
+        '<span class="intel-ac">Raise intercompany PO</span></div>'+
+        '<div class="intel-rr"><span class="intel-rv" style="color:var(--blue)">'+iFR(ic.rP,cur)+'</span>'+
+        '<span class="intel-un">'+ic.tr+' units</span></div></div>';
+    });
+    if(interco.length>6)h+='<div class="intel-more">+'+(interco.length-6)+' more</div>';
+    h+='</div>';
+  }
+  document.getElementById('vx-body').innerHTML=h;
+}
+
+// ── SECTION 3: OVERSTOCK ──────────────────────────────────────
+function iOS(items,pf,cur,wThr,pThr){
+  var HORIZON=120,flagged=[];
+  items.forEach(function(item){
+    if(item.status==='embargoed')return;
+    var price=item[pf]||0,commit=item.committable||0;
+    if(commit<=0)return;
+    var demand=item.total_open_demand||0;
+    var wRate=(demand/HORIZON)*7;
+    var woc=wRate>0.01?commit/wRate:Infinity;
+    if(woc<wThr)return;
+    var rL=commit*price,lc=item.lifecycle||'';
+    var eol=(lc==='Discontinued'||lc==='End Of Life');
+    var tier=demand===0||woc===Infinity?'dead':woc>=26&&eol?'crit':woc>=26?'high':'mod';
+    flagged.push({item:item,price:price,woc:woc,tier:tier,rL:rL,commit:commit,eol:eol,isPush:price>0&&rL>=pThr});
+  });
+  var tOrd={dead:0,crit:1,high:2,mod:3};
+  flagged.sort(function(a,b){return(tOrd[a.tier]-tOrd[b.tier])||b.rL-a.rL;});
+  var tot=flagged.reduce(function(s,f){return s+f.rL;},0);
+  document.getElementById('os-sum').textContent=flagged.length?flagged.length+' items · '+iFR(tot,cur)+' locked in slow stock':'No overstock alerts';
+  if(!flagged.length){document.getElementById('os-body').innerHTML='<div class="intel-empty">No items above '+wThr+'-week cover threshold in current filter.</div>';return;}
+  var byT={dead:[],crit:[],high:[],mod:[]};
+  flagged.forEach(function(f){byT[f.tier].push(f);});
+  var tDef=[
+    {key:'dead',lbl:'☠ DEADSTOCK — Zero demand',rs:'color:var(--red)'},
+    {key:'crit',lbl:'🔴 CRITICAL — 26+ weeks · Discontinued / End of Life',rs:'color:var(--red)'},
+    {key:'high',lbl:'🟠 HIGH — 26+ weeks cover',rs:'color:var(--amber)'},
+    {key:'mod', lbl:'🟡 MODERATE — '+wThr+'–26 weeks cover',rs:'color:var(--muted)'}
+  ];
+  var acts={dead:'Offer to distributors / samples / write-off review',
+            crit:'Urgent: discounting or channel liquidation',
+            high:'Channel push / bundle / promotional offer',
+            mod:'Accelerate demand — route to higher-velocity channels'};
+  var h='';
+  tDef.forEach(function(td){
+    var arr=byT[td.key];if(!arr||!arr.length)return;
+    h+='<div class="intel-cg"><div class="intel-ct neutral">'+td.lbl+'</div>';
+    arr.slice(0,6).forEach(function(f){
+      var item=f.item;
+      var wStr=f.woc===Infinity?'∞':Math.round(f.woc)+' wks';
+      var eTag=f.eol?' <span style="color:var(--red);font-size:10px;">['+esc(item.lifecycle)+']</span>':'';
+      var pNote=f.isPush?'<span class="intel-ac" style="color:var(--accent);font-style:normal;">→ Demand Shaping: PUSH signal raised</span>':'';
+      h+='<div class="intel-row"><div class="intel-rl">'+
+        '<span class="intel-sku">'+esc(item.item_name)+eTag+'</span>'+
+        '<span class="intel-nm">'+esc((item.item_display_name||'').slice(0,40))+' · '+wStr+' cover</span>'+
+        '<span class="intel-ac">'+acts[f.tier]+'</span>'+pNote+
+        '</div><div class="intel-rr">'+
+        '<span class="intel-rv" style="'+td.rs+'">'+iFR(f.rL,cur)+'</span>'+
+        '<span class="intel-un">'+f.commit+' units locked</span></div></div>';
+    });
+    if(arr.length>6)h+='<div class="intel-more">+'+(arr.length-6)+' more items</div>';
+    h+='</div>';
+  });
+  document.getElementById('os-body').innerHTML=h;
 }
 
 boot();
