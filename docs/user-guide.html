@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRV Supply Chain Control Tower — User Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:        #0a0c0f;
+  --surface:   #111318;
+  --surface2:  #181c23;
+  --border:    #252b35;
+  --border2:   #2e3545;
+  --text:      #e8eaf0;
+  --muted:     #7a8296;
+  --dim:       #4a5268;
+  --accent:    #e8540a;
+  --accent-s:  rgba(232,84,10,.12);
+  --green:     #22c55e;  --green-bg: rgba(34,197,94,.1);
+  --amber:     #f59e0b;  --amber-bg: rgba(245,158,11,.1);
+  --red:       #ef4444;  --red-bg:   rgba(239,68,68,.1);
+  --blue:      #60a5fa;  --blue-bg:  rgba(96,165,250,.1);
+  --purple:    #a78bfa;  --purple-bg:rgba(167,139,250,.1);
+  --mono:      'DM Mono', monospace;
+  --sans:      'Archivo', system-ui, sans-serif;
+  --r:         6px;
+  --sidebar-w: 240px;
+}
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 14px; scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.65; }
+
+/* ── LAYOUT ───────────────────────────── */
+.layout { display: flex; min-height: 100vh; }
+
+/* ── SIDEBAR ──────────────────────────── */
+.sidebar {
+  width: var(--sidebar-w);
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-logo {
+  padding: 1.25rem 1.25rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.sidebar-brand {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.sidebar-doc {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: .2rem;
+}
+.nav-section {
+  padding: .75rem 1rem .3rem;
+}
+.nav-section-title {
+  font-size: 9.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--dim);
+  margin-bottom: .35rem;
+}
+.nav-link {
+  display: block;
+  padding: .3rem .6rem;
+  border-radius: 4px;
+  font-size: 12px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: all .15s;
+  margin-bottom: 1px;
+}
+.nav-link:hover { background: var(--surface2); color: var(--text); }
+.nav-link.active { background: var(--accent-s); color: var(--accent); }
+.nav-link.sub { padding-left: 1.25rem; font-size: 11px; }
+.sidebar-footer {
+  margin-top: auto;
+  padding: .85rem 1.25rem;
+  border-top: 1px solid var(--border);
+  font-size: 10px;
+  color: var(--dim);
+}
+
+/* ── MAIN CONTENT ─────────────────────── */
+.main {
+  margin-left: var(--sidebar-w);
+  flex: 1;
+  max-width: 820px;
+  padding: 3rem 3.5rem 6rem;
+}
+
+/* ── PAGE HEADER ──────────────────────── */
+.doc-header {
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.doc-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .5rem;
+}
+.doc-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: .6rem;
+}
+.doc-subtitle {
+  font-size: 14px;
+  color: var(--muted);
+  max-width: 540px;
+}
+.doc-meta {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.doc-meta span {
+  font-size: 11px;
+  font-family: var(--mono);
+  color: var(--dim);
+}
+
+/* ── SECTIONS ─────────────────────────── */
+section {
+  margin-bottom: 3.5rem;
+}
+.section-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .4rem;
+}
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--border);
+}
+h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 1.5rem 0 .6rem;
+}
+h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  margin: 1.2rem 0 .4rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+p {
+  color: var(--muted);
+  margin-bottom: .9rem;
+  font-size: 13.5px;
+}
+p strong {
+  color: var(--text);
+  font-weight: 600;
+}
+ul, ol {
+  padding-left: 1.4rem;
+  margin-bottom: .9rem;
+}
+li {
+  color: var(--muted);
+  font-size: 13.5px;
+  margin-bottom: .35rem;
+}
+li strong { color: var(--text); }
+code {
+  font-family: var(--mono);
+  font-size: 12px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: .1rem .4rem;
+  color: var(--text);
+}
+pre {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 12px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ── CALLOUT BOXES ────────────────────── */
+.callout {
+  border-radius: var(--r);
+  padding: .85rem 1.1rem;
+  margin: 1rem 0;
+  font-size: 13px;
+  border-left: 3px solid;
+}
+.callout p { margin-bottom: 0; font-size: 13px; }
+.callout-title {
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  margin-bottom: .35rem;
+}
+.callout.info  { background: var(--blue-bg);  border-color: var(--blue);  color: var(--blue); }
+.callout.info p { color: var(--blue); }
+.callout.warn  { background: var(--amber-bg); border-color: var(--amber); }
+.callout.warn p { color: var(--amber); }
+.callout.tip   { background: var(--green-bg); border-color: var(--green); }
+.callout.tip p { color: var(--green); }
+.callout.admin { background: var(--purple-bg);border-color: var(--purple); }
+.callout.admin p { color: var(--purple); }
+
+/* ── STATUS BADGES ────────────────────── */
+.badge { display: inline-flex; align-items: center; gap: .3rem; font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; padding: .2rem .6rem; border-radius: 20px; white-space: nowrap; }
+.badge::before { content: ''; width: 5px; height: 5px; border-radius: 50%; }
+.badge.in_stock    { color: var(--green); background: var(--green-bg); } .badge.in_stock::before   { background: var(--green); }
+.badge.out_of_stock{ color: var(--red);   background: var(--red-bg);   } .badge.out_of_stock::before{ background: var(--red); }
+.badge.incoming    { color: var(--blue);  background: var(--blue-bg);  } .badge.incoming::before   { background: var(--blue); }
+.badge.embargoed   { color: var(--purple);background: var(--purple-bg);} .badge.embargoed::before  { background: var(--purple); }
+
+/* ── TABLE ────────────────────────────── */
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  margin-bottom: 1.25rem;
+}
+.doc-table th {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: .5rem .75rem;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.doc-table td {
+  border: 1px solid var(--border);
+  padding: .5rem .75rem;
+  vertical-align: top;
+  color: var(--muted);
+}
+.doc-table td code { font-size: 11px; }
+.doc-table td strong { color: var(--text); }
+
+/* ── STEP LIST ────────────────────────── */
+.steps { counter-reset: step; margin: 1rem 0; }
+.step { display: flex; gap: 1rem; margin-bottom: .85rem; }
+.step-num {
+  width: 24px; height: 24px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700; font-family: var(--mono);
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.step-content { flex: 1; }
+.step-content strong { display: block; color: var(--text); font-size: 13px; margin-bottom: .2rem; }
+.step-content span { color: var(--muted); font-size: 12.5px; }
+
+/* ── UI DIAGRAM ───────────────────────── */
+.ui-diagram {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1.25rem;
+  margin: 1rem 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.ui-diagram .hl { color: var(--accent); }
+.ui-diagram .dim { color: var(--dim); }
+
+/* ── SECTION DIVIDER ──────────────────── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--border) 60%, transparent 100%);
+  margin: 2.5rem 0;
+}
+
+/* ── ADMIN TAG ────────────────────────── */
+.admin-tag {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .15rem .5rem;
+  border-radius: 3px;
+  background: var(--purple-bg);
+  border: 1px solid var(--purple);
+  color: var(--purple);
+  vertical-align: middle;
+  margin-left: .4rem;
+}
+
+/* ── GLOSSARY ─────────────────────────── */
+.glossary-term {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1rem;
+  padding: .65rem 0;
+  border-bottom: 1px solid var(--border);
+  align-items: baseline;
+}
+.glossary-term:last-child { border-bottom: none; }
+.glossary-term dt { font-family: var(--mono); font-size: 12px; color: var(--text); font-weight: 500; }
+.glossary-term dd { font-size: 13px; color: var(--muted); }
+
+/* ── PRINT ────────────────────────────── */
+@media print {
+  body { background: #fff; color: #111; font-size: 12px; }
+  .sidebar { display: none; }
+  .main { margin-left: 0; padding: 2rem; max-width: none; }
+  .callout.info  { background: #eff6ff; border-color: #3b82f6; }
+  .callout.warn  { background: #fffbeb; border-color: #f59e0b; }
+  .callout.tip   { background: #f0fdf4; border-color: #22c55e; }
+  .callout.admin { background: #faf5ff; border-color: #a78bfa; }
+  h2, h3, h4 { color: #111; }
+  p, li { color: #374151; }
+  code { background: #f3f4f6; border-color: #d1d5db; color: #111; }
+  .doc-table th { background: #f3f4f6; color: #374151; }
+  .doc-table td { color: #374151; }
+  section { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+
+<!-- ── Sidebar ─────────────────────────────────────────────────── -->
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <div class="sidebar-brand">GRV Supply Chain</div>
+    <div class="sidebar-doc">User Guide · v2</div>
+  </div>
+
+  <nav>
+    <div class="nav-section">
+      <div class="nav-section-title">Introduction</div>
+      <a href="#overview" class="nav-link">Overview</a>
+      <a href="#access" class="nav-link">Accessing the Dashboard</a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">Dashboard · Regular Users</div>
+      <a href="#layout" class="nav-link">Page Layout</a>
+      <a href="#filters" class="nav-link">Using Filters</a>
+      <a href="#summary-cards" class="nav-link">Summary Cards</a>
+      <a href="#charts" class="nav-link">Charts</a>
+      <a href="#table" class="nav-link">Data Table</a>
+      <a href="#staircase" class="nav-link sub">↳ Staircase View</a>
+      <a href="#export" class="nav-link">CSV Export</a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">Understanding the Data</div>
+      <a href="#statuses" class="nav-link">Status Definitions</a>
+      <a href="#fields" class="nav-link">Field Reference</a>
+      <a href="#locations" class="nav-link">VERRAYES vs USA-3PL</a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">Intelligence Module</div>
+      <a href="#intel-insights" class="nav-link">Auto-Insights Panel</a>
+      <a href="#intel-chat" class="nav-link">AI Chat Assistant</a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">Admin Guide</div>
+      <a href="#admin-when" class="nav-link">When to Refresh</a>
+      <a href="#admin-refresh" class="nav-link">Refresh Workflow</a>
+      <a href="#admin-panel" class="nav-link">Admin Panel</a>
+      <a href="#admin-config" class="nav-link sub">↳ FG / Exclusion / Embargo</a>
+      <a href="#admin-upload" class="nav-link">GitHub Upload</a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">Reference</div>
+      <a href="#glossary" class="nav-link">Glossary</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+    </div>
+  </nav>
+
+  <div class="sidebar-footer">
+    Updated May 2026 · GRV v2
+  </div>
+</aside>
+
+<!-- ── Main content ─────────────────────────────────────────────── -->
+<main class="main">
+
+  <div class="doc-header">
+    <div class="doc-eyebrow">Grivel · Internal Documentation</div>
+    <h1 class="doc-title">GRV Supply Chain Control Tower</h1>
+    <p class="doc-subtitle">Complete user guide for the item availability dashboard — for both regular users and administrators.</p>
+    <div class="doc-meta">
+      <span>Version 2.0</span>
+      <span>Updated May 2026</span>
+      <span>grivelsc.github.io/GRV-Item-Availability/</span>
+    </div>
+  </div>
+
+
+  <!-- ── OVERVIEW ───────────────────────────────────────── -->
+  <section id="overview">
+    <div class="section-label">Introduction</div>
+    <h2>What is the GRV Supply Chain Control Tower?</h2>
+
+    <p>The <strong>GRV Supply Chain Control Tower</strong> is a live web dashboard that shows how many units of each finished-goods SKU Grivel can currently ship — and when more will become available. It pulls data from NetSuite (the company's ERP system) and computes availability across the full bill of materials for every product.</p>
+
+    <p>The dashboard covers two locations:</p>
+    <ul>
+      <li><strong>VERRAYES</strong> — the manufacturing facility in Italy (full BOM-aware availability).</li>
+      <li><strong>USA-3PL</strong> — the distribution warehouse in the USA (finished goods only).</li>
+    </ul>
+
+    <p>It is intended for use by sales, operations, and customer service teams who need to answer questions like: <em>"Can we fulfil this order? When can we ship? What's holding us back?"</em></p>
+
+    <div class="callout info">
+      <div class="callout-title">Data freshness</div>
+      <p>Data is refreshed manually. The timestamp in the top-right corner shows when the data was last updated. If you are unsure of freshness, contact the person responsible for running weekly refreshes.</p>
+    </div>
+  </section>
+
+
+  <!-- ── ACCESS ─────────────────────────────────────────── -->
+  <section id="access">
+    <h2>Accessing the Dashboard</h2>
+    <p>The dashboard is hosted publicly at:</p>
+    <pre><code>https://grivelsc.github.io/GRV-Item-Availability/</code></pre>
+    <p>No login is required. The link is also bookmarked in the company SharePoint intranet. It works in any modern browser — Chrome, Firefox, Safari, or Edge.</p>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ── LAYOUT ─────────────────────────────────────────── -->
+  <section id="layout">
+    <div class="section-label">Dashboard · Regular Users</div>
+    <h2>Page Layout</h2>
+
+    <p>When you open the dashboard you see:</p>
+
+    <div class="ui-diagram">
+<span class="dim">┌──────────────────────────────────────────────────────────────────┐</span>
+<span class="dim">│</span> <span class="hl">HEADER</span>: GRV logo · [Item Availability] [✦ Intelligence] · timestamp <span class="dim">│</span>
+<span class="dim">├──────────────────────────────────────────────────────────────────┤</span>
+<span class="dim">│</span> <span class="hl">FILTER BAR</span>: [VERRAYES] [USA·3PL] | Lifecycle | Class | Status | 🔍 <span class="dim">│</span>
+<span class="dim">├──────────────────────────────────────────────────────────────────┤</span>
+<span class="dim">│</span> <span class="hl">CHARTS</span>: Bottleneck Components | Demand Coverage | Committable Dist <span class="dim">│</span>
+<span class="dim">├──────────────────────────────────────────────────────────────────┤</span>
+<span class="dim">│</span> <span class="hl">SUMMARY CARDS</span>: Total · In Stock · Incoming · Out of Stock · Embargoed <span class="dim">│</span>
+<span class="dim">├──────────────────────────────────────────────────────────────────┤</span>
+<span class="dim">│</span> <span class="hl">TABLE</span>: SKU | Class | Status | Avail Today | Open Demand | ... [▼][↑]  <span class="dim">│</span>
+<span class="dim">└──────────────────────────────────────────────────────────────────┘</span>
+    </div>
+
+    <p>The header contains two main tabs: <strong>Item Availability</strong> (the data table view) and <strong>✦ Intelligence</strong> (the AI-powered analysis panel, covered later in this guide).</p>
+  </section>
+
+
+  <!-- ── FILTERS ────────────────────────────────────────── -->
+  <section id="filters">
+    <h2>Using Filters</h2>
+    <p>All filters are live — the charts, summary cards, and table all update instantly whenever you change a filter. There is no "Apply" button needed.</p>
+
+    <table class="doc-table">
+      <thead><tr><th>Filter</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Location tabs</strong><br><code>VERRAYES / USA·3PL</code></td><td>Switches between the Italian manufacturing facility and the US distribution warehouse. Each location has completely separate inventory and availability data.</td></tr>
+        <tr><td><strong>Lifecycle</strong></td><td>Filters by product lifecycle stage. Defaults to <em>Active</em>. Choose <em>All lifecycles</em> to see everything including Discontinued and End-Of-Life products.</td></tr>
+        <tr><td><strong>Class</strong></td><td>Filters by product category (Crampons, Ice Axes, Elements, etc.).</td></tr>
+        <tr><td><strong>Status</strong></td><td>Filters by availability status: In Stock, Incoming, Out of Stock, or Embargoed.</td></tr>
+        <tr><td><strong>Search 🔍</strong></td><td>Free-text search across SKU code and product display name. Partial matches work.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout tip">
+      <div class="callout-title">Tip</div>
+      <p>To quickly find all products that are out of stock and have open demand, set Status → <em>Out of Stock</em>. Then sort the table by the <em>Open Demand</em> column descending to see the most urgent cases first.</p>
+    </div>
+  </section>
+
+
+  <!-- ── SUMMARY CARDS ──────────────────────────────────── -->
+  <section id="summary-cards">
+    <h2>Summary Cards</h2>
+    <p>The five cards below the charts give a quick snapshot of the current filtered view:</p>
+
+    <table class="doc-table">
+      <thead><tr><th>Card</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Total SKUs</strong></td><td>How many SKUs match the active filters.</td></tr>
+        <tr><td><strong>In Stock</strong></td><td>SKUs with net available units > 0 today. Percentage shown below the number.</td></tr>
+        <tr><td><strong>Incoming</strong></td><td>SKUs currently out of stock but with supply arriving within the planning horizon (120 days).</td></tr>
+        <tr><td><strong>Out of Stock</strong></td><td>SKUs with zero availability today and none expected within the horizon.</td></tr>
+        <tr><td><strong>Embargoed</strong></td><td>SKUs whose availability is gated until a future date (e.g. pre-production items not yet released to sell).</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+
+  <!-- ── CHARTS ─────────────────────────────────────────── -->
+  <section id="charts">
+    <h2>Charts</h2>
+    <p>Three charts sit above the data table and update with your filters. They give a visual overview of supply health.</p>
+
+    <h3>Top Bottleneck Components</h3>
+    <p>A dual horizontal bar chart showing which BOM (bill of materials) components are most constraining production at VERRAYES. The <strong>left panel</strong> ranks components by how many finished goods they constrain. The <strong>right panel</strong> ranks by total backlogged demand they are responsible for. This chart only appears for VERRAYES — USA-3PL has no BOM explosion.</p>
+
+    <h3>Demand Coverage Timeline</h3>
+    <p>A stacked area chart showing cumulative met demand (green) vs. backlogged demand (orange) across all visible SKUs over time. A growing orange area means more orders will go unfulfilled unless new supply arrives.</p>
+
+    <h3>Committable Distribution</h3>
+    <p>A histogram showing how many SKUs fall into each committable range: 0, 1–50, 51–200, 201–500, and 500+. Useful for understanding overall capacity to accept new orders.</p>
+  </section>
+
+
+  <!-- ── TABLE ──────────────────────────────────────────── -->
+  <section id="table">
+    <h2>Data Table</h2>
+    <p>The main table lists every SKU that matches the active filters. Click any column header to sort; click again to reverse the sort direction.</p>
+
+    <table class="doc-table">
+      <thead><tr><th>Column</th><th>What it means</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>SKU / Name</strong></td>
+          <td>The NetSuite item code (monospace, smaller text) and the display name below it.</td>
+        </tr>
+        <tr>
+          <td><strong>Class</strong></td>
+          <td>Product category (e.g. Crampons, Ice Axes).</td>
+        </tr>
+        <tr>
+          <td><strong>Status</strong></td>
+          <td>Coloured badge: <span class="badge in_stock">In Stock</span> <span class="badge incoming">Incoming</span> <span class="badge out_of_stock">Out of Stock</span> <span class="badge embargoed">Embargoed</span></td>
+        </tr>
+        <tr>
+          <td><strong>Avail Today</strong></td>
+          <td>Net units you can ship today. Green = positive, red = negative (more demand than supply). A negative number means some open orders cannot be filled even from current inventory.</td>
+        </tr>
+        <tr>
+          <td><strong>Open Demand</strong></td>
+          <td>Total open sales order quantity for this SKU, regardless of expected ship date. This is the total obligation against this product.</td>
+        </tr>
+        <tr>
+          <td><strong>Committable</strong></td>
+          <td>Units you can safely promise to <em>new</em> orders. Calculated as max buildable over the 120-day horizon minus all open demand. If negative, existing orders are already oversubscribed.</td>
+        </tr>
+        <tr>
+          <td><strong>Max Build</strong></td>
+          <td>The theoretical maximum you could produce today from current raw material and component inventory, before accounting for any demand.</td>
+        </tr>
+        <tr>
+          <td><strong>Next Avail</strong></td>
+          <td>The date when the next supply event (incoming PO receipt) is expected to increase available quantity.</td>
+        </tr>
+        <tr>
+          <td><strong>Next Qty</strong></td>
+          <td>How many additional units become available at the Next Avail date.</td>
+        </tr>
+        <tr>
+          <td><strong>Top Constraint</strong></td>
+          <td>The BOM component that most limits production, and its next expected PO. "No PO" means no replenishment is currently ordered for this component.</td>
+        </tr>
+        <tr>
+          <td><strong>▼ / ▲</strong></td>
+          <td>Expand/collapse button to show the full availability staircase for that SKU.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div id="staircase">
+      <h3>Expanding a Row — The Availability Staircase</h3>
+      <p>Click the <strong>▼</strong> button at the right of any row to expand the full time-phased availability view for that SKU. This shows how availability changes at each future supply event.</p>
+
+      <table class="doc-table">
+        <thead><tr><th>Staircase Column</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Date (+pad)</strong></td><td>The date of the supply or demand event. Dates include a manufacturing or transit pad (typically +7 days).</td></tr>
+          <tr><td><strong>Buildable</strong></td><td>Maximum units that could be produced at this date, given all inventory and POs received up to that date.</td></tr>
+          <tr><td><strong>Cum. Demand</strong></td><td>Cumulative open SO quantity with ship dates up to and including this date.</td></tr>
+          <tr><td><strong>Net Available</strong></td><td>Buildable minus cumulative demand. A mini bar chart visualises this.</td></tr>
+          <tr><td><strong>Limiting Item</strong></td><td>The BOM component constraining production at this time step.</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout info">
+        <div class="callout-title">Reading the staircase</div>
+        <p>Each row represents a moment where something changes — a PO arrives, or a batch of SO ship dates passes. Steps where nothing changes are removed to keep the view compact. If the Net Available column stays at 0 throughout, the item has no current or planned supply.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── EXPORT ─────────────────────────────────────────── -->
+  <section id="export">
+    <h2>CSV Export</h2>
+    <p>Click the <strong>⬇ CSV</strong> button in the filter bar to download all availability data as a spreadsheet. The file is named <code>grv_availability_YYYY-MM-DD.csv</code> and includes all 332+ SKUs across both locations, with all key fields.</p>
+    <div class="callout warn">
+      <div class="callout-title">Note on scope</div>
+      <p>The CSV always exports <em>all</em> items regardless of active filters. Use your spreadsheet app to apply additional filtering after download.</p>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ── STATUSES ───────────────────────────────────────── -->
+  <section id="statuses">
+    <div class="section-label">Understanding the Data</div>
+    <h2>Status Definitions</h2>
+
+    <table class="doc-table">
+      <thead><tr><th>Status</th><th>Condition</th><th>What to do</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="badge in_stock">In Stock</span></td>
+          <td>Net available today &gt; 0</td>
+          <td>Can fulfil orders immediately.</td>
+        </tr>
+        <tr>
+          <td><span class="badge incoming">Incoming</span></td>
+          <td>Net available today = 0 but supply is arriving within 120 days</td>
+          <td>Cannot ship today. Use Next Avail date to set customer expectations.</td>
+        </tr>
+        <tr>
+          <td><span class="badge out_of_stock">Out of Stock</span></td>
+          <td>No availability today and no supply expected within horizon</td>
+          <td>Escalate to procurement. Check Top Constraint for the blocking component.</td>
+        </tr>
+        <tr>
+          <td><span class="badge embargoed">Embargoed</span></td>
+          <td>Availability is administratively suppressed until a future date</td>
+          <td>Do not commit orders. The item may be in production or pending commercial release.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+
+  <!-- ── FIELDS ─────────────────────────────────────────── -->
+  <section id="fields">
+    <h2>Field Reference</h2>
+
+    <h3>Available Today vs. Committable — What's the Difference?</h3>
+    <p><strong>Available Today</strong> is what you can ship <em>right now</em>, after accounting for all orders that are due today or are already late. It can be negative if there are more overdue orders than current stock.</p>
+
+    <p><strong>Committable</strong> looks further out — it's the maximum buildable quantity over the next 120 days, minus <em>all</em> open demand (regardless of ship date). This is the ATP (Available-to-Promise) figure: how many additional units you can safely commit to new customers without jeopardising existing orders.</p>
+
+    <div class="callout tip">
+      <div class="callout-title">Example</div>
+      <p>A SKU shows Available Today = −12 (existing late orders exceed current stock), but Committable = 38. This means 12 late orders need attention, but after those are accounted for, there are 38 units of future capacity that can be safely promised to new orders.</p>
+    </div>
+
+    <h3>The Planning Horizon (120 Days)</h3>
+    <p>Only purchase orders with an expected receipt date within the next 120 days are included in the staircase calculation. POs beyond 120 days exist in NetSuite but are not shown. The horizon is configurable by an admin.</p>
+
+    <h3>Overdue POs</h3>
+    <p>Purchase orders whose expected receipt date has already passed are not counted as received. They are automatically rescheduled to <strong>today + 7 days</strong> in the calculation, appearing as an upcoming supply event. This provides a realistic (slightly conservative) picture.</p>
+  </section>
+
+
+  <!-- ── LOCATIONS ──────────────────────────────────────── -->
+  <section id="locations">
+    <h2>VERRAYES vs USA-3PL</h2>
+
+    <table class="doc-table">
+      <thead><tr><th></th><th>VERRAYES</th><th>USA-3PL</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Type</strong></td><td>Manufacturing + sales entity</td><td>Distribution warehouse</td></tr>
+        <tr><td><strong>Subsidiary</strong></td><td>Grivel S.r.l. (Italy)</td><td>Grivel Corp. (USA)</td></tr>
+        <tr><td><strong>Supply logic</strong></td><td>Full multi-level BOM explosion. Buildable = max producible from all components.</td><td>FG inventory only. No BOM. Supply comes from intercompany POs shipped from Italy.</td></tr>
+        <tr><td><strong>Bottleneck chart</strong></td><td>Shows BOM component constraints.</td><td>Not shown (N/A — no BOM).</td></tr>
+        <tr><td><strong>Embargo pad</strong></td><td>Embargo date as set.</td><td>Embargo date + 90 days (Italy→USA supply chain lead time).</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout warn">
+      <div class="callout-title">USA-3PL note</div>
+      <p>Available units at USA-3PL are what is physically in the US warehouse plus committed incoming intercompany shipments. Even if VERRAYES shows a product In Stock, USA-3PL may show Out of Stock if no intercompany PO has been raised to ship it across.</p>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ── INTELLIGENCE: INSIGHTS ─────────────────────────── -->
+  <section id="intel-insights">
+    <div class="section-label">Intelligence Module</div>
+    <h2>Auto-Insights Panel</h2>
+
+    <p>Click the <strong>✦ Intelligence</strong> tab in the header to switch to the Intelligence view. The left column shows automatically generated supply chain insights based on the currently active filters (location, lifecycle, class).</p>
+
+    <p>The panel contains six insight cards:</p>
+
+    <table class="doc-table">
+      <thead><tr><th>Card</th><th>What it shows</th></tr></thead>
+      <tbody>
+        <tr><td><strong>📊 Supply Health</strong></td><td>An overall health score (percentage of SKUs that are In Stock or Incoming). Colour-coded green/amber/red. Includes a breakdown bar and legend.</td></tr>
+        <tr><td><strong>🔴 Unfulfillable Demand</strong></td><td>All Out of Stock SKUs that have open sales orders — the most urgent issue. Sorted by demand volume.</td></tr>
+        <tr><td><strong>⚠ Demand Exceeds Horizon Supply</strong></td><td>SKUs where total open demand exceeds the maximum buildable quantity within 120 days, even for items that are Incoming (not yet fully OOS).</td></tr>
+        <tr><td><strong>⚙ Top Bottleneck Components</strong></td><td>The raw-material and sub-assembly components that are blocking the most finished goods from being produced.</td></tr>
+        <tr><td><strong>📦 Upcoming Supply Events</strong></td><td>The next scheduled incoming receipt for each SKU, sorted by date. Useful for planning shipment commitments.</td></tr>
+        <tr><td><strong>🟢 Available to Promise</strong></td><td>The SKUs with the highest committable quantity — useful when sales teams are looking for items to push.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout tip">
+      <div class="callout-title">Tip</div>
+      <p>The insights panel respects all active filters. If you want to see the intelligence view for only Crampon SKUs, apply the Crampons class filter first, then click ✦ Intelligence.</p>
+    </div>
+  </section>
+
+
+  <!-- ── INTELLIGENCE: CHAT ──────────────────────────────── -->
+  <section id="intel-chat">
+    <h2>AI Chat Assistant</h2>
+
+    <p>The right column of the Intelligence view is an AI assistant powered by Claude (Anthropic). It has the current availability data — including the top out-of-stock items, bottleneck components, and demand figures — loaded as context. You can ask it questions in plain language.</p>
+
+    <h3>Setting Up the API Key</h3>
+    <p>The first time you open the Intelligence tab, you will see a <strong>🔑 API key</strong> row above the chat input. You need to enter an Anthropic API key for the chat to work.</p>
+
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Obtain an Anthropic API key</strong><span>From console.anthropic.com under API Keys.</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Paste it into the field</strong><span>The field shows <code>sk-ant-…</code> as a placeholder. Paste your key and click <strong>Save Key</strong>.</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>The key is stored in your browser session</strong><span>It is not sent to GitHub or any Grivel server. It disappears when you close the browser tab. You will need to re-enter it each session.</span></div></div>
+    </div>
+
+    <div class="callout warn">
+      <div class="callout-title">Security note</div>
+      <p>Your API key is stored in browser sessionStorage only and is transmitted directly to the Anthropic API. Never share your API key with others or enter it on a public or untrusted computer.</p>
+    </div>
+
+    <h3>Example Questions</h3>
+    <p>The chat has several pre-built question chips you can click. You can also type any question freely. Some useful examples:</p>
+    <ul>
+      <li><em>"Which crampons are critically out of stock with open orders?"</em></li>
+      <li><em>"What are the top 3 components blocking production right now?"</em></li>
+      <li><em>"Which incoming SKUs are arriving soonest?"</em></li>
+      <li><em>"Give me a summary of supply health for the Crampon class."</em></li>
+      <li><em>"Which items can I safely commit to new orders today?"</em></li>
+    </ul>
+
+    <div class="callout info">
+      <div class="callout-title">Conversation memory</div>
+      <p>The assistant remembers the last 12 messages in the current conversation. Refreshing the page starts a new conversation. The assistant does not retain information between separate browser sessions.</p>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ── ADMIN: WHEN TO REFRESH ──────────────────────────── -->
+  <section id="admin-when">
+    <div class="section-label">Admin Guide <span class="admin-tag">Admin Only</span></div>
+    <h2>When to Refresh Data</h2>
+
+    <p>The dashboard data is static until manually refreshed. You should run a refresh:</p>
+    <ul>
+      <li><strong>Weekly</strong> — at minimum, once a week on a fixed day (e.g. Monday morning).</li>
+      <li><strong>Before key sales calls or forecasting meetings</strong> — to ensure figures are current.</li>
+      <li><strong>After significant NetSuite changes</strong> — e.g. after receiving a large PO, entering new sales orders, or updating BOM structures.</li>
+      <li><strong>After config changes</strong> — whenever the FG list, exclusion list, or embargo list is updated.</li>
+    </ul>
+  </section>
+
+
+  <!-- ── ADMIN: REFRESH WORKFLOW ─────────────────────────── -->
+  <section id="admin-refresh">
+    <h2>Refresh Workflow</h2>
+    <p>Refreshing updates the availability data on the live dashboard. There are two scenarios:</p>
+
+    <h3>Routine Refresh (data only, no config change)</h3>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Open a terminal and navigate to the project folder</strong><span><code>cd C:\GRV-Availability</code></span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Run the refresh script</strong><span><code>python refresh_availability.py</code><br>This queries NetSuite, runs the computation engine, and writes <code>availability.json</code> and <code>metadata.json</code> to the local folder.</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Copy the output files to the docs folder</strong><span><code>copy availability.json docs\</code><br><code>copy metadata.json docs\</code></span></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Upload to GitHub</strong><span>See the <a href="#admin-upload">GitHub Upload</a> section below.</span></div></div>
+    </div>
+
+    <h3>Config Update Refresh (FG list, exclusion list, embargo list, or settings change)</h3>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Open the dashboard → ⚙ Admin Panel</strong><span>Click the gear icon in the top-right corner of the dashboard.</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Upload the relevant CSV files</strong><span>See the <a href="#admin-config">Admin Panel section</a> for CSV format details.</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Download the updated config</strong><span>Click <strong>⬇ Download Updated config.json</strong>. Save it to <code>C:\GRV-Availability\config.json</code>, replacing the old one.</span></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Run the routine refresh</strong><span>Follow the Routine Refresh steps above.</span></div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-content"><strong>Also copy config.json to docs\</strong><span><code>copy config.json docs\</code><br>Then upload 3 files to GitHub: <code>availability.json</code>, <code>metadata.json</code>, and <code>config.json</code>.</span></div></div>
+    </div>
+
+    <div class="callout warn">
+      <div class="callout-title">Important</div>
+      <p>Always run <code>refresh_availability.py</code> from the local machine where <code>credentials.json</code> is stored. This file contains NetSuite OAuth tokens and must <strong>never</strong> be committed to GitHub.</p>
+    </div>
+  </section>
+
+
+  <!-- ── ADMIN PANEL ─────────────────────────────────────── -->
+  <section id="admin-panel">
+    <h2>Admin Panel</h2>
+    <p>The Admin Panel is accessed via the <strong>⚙</strong> gear icon in the dashboard header. It lets you manage three configuration lists without editing files directly.</p>
+
+    <div id="admin-config">
+      <h3>Finished Goods List</h3>
+      <p>The FG list defines which SKUs the dashboard tracks. It is a CSV file with <strong>one NetSuite internal ID per row, no header</strong>. Currently tracks 332 SKUs.</p>
+      <p>To update:</p>
+      <ol>
+        <li>Prepare a CSV file with the new set of internal IDs.</li>
+        <li>In the Admin Panel, click <strong>📄 Upload FG List CSV</strong>.</li>
+        <li>A preview of the parsed IDs will appear. Verify the count looks correct.</li>
+        <li>Download the updated <code>config.json</code> and follow the Config Update Refresh workflow.</li>
+      </ol>
+
+      <pre><code># Example FG list CSV
+6895
+6896
+6897
+7199</code></pre>
+
+      <h3>Exclusion List</h3>
+      <p>Items on the exclusion list are treated as having <strong>unlimited supply</strong> — they are excluded from BOM constraint calculations. Use this for items that are purchased from external suppliers on a non-constrained basis (e.g. retail packaging, labels).</p>
+      <p>CSV format: <code>internal_id, item_name</code> — one row per item, no header.</p>
+
+      <pre><code># Example exclusion list CSV
+7783, 0GUTRN.BLADE
+7900, 0PACK.ENV</code></pre>
+
+      <div class="callout info">
+        <div class="callout-title">Note</div>
+        <p>The exclusion list applies globally — excluded items are unconstrained for all finished goods. There is no per-FG exclusion at this time.</p>
+      </div>
+
+      <h3>Embargo List</h3>
+      <p>Embargoed SKUs have their availability suppressed to zero until the specified date. Use this for products in final production that should not yet appear as available to sell.</p>
+      <p>CSV format: <code>internal_id, item_name, embargo_date</code> — one row per item, no header. Date format: <code>YYYY-MM-DD</code>.</p>
+
+      <pre><code># Example embargo list CSV
+8001, PIATE+.NEW24, 2026-09-01
+8002, TRIGRIP.24.S, 2026-08-15</code></pre>
+
+      <div class="callout tip">
+        <div class="callout-title">USA-3PL embargo pad</div>
+        <p>Embargo dates at USA-3PL are automatically extended by 90 days to account for Italy-to-USA supply chain lead time. So an embargo of <code>2026-09-01</code> will show as unavailable at USA-3PL until approximately <code>2026-12-01</code>. No action is needed — this happens automatically.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── GITHUB UPLOAD ───────────────────────────────────── -->
+  <section id="admin-upload">
+    <h2>GitHub Upload</h2>
+    <p>After running the refresh script and copying files to the <code>docs\</code> folder, upload them to the GitHub repository to publish the updated data.</p>
+
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Open the repository on GitHub</strong><span>Go to <code>github.com/GrivelSC/GRV-Item-Availability</code></span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Navigate to the docs folder</strong><span>Click on the <code>docs/</code> folder in the file list.</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Click "Add file" → "Upload files"</strong><span>Drag and drop the output files from your local <code>docs\</code> folder (<code>availability.json</code>, <code>metadata.json</code>, and if changed, <code>config.json</code>).</span></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Write a commit message and click "Commit changes"</strong><span>Use a message like <em>"Data refresh — 26 May 2026"</em>. Choose "Commit directly to the main branch".</span></div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-content"><strong>Wait ~60 seconds</strong><span>GitHub Pages rebuilds automatically. Refresh the dashboard URL to see the updated data.</span></div></div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ── GLOSSARY ───────────────────────────────────────── -->
+  <section id="glossary">
+    <div class="section-label">Reference</div>
+    <h2>Glossary</h2>
+    <dl>
+      <div class="glossary-term"><dt>ATP</dt><dd>Available to Promise. The number of units that can be safely committed to new orders without jeopardising existing open orders. Shown as the "Committable" column.</dd></div>
+      <div class="glossary-term"><dt>BOM</dt><dd>Bill of Materials. The list of sub-components and raw materials required to produce one unit of a finished good. The dashboard explodes BOMs recursively to compute true production capacity.</dd></div>
+      <div class="glossary-term"><dt>Buildable</dt><dd>The maximum units that could theoretically be produced at a given date, given current inventory plus any POs received up to that date. Does not subtract demand.</dd></div>
+      <div class="glossary-term"><dt>Committable</dt><dd>Max buildable at the 120-day planning horizon, minus all open demand. The safe ATP figure for new orders.</dd></div>
+      <div class="glossary-term"><dt>Embargo</dt><dd>An administrative hold on a SKU. Availability is suppressed to zero until the embargo date is reached.</dd></div>
+      <div class="glossary-term"><dt>FG / Finished Good</dt><dd>A product that is sold to customers (as opposed to a raw material or sub-assembly used in production).</dd></div>
+      <div class="glossary-term"><dt>Intercompany PO</dt><dd>A purchase order raised by Grivel Corp. (USA) against Grivel S.r.l. (Italy) to transfer stock between entities. These appear as supply at USA-3PL.</dd></div>
+      <div class="glossary-term"><dt>Lifecycle</dt><dd>The product life stage: Active, New Product, Discontinued, or End Of Life. Pulled from NetSuite.</dd></div>
+      <div class="glossary-term"><dt>Net Available</dt><dd>Buildable minus cumulative demand at a given date. What is shown in the Avail Today column and in each staircase step.</dd></div>
+      <div class="glossary-term"><dt>Open Demand</dt><dd>The total quantity of unfulfilled sales order lines for a SKU, across all ship dates (past and future).</dd></div>
+      <div class="glossary-term"><dt>Planning Horizon</dt><dd>The time window (default 120 days) within which PO receipts are included in staircase calculations.</dd></div>
+      <div class="glossary-term"><dt>Staircase</dt><dd>The time-phased availability view showing how buildable, demand, and net available change at each future supply or demand event.</dd></div>
+      <div class="glossary-term"><dt>Top Constraint</dt><dd>The BOM component (raw material or sub-assembly) whose scarcity most limits production of a finished good.</dd></div>
+      <div class="glossary-term"><dt>VERRAYES</dt><dd>Grivel's manufacturing facility in Verrayes, Aosta Valley, Italy. Supply Chain Control Tower shows full BOM-aware availability for this location.</dd></div>
+    </dl>
+  </section>
+
+
+  <!-- ── FAQ ───────────────────────────────────────────── -->
+  <section id="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>The data looks outdated. What do I do?</h3>
+    <p>Check the "Data as of…" timestamp in the header. If it's more than a week old, contact the person responsible for data refreshes (currently Davide Pezzia / Operations). Refreshes are manual and require running the Python script on the local machine with NetSuite credentials.</p>
+
+    <h3>A SKU I know exists is not showing up.</h3>
+    <p>The dashboard only shows SKUs that appear on the <strong>Finished Goods list</strong> managed by an admin. The SKU may exist in NetSuite but not yet be on the FG list. Contact an admin to add it.</p>
+
+    <h3>Avail Today is negative. Is that a data error?</h3>
+    <p>No. A negative Avail Today means open orders whose expected ship date is today or earlier exceed the current buildable supply. These are essentially overdue or unfillable orders from a supply perspective.</p>
+
+    <h3>Why is USA-3PL Out of Stock when VERRAYES shows In Stock?</h3>
+    <p>The two locations are independent. Being In Stock at VERRAYES means the product is available in Italy. For it to be available at USA-3PL, an intercompany purchase order must have been placed and the stock physically transferred. Check the staircase view at USA-3PL to see if any intercompany supply is scheduled.</p>
+
+    <h3>What does "No PO" mean in the Top Constraint column?</h3>
+    <p>The constraining component has no open purchase order currently in NetSuite. This means the constraint will not be resolved until a PO is raised. Escalate to procurement immediately if the SKU has significant open demand.</p>
+
+    <h3>Can I request a specific SKU be embargoed?</h3>
+    <p>Yes. Provide the NetSuite internal ID, item name, and desired embargo date to an admin, who will add it to the embargo list and trigger a refresh.</p>
+
+    <h3>The AI assistant says it can't answer a question about a specific SKU.</h3>
+    <p>The AI receives a summary of the top items (by demand, constraint, and committable), not the full 332-item dataset. For individual SKU details, use the search field in the availability table and expand the row to see the full staircase.</p>
+  </section>
+
+</main>
+</div>
+
+<script>
+// Highlight active sidebar link on scroll
+var links = document.querySelectorAll('.nav-link');
+var sections = [];
+links.forEach(function(link) {
+  var id = link.getAttribute('href').replace('#','');
+  var el = document.getElementById(id);
+  if (el) sections.push({ el: el, link: link });
+});
+
+function updateActive() {
+  var scrollY = window.scrollY + 80;
+  var current = null;
+  sections.forEach(function(s) {
+    if (s.el.offsetTop <= scrollY) current = s;
+  });
+  links.forEach(function(l) { l.classList.remove('active'); });
+  if (current) current.link.classList.add('active');
+}
+window.addEventListener('scroll', updateActive, { passive: true });
+updateActive();
+</script>
+</body>
+</html>
