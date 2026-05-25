@@ -1116,6 +1116,237 @@ function iOS(items,pf,cur,wThr,pThr){
   document.getElementById('os-body').innerHTML=h;
 }
 
+// ── VIEW SWITCHING ────────────────────────────────────────────
+var activeView='availability';
+function switchView(v){
+  activeView=v;
+  var isA=v==='availability';
+  document.getElementById('vtab-avail').classList.toggle('active',isA);
+  document.getElementById('vtab-intel').classList.toggle('active',!isA);
+  document.getElementById('intel-panel').style.display=isA?'none':'block';
+  if(!isA){
+    document.getElementById('charts-bar').classList.remove('visible');
+    document.getElementById('content').style.display='none';
+    generateIntel();
+  }else{
+    document.getElementById('content').style.display='';
+    filter();
+  }
+}
+function iPf(){return loc==='verrayes'?'avg_eur_per_unit':'avg_usd_per_unit';}
+function iCur(){return loc==='verrayes'?'€':'$';}
+function iPD(s){if(!s)return null;var p=s.split('-');return new Date(parseInt(p[0]),parseInt(p[1])-1,parseInt(p[2]));}
+function iDD(a,b){return Math.round((b-a)/86400000);}
+function iFR(v,cur){
+  if(v==null||isNaN(v))return cur+'0';
+  if(v>=1000000)return cur+(v/1000000).toFixed(1)+'M';
+  if(v>=1000)return cur+Math.round(v/1000)+'k';
+  return cur+Math.round(v);
+}
+function iBk(d){if(d<=30)return 1;if(d<=60)return 2;if(d<=120)return 3;return 4;}
+var iBkL=['','Month 1 (next 30 days)','Month 2 (31–60 days)','Months 3–4 (61–120 days)','Beyond 120 days'];
+function toggleIS(id){
+  var b=document.getElementById(id+'-body'),t=document.getElementById(id+'-tog');
+  b.classList.toggle('open',!b.classList.contains('open'));
+  t.classList.toggle('open',b.classList.contains('open'));
+}
+function generateIntel(){
+  if(!all||!all.length)return;
+  var pf=iPf(),cur=iCur(),PTHR=5000,WTHR=16,today=new Date();
+  today.setHours(0,0,0,0);
+  var items=shown;
+  var otherLoc=loc==='verrayes'?'usa3pl':'verrayes';
+  var otherMap={};
+  all.filter(function(i){return i.location===otherLoc;}).forEach(function(i){otherMap[i.item_id]=i;});
+  var lc=document.getElementById('lc-sel').value||'All lifecycles';
+  var cl=document.getElementById('cl-sel').value||'All classes';
+  document.getElementById('intel-ctx').textContent=
+    (loc==='verrayes'?'VERRAYES':'USA-3PL')+' · '+lc+' · '+cl+' · '+items.length+' SKUs';
+  iDS(items,pf,cur,PTHR,today);
+  iVX(items,pf,cur,today,otherMap);
+  iOS(items,pf,cur,WTHR,PTHR);
+}
+// Section 1: Demand Shaping
+function iDS(items,pf,cur,thr,today){
+  var push=[],prep=[],watch=[],hold=[];
+  items.forEach(function(item){
+    var price=item[pf]||0;
+    if(!price||item.status==='embargoed')return;
+    var avail=item.available_today||0,demand=item.total_open_demand||0,commit=item.committable||0;
+    var rC=commit*price,rD=demand*price;
+    if(avail>0&&rC>=thr){
+      push.push({item:item,revP:rC,units:commit,bucket:1,date:null,daysTo:0});
+    }else if(item.next_available_date){
+      var nd=iPD(item.next_available_date),nq=item.next_available_qty||0,rN=nq*price,dt=iDD(today,nd);
+      if(rN>=thr)prep.push({item:item,revP:rN,units:nq,bucket:iBk(dt),date:item.next_available_date,daysTo:dt});
+    }else if(avail>0&&commit<=0&&rD>=thr){
+      watch.push({item:item,revP:rD,units:demand,bucket:1,date:null,daysTo:0});
+    }else if(item.status==='out_of_stock'&&rD>=thr){
+      hold.push({item:item,revP:rD,units:demand,bucket:1,date:null,daysTo:0});
+    }
+  });
+  push.sort(function(a,b){return b.revP-a.revP;});
+  prep.sort(function(a,b){return(a.daysTo||9999)-(b.daysTo||9999)||b.revP-a.revP;});
+  watch.sort(function(a,b){return b.revP-a.revP;});
+  hold.sort(function(a,b){return b.revP-a.revP;});
+  var parts=[];
+  if(push.length)parts.push(push.length+' push · '+iFR(push.reduce(function(s,i){return s+i.revP;},0),cur));
+  if(prep.length)parts.push(prep.length+' incoming · '+iFR(prep.reduce(function(s,i){return s+i.revP;},0),cur));
+  if(hold.length)parts.push(hold.length+' at risk · '+iFR(hold.reduce(function(s,i){return s+i.revP;},0),cur));
+  document.getElementById('ds-sum').textContent=parts.join('  ·  ')||'No signals above '+iFR(thr,cur);
+  var h='';
+  if(push.length){h+='<div class="intel-cg"><div class="intel-ct push">↗ PUSH NOW — Available to commit</div>'+iRows(push,'revP','units',null,cur)+'</div>';}
+  if(prep.length){
+    var byBk={};prep.forEach(function(pi){if(!byBk[pi.bucket])byBk[pi.bucket]=[];byBk[pi.bucket].push(pi);});
+    Object.keys(byBk).sort(function(a,b){return a-b;}).forEach(function(bk){
+      h+='<div class="intel-cg"><div class="intel-ct prepare">⏳ PREPARE — '+iBkL[bk]+'</div>'+iRows(byBk[bk],'revP','units','date',cur)+'</div>';
+    });
+  }
+  if(watch.length){h+='<div class="intel-cg"><div class="intel-ct watch">⚠ WATCH — Supply being consumed, none incoming</div>'+iRows(watch,'revP','units',null,cur)+'</div>';}
+  if(hold.length){h+='<div class="intel-cg"><div class="intel-ct hold">🛑 DO NOT COMMIT — OOS, no supply in horizon</div>'+iRows(hold,'revP','units',null,cur)+'</div>';}
+  if(!h)h='<div class="intel-empty">No demand signals above '+iFR(thr,cur)+' in current filter.</div>';
+  document.getElementById('ds-body').innerHTML=h;
+}
+function iRows(arr,rf,uf,df,cur){
+  var h='';
+  arr.slice(0,8).forEach(function(si){
+    var item=si.item,ds=df&&si[df]?' · Available '+fd(si[df]):'';
+    h+='<div class="intel-row"><div class="intel-rl"><span class="intel-sku">'+esc(item.item_name)+'</span>';
+    h+='<span class="intel-nm">'+esc((item.item_display_name||'').slice(0,44))+ds+'</span></div>';
+    h+='<div class="intel-rr"><span class="intel-rv">'+iFR(si[rf],cur)+'</span><span class="intel-un">'+si[uf]+' units</span></div></div>';
+  });
+  if(arr.length>8)h+='<div class="intel-more">+'+(arr.length-8)+' more items</div>';
+  return h;
+}
+// Section 2: Vendor OpEx — overdue POs now shown with [OVERDUE] badge
+function iVX(items,pf,cur,today,otherMap){
+  var cm={};
+  items.forEach(function(item){
+    var price=item[pf]||0;
+    var lc=(item.limiting_components||[])[0];
+    if(!lc)return;
+    var name=lc.item_name||lc.item_id||'?';
+    if(!cm[name])cm[name]={name:name,fgs:0,uRisk:0,rRisk:0,
+      poDate:lc.next_po_date||null,
+      poOrigDate:lc.next_po_original_date||null,
+      overdue:lc.overdue||false};
+    cm[name].fgs++;
+    var risk=Math.max(0,(item.total_open_demand||0)-(item.max_buildable_horizon||item.max_buildable_today||0));
+    cm[name].uRisk+=risk;cm[name].rRisk+=risk*price;
+  });
+  var comps=Object.values(cm).sort(function(a,b){return b.rRisk-a.rRisk;});
+  var crit=[],urg=[],warn=[];
+  comps.forEach(function(c){
+    if(!c.poDate){crit.push(c);return;}
+    if(c.overdue){urg.push(c);return;}  // overdue PO — chase vendor
+    var days=iDD(today,iPD(c.poDate));
+    if(days<=7){urg.push(c);}else if(c.rRisk>0){warn.push(c);}
+  });
+  var interco=[];
+  if(loc==='usa3pl'){
+    items.forEach(function(usaItem){
+      if(!['out_of_stock','incoming'].includes(usaItem.status)||(usaItem.total_open_demand||0)<=0)return;
+      var vItem=otherMap[usaItem.item_id];
+      if(!vItem||(vItem.committable||0)<=0)return;
+      var price=usaItem[pf]||0;if(!price)return;
+      var tr=Math.min(usaItem.total_open_demand,vItem.committable),rP=tr*price;
+      if(rP>0)interco.push({item:usaItem,vC:vItem.committable,tr:tr,rP:rP});
+    });
+    interco.sort(function(a,b){return b.rP-a.rP;});
+  }
+  var totalRisk=comps.reduce(function(s,c){return s+c.rRisk;},0);
+  var parts=[crit.length+' critical · '+(urg.length+warn.length)+' warnings · '+iFR(totalRisk,cur)+' at risk'];
+  if(interco.length)parts.push(interco.length+' intercompany gaps');
+  document.getElementById('vx-sum').textContent=parts.join('  ·  ');
+  function cRow(c,action){
+    // Show original overdue date if available, with badge
+    var dateStr='';
+    if(c.poOrigDate){
+      dateStr=' · PO was '+fd(c.poOrigDate)+'<span class="overdue-badge">OVERDUE</span>';
+    }else if(c.poDate){
+      dateStr=' · PO '+fd(c.poDate);
+    }else{
+      dateStr=' · No PO on record';
+    }
+    var det=c.fgs+' SKU'+(c.fgs!==1?'s':'')+' constrained'+dateStr;
+    return '<div class="intel-row"><div class="intel-rl"><span class="intel-sku">'+esc(c.name)+'</span>'+
+      '<span class="intel-nm">'+det+'</span><span class="intel-ac">'+action+'</span></div>'+
+      '<div class="intel-rr"><span class="intel-rv" style="color:var(--red)">'+iFR(c.rRisk,cur)+'</span>'+
+      '<span class="intel-un">'+Math.round(c.uRisk)+' units at risk</span></div></div>';
+  }
+  var h='';
+  if(crit.length){h+='<div class="intel-cg"><div class="intel-ct hold">🔴 CRITICAL — No purchase order on record</div>';crit.slice(0,6).forEach(function(c){h+=cRow(c,'Raise PO immediately');});if(crit.length>6)h+='<div class="intel-more">+'+(crit.length-6)+' more</div>';h+='</div>';}
+  if(urg.length){h+='<div class="intel-cg"><div class="intel-ct watch">🟠 URGENT — Overdue or due this week</div>';urg.slice(0,6).forEach(function(c){h+=cRow(c,c.overdue?'PO overdue — chase vendor immediately for delivery confirmation':'Chase vendor — confirm firm delivery date');});h+='</div>';}
+  if(warn.length){h+='<div class="intel-cg"><div class="intel-ct prepare">🟡 WARNING — PO on record, demand still at risk</div>';warn.slice(0,6).forEach(function(c){h+=cRow(c,'Monitor — request partial early delivery if possible');});h+='</div>';}
+  if(!crit.length&&!urg.length&&!warn.length&&!interco.length){h='<div class="intel-empty">No component alerts in current filter.</div>';}
+  if(interco.length){
+    h+='<div class="intel-cg"><div class="intel-ct prepare">📦 INTERNAL TRANSFERS PENDING — Italy has stock, no intercompany PO raised</div>';
+    interco.slice(0,6).forEach(function(ic){
+      h+='<div class="intel-row"><div class="intel-rl"><span class="intel-sku">'+esc(ic.item.item_name)+'</span>'+
+        '<span class="intel-nm">VERRAYES: '+ic.vC+' committable · Transfer '+ic.tr+' to cover US demand</span>'+
+        '<span class="intel-ac">Raise intercompany PO</span></div>'+
+        '<div class="intel-rr"><span class="intel-rv" style="color:var(--blue)">'+iFR(ic.rP,cur)+'</span>'+
+        '<span class="intel-un">'+ic.tr+' units</span></div></div>';
+    });
+    if(interco.length>6)h+='<div class="intel-more">+'+(interco.length-6)+' more</div>';
+    h+='</div>';
+  }
+  document.getElementById('vx-body').innerHTML=h;
+}
+// Section 3: Overstock
+function iOS(items,pf,cur,wThr,pThr){
+  var HORIZON=120,flagged=[];
+  items.forEach(function(item){
+    if(item.status==='embargoed')return;
+    var price=item[pf]||0,commit=item.committable||0;
+    if(commit<=0)return;
+    var demand=item.total_open_demand||0,wRate=(demand/HORIZON)*7;
+    var woc=wRate>0.01?commit/wRate:Infinity;
+    if(woc<wThr)return;
+    var rL=commit*price,lc=item.lifecycle||'';
+    var eol=(lc==='Discontinued'||lc==='End Of Life');
+    var tier=demand===0||woc===Infinity?'dead':woc>=26&&eol?'crit':woc>=26?'high':'mod';
+    flagged.push({item:item,price:price,woc:woc,tier:tier,rL:rL,commit:commit,eol:eol,isPush:price>0&&rL>=pThr});
+  });
+  var tOrd={dead:0,crit:1,high:2,mod:3};
+  flagged.sort(function(a,b){return(tOrd[a.tier]-tOrd[b.tier])||b.rL-a.rL;});
+  var tot=flagged.reduce(function(s,f){return s+f.rL;},0);
+  document.getElementById('os-sum').textContent=flagged.length?flagged.length+' items · '+iFR(tot,cur)+' locked in slow stock':'No overstock alerts';
+  if(!flagged.length){document.getElementById('os-body').innerHTML='<div class="intel-empty">No items above '+wThr+'-week cover threshold in current filter.</div>';return;}
+  var byT={dead:[],crit:[],high:[],mod:[]};
+  flagged.forEach(function(f){byT[f.tier].push(f);});
+  var tDef=[
+    {key:'dead',lbl:'☠ DEADSTOCK — Zero demand',rs:'color:var(--red)'},
+    {key:'crit',lbl:'🔴 CRITICAL — 26+ weeks · Discontinued / End of Life',rs:'color:var(--red)'},
+    {key:'high',lbl:'🟠 HIGH — 26+ weeks cover',rs:'color:var(--amber)'},
+    {key:'mod', lbl:'🟡 MODERATE — '+wThr+'–26 weeks cover',rs:'color:var(--muted)'}
+  ];
+  var acts={dead:'Offer to distributors / samples / write-off review',
+            crit:'Urgent: discounting or channel liquidation',
+            high:'Channel push / bundle / promotional offer',
+            mod:'Accelerate demand — route to higher-velocity channels'};
+  var h='';
+  tDef.forEach(function(td){
+    var arr=byT[td.key];if(!arr||!arr.length)return;
+    h+='<div class="intel-cg"><div class="intel-ct neutral">'+td.lbl+'</div>';
+    arr.slice(0,6).forEach(function(f){
+      var item=f.item,wStr=f.woc===Infinity?'∞':Math.round(f.woc)+' wks';
+      var eTag=f.eol?' <span style="color:var(--red);font-size:10px;">['+esc(item.lifecycle)+']</span>':'';
+      var pNote=f.isPush?'<span class="intel-ac" style="color:var(--accent);font-style:normal;">→ Demand Shaping: PUSH signal raised</span>':'';
+      h+='<div class="intel-row"><div class="intel-rl">'+
+        '<span class="intel-sku">'+esc(item.item_name)+eTag+'</span>'+
+        '<span class="intel-nm">'+esc((item.item_display_name||'').slice(0,40))+' · '+wStr+' cover</span>'+
+        '<span class="intel-ac">'+acts[f.tier]+'</span>'+pNote+
+        '</div><div class="intel-rr">'+
+        '<span class="intel-rv" style="'+td.rs+'">'+iFR(f.rL,cur)+'</span>'+
+        '<span class="intel-un">'+f.commit+' units locked</span></div></div>';
+    });
+    if(arr.length>6)h+='<div class="intel-more">+'+(arr.length-6)+' more items</div>';
+    h+='</div>';
+  });
+  document.getElementById('os-body').innerHTML=h;
+}
+
 boot();
 loadConfig();
 </script>
