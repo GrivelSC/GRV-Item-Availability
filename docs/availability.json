@@ -19223,8 +19223,8 @@
       "committable": 20,
       "max_buildable_today": 0,
       "max_buildable_horizon": 64,
-      "next_available_date": "2026-06-22",
-      "next_available_qty": 0,
+      "next_available_date": "2026-08-22",
+      "next_available_qty": 20,
       "limiting_components": [
         {
           "item_id": "6816",
@@ -20405,8 +20405,8 @@
       "committable": 27,
       "max_buildable_today": 0,
       "max_buildable_horizon": 74,
-      "next_available_date": "2026-06-22",
-      "next_available_qty": 0,
+      "next_available_date": "2026-08-22",
+      "next_available_qty": 27,
       "limiting_components": [
         {
           "item_id": "6817",
@@ -21842,7 +21842,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -21878,7 +21878,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -21914,7 +21914,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -21950,7 +21950,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -21986,7 +21986,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -22022,7 +22022,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -22058,7 +22058,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -22094,7 +22094,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -22130,7 +22130,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -22166,7 +22166,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -22202,7 +22202,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -22238,7 +22238,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -22808,7 +22808,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -22844,7 +22844,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -22880,7 +22880,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -22916,7 +22916,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -22952,7 +22952,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -22988,7 +22988,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -23024,7 +23024,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -23060,7 +23060,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -23096,7 +23096,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -23132,7 +23132,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -23168,7 +23168,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -23204,7 +23204,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -23240,7 +23240,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -23276,7 +23276,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -23312,7 +23312,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -23348,7 +23348,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -23384,7 +23384,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -23954,7 +23954,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -23990,7 +23990,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -24026,7 +24026,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -24062,7 +24062,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -24098,7 +24098,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -24134,7 +24134,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -24170,7 +24170,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -24206,7 +24206,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -24242,7 +24242,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -24278,7 +24278,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -24314,7 +24314,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -24350,7 +24350,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -24386,7 +24386,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -24422,7 +24422,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -24458,7 +24458,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -24494,7 +24494,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -24530,7 +24530,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5435,
+              "supportable_fg_units": 5349,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -25064,7 +25064,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5436,
+              "supportable_fg_units": 5350,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -25100,7 +25100,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5436,
+              "supportable_fg_units": 5350,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -25136,7 +25136,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5436,
+              "supportable_fg_units": 5350,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -25172,7 +25172,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5436,
+              "supportable_fg_units": 5350,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -25208,7 +25208,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5436,
+              "supportable_fg_units": 5350,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -25244,7 +25244,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5436,
+              "supportable_fg_units": 5350,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -25280,7 +25280,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5436,
+              "supportable_fg_units": 5350,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -25316,7 +25316,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5436,
+              "supportable_fg_units": 5350,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -25352,7 +25352,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5436,
+              "supportable_fg_units": 5350,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -25388,7 +25388,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5436,
+              "supportable_fg_units": 5350,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -25424,7 +25424,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5436,
+              "supportable_fg_units": 5350,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -25460,7 +25460,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5436,
+              "supportable_fg_units": 5350,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -25496,7 +25496,7 @@
             {
               "item_id": "420",
               "item_name": "0NRD05I241",
-              "supportable_fg_units": 5436,
+              "supportable_fg_units": 5350,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -29012,8 +29012,8 @@
       "committable": 498,
       "max_buildable_today": 5,
       "max_buildable_horizon": 775,
-      "next_available_date": "2026-06-09",
-      "next_available_qty": 0,
+      "next_available_date": "2026-07-24",
+      "next_available_qty": 498,
       "limiting_components": [
         {
           "item_id": "7517",
@@ -35021,8 +35021,8 @@
       "committable": 20,
       "max_buildable_today": 0,
       "max_buildable_horizon": 30,
-      "next_available_date": "2026-06-22",
-      "next_available_qty": 0,
+      "next_available_date": "2026-08-22",
+      "next_available_qty": 20,
       "limiting_components": [
         {
           "item_id": "6832",
@@ -36131,8 +36131,8 @@
       "committable": 22,
       "max_buildable_today": 0,
       "max_buildable_horizon": 35,
-      "next_available_date": "2026-06-22",
-      "next_available_qty": 0,
+      "next_available_date": "2026-08-22",
+      "next_available_qty": 22,
       "limiting_components": [
         {
           "item_id": "6833",
@@ -37097,8 +37097,8 @@
       "committable": 19,
       "max_buildable_today": 0,
       "max_buildable_horizon": 30,
-      "next_available_date": "2026-06-22",
-      "next_available_qty": 0,
+      "next_available_date": "2026-08-22",
+      "next_available_qty": 19,
       "limiting_components": [
         {
           "item_id": "6834",
@@ -40163,7 +40163,7 @@
         {
           "item_id": "570",
           "item_name": "0INFTN",
-          "supportable_fg_units": 1002,
+          "supportable_fg_units": 957,
           "next_po_date": null,
           "next_po_original_date": null,
           "next_po_qty": 0,
@@ -40172,7 +40172,7 @@
         {
           "item_id": "7518",
           "item_name": "0TEGHOP.04NG",
-          "supportable_fg_units": 1270,
+          "supportable_fg_units": 1245,
           "next_po_date": "2026-07-01",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -40199,7 +40199,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
+              "supportable_fg_units": 957,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -40208,7 +40208,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1270,
+              "supportable_fg_units": 1245,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -40235,7 +40235,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
+              "supportable_fg_units": 957,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -40244,7 +40244,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1270,
+              "supportable_fg_units": 1245,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -40271,7 +40271,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
+              "supportable_fg_units": 957,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -40280,7 +40280,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1270,
+              "supportable_fg_units": 1245,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -40307,7 +40307,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
+              "supportable_fg_units": 957,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -40316,7 +40316,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1270,
+              "supportable_fg_units": 1245,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -40343,7 +40343,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
+              "supportable_fg_units": 957,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -40352,7 +40352,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1270,
+              "supportable_fg_units": 1245,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -40379,7 +40379,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
+              "supportable_fg_units": 957,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -40388,7 +40388,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2270,
+              "supportable_fg_units": 2245,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -40415,7 +40415,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
+              "supportable_fg_units": 957,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -40424,7 +40424,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2270,
+              "supportable_fg_units": 2245,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -40451,7 +40451,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
+              "supportable_fg_units": 957,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -40460,7 +40460,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2270,
+              "supportable_fg_units": 2245,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -40487,7 +40487,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
+              "supportable_fg_units": 957,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -40496,7 +40496,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2270,
+              "supportable_fg_units": 2245,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -40523,7 +40523,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
+              "supportable_fg_units": 957,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -40532,7 +40532,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2270,
+              "supportable_fg_units": 2245,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -40559,7 +40559,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
+              "supportable_fg_units": 957,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -40568,7 +40568,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2270,
+              "supportable_fg_units": 2245,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -40595,7 +40595,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
+              "supportable_fg_units": 957,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -40604,7 +40604,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2270,
+              "supportable_fg_units": 2245,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -40631,7 +40631,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
+              "supportable_fg_units": 957,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -40640,7 +40640,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2270,
+              "supportable_fg_units": 2245,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -40667,7 +40667,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
+              "supportable_fg_units": 957,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -40676,7 +40676,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2270,
+              "supportable_fg_units": 2245,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -40703,7 +40703,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
+              "supportable_fg_units": 957,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -40712,7 +40712,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2270,
+              "supportable_fg_units": 2245,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -40739,7 +40739,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
+              "supportable_fg_units": 957,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -40748,7 +40748,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2270,
+              "supportable_fg_units": 2245,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -40949,7 +40949,7 @@
         {
           "item_id": "570",
           "item_name": "0INFTN",
-          "supportable_fg_units": 1008,
+          "supportable_fg_units": 963,
           "next_po_date": null,
           "next_po_original_date": null,
           "next_po_qty": 0,
@@ -40958,7 +40958,7 @@
         {
           "item_id": "7518",
           "item_name": "0TEGHOP.04NG",
-          "supportable_fg_units": 1276,
+          "supportable_fg_units": 1251,
           "next_po_date": "2026-07-01",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -40985,7 +40985,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1008,
+              "supportable_fg_units": 963,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -40994,7 +40994,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1276,
+              "supportable_fg_units": 1251,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -41021,7 +41021,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1008,
+              "supportable_fg_units": 963,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -41030,7 +41030,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1276,
+              "supportable_fg_units": 1251,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -41057,7 +41057,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1008,
+              "supportable_fg_units": 963,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -41066,7 +41066,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1276,
+              "supportable_fg_units": 1251,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -41093,7 +41093,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1008,
+              "supportable_fg_units": 963,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -41102,7 +41102,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1276,
+              "supportable_fg_units": 1251,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -41129,7 +41129,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1008,
+              "supportable_fg_units": 963,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -41138,7 +41138,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2276,
+              "supportable_fg_units": 2251,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -41165,7 +41165,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1008,
+              "supportable_fg_units": 963,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -41174,7 +41174,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2276,
+              "supportable_fg_units": 2251,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -41201,7 +41201,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1008,
+              "supportable_fg_units": 963,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -41210,7 +41210,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2276,
+              "supportable_fg_units": 2251,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -41237,7 +41237,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1008,
+              "supportable_fg_units": 963,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -41246,7 +41246,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2276,
+              "supportable_fg_units": 2251,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -41273,7 +41273,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1008,
+              "supportable_fg_units": 963,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -41282,7 +41282,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2276,
+              "supportable_fg_units": 2251,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -41309,7 +41309,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1008,
+              "supportable_fg_units": 963,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -41318,7 +41318,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2276,
+              "supportable_fg_units": 2251,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -41345,7 +41345,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1008,
+              "supportable_fg_units": 963,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -41354,7 +41354,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2276,
+              "supportable_fg_units": 2251,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -41381,7 +41381,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1008,
+              "supportable_fg_units": 963,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -41390,7 +41390,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2276,
+              "supportable_fg_units": 2251,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -41417,7 +41417,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1008,
+              "supportable_fg_units": 963,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -41426,7 +41426,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2276,
+              "supportable_fg_units": 2251,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -41453,7 +41453,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1008,
+              "supportable_fg_units": 963,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -41462,7 +41462,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2276,
+              "supportable_fg_units": 2251,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -41489,7 +41489,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1008,
+              "supportable_fg_units": 963,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -41498,7 +41498,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2276,
+              "supportable_fg_units": 2251,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -41525,7 +41525,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1008,
+              "supportable_fg_units": 963,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -41534,7 +41534,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2276,
+              "supportable_fg_units": 2251,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -41561,7 +41561,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1008,
+              "supportable_fg_units": 963,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -41570,7 +41570,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2276,
+              "supportable_fg_units": 2251,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -41597,7 +41597,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1008,
+              "supportable_fg_units": 963,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -41606,7 +41606,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2276,
+              "supportable_fg_units": 2251,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -41633,7 +41633,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1008,
+              "supportable_fg_units": 963,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -41642,7 +41642,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2276,
+              "supportable_fg_units": 2251,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -41823,18 +41823,18 @@
       "embargoed": false,
       "embargo_date": null,
       "status": "in_stock",
-      "available_today": 101,
+      "available_today": 81,
       "total_open_demand": 80,
-      "committable": 105,
-      "max_buildable_today": 102,
-      "max_buildable_horizon": 185,
+      "committable": 85,
+      "max_buildable_today": 82,
+      "max_buildable_horizon": 165,
       "next_available_date": "2026-06-04",
-      "next_available_qty": 98,
+      "next_available_qty": 78,
       "limiting_components": [
         {
           "item_id": "7521",
           "item_name": "0MAGH.SF43",
-          "supportable_fg_units": 102,
+          "supportable_fg_units": 82,
           "next_po_date": "2026-05-28",
           "next_po_original_date": null,
           "next_po_qty": 13.0,
@@ -41843,7 +41843,7 @@
         {
           "item_id": "570",
           "item_name": "0INFTN",
-          "supportable_fg_units": 1001,
+          "supportable_fg_units": 981,
           "next_po_date": null,
           "next_po_original_date": null,
           "next_po_qty": 0,
@@ -41863,14 +41863,14 @@
         {
           "date": "2026-05-26",
           "display_date": "2026-05-26",
-          "buildable": 102,
+          "buildable": 82,
           "cumulative_demand": 1,
-          "net_available": 101,
+          "net_available": 81,
           "limiting_components": [
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 102,
+              "supportable_fg_units": 82,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
@@ -41879,7 +41879,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 981,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -41899,14 +41899,14 @@
         {
           "date": "2026-05-28",
           "display_date": "2026-06-04",
-          "buildable": 115,
+          "buildable": 95,
           "cumulative_demand": 1,
-          "net_available": 114,
+          "net_available": 94,
           "limiting_components": [
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 115,
+              "supportable_fg_units": 95,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
@@ -41915,7 +41915,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 981,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -41935,14 +41935,14 @@
         {
           "date": "2026-05-29",
           "display_date": "2026-06-05",
-          "buildable": 115,
+          "buildable": 95,
           "cumulative_demand": 6,
-          "net_available": 109,
+          "net_available": 89,
           "limiting_components": [
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 115,
+              "supportable_fg_units": 95,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
@@ -41951,7 +41951,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 981,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -41971,14 +41971,14 @@
         {
           "date": "2026-06-03",
           "display_date": "2026-06-10",
-          "buildable": 115,
+          "buildable": 95,
           "cumulative_demand": 12,
-          "net_available": 103,
+          "net_available": 83,
           "limiting_components": [
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 115,
+              "supportable_fg_units": 95,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
@@ -41987,7 +41987,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 981,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42007,14 +42007,14 @@
         {
           "date": "2026-06-23",
           "display_date": "2026-06-30",
-          "buildable": 115,
+          "buildable": 95,
           "cumulative_demand": 17,
-          "net_available": 98,
+          "net_available": 78,
           "limiting_components": [
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 115,
+              "supportable_fg_units": 95,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
@@ -42023,7 +42023,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 981,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42043,14 +42043,14 @@
         {
           "date": "2026-07-17",
           "display_date": "2026-07-24",
-          "buildable": 185,
+          "buildable": 165,
           "cumulative_demand": 17,
-          "net_available": 168,
+          "net_available": 148,
           "limiting_components": [
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 185,
+              "supportable_fg_units": 165,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
@@ -42059,7 +42059,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 981,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42079,14 +42079,14 @@
         {
           "date": "2026-07-24",
           "display_date": "2026-07-31",
-          "buildable": 185,
+          "buildable": 165,
           "cumulative_demand": 36,
-          "net_available": 149,
+          "net_available": 129,
           "limiting_components": [
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 185,
+              "supportable_fg_units": 165,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
@@ -42095,7 +42095,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 981,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42115,14 +42115,14 @@
         {
           "date": "2026-09-01",
           "display_date": "2026-09-08",
-          "buildable": 185,
+          "buildable": 165,
           "cumulative_demand": 54,
-          "net_available": 131,
+          "net_available": 111,
           "limiting_components": [
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 185,
+              "supportable_fg_units": 165,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
@@ -42131,7 +42131,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 981,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42151,14 +42151,14 @@
         {
           "date": "2026-09-08",
           "display_date": "2026-09-15",
-          "buildable": 185,
+          "buildable": 165,
           "cumulative_demand": 58,
-          "net_available": 127,
+          "net_available": 107,
           "limiting_components": [
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 185,
+              "supportable_fg_units": 165,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
@@ -42167,7 +42167,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 981,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42187,14 +42187,14 @@
         {
           "date": "2026-09-15",
           "display_date": "2026-09-22",
-          "buildable": 185,
+          "buildable": 165,
           "cumulative_demand": 62,
-          "net_available": 123,
+          "net_available": 103,
           "limiting_components": [
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 185,
+              "supportable_fg_units": 165,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
@@ -42203,7 +42203,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 981,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42223,14 +42223,14 @@
         {
           "date": "2026-09-16",
           "display_date": "2026-09-23",
-          "buildable": 185,
+          "buildable": 165,
           "cumulative_demand": 64,
-          "net_available": 121,
+          "net_available": 101,
           "limiting_components": [
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 185,
+              "supportable_fg_units": 165,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
@@ -42239,7 +42239,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 981,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42259,14 +42259,14 @@
         {
           "date": "2026-10-01",
           "display_date": "2026-10-08",
-          "buildable": 185,
+          "buildable": 165,
           "cumulative_demand": 66,
-          "net_available": 119,
+          "net_available": 99,
           "limiting_components": [
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 185,
+              "supportable_fg_units": 165,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
@@ -42275,7 +42275,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 981,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42295,14 +42295,14 @@
         {
           "date": "2026-10-30",
           "display_date": "2026-11-06",
-          "buildable": 185,
+          "buildable": 165,
           "cumulative_demand": 69,
-          "net_available": 116,
+          "net_available": 96,
           "limiting_components": [
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 185,
+              "supportable_fg_units": 165,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
@@ -42311,7 +42311,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 981,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42331,14 +42331,14 @@
         {
           "date": "2026-11-01",
           "display_date": "2026-11-08",
-          "buildable": 185,
+          "buildable": 165,
           "cumulative_demand": 74,
-          "net_available": 111,
+          "net_available": 91,
           "limiting_components": [
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 185,
+              "supportable_fg_units": 165,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
@@ -42347,7 +42347,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 981,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42367,14 +42367,14 @@
         {
           "date": "2026-12-15",
           "display_date": "2026-12-22",
-          "buildable": 185,
+          "buildable": 165,
           "cumulative_demand": 79,
-          "net_available": 106,
+          "net_available": 86,
           "limiting_components": [
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 185,
+              "supportable_fg_units": 165,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
@@ -42383,7 +42383,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 981,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42403,14 +42403,14 @@
         {
           "date": "2026-12-31",
           "display_date": "2027-01-07",
-          "buildable": 185,
+          "buildable": 165,
           "cumulative_demand": 80,
-          "net_available": 105,
+          "net_available": 85,
           "limiting_components": [
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 185,
+              "supportable_fg_units": 165,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
@@ -42419,7 +42419,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 981,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42629,7 +42629,7 @@
         {
           "item_id": "570",
           "item_name": "0INFTN",
-          "supportable_fg_units": 1001,
+          "supportable_fg_units": 956,
           "next_po_date": null,
           "next_po_original_date": null,
           "next_po_qty": 0,
@@ -42638,7 +42638,7 @@
         {
           "item_id": "7518",
           "item_name": "0TEGHOP.04NG",
-          "supportable_fg_units": 1269,
+          "supportable_fg_units": 1244,
           "next_po_date": "2026-07-01",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -42665,7 +42665,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42674,7 +42674,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1269,
+              "supportable_fg_units": 1244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -42701,7 +42701,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42710,7 +42710,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1269,
+              "supportable_fg_units": 1244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -42737,7 +42737,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42746,7 +42746,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1269,
+              "supportable_fg_units": 1244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -42773,7 +42773,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42782,7 +42782,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1269,
+              "supportable_fg_units": 1244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -42809,7 +42809,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42818,7 +42818,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1269,
+              "supportable_fg_units": 1244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -42845,7 +42845,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42854,7 +42854,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -42881,7 +42881,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42890,7 +42890,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -42917,7 +42917,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42926,7 +42926,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -42953,7 +42953,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42962,7 +42962,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -42989,7 +42989,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42998,7 +42998,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -43025,7 +43025,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43034,7 +43034,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -43061,7 +43061,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43070,7 +43070,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -43097,7 +43097,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43106,7 +43106,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -43133,7 +43133,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43142,7 +43142,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -43169,7 +43169,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43178,7 +43178,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -43205,7 +43205,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43214,7 +43214,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -43241,7 +43241,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43250,7 +43250,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -43277,7 +43277,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43286,7 +43286,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -43313,7 +43313,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43322,7 +43322,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -43532,7 +43532,7 @@
         {
           "item_id": "570",
           "item_name": "0INFTN",
-          "supportable_fg_units": 1001,
+          "supportable_fg_units": 956,
           "next_po_date": null,
           "next_po_original_date": null,
           "next_po_qty": 0,
@@ -43568,7 +43568,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43604,7 +43604,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43640,7 +43640,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43676,7 +43676,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43701,21 +43701,21 @@
               "overdue": false
             },
             {
+              "item_id": "570",
+              "item_name": "0INFTN",
+              "supportable_fg_units": 956,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false
+            },
+            {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
               "supportable_fg_units": 1000,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
-              "item_id": "570",
-              "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -43737,21 +43737,21 @@
               "overdue": false
             },
             {
+              "item_id": "570",
+              "item_name": "0INFTN",
+              "supportable_fg_units": 956,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false
+            },
+            {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
               "supportable_fg_units": 1000,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
-              "item_id": "570",
-              "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -43773,21 +43773,21 @@
               "overdue": false
             },
             {
+              "item_id": "570",
+              "item_name": "0INFTN",
+              "supportable_fg_units": 956,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false
+            },
+            {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
               "supportable_fg_units": 1000,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
-              "item_id": "570",
-              "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -43809,21 +43809,21 @@
               "overdue": false
             },
             {
+              "item_id": "570",
+              "item_name": "0INFTN",
+              "supportable_fg_units": 956,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false
+            },
+            {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
               "supportable_fg_units": 1000,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
-              "item_id": "570",
-              "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -43845,21 +43845,21 @@
               "overdue": false
             },
             {
+              "item_id": "570",
+              "item_name": "0INFTN",
+              "supportable_fg_units": 956,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false
+            },
+            {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
               "supportable_fg_units": 1000,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
-              "item_id": "570",
-              "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -43881,21 +43881,21 @@
               "overdue": false
             },
             {
+              "item_id": "570",
+              "item_name": "0INFTN",
+              "supportable_fg_units": 956,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false
+            },
+            {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
               "supportable_fg_units": 1000,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
-              "item_id": "570",
-              "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -44102,7 +44102,7 @@
         {
           "item_id": "570",
           "item_name": "0INFTN",
-          "supportable_fg_units": 1002,
+          "supportable_fg_units": 957,
           "next_po_date": null,
           "next_po_original_date": null,
           "next_po_qty": 0,
@@ -44138,7 +44138,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
+              "supportable_fg_units": 957,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44174,7 +44174,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
+              "supportable_fg_units": 957,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44210,7 +44210,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
+              "supportable_fg_units": 957,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44246,7 +44246,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
+              "supportable_fg_units": 957,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44271,21 +44271,21 @@
               "overdue": false
             },
             {
+              "item_id": "570",
+              "item_name": "0INFTN",
+              "supportable_fg_units": 957,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false
+            },
+            {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
               "supportable_fg_units": 1001,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
-              "item_id": "570",
-              "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -44307,21 +44307,21 @@
               "overdue": false
             },
             {
+              "item_id": "570",
+              "item_name": "0INFTN",
+              "supportable_fg_units": 957,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false
+            },
+            {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
               "supportable_fg_units": 1001,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
-              "item_id": "570",
-              "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -44343,21 +44343,21 @@
               "overdue": false
             },
             {
+              "item_id": "570",
+              "item_name": "0INFTN",
+              "supportable_fg_units": 957,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false
+            },
+            {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
               "supportable_fg_units": 1001,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
-              "item_id": "570",
-              "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -44379,21 +44379,21 @@
               "overdue": false
             },
             {
+              "item_id": "570",
+              "item_name": "0INFTN",
+              "supportable_fg_units": 957,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false
+            },
+            {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
               "supportable_fg_units": 1001,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
-              "item_id": "570",
-              "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -44415,21 +44415,21 @@
               "overdue": false
             },
             {
+              "item_id": "570",
+              "item_name": "0INFTN",
+              "supportable_fg_units": 957,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false
+            },
+            {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
               "supportable_fg_units": 1001,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
-              "item_id": "570",
-              "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -44451,21 +44451,21 @@
               "overdue": false
             },
             {
+              "item_id": "570",
+              "item_name": "0INFTN",
+              "supportable_fg_units": 957,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false
+            },
+            {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
               "supportable_fg_units": 1001,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
-              "item_id": "570",
-              "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -44487,21 +44487,21 @@
               "overdue": false
             },
             {
+              "item_id": "570",
+              "item_name": "0INFTN",
+              "supportable_fg_units": 957,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false
+            },
+            {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
               "supportable_fg_units": 1001,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
-              "item_id": "570",
-              "item_name": "0INFTN",
-              "supportable_fg_units": 1002,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -44678,19 +44678,19 @@
       "location": "verrayes",
       "embargoed": false,
       "embargo_date": null,
-      "status": "incoming",
-      "available_today": 0,
+      "status": "in_stock",
+      "available_today": 6,
       "total_open_demand": 19,
-      "committable": 166,
-      "max_buildable_today": 0,
-      "max_buildable_horizon": 185,
+      "committable": 141,
+      "max_buildable_today": 20,
+      "max_buildable_horizon": 160,
       "next_available_date": "2026-07-08",
-      "next_available_qty": 101,
+      "next_available_qty": 76,
       "limiting_components": [
         {
           "item_id": "7523",
           "item_name": "0TEGHOM.04NG",
-          "supportable_fg_units": 0,
+          "supportable_fg_units": 20,
           "next_po_date": "2026-07-01",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -44699,7 +44699,7 @@
         {
           "item_id": "7521",
           "item_name": "0MAGH.SF43",
-          "supportable_fg_units": 102,
+          "supportable_fg_units": 77,
           "next_po_date": "2026-05-28",
           "next_po_original_date": null,
           "next_po_qty": 13.0,
@@ -44708,7 +44708,7 @@
         {
           "item_id": "570",
           "item_name": "0INFTN",
-          "supportable_fg_units": 1001,
+          "supportable_fg_units": 976,
           "next_po_date": null,
           "next_po_original_date": null,
           "next_po_qty": 0,
@@ -44719,14 +44719,14 @@
         {
           "date": "2026-05-26",
           "display_date": "2026-05-26",
-          "buildable": 0,
+          "buildable": 20,
           "cumulative_demand": 0,
-          "net_available": 0,
+          "net_available": 20,
           "limiting_components": [
             {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
-              "supportable_fg_units": 0,
+              "supportable_fg_units": 20,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -44735,7 +44735,7 @@
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 102,
+              "supportable_fg_units": 77,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
@@ -44744,7 +44744,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 976,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44755,14 +44755,14 @@
         {
           "date": "2026-05-29",
           "display_date": "2026-06-05",
-          "buildable": 0,
+          "buildable": 20,
           "cumulative_demand": 9,
-          "net_available": 0,
+          "net_available": 11,
           "limiting_components": [
             {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
-              "supportable_fg_units": 0,
+              "supportable_fg_units": 20,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -44771,7 +44771,7 @@
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 115,
+              "supportable_fg_units": 90,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
@@ -44780,7 +44780,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 976,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44791,14 +44791,14 @@
         {
           "date": "2026-06-03",
           "display_date": "2026-06-10",
-          "buildable": 0,
+          "buildable": 20,
           "cumulative_demand": 14,
-          "net_available": 0,
+          "net_available": 6,
           "limiting_components": [
             {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
-              "supportable_fg_units": 0,
+              "supportable_fg_units": 20,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -44807,7 +44807,7 @@
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 115,
+              "supportable_fg_units": 90,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
@@ -44816,7 +44816,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 976,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44827,35 +44827,35 @@
         {
           "date": "2026-07-01",
           "display_date": "2026-07-08",
-          "buildable": 115,
+          "buildable": 90,
           "cumulative_demand": 14,
-          "net_available": 101,
+          "net_available": 76,
           "limiting_components": [
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 115,
+              "supportable_fg_units": 90,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
               "overdue": false
             },
             {
-              "item_id": "7523",
-              "item_name": "0TEGHOM.04NG",
-              "supportable_fg_units": 1000,
-              "next_po_date": "2026-07-01",
-              "next_po_original_date": null,
-              "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 976,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
+              "overdue": false
+            },
+            {
+              "item_id": "7523",
+              "item_name": "0TEGHOM.04NG",
+              "supportable_fg_units": 1020,
+              "next_po_date": "2026-07-01",
+              "next_po_original_date": null,
+              "next_po_qty": 1000.0,
               "overdue": false
             }
           ]
@@ -44863,35 +44863,35 @@
         {
           "date": "2026-07-17",
           "display_date": "2026-07-24",
-          "buildable": 185,
+          "buildable": 160,
           "cumulative_demand": 14,
-          "net_available": 171,
+          "net_available": 146,
           "limiting_components": [
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 185,
+              "supportable_fg_units": 160,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
               "overdue": false
             },
             {
-              "item_id": "7523",
-              "item_name": "0TEGHOM.04NG",
-              "supportable_fg_units": 1000,
-              "next_po_date": "2026-07-01",
-              "next_po_original_date": null,
-              "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 976,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
+              "overdue": false
+            },
+            {
+              "item_id": "7523",
+              "item_name": "0TEGHOM.04NG",
+              "supportable_fg_units": 1020,
+              "next_po_date": "2026-07-01",
+              "next_po_original_date": null,
+              "next_po_qty": 1000.0,
               "overdue": false
             }
           ]
@@ -44899,35 +44899,35 @@
         {
           "date": "2026-07-24",
           "display_date": "2026-07-31",
-          "buildable": 185,
+          "buildable": 160,
           "cumulative_demand": 17,
-          "net_available": 168,
+          "net_available": 143,
           "limiting_components": [
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 185,
+              "supportable_fg_units": 160,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
               "overdue": false
             },
             {
-              "item_id": "7523",
-              "item_name": "0TEGHOM.04NG",
-              "supportable_fg_units": 1000,
-              "next_po_date": "2026-07-01",
-              "next_po_original_date": null,
-              "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 976,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
+              "overdue": false
+            },
+            {
+              "item_id": "7523",
+              "item_name": "0TEGHOM.04NG",
+              "supportable_fg_units": 1020,
+              "next_po_date": "2026-07-01",
+              "next_po_original_date": null,
+              "next_po_qty": 1000.0,
               "overdue": false
             }
           ]
@@ -44935,35 +44935,35 @@
         {
           "date": "2026-09-01",
           "display_date": "2026-09-08",
-          "buildable": 185,
+          "buildable": 160,
           "cumulative_demand": 18,
-          "net_available": 167,
+          "net_available": 142,
           "limiting_components": [
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 185,
+              "supportable_fg_units": 160,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
               "overdue": false
             },
             {
-              "item_id": "7523",
-              "item_name": "0TEGHOM.04NG",
-              "supportable_fg_units": 1000,
-              "next_po_date": "2026-07-01",
-              "next_po_original_date": null,
-              "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 976,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
+              "overdue": false
+            },
+            {
+              "item_id": "7523",
+              "item_name": "0TEGHOM.04NG",
+              "supportable_fg_units": 1020,
+              "next_po_date": "2026-07-01",
+              "next_po_original_date": null,
+              "next_po_qty": 1000.0,
               "overdue": false
             }
           ]
@@ -44971,35 +44971,35 @@
         {
           "date": "2026-10-01",
           "display_date": "2026-10-08",
-          "buildable": 185,
+          "buildable": 160,
           "cumulative_demand": 19,
-          "net_available": 166,
+          "net_available": 141,
           "limiting_components": [
             {
               "item_id": "7521",
               "item_name": "0MAGH.SF43",
-              "supportable_fg_units": 185,
+              "supportable_fg_units": 160,
               "next_po_date": "2026-05-28",
               "next_po_original_date": null,
               "next_po_qty": 13.0,
               "overdue": false
             },
             {
-              "item_id": "7523",
-              "item_name": "0TEGHOM.04NG",
-              "supportable_fg_units": 1000,
-              "next_po_date": "2026-07-01",
-              "next_po_original_date": null,
-              "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 976,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
+              "overdue": false
+            },
+            {
+              "item_id": "7523",
+              "item_name": "0TEGHOM.04NG",
+              "supportable_fg_units": 1020,
+              "next_po_date": "2026-07-01",
+              "next_po_original_date": null,
+              "next_po_qty": 1000.0,
               "overdue": false
             }
           ]
@@ -45170,7 +45170,7 @@
         {
           "item_id": "570",
           "item_name": "0INFTN",
-          "supportable_fg_units": 1001,
+          "supportable_fg_units": 956,
           "next_po_date": null,
           "next_po_original_date": null,
           "next_po_qty": 0,
@@ -45206,7 +45206,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -45242,7 +45242,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -45278,7 +45278,7 @@
             {
               "item_id": "570",
               "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
+              "supportable_fg_units": 956,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -45303,21 +45303,21 @@
               "overdue": false
             },
             {
+              "item_id": "570",
+              "item_name": "0INFTN",
+              "supportable_fg_units": 956,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false
+            },
+            {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
               "supportable_fg_units": 1000,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
-              "item_id": "570",
-              "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -45339,21 +45339,21 @@
               "overdue": false
             },
             {
+              "item_id": "570",
+              "item_name": "0INFTN",
+              "supportable_fg_units": 956,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false
+            },
+            {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
               "supportable_fg_units": 1000,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
-              "item_id": "570",
-              "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -45375,21 +45375,21 @@
               "overdue": false
             },
             {
+              "item_id": "570",
+              "item_name": "0INFTN",
+              "supportable_fg_units": 956,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false
+            },
+            {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
               "supportable_fg_units": 1000,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
-              "item_id": "570",
-              "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -45411,21 +45411,21 @@
               "overdue": false
             },
             {
+              "item_id": "570",
+              "item_name": "0INFTN",
+              "supportable_fg_units": 956,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false
+            },
+            {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
               "supportable_fg_units": 1000,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
-              "item_id": "570",
-              "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -45447,21 +45447,21 @@
               "overdue": false
             },
             {
+              "item_id": "570",
+              "item_name": "0INFTN",
+              "supportable_fg_units": 956,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false
+            },
+            {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
               "supportable_fg_units": 1000,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
-              "item_id": "570",
-              "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -45483,21 +45483,21 @@
               "overdue": false
             },
             {
+              "item_id": "570",
+              "item_name": "0INFTN",
+              "supportable_fg_units": 956,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false
+            },
+            {
               "item_id": "7523",
               "item_name": "0TEGHOM.04NG",
               "supportable_fg_units": 1000,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
-              "overdue": false
-            },
-            {
-              "item_id": "570",
-              "item_name": "0INFTN",
-              "supportable_fg_units": 1001,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -45659,7 +45659,7 @@
         {
           "item_id": "7518",
           "item_name": "0TEGHOP.04NG",
-          "supportable_fg_units": 1272,
+          "supportable_fg_units": 1247,
           "next_po_date": "2026-07-01",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -45668,7 +45668,7 @@
         {
           "item_id": "424",
           "item_name": "0LCOLZ.992230G",
-          "supportable_fg_units": 3028,
+          "supportable_fg_units": 2983,
           "next_po_date": "2026-06-02",
           "next_po_original_date": "2026-05-01",
           "next_po_qty": 25.0,
@@ -45695,7 +45695,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1272,
+              "supportable_fg_units": 1247,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -45704,7 +45704,7 @@
             {
               "item_id": "424",
               "item_name": "0LCOLZ.992230G",
-              "supportable_fg_units": 3028,
+              "supportable_fg_units": 2983,
               "next_po_date": "2026-06-02",
               "next_po_original_date": "2026-05-01",
               "next_po_qty": 25.0,
@@ -45731,7 +45731,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1272,
+              "supportable_fg_units": 1247,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -45740,7 +45740,7 @@
             {
               "item_id": "424",
               "item_name": "0LCOLZ.992230G",
-              "supportable_fg_units": 3028,
+              "supportable_fg_units": 2983,
               "next_po_date": "2026-06-02",
               "next_po_original_date": "2026-05-01",
               "next_po_qty": 25.0,
@@ -45767,7 +45767,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1272,
+              "supportable_fg_units": 1247,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -45803,7 +45803,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1272,
+              "supportable_fg_units": 1247,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -45839,7 +45839,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1272,
+              "supportable_fg_units": 1247,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -45875,7 +45875,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2272,
+              "supportable_fg_units": 2247,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -45911,7 +45911,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2272,
+              "supportable_fg_units": 2247,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -45947,7 +45947,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2272,
+              "supportable_fg_units": 2247,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -45983,7 +45983,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2272,
+              "supportable_fg_units": 2247,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -46019,7 +46019,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2272,
+              "supportable_fg_units": 2247,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -46055,7 +46055,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2272,
+              "supportable_fg_units": 2247,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -46091,7 +46091,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2272,
+              "supportable_fg_units": 2247,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -46127,7 +46127,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2272,
+              "supportable_fg_units": 2247,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -46163,7 +46163,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2272,
+              "supportable_fg_units": 2247,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -46199,7 +46199,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2272,
+              "supportable_fg_units": 2247,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -46235,7 +46235,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2272,
+              "supportable_fg_units": 2247,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -46517,7 +46517,7 @@
         {
           "item_id": "7518",
           "item_name": "0TEGHOP.04NG",
-          "supportable_fg_units": 1269,
+          "supportable_fg_units": 1244,
           "next_po_date": "2026-07-01",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -46526,7 +46526,7 @@
         {
           "item_id": "424",
           "item_name": "0LCOLZ.992230G",
-          "supportable_fg_units": 3025,
+          "supportable_fg_units": 2980,
           "next_po_date": "2026-06-02",
           "next_po_original_date": "2026-05-01",
           "next_po_qty": 25.0,
@@ -46553,7 +46553,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1269,
+              "supportable_fg_units": 1244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -46562,7 +46562,7 @@
             {
               "item_id": "424",
               "item_name": "0LCOLZ.992230G",
-              "supportable_fg_units": 3025,
+              "supportable_fg_units": 2980,
               "next_po_date": "2026-06-02",
               "next_po_original_date": "2026-05-01",
               "next_po_qty": 25.0,
@@ -46589,7 +46589,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1269,
+              "supportable_fg_units": 1244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -46598,7 +46598,7 @@
             {
               "item_id": "424",
               "item_name": "0LCOLZ.992230G",
-              "supportable_fg_units": 3025,
+              "supportable_fg_units": 2980,
               "next_po_date": "2026-06-02",
               "next_po_original_date": "2026-05-01",
               "next_po_qty": 25.0,
@@ -46625,7 +46625,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1269,
+              "supportable_fg_units": 1244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -46661,7 +46661,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1269,
+              "supportable_fg_units": 1244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -46697,7 +46697,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1269,
+              "supportable_fg_units": 1244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -46733,7 +46733,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -46769,7 +46769,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -46805,7 +46805,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -46841,7 +46841,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -46877,7 +46877,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -46913,7 +46913,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -46949,7 +46949,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -46985,7 +46985,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -47021,7 +47021,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -47057,7 +47057,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -47093,7 +47093,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -47129,7 +47129,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -47165,7 +47165,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -47201,7 +47201,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -47237,7 +47237,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -47273,7 +47273,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -47309,7 +47309,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -47591,7 +47591,7 @@
         {
           "item_id": "7518",
           "item_name": "0TEGHOP.04NG",
-          "supportable_fg_units": 1269,
+          "supportable_fg_units": 1244,
           "next_po_date": "2026-07-01",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -47600,7 +47600,7 @@
         {
           "item_id": "424",
           "item_name": "0LCOLZ.992230G",
-          "supportable_fg_units": 3025,
+          "supportable_fg_units": 2980,
           "next_po_date": "2026-06-02",
           "next_po_original_date": "2026-05-01",
           "next_po_qty": 25.0,
@@ -47627,7 +47627,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1269,
+              "supportable_fg_units": 1244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -47636,7 +47636,7 @@
             {
               "item_id": "424",
               "item_name": "0LCOLZ.992230G",
-              "supportable_fg_units": 3025,
+              "supportable_fg_units": 2980,
               "next_po_date": "2026-06-02",
               "next_po_original_date": "2026-05-01",
               "next_po_qty": 25.0,
@@ -47663,7 +47663,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1269,
+              "supportable_fg_units": 1244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -47672,7 +47672,7 @@
             {
               "item_id": "424",
               "item_name": "0LCOLZ.992230G",
-              "supportable_fg_units": 3025,
+              "supportable_fg_units": 2980,
               "next_po_date": "2026-06-02",
               "next_po_original_date": "2026-05-01",
               "next_po_qty": 25.0,
@@ -47699,7 +47699,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1269,
+              "supportable_fg_units": 1244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -47708,7 +47708,7 @@
             {
               "item_id": "424",
               "item_name": "0LCOLZ.992230G",
-              "supportable_fg_units": 3025,
+              "supportable_fg_units": 2980,
               "next_po_date": "2026-06-02",
               "next_po_original_date": "2026-05-01",
               "next_po_qty": 25.0,
@@ -47735,7 +47735,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1269,
+              "supportable_fg_units": 1244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -47771,7 +47771,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1269,
+              "supportable_fg_units": 1244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -47807,7 +47807,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -47843,7 +47843,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -47879,7 +47879,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -47915,7 +47915,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -47951,7 +47951,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -47987,7 +47987,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -48023,7 +48023,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -48059,7 +48059,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -48095,7 +48095,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -48131,7 +48131,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -48167,7 +48167,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -48203,7 +48203,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -48449,7 +48449,7 @@
         {
           "item_id": "7518",
           "item_name": "0TEGHOP.04NG",
-          "supportable_fg_units": 1269,
+          "supportable_fg_units": 1244,
           "next_po_date": "2026-07-01",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -48458,7 +48458,7 @@
         {
           "item_id": "424",
           "item_name": "0LCOLZ.992230G",
-          "supportable_fg_units": 3025,
+          "supportable_fg_units": 2980,
           "next_po_date": "2026-06-02",
           "next_po_original_date": "2026-05-01",
           "next_po_qty": 25.0,
@@ -48485,7 +48485,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1269,
+              "supportable_fg_units": 1244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -48494,7 +48494,7 @@
             {
               "item_id": "424",
               "item_name": "0LCOLZ.992230G",
-              "supportable_fg_units": 3025,
+              "supportable_fg_units": 2980,
               "next_po_date": "2026-06-02",
               "next_po_original_date": "2026-05-01",
               "next_po_qty": 25.0,
@@ -48521,7 +48521,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1269,
+              "supportable_fg_units": 1244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -48530,7 +48530,7 @@
             {
               "item_id": "424",
               "item_name": "0LCOLZ.992230G",
-              "supportable_fg_units": 3025,
+              "supportable_fg_units": 2980,
               "next_po_date": "2026-06-02",
               "next_po_original_date": "2026-05-01",
               "next_po_qty": 25.0,
@@ -48557,7 +48557,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1269,
+              "supportable_fg_units": 1244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -48566,7 +48566,7 @@
             {
               "item_id": "424",
               "item_name": "0LCOLZ.992230G",
-              "supportable_fg_units": 3025,
+              "supportable_fg_units": 2980,
               "next_po_date": "2026-06-02",
               "next_po_original_date": "2026-05-01",
               "next_po_qty": 25.0,
@@ -48593,7 +48593,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1269,
+              "supportable_fg_units": 1244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -48629,7 +48629,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 1269,
+              "supportable_fg_units": 1244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -48665,7 +48665,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -48701,7 +48701,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -48737,7 +48737,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -48773,7 +48773,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -48809,7 +48809,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -48845,7 +48845,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -48881,7 +48881,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -48917,7 +48917,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -48953,7 +48953,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -48989,7 +48989,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -49025,7 +49025,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -49061,7 +49061,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -49097,7 +49097,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -49133,7 +49133,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -49169,7 +49169,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -49205,7 +49205,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -49241,7 +49241,7 @@
             {
               "item_id": "7518",
               "item_name": "0TEGHOP.04NG",
-              "supportable_fg_units": 2269,
+              "supportable_fg_units": 2244,
               "next_po_date": "2026-07-01",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -49460,7 +49460,7 @@
         {
           "item_id": "424",
           "item_name": "0LCOLZ.992230G",
-          "supportable_fg_units": 3027,
+          "supportable_fg_units": 2982,
           "next_po_date": "2026-06-02",
           "next_po_original_date": "2026-05-01",
           "next_po_qty": 25.0,
@@ -49496,7 +49496,7 @@
             {
               "item_id": "424",
               "item_name": "0LCOLZ.992230G",
-              "supportable_fg_units": 3027,
+              "supportable_fg_units": 2982,
               "next_po_date": "2026-06-02",
               "next_po_original_date": "2026-05-01",
               "next_po_qty": 25.0,
@@ -49532,7 +49532,7 @@
             {
               "item_id": "424",
               "item_name": "0LCOLZ.992230G",
-              "supportable_fg_units": 3027,
+              "supportable_fg_units": 2982,
               "next_po_date": "2026-06-02",
               "next_po_original_date": "2026-05-01",
               "next_po_qty": 25.0,
@@ -50102,7 +50102,7 @@
         {
           "item_id": "424",
           "item_name": "0LCOLZ.992230G",
-          "supportable_fg_units": 3025,
+          "supportable_fg_units": 2980,
           "next_po_date": "2026-06-02",
           "next_po_original_date": "2026-05-01",
           "next_po_qty": 25.0,
@@ -50138,7 +50138,7 @@
             {
               "item_id": "424",
               "item_name": "0LCOLZ.992230G",
-              "supportable_fg_units": 3025,
+              "supportable_fg_units": 2980,
               "next_po_date": "2026-06-02",
               "next_po_original_date": "2026-05-01",
               "next_po_qty": 25.0,
@@ -50174,7 +50174,7 @@
             {
               "item_id": "424",
               "item_name": "0LCOLZ.992230G",
-              "supportable_fg_units": 3025,
+              "supportable_fg_units": 2980,
               "next_po_date": "2026-06-02",
               "next_po_original_date": "2026-05-01",
               "next_po_qty": 25.0,
@@ -50210,7 +50210,7 @@
             {
               "item_id": "424",
               "item_name": "0LCOLZ.992230G",
-              "supportable_fg_units": 3025,
+              "supportable_fg_units": 2980,
               "next_po_date": "2026-06-02",
               "next_po_original_date": "2026-05-01",
               "next_po_qty": 25.0,
@@ -50816,7 +50816,7 @@
         {
           "item_id": "424",
           "item_name": "0LCOLZ.992230G",
-          "supportable_fg_units": 3025,
+          "supportable_fg_units": 2980,
           "next_po_date": "2026-06-02",
           "next_po_original_date": "2026-05-01",
           "next_po_qty": 25.0,
@@ -50852,7 +50852,7 @@
             {
               "item_id": "424",
               "item_name": "0LCOLZ.992230G",
-              "supportable_fg_units": 3025,
+              "supportable_fg_units": 2980,
               "next_po_date": "2026-06-02",
               "next_po_original_date": "2026-05-01",
               "next_po_qty": 25.0,
@@ -50888,7 +50888,7 @@
             {
               "item_id": "424",
               "item_name": "0LCOLZ.992230G",
-              "supportable_fg_units": 3025,
+              "supportable_fg_units": 2980,
               "next_po_date": "2026-06-02",
               "next_po_original_date": "2026-05-01",
               "next_po_qty": 25.0,
@@ -50924,7 +50924,7 @@
             {
               "item_id": "424",
               "item_name": "0LCOLZ.992230G",
-              "supportable_fg_units": 3025,
+              "supportable_fg_units": 2980,
               "next_po_date": "2026-06-02",
               "next_po_original_date": "2026-05-01",
               "next_po_qty": 25.0,
@@ -51530,7 +51530,7 @@
         {
           "item_id": "424",
           "item_name": "0LCOLZ.992230G",
-          "supportable_fg_units": 3025,
+          "supportable_fg_units": 2980,
           "next_po_date": "2026-06-02",
           "next_po_original_date": "2026-05-01",
           "next_po_qty": 25.0,
@@ -51566,7 +51566,7 @@
             {
               "item_id": "424",
               "item_name": "0LCOLZ.992230G",
-              "supportable_fg_units": 3025,
+              "supportable_fg_units": 2980,
               "next_po_date": "2026-06-02",
               "next_po_original_date": "2026-05-01",
               "next_po_qty": 25.0,
@@ -51602,7 +51602,7 @@
             {
               "item_id": "424",
               "item_name": "0LCOLZ.992230G",
-              "supportable_fg_units": 3025,
+              "supportable_fg_units": 2980,
               "next_po_date": "2026-06-02",
               "next_po_original_date": "2026-05-01",
               "next_po_qty": 25.0,
@@ -51638,7 +51638,7 @@
             {
               "item_id": "424",
               "item_name": "0LCOLZ.992230G",
-              "supportable_fg_units": 3025,
+              "supportable_fg_units": 2980,
               "next_po_date": "2026-06-02",
               "next_po_original_date": "2026-05-01",
               "next_po_qty": 25.0,
@@ -52913,11 +52913,11 @@
       "status": "in_stock",
       "available_today": 62,
       "total_open_demand": 121,
-      "committable": 60,
+      "committable": 33,
       "max_buildable_today": 103,
-      "max_buildable_horizon": 181,
+      "max_buildable_horizon": 154,
       "next_available_date": "2026-06-09",
-      "next_available_qty": 60,
+      "next_available_qty": 33,
       "limiting_components": [
         {
           "item_id": "7527",
@@ -52931,7 +52931,7 @@
         {
           "item_id": "584",
           "item_name": "0TBETR1228",
-          "supportable_fg_units": 181,
+          "supportable_fg_units": 154,
           "next_po_date": null,
           "next_po_original_date": null,
           "next_po_qty": 0,
@@ -52967,7 +52967,7 @@
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 181,
+              "supportable_fg_units": 154,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53003,7 +53003,7 @@
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 181,
+              "supportable_fg_units": 154,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53039,7 +53039,7 @@
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 181,
+              "supportable_fg_units": 154,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53075,7 +53075,7 @@
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 181,
+              "supportable_fg_units": 154,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53095,14 +53095,14 @@
         {
           "date": "2026-07-17",
           "display_date": "2026-07-24",
-          "buildable": 181,
+          "buildable": 154,
           "cumulative_demand": 46,
-          "net_available": 135,
+          "net_available": 108,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 181,
+              "supportable_fg_units": 154,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53131,14 +53131,14 @@
         {
           "date": "2026-08-03",
           "display_date": "2026-08-10",
-          "buildable": 181,
+          "buildable": 154,
           "cumulative_demand": 48,
-          "net_available": 133,
+          "net_available": 106,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 181,
+              "supportable_fg_units": 154,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53167,14 +53167,14 @@
         {
           "date": "2026-08-31",
           "display_date": "2026-09-07",
-          "buildable": 181,
+          "buildable": 154,
           "cumulative_demand": 58,
-          "net_available": 123,
+          "net_available": 96,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 181,
+              "supportable_fg_units": 154,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53203,14 +53203,14 @@
         {
           "date": "2026-09-01",
           "display_date": "2026-09-08",
-          "buildable": 181,
+          "buildable": 154,
           "cumulative_demand": 86,
-          "net_available": 95,
+          "net_available": 68,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 181,
+              "supportable_fg_units": 154,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53239,14 +53239,14 @@
         {
           "date": "2026-09-15",
           "display_date": "2026-09-22",
-          "buildable": 181,
+          "buildable": 154,
           "cumulative_demand": 94,
-          "net_available": 87,
+          "net_available": 60,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 181,
+              "supportable_fg_units": 154,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53275,14 +53275,14 @@
         {
           "date": "2026-10-01",
           "display_date": "2026-10-08",
-          "buildable": 181,
+          "buildable": 154,
           "cumulative_demand": 104,
-          "net_available": 77,
+          "net_available": 50,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 181,
+              "supportable_fg_units": 154,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53311,14 +53311,14 @@
         {
           "date": "2026-11-01",
           "display_date": "2026-11-08",
-          "buildable": 181,
+          "buildable": 154,
           "cumulative_demand": 106,
-          "net_available": 75,
+          "net_available": 48,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 181,
+              "supportable_fg_units": 154,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53347,14 +53347,14 @@
         {
           "date": "2026-11-02",
           "display_date": "2026-11-09",
-          "buildable": 181,
+          "buildable": 154,
           "cumulative_demand": 108,
-          "net_available": 73,
+          "net_available": 46,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 181,
+              "supportable_fg_units": 154,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53383,14 +53383,14 @@
         {
           "date": "2026-12-02",
           "display_date": "2026-12-09",
-          "buildable": 181,
+          "buildable": 154,
           "cumulative_demand": 111,
-          "net_available": 70,
+          "net_available": 43,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 181,
+              "supportable_fg_units": 154,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53419,14 +53419,14 @@
         {
           "date": "2026-12-15",
           "display_date": "2026-12-22",
-          "buildable": 181,
+          "buildable": 154,
           "cumulative_demand": 119,
-          "net_available": 62,
+          "net_available": 35,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 181,
+              "supportable_fg_units": 154,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53455,14 +53455,14 @@
         {
           "date": "2026-12-31",
           "display_date": "2027-01-07",
-          "buildable": 181,
+          "buildable": 154,
           "cumulative_demand": 121,
-          "net_available": 60,
+          "net_available": 33,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 181,
+              "supportable_fg_units": 154,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53708,11 +53708,11 @@
       "status": "in_stock",
       "available_today": 62,
       "total_open_demand": 123,
-      "committable": 63,
+      "committable": 36,
       "max_buildable_today": 108,
-      "max_buildable_horizon": 186,
+      "max_buildable_horizon": 159,
       "next_available_date": "2026-06-09",
-      "next_available_qty": 63,
+      "next_available_qty": 36,
       "limiting_components": [
         {
           "item_id": "7527",
@@ -53726,7 +53726,7 @@
         {
           "item_id": "584",
           "item_name": "0TBETR1228",
-          "supportable_fg_units": 186,
+          "supportable_fg_units": 159,
           "next_po_date": null,
           "next_po_original_date": null,
           "next_po_qty": 0,
@@ -53762,7 +53762,7 @@
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 186,
+              "supportable_fg_units": 159,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53798,7 +53798,7 @@
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 186,
+              "supportable_fg_units": 159,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53834,7 +53834,7 @@
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 186,
+              "supportable_fg_units": 159,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53854,14 +53854,14 @@
         {
           "date": "2026-07-17",
           "display_date": "2026-07-24",
-          "buildable": 186,
+          "buildable": 159,
           "cumulative_demand": 46,
-          "net_available": 140,
+          "net_available": 113,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 186,
+              "supportable_fg_units": 159,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53890,14 +53890,14 @@
         {
           "date": "2026-08-03",
           "display_date": "2026-08-10",
-          "buildable": 186,
+          "buildable": 159,
           "cumulative_demand": 48,
-          "net_available": 138,
+          "net_available": 111,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 186,
+              "supportable_fg_units": 159,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53926,14 +53926,14 @@
         {
           "date": "2026-08-31",
           "display_date": "2026-09-07",
-          "buildable": 186,
+          "buildable": 159,
           "cumulative_demand": 58,
-          "net_available": 128,
+          "net_available": 101,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 186,
+              "supportable_fg_units": 159,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53962,14 +53962,14 @@
         {
           "date": "2026-09-01",
           "display_date": "2026-09-08",
-          "buildable": 186,
+          "buildable": 159,
           "cumulative_demand": 85,
-          "net_available": 101,
+          "net_available": 74,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 186,
+              "supportable_fg_units": 159,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -53998,14 +53998,14 @@
         {
           "date": "2026-09-15",
           "display_date": "2026-09-22",
-          "buildable": 186,
+          "buildable": 159,
           "cumulative_demand": 91,
-          "net_available": 95,
+          "net_available": 68,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 186,
+              "supportable_fg_units": 159,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -54034,14 +54034,14 @@
         {
           "date": "2026-10-01",
           "display_date": "2026-10-08",
-          "buildable": 186,
+          "buildable": 159,
           "cumulative_demand": 101,
-          "net_available": 85,
+          "net_available": 58,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 186,
+              "supportable_fg_units": 159,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -54070,14 +54070,14 @@
         {
           "date": "2026-10-15",
           "display_date": "2026-10-22",
-          "buildable": 186,
+          "buildable": 159,
           "cumulative_demand": 102,
-          "net_available": 84,
+          "net_available": 57,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 186,
+              "supportable_fg_units": 159,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -54106,14 +54106,14 @@
         {
           "date": "2026-11-01",
           "display_date": "2026-11-08",
-          "buildable": 186,
+          "buildable": 159,
           "cumulative_demand": 120,
-          "net_available": 66,
+          "net_available": 39,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 186,
+              "supportable_fg_units": 159,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -54142,14 +54142,14 @@
         {
           "date": "2026-12-02",
           "display_date": "2026-12-09",
-          "buildable": 186,
+          "buildable": 159,
           "cumulative_demand": 123,
-          "net_available": 63,
+          "net_available": 36,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 186,
+              "supportable_fg_units": 159,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -54332,11 +54332,11 @@
       "status": "in_stock",
       "available_today": 61,
       "total_open_demand": 69,
-      "committable": 76,
+      "committable": 49,
       "max_buildable_today": 67,
-      "max_buildable_horizon": 145,
+      "max_buildable_horizon": 118,
       "next_available_date": "2026-06-09",
-      "next_available_qty": 76,
+      "next_available_qty": 49,
       "limiting_components": [
         {
           "item_id": "7527",
@@ -54357,12 +54357,12 @@
           "overdue": true
         },
         {
-          "item_id": "591",
-          "item_name": "0TETMSTICV.01",
-          "supportable_fg_units": 129,
-          "next_po_date": "2026-07-27",
+          "item_id": "584",
+          "item_name": "0TBETR1228",
+          "supportable_fg_units": 118,
+          "next_po_date": null,
           "next_po_original_date": null,
-          "next_po_qty": 1000.0,
+          "next_po_qty": 0,
           "overdue": false
         }
       ],
@@ -54393,12 +54393,12 @@
               "overdue": true
             },
             {
-              "item_id": "591",
-              "item_name": "0TETMSTICV.01",
-              "supportable_fg_units": 129,
-              "next_po_date": "2026-07-27",
+              "item_id": "584",
+              "item_name": "0TBETR1228",
+              "supportable_fg_units": 118,
+              "next_po_date": null,
               "next_po_original_date": null,
-              "next_po_qty": 1000.0,
+              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -54429,12 +54429,12 @@
               "overdue": true
             },
             {
-              "item_id": "591",
-              "item_name": "0TETMSTICV.01",
-              "supportable_fg_units": 129,
-              "next_po_date": "2026-07-27",
+              "item_id": "584",
+              "item_name": "0TBETR1228",
+              "supportable_fg_units": 118,
+              "next_po_date": null,
               "next_po_original_date": null,
-              "next_po_qty": 1000.0,
+              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -54465,12 +54465,12 @@
               "overdue": true
             },
             {
-              "item_id": "591",
-              "item_name": "0TETMSTICV.01",
-              "supportable_fg_units": 129,
-              "next_po_date": "2026-07-27",
+              "item_id": "584",
+              "item_name": "0TBETR1228",
+              "supportable_fg_units": 118,
+              "next_po_date": null,
               "next_po_original_date": null,
-              "next_po_qty": 1000.0,
+              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -54501,12 +54501,12 @@
               "overdue": true
             },
             {
-              "item_id": "591",
-              "item_name": "0TETMSTICV.01",
-              "supportable_fg_units": 129,
-              "next_po_date": "2026-07-27",
+              "item_id": "584",
+              "item_name": "0TBETR1228",
+              "supportable_fg_units": 118,
+              "next_po_date": null,
               "next_po_original_date": null,
-              "next_po_qty": 1000.0,
+              "next_po_qty": 0,
               "overdue": false
             }
           ]
@@ -54514,14 +54514,14 @@
         {
           "date": "2026-08-27",
           "display_date": "2026-09-03",
-          "buildable": 145,
+          "buildable": 118,
           "cumulative_demand": 11,
-          "net_available": 134,
+          "net_available": 107,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 145,
+              "supportable_fg_units": 118,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -54550,14 +54550,14 @@
         {
           "date": "2026-09-01",
           "display_date": "2026-09-08",
-          "buildable": 145,
+          "buildable": 118,
           "cumulative_demand": 58,
-          "net_available": 87,
+          "net_available": 60,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 145,
+              "supportable_fg_units": 118,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -54586,14 +54586,14 @@
         {
           "date": "2026-10-01",
           "display_date": "2026-10-08",
-          "buildable": 145,
+          "buildable": 118,
           "cumulative_demand": 65,
-          "net_available": 80,
+          "net_available": 53,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 145,
+              "supportable_fg_units": 118,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -54622,14 +54622,14 @@
         {
           "date": "2026-11-02",
           "display_date": "2026-11-09",
-          "buildable": 145,
+          "buildable": 118,
           "cumulative_demand": 67,
-          "net_available": 78,
+          "net_available": 51,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 145,
+              "supportable_fg_units": 118,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -54658,14 +54658,14 @@
         {
           "date": "2026-12-02",
           "display_date": "2026-12-09",
-          "buildable": 145,
+          "buildable": 118,
           "cumulative_demand": 69,
-          "net_available": 76,
+          "net_available": 49,
           "limiting_components": [
             {
               "item_id": "584",
               "item_name": "0TBETR1228",
-              "supportable_fg_units": 145,
+              "supportable_fg_units": 118,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -81686,7 +81686,7 @@
       "committable": 0,
       "max_buildable_today": 2,
       "max_buildable_horizon": 535,
-      "next_available_date": "2026-06-22",
+      "next_available_date": "2026-06-09",
       "next_available_qty": 0,
       "limiting_components": [
         {
@@ -92285,8 +92285,8 @@
       "committable": 641,
       "max_buildable_today": 11,
       "max_buildable_horizon": 1615,
-      "next_available_date": "2026-06-22",
-      "next_available_qty": 0,
+      "next_available_date": "2026-08-24",
+      "next_available_qty": 641,
       "limiting_components": [
         {
           "item_id": "7567",
@@ -100397,8 +100397,8 @@
       "committable": 2183,
       "max_buildable_today": 0,
       "max_buildable_horizon": 4100,
-      "next_available_date": "2026-07-31",
-      "next_available_qty": 0,
+      "next_available_date": "2026-12-08",
+      "next_available_qty": 2183,
       "limiting_components": [
         {
           "item_id": "6918",
@@ -101987,8 +101987,8 @@
       "committable": 1033,
       "max_buildable_today": 0,
       "max_buildable_horizon": 1900,
-      "next_available_date": "2026-07-31",
-      "next_available_qty": 0,
+      "next_available_date": "2026-11-17",
+      "next_available_qty": 1033,
       "limiting_components": [
         {
           "item_id": "6920",
@@ -102521,8 +102521,8 @@
       "committable": 995,
       "max_buildable_today": 0,
       "max_buildable_horizon": 1600,
-      "next_available_date": "2026-07-31",
-      "next_available_qty": 0,
+      "next_available_date": "2027-01-07",
+      "next_available_qty": 995,
       "limiting_components": [
         {
           "item_id": "6921",

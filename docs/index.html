@@ -498,12 +498,12 @@ function render(){
     th('item_name','SKU / Name')+
     '<th>Class</th>'+
     th('status','Status')+
+    th('max_buildable_today','Max Build Today','r')+
     th('available_today','Avail Today','r')+
-    th('total_open_demand','Open Demand','r')+
-    th('committable','Committable','r')+
-    th('max_buildable_today','Max Build','r')+
     th('next_available_date','Next Avail')+
     '<th class="r">Next Qty</th>'+
+    th('total_open_demand','Open Demand','r')+
+    th('committable','Committable','r')+
     '<th>Top Constraint</th>'+
     '<th></th>'+
     '</tr></thead><tbody>'+rows+'</tbody></table></div>';
@@ -530,12 +530,12 @@ function row(i){
     '<td><span class="sku-code">'+esc(i.item_name)+'</span><span class="sku-name" title="'+esc(i.item_display_name)+'">'+esc(i.item_display_name||i.item_name)+'</span></td>'+
     '<td><span class="cls-pill">'+esc(i.item_class||'—')+'</span></td>'+
     '<td><span class="badge '+i.status+'">'+sl(i.status)+'</span></td>'+
-    '<td class="r '+avail_cls+'">'+i.available_today+'</td>'+
-    '<td class="r muted">'+(i.total_open_demand||0)+'</td>'+
-    '<td class="r '+((i.committable||0)>0?'pos':'neg')+'">'+(i.committable||0)+'</td>'+
     '<td class="r dim">'+i.max_buildable_today+'</td>'+
+    '<td class="r '+avail_cls+'">'+i.available_today+'</td>'+
     '<td>'+nd+'</td>'+
     '<td class="r">'+nq+'</td>'+
+    '<td class="r muted">'+(i.total_open_demand||0)+'</td>'+
+    '<td class="r '+((i.committable||0)>0?'pos':'neg')+'">'+(i.committable||0)+'</td>'+
     '<td>'+ch+'</td>'+
     '<td><button class="xbtn'+(isOpen?' open':'')+'" onclick="toggle(\''+i.item_id+'\')" title="'+(isOpen?'Collapse':'Expand')+'">'+(isOpen?'▲':'▼')+'</button></td>'+
     '</tr>';
@@ -594,7 +594,7 @@ function populateClassFilter(){
 }
 
 function downloadCsv(){
-  var rows=[['SKU','Display Name','Class','Lifecycle','Location','Status','Avail Today','Open Demand','Committable','Max Build','Next Avail Date','Next Qty']];
+  var rows=[['SKU','Display Name','Class','Lifecycle','Location','Status','Max Build Today','Avail Today','Next Avail Date','Next Qty','Open Demand','Committable']];
   all.forEach(function(i){
     rows.push([
       i.item_name||'',
@@ -603,12 +603,12 @@ function downloadCsv(){
       i.lifecycle||'',
       i.location==='verrayes'?'Verrayes':'USA-3PL',
       sl(i.status),
-      i.available_today||0,
-      i.total_open_demand||0,
-      i.committable||0,
       i.max_buildable_today||0,
+      i.available_today||0,
       i.next_available_date||'',
-      i.next_available_qty!=null?i.next_available_qty:''
+      i.next_available_qty!=null?i.next_available_qty:'',
+      i.total_open_demand||0,
+      i.committable||0
     ]);
   });
   var csv=rows.map(function(r){return r.join(',');}).join('\n');
