@@ -52902,126 +52902,6 @@
       "avg_usd_per_unit": 98.99
     },
     {
-      "item_id": "6856",
-      "item_name": "PIGTR.RA.CB45",
-      "item_display_name": "Ghost Tech Razor Adze Core Black 45",
-      "item_class": "Ice Axes",
-      "lifecycle": "Active",
-      "location": "verrayes",
-      "embargoed": false,
-      "embargo_date": null,
-      "status": "out_of_stock",
-      "available_today": 0,
-      "total_open_demand": 5,
-      "committable": 0,
-      "max_buildable_today": 0,
-      "max_buildable_horizon": 0,
-      "next_available_date": null,
-      "next_available_qty": null,
-      "limiting_components": [
-        {
-          "item_id": "6856",
-          "item_name": "PIGTR.RA.CB45",
-          "supportable_fg_units": 0,
-          "next_po_date": null,
-          "next_po_original_date": null,
-          "next_po_qty": 0,
-          "overdue": false
-        }
-      ],
-      "availability_staircase": [
-        {
-          "date": "2026-05-26",
-          "display_date": "2026-05-26",
-          "buildable": 0,
-          "cumulative_demand": 0,
-          "net_available": 0,
-          "limiting_components": [
-            {
-              "item_id": "6856",
-              "item_name": "PIGTR.RA.CB45",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false
-            }
-          ]
-        },
-        {
-          "date": "2026-09-30",
-          "display_date": "2026-10-07",
-          "buildable": 0,
-          "cumulative_demand": 5,
-          "net_available": 0,
-          "limiting_components": [
-            {
-              "item_id": "6856",
-              "item_name": "PIGTR.RA.CB45",
-              "supportable_fg_units": 0,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false
-            }
-          ]
-        }
-      ],
-      "avg_eur_per_unit": 46.8948,
-      "avg_usd_per_unit": null
-    },
-    {
-      "item_id": "6856",
-      "item_name": "PIGTR.RA.CB45",
-      "item_display_name": "Ghost Tech Razor Adze Core Black 45",
-      "item_class": "Ice Axes",
-      "lifecycle": "Active",
-      "location": "usa3pl",
-      "embargoed": false,
-      "embargo_date": null,
-      "status": "out_of_stock",
-      "available_today": 0,
-      "total_open_demand": 0,
-      "committable": 0,
-      "max_buildable_today": 0,
-      "max_buildable_horizon": 0,
-      "next_available_date": null,
-      "next_available_qty": null,
-      "limiting_components": [
-        {
-          "item_id": "6856",
-          "item_name": "PIGTR.RA.CB45",
-          "po_number": "PO-US-2600004",
-          "supportable_fg_units": 5,
-          "next_po_date": "2026-11-15",
-          "next_po_qty": 5.0,
-          "overdue": false
-        }
-      ],
-      "availability_staircase": [
-        {
-          "date": "2026-05-26",
-          "display_date": "2026-05-26",
-          "buildable": 0,
-          "cumulative_demand": 0,
-          "net_available": 0,
-          "limiting_components": [
-            {
-              "item_id": "6856",
-              "item_name": "PIGTR.RA.CB45",
-              "po_number": "PO-US-2600004",
-              "supportable_fg_units": 5,
-              "next_po_date": "2026-11-15",
-              "next_po_qty": 5.0,
-              "overdue": false
-            }
-          ]
-        }
-      ],
-      "avg_eur_per_unit": 46.8948,
-      "avg_usd_per_unit": null
-    },
-    {
       "item_id": "6857",
       "item_name": "PITNM.IA.SY",
       "item_display_name": "The North Machine Ice Adze Summit Yellow",
@@ -90974,7 +90854,7 @@
           ]
         }
       ],
-      "avg_eur_per_unit": 83.4908,
+      "avg_eur_per_unit": 83.4615,
       "avg_usd_per_unit": 116.99
     },
     {
@@ -91241,7 +91121,7 @@
           ]
         }
       ],
-      "avg_eur_per_unit": 83.4908,
+      "avg_eur_per_unit": 83.4615,
       "avg_usd_per_unit": 116.99
     },
     {
@@ -131202,7 +131082,7 @@
           ]
         }
       ],
-      "avg_eur_per_unit": 77.8208,
+      "avg_eur_per_unit": 77.5329,
       "avg_usd_per_unit": null
     },
     {
@@ -131325,7 +131205,7 @@
           ]
         }
       ],
-      "avg_eur_per_unit": 77.8208,
+      "avg_eur_per_unit": 77.5329,
       "avg_usd_per_unit": null
     },
     {
