@@ -1,6 +1,5 @@
 {
   "settings": {
-    "planning_horizon_days": 120,
     "verrayes_pad_days": 7,
     "usa3pl_pad_days": 7,
     "usa3pl_embargo_pad_days": 90,
