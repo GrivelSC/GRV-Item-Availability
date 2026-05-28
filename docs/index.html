@@ -666,7 +666,15 @@ function downloadXlsx(){
   var ws=XLSX.utils.aoa_to_sheet(wsData,{cellDates:true});
   var wb=XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb,'GRV Availability',ws);
-  XLSX.writeFile(wb,'grv_availability_'+new Date().toISOString().slice(0,10)+'.xlsx');
+  // Use write() + Blob rather than writeFile() for reliable browser downloads
+  var wbout=XLSX.write(wb,{bookType:'xlsx',type:'array'});
+  var blob=new Blob([wbout],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  a.href=url;a.download='grv_availability_'+new Date().toISOString().slice(0,10)+'.xlsx';
+  document.body.appendChild(a);a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 }
 
 
