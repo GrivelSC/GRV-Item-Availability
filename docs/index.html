@@ -6,6 +6,7 @@
 <title>GRV · Item Availability</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
 :root {
   --bg:        #0a0c0f;
@@ -254,6 +255,7 @@ td.r{text-align:right;font-family:var(--mono);font-size:12px;}
   </div>
   <span class="f-count" id="f-count"></span>
   <button class="dl-csv-btn" onclick="downloadCsv()" title="Download CSV">⬇ CSV</button>
+  <button class="dl-csv-btn" onclick="downloadXlsx()" title="Download XLSX">⬇ XLSX</button>
 </div>
 
 <!-- ── Intelligence Panel ──────────────────────────────────── -->
@@ -621,7 +623,53 @@ function downloadCsv(){
   URL.revokeObjectURL(url);
 }
 
-// ── CHARTS ──────────────────────────────────────────────────────────────
+function downloadXlsx(){
+  // Column definitions — types: 's'=string, 'n'=number, 'd'=date
+  var colDefs=[
+    {h:'SKU',            fn:function(i){return i.item_name||'';},                              t:'s'},
+    {h:'Display Name',   fn:function(i){return i.item_display_name||'';},                      t:'s'},
+    {h:'Class',          fn:function(i){return i.item_class||'';},                             t:'s'},
+    {h:'Lifecycle',      fn:function(i){return i.lifecycle||'';},                              t:'s'},
+    {h:'Location',       fn:function(i){return i.location==='verrayes'?'Verrayes':'USA-3PL';}, t:'s'},
+    {h:'Status',         fn:function(i){return sl(i.status);},                                 t:'s'},
+    {h:'Max Build Today',fn:function(i){return i.max_buildable_today||0;},                     t:'n'},
+    {h:'Avail Today',    fn:function(i){return i.available_today||0;},                         t:'n'},
+    {h:'Next Avail Date',fn:function(i){
+      if(!i.next_available_date)return null;
+      var d=new Date(i.next_available_date);
+      return isNaN(d.getTime())?null:d;
+    },t:'d'},
+    {h:'Next Qty',       fn:function(i){return i.next_available_qty!=null?i.next_available_qty:null;},t:'n'},
+    {h:'Open Demand',    fn:function(i){return i.total_open_demand||0;},                       t:'n'},
+    {h:'Committable',    fn:function(i){return i.committable||0;},                             t:'n'}
+  ];
+
+  var wsData=[];
+
+  // Header row
+  wsData.push(colDefs.map(function(c){return {v:c.h,t:'s'};}));
+
+  // Data rows — export all records (same scope as CSV)
+  all.forEach(function(i){
+    wsData.push(colDefs.map(function(c){
+      var val=c.fn(i);
+      if(val===null||val===undefined||val===''){return {v:'',t:'s'};}
+      if(c.t==='d'){
+        // t:'d' with z:'m/d/yy' stores a true date serial;
+        // Excel renders it using the user's regional short-date setting
+        return {v:val,t:'d',z:'m/d/yy'};
+      }
+      return {v:val,t:c.t};
+    }));
+  });
+
+  var ws=XLSX.utils.aoa_to_sheet(wsData,{cellDates:true});
+  var wb=XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb,'GRV Availability',ws);
+  XLSX.writeFile(wb,'grv_availability_'+new Date().toISOString().slice(0,10)+'.xlsx');
+}
+
+
 var chartBnFg=null,chartBnBl=null,chartDemand=null,chartCommit=null;
 var chartTheme={
   text:'#9ca3af',dim:'#6b7280',grid:'#1f2937',
