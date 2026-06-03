@@ -1,8 +1,9 @@
 {
-  "refreshed_at": "2026-05-29T16:09:40.913015",
+  "refreshed_at": "2026-06-03T20:21:01.057680",
   "refreshed_by": "manual",
   "sku_count_verrayes": 316,
   "sku_count_usa3pl": 316,
+  "override_count": 0,
   "status": "ok",
   "warnings": []
 }

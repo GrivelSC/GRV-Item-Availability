@@ -85,6 +85,8 @@ tbody tr.detail-row:hover{background:var(--surface2);}
 td{padding:.55rem .75rem;vertical-align:middle;white-space:nowrap;}
 td.r{text-align:right;font-family:var(--mono);font-size:12px;}
 .sku-code{font-family:var(--mono);font-size:11px;color:var(--muted);display:block;}
+.ovr-flag{color:var(--amber);font-style:normal;margin-right:.32rem;cursor:help;}
+tr.is-overridden td:first-child{box-shadow:inset 3px 0 0 var(--amber);}
 .sku-name{font-weight:500;color:var(--text);display:block;max-width:200px;overflow:hidden;text-overflow:ellipsis;}
 .cls-pill{font-size:10px;padding:.15rem .5rem;border-radius:20px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);white-space:nowrap;}
 .badge{display:inline-flex;align-items:center;gap:.3rem;font-size:10px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:.2rem .55rem;border-radius:20px;white-space:nowrap;}
@@ -150,6 +152,9 @@ td.r{text-align:right;font-family:var(--mono);font-size:12px;}
 .stat-pct{font-size:11px;font-family:var(--mono);color:var(--dim);font-weight:400;margin-top:.15rem;}
 .dl-csv-btn{background:none;border:1px solid var(--border);border-radius:4px;color:var(--muted);cursor:pointer;padding:.25rem .6rem;font-size:11px;font-family:var(--sans);transition:all .15s;white-space:nowrap;}
 .dl-csv-btn:hover{border-color:var(--border2);color:var(--text);background:var(--surface2);}
+.val-toggle{display:inline-flex;gap:2px;background:var(--surface);border:1px solid var(--border);border-radius:5px;padding:2px;}
+.val-tab{padding:.24rem .6rem;border-radius:4px;font-size:11px;font-weight:500;cursor:pointer;color:var(--muted);border:none;background:transparent;font-family:var(--sans);transition:all .15s;white-space:nowrap;}
+.val-tab.active{background:var(--surface2);color:var(--text);box-shadow:0 1px 3px rgba(0,0,0,.4);}
 .charts-bar{display:none;grid-template-columns:1fr 1.5fr 1fr;gap:.75rem;padding:0 1rem .75rem;}
 .charts-bar.visible{display:grid;}
 .chart-panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:.6rem .75rem .5rem;}
@@ -254,6 +259,10 @@ td.r{text-align:right;font-family:var(--mono);font-size:12px;}
     <input type="text" id="srch" placeholder="Search SKU or name…" oninput="filter()">
   </div>
   <span class="f-count" id="f-count"></span>
+  <div class="val-toggle" title="Toggle between unit quantities and value (€ for Verrayes, $ for USA-3PL). Exports always stay in units.">
+    <button class="val-tab active" id="val-units" onclick="setValueMode(false)">Units</button>
+    <button class="val-tab"        id="val-value" onclick="setValueMode(true)">Value €/$</button>
+  </div>
   <button class="dl-csv-btn" onclick="downloadCsv()" title="Download CSV">⬇ CSV</button>
   <button class="dl-csv-btn" onclick="downloadXlsx()" title="Download XLSX">⬇ XLSX</button>
 </div>
@@ -402,6 +411,22 @@ td.r{text-align:right;font-family:var(--mono);font-size:12px;}
         </div>
       </div>
 
+      <div class="admin-section">
+        <div class="admin-section-title">Overrides</div>
+        <div class="admin-section-desc">Manually override an FG's availability, bypassing all calculation. CSV format (no header), 5 columns: <span class="mono">Internal ID, Location, Overridden Today Avail, Overridden Next Avail, Overridden Next Qty</span>. Location is <span class="mono">Verrayes</span> or <span class="mono">USA - 3PL</span>. Next Avail is a date (YYYY-MM-DD). A blank value is overridden to empty. Open Demand is kept from live data; Max Build, Committable, Top Constraint and the staircase are blanked. Overridden SKUs are flagged with ✎ in the table.</div>
+        <div class="admin-row">
+          <span class="admin-label">Overridden items:</span>
+          <span class="admin-value mono" id="ovr-count">0</span>
+        </div>
+        <div class="fg-preview-list mono" id="ovr-list" style="max-height:120px;"></div>
+        <div class="admin-row" style="margin-top:.5rem;">
+          <label class="upload-btn">
+            📄 Upload Overrides CSV
+            <input type="file" accept=".csv,.txt" id="ovr-csv-input" onchange="handleOvrCsv(this)" style="display:none">
+          </label>
+        </div>
+      </div>
+
       <div class="admin-section" style="border-bottom:none;">
         <button class="download-btn" onclick="downloadConfig()">⬇ Download Updated config.json</button>
         <div class="admin-section-desc" style="margin-top:.5rem;">After downloading, upload this file to GitHub at <span class="mono">docs/config.json</span> and trigger a refresh in Claude.</div>
@@ -414,7 +439,7 @@ td.r{text-align:right;font-family:var(--mono);font-size:12px;}
 </div>
 <script>
 'use strict';
-var all=[], shown=[], loc='verrayes', sk='item_name', sd=1, open_=new Set();
+var all=[], shown=[], loc='verrayes', sk='item_name', sd=1, open_=new Set(), valueMode=false;
 
 async function boot(){
   try{
@@ -443,6 +468,29 @@ function setLoc(l){
   if(activeView==='intelligence')generateIntel();
 }
 
+// Render a quantity field, honoring the Units/Value toggle and override-blanks.
+// - null value (override blanked)            → "—"
+// - Value mode + no ASP for this SKU/location → "" (left blank, per spec)
+// - Value mode + ASP                          → "€/$ rounded value with separators"
+// - Units mode                                → integer with thousands separators
+function vcell(i,field){
+  var v=i[field];
+  if(v==null)return '<span class="dim">—</span>';
+  if(valueMode){
+    var p=i[iPf()];
+    if(p==null||isNaN(p))return '';            // no ASP → blank field
+    return iCur()+Math.round(v*p).toLocaleString('en-US');
+  }
+  return Number(v).toLocaleString('en-US');
+}
+
+function setValueMode(on){
+  valueMode=!!on;
+  document.getElementById('val-units').classList.toggle('active',!valueMode);
+  document.getElementById('val-value').classList.toggle('active',valueMode);
+  filter();   // re-sort (value-aware) + re-render
+}
+
 function filter(){
   var lc=document.getElementById('lc-sel').value;
   var cl=document.getElementById('cl-sel').value;
@@ -456,8 +504,17 @@ function filter(){
     if(q&&!i.item_name.toLowerCase().includes(q)&&!(i.item_display_name||'').toLowerCase().includes(q))return false;
     return true;
   });
+  var VAL_COLS={max_buildable_today:1,available_today:1,total_open_demand:1,committable:1,next_available_qty:1};
+  function sortKey(x){
+    if(valueMode&&VAL_COLS[sk]){
+      var q=x[sk]; if(q==null)return null;
+      var p=x[iPf()]; if(p==null||isNaN(p))return null;
+      return q*p;
+    }
+    return x[sk];
+  }
   shown.sort(function(a,b){
-    var av=a[sk],bv=b[sk];
+    var av=sortKey(a),bv=sortKey(b);
     if(av==null)av=sd>0?Infinity:-Infinity;
     if(bv==null)bv=sd>0?Infinity:-Infinity;
     if(typeof av==='string')return av.localeCompare(bv)*sd;
@@ -487,6 +544,7 @@ function render(){
     var arrow=sk===k?(sd>0?' ↑':' ↓'):'';
     return'<th class="'+(sk===k?'sorted ':''+(cls||''))+'" onclick="sort_(\''+k+'\')">'+lbl+arrow+'</th>';
   }
+  var cs=valueMode?(' ('+(loc==='verrayes'?'€':'$')+')'):'';
   document.getElementById('content').innerHTML=
     '<div class="summary">'+
     '<div class="stat s-all"><div class="stat-label">Total SKUs</div><div class="stat-val">'+s.total+'</div></div>'+
@@ -500,12 +558,12 @@ function render(){
     th('item_name','SKU / Name')+
     '<th>Class</th>'+
     th('status','Status')+
-    th('max_buildable_today','Max Build Today','r')+
-    th('available_today','Avail Today','r')+
+    th('max_buildable_today','Max Build Today'+cs,'r')+
+    th('available_today','Avail Today'+cs,'r')+
     th('next_available_date','Next Avail')+
-    '<th class="r">Next Qty</th>'+
-    th('total_open_demand','Open Demand','r')+
-    th('committable','Committable','r')+
+    '<th class="r">Next Qty'+cs+'</th>'+
+    th('total_open_demand','Open Demand'+cs,'r')+
+    th('committable','Committable'+cs,'r')+
     '<th>Top Constraint</th>'+
     '<th></th>'+
     '</tr></thead><tbody>'+rows+'</tbody></table></div>';
@@ -517,7 +575,7 @@ function row(i){
   var lc=(i.limiting_components||[])[0];
   var nd=i.next_available_date?fd(i.next_available_date):'<span class="dim">—</span>';
   var nq=i.next_available_qty!=null
-    ?'<span class="'+(i.next_available_qty>0?'pos':'dim')+'">'+i.next_available_qty+'</span>'
+    ?'<span class="'+(i.next_available_qty>0?'pos':'dim')+'">'+vcell(i,'next_available_qty')+'</span>'
     :'<span class="dim">—</span>';
   var ch=lc
     ?'<div class="c-name">'+esc(lc.item_name||lc.item_id)+'</div><div class="c-po">'+(
@@ -528,20 +586,29 @@ function row(i){
           :'<span class="dim">no PO</span>')+'</div>'
     :'<span class="dim">—</span>';
   var avail_cls=i.available_today>0?'pos':i.available_today<0?'neg':'dim';
-  var main='<tr class="'+(isOpen?'expanded':'')+'">'+
-    '<td><span class="sku-code">'+esc(i.item_name)+'</span><span class="sku-name" title="'+esc(i.item_display_name)+'">'+esc(i.item_display_name||i.item_name)+'</span></td>'+
+  var cmt_cls=i.committable==null?'dim':(i.committable>0?'pos':'neg');
+  var ovIcon=i.overridden?'<span class="ovr-flag" title="Manually overridden — calculation bypassed">✎</span>':'';
+  var main='<tr class="'+(isOpen?'expanded':'')+(i.overridden?' is-overridden':'')+'">'+
+    '<td><span class="sku-code">'+ovIcon+esc(i.item_name)+'</span><span class="sku-name" title="'+esc(i.item_display_name)+'">'+esc(i.item_display_name||i.item_name)+'</span></td>'+
     '<td><span class="cls-pill">'+esc(i.item_class||'—')+'</span></td>'+
     '<td><span class="badge '+i.status+'">'+sl(i.status)+'</span></td>'+
-    '<td class="r dim">'+i.max_buildable_today+'</td>'+
-    '<td class="r '+avail_cls+'">'+i.available_today+'</td>'+
+    '<td class="r dim">'+vcell(i,'max_buildable_today')+'</td>'+
+    '<td class="r '+avail_cls+'">'+vcell(i,'available_today')+'</td>'+
     '<td>'+nd+'</td>'+
     '<td class="r">'+nq+'</td>'+
-    '<td class="r muted">'+(i.total_open_demand||0)+'</td>'+
-    '<td class="r '+((i.committable||0)>0?'pos':'neg')+'">'+(i.committable||0)+'</td>'+
+    '<td class="r muted">'+vcell(i,'total_open_demand')+'</td>'+
+    '<td class="r '+cmt_cls+'">'+vcell(i,'committable')+'</td>'+
     '<td>'+ch+'</td>'+
     '<td><button class="xbtn'+(isOpen?' open':'')+'" onclick="toggle(\''+i.item_id+'\')" title="'+(isOpen?'Collapse':'Expand')+'">'+(isOpen?'▲':'▼')+'</button></td>'+
     '</tr>';
   if(!isOpen)return main;
+  if(i.overridden){
+    var detailO='<tr class="detail-row"><td class="detail-cell" colspan="11">'+
+      '<div class="sc-title">✎ Manually overridden — calculation bypassed</div>'+
+      '<div class="admin-section-desc" style="margin:0;">Today, Next Avail and Next Qty are set manually in the Overrides list. Max Build, Committable, Top Constraint and the staircase are not computed for this SKU. Open Demand is still from live data.</div>'+
+      '</td></tr>';
+    return main+detailO;
+  }
   var stairs=i.availability_staircase||[];
   var mx=Math.max.apply(null,stairs.map(function(s){return s.net_available;}));if(mx<1)mx=1;
   var sc=stairs.map(function(s){
@@ -596,7 +663,8 @@ function populateClassFilter(){
 }
 
 function downloadCsv(){
-  var rows=[['SKU','Display Name','Class','Lifecycle','Location','Status','Max Build Today','Avail Today','Next Avail Date','Next Qty','Open Demand','Committable']];
+  // Exports ALWAYS in units (the €/$ toggle never affects downloads).
+  var rows=[['SKU','Display Name','Class','Lifecycle','Location','Status','Max Build Today','Avail Today','Next Avail Date','Next Qty','Open Demand','Committable','Overridden']];
   all.forEach(function(i){
     rows.push([
       i.item_name||'',
@@ -605,12 +673,13 @@ function downloadCsv(){
       i.lifecycle||'',
       i.location==='verrayes'?'Verrayes':'USA-3PL',
       sl(i.status),
-      i.max_buildable_today||0,
-      i.available_today||0,
+      i.max_buildable_today==null?'':i.max_buildable_today,
+      i.available_today==null?'':i.available_today,
       i.next_available_date||'',
       i.next_available_qty!=null?i.next_available_qty:'',
-      i.total_open_demand||0,
-      i.committable||0
+      i.total_open_demand!=null?i.total_open_demand:0,
+      i.committable==null?'':i.committable,
+      i.overridden?'Yes':''
     ]);
   });
   var csv=rows.map(function(r){return r.join(',');}).join('\n');
@@ -624,6 +693,7 @@ function downloadCsv(){
 }
 
 function downloadXlsx(){
+  // Exports ALWAYS in units (the €/$ toggle never affects downloads).
   // Column definitions — types: 's'=string, 'n'=number, 'd'=date
   var colDefs=[
     {h:'SKU',            fn:function(i){return i.item_name||'';},                              t:'s'},
@@ -632,16 +702,17 @@ function downloadXlsx(){
     {h:'Lifecycle',      fn:function(i){return i.lifecycle||'';},                              t:'s'},
     {h:'Location',       fn:function(i){return i.location==='verrayes'?'Verrayes':'USA-3PL';}, t:'s'},
     {h:'Status',         fn:function(i){return sl(i.status);},                                 t:'s'},
-    {h:'Max Build Today',fn:function(i){return i.max_buildable_today||0;},                     t:'n'},
-    {h:'Avail Today',    fn:function(i){return i.available_today||0;},                         t:'n'},
+    {h:'Max Build Today',fn:function(i){return i.max_buildable_today;},                        t:'n'},
+    {h:'Avail Today',    fn:function(i){return i.available_today;},                            t:'n'},
     {h:'Next Avail Date',fn:function(i){
       if(!i.next_available_date)return null;
       var d=new Date(i.next_available_date);
       return isNaN(d.getTime())?null:d;
     },t:'d'},
     {h:'Next Qty',       fn:function(i){return i.next_available_qty!=null?i.next_available_qty:null;},t:'n'},
-    {h:'Open Demand',    fn:function(i){return i.total_open_demand||0;},                       t:'n'},
-    {h:'Committable',    fn:function(i){return i.committable||0;},                             t:'n'}
+    {h:'Open Demand',    fn:function(i){return i.total_open_demand!=null?i.total_open_demand:0;},t:'n'},
+    {h:'Committable',    fn:function(i){return i.committable;},                                t:'n'},
+    {h:'Overridden',     fn:function(i){return i.overridden?'Yes':'';},                        t:'s'}
   ];
 
   var wsData=[];
@@ -820,6 +891,7 @@ function renderCommittable(){
     {label:'500+',min:501,max:Infinity,count:0}
   ];
   shown.forEach(function(i){
+    if(i.overridden)return;   // committable is blanked for overrides
     var c=i.committable||0;
     for(var j=0;j<buckets.length;j++){
       if(c>=buckets[j].min&&c<=buckets[j].max){buckets[j].count++;break;}
@@ -846,7 +918,7 @@ function renderCommittable(){
 }
 
 // ── ADMIN PANEL ──────────────────────────────────────────────────────────
-var cfg = { settings:{}, fg_list:[], exclusion_list:[], embargo_list:[] };
+var cfg = { settings:{}, fg_list:[], exclusion_list:[], embargo_list:[], overrides_list:[] };
 
 async function loadConfig(){
   try{
@@ -854,6 +926,7 @@ async function loadConfig(){
     var r=await fetch(base+'config.json');
     if(r.ok) cfg=await r.json();
   }catch(e){}
+  if(!cfg.overrides_list)cfg.overrides_list=[];
   refreshAdminDisplay();
 }
 
@@ -869,6 +942,16 @@ function refreshAdminDisplay(){
   if(cfg.embargo_list.length)
     eb.textContent=cfg.embargo_list.map(function(e){return e.item_id+' — '+(e.item_name||'')+' → '+(e.embargo_date||'');}).join('\n');
   else eb.textContent='(none)';
+  var ovl=cfg.overrides_list||[];
+  document.getElementById('ovr-count').textContent=ovl.length;
+  var ov=document.getElementById('ovr-list');
+  if(ovl.length)
+    ov.textContent=ovl.map(function(e){
+      return e.item_id+' · '+(e.location==='verrayes'?'Verrayes':(e.location==='usa3pl'?'USA-3PL':'?'))+
+        ' → today '+(e.today_avail==null?'(empty)':e.today_avail)+
+        ', next '+(e.next_avail||'(empty)')+' × '+(e.next_qty==null?'(empty)':e.next_qty);
+    }).join('\n');
+  else ov.textContent='(none)';
 }
 
 function openAdmin(){ document.getElementById('admin-modal').classList.add('open'); }
@@ -935,6 +1018,45 @@ function handleEmbCsv(input){
   reader.readAsText(file);
 }
 
+function normOvrLoc(s){
+  var t=String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+  if(t.indexOf('verrayes')===0||t==='1')return 'verrayes';
+  if(t.indexOf('usa')>-1||t.indexOf('3pl')>-1||t==='3')return 'usa3pl';
+  return '';
+}
+function ovrNum(v){
+  if(v==null)return null;
+  var s=String(v).trim().replace(/,/g,'');
+  if(s==='')return null;
+  var n=parseFloat(s);
+  return isNaN(n)?null:Math.round(n);
+}
+function parseCsvOverrides(text){
+  // No header. 5 columns: Internal ID, Location, Today Avail, Next Avail (date), Next Qty.
+  var rows=text.split(/[\r\n]+/).filter(function(s){return s.trim();});
+  return rows.map(function(row){
+    var cols=row.split(',').map(function(s){return s.trim().replace(/['"]/g,'');});
+    return {
+      item_id:     cols[0]||'',
+      location:    normOvrLoc(cols[1]||''),
+      today_avail: ovrNum(cols[2]),
+      next_avail:  (cols[3]!==undefined&&cols[3]!=='')?cols[3]:null,
+      next_qty:    ovrNum(cols[4])
+    };
+  }).filter(function(r){return r.item_id&&/^\d+$/.test(r.item_id)&&r.location;});
+}
+function handleOvrCsv(input){
+  var file=input.files[0];
+  if(!file)return;
+  var reader=new FileReader();
+  reader.onload=function(e){
+    var items=parseCsvOverrides(e.target.result);
+    cfg.overrides_list=items;
+    refreshAdminDisplay();
+  };
+  reader.readAsText(file);
+}
+
 function downloadConfig(){
   var blob=new Blob([JSON.stringify(cfg,null,2)],{type:'application/json'});
   var url=URL.createObjectURL(blob);
@@ -983,10 +1105,10 @@ function generateIntel(){
   if(!all||!all.length)return;
   var pf=iPf(),cur=iCur(),PTHR=5000,WTHR=16,today=new Date();
   today.setHours(0,0,0,0);
-  var items=shown;
+  var items=shown.filter(function(i){return !i.overridden;});  // manual overrides excluded from intel
   var otherLoc=loc==='verrayes'?'usa3pl':'verrayes';
   var otherMap={};
-  all.filter(function(i){return i.location===otherLoc;}).forEach(function(i){otherMap[i.item_id]=i;});
+  all.filter(function(i){return i.location===otherLoc&&!i.overridden;}).forEach(function(i){otherMap[i.item_id]=i;});
   var lc=document.getElementById('lc-sel').value||'All lifecycles';
   var cl=document.getElementById('cl-sel').value||'All classes';
   document.getElementById('intel-ctx').textContent=

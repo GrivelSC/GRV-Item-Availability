@@ -391,7 +391,7 @@ pre code {
       <a href="#charts" class="nav-link">Charts</a>
       <a href="#table" class="nav-link">Data Table</a>
       <a href="#staircase" class="nav-link sub">↳ Staircase View</a>
-      <a href="#export" class="nav-link">CSV Export</a>
+      <a href="#export" class="nav-link">CSV / XLSX Export</a>
     </div>
 
     <div class="nav-section">
@@ -412,7 +412,7 @@ pre code {
       <a href="#admin-when" class="nav-link">When to Refresh</a>
       <a href="#admin-refresh" class="nav-link">Refresh Workflow</a>
       <a href="#admin-panel" class="nav-link">Admin Panel</a>
-      <a href="#admin-config" class="nav-link sub">↳ FG / Exclusion / Embargo</a>
+      <a href="#admin-config" class="nav-link sub">↳ FG / Exclusion / Embargo / Overrides</a>
       <a href="#admin-upload" class="nav-link">GitHub Upload</a>
     </div>
 
@@ -513,6 +513,7 @@ pre code {
         <tr><td><strong>Lifecycle</strong></td><td>Filters by product lifecycle stage. Defaults to <em>Active</em>. Choose <em>All lifecycles</em> to see everything including Discontinued and End-Of-Life products.</td></tr>
         <tr><td><strong>Class</strong></td><td>Filters by product category (Crampons, Ice Axes, Elements, etc.).</td></tr>
         <tr><td><strong>Status</strong></td><td>Filters by availability status: In Stock, Incoming, Out of Stock, or Embargoed.</td></tr>
+        <tr><td><strong>Units / Value €$ toggle</strong></td><td>Switches the quantity columns (Max Build, Avail Today, Next Qty, Open Demand, Committable) between unit counts and monetary value. Value = units × average selling price, shown in <strong>€</strong> on VERRAYES and <strong>$</strong> on USA-3PL. Where no selling price is known for a SKU, the value cell is left blank. Charts, the staircase, and CSV/XLSX downloads always stay in units.</td></tr>
         <tr><td><strong>Search 🔍</strong></td><td>Free-text search across SKU code and product display name. Partial matches work.</td></tr>
       </tbody>
     </table>
@@ -613,6 +614,11 @@ pre code {
       </tbody>
     </table>
 
+    <div class="callout tip">
+      <div class="callout-title">✎ Overridden SKUs</div>
+      <p>A <strong>✎</strong> icon and an amber left edge mark SKUs whose availability has been set manually in the Overrides list. For these rows, Avail Today / Next Avail / Next Qty are the manual values, Open Demand is still live, and Max Build / Committable / Top Constraint show <code>—</code> because the calculation is bypassed. Expanding the row shows a short note instead of a staircase. See the <a href="#admin-config">Overrides</a> admin section.</p>
+    </div>
+
     <div id="staircase">
       <h3>Expanding a Row — The Availability Staircase</h3>
       <p>Click the <strong>▼</strong> button at the right of any row to expand the full time-phased availability view for that SKU. This shows how availability changes at each future supply event.</p>
@@ -638,11 +644,11 @@ pre code {
 
   <!-- ── EXPORT ─────────────────────────────────────────── -->
   <section id="export">
-    <h2>CSV Export</h2>
-    <p>Click the <strong>⬇ CSV</strong> button in the filter bar to download all availability data as a spreadsheet. The file is named <code>grv_availability_YYYY-MM-DD.csv</code> and includes all 332+ SKUs across both locations, with all key fields.</p>
+    <h2>CSV / XLSX Export</h2>
+    <p>Use the <strong>⬇ CSV</strong> or <strong>⬇ XLSX</strong> button in the filter bar to download all availability data as a spreadsheet, named <code>grv_availability_YYYY-MM-DD.csv</code> / <code>.xlsx</code>. The file includes all 332+ SKUs across both locations, with all key fields, plus an <strong>Overridden</strong> column (<code>Yes</code> for manually overridden SKUs). For overridden SKUs the blanked fields (Max Build, Committable) export as empty cells.</p>
     <div class="callout warn">
-      <div class="callout-title">Note on scope</div>
-      <p>The CSV always exports <em>all</em> items regardless of active filters. Use your spreadsheet app to apply additional filtering after download.</p>
+      <div class="callout-title">Note on scope &amp; units</div>
+      <p>The download always exports <em>all</em> items regardless of active filters, and <strong>always in units</strong> — the Units/Value €$ toggle never affects the file. Use your spreadsheet app to apply additional filtering or to value the quantities after download.</p>
     </div>
   </section>
 
@@ -823,7 +829,7 @@ pre code {
       <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Upload to GitHub</strong><span>See the <a href="#admin-upload">GitHub Upload</a> section below.</span></div></div>
     </div>
 
-    <h3>Config Update Refresh (FG list, exclusion list, embargo list, or settings change)</h3>
+    <h3>Config Update Refresh (FG list, exclusion list, embargo list, overrides, or settings change)</h3>
     <div class="steps">
       <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Open the dashboard → ⚙ Admin Panel</strong><span>Click the gear icon in the top-right corner of the dashboard.</span></div></div>
       <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Upload the relevant CSV files</strong><span>See the <a href="#admin-config">Admin Panel section</a> for CSV format details.</span></div></div>
@@ -886,6 +892,30 @@ pre code {
         <div class="callout-title">USA-3PL embargo pad</div>
         <p>Embargo dates at USA-3PL are automatically extended by 90 days to account for Italy-to-USA supply chain lead time. So an embargo of <code>2026-09-01</code> will show as unavailable at USA-3PL until approximately <code>2026-12-01</code>. No action is needed — this happens automatically.</p>
       </div>
+
+      <h3>Overrides</h3>
+      <p>An override lets you set a finished good's availability <strong>manually, bypassing all calculation</strong> for that SKU at one location. Use it when you know the real availability (e.g. a confirmed allocation or a correction) and want the dashboard to show it regardless of what the engine computes.</p>
+      <p>CSV format: <strong>no header</strong>, 5 columns — <code>Internal ID, Location, Overridden Today Avail, Overridden Next Avail, Overridden Next Qty</code>. <code>Location</code> is <code>Verrayes</code> or <code>USA - 3PL</code>. <code>Overridden Next Avail</code> is a date (<code>YYYY-MM-DD</code>).</p>
+
+      <pre><code># Example overrides CSV (no header)
+1116, Verrayes, 50, 2026-07-01, 100
+7420, USA - 3PL, 0, , </code></pre>
+
+      <p>What an override does on the affected SKU:</p>
+      <ul>
+        <li><strong>Avail Today, Next Avail, Next Qty</strong> take the values from the CSV.</li>
+        <li><strong>Status</strong> is derived: Today &gt; 0 → In Stock; otherwise a Next Avail date present → Incoming; otherwise Out of Stock.</li>
+        <li><strong>Max Build, Committable, Top Constraint</strong> and the expandable staircase are blanked (shown as <code>—</code>) — the calculation is bypassed.</li>
+        <li><strong>Open Demand is kept</strong> from live data; it is not overridden.</li>
+        <li>Any embargo on that SKU is ignored while the override is in place.</li>
+      </ul>
+
+      <div class="callout tip">
+        <div class="callout-title">Blank means empty</div>
+        <p>If you load a SKU into the Overrides list, declare both the Today and the Next values. A blank cell is overridden to <em>empty</em> — it is not back-filled from the calculation. In the example above, <code>7420</code> is forced to Out of Stock with no Today and no Next value.</p>
+      </div>
+
+      <p>Overridden SKUs are flagged in the table with a <strong>✎</strong> icon and an amber left edge, so they are easy to spot. They are excluded from the Intelligence view and the Committable Distribution chart (their computed inputs are intentionally blank).</p>
     </div>
   </section>
 
@@ -913,10 +943,12 @@ pre code {
     <h2>Glossary</h2>
     <dl>
       <div class="glossary-term"><dt>ATP</dt><dd>Available to Promise. The number of units that can be safely committed to new orders without jeopardising existing open orders. Shown as the "Committable" column.</dd></div>
+      <div class="glossary-term"><dt>ASP / Selling Price</dt><dd>Average selling price per unit, computed as the quantity-weighted average of open sales-order line rates (EUR for Verrayes, USD for USA-3PL). Drives the Units/Value €$ toggle. A SKU with no priced open orders has no ASP, so its value cells are left blank.</dd></div>
       <div class="glossary-term"><dt>BOM</dt><dd>Bill of Materials. The list of sub-components and raw materials required to produce one unit of a finished good. The dashboard explodes BOMs recursively to compute true production capacity.</dd></div>
       <div class="glossary-term"><dt>Buildable</dt><dd>The maximum units that could theoretically be produced at a given date, given current inventory plus any POs received up to that date. Does not subtract demand.</dd></div>
       <div class="glossary-term"><dt>Committable</dt><dd>Max buildable at the 120-day planning horizon, minus all open demand. The safe ATP figure for new orders.</dd></div>
       <div class="glossary-term"><dt>Embargo</dt><dd>An administrative hold on a SKU. Availability is suppressed to zero until the embargo date is reached.</dd></div>
+      <div class="glossary-term"><dt>Override</dt><dd>A manual setting (admin-managed) that replaces an FG's computed availability at one location with values entered by hand, bypassing the calculation. Overridden SKUs are flagged with a ✎ icon; Open Demand stays live, other computed fields are blanked.</dd></div>
       <div class="glossary-term"><dt>FG / Finished Good</dt><dd>A product that is sold to customers (as opposed to a raw material or sub-assembly used in production).</dd></div>
       <div class="glossary-term"><dt>Intercompany PO</dt><dd>A purchase order raised by Grivel Corp. (USA) against Grivel S.r.l. (Italy) to transfer stock between entities. These appear as supply at USA-3PL.</dd></div>
       <div class="glossary-term"><dt>Lifecycle</dt><dd>The product life stage: Active, New Product, Discontinued, or End Of Life. Pulled from NetSuite.</dd></div>
