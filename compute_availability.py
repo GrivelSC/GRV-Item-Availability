@@ -108,7 +108,7 @@ QUERIES = {
             "FROM transaction t "
             "JOIN transactionline tl ON tl.transaction = t.id "
             "WHERE t.type = 'SalesOrd' "
-            "AND t.status IN ('B', 'D') "
+            "AND t.status IN ('A', 'B', 'D') "
             "AND t.subsidiary IN (1, 3) "
             "AND tl.mainline = 'F' "
             "AND tl.quantity < 0 "
@@ -122,7 +122,7 @@ QUERIES = {
         "notes": (
             "FILTERED by {fg_ids} — only demand for FGs in scope. "
             "SO quantities are NEGATIVE. open_qty = -quantity - quantityshiprecv. "
-            "Status B=Pending Fulfillment, D=Partially Fulfilled. "
+            "Status A=Pending Approval (eComm pre-orders), B=Pending Fulfillment, D=Partially Fulfilled. "
             "Subsidiary 1=Verrayes, 3=USA-3PL. ~500 rows (down from 11,000+ unfiltered)."
         ),
     },
@@ -164,7 +164,7 @@ QUERIES = {
             "FROM transaction t "
             "JOIN transactionline tl ON tl.transaction = t.id "
             "WHERE t.type = 'SalesOrd' "
-            "AND t.status IN ('B', 'D') "
+            "AND t.status IN ('A', 'B', 'D') "
             "AND t.subsidiary IN (1, 3) "
             "AND tl.mainline = 'F' "
             "AND tl.quantity < 0 "
@@ -804,8 +804,11 @@ def run(config_path, data_dir, output_path, metadata_path):
     fg_list      = config.get("fg_list", [])
     excl_ids     = {int(e["item_id"]) for e in config.get("exclusion_list", [])}
     embargo_list = config.get("embargo_list", [])
+    override_lookup = build_override_lookup(config.get("overrides_list", []))
 
     print(f"FG list: {len(fg_list)} items")
+    if override_lookup:
+        print(f"Manual overrides: {len(override_lookup)} (item, location) pairs")
 
     print("Loading query results...")
     with open(f"{data_dir}/q1.json") as f:
@@ -908,6 +911,14 @@ def run(config_path, data_dir, output_path, metadata_path):
                 item_prices = price_lookup.get(fg_id, {})
                 record["avg_eur_per_unit"] = item_prices.get(1)   # EUR from sub 1
                 record["avg_usd_per_unit"] = item_prices.get(3)   # USD from sub 3
+                # Apply manual override (bypasses calculation) if one exists for
+                # this (FG, location).  Prices above are preserved so the app's
+                # €/$ toggle can still value the overridden quantities.
+                ov = override_lookup.get((fg_id, loc))
+                if ov is not None:
+                    apply_override(record, ov)
+                else:
+                    record["overridden"] = False
                 results.append(record)
             except Exception as e:
                 print(f"  ERROR on FG {fg_id} / {loc}: {e}")
@@ -933,6 +944,7 @@ def run(config_path, data_dir, output_path, metadata_path):
         "refreshed_by":         "manual",
         "sku_count_verrayes":   sum(1 for r in results if r.get("location") == "verrayes"),
         "sku_count_usa3pl":     sum(1 for r in results if r.get("location") == "usa3pl"),
+        "override_count":       sum(1 for r in results if r.get("overridden")),
         "status":               "ok",
         "warnings":             [],
     }
@@ -946,6 +958,109 @@ def run(config_path, data_dir, output_path, metadata_path):
 # ---------------------------------------------------------------------------
 # Date parsing utility
 # ---------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+# Manual override helpers
+# ---------------------------------------------------------------------------
+# An override entry in config.json["overrides_list"] looks like:
+#   {"item_id": "1116", "location": "verrayes",
+#    "today_avail": 50, "next_avail": "2026-07-01", "next_qty": 100}
+# Any of today_avail / next_avail / next_qty may be null (empty in the CSV).
+# Per spec: if a value is blank it is overridden to EMPTY (None) — it is NOT
+# back-filled from the computed result.  Open Demand is the ONLY computed
+# field preserved on an overridden record; everything else is replaced.
+
+def _norm_override_location(value):
+    """Map a free-text location label to the internal key, or None."""
+    t = "".join(ch for ch in str(value or "").lower()
+                if ch.isalnum())
+    if not t:
+        return None
+    if t.startswith("verrayes") or t == "1":
+        return "verrayes"
+    if "usa" in t or "3pl" in t or t == "3":
+        return "usa3pl"
+    return None
+
+
+def _override_num_or_none(value):
+    """Coerce an override numeric field to int, or None if blank/invalid."""
+    if value is None:
+        return None
+    s = str(value).strip().replace(",", "")
+    if s == "":
+        return None
+    try:
+        return int(round(float(s)))
+    except (ValueError, TypeError):
+        return None
+
+
+def build_override_lookup(overrides_list):
+    """
+    Returns {(item_id:int, location:str): {today_avail, next_avail, next_qty}}.
+    Invalid rows (bad id, unknown location) are skipped.
+    """
+    lookup = {}
+    for ov in overrides_list or []:
+        loc = _norm_override_location(ov.get("location"))
+        try:
+            iid = int(ov.get("item_id"))
+        except (ValueError, TypeError):
+            continue
+        if loc is None:
+            continue
+        next_avail_raw = ov.get("next_avail")
+        next_avail = None
+        if next_avail_raw not in (None, ""):
+            parsed = _parse_date(next_avail_raw)
+            next_avail = parsed.isoformat() if parsed else None
+        lookup[(iid, loc)] = {
+            "today_avail": _override_num_or_none(ov.get("today_avail")),
+            "next_avail":  next_avail,
+            "next_qty":    _override_num_or_none(ov.get("next_qty")),
+        }
+    return lookup
+
+
+def apply_override(record, ov):
+    """
+    Replace a computed availability record with manually overridden values.
+    Bypasses all calculation.  Open Demand (total_open_demand) is preserved
+    from the computed record; all other computed fields are blanked.
+    Mutates and returns the record.
+    """
+    today_avail = ov.get("today_avail")
+    next_avail  = ov.get("next_avail")
+    next_qty    = ov.get("next_qty")
+
+    record["overridden"]          = True
+    record["available_today"]     = today_avail          # may be None (empty)
+    record["next_available_date"] = next_avail           # may be None (empty)
+    record["next_available_qty"]  = next_qty             # may be None (empty)
+
+    # Blanked computed fields (None → rendered as "—" / empty in UI & exports)
+    record["max_buildable_today"]   = None
+    record["max_buildable_horizon"] = None
+    record["committable"]           = None
+    record["limiting_components"]   = []
+    record["availability_staircase"] = []
+
+    # Override supersedes embargo gating entirely
+    record["embargoed"]    = False
+    record["embargo_date"] = None
+
+    # Derive status from the overridden values
+    if today_avail is not None and today_avail > 0:
+        record["status"] = "in_stock"
+    elif next_avail:
+        record["status"] = "incoming"
+    else:
+        record["status"] = "out_of_stock"
+
+    # total_open_demand is intentionally left untouched (preserved from query)
+    return record
+
 
 def _parse_date(value):
     """
