@@ -13083,25 +13083,15 @@
       "location": "usa3pl",
       "embargoed": false,
       "embargo_date": null,
-      "status": "incoming",
+      "status": "out_of_stock",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 15,
+      "committable": 0,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 15,
-      "next_available_date": "2027-04-12",
-      "next_available_qty": 15,
-      "limiting_components": [
-        {
-          "item_id": "6808",
-          "item_name": "RTROLLM.BGM",
-          "po_number": "PO-US-2600004",
-          "supportable_fg_units": 15,
-          "next_po_date": "2027-04-05",
-          "next_po_qty": 15.0,
-          "overdue": false
-        }
-      ],
+      "max_buildable_horizon": 0,
+      "next_available_date": null,
+      "next_available_qty": null,
+      "limiting_components": [],
       "availability_staircase": [
         {
           "date": "2026-06-03",
@@ -13109,35 +13099,7 @@
           "buildable": 0,
           "cumulative_demand": 0,
           "net_available": 0,
-          "limiting_components": [
-            {
-              "item_id": "6808",
-              "item_name": "RTROLLM.BGM",
-              "po_number": "PO-US-2600004",
-              "supportable_fg_units": 15,
-              "next_po_date": "2027-04-05",
-              "next_po_qty": 15.0,
-              "overdue": false
-            }
-          ]
-        },
-        {
-          "date": "2027-04-05",
-          "display_date": "2027-04-12",
-          "buildable": 15,
-          "cumulative_demand": 0,
-          "net_available": 15,
-          "limiting_components": [
-            {
-              "item_id": "6808",
-              "item_name": "RTROLLM.BGM",
-              "po_number": "PO-US-2600004",
-              "supportable_fg_units": 15,
-              "next_po_date": "2027-04-05",
-              "next_po_qty": 15.0,
-              "overdue": false
-            }
-          ]
+          "limiting_components": []
         }
       ],
       "avg_eur_per_unit": null,
@@ -50476,9 +50438,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 11,
+      "committable": 16,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 11,
+      "max_buildable_horizon": 16,
       "next_available_date": "2026-08-03",
       "next_available_qty": 5,
       "limiting_components": [
@@ -50498,6 +50460,15 @@
           "supportable_fg_units": 6,
           "next_po_date": "2026-08-15",
           "next_po_qty": 6.0,
+          "overdue": false
+        },
+        {
+          "item_id": "6852",
+          "item_name": "PIGEH.SY50",
+          "po_number": "PO-US-2600007",
+          "supportable_fg_units": 5,
+          "next_po_date": "2026-08-15",
+          "next_po_qty": 5.0,
           "overdue": false
         }
       ],
@@ -50526,6 +50497,15 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 6.0,
               "overdue": false
+            },
+            {
+              "item_id": "6852",
+              "item_name": "PIGEH.SY50",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 5.0,
+              "overdue": false
             }
           ]
         },
@@ -50553,15 +50533,24 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 6.0,
               "overdue": false
+            },
+            {
+              "item_id": "6852",
+              "item_name": "PIGEH.SY50",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 5.0,
+              "overdue": false
             }
           ]
         },
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 11,
+          "buildable": 16,
           "cumulative_demand": 0,
-          "net_available": 11,
+          "net_available": 16,
           "limiting_components": [
             {
               "item_id": "6852",
@@ -50579,6 +50568,15 @@
               "supportable_fg_units": 6,
               "next_po_date": "2026-08-15",
               "next_po_qty": 6.0,
+              "overdue": false
+            },
+            {
+              "item_id": "6852",
+              "item_name": "PIGEH.SY50",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 5.0,
               "overdue": false
             }
           ]
@@ -57037,11 +57035,11 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 5,
-      "committable": 3,
+      "committable": 8,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 8,
+      "max_buildable_horizon": 13,
       "next_available_date": "2026-07-22",
-      "next_available_qty": 3,
+      "next_available_qty": 6,
       "limiting_components": [
         {
           "item_id": "6862",
@@ -57050,6 +57048,15 @@
           "supportable_fg_units": 8,
           "next_po_date": "2026-07-15",
           "next_po_qty": 8.0,
+          "overdue": false
+        },
+        {
+          "item_id": "6862",
+          "item_name": "PINMC.KI.CX",
+          "po_number": "PO-US-2600007",
+          "supportable_fg_units": 5,
+          "next_po_date": "2026-08-15",
+          "next_po_qty": 5.0,
           "overdue": false
         }
       ],
@@ -57069,6 +57076,15 @@
               "next_po_date": "2026-07-15",
               "next_po_qty": 8.0,
               "overdue": false
+            },
+            {
+              "item_id": "6862",
+              "item_name": "PINMC.KI.CX",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 5.0,
+              "overdue": false
             }
           ]
         },
@@ -57086,6 +57102,15 @@
               "supportable_fg_units": 8,
               "next_po_date": "2026-07-15",
               "next_po_qty": 8.0,
+              "overdue": false
+            },
+            {
+              "item_id": "6862",
+              "item_name": "PINMC.KI.CX",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 5.0,
               "overdue": false
             }
           ]
@@ -57105,15 +57130,24 @@
               "next_po_date": "2026-07-15",
               "next_po_qty": 8.0,
               "overdue": false
+            },
+            {
+              "item_id": "6862",
+              "item_name": "PINMC.KI.CX",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 5.0,
+              "overdue": false
             }
           ]
         },
         {
-          "date": "2026-12-01",
-          "display_date": "2026-12-08",
-          "buildable": 8,
-          "cumulative_demand": 4,
-          "net_available": 4,
+          "date": "2026-08-15",
+          "display_date": "2026-08-22",
+          "buildable": 13,
+          "cumulative_demand": 2,
+          "net_available": 11,
           "limiting_components": [
             {
               "item_id": "6862",
@@ -57123,15 +57157,24 @@
               "next_po_date": "2026-07-15",
               "next_po_qty": 8.0,
               "overdue": false
+            },
+            {
+              "item_id": "6862",
+              "item_name": "PINMC.KI.CX",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 5.0,
+              "overdue": false
             }
           ]
         },
         {
-          "date": "2026-12-31",
-          "display_date": "2027-01-07",
-          "buildable": 8,
-          "cumulative_demand": 5,
-          "net_available": 3,
+          "date": "2026-12-01",
+          "display_date": "2026-12-08",
+          "buildable": 13,
+          "cumulative_demand": 4,
+          "net_available": 9,
           "limiting_components": [
             {
               "item_id": "6862",
@@ -57140,6 +57183,42 @@
               "supportable_fg_units": 8,
               "next_po_date": "2026-07-15",
               "next_po_qty": 8.0,
+              "overdue": false
+            },
+            {
+              "item_id": "6862",
+              "item_name": "PINMC.KI.CX",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 5.0,
+              "overdue": false
+            }
+          ]
+        },
+        {
+          "date": "2026-12-31",
+          "display_date": "2027-01-07",
+          "buildable": 13,
+          "cumulative_demand": 5,
+          "net_available": 8,
+          "limiting_components": [
+            {
+              "item_id": "6862",
+              "item_name": "PINMC.KI.CX",
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 8,
+              "next_po_date": "2026-07-15",
+              "next_po_qty": 8.0,
+              "overdue": false
+            },
+            {
+              "item_id": "6862",
+              "item_name": "PINMC.KI.CX",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 5.0,
               "overdue": false
             }
           ]
@@ -60000,11 +60079,11 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 4,
-      "committable": 5,
+      "committable": 10,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 9,
+      "max_buildable_horizon": 14,
       "next_available_date": "2026-07-22",
-      "next_available_qty": 5,
+      "next_available_qty": 9,
       "limiting_components": [
         {
           "item_id": "6866",
@@ -60013,6 +60092,15 @@
           "supportable_fg_units": 9,
           "next_po_date": "2026-07-15",
           "next_po_qty": 9.0,
+          "overdue": false
+        },
+        {
+          "item_id": "6866",
+          "item_name": "PIDMC.KI.CX",
+          "po_number": "PO-US-2600007",
+          "supportable_fg_units": 5,
+          "next_po_date": "2026-08-15",
+          "next_po_qty": 5.0,
           "overdue": false
         }
       ],
@@ -60032,6 +60120,15 @@
               "next_po_date": "2026-07-15",
               "next_po_qty": 9.0,
               "overdue": false
+            },
+            {
+              "item_id": "6866",
+              "item_name": "PIDMC.KI.CX",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 5.0,
+              "overdue": false
             }
           ]
         },
@@ -60050,15 +60147,24 @@
               "next_po_date": "2026-07-15",
               "next_po_qty": 9.0,
               "overdue": false
+            },
+            {
+              "item_id": "6866",
+              "item_name": "PIDMC.KI.CX",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 5.0,
+              "overdue": false
             }
           ]
         },
         {
-          "date": "2026-09-01",
-          "display_date": "2026-09-08",
-          "buildable": 9,
-          "cumulative_demand": 2,
-          "net_available": 7,
+          "date": "2026-08-15",
+          "display_date": "2026-08-22",
+          "buildable": 14,
+          "cumulative_demand": 0,
+          "net_available": 14,
           "limiting_components": [
             {
               "item_id": "6866",
@@ -60068,15 +60174,24 @@
               "next_po_date": "2026-07-15",
               "next_po_qty": 9.0,
               "overdue": false
+            },
+            {
+              "item_id": "6866",
+              "item_name": "PIDMC.KI.CX",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 5.0,
+              "overdue": false
             }
           ]
         },
         {
-          "date": "2026-12-01",
-          "display_date": "2026-12-08",
-          "buildable": 9,
-          "cumulative_demand": 4,
-          "net_available": 5,
+          "date": "2026-09-01",
+          "display_date": "2026-09-08",
+          "buildable": 14,
+          "cumulative_demand": 2,
+          "net_available": 12,
           "limiting_components": [
             {
               "item_id": "6866",
@@ -60085,6 +60200,42 @@
               "supportable_fg_units": 9,
               "next_po_date": "2026-07-15",
               "next_po_qty": 9.0,
+              "overdue": false
+            },
+            {
+              "item_id": "6866",
+              "item_name": "PIDMC.KI.CX",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 5.0,
+              "overdue": false
+            }
+          ]
+        },
+        {
+          "date": "2026-12-01",
+          "display_date": "2026-12-08",
+          "buildable": 14,
+          "cumulative_demand": 4,
+          "net_available": 10,
+          "limiting_components": [
+            {
+              "item_id": "6866",
+              "item_name": "PIDMC.KI.CX",
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 9,
+              "next_po_date": "2026-07-15",
+              "next_po_qty": 9.0,
+              "overdue": false
+            },
+            {
+              "item_id": "6866",
+              "item_name": "PIDMC.KI.CX",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 5.0,
               "overdue": false
             }
           ]
@@ -69954,9 +70105,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 15,
-      "committable": 21,
+      "committable": 26,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 36,
+      "max_buildable_horizon": 41,
       "next_available_date": "2026-06-12",
       "next_available_qty": 15,
       "limiting_components": [
@@ -70100,9 +70251,9 @@
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 27,
+          "buildable": 32,
           "cumulative_demand": 2,
-          "net_available": 25,
+          "net_available": 30,
           "limiting_components": [
             {
               "item_id": "6884",
@@ -70136,9 +70287,9 @@
         {
           "date": "2026-09-01",
           "display_date": "2026-09-08",
-          "buildable": 27,
+          "buildable": 32,
           "cumulative_demand": 5,
-          "net_available": 22,
+          "net_available": 27,
           "limiting_components": [
             {
               "item_id": "6884",
@@ -70172,9 +70323,9 @@
         {
           "date": "2026-09-05",
           "display_date": "2026-09-12",
-          "buildable": 27,
+          "buildable": 32,
           "cumulative_demand": 7,
-          "net_available": 20,
+          "net_available": 25,
           "limiting_components": [
             {
               "item_id": "6884",
@@ -70208,9 +70359,9 @@
         {
           "date": "2026-09-27",
           "display_date": "2026-10-04",
-          "buildable": 36,
+          "buildable": 41,
           "cumulative_demand": 7,
-          "net_available": 29,
+          "net_available": 34,
           "limiting_components": [
             {
               "item_id": "6884",
@@ -70244,9 +70395,9 @@
         {
           "date": "2026-11-01",
           "display_date": "2026-11-08",
-          "buildable": 36,
+          "buildable": 41,
           "cumulative_demand": 12,
-          "net_available": 24,
+          "net_available": 29,
           "limiting_components": [
             {
               "item_id": "6884",
@@ -70280,9 +70431,9 @@
         {
           "date": "2026-12-10",
           "display_date": "2026-12-17",
-          "buildable": 36,
+          "buildable": 41,
           "cumulative_demand": 15,
-          "net_available": 21,
+          "net_available": 26,
           "limiting_components": [
             {
               "item_id": "6884",
@@ -75038,9 +75189,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 35,
-      "committable": 57,
+      "committable": 62,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 92,
+      "max_buildable_horizon": 97,
       "next_available_date": "2026-06-12",
       "next_available_qty": 26,
       "limiting_components": [
@@ -75220,9 +75371,9 @@
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 52,
+          "buildable": 57,
           "cumulative_demand": 6,
-          "net_available": 46,
+          "net_available": 51,
           "limiting_components": [
             {
               "item_id": "6891",
@@ -75256,9 +75407,9 @@
         {
           "date": "2026-08-31",
           "display_date": "2026-09-07",
-          "buildable": 52,
+          "buildable": 57,
           "cumulative_demand": 8,
-          "net_available": 44,
+          "net_available": 49,
           "limiting_components": [
             {
               "item_id": "6891",
@@ -75292,9 +75443,9 @@
         {
           "date": "2026-09-01",
           "display_date": "2026-09-08",
-          "buildable": 52,
+          "buildable": 57,
           "cumulative_demand": 10,
-          "net_available": 42,
+          "net_available": 47,
           "limiting_components": [
             {
               "item_id": "6891",
@@ -75328,9 +75479,9 @@
         {
           "date": "2026-09-05",
           "display_date": "2026-09-12",
-          "buildable": 52,
+          "buildable": 57,
           "cumulative_demand": 14,
-          "net_available": 38,
+          "net_available": 43,
           "limiting_components": [
             {
               "item_id": "6891",
@@ -75364,9 +75515,9 @@
         {
           "date": "2026-09-20",
           "display_date": "2026-09-27",
-          "buildable": 71,
+          "buildable": 76,
           "cumulative_demand": 14,
-          "net_available": 57,
+          "net_available": 62,
           "limiting_components": [
             {
               "item_id": "6891",
@@ -75400,9 +75551,9 @@
         {
           "date": "2026-10-18",
           "display_date": "2026-10-25",
-          "buildable": 92,
+          "buildable": 97,
           "cumulative_demand": 14,
-          "net_available": 78,
+          "net_available": 83,
           "limiting_components": [
             {
               "item_id": "6891",
@@ -75436,9 +75587,9 @@
         {
           "date": "2026-11-01",
           "display_date": "2026-11-08",
-          "buildable": 92,
+          "buildable": 97,
           "cumulative_demand": 25,
-          "net_available": 67,
+          "net_available": 72,
           "limiting_components": [
             {
               "item_id": "6891",
@@ -75472,9 +75623,9 @@
         {
           "date": "2026-12-10",
           "display_date": "2026-12-17",
-          "buildable": 92,
+          "buildable": 97,
           "cumulative_demand": 35,
-          "net_available": 57,
+          "net_available": 62,
           "limiting_components": [
             {
               "item_id": "6891",
@@ -75970,9 +76121,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 11,
-      "committable": 20,
+      "committable": 25,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 31,
+      "max_buildable_horizon": 36,
       "next_available_date": "2026-06-12",
       "next_available_qty": 6,
       "limiting_components": [
@@ -76116,9 +76267,9 @@
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 24,
+          "buildable": 29,
           "cumulative_demand": 3,
-          "net_available": 21,
+          "net_available": 26,
           "limiting_components": [
             {
               "item_id": "6892",
@@ -76152,9 +76303,9 @@
         {
           "date": "2026-08-31",
           "display_date": "2026-09-07",
-          "buildable": 24,
+          "buildable": 29,
           "cumulative_demand": 7,
-          "net_available": 17,
+          "net_available": 22,
           "limiting_components": [
             {
               "item_id": "6892",
@@ -76188,9 +76339,9 @@
         {
           "date": "2026-09-01",
           "display_date": "2026-09-08",
-          "buildable": 24,
+          "buildable": 29,
           "cumulative_demand": 11,
-          "net_available": 13,
+          "net_available": 18,
           "limiting_components": [
             {
               "item_id": "6892",
@@ -76224,9 +76375,9 @@
         {
           "date": "2026-09-27",
           "display_date": "2026-10-04",
-          "buildable": 31,
+          "buildable": 36,
           "cumulative_demand": 11,
-          "net_available": 20,
+          "net_available": 25,
           "limiting_components": [
             {
               "item_id": "6892",
@@ -96610,9 +96761,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 6,
-      "committable": 25,
+      "committable": 35,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 31,
+      "max_buildable_horizon": 41,
       "next_available_date": "2026-06-12",
       "next_available_qty": 9,
       "limiting_components": [
@@ -96756,9 +96907,9 @@
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 31,
+          "buildable": 41,
           "cumulative_demand": 2,
-          "net_available": 29,
+          "net_available": 39,
           "limiting_components": [
             {
               "item_id": "6907",
@@ -96792,9 +96943,9 @@
         {
           "date": "2026-11-01",
           "display_date": "2026-11-08",
-          "buildable": 31,
+          "buildable": 41,
           "cumulative_demand": 5,
-          "net_available": 26,
+          "net_available": 36,
           "limiting_components": [
             {
               "item_id": "6907",
@@ -96828,9 +96979,9 @@
         {
           "date": "2026-12-10",
           "display_date": "2026-12-17",
-          "buildable": 31,
+          "buildable": 41,
           "cumulative_demand": 6,
-          "net_available": 25,
+          "net_available": 35,
           "limiting_components": [
             {
               "item_id": "6907",
@@ -107297,9 +107448,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 15,
+      "committable": 5,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 15,
+      "max_buildable_horizon": 5,
       "next_available_date": "2026-07-22",
       "next_available_qty": 5,
       "limiting_components": [
@@ -107310,15 +107461,6 @@
           "supportable_fg_units": 5,
           "next_po_date": "2026-07-15",
           "next_po_qty": 5.0,
-          "overdue": false
-        },
-        {
-          "item_id": "6917",
-          "item_name": "RARC",
-          "po_number": "PO-US-2600007",
-          "supportable_fg_units": 10,
-          "next_po_date": "2026-08-15",
-          "next_po_qty": 10.0,
           "overdue": false
         }
       ],
@@ -107338,15 +107480,6 @@
               "next_po_date": "2026-07-15",
               "next_po_qty": 5.0,
               "overdue": false
-            },
-            {
-              "item_id": "6917",
-              "item_name": "RARC",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
@@ -107364,42 +107497,6 @@
               "supportable_fg_units": 5,
               "next_po_date": "2026-07-15",
               "next_po_qty": 5.0,
-              "overdue": false
-            },
-            {
-              "item_id": "6917",
-              "item_name": "RARC",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
-            }
-          ]
-        },
-        {
-          "date": "2026-08-15",
-          "display_date": "2026-08-22",
-          "buildable": 15,
-          "cumulative_demand": 0,
-          "net_available": 15,
-          "limiting_components": [
-            {
-              "item_id": "6917",
-              "item_name": "RARC",
-              "po_number": "PO-US-2600004",
-              "supportable_fg_units": 5,
-              "next_po_date": "2026-07-15",
-              "next_po_qty": 5.0,
-              "overdue": false
-            },
-            {
-              "item_id": "6917",
-              "item_name": "RARC",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
               "overdue": false
             }
           ]
@@ -121085,11 +121182,11 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 11,
-      "committable": 13,
+      "committable": 23,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 24,
+      "max_buildable_horizon": 34,
       "next_available_date": "2026-08-22",
-      "next_available_qty": 13,
+      "next_available_qty": 23,
       "limiting_components": [
         {
           "item_id": "6935",
@@ -121107,6 +121204,15 @@
           "supportable_fg_units": 19,
           "next_po_date": "2026-08-15",
           "next_po_qty": 19.0,
+          "overdue": false
+        },
+        {
+          "item_id": "6935",
+          "item_name": "RBBRS.FLX.19",
+          "po_number": "PO-US-2600007",
+          "supportable_fg_units": 10,
+          "next_po_date": "2026-08-15",
+          "next_po_qty": 10.0,
           "overdue": false
         }
       ],
@@ -121135,6 +121241,15 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 19.0,
               "overdue": false
+            },
+            {
+              "item_id": "6935",
+              "item_name": "RBBRS.FLX.19",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 10,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 10.0,
+              "overdue": false
             }
           ]
         },
@@ -121161,6 +121276,15 @@
               "supportable_fg_units": 19,
               "next_po_date": "2026-08-15",
               "next_po_qty": 19.0,
+              "overdue": false
+            },
+            {
+              "item_id": "6935",
+              "item_name": "RBBRS.FLX.19",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 10,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ]
@@ -121189,15 +121313,24 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 19.0,
               "overdue": false
+            },
+            {
+              "item_id": "6935",
+              "item_name": "RBBRS.FLX.19",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 10,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 10.0,
+              "overdue": false
             }
           ]
         },
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 24,
+          "buildable": 34,
           "cumulative_demand": 11,
-          "net_available": 13,
+          "net_available": 23,
           "limiting_components": [
             {
               "item_id": "6935",
@@ -121215,6 +121348,15 @@
               "supportable_fg_units": 19,
               "next_po_date": "2026-08-15",
               "next_po_qty": 19.0,
+              "overdue": false
+            },
+            {
+              "item_id": "6935",
+              "item_name": "RBBRS.FLX.19",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 10,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ]
@@ -123693,9 +123835,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 25,
+      "committable": 15,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 25,
+      "max_buildable_horizon": 15,
       "next_available_date": "2026-07-22",
       "next_available_qty": 5,
       "limiting_components": [
@@ -123706,15 +123848,6 @@
           "supportable_fg_units": 5,
           "next_po_date": "2026-07-15",
           "next_po_qty": 5.0,
-          "overdue": false
-        },
-        {
-          "item_id": "6940",
-          "item_name": "RBBRS.TW",
-          "po_number": "PO-US-2600007",
-          "supportable_fg_units": 10,
-          "next_po_date": "2026-08-15",
-          "next_po_qty": 10.0,
           "overdue": false
         },
         {
@@ -123752,15 +123885,6 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6940",
-              "item_name": "RBBRS.TW",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
@@ -123788,24 +123912,15 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6940",
-              "item_name": "RBBRS.TW",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 25,
+          "buildable": 15,
           "cumulative_demand": 0,
-          "net_available": 25,
+          "net_available": 15,
           "limiting_components": [
             {
               "item_id": "6940",
@@ -123814,15 +123929,6 @@
               "supportable_fg_units": 5,
               "next_po_date": "2026-07-15",
               "next_po_qty": 5.0,
-              "overdue": false
-            },
-            {
-              "item_id": "6940",
-              "item_name": "RBBRS.TW",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
               "overdue": false
             },
             {
@@ -124004,9 +124110,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 25,
+      "committable": 15,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 25,
+      "max_buildable_horizon": 15,
       "next_available_date": "2026-07-22",
       "next_available_qty": 5,
       "limiting_components": [
@@ -124017,15 +124123,6 @@
           "supportable_fg_units": 5,
           "next_po_date": "2026-07-15",
           "next_po_qty": 5.0,
-          "overdue": false
-        },
-        {
-          "item_id": "6941",
-          "item_name": "RBBRS.TW+",
-          "po_number": "PO-US-2600007",
-          "supportable_fg_units": 10,
-          "next_po_date": "2026-08-15",
-          "next_po_qty": 10.0,
           "overdue": false
         },
         {
@@ -124063,15 +124160,6 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6941",
-              "item_name": "RBBRS.TW+",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
@@ -124099,24 +124187,15 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6941",
-              "item_name": "RBBRS.TW+",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 25,
+          "buildable": 15,
           "cumulative_demand": 0,
-          "net_available": 25,
+          "net_available": 15,
           "limiting_components": [
             {
               "item_id": "6941",
@@ -124125,15 +124204,6 @@
               "supportable_fg_units": 5,
               "next_po_date": "2026-07-15",
               "next_po_qty": 5.0,
-              "overdue": false
-            },
-            {
-              "item_id": "6941",
-              "item_name": "RBBRS.TW+",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
               "overdue": false
             },
             {
@@ -124540,9 +124610,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 25,
+      "committable": 15,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 25,
+      "max_buildable_horizon": 15,
       "next_available_date": "2026-06-12",
       "next_available_qty": 5,
       "limiting_components": [
@@ -124553,15 +124623,6 @@
           "supportable_fg_units": 5,
           "next_po_date": "2026-06-05",
           "next_po_qty": 5.0,
-          "overdue": false
-        },
-        {
-          "item_id": "6942",
-          "item_name": "RBRP.STL",
-          "po_number": "PO-US-2600007",
-          "supportable_fg_units": 10,
-          "next_po_date": "2026-08-15",
-          "next_po_qty": 10.0,
           "overdue": false
         },
         {
@@ -124599,15 +124660,6 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6942",
-              "item_name": "RBRP.STL",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
@@ -124635,24 +124687,15 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6942",
-              "item_name": "RBRP.STL",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 25,
+          "buildable": 15,
           "cumulative_demand": 0,
-          "net_available": 25,
+          "net_available": 15,
           "limiting_components": [
             {
               "item_id": "6942",
@@ -124661,15 +124704,6 @@
               "supportable_fg_units": 5,
               "next_po_date": "2026-06-05",
               "next_po_qty": 5.0,
-              "overdue": false
-            },
-            {
-              "item_id": "6942",
-              "item_name": "RBRP.STL",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
               "overdue": false
             },
             {
@@ -125076,9 +125110,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 25,
+      "committable": 15,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 25,
+      "max_buildable_horizon": 15,
       "next_available_date": "2026-07-22",
       "next_available_qty": 5,
       "limiting_components": [
@@ -125089,15 +125123,6 @@
           "supportable_fg_units": 5,
           "next_po_date": "2026-07-15",
           "next_po_qty": 5.0,
-          "overdue": false
-        },
-        {
-          "item_id": "6943",
-          "item_name": "RBRP.SPB",
-          "po_number": "PO-US-2600007",
-          "supportable_fg_units": 10,
-          "next_po_date": "2026-08-15",
-          "next_po_qty": 10.0,
           "overdue": false
         },
         {
@@ -125135,15 +125160,6 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6943",
-              "item_name": "RBRP.SPB",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
@@ -125171,24 +125187,15 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6943",
-              "item_name": "RBRP.SPB",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 25,
+          "buildable": 15,
           "cumulative_demand": 0,
-          "net_available": 25,
+          "net_available": 15,
           "limiting_components": [
             {
               "item_id": "6943",
@@ -125197,15 +125204,6 @@
               "supportable_fg_units": 5,
               "next_po_date": "2026-07-15",
               "next_po_qty": 5.0,
-              "overdue": false
-            },
-            {
-              "item_id": "6943",
-              "item_name": "RBRP.SPB",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
               "overdue": false
             },
             {
@@ -125864,9 +125862,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 25,
+      "committable": 15,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 25,
+      "max_buildable_horizon": 15,
       "next_available_date": "2026-06-12",
       "next_available_qty": 5,
       "limiting_components": [
@@ -125877,15 +125875,6 @@
           "supportable_fg_units": 5,
           "next_po_date": "2026-06-05",
           "next_po_qty": 5.0,
-          "overdue": false
-        },
-        {
-          "item_id": "6944",
-          "item_name": "RBRP.AL",
-          "po_number": "PO-US-2600007",
-          "supportable_fg_units": 10,
-          "next_po_date": "2026-08-15",
-          "next_po_qty": 10.0,
           "overdue": false
         },
         {
@@ -125923,15 +125912,6 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6944",
-              "item_name": "RBRP.AL",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
@@ -125959,24 +125939,15 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6944",
-              "item_name": "RBRP.AL",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 25,
+          "buildable": 15,
           "cumulative_demand": 0,
-          "net_available": 25,
+          "net_available": 15,
           "limiting_components": [
             {
               "item_id": "6944",
@@ -125985,15 +125956,6 @@
               "supportable_fg_units": 5,
               "next_po_date": "2026-06-05",
               "next_po_qty": 5.0,
-              "overdue": false
-            },
-            {
-              "item_id": "6944",
-              "item_name": "RBRP.AL",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
               "overdue": false
             },
             {
@@ -126364,9 +126326,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 25,
+      "committable": 15,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 25,
+      "max_buildable_horizon": 15,
       "next_available_date": "2026-06-12",
       "next_available_qty": 5,
       "limiting_components": [
@@ -126377,15 +126339,6 @@
           "supportable_fg_units": 5,
           "next_po_date": "2026-06-05",
           "next_po_qty": 5.0,
-          "overdue": false
-        },
-        {
-          "item_id": "6945",
-          "item_name": "RBFB.CMB.S",
-          "po_number": "PO-US-2600007",
-          "supportable_fg_units": 10,
-          "next_po_date": "2026-08-15",
-          "next_po_qty": 10.0,
           "overdue": false
         },
         {
@@ -126423,15 +126376,6 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6945",
-              "item_name": "RBFB.CMB.S",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
@@ -126459,24 +126403,15 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6945",
-              "item_name": "RBFB.CMB.S",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 25,
+          "buildable": 15,
           "cumulative_demand": 0,
-          "net_available": 25,
+          "net_available": 15,
           "limiting_components": [
             {
               "item_id": "6945",
@@ -126485,15 +126420,6 @@
               "supportable_fg_units": 5,
               "next_po_date": "2026-06-05",
               "next_po_qty": 5.0,
-              "overdue": false
-            },
-            {
-              "item_id": "6945",
-              "item_name": "RBFB.CMB.S",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
               "overdue": false
             },
             {
@@ -126684,9 +126610,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 25,
+      "committable": 15,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 25,
+      "max_buildable_horizon": 15,
       "next_available_date": "2026-06-12",
       "next_available_qty": 5,
       "limiting_components": [
@@ -126697,15 +126623,6 @@
           "supportable_fg_units": 5,
           "next_po_date": "2026-06-05",
           "next_po_qty": 5.0,
-          "overdue": false
-        },
-        {
-          "item_id": "6946",
-          "item_name": "RBFB.CMB.N",
-          "po_number": "PO-US-2600007",
-          "supportable_fg_units": 10,
-          "next_po_date": "2026-08-15",
-          "next_po_qty": 10.0,
           "overdue": false
         },
         {
@@ -126743,15 +126660,6 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6946",
-              "item_name": "RBFB.CMB.N",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
@@ -126779,24 +126687,15 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6946",
-              "item_name": "RBFB.CMB.N",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 25,
+          "buildable": 15,
           "cumulative_demand": 0,
-          "net_available": 25,
+          "net_available": 15,
           "limiting_components": [
             {
               "item_id": "6946",
@@ -126805,15 +126704,6 @@
               "supportable_fg_units": 5,
               "next_po_date": "2026-06-05",
               "next_po_qty": 5.0,
-              "overdue": false
-            },
-            {
-              "item_id": "6946",
-              "item_name": "RBFB.CMB.N",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
               "overdue": false
             },
             {
@@ -127022,9 +126912,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 1,
-      "committable": 24,
+      "committable": 14,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 25,
+      "max_buildable_horizon": 15,
       "next_available_date": "2026-07-22",
       "next_available_qty": 4,
       "limiting_components": [
@@ -127035,15 +126925,6 @@
           "supportable_fg_units": 5,
           "next_po_date": "2026-07-15",
           "next_po_qty": 5.0,
-          "overdue": false
-        },
-        {
-          "item_id": "6947",
-          "item_name": "RBFB.CSKB",
-          "po_number": "PO-US-2600007",
-          "supportable_fg_units": 10,
-          "next_po_date": "2026-08-15",
-          "next_po_qty": 10.0,
           "overdue": false
         },
         {
@@ -127081,15 +126962,6 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6947",
-              "item_name": "RBFB.CSKB",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
@@ -127117,24 +126989,15 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6947",
-              "item_name": "RBFB.CSKB",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 25,
+          "buildable": 15,
           "cumulative_demand": 1,
-          "net_available": 24,
+          "net_available": 14,
           "limiting_components": [
             {
               "item_id": "6947",
@@ -127143,15 +127006,6 @@
               "supportable_fg_units": 5,
               "next_po_date": "2026-07-15",
               "next_po_qty": 5.0,
-              "overdue": false
-            },
-            {
-              "item_id": "6947",
-              "item_name": "RBFB.CSKB",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
               "overdue": false
             },
             {
@@ -127630,9 +127484,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 25,
+      "committable": 15,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 25,
+      "max_buildable_horizon": 15,
       "next_available_date": "2026-07-22",
       "next_available_qty": 5,
       "limiting_components": [
@@ -127643,15 +127497,6 @@
           "supportable_fg_units": 5,
           "next_po_date": "2026-07-15",
           "next_po_qty": 5.0,
-          "overdue": false
-        },
-        {
-          "item_id": "6948",
-          "item_name": "RBFB.SM+EB",
-          "po_number": "PO-US-2600007",
-          "supportable_fg_units": 10,
-          "next_po_date": "2026-08-15",
-          "next_po_qty": 10.0,
           "overdue": false
         },
         {
@@ -127689,15 +127534,6 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6948",
-              "item_name": "RBFB.SM+EB",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
@@ -127725,24 +127561,15 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6948",
-              "item_name": "RBFB.SM+EB",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 25,
+          "buildable": 15,
           "cumulative_demand": 0,
-          "net_available": 25,
+          "net_available": 15,
           "limiting_components": [
             {
               "item_id": "6948",
@@ -127751,15 +127578,6 @@
               "supportable_fg_units": 5,
               "next_po_date": "2026-07-15",
               "next_po_qty": 5.0,
-              "overdue": false
-            },
-            {
-              "item_id": "6948",
-              "item_name": "RBFB.SM+EB",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
               "overdue": false
             },
             {
@@ -128922,9 +128740,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 25,
+      "committable": 15,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 25,
+      "max_buildable_horizon": 15,
       "next_available_date": "2026-06-12",
       "next_available_qty": 5,
       "limiting_components": [
@@ -128935,15 +128753,6 @@
           "supportable_fg_units": 5,
           "next_po_date": "2026-06-05",
           "next_po_qty": 5.0,
-          "overdue": false
-        },
-        {
-          "item_id": "6949",
-          "item_name": "RBFB.TB.S",
-          "po_number": "PO-US-2600007",
-          "supportable_fg_units": 10,
-          "next_po_date": "2026-08-15",
-          "next_po_qty": 10.0,
           "overdue": false
         },
         {
@@ -128981,15 +128790,6 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6949",
-              "item_name": "RBFB.TB.S",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
@@ -129017,24 +128817,15 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6949",
-              "item_name": "RBFB.TB.S",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 25,
+          "buildable": 15,
           "cumulative_demand": 0,
-          "net_available": 25,
+          "net_available": 15,
           "limiting_components": [
             {
               "item_id": "6949",
@@ -129043,15 +128834,6 @@
               "supportable_fg_units": 5,
               "next_po_date": "2026-06-05",
               "next_po_qty": 5.0,
-              "overdue": false
-            },
-            {
-              "item_id": "6949",
-              "item_name": "RBFB.TB.S",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
               "overdue": false
             },
             {
@@ -130430,9 +130212,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 25,
+      "committable": 15,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 25,
+      "max_buildable_horizon": 15,
       "next_available_date": "2026-06-12",
       "next_available_qty": 5,
       "limiting_components": [
@@ -130443,15 +130225,6 @@
           "supportable_fg_units": 5,
           "next_po_date": "2026-06-05",
           "next_po_qty": 5.0,
-          "overdue": false
-        },
-        {
-          "item_id": "6950",
-          "item_name": "RBFB.TB.M",
-          "po_number": "PO-US-2600007",
-          "supportable_fg_units": 10,
-          "next_po_date": "2026-08-15",
-          "next_po_qty": 10.0,
           "overdue": false
         },
         {
@@ -130489,15 +130262,6 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6950",
-              "item_name": "RBFB.TB.M",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
@@ -130525,24 +130289,15 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6950",
-              "item_name": "RBFB.TB.M",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 25,
+          "buildable": 15,
           "cumulative_demand": 0,
-          "net_available": 25,
+          "net_available": 15,
           "limiting_components": [
             {
               "item_id": "6950",
@@ -130551,15 +130306,6 @@
               "supportable_fg_units": 5,
               "next_po_date": "2026-06-05",
               "next_po_qty": 5.0,
-              "overdue": false
-            },
-            {
-              "item_id": "6950",
-              "item_name": "RBFB.TB.M",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
               "overdue": false
             },
             {
@@ -131758,9 +131504,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 25,
+      "committable": 15,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 25,
+      "max_buildable_horizon": 15,
       "next_available_date": "2026-06-12",
       "next_available_qty": 5,
       "limiting_components": [
@@ -131771,15 +131517,6 @@
           "supportable_fg_units": 5,
           "next_po_date": "2026-06-05",
           "next_po_qty": 5.0,
-          "overdue": false
-        },
-        {
-          "item_id": "6951",
-          "item_name": "RBFB.TB.L",
-          "po_number": "PO-US-2600007",
-          "supportable_fg_units": 10,
-          "next_po_date": "2026-08-15",
-          "next_po_qty": 10.0,
           "overdue": false
         },
         {
@@ -131817,15 +131554,6 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6951",
-              "item_name": "RBFB.TB.L",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
@@ -131853,24 +131581,15 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6951",
-              "item_name": "RBFB.TB.L",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 25,
+          "buildable": 15,
           "cumulative_demand": 0,
-          "net_available": 25,
+          "net_available": 15,
           "limiting_components": [
             {
               "item_id": "6951",
@@ -131879,15 +131598,6 @@
               "supportable_fg_units": 5,
               "next_po_date": "2026-06-05",
               "next_po_qty": 5.0,
-              "overdue": false
-            },
-            {
-              "item_id": "6951",
-              "item_name": "RBFB.TB.L",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
               "overdue": false
             },
             {
@@ -136028,9 +135738,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 1,
-      "committable": 24,
+      "committable": 14,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 25,
+      "max_buildable_horizon": 15,
       "next_available_date": "2026-06-12",
       "next_available_qty": 4,
       "limiting_components": [
@@ -136041,15 +135751,6 @@
           "supportable_fg_units": 5,
           "next_po_date": "2026-06-05",
           "next_po_qty": 5.0,
-          "overdue": false
-        },
-        {
-          "item_id": "6959",
-          "item_name": "RBRB.RE",
-          "po_number": "PO-US-2600007",
-          "supportable_fg_units": 10,
-          "next_po_date": "2026-08-15",
-          "next_po_qty": 10.0,
           "overdue": false
         },
         {
@@ -136087,15 +135788,6 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6959",
-              "item_name": "RBRB.RE",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
@@ -136113,15 +135805,6 @@
               "supportable_fg_units": 5,
               "next_po_date": "2026-06-05",
               "next_po_qty": 5.0,
-              "overdue": false
-            },
-            {
-              "item_id": "6959",
-              "item_name": "RBRB.RE",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
               "overdue": false
             },
             {
@@ -136159,24 +135842,15 @@
               "next_po_date": "2026-08-15",
               "next_po_qty": 10.0,
               "overdue": false
-            },
-            {
-              "item_id": "6959",
-              "item_name": "RBRB.RE",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
-              "overdue": false
             }
           ]
         },
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 25,
+          "buildable": 15,
           "cumulative_demand": 1,
-          "net_available": 24,
+          "net_available": 14,
           "limiting_components": [
             {
               "item_id": "6959",
@@ -136185,15 +135859,6 @@
               "supportable_fg_units": 5,
               "next_po_date": "2026-06-05",
               "next_po_qty": 5.0,
-              "overdue": false
-            },
-            {
-              "item_id": "6959",
-              "item_name": "RBRB.RE",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-15",
-              "next_po_qty": 10.0,
               "overdue": false
             },
             {
@@ -158245,9 +157910,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 2,
-      "committable": 15,
+      "committable": 18,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 17,
+      "max_buildable_horizon": 20,
       "next_available_date": "2026-06-12",
       "next_available_qty": 8,
       "limiting_components": [
@@ -158263,19 +157928,19 @@
         {
           "item_id": "7036",
           "item_name": "HEMTN.BB.M",
-          "po_number": "PO-US-2600008",
-          "supportable_fg_units": 4,
-          "next_po_date": "2026-09-27",
-          "next_po_qty": 4.0,
+          "po_number": "PO-US-2600007",
+          "supportable_fg_units": 3,
+          "next_po_date": "2026-08-15",
+          "next_po_qty": 3.0,
           "overdue": false
         },
         {
           "item_id": "7036",
           "item_name": "HEMTN.BB.M",
           "po_number": "PO-US-2600008",
-          "supportable_fg_units": 3,
-          "next_po_date": "2026-10-25",
-          "next_po_qty": 3.0,
+          "supportable_fg_units": 4,
+          "next_po_date": "2026-09-27",
+          "next_po_qty": 4.0,
           "overdue": false
         }
       ],
@@ -158299,19 +157964,19 @@
             {
               "item_id": "7036",
               "item_name": "HEMTN.BB.M",
-              "po_number": "PO-US-2600008",
-              "supportable_fg_units": 4,
-              "next_po_date": "2026-09-27",
-              "next_po_qty": 4.0,
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 3,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 3.0,
               "overdue": false
             },
             {
               "item_id": "7036",
               "item_name": "HEMTN.BB.M",
               "po_number": "PO-US-2600008",
-              "supportable_fg_units": 3,
-              "next_po_date": "2026-10-25",
-              "next_po_qty": 3.0,
+              "supportable_fg_units": 4,
+              "next_po_date": "2026-09-27",
+              "next_po_qty": 4.0,
               "overdue": false
             }
           ]
@@ -158335,29 +158000,29 @@
             {
               "item_id": "7036",
               "item_name": "HEMTN.BB.M",
-              "po_number": "PO-US-2600008",
-              "supportable_fg_units": 4,
-              "next_po_date": "2026-09-27",
-              "next_po_qty": 4.0,
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 3,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 3.0,
               "overdue": false
             },
             {
               "item_id": "7036",
               "item_name": "HEMTN.BB.M",
               "po_number": "PO-US-2600008",
-              "supportable_fg_units": 3,
-              "next_po_date": "2026-10-25",
-              "next_po_qty": 3.0,
+              "supportable_fg_units": 4,
+              "next_po_date": "2026-09-27",
+              "next_po_qty": 4.0,
               "overdue": false
             }
           ]
         },
         {
-          "date": "2026-09-27",
-          "display_date": "2026-10-04",
-          "buildable": 14,
+          "date": "2026-08-15",
+          "display_date": "2026-08-22",
+          "buildable": 13,
           "cumulative_demand": 2,
-          "net_available": 12,
+          "net_available": 11,
           "limiting_components": [
             {
               "item_id": "7036",
@@ -158371,26 +158036,26 @@
             {
               "item_id": "7036",
               "item_name": "HEMTN.BB.M",
-              "po_number": "PO-US-2600008",
-              "supportable_fg_units": 4,
-              "next_po_date": "2026-09-27",
-              "next_po_qty": 4.0,
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 3,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 3.0,
               "overdue": false
             },
             {
               "item_id": "7036",
               "item_name": "HEMTN.BB.M",
               "po_number": "PO-US-2600008",
-              "supportable_fg_units": 3,
-              "next_po_date": "2026-10-25",
-              "next_po_qty": 3.0,
+              "supportable_fg_units": 4,
+              "next_po_date": "2026-09-27",
+              "next_po_qty": 4.0,
               "overdue": false
             }
           ]
         },
         {
-          "date": "2026-10-25",
-          "display_date": "2026-11-01",
+          "date": "2026-09-27",
+          "display_date": "2026-10-04",
           "buildable": 17,
           "cumulative_demand": 2,
           "net_available": 15,
@@ -158407,19 +158072,55 @@
             {
               "item_id": "7036",
               "item_name": "HEMTN.BB.M",
-              "po_number": "PO-US-2600008",
-              "supportable_fg_units": 4,
-              "next_po_date": "2026-09-27",
-              "next_po_qty": 4.0,
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 3,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 3.0,
               "overdue": false
             },
             {
               "item_id": "7036",
               "item_name": "HEMTN.BB.M",
               "po_number": "PO-US-2600008",
+              "supportable_fg_units": 4,
+              "next_po_date": "2026-09-27",
+              "next_po_qty": 4.0,
+              "overdue": false
+            }
+          ]
+        },
+        {
+          "date": "2026-10-25",
+          "display_date": "2026-11-01",
+          "buildable": 20,
+          "cumulative_demand": 2,
+          "net_available": 18,
+          "limiting_components": [
+            {
+              "item_id": "7036",
+              "item_name": "HEMTN.BB.M",
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 10,
+              "next_po_date": "2026-06-05",
+              "next_po_qty": 10.0,
+              "overdue": false
+            },
+            {
+              "item_id": "7036",
+              "item_name": "HEMTN.BB.M",
+              "po_number": "PO-US-2600007",
               "supportable_fg_units": 3,
-              "next_po_date": "2026-10-25",
+              "next_po_date": "2026-08-15",
               "next_po_qty": 3.0,
+              "overdue": false
+            },
+            {
+              "item_id": "7036",
+              "item_name": "HEMTN.BB.M",
+              "po_number": "PO-US-2600008",
+              "supportable_fg_units": 4,
+              "next_po_date": "2026-09-27",
+              "next_po_qty": 4.0,
               "overdue": false
             }
           ]
@@ -160403,9 +160104,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 5,
-      "committable": 32,
+      "committable": 35,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 37,
+      "max_buildable_horizon": 40,
       "next_available_date": "2026-06-12",
       "next_available_qty": 5,
       "limiting_components": [
@@ -160549,9 +160250,9 @@
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 21,
+          "buildable": 24,
           "cumulative_demand": 5,
-          "net_available": 16,
+          "net_available": 19,
           "limiting_components": [
             {
               "item_id": "7041",
@@ -160585,9 +160286,9 @@
         {
           "date": "2026-09-20",
           "display_date": "2026-09-27",
-          "buildable": 29,
+          "buildable": 32,
           "cumulative_demand": 5,
-          "net_available": 24,
+          "net_available": 27,
           "limiting_components": [
             {
               "item_id": "7041",
@@ -160621,9 +160322,9 @@
         {
           "date": "2026-10-18",
           "display_date": "2026-10-25",
-          "buildable": 37,
+          "buildable": 40,
           "cumulative_demand": 5,
-          "net_available": 32,
+          "net_available": 35,
           "limiting_components": [
             {
               "item_id": "7041",
@@ -166332,25 +166033,15 @@
       "location": "usa3pl",
       "embargoed": false,
       "embargo_date": null,
-      "status": "incoming",
+      "status": "out_of_stock",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 10,
+      "committable": 0,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 10,
-      "next_available_date": "2027-04-22",
-      "next_available_qty": 10,
-      "limiting_components": [
-        {
-          "item_id": "7065",
-          "item_name": "HAESY",
-          "po_number": "PO-US-2600004",
-          "supportable_fg_units": 10,
-          "next_po_date": "2027-04-15",
-          "next_po_qty": 10.0,
-          "overdue": false
-        }
-      ],
+      "max_buildable_horizon": 0,
+      "next_available_date": null,
+      "next_available_qty": null,
+      "limiting_components": [],
       "availability_staircase": [
         {
           "date": "2026-06-03",
@@ -166358,35 +166049,7 @@
           "buildable": 0,
           "cumulative_demand": 0,
           "net_available": 0,
-          "limiting_components": [
-            {
-              "item_id": "7065",
-              "item_name": "HAESY",
-              "po_number": "PO-US-2600004",
-              "supportable_fg_units": 10,
-              "next_po_date": "2027-04-15",
-              "next_po_qty": 10.0,
-              "overdue": false
-            }
-          ]
-        },
-        {
-          "date": "2027-04-15",
-          "display_date": "2027-04-22",
-          "buildable": 10,
-          "cumulative_demand": 0,
-          "net_available": 10,
-          "limiting_components": [
-            {
-              "item_id": "7065",
-              "item_name": "HAESY",
-              "po_number": "PO-US-2600004",
-              "supportable_fg_units": 10,
-              "next_po_date": "2027-04-15",
-              "next_po_qty": 10.0,
-              "overdue": false
-            }
-          ]
+          "limiting_components": []
         }
       ],
       "avg_eur_per_unit": null,
@@ -167835,9 +167498,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 10,
+      "committable": 15,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 10,
+      "max_buildable_horizon": 15,
       "next_available_date": "2026-07-22",
       "next_available_qty": 10,
       "limiting_components": [
@@ -167848,6 +167511,15 @@
           "supportable_fg_units": 10,
           "next_po_date": "2026-07-15",
           "next_po_qty": 10.0,
+          "overdue": false
+        },
+        {
+          "item_id": "7079",
+          "item_name": "POCESV.1",
+          "po_number": "PO-US-2600007",
+          "supportable_fg_units": 5,
+          "next_po_date": "2026-08-15",
+          "next_po_qty": 5.0,
           "overdue": false
         }
       ],
@@ -167867,6 +167539,15 @@
               "next_po_date": "2026-07-15",
               "next_po_qty": 10.0,
               "overdue": false
+            },
+            {
+              "item_id": "7079",
+              "item_name": "POCESV.1",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 5.0,
+              "overdue": false
             }
           ]
         },
@@ -167884,6 +167565,42 @@
               "supportable_fg_units": 10,
               "next_po_date": "2026-07-15",
               "next_po_qty": 10.0,
+              "overdue": false
+            },
+            {
+              "item_id": "7079",
+              "item_name": "POCESV.1",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 5.0,
+              "overdue": false
+            }
+          ]
+        },
+        {
+          "date": "2026-08-15",
+          "display_date": "2026-08-22",
+          "buildable": 15,
+          "cumulative_demand": 0,
+          "net_available": 15,
+          "limiting_components": [
+            {
+              "item_id": "7079",
+              "item_name": "POCESV.1",
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 10,
+              "next_po_date": "2026-07-15",
+              "next_po_qty": 10.0,
+              "overdue": false
+            },
+            {
+              "item_id": "7079",
+              "item_name": "POCESV.1",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 5,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 5.0,
               "overdue": false
             }
           ]
@@ -170234,9 +169951,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 1,
-      "committable": 31,
+      "committable": 34,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 32,
+      "max_buildable_horizon": 35,
       "next_available_date": "2026-06-12",
       "next_available_qty": 9,
       "limiting_components": [
@@ -170380,9 +170097,9 @@
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 17,
+          "buildable": 20,
           "cumulative_demand": 1,
-          "net_available": 16,
+          "net_available": 19,
           "limiting_components": [
             {
               "item_id": "7095",
@@ -170416,9 +170133,9 @@
         {
           "date": "2026-09-13",
           "display_date": "2026-09-20",
-          "buildable": 25,
+          "buildable": 28,
           "cumulative_demand": 1,
-          "net_available": 24,
+          "net_available": 27,
           "limiting_components": [
             {
               "item_id": "7095",
@@ -170452,9 +170169,9 @@
         {
           "date": "2026-10-11",
           "display_date": "2026-10-18",
-          "buildable": 32,
+          "buildable": 35,
           "cumulative_demand": 1,
-          "net_available": 31,
+          "net_available": 34,
           "limiting_components": [
             {
               "item_id": "7095",
@@ -171960,9 +171677,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 21,
+      "committable": 24,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 21,
+      "max_buildable_horizon": 24,
       "next_available_date": "2026-07-22",
       "next_available_qty": 10,
       "limiting_components": [
@@ -171987,10 +171704,10 @@
         {
           "item_id": "7100",
           "item_name": "ZAALP.RPD.18",
-          "po_number": "PO-US-2600008",
-          "supportable_fg_units": 4,
-          "next_po_date": "2026-09-13",
-          "next_po_qty": 4.0,
+          "po_number": "PO-US-2600007",
+          "supportable_fg_units": 3,
+          "next_po_date": "2026-08-15",
+          "next_po_qty": 3.0,
           "overdue": false
         }
       ],
@@ -172023,10 +171740,10 @@
             {
               "item_id": "7100",
               "item_name": "ZAALP.RPD.18",
-              "po_number": "PO-US-2600008",
-              "supportable_fg_units": 4,
-              "next_po_date": "2026-09-13",
-              "next_po_qty": 4.0,
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 3,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 3.0,
               "overdue": false
             }
           ]
@@ -172059,10 +171776,10 @@
             {
               "item_id": "7100",
               "item_name": "ZAALP.RPD.18",
-              "po_number": "PO-US-2600008",
-              "supportable_fg_units": 4,
-              "next_po_date": "2026-09-13",
-              "next_po_qty": 4.0,
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 3,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 3.0,
               "overdue": false
             }
           ]
@@ -172070,9 +171787,9 @@
         {
           "date": "2026-08-15",
           "display_date": "2026-08-22",
-          "buildable": 13,
+          "buildable": 16,
           "cumulative_demand": 0,
-          "net_available": 13,
+          "net_available": 16,
           "limiting_components": [
             {
               "item_id": "7100",
@@ -172095,10 +171812,10 @@
             {
               "item_id": "7100",
               "item_name": "ZAALP.RPD.18",
-              "po_number": "PO-US-2600008",
-              "supportable_fg_units": 4,
-              "next_po_date": "2026-09-13",
-              "next_po_qty": 4.0,
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 3,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 3.0,
               "overdue": false
             }
           ]
@@ -172106,9 +171823,9 @@
         {
           "date": "2026-09-13",
           "display_date": "2026-09-20",
-          "buildable": 17,
+          "buildable": 20,
           "cumulative_demand": 0,
-          "net_available": 17,
+          "net_available": 20,
           "limiting_components": [
             {
               "item_id": "7100",
@@ -172131,10 +171848,10 @@
             {
               "item_id": "7100",
               "item_name": "ZAALP.RPD.18",
-              "po_number": "PO-US-2600008",
-              "supportable_fg_units": 4,
-              "next_po_date": "2026-09-13",
-              "next_po_qty": 4.0,
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 3,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 3.0,
               "overdue": false
             }
           ]
@@ -172142,9 +171859,9 @@
         {
           "date": "2026-10-11",
           "display_date": "2026-10-18",
-          "buildable": 21,
+          "buildable": 24,
           "cumulative_demand": 0,
-          "net_available": 21,
+          "net_available": 24,
           "limiting_components": [
             {
               "item_id": "7100",
@@ -172167,10 +171884,10 @@
             {
               "item_id": "7100",
               "item_name": "ZAALP.RPD.18",
-              "po_number": "PO-US-2600008",
-              "supportable_fg_units": 4,
-              "next_po_date": "2026-09-13",
-              "next_po_qty": 4.0,
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 3,
+              "next_po_date": "2026-08-15",
+              "next_po_qty": 3.0,
               "overdue": false
             }
           ]
@@ -172489,25 +172206,15 @@
       "location": "usa3pl",
       "embargoed": false,
       "embargo_date": null,
-      "status": "incoming",
+      "status": "out_of_stock",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 10,
+      "committable": 0,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 10,
-      "next_available_date": "2027-04-22",
-      "next_available_qty": 10,
-      "limiting_components": [
-        {
-          "item_id": "7102",
-          "item_name": "ZACLM.GRCP.40",
-          "po_number": "PO-US-2600004",
-          "supportable_fg_units": 10,
-          "next_po_date": "2027-04-15",
-          "next_po_qty": 10.0,
-          "overdue": false
-        }
-      ],
+      "max_buildable_horizon": 0,
+      "next_available_date": null,
+      "next_available_qty": null,
+      "limiting_components": [],
       "availability_staircase": [
         {
           "date": "2026-06-03",
@@ -172515,35 +172222,7 @@
           "buildable": 0,
           "cumulative_demand": 0,
           "net_available": 0,
-          "limiting_components": [
-            {
-              "item_id": "7102",
-              "item_name": "ZACLM.GRCP.40",
-              "po_number": "PO-US-2600004",
-              "supportable_fg_units": 10,
-              "next_po_date": "2027-04-15",
-              "next_po_qty": 10.0,
-              "overdue": false
-            }
-          ]
-        },
-        {
-          "date": "2027-04-15",
-          "display_date": "2027-04-22",
-          "buildable": 10,
-          "cumulative_demand": 0,
-          "net_available": 10,
-          "limiting_components": [
-            {
-              "item_id": "7102",
-              "item_name": "ZACLM.GRCP.40",
-              "po_number": "PO-US-2600004",
-              "supportable_fg_units": 10,
-              "next_po_date": "2027-04-15",
-              "next_po_qty": 10.0,
-              "overdue": false
-            }
-          ]
+          "limiting_components": []
         }
       ],
       "avg_eur_per_unit": 84.99,
@@ -172611,25 +172290,15 @@
       "location": "usa3pl",
       "embargoed": false,
       "embargo_date": null,
-      "status": "incoming",
+      "status": "out_of_stock",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 10,
+      "committable": 0,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 10,
-      "next_available_date": "2027-04-22",
-      "next_available_qty": 10,
-      "limiting_components": [
-        {
-          "item_id": "7103",
-          "item_name": "ZACLM.LTK.70",
-          "po_number": "PO-US-2600004",
-          "supportable_fg_units": 10,
-          "next_po_date": "2027-04-15",
-          "next_po_qty": 10.0,
-          "overdue": false
-        }
-      ],
+      "max_buildable_horizon": 0,
+      "next_available_date": null,
+      "next_available_qty": null,
+      "limiting_components": [],
       "availability_staircase": [
         {
           "date": "2026-06-03",
@@ -172637,35 +172306,7 @@
           "buildable": 0,
           "cumulative_demand": 0,
           "net_available": 0,
-          "limiting_components": [
-            {
-              "item_id": "7103",
-              "item_name": "ZACLM.LTK.70",
-              "po_number": "PO-US-2600004",
-              "supportable_fg_units": 10,
-              "next_po_date": "2027-04-15",
-              "next_po_qty": 10.0,
-              "overdue": false
-            }
-          ]
-        },
-        {
-          "date": "2027-04-15",
-          "display_date": "2027-04-22",
-          "buildable": 10,
-          "cumulative_demand": 0,
-          "net_available": 10,
-          "limiting_components": [
-            {
-              "item_id": "7103",
-              "item_name": "ZACLM.LTK.70",
-              "po_number": "PO-US-2600004",
-              "supportable_fg_units": 10,
-              "next_po_date": "2027-04-15",
-              "next_po_qty": 10.0,
-              "overdue": false
-            }
-          ]
+          "limiting_components": []
         }
       ],
       "avg_eur_per_unit": 99.99,
@@ -173017,25 +172658,15 @@
       "location": "usa3pl",
       "embargoed": false,
       "embargo_date": null,
-      "status": "incoming",
+      "status": "out_of_stock",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 10,
+      "committable": 0,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 10,
-      "next_available_date": "2027-04-22",
-      "next_available_qty": 10,
-      "limiting_components": [
-        {
-          "item_id": "7105",
-          "item_name": "ZATREX.EXDFL.45",
-          "po_number": "PO-US-2600004",
-          "supportable_fg_units": 10,
-          "next_po_date": "2027-04-15",
-          "next_po_qty": 10.0,
-          "overdue": false
-        }
-      ],
+      "max_buildable_horizon": 0,
+      "next_available_date": null,
+      "next_available_qty": null,
+      "limiting_components": [],
       "availability_staircase": [
         {
           "date": "2026-06-03",
@@ -173043,35 +172674,7 @@
           "buildable": 0,
           "cumulative_demand": 0,
           "net_available": 0,
-          "limiting_components": [
-            {
-              "item_id": "7105",
-              "item_name": "ZATREX.EXDFL.45",
-              "po_number": "PO-US-2600004",
-              "supportable_fg_units": 10,
-              "next_po_date": "2027-04-15",
-              "next_po_qty": 10.0,
-              "overdue": false
-            }
-          ]
-        },
-        {
-          "date": "2027-04-15",
-          "display_date": "2027-04-22",
-          "buildable": 10,
-          "cumulative_demand": 0,
-          "net_available": 10,
-          "limiting_components": [
-            {
-              "item_id": "7105",
-              "item_name": "ZATREX.EXDFL.45",
-              "po_number": "PO-US-2600004",
-              "supportable_fg_units": 10,
-              "next_po_date": "2027-04-15",
-              "next_po_qty": 10.0,
-              "overdue": false
-            }
-          ]
+          "limiting_components": []
         }
       ],
       "avg_eur_per_unit": 77.49,
@@ -173139,25 +172742,15 @@
       "location": "usa3pl",
       "embargoed": false,
       "embargo_date": null,
-      "status": "incoming",
+      "status": "out_of_stock",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 10,
+      "committable": 0,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 10,
-      "next_available_date": "2027-04-22",
-      "next_available_qty": 10,
-      "limiting_components": [
-        {
-          "item_id": "7106",
-          "item_name": "ZATREX.EXDFL.90",
-          "po_number": "PO-US-2600004",
-          "supportable_fg_units": 10,
-          "next_po_date": "2027-04-15",
-          "next_po_qty": 10.0,
-          "overdue": false
-        }
-      ],
+      "max_buildable_horizon": 0,
+      "next_available_date": null,
+      "next_available_qty": null,
+      "limiting_components": [],
       "availability_staircase": [
         {
           "date": "2026-06-03",
@@ -173165,35 +172758,7 @@
           "buildable": 0,
           "cumulative_demand": 0,
           "net_available": 0,
-          "limiting_components": [
-            {
-              "item_id": "7106",
-              "item_name": "ZATREX.EXDFL.90",
-              "po_number": "PO-US-2600004",
-              "supportable_fg_units": 10,
-              "next_po_date": "2027-04-15",
-              "next_po_qty": 10.0,
-              "overdue": false
-            }
-          ]
-        },
-        {
-          "date": "2027-04-15",
-          "display_date": "2027-04-22",
-          "buildable": 10,
-          "cumulative_demand": 0,
-          "net_available": 10,
-          "limiting_components": [
-            {
-              "item_id": "7106",
-              "item_name": "ZATREX.EXDFL.90",
-              "po_number": "PO-US-2600004",
-              "supportable_fg_units": 10,
-              "next_po_date": "2027-04-15",
-              "next_po_qty": 10.0,
-              "overdue": false
-            }
-          ]
+          "limiting_components": []
         }
       ],
       "avg_eur_per_unit": 99.99,
