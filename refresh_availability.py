@@ -258,7 +258,7 @@ def run_all_queries(session, config):
         f"FROM transaction t "
         f"JOIN transactionline tl ON tl.transaction = t.id "
         f"WHERE t.type = 'SalesOrd' "
-        f"AND t.status IN ('B', 'D') "
+        f"AND t.status IN ('A', 'B', 'D') "
         f"AND t.subsidiary IN (1, 3) "
         f"AND tl.mainline = 'F' "
         f"AND tl.quantity < 0 "
@@ -266,7 +266,7 @@ def run_all_queries(session, config):
         f"AND tl.isclosed = 'F' "
         f"AND tl.item IN ({fg_ids_str}) "
         f"ORDER BY tl.expectedshipdate, t.id",
-        description="Q4 Open SOs (FG-filtered)")
+        description="Q4 Open SOs (FG-filtered, incl. status A=Pending Approval for eComm pre-orders)")
 
     # Q7 — Unit rate + open qty per SO line for weighted-average price computation.
     # Kept as row-level (no GROUP BY / no aggregate arithmetic) to stay within
@@ -280,7 +280,7 @@ def run_all_queries(session, config):
         f"FROM transaction t "
         f"JOIN transactionline tl ON tl.transaction = t.id "
         f"WHERE t.type = 'SalesOrd' "
-        f"AND t.status IN ('B', 'D') "
+        f"AND t.status IN ('A', 'B', 'D') "
         f"AND t.subsidiary IN (1, 3) "
         f"AND tl.mainline = 'F' "
         f"AND tl.quantity < 0 "

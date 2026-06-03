@@ -28,10 +28,13 @@ from collections import defaultdict
 #   → After all rounds: collect ALL unique item IDs from BOM tree
 #     This produces {all_item_ids} for Q3 and Q5
 #
-# PHASE 3: Q3 + Q4 + Q5  (depends on Phase 2 for item ID scope)
-#   → Q3 filtered by {all_item_ids} — only inventory for items in BOM scope
-#   → Q4 filtered by {fg_ids} — only demand for FGs
-#   → Q5 filtered by {all_item_ids} — only POs for items in BOM scope
+# PHASE 3: Q3 + Q4 + Q5 + Q7  (depends on Phase 2 for item ID scope)
+#   → Q3 filtered by location IN (14, 15, 17, 3, 2) only — returns all items at
+#        those locations; engine filters by item ID when building snapshots
+#   → Q4 filtered by {fg_ids} — only demand for FGs (SO lines)
+#   → Q5 unfiltered by item — returns all open POs for subsidiaries 1 and 3;
+#        engine filters by component ID when building snapshots
+#   → Q7 filtered by {fg_ids} — SO-line rate+qty for weighted-average price
 #
 # TOTAL: ~7,000 rows across ~12 pages (down from ~32,000 rows / 33 pages)
 # ---------------------------------------------------------------------------
@@ -139,7 +142,7 @@ QUERIES = {
             "FROM transaction t "
             "JOIN transactionline tl ON tl.transaction = t.id "
             "WHERE t.type = 'PurchOrd' "
-            "AND t.status IN ('B', 'D', 'E') "
+            "AND t.status IN ('A', 'B', 'D', 'E') "
             "AND t.subsidiary IN (1, 3) "
             "AND tl.mainline = 'F' "
             "AND tl.quantity > NVL(tl.quantityshiprecv, 0) "
@@ -148,7 +151,9 @@ QUERIES = {
         "paginate": True,
         "page_size": 1000,
         "notes": (
-            "MUST include status E (Pending Billing/Partially Received) — has open quantities! "
+            "Status A=Pending Approval, B=Pending Receipt, D=Partially Received, "
+            "E=Pending Billing. MUST include A (vendor POs in approval) and E "
+            "(Pending Billing has open quantities — omitting it produces wrong results). "
             "PO quantities are POSITIVE. open_qty = quantity - quantityshiprecv. "
             "Sub 1 = vendor POs for Verrayes raw materials. Sub 3 = intercompany POs for USA-3PL FGs. "
             "Overdue POs (receipt date < today) rescheduled to today + buffer in engine."
