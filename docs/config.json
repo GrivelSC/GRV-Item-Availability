@@ -3436,6 +3436,20 @@
       "today_avail": 0,
       "next_avail": "8/15/2026",
       "next_qty": 50
+    },
+    {
+      "item_id": "6855",
+      "location": "verrayes",
+      "today_avail": 0,
+      "next_avail": "9/30/2026",
+      "next_qty": 100
+    },
+    {
+      "item_id": "6855",
+      "location": "usa3pl",
+      "today_avail": 0,
+      "next_avail": "9/30/2026",
+      "next_qty": 100
     }
   ]
 }
