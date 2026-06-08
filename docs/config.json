@@ -3450,6 +3450,20 @@
       "today_avail": 0,
       "next_avail": "9/30/2026",
       "next_qty": 100
+    },
+    {
+      "item_id": "6914",
+      "location": "verrayes",
+      "today_avail": 20,
+      "next_avail": "6/22/2026",
+      "next_qty": 100
+    },
+    {
+      "item_id": "6911",
+      "location": "verrayes",
+      "today_avail": 20,
+      "next_avail": "6/22/2026",
+      "next_qty": 100
     }
   ]
 }
