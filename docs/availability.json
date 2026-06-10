@@ -1708,12 +1708,12 @@
       "embargo_date": null,
       "status": "incoming",
       "available_today": 0,
-      "total_open_demand": 270,
-      "committable": 2988,
+      "total_open_demand": 306,
+      "committable": 2952,
       "max_buildable_today": 258,
       "max_buildable_horizon": 3258,
       "next_available_date": "2027-01-04",
-      "next_available_qty": 2988,
+      "next_available_qty": 2952,
       "limiting_components": [
         {
           "item_id": "6750",
@@ -1856,8 +1856,8 @@
           "date": "2026-10-01",
           "display_date": "2026-10-08",
           "buildable": 258,
-          "cumulative_demand": 143,
-          "net_available": 115,
+          "cumulative_demand": 179,
+          "net_available": 79,
           "limiting_components": [
             {
               "item_id": "6750",
@@ -1874,8 +1874,8 @@
           "date": "2026-10-05",
           "display_date": "2026-10-12",
           "buildable": 258,
-          "cumulative_demand": 153,
-          "net_available": 105,
+          "cumulative_demand": 189,
+          "net_available": 69,
           "limiting_components": [
             {
               "item_id": "6750",
@@ -1892,8 +1892,8 @@
           "date": "2026-10-12",
           "display_date": "2026-10-19",
           "buildable": 258,
-          "cumulative_demand": 163,
-          "net_available": 95,
+          "cumulative_demand": 199,
+          "net_available": 59,
           "limiting_components": [
             {
               "item_id": "6750",
@@ -1910,8 +1910,8 @@
           "date": "2026-10-13",
           "display_date": "2026-10-20",
           "buildable": 258,
-          "cumulative_demand": 175,
-          "net_available": 83,
+          "cumulative_demand": 211,
+          "net_available": 47,
           "limiting_components": [
             {
               "item_id": "6750",
@@ -1928,8 +1928,8 @@
           "date": "2026-10-30",
           "display_date": "2026-11-06",
           "buildable": 258,
-          "cumulative_demand": 177,
-          "net_available": 81,
+          "cumulative_demand": 213,
+          "net_available": 45,
           "limiting_components": [
             {
               "item_id": "6750",
@@ -1946,8 +1946,8 @@
           "date": "2026-11-01",
           "display_date": "2026-11-08",
           "buildable": 258,
-          "cumulative_demand": 237,
-          "net_available": 21,
+          "cumulative_demand": 273,
+          "net_available": 0,
           "limiting_components": [
             {
               "item_id": "6750",
@@ -1964,8 +1964,8 @@
           "date": "2026-11-02",
           "display_date": "2026-11-09",
           "buildable": 258,
-          "cumulative_demand": 242,
-          "net_available": 16,
+          "cumulative_demand": 278,
+          "net_available": 0,
           "limiting_components": [
             {
               "item_id": "6750",
@@ -1982,8 +1982,8 @@
           "date": "2026-11-27",
           "display_date": "2026-12-04",
           "buildable": 258,
-          "cumulative_demand": 250,
-          "net_available": 8,
+          "cumulative_demand": 286,
+          "net_available": 0,
           "limiting_components": [
             {
               "item_id": "6750",
@@ -2000,7 +2000,7 @@
           "date": "2026-12-01",
           "display_date": "2026-12-08",
           "buildable": 258,
-          "cumulative_demand": 260,
+          "cumulative_demand": 296,
           "net_available": 0,
           "limiting_components": [
             {
@@ -2018,7 +2018,7 @@
           "date": "2026-12-15",
           "display_date": "2026-12-22",
           "buildable": 258,
-          "cumulative_demand": 270,
+          "cumulative_demand": 306,
           "net_available": 0,
           "limiting_components": [
             {
@@ -2036,8 +2036,8 @@
           "date": "2026-12-28",
           "display_date": "2027-01-04",
           "buildable": 3258,
-          "cumulative_demand": 270,
-          "net_available": 2988,
+          "cumulative_demand": 306,
+          "net_available": 2952,
           "limiting_components": [
             {
               "item_id": "6750",
@@ -133804,12 +133804,12 @@
       "embargo_date": null,
       "status": "incoming",
       "available_today": 0,
-      "total_open_demand": 78,
-      "committable": 172,
+      "total_open_demand": 79,
+      "committable": 171,
       "max_buildable_today": 0,
       "max_buildable_horizon": 250,
       "next_available_date": "2026-11-10",
-      "next_available_qty": 172,
+      "next_available_qty": 171,
       "limiting_components": [
         {
           "item_id": "6966",
@@ -133877,10 +133877,28 @@
           ]
         },
         {
+          "date": "2026-09-07",
+          "display_date": "2026-09-14",
+          "buildable": 0,
+          "cumulative_demand": 32,
+          "net_available": 0,
+          "limiting_components": [
+            {
+              "item_id": "6966",
+              "item_name": "TRDEXPL.S",
+              "supportable_fg_units": 0,
+              "next_po_date": "2026-11-03",
+              "next_po_original_date": null,
+              "next_po_qty": 250.0,
+              "overdue": false
+            }
+          ]
+        },
+        {
           "date": "2026-09-15",
           "display_date": "2026-09-22",
           "buildable": 0,
-          "cumulative_demand": 32,
+          "cumulative_demand": 33,
           "net_available": 0,
           "limiting_components": [
             {
@@ -133898,7 +133916,7 @@
           "date": "2026-09-16",
           "display_date": "2026-09-23",
           "buildable": 0,
-          "cumulative_demand": 40,
+          "cumulative_demand": 41,
           "net_available": 0,
           "limiting_components": [
             {
@@ -133916,7 +133934,7 @@
           "date": "2026-10-01",
           "display_date": "2026-10-08",
           "buildable": 0,
-          "cumulative_demand": 57,
+          "cumulative_demand": 58,
           "net_available": 0,
           "limiting_components": [
             {
@@ -133934,7 +133952,7 @@
           "date": "2026-10-05",
           "display_date": "2026-10-12",
           "buildable": 0,
-          "cumulative_demand": 58,
+          "cumulative_demand": 59,
           "net_available": 0,
           "limiting_components": [
             {
@@ -133952,7 +133970,7 @@
           "date": "2026-11-02",
           "display_date": "2026-11-09",
           "buildable": 0,
-          "cumulative_demand": 61,
+          "cumulative_demand": 62,
           "net_available": 0,
           "limiting_components": [
             {
@@ -133970,8 +133988,8 @@
           "date": "2026-11-03",
           "display_date": "2026-11-10",
           "buildable": 250,
-          "cumulative_demand": 61,
-          "net_available": 189,
+          "cumulative_demand": 62,
+          "net_available": 188,
           "limiting_components": [
             {
               "item_id": "6966",
@@ -133988,8 +134006,8 @@
           "date": "2026-11-10",
           "display_date": "2026-11-17",
           "buildable": 250,
-          "cumulative_demand": 71,
-          "net_available": 179,
+          "cumulative_demand": 72,
+          "net_available": 178,
           "limiting_components": [
             {
               "item_id": "6966",
@@ -134006,8 +134024,8 @@
           "date": "2026-11-27",
           "display_date": "2026-12-04",
           "buildable": 250,
-          "cumulative_demand": 76,
-          "net_available": 174,
+          "cumulative_demand": 77,
+          "net_available": 173,
           "limiting_components": [
             {
               "item_id": "6966",
@@ -134024,8 +134042,8 @@
           "date": "2026-12-31",
           "display_date": "2027-01-07",
           "buildable": 250,
-          "cumulative_demand": 78,
-          "net_available": 172,
+          "cumulative_demand": 79,
+          "net_available": 171,
           "limiting_components": [
             {
               "item_id": "6966",
@@ -139817,9 +139835,9 @@
       "embargoed": false,
       "embargo_date": null,
       "status": "in_stock",
-      "available_today": 966,
-      "total_open_demand": 18,
-      "committable": 966,
+      "available_today": 968,
+      "total_open_demand": 16,
+      "committable": 968,
       "max_buildable_today": 984,
       "max_buildable_horizon": 984,
       "next_available_date": null,
@@ -139876,8 +139894,8 @@
           "date": "2026-10-01",
           "display_date": "2026-10-08",
           "buildable": 984,
-          "cumulative_demand": 12,
-          "net_available": 972,
+          "cumulative_demand": 10,
+          "net_available": 974,
           "limiting_components": [
             {
               "item_id": "698",
@@ -139894,8 +139912,8 @@
           "date": "2026-10-05",
           "display_date": "2026-10-12",
           "buildable": 984,
-          "cumulative_demand": 13,
-          "net_available": 971,
+          "cumulative_demand": 11,
+          "net_available": 973,
           "limiting_components": [
             {
               "item_id": "698",
@@ -139912,8 +139930,8 @@
           "date": "2026-10-30",
           "display_date": "2026-11-06",
           "buildable": 984,
-          "cumulative_demand": 15,
-          "net_available": 969,
+          "cumulative_demand": 13,
+          "net_available": 971,
           "limiting_components": [
             {
               "item_id": "698",
@@ -139930,8 +139948,8 @@
           "date": "2026-11-02",
           "display_date": "2026-11-09",
           "buildable": 984,
-          "cumulative_demand": 18,
-          "net_available": 966,
+          "cumulative_demand": 16,
+          "net_available": 968,
           "limiting_components": [
             {
               "item_id": "698",
@@ -154786,13 +154804,13 @@
       "embargoed": false,
       "embargo_date": null,
       "status": "in_stock",
-      "available_today": 60,
-      "total_open_demand": 270,
-      "committable": 589,
+      "available_today": 59,
+      "total_open_demand": 271,
+      "committable": 588,
       "max_buildable_today": 209,
       "max_buildable_horizon": 859,
       "next_available_date": "2026-10-21",
-      "next_available_qty": 589,
+      "next_available_qty": 588,
       "limiting_components": [
         {
           "item_id": "7388",
@@ -154824,11 +154842,29 @@
           ]
         },
         {
+          "date": "2026-06-11",
+          "display_date": "2026-06-18",
+          "buildable": 209,
+          "cumulative_demand": 19,
+          "net_available": 190,
+          "limiting_components": [
+            {
+              "item_id": "7388",
+              "item_name": "0HESTH.CB",
+              "supportable_fg_units": 209,
+              "next_po_date": "2026-10-14",
+              "next_po_original_date": null,
+              "next_po_qty": 650.0,
+              "overdue": false
+            }
+          ]
+        },
+        {
           "date": "2026-07-01",
           "display_date": "2026-07-08",
           "buildable": 209,
-          "cumulative_demand": 35,
-          "net_available": 174,
+          "cumulative_demand": 36,
+          "net_available": 173,
           "limiting_components": [
             {
               "item_id": "7388",
@@ -154845,8 +154881,8 @@
           "date": "2026-07-27",
           "display_date": "2026-08-03",
           "buildable": 209,
-          "cumulative_demand": 37,
-          "net_available": 172,
+          "cumulative_demand": 38,
+          "net_available": 171,
           "limiting_components": [
             {
               "item_id": "7388",
@@ -154863,8 +154899,8 @@
           "date": "2026-08-01",
           "display_date": "2026-08-08",
           "buildable": 209,
-          "cumulative_demand": 44,
-          "net_available": 165,
+          "cumulative_demand": 45,
+          "net_available": 164,
           "limiting_components": [
             {
               "item_id": "7388",
@@ -154881,8 +154917,8 @@
           "date": "2026-08-03",
           "display_date": "2026-08-10",
           "buildable": 209,
-          "cumulative_demand": 45,
-          "net_available": 164,
+          "cumulative_demand": 46,
+          "net_available": 163,
           "limiting_components": [
             {
               "item_id": "7388",
@@ -154899,8 +154935,8 @@
           "date": "2026-09-01",
           "display_date": "2026-09-08",
           "buildable": 209,
-          "cumulative_demand": 72,
-          "net_available": 137,
+          "cumulative_demand": 73,
+          "net_available": 136,
           "limiting_components": [
             {
               "item_id": "7388",
@@ -154917,8 +154953,8 @@
           "date": "2026-09-07",
           "display_date": "2026-09-14",
           "buildable": 209,
-          "cumulative_demand": 74,
-          "net_available": 135,
+          "cumulative_demand": 75,
+          "net_available": 134,
           "limiting_components": [
             {
               "item_id": "7388",
@@ -154935,8 +154971,8 @@
           "date": "2026-09-16",
           "display_date": "2026-09-23",
           "buildable": 209,
-          "cumulative_demand": 104,
-          "net_available": 105,
+          "cumulative_demand": 105,
+          "net_available": 104,
           "limiting_components": [
             {
               "item_id": "7388",
@@ -154953,8 +154989,8 @@
           "date": "2026-10-01",
           "display_date": "2026-10-08",
           "buildable": 209,
-          "cumulative_demand": 127,
-          "net_available": 82,
+          "cumulative_demand": 128,
+          "net_available": 81,
           "limiting_components": [
             {
               "item_id": "7388",
@@ -154971,8 +155007,8 @@
           "date": "2026-10-05",
           "display_date": "2026-10-12",
           "buildable": 209,
-          "cumulative_demand": 147,
-          "net_available": 62,
+          "cumulative_demand": 148,
+          "net_available": 61,
           "limiting_components": [
             {
               "item_id": "7388",
@@ -154989,8 +155025,8 @@
           "date": "2026-10-12",
           "display_date": "2026-10-19",
           "buildable": 209,
-          "cumulative_demand": 149,
-          "net_available": 60,
+          "cumulative_demand": 150,
+          "net_available": 59,
           "limiting_components": [
             {
               "item_id": "7388",
@@ -155007,8 +155043,8 @@
           "date": "2026-10-14",
           "display_date": "2026-10-21",
           "buildable": 859,
-          "cumulative_demand": 149,
-          "net_available": 710,
+          "cumulative_demand": 150,
+          "net_available": 709,
           "limiting_components": [
             {
               "item_id": "7388",
@@ -155025,8 +155061,8 @@
           "date": "2026-10-15",
           "display_date": "2026-10-22",
           "buildable": 859,
-          "cumulative_demand": 153,
-          "net_available": 706,
+          "cumulative_demand": 154,
+          "net_available": 705,
           "limiting_components": [
             {
               "item_id": "7388",
@@ -155043,8 +155079,8 @@
           "date": "2026-10-21",
           "display_date": "2026-10-28",
           "buildable": 859,
-          "cumulative_demand": 154,
-          "net_available": 705,
+          "cumulative_demand": 155,
+          "net_available": 704,
           "limiting_components": [
             {
               "item_id": "7388",
@@ -155061,8 +155097,8 @@
           "date": "2026-10-30",
           "display_date": "2026-11-06",
           "buildable": 859,
-          "cumulative_demand": 156,
-          "net_available": 703,
+          "cumulative_demand": 157,
+          "net_available": 702,
           "limiting_components": [
             {
               "item_id": "7388",
@@ -155079,8 +155115,8 @@
           "date": "2026-11-01",
           "display_date": "2026-11-08",
           "buildable": 859,
-          "cumulative_demand": 162,
-          "net_available": 697,
+          "cumulative_demand": 163,
+          "net_available": 696,
           "limiting_components": [
             {
               "item_id": "7388",
@@ -155097,8 +155133,8 @@
           "date": "2026-11-02",
           "display_date": "2026-11-09",
           "buildable": 859,
-          "cumulative_demand": 167,
-          "net_available": 692,
+          "cumulative_demand": 168,
+          "net_available": 691,
           "limiting_components": [
             {
               "item_id": "7388",
@@ -155115,8 +155151,8 @@
           "date": "2026-12-01",
           "display_date": "2026-12-08",
           "buildable": 859,
-          "cumulative_demand": 168,
-          "net_available": 691,
+          "cumulative_demand": 169,
+          "net_available": 690,
           "limiting_components": [
             {
               "item_id": "7388",
@@ -155133,8 +155169,8 @@
           "date": "2026-12-02",
           "display_date": "2026-12-09",
           "buildable": 859,
-          "cumulative_demand": 170,
-          "net_available": 689,
+          "cumulative_demand": 171,
+          "net_available": 688,
           "limiting_components": [
             {
               "item_id": "7388",
@@ -155151,8 +155187,8 @@
           "date": "2026-12-15",
           "display_date": "2026-12-22",
           "buildable": 859,
-          "cumulative_demand": 270,
-          "net_available": 589,
+          "cumulative_demand": 271,
+          "net_available": 588,
           "limiting_components": [
             {
               "item_id": "7388",
@@ -155166,7 +155202,7 @@
           ]
         }
       ],
-      "avg_eur_per_unit": 46.3875,
+      "avg_eur_per_unit": 46.3915,
       "avg_usd_per_unit": 107.638,
       "overridden": false
     },
@@ -155434,7 +155470,7 @@
           ]
         }
       ],
-      "avg_eur_per_unit": 46.3875,
+      "avg_eur_per_unit": 46.3915,
       "avg_usd_per_unit": 107.638,
       "overridden": false
     },
@@ -163092,7 +163128,7 @@
       "embargo_date": null,
       "status": "in_stock",
       "available_today": 20,
-      "total_open_demand": 212,
+      "total_open_demand": 211,
       "committable": null,
       "max_buildable_today": null,
       "max_buildable_horizon": null,
