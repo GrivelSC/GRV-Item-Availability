@@ -1,9 +1,10 @@
 {
-  "refreshed_at": "2026-06-12T16:48:40.372938",
+  "refreshed_at": "2026-06-12T22:40:24.270427",
   "refreshed_by": "scheduled",
   "sku_count_verrayes": 316,
   "sku_count_usa3pl": 316,
   "override_count": 33,
+  "dtc_pass": "ok",
   "status": "ok",
   "warnings": []
 }
