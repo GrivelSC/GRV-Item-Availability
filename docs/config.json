@@ -3,7 +3,13 @@
     "verrayes_pad_days": 7,
     "usa3pl_pad_days": 7,
     "usa3pl_embargo_pad_days": 90,
-    "overdue_po_buffer_days": 7
+    "overdue_po_buffer_days": 7,
+    "dtc_order_type_ids": [
+      14,
+      28,
+      29,
+      32
+    ]
   },
   "fg_list": [
     {

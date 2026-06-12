@@ -507,7 +507,7 @@ function filter(){
     if(q&&!i.item_name.toLowerCase().includes(q)&&!(i.item_display_name||'').toLowerCase().includes(q))return false;
     return true;
   });
-  var VAL_COLS={max_buildable_today:1,available_today:1,total_open_demand:1,committable:1,next_available_qty:1};
+  var VAL_COLS={max_buildable_today:1,available_today:1,available_today_dtc:1,total_open_demand:1,committable:1,next_available_qty:1};
   function sortKey(x){
     if(valueMode&&VAL_COLS[sk]){
       var q=x[sk]; if(q==null)return null;
@@ -539,7 +539,7 @@ function render(){
   shown.forEach(function(i){if(s[i.status]!==undefined)s[i.status]++;});
   var rows='';
   if(shown.length===0){
-    rows='<tr class="empty-row"><td colspan="11">No items match the current filters</td></tr>';
+    rows='<tr class="empty-row"><td colspan="12">No items match the current filters</td></tr>';
   }else{
     shown.forEach(function(i){rows+=row(i);});
   }
@@ -564,6 +564,7 @@ function render(){
     th('status','Status')+
     th('max_buildable_today','Max Build Today'+cs,'r')+
     th('available_today','Avail Today'+cs,'r')+
+    th('available_today_dtc','Avail DTC'+cs,'r')+
     th('next_available_date','Next Avail')+
     '<th class="r">Next Qty'+cs+'</th>'+
     th('total_open_demand','Open Demand'+cs,'r')+
@@ -590,6 +591,7 @@ function row(i){
           :'<span class="dim">no PO</span>')+'</div>'
     :'<span class="dim">—</span>';
   var avail_cls=i.available_today>0?'pos':i.available_today<0?'neg':'dim';
+  var dtc_cls=i.available_today_dtc>0?'pos':i.available_today_dtc<0?'neg':'dim';
   var cmt_cls=i.committable==null?'dim':(i.committable>0?'pos':'neg');
   var ovIcon=i.overridden?'<span class="ovr-flag" title="Manually overridden — calculation bypassed">✎</span>':'';
   var main='<tr class="'+(isOpen?'expanded':'')+(i.overridden?' is-overridden':'')+'">'+
@@ -598,6 +600,7 @@ function row(i){
     '<td><span class="badge '+i.status+'">'+sl(i.status)+'</span></td>'+
     '<td class="r dim">'+vcell(i,'max_buildable_today')+'</td>'+
     '<td class="r '+avail_cls+'">'+vcell(i,'available_today')+'</td>'+
+    '<td class="r '+dtc_cls+'" title="What-if: units sellable today if only DTC demand existed (Shopify, Amazon, Outdoor Pro Link, Private Sport Shop)">'+vcell(i,'available_today_dtc')+'</td>'+
     '<td>'+nd+'</td>'+
     '<td class="r">'+nq+'</td>'+
     '<td class="r muted">'+vcell(i,'total_open_demand')+'</td>'+
@@ -607,7 +610,7 @@ function row(i){
     '</tr>';
   if(!isOpen)return main;
   if(i.overridden){
-    var detailO='<tr class="detail-row"><td class="detail-cell" colspan="11">'+
+    var detailO='<tr class="detail-row"><td class="detail-cell" colspan="12">'+
       '<div class="sc-title">✎ Manually overridden — calculation bypassed</div>'+
       '<div class="admin-section-desc" style="margin:0;">Today, Next Avail and Next Qty are set manually in the Overrides list. Max Build, Committable, Top Constraint and the staircase are not computed for this SKU. Open Demand is still from live data.</div>'+
       '</td></tr>';
@@ -630,7 +633,7 @@ function row(i){
       '<td class="dim">'+(lcn?esc(lcn.item_name||lcn.item_id):'—')+'</td>'+
       '</tr>';
   }).join('');
-  var detail='<tr class="detail-row"><td class="detail-cell" colspan="11">'+
+  var detail='<tr class="detail-row"><td class="detail-cell" colspan="12">'+
     '<div class="sc-title">Availability staircase · '+stairs.length+' step'+(stairs.length!==1?'s':'')+'</div>'+
     '<table class="sc-table"><thead><tr>'+
     '<th>Date (+pad)</th><th>Buildable</th><th>Cum. Demand</th><th>Net Available</th><th title="Available to Promise from this date onward: the minimum Net Available from this step to the end of the staircase. Units promisable from this date that no later booked demand can claw back.">ATP →</th><th>Limiting item</th>'+
@@ -672,7 +675,7 @@ function populateClassFilter(){
 
 function downloadCsv(){
   // Exports ALWAYS in units (the €/$ toggle never affects downloads).
-  var rows=[['SKU','Display Name','Class','Lifecycle','Location','Status','Max Build Today','Avail Today','Next Avail Date','Next Qty','Open Demand','Committable','First Shortfall','Overridden']];
+  var rows=[['SKU','Display Name','Class','Lifecycle','Location','Status','Max Build Today','Avail Today','Avail DTC','Next Avail Date','Next Qty','Open Demand','Committable','First Shortfall','Overridden']];
   all.forEach(function(i){
     rows.push([
       i.item_name||'',
@@ -683,6 +686,7 @@ function downloadCsv(){
       sl(i.status),
       i.max_buildable_today==null?'':i.max_buildable_today,
       i.available_today==null?'':i.available_today,
+      i.available_today_dtc==null?'':i.available_today_dtc,
       i.next_available_date||'',
       i.next_available_qty!=null?i.next_available_qty:'',
       i.total_open_demand!=null?i.total_open_demand:0,
@@ -713,6 +717,7 @@ function downloadXlsx(){
     {h:'Status',         fn:function(i){return sl(i.status);},                                 t:'s'},
     {h:'Max Build Today',fn:function(i){return i.max_buildable_today;},                        t:'n'},
     {h:'Avail Today',    fn:function(i){return i.available_today;},                            t:'n'},
+    {h:'Avail DTC',      fn:function(i){return i.available_today_dtc;},                        t:'n'},
     {h:'Next Avail Date',fn:function(i){
       if(!i.next_available_date)return null;
       var d=new Date(i.next_available_date);
