@@ -249,6 +249,7 @@ pre code {
 .badge.in_stock    { color: var(--green); background: var(--green-bg); } .badge.in_stock::before   { background: var(--green); }
 .badge.out_of_stock{ color: var(--red);   background: var(--red-bg);   } .badge.out_of_stock::before{ background: var(--red); }
 .badge.incoming    { color: var(--blue);  background: var(--blue-bg);  } .badge.incoming::before   { background: var(--blue); }
+.badge.committed   { color: var(--amber); background: var(--amber-bg); } .badge.committed::before  { background: var(--amber); }
 .badge.embargoed   { color: var(--purple);background: var(--purple-bg);} .badge.embargoed::before  { background: var(--purple); }
 
 /* ── TABLE ────────────────────────────── */
@@ -491,7 +492,7 @@ pre code {
 <span class="dim">├──────────────────────────────────────────────────────────────────┤</span>
 <span class="dim">│</span> <span class="hl">CHARTS</span>: Bottleneck Components | Demand Coverage | Committable Dist <span class="dim">│</span>
 <span class="dim">├──────────────────────────────────────────────────────────────────┤</span>
-<span class="dim">│</span> <span class="hl">SUMMARY CARDS</span>: Total · In Stock · Incoming · Out of Stock · Embargoed <span class="dim">│</span>
+<span class="dim">│</span> <span class="hl">SUMMARY CARDS</span>: Total · In Stock · Committed · Incoming · Out of Stock · Embargoed <span class="dim">│</span>
 <span class="dim">├──────────────────────────────────────────────────────────────────┤</span>
 <span class="dim">│</span> <span class="hl">TABLE</span>: SKU | Class | Status | Avail Today | Open Demand | ... [▼][↑]  <span class="dim">│</span>
 <span class="dim">└──────────────────────────────────────────────────────────────────┘</span>
@@ -512,7 +513,7 @@ pre code {
         <tr><td><strong>Location tabs</strong><br><code>VERRAYES / USA·3PL</code></td><td>Switches between the Italian manufacturing facility and the US distribution warehouse. Each location has completely separate inventory and availability data.</td></tr>
         <tr><td><strong>Lifecycle</strong></td><td>Filters by product lifecycle stage. Defaults to <em>Active</em>. Choose <em>All lifecycles</em> to see everything including Discontinued and End-Of-Life products.</td></tr>
         <tr><td><strong>Class</strong></td><td>Filters by product category (Crampons, Ice Axes, Elements, etc.).</td></tr>
-        <tr><td><strong>Status</strong></td><td>Filters by availability status: In Stock, Incoming, Out of Stock, or Embargoed.</td></tr>
+        <tr><td><strong>Status</strong></td><td>Filters by availability status: In Stock, Committed, Incoming, Out of Stock, or Embargoed.</td></tr>
         <tr><td><strong>Units / Value €$ toggle</strong></td><td>Switches the quantity columns (Max Build, Avail Today, Next Qty, Open Demand, Committable) between unit counts and monetary value. Value = units × average selling price, shown in <strong>€</strong> on VERRAYES and <strong>$</strong> on USA-3PL. Where no selling price is known for a SKU, the value cell is left blank. Charts, the staircase, and CSV/XLSX downloads always stay in units.</td></tr>
         <tr><td><strong>Search 🔍</strong></td><td>Free-text search across SKU code and product display name. Partial matches work.</td></tr>
       </tbody>
@@ -534,7 +535,8 @@ pre code {
       <thead><tr><th>Card</th><th>Meaning</th></tr></thead>
       <tbody>
         <tr><td><strong>Total SKUs</strong></td><td>How many SKUs match the active filters.</td></tr>
-        <tr><td><strong>In Stock</strong></td><td>SKUs with net available units > 0 today. Percentage shown below the number.</td></tr>
+        <tr><td><strong>In Stock</strong></td><td>SKUs with freely promisable units today (ATS &gt; 0): stock you can sell now that no already-booked future order will claw back before replenishment. Percentage shown below the number.</td></tr>
+        <tr><td><strong>Committed</strong></td><td>SKUs with physical / buildable stock today that is fully spoken for by the existing order book before replenishment covers the gap (ATS = 0). Do not promise new orders from this stock; the Next Avail column shows the first safely promisable window.</td></tr>
         <tr><td><strong>Incoming</strong></td><td>SKUs currently out of stock but with supply arriving within the planning horizon (120 days).</td></tr>
         <tr><td><strong>Out of Stock</strong></td><td>SKUs with zero availability today and none expected within the horizon.</td></tr>
         <tr><td><strong>Embargoed</strong></td><td>SKUs whose availability is gated until a future date (e.g. pre-production items not yet released to sell).</td></tr>
@@ -577,11 +579,11 @@ pre code {
         </tr>
         <tr>
           <td><strong>Status</strong></td>
-          <td>Coloured badge: <span class="badge in_stock">In Stock</span> <span class="badge incoming">Incoming</span> <span class="badge out_of_stock">Out of Stock</span> <span class="badge embargoed">Embargoed</span></td>
+          <td>Coloured badge: <span class="badge in_stock">In Stock</span> <span class="badge committed">Committed</span> <span class="badge incoming">Incoming</span> <span class="badge out_of_stock">Out of Stock</span> <span class="badge embargoed">Embargoed</span></td>
         </tr>
         <tr>
           <td><strong>Avail Today</strong></td>
-          <td>Net units you can ship today. Green = positive, red = negative (more demand than supply). A negative number means some open orders cannot be filled even from current inventory.</td>
+          <td><strong>ATS — Available to Sell today.</strong> Units you can promise and ship today that no already-booked future order will reclaim: the minimum of Net Available across the whole staircase. 0 with stock on the shelf means the existing order book, spread over time, consumes everything before replenishment catches up (status <em>Committed</em>).</td>
         </tr>
         <tr>
           <td><strong>Open Demand</strong></td>
@@ -630,6 +632,7 @@ pre code {
           <tr><td><strong>Buildable</strong></td><td>Maximum units that could be produced at this date, given all inventory and POs received up to that date.</td></tr>
           <tr><td><strong>Cum. Demand</strong></td><td>Cumulative open SO quantity with ship dates up to and including this date.</td></tr>
           <tr><td><strong>Net Available</strong></td><td>Buildable minus cumulative demand. A mini bar chart visualises this.</td></tr>
+          <tr><td><strong>ATP →</strong></td><td><strong>Available to Promise from this date onward</strong>: the minimum Net Available from this step to the end of the staircase. This is the quantity that can be safely committed to new orders from this date — later booked demand can never claw it back. ATS today is the ATP of the first row; Next Avail / Next Qty point at the first future step where ATP turns positive.</td></tr>
           <tr><td><strong>Limiting Item</strong></td><td>The BOM component constraining production at this time step.</td></tr>
         </tbody>
       </table>
@@ -645,7 +648,7 @@ pre code {
   <!-- ── EXPORT ─────────────────────────────────────────── -->
   <section id="export">
     <h2>CSV / XLSX Export</h2>
-    <p>Use the <strong>⬇ CSV</strong> or <strong>⬇ XLSX</strong> button in the filter bar to download all availability data as a spreadsheet, named <code>grv_availability_YYYY-MM-DD.csv</code> / <code>.xlsx</code>. The file includes all 332+ SKUs across both locations, with all key fields, plus an <strong>Overridden</strong> column (<code>Yes</code> for manually overridden SKUs). For overridden SKUs the blanked fields (Max Build, Committable) export as empty cells.</p>
+    <p>Use the <strong>⬇ CSV</strong> or <strong>⬇ XLSX</strong> button in the filter bar to download all availability data as a spreadsheet, named <code>grv_availability_YYYY-MM-DD.csv</code> / <code>.xlsx</code>. The file includes all 332+ SKUs across both locations, with all key fields, plus a <strong>First Shortfall</strong> column (the first date on which booked demand fully consumes supply — empty if it never does) and an <strong>Overridden</strong> column (<code>Yes</code> for manually overridden SKUs). For overridden SKUs the blanked fields (Max Build, Committable) export as empty cells.</p>
     <div class="callout warn">
       <div class="callout-title">Note on scope &amp; units</div>
       <p>The download always exports <em>all</em> items regardless of active filters, and <strong>always in units</strong> — the Units/Value €$ toggle never affects the file. Use your spreadsheet app to apply additional filtering or to value the quantities after download.</p>

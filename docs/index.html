@@ -68,6 +68,7 @@ select option{background:var(--surface);}
 .s-all .stat-val{color:var(--text);}
 .s-ok  .stat-val{color:var(--green);}
 .s-in  .stat-val{color:var(--blue);}
+.s-cmt .stat-val{color:var(--amber);}
 .s-out .stat-val{color:var(--red);}
 .s-emb .stat-val{color:var(--purple);}
 
@@ -94,6 +95,7 @@ tr.is-overridden td:first-child{box-shadow:inset 3px 0 0 var(--amber);}
 .badge.in_stock   {color:var(--green); background:var(--green-bg);}  .badge.in_stock::before{background:var(--green);}
 .badge.out_of_stock{color:var(--red);  background:var(--red-bg);}    .badge.out_of_stock::before{background:var(--red);}
 .badge.incoming   {color:var(--blue);  background:var(--blue-bg);}   .badge.incoming::before{background:var(--blue);animation:pulse 1.5s ease-in-out infinite;}
+.badge.committed  {color:var(--amber); background:var(--amber-bg);}  .badge.committed::before{background:var(--amber);}
 .badge.embargoed  {color:var(--purple);background:var(--purple-bg);} .badge.embargoed::before{background:var(--purple);}
 .badge.partial    {color:var(--amber); background:var(--amber-bg);}  .badge.partial::before{background:var(--amber);}
 .pos{color:var(--green);}
@@ -250,6 +252,7 @@ tr.is-overridden td:first-child{box-shadow:inset 3px 0 0 var(--amber);}
   <select id="st-sel" onchange="filter()">
     <option value="">All statuses</option>
     <option value="in_stock">In Stock</option>
+    <option value="committed">Committed</option>
     <option value="incoming">Incoming</option>
     <option value="out_of_stock">Out of Stock</option>
     <option value="embargoed">Embargoed</option>
@@ -532,7 +535,7 @@ function sort_(k){
 }
 
 function render(){
-  var s={total:shown.length,in_stock:0,incoming:0,out_of_stock:0,embargoed:0};
+  var s={total:shown.length,in_stock:0,committed:0,incoming:0,out_of_stock:0,embargoed:0};
   shown.forEach(function(i){if(s[i.status]!==undefined)s[i.status]++;});
   var rows='';
   if(shown.length===0){
@@ -549,6 +552,7 @@ function render(){
     '<div class="summary">'+
     '<div class="stat s-all"><div class="stat-label">Total SKUs</div><div class="stat-val">'+s.total+'</div></div>'+
     '<div class="stat s-ok"><div class="stat-label">In Stock</div><div class="stat-val">'+s.in_stock+'<div class="stat-pct">'+(s.total?Math.round(s.in_stock/s.total*100):0)+'%</div></div></div>'+
+    '<div class="stat s-cmt"><div class="stat-label">Committed</div><div class="stat-val">'+s.committed+'<div class="stat-pct">'+(s.total?Math.round(s.committed/s.total*100):0)+'%</div></div></div>'+
     '<div class="stat s-in"><div class="stat-label">Incoming</div><div class="stat-val">'+s.incoming+'<div class="stat-pct">'+(s.total?Math.round(s.incoming/s.total*100):0)+'%</div></div></div>'+
     '<div class="stat s-out"><div class="stat-label">Out of Stock</div><div class="stat-val">'+s.out_of_stock+'<div class="stat-pct">'+(s.total?Math.round(s.out_of_stock/s.total*100):0)+'%</div></div></div>'+
     '<div class="stat s-emb"><div class="stat-label">Embargoed</div><div class="stat-val">'+s.embargoed+'<div class="stat-pct">'+(s.total?Math.round(s.embargoed/s.total*100):0)+'%</div></div></div>'+
@@ -614,18 +618,22 @@ function row(i){
   var sc=stairs.map(function(s){
     var bw=Math.round(s.net_available/mx*100);
     var lcn=(s.limiting_components||[])[0];
+    var atpCell=s.atp!=null
+      ?'<td class="'+(s.atp>0?'np':'nz')+'">'+s.atp+'</td>'
+      :'<td class="dim">—</td>';
     return'<tr>'+
       '<td>'+fd(s.display_date)+'</td>'+
       '<td>'+s.buildable+'</td>'+
       '<td>'+s.cumulative_demand+'</td>'+
       '<td class="'+(s.net_available>0?'np':'nz')+'">'+s.net_available+'<div class="bar-wrap"><div class="bar-fill" style="width:'+bw+'%"></div></div></td>'+
+      atpCell+
       '<td class="dim">'+(lcn?esc(lcn.item_name||lcn.item_id):'—')+'</td>'+
       '</tr>';
   }).join('');
   var detail='<tr class="detail-row"><td class="detail-cell" colspan="11">'+
     '<div class="sc-title">Availability staircase · '+stairs.length+' step'+(stairs.length!==1?'s':'')+'</div>'+
     '<table class="sc-table"><thead><tr>'+
-    '<th>Date (+pad)</th><th>Buildable</th><th>Cum. Demand</th><th>Net Available</th><th>Limiting item</th>'+
+    '<th>Date (+pad)</th><th>Buildable</th><th>Cum. Demand</th><th>Net Available</th><th title="Available to Promise from this date onward: the minimum Net Available from this step to the end of the staircase. Units promisable from this date that no later booked demand can claw back.">ATP →</th><th>Limiting item</th>'+
     '</tr></thead><tbody>'+sc+'</tbody></table>'+
     '</td></tr>';
   return main+detail;
@@ -637,7 +645,7 @@ function toggle(id){
 }
 
 function sl(s){
-  return{in_stock:'In Stock',out_of_stock:'Out of Stock',incoming:'Incoming',embargoed:'Embargoed',partial:'Partial'}[s]||s;
+  return{in_stock:'In Stock',committed:'Committed',out_of_stock:'Out of Stock',incoming:'Incoming',embargoed:'Embargoed',partial:'Partial'}[s]||s;
 }
 function fd(d){
   if(!d)return'—';
@@ -664,7 +672,7 @@ function populateClassFilter(){
 
 function downloadCsv(){
   // Exports ALWAYS in units (the €/$ toggle never affects downloads).
-  var rows=[['SKU','Display Name','Class','Lifecycle','Location','Status','Max Build Today','Avail Today','Next Avail Date','Next Qty','Open Demand','Committable','Overridden']];
+  var rows=[['SKU','Display Name','Class','Lifecycle','Location','Status','Max Build Today','Avail Today','Next Avail Date','Next Qty','Open Demand','Committable','First Shortfall','Overridden']];
   all.forEach(function(i){
     rows.push([
       i.item_name||'',
@@ -679,6 +687,7 @@ function downloadCsv(){
       i.next_available_qty!=null?i.next_available_qty:'',
       i.total_open_demand!=null?i.total_open_demand:0,
       i.committable==null?'':i.committable,
+      i.first_shortfall_date||'',
       i.overridden?'Yes':''
     ]);
   });
@@ -712,6 +721,11 @@ function downloadXlsx(){
     {h:'Next Qty',       fn:function(i){return i.next_available_qty!=null?i.next_available_qty:null;},t:'n'},
     {h:'Open Demand',    fn:function(i){return i.total_open_demand!=null?i.total_open_demand:0;},t:'n'},
     {h:'Committable',    fn:function(i){return i.committable;},                                t:'n'},
+    {h:'First Shortfall',fn:function(i){
+      if(!i.first_shortfall_date)return null;
+      var d=new Date(i.first_shortfall_date);
+      return isNaN(d.getTime())?null:d;
+    },t:'d'},
     {h:'Overridden',     fn:function(i){return i.overridden?'Yes':'';},                        t:'s'}
   ];
 
@@ -1130,7 +1144,7 @@ function iDS(items,pf,cur,thr,today){
     }else if(item.next_available_date){
       var nd=iPD(item.next_available_date),nq=item.next_available_qty||0,rN=nq*price,dt=iDD(today,nd);
       if(rN>=thr)prep.push({item:item,revP:rN,units:nq,bucket:iBk(dt),date:item.next_available_date,daysTo:dt});
-    }else if(avail>0&&commit<=0&&rD>=thr){
+    }else if((avail>0||item.status==='committed')&&commit<=0&&rD>=thr){
       watch.push({item:item,revP:rD,units:demand,bucket:1,date:null,daysTo:0});
     }else if(item.status==='out_of_stock'&&rD>=thr){
       hold.push({item:item,revP:rD,units:demand,bucket:1,date:null,daysTo:0});
@@ -1196,7 +1210,7 @@ function iVX(items,pf,cur,today,otherMap){
   var interco=[];
   if(loc==='usa3pl'){
     items.forEach(function(usaItem){
-      if(!['out_of_stock','incoming'].includes(usaItem.status)||(usaItem.total_open_demand||0)<=0)return;
+      if(!['out_of_stock','incoming','committed'].includes(usaItem.status)||(usaItem.total_open_demand||0)<=0)return;
       var vItem=otherMap[usaItem.item_id];
       if(!vItem||(vItem.committable||0)<=0)return;
       var price=usaItem[pf]||0;if(!price)return;
