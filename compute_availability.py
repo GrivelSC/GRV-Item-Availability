@@ -5,6 +5,7 @@ Computes time-phased net availability staircase for each FG x location.
 
 import json
 import math
+import os
 from datetime import date, timedelta
 from collections import defaultdict
 
@@ -1069,8 +1070,105 @@ def run(config_path, data_dir, output_path, metadata_path):
     with open(metadata_path, "w") as f:
         json.dump(meta, f, indent=2)
 
+    # WBR slim snapshots (week-start + WoW baseline) — non-fatal on failure
+    update_wbr_snapshots(results, os.path.dirname(output_path) or ".")
+
     print(f"Done. {len(results)} records written.")
     return output
+
+
+# ---------------------------------------------------------------------------
+# WBR snapshot helpers (Weekly Business Review)
+# ---------------------------------------------------------------------------
+# Two slim snapshot files live next to availability.json:
+#   wbr_weekstart.json — the EARLIEST snapshot of the current ISO week
+#                        (Monday's refresh when Monday is refreshed).
+#   wbr_baseline.json  — the earliest snapshot of the most recent PRIOR
+#                        refreshed week.  This is the WoW comparison anchor
+#                        used by the app (header deltas + WBR tab).
+# Rotation on every refresh:
+#   - no weekstart file        → current snapshot becomes weekstart
+#   - weekstart same ISO week  → weekstart untouched (earliest preserved)
+#   - weekstart older ISO week → weekstart promoted to baseline,
+#                                current snapshot becomes new weekstart
+# Failures here must NEVER break the main refresh — everything is wrapped.
+
+def _slim_snapshot(results):
+    """Slim per-SKU records for WoW comparison (no staircases — small file)."""
+    slim = []
+    for r in results:
+        if r.get("status") == "error":
+            continue
+        slim.append({
+            "item_id":             r.get("item_id"),
+            "item_name":           r.get("item_name", ""),
+            "item_display_name":   r.get("item_display_name", ""),
+            "item_class":          r.get("item_class", ""),
+            "lifecycle":           r.get("lifecycle", ""),
+            "location":            r.get("location"),
+            "status":              r.get("status"),
+            "available_today":     r.get("available_today"),
+            "available_today_dtc": r.get("available_today_dtc"),
+            "total_open_demand":   r.get("total_open_demand"),
+            "committable":         r.get("committable"),
+            "next_available_date": r.get("next_available_date"),
+            "next_available_qty":  r.get("next_available_qty"),
+            "avg_eur_per_unit":    r.get("avg_eur_per_unit"),
+            "avg_usd_per_unit":    r.get("avg_usd_per_unit"),
+            "overridden":          bool(r.get("overridden")),
+        })
+    return slim
+
+
+def update_wbr_snapshots(results, snapshot_dir):
+    """
+    Maintain wbr_weekstart.json / wbr_baseline.json per the rotation rules
+    documented above.  snapshot_dir = directory of availability.json so the
+    files ride along to docs/ with the rest of the outputs.
+    """
+    from datetime import datetime
+    try:
+        today = date.today()
+        iso_year, iso_week, _ = today.isocalendar()
+        ws_path = os.path.join(snapshot_dir, "wbr_weekstart.json")
+        bl_path = os.path.join(snapshot_dir, "wbr_baseline.json")
+
+        current = {
+            "snapshot_date": datetime.now().isoformat(),
+            "iso_year":      iso_year,
+            "iso_week":      iso_week,
+            "items":         _slim_snapshot(results),
+        }
+
+        existing = None
+        if os.path.exists(ws_path):
+            try:
+                with open(ws_path) as f:
+                    existing = json.load(f)
+            except Exception as e:
+                print(f"  WARN: could not read {ws_path} ({e}) — recreating")
+
+        if existing is None:
+            with open(ws_path, "w") as f:
+                json.dump(current, f)
+            print(f"  WBR: week-start snapshot created (W{iso_week} {iso_year})")
+            return
+
+        ex_key = (int(existing.get("iso_year", 0)),
+                  int(existing.get("iso_week", 0)))
+        if ex_key < (iso_year, iso_week):
+            # Crossing into a new week: promote old week-start to baseline.
+            with open(bl_path, "w") as f:
+                json.dump(existing, f)
+            with open(ws_path, "w") as f:
+                json.dump(current, f)
+            print(f"  WBR: baseline promoted (W{ex_key[1]} {ex_key[0]} week-start) "
+                  f"· new week-start W{iso_week} {iso_year}")
+        else:
+            # Same week (or clock skew): keep the earliest snapshot untouched.
+            print(f"  WBR: week-start preserved (W{ex_key[1]} {ex_key[0]})")
+    except Exception as e:
+        print(f"  WARN: WBR snapshot update failed (non-fatal): {e}")
 
 
 # ---------------------------------------------------------------------------
