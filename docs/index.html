@@ -71,6 +71,9 @@ select option{background:var(--surface);}
 .s-cmt .stat-val{color:var(--amber);}
 .s-out .stat-val{color:var(--red);}
 .s-emb .stat-val{color:var(--purple);}
+.stat-delta{display:block;font-family:var(--mono);font-size:10px;font-weight:600;margin-top:.25rem;color:var(--dim);}
+.stat-delta.good{color:var(--green);}
+.stat-delta.bad{color:var(--red);}
 
 /* TABLE */
 .tbl-wrap{flex:1;overflow:auto;padding:0 1.5rem 2rem;}
@@ -208,6 +211,25 @@ tr.is-overridden td:first-child{box-shadow:inset 3px 0 0 var(--amber);}
 .intel-un{display:block;font-size:10px;color:var(--dim);}
 .intel-more{font-size:10px;color:var(--dim);padding:.3rem 0;}
 .intel-empty{font-size:12px;color:var(--dim);padding:.85rem 0;text-align:center;}
+/* ── WBR ──────────────────────────────────────────────────────── */
+.wave-row{display:flex;align-items:center;gap:.55rem;margin:.22rem 0;}
+.wave-lbl{width:46px;font-size:9px;color:var(--dim);font-family:var(--mono);text-align:right;flex-shrink:0;}
+.wave-bar{flex:1;height:13px;display:flex;border-radius:2px;overflow:hidden;background:var(--border);}
+.wave-in{background:var(--green);height:100%;}
+.wave-inc{background:var(--blue);opacity:.5;height:100%;}
+.wave-pct{width:40px;font-size:9px;color:var(--muted);font-family:var(--mono);flex-shrink:0;}
+.wbr-legend{display:flex;gap:1.1rem;font-size:10px;color:var(--muted);margin:.15rem 0 .55rem;align-items:center;}
+.wbr-sw{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:.3rem;vertical-align:-1px;}
+.wave-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:.9rem;}
+.wave-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:.7rem .9rem;}
+.wave-card-hd{display:flex;align-items:baseline;gap:.5rem;margin-bottom:.4rem;}
+.wave-card-nm{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;}
+.wave-card-pc{font-family:var(--mono);font-size:15px;font-weight:700;}
+.wave-card-ct{font-size:9px;color:var(--dim);}
+.wave-foot{font-size:10px;color:var(--dim);font-style:italic;margin-top:.45rem;}
+.wbr-com-line{font-size:12px;color:var(--text);padding:.26rem 0;border-bottom:1px solid var(--border);line-height:1.45;}
+.wbr-com-line:last-child{border-bottom:none;}
+.wbr-note{font-size:11px;color:var(--dim);padding:.6rem 0;}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 </head>
@@ -222,6 +244,7 @@ tr.is-overridden td:first-child{box-shadow:inset 3px 0 0 var(--amber);}
   <div class="h-sep"></div>
   <div class="view-nav">
     <button class="view-tab active" id="vtab-avail" onclick="switchView('availability')">Item Availability</button>
+    <button class="view-tab" id="vtab-wbr" onclick="switchView('wbr')">WBR</button>
     <button class="view-tab intel-tab" id="vtab-intel" onclick="switchView('intelligence')">✦ Intelligence</button>
   </div>
   <div class="h-right">
@@ -322,6 +345,62 @@ tr.is-overridden td:first-child{box-shadow:inset 3px 0 0 var(--amber);}
 
 </div>
 <!-- ── end Intelligence Panel ─────────────────────────────── -->
+
+<!-- ── WBR Panel (Weekly Business Review) ─────────────────── -->
+<div id="wbr-panel" class="intel-panel" style="display:none;">
+
+  <div class="intel-hdr">
+    <div>
+      <span class="intel-title">WBR · Weekly Business Review</span>
+      <span class="intel-ctx" id="wbr-ctx">—</span>
+    </div>
+    <button class="intel-recalc" onclick="generateWbr()">↺ Recalculate</button>
+  </div>
+
+  <div id="wbr-kpis" class="summary" style="padding:.8rem 0;"></div>
+
+  <div class="intel-section">
+    <div class="intel-sec-hdr" onclick="toggleIS('wc')">
+      <span class="intel-sec-icon">✎</span>
+      <span class="intel-sec-name">WoW Commentary</span>
+      <span class="intel-sec-sum" id="wc-sum">—</span>
+      <span class="intel-sec-tog open" id="wc-tog">▼</span>
+    </div>
+    <div class="intel-sec-body open" id="wc-body"></div>
+  </div>
+
+  <div class="intel-section">
+    <div class="intel-sec-hdr" onclick="toggleIS('wt')">
+      <span class="intel-sec-icon">▦</span>
+      <span class="intel-sec-name">Incoming Wave — Total</span>
+      <span class="intel-sec-sum" id="wt-sum">—</span>
+      <span class="intel-sec-tog open" id="wt-tog">▼</span>
+    </div>
+    <div class="intel-sec-body open" id="wt-body"></div>
+  </div>
+
+  <div class="intel-section">
+    <div class="intel-sec-hdr" onclick="toggleIS('wk')">
+      <span class="intel-sec-icon">▤</span>
+      <span class="intel-sec-name">Incoming Wave — By Class</span>
+      <span class="intel-sec-sum" id="wk-sum">—</span>
+      <span class="intel-sec-tog open" id="wk-tog">▼</span>
+    </div>
+    <div class="intel-sec-body open" id="wk-body"></div>
+  </div>
+
+  <div class="intel-section">
+    <div class="intel-sec-hdr" onclick="toggleIS('wm')">
+      <span class="intel-sec-icon">⇄</span>
+      <span class="intel-sec-name">WoW Movers</span>
+      <span class="intel-sec-sum" id="wm-sum">—</span>
+      <span class="intel-sec-tog open" id="wm-tog">▼</span>
+    </div>
+    <div class="intel-sec-body open" id="wm-body"></div>
+  </div>
+
+</div>
+<!-- ── end WBR Panel ──────────────────────────────────────── -->
 
 <div class="charts-bar" id="charts-bar">
   <div class="chart-panel">
@@ -443,12 +522,18 @@ tr.is-overridden td:first-child{box-shadow:inset 3px 0 0 var(--amber);}
 <script>
 'use strict';
 var all=[], shown=[], loc='verrayes', sk='item_name', sd=1, open_=new Set(), valueMode=false;
+var wbrBase=null;   // previous-week baseline snapshot (wbr_baseline.json) or null
 
 async function boot(){
   try{
     const base='/GRV-Item-Availability/';
     const [av,me]=await Promise.all([fetch(base+'availability.json').then(r=>r.json()),fetch(base+'metadata.json').then(r=>r.json())]);
     all=av.items||[];
+    // WoW baseline — optional file, absent until the second refreshed week
+    try{
+      const wb=await fetch(base+'wbr_baseline.json');
+      if(wb.ok)wbrBase=await wb.json();
+    }catch(e){wbrBase=null;}
     populateClassFilter();
     if(me.refreshed_at){
       const d=new Date(me.refreshed_at);
@@ -526,6 +611,7 @@ function filter(){
   var total=all.filter(function(i){return i.location===loc;}).length;
   document.getElementById('f-count').textContent=shown.length+' / '+total+' SKUs';
   if(activeView==='intelligence'){generateIntel();return;}
+  if(activeView==='wbr'){generateWbr();return;}
   render();
 }
 
@@ -534,9 +620,54 @@ function sort_(k){
   filter();
 }
 
+// ── WoW baseline helpers ──────────────────────────────────────
+// Apply the SAME filter predicate as filter() to the previous-week
+// baseline snapshot, so header deltas are always like-for-like.
+function wbrItems(){
+  if(!wbrBase||!wbrBase.items)return null;
+  var lc=document.getElementById('lc-sel').value;
+  var cl=document.getElementById('cl-sel').value;
+  var st=document.getElementById('st-sel').value;
+  var q=document.getElementById('srch').value.toLowerCase().trim();
+  return wbrBase.items.filter(function(i){
+    if(i.location!==loc)return false;
+    if(lc&&i.lifecycle!==lc)return false;
+    if(cl&&i.item_class!==cl)return false;
+    if(st&&i.status!==st)return false;
+    if(q&&!(i.item_name||'').toLowerCase().includes(q)&&!(i.item_display_name||'').toLowerCase().includes(q))return false;
+    return true;
+  });
+}
+function wbrCounts(){
+  var items=wbrItems();
+  if(!items)return null;
+  var c={total:items.length,in_stock:0,committed:0,incoming:0,out_of_stock:0,embargoed:0,
+         date:wbrBase.snapshot_date?fd(String(wbrBase.snapshot_date).slice(0,10)):'previous week'};
+  items.forEach(function(i){if(c[i.status]!==undefined)c[i.status]++;});
+  return c;
+}
+
 function render(){
   var s={total:shown.length,in_stock:0,committed:0,incoming:0,out_of_stock:0,embargoed:0};
   shown.forEach(function(i){if(s[i.status]!==undefined)s[i.status]++;});
+  // ── WoW baseline counts (same filter predicate applied to wbr_baseline) ──
+  var wb=wbrCounts();
+  function dchip(key,goodDir){
+    // goodDir: +1 = increase is good, -1 = increase is bad, 0 = neutral
+    if(!wb)return'';
+    var cur=key==='total'?s.total:s[key];
+    var base=key==='total'?wb.total:wb[key];
+    var d=cur-base;
+    var arrow=d>0?'▲':d<0?'▼':'·';
+    var cls=d===0?'':(goodDir===0?'':(d*goodDir>0?'good':'bad'));
+    var pp='';
+    if(key!=='total'&&s.total>0&&wb.total>0){
+      var dpp=(cur/s.total-base/wb.total)*100;
+      pp=' ('+(dpp>=0?'+':'')+dpp.toFixed(1)+'pp)';
+    }
+    return'<span class="stat-delta '+cls+'" title="WoW vs week-start snapshot of '+esc(wb.date)+'">'+
+      arrow+' '+(d>=0?'+':'')+d+pp+'</span>';
+  }
   var rows='';
   if(shown.length===0){
     rows='<tr class="empty-row"><td colspan="12">No items match the current filters</td></tr>';
@@ -550,12 +681,12 @@ function render(){
   var cs=valueMode?(' ('+(loc==='verrayes'?'€':'$')+')'):'';
   document.getElementById('content').innerHTML=
     '<div class="summary">'+
-    '<div class="stat s-all"><div class="stat-label">Total SKUs</div><div class="stat-val">'+s.total+'</div></div>'+
-    '<div class="stat s-ok"><div class="stat-label">In Stock</div><div class="stat-val">'+s.in_stock+'<div class="stat-pct">'+(s.total?Math.round(s.in_stock/s.total*100):0)+'%</div></div></div>'+
-    '<div class="stat s-cmt"><div class="stat-label">Committed</div><div class="stat-val">'+s.committed+'<div class="stat-pct">'+(s.total?Math.round(s.committed/s.total*100):0)+'%</div></div></div>'+
-    '<div class="stat s-in"><div class="stat-label">Incoming</div><div class="stat-val">'+s.incoming+'<div class="stat-pct">'+(s.total?Math.round(s.incoming/s.total*100):0)+'%</div></div></div>'+
-    '<div class="stat s-out"><div class="stat-label">Out of Stock</div><div class="stat-val">'+s.out_of_stock+'<div class="stat-pct">'+(s.total?Math.round(s.out_of_stock/s.total*100):0)+'%</div></div></div>'+
-    '<div class="stat s-emb"><div class="stat-label">Embargoed</div><div class="stat-val">'+s.embargoed+'<div class="stat-pct">'+(s.total?Math.round(s.embargoed/s.total*100):0)+'%</div></div></div>'+
+    '<div class="stat s-all"><div class="stat-label">Total SKUs</div><div class="stat-val">'+s.total+'</div>'+dchip('total',0)+'</div>'+
+    '<div class="stat s-ok"><div class="stat-label">In Stock</div><div class="stat-val">'+s.in_stock+'<div class="stat-pct">'+(s.total?Math.round(s.in_stock/s.total*100):0)+'%</div></div>'+dchip('in_stock',1)+'</div>'+
+    '<div class="stat s-cmt"><div class="stat-label">Committed</div><div class="stat-val">'+s.committed+'<div class="stat-pct">'+(s.total?Math.round(s.committed/s.total*100):0)+'%</div></div>'+dchip('committed',0)+'</div>'+
+    '<div class="stat s-in"><div class="stat-label">Incoming</div><div class="stat-val">'+s.incoming+'<div class="stat-pct">'+(s.total?Math.round(s.incoming/s.total*100):0)+'%</div></div>'+dchip('incoming',0)+'</div>'+
+    '<div class="stat s-out"><div class="stat-label">Out of Stock</div><div class="stat-val">'+s.out_of_stock+'<div class="stat-pct">'+(s.total?Math.round(s.out_of_stock/s.total*100):0)+'%</div></div>'+dchip('out_of_stock',-1)+'</div>'+
+    '<div class="stat s-emb"><div class="stat-label">Embargoed</div><div class="stat-val">'+s.embargoed+'<div class="stat-pct">'+(s.total?Math.round(s.embargoed/s.total*100):0)+'%</div></div>'+dchip('embargoed',0)+'</div>'+
     '</div>'+
     '<div class="tbl-wrap"><table>'+
     '<thead><tr>'+
@@ -1090,17 +1221,18 @@ function downloadConfig(){
 var activeView='availability';
 function switchView(v){
   activeView=v;
-  var isA=v==='availability';
-  document.getElementById('vtab-avail').classList.toggle('active',isA);
-  document.getElementById('vtab-intel').classList.toggle('active',!isA);
-  document.getElementById('intel-panel').style.display=isA?'none':'block';
-  if(!isA){
-    document.getElementById('charts-bar').classList.remove('visible');
-    document.getElementById('content').style.display='none';
-    generateIntel();
-  }else{
+  document.getElementById('vtab-avail').classList.toggle('active',v==='availability');
+  document.getElementById('vtab-wbr').classList.toggle('active',v==='wbr');
+  document.getElementById('vtab-intel').classList.toggle('active',v==='intelligence');
+  document.getElementById('intel-panel').style.display=v==='intelligence'?'block':'none';
+  document.getElementById('wbr-panel').style.display=v==='wbr'?'block':'none';
+  if(v==='availability'){
     document.getElementById('content').style.display='';
     filter();
+  }else{
+    document.getElementById('charts-bar').classList.remove('visible');
+    document.getElementById('content').style.display='none';
+    if(v==='intelligence')generateIntel();else generateWbr();
   }
 }
 function iPf(){return loc==='verrayes'?'avg_eur_per_unit':'avg_usd_per_unit';}
@@ -1315,6 +1447,248 @@ function iOS(items,pf,cur,wThr,pThr){
     h+='</div>';
   });
   document.getElementById('os-body').innerHTML=h;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// WBR — Weekly Business Review
+// Compares live data (shown, filter-scoped) vs wbr_baseline.json
+// (earliest snapshot of the most recent prior refreshed week).
+// Incoming Wave: rolling 12-month forward projection from staircases.
+// ═══════════════════════════════════════════════════════════════
+var WAVE_MONTHS=12;
+function wbrMonths(){
+  var now=new Date(),out=[],mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  for(var m=0;m<WAVE_MONTHS;m++){
+    var end=new Date(now.getFullYear(),now.getMonth()+m+1,0);
+    var iso=end.getFullYear()+'-'+String(end.getMonth()+1).padStart(2,'0')+'-'+String(end.getDate()).padStart(2,'0');
+    out.push({label:mo[end.getMonth()]+' '+String(end.getFullYear()).slice(2),endIso:iso});
+  }
+  return out;
+}
+// Classify one SKU at a future date: 'in' (projected net stock at that date),
+// 'inc' (no net stock then, but supply scheduled later), 'out' (no supply).
+function wbrClassify(i,endIso){
+  if(i.overridden){
+    if((i.available_today||0)>0)return'in';
+    if(i.next_available_date&&(i.next_available_qty||0)>0)
+      return i.next_available_date<=endIso?'in':'inc';
+    return'out';
+  }
+  var st=i.availability_staircase||[];
+  if(!st.length)return'out';
+  var step=null;
+  for(var j=0;j<st.length;j++){
+    if(st[j].display_date<=endIso)step=st[j];else break;
+  }
+  if(step&&step.net_available>0)return'in';
+  for(var k=0;k<st.length;k++){
+    if(st[k].display_date>endIso&&st[k].net_available>0)return'inc';
+  }
+  return'out';
+}
+function wbrWaveData(items){
+  return wbrMonths().map(function(b){
+    var c={label:b.label,endIso:b.endIso,inS:0,inc:0,out:0};
+    items.forEach(function(i){
+      var k=wbrClassify(i,b.endIso);
+      if(k==='in')c.inS++;else if(k==='inc')c.inc++;else c.out++;
+    });
+    return c;
+  });
+}
+function wbrWaveRows(wave){
+  var h='';
+  wave.forEach(function(b){
+    var tot=b.inS+b.inc+b.out;if(!tot)return;
+    var pIn=b.inS/tot*100,pInc=b.inc/tot*100;
+    h+='<div class="wave-row"><span class="wave-lbl">'+b.label+'</span>'+
+      '<div class="wave-bar"><div class="wave-in" style="width:'+pIn.toFixed(1)+'%"></div>'+
+      '<div class="wave-inc" style="width:'+pInc.toFixed(1)+'%"></div></div>'+
+      '<span class="wave-pct">'+Math.round(pIn)+'%</span></div>';
+  });
+  return h;
+}
+function wbrLegend(){
+  return'<div class="wbr-legend">'+
+    '<span><span class="wbr-sw" style="background:var(--green)"></span>In stock</span>'+
+    '<span><span class="wbr-sw" style="background:var(--blue);opacity:.5"></span>Incoming</span>'+
+    '<span><span class="wbr-sw" style="background:var(--border)"></span>Out of stock</span></div>';
+}
+function wbrDelta(cur,base,goodDir,pp){
+  var d=cur-base,arrow=d>0?'▲':d<0?'▼':'·';
+  var cls=d===0||goodDir===0?'':(d*goodDir>0?'good':'bad');
+  var ppStr=pp!=null?' ('+(pp>=0?'+':'')+pp.toFixed(1)+'pp)':'';
+  return'<span class="stat-delta '+cls+'">'+arrow+' '+(d>=0?'+':'')+
+    (typeof d==='number'&&Math.abs(d)>=1000?iFR(Math.abs(d)*(d<0?-1:1),'').replace('-',''):d)+ppStr+'</span>';
+}
+function generateWbr(){
+  if(!all||!all.length)return;
+  var pf=iPf(),cur_=iCur();
+  var items=shown;
+  var baseItems=wbrItems();   // null until baseline exists
+  var lc=document.getElementById('lc-sel').value||'All lifecycles';
+  var cl=document.getElementById('cl-sel').value||'All classes';
+  var baseDate=baseItems&&wbrBase.snapshot_date?fd(String(wbrBase.snapshot_date).slice(0,10)):null;
+  document.getElementById('wbr-ctx').textContent=
+    (loc==='verrayes'?'VERRAYES':'USA-3PL')+' · '+lc+' · '+cl+' · '+items.length+' SKUs'+
+    (baseDate?' · WoW vs '+baseDate:' · no baseline yet');
+
+  // ── KPI strip ──
+  var s={total:items.length,in_stock:0,committed:0,incoming:0,out_of_stock:0,embargoed:0};
+  items.forEach(function(i){if(s[i.status]!==undefined)s[i.status]++;});
+  var b=null;
+  if(baseItems){
+    b={total:baseItems.length,in_stock:0,committed:0,incoming:0,out_of_stock:0,embargoed:0};
+    baseItems.forEach(function(i){if(b[i.status]!==undefined)b[i.status]++;});
+  }
+  function commitVal(arr){
+    var v=0;arr.forEach(function(i){var p=i[pf];if(p&&(i.committable||0)>0)v+=i.committable*p;});return v;
+  }
+  var cvNow=commitVal(items),cvBase=baseItems?commitVal(baseItems):null;
+  function card(cls,lbl,val,sub,chip){
+    return'<div class="stat '+cls+'"><div class="stat-label">'+lbl+'</div><div class="stat-val">'+val+
+      (sub?'<div class="stat-pct">'+sub+'</div>':'')+'</div>'+(chip||'')+'</div>';
+  }
+  function chip(key,goodDir){
+    if(!b)return'';
+    var c=s[key],ba=b[key],pp=null;
+    if(key!=='total'&&s.total>0&&b.total>0)pp=(c/s.total-ba/b.total)*100;
+    return wbrDelta(c,ba,goodDir,pp);
+  }
+  document.getElementById('wbr-kpis').innerHTML=
+    card('s-all','Total SKUs',s.total,null,chip('total',0))+
+    card('s-ok','In Stock',s.in_stock,Math.round(s.total?s.in_stock/s.total*100:0)+'%',chip('in_stock',1))+
+    card('s-cmt','Committed',s.committed,Math.round(s.total?s.committed/s.total*100:0)+'%',chip('committed',0))+
+    card('s-in','Incoming',s.incoming,Math.round(s.total?s.incoming/s.total*100:0)+'%',chip('incoming',0))+
+    card('s-out','Out of Stock',s.out_of_stock,Math.round(s.total?s.out_of_stock/s.total*100:0)+'%',chip('out_of_stock',-1))+
+    card('s-all','Committable '+cur_,iFR(cvNow,cur_),null,
+      cvBase!=null?wbrDelta(Math.round(cvNow),Math.round(cvBase),1,null):'');
+
+  // ── Incoming Wave — total ──
+  var wave=wbrWaveData(items);
+  var last=wave[wave.length-1],lastTot=last?last.inS+last.inc+last.out:0;
+  document.getElementById('wt-sum').textContent=last&&lastTot?
+    Math.round(last.inS/lastTot*100)+'% in stock by '+last.label+' · '+last.out+' SKUs no scheduled supply':'—';
+  document.getElementById('wt-body').innerHTML=wbrLegend()+wbrWaveRows(wave);
+
+  // ── Incoming Wave — by class ──
+  var byCl={};
+  items.forEach(function(i){var c=i.item_class||'Unclassified';(byCl[c]=byCl[c]||[]).push(i);});
+  var clKeys=Object.keys(byCl).sort(function(a,bx){return byCl[bx].length-byCl[a].length;});
+  var gh='';
+  clKeys.forEach(function(c){
+    var arr=byCl[c],w=wbrWaveData(arr);
+    var inNow=arr.filter(function(i){return i.status==='in_stock';}).length;
+    var wl=w[w.length-1],wt=wl.inS+wl.inc+wl.out;
+    gh+='<div class="wave-card"><div class="wave-card-hd">'+
+      '<span class="wave-card-nm">'+esc(c)+'</span>'+
+      '<span class="wave-card-pc">'+Math.round(arr.length?inNow/arr.length*100:0)+'%</span>'+
+      '<span class="wave-card-ct">'+arr.length+' SKUs · '+inNow+' in stock today</span></div>'+
+      wbrWaveRows(w)+
+      '<div class="wave-foot">→ '+(wt?Math.round(wl.inS/wt*100):0)+'% by '+wl.label+
+      (wl.out>0?' · '+(wt?Math.round(wl.out/wt*100):0)+'% no scheduled supply':'')+'</div></div>';
+  });
+  document.getElementById('wk-sum').textContent=clKeys.length+' classes';
+  document.getElementById('wk-body').innerHTML='<div class="wave-grid">'+gh+'</div>';
+
+  // ── WoW movers + commentary ──
+  if(!baseItems){
+    var note='<div class="wbr-note">Baseline forming — WoW metrics will appear after the first refresh of next week promotes this week\u2019s opening snapshot to <span class="mono">wbr_baseline.json</span>.</div>';
+    document.getElementById('wm-sum').textContent='no baseline yet';
+    document.getElementById('wm-body').innerHTML=note;
+    document.getElementById('wc-sum').textContent='no baseline yet';
+    document.getElementById('wc-body').innerHTML=note;
+    return;
+  }
+  var baseMap={};baseItems.forEach(function(i){baseMap[i.item_id]=i;});
+  var entered=[],exited=[],deltas=[],slipped=[];
+  items.forEach(function(i){
+    var p=i[pf]||0,o=baseMap[i.item_id];
+    if(!o)return;
+    if(i.status==='in_stock'&&o.status!=='in_stock')entered.push({i:i,o:o,v:(i.total_open_demand||0)*p});
+    if(i.status==='out_of_stock'&&o.status!=='out_of_stock')exited.push({i:i,o:o,v:(i.total_open_demand||0)*p});
+    var da=(i.available_today||0)-(o.available_today||0);
+    if(da!==0&&p>0)deltas.push({i:i,o:o,d:da,v:da*p});
+    if(i.next_available_date&&o.next_available_date){
+      var slip=iDD(iPD(o.next_available_date),iPD(i.next_available_date));
+      if(slip>7)slipped.push({i:i,days:slip,from:o.next_available_date,to:i.next_available_date});
+    }
+  });
+  deltas.sort(function(a,bx){return Math.abs(bx.v)-Math.abs(a.v);});
+  entered.sort(function(a,bx){return bx.v-a.v;});exited.sort(function(a,bx){return bx.v-a.v;});
+  slipped.sort(function(a,bx){return bx.days-a.days;});
+  function mrow(sku,nm,detail,rv,rvStyle,un){
+    return'<div class="intel-row"><div class="intel-rl"><span class="intel-sku">'+esc(sku)+'</span>'+
+      '<span class="intel-nm">'+nm+'</span><span class="intel-ac">'+detail+'</span></div>'+
+      '<div class="intel-rr"><span class="intel-rv" style="'+(rvStyle||'')+'">'+rv+'</span>'+
+      '<span class="intel-un">'+un+'</span></div></div>';
+  }
+  var mh='';
+  if(entered.length){mh+='<div class="intel-cg"><div class="intel-ct push">▲ ENTERED IN STOCK ('+entered.length+')</div>';
+    entered.slice(0,6).forEach(function(e){mh+=mrow(e.i.item_name,esc((e.i.item_display_name||'').slice(0,44)),'was '+sl(e.o.status)+' on '+baseDate,iFR(e.v,cur_),'color:var(--green)',(e.i.available_today||0)+' avail today');});
+    if(entered.length>6)mh+='<div class="intel-more">+'+(entered.length-6)+' more</div>';mh+='</div>';}
+  if(exited.length){mh+='<div class="intel-cg"><div class="intel-ct hold">▼ WENT OUT OF STOCK ('+exited.length+')</div>';
+    exited.slice(0,6).forEach(function(e){mh+=mrow(e.i.item_name,esc((e.i.item_display_name||'').slice(0,44)),'was '+sl(e.o.status)+' on '+baseDate,iFR(e.v,cur_),'color:var(--red)',(e.i.total_open_demand||0)+' demand uncovered');});
+    if(exited.length>6)mh+='<div class="intel-more">+'+(exited.length-6)+' more</div>';mh+='</div>';}
+  if(deltas.length){mh+='<div class="intel-cg"><div class="intel-ct neutral">⇄ LARGEST AVAILABILITY SWINGS (by value)</div>';
+    deltas.slice(0,6).forEach(function(e){mh+=mrow(e.i.item_name,esc((e.i.item_display_name||'').slice(0,44)),'Avail Today '+(e.o.available_today||0)+' → '+(e.i.available_today||0),(e.v>=0?'+':'')+iFR(Math.abs(e.v)*(e.v<0?-1:1),cur_),'color:'+(e.v>=0?'var(--green)':'var(--red)'),(e.d>=0?'+':'')+e.d+' units');});mh+='</div>';}
+  if(slipped.length){mh+='<div class="intel-cg"><div class="intel-ct watch">⏳ NEXT AVAIL SLIPPED >7 DAYS ('+slipped.length+')</div>';
+    slipped.slice(0,6).forEach(function(e){mh+=mrow(e.i.item_name,esc((e.i.item_display_name||'').slice(0,44)),fd(e.from)+' → '+fd(e.to),'+'+e.days+'d','color:var(--amber)','slip');});
+    if(slipped.length>6)mh+='<div class="intel-more">+'+(slipped.length-6)+' more</div>';mh+='</div>';}
+  if(!mh)mh='<div class="intel-empty">No WoW movers in current filter.</div>';
+  document.getElementById('wm-sum').textContent=entered.length+' in · '+exited.length+' out · '+slipped.length+' slipped';
+  document.getElementById('wm-body').innerHTML=mh;
+
+  // ── Commentary (deterministic, 5–10 lines) ──
+  var lines=[];
+  var rNow=s.total?s.in_stock/s.total:0,rBase=b.total?b.in_stock/b.total:0;
+  var dpp=(rNow-rBase)*100;
+  lines.push('In-stock rate <b>'+(rNow*100).toFixed(1)+'%</b> ('+s.in_stock+'/'+s.total+' SKUs), '+
+    (dpp>=0?'+':'')+dpp.toFixed(1)+'pp ('+(dpp>=0?'+':'')+Math.round(dpp*100)+'bps) WoW vs '+baseDate+'.');
+  lines.push('Status flows: <b>'+entered.length+'</b> SKUs entered In Stock, <b>'+exited.length+'</b> went Out of Stock; OOS now '+
+    s.out_of_stock+' ('+(s.out_of_stock-b.out_of_stock>=0?'+':'')+(s.out_of_stock-b.out_of_stock)+' WoW), Incoming '+
+    s.incoming+' ('+(s.incoming-b.incoming>=0?'+':'')+(s.incoming-b.incoming)+').');
+  // per-class contribution + mix/rate decomposition
+  var clSet={};items.forEach(function(i){clSet[i.item_class||'Unclassified']=1;});
+  baseItems.forEach(function(i){clSet[i.item_class||'Unclassified']=1;});
+  var contrib=[],rateEff=0,mixEff=0;
+  Object.keys(clSet).forEach(function(c){
+    var nNow=items.filter(function(i){return(i.item_class||'Unclassified')===c;});
+    var nBase=baseItems.filter(function(i){return(i.item_class||'Unclassified')===c;});
+    var inNow=nNow.filter(function(i){return i.status==='in_stock';}).length;
+    var inBase=nBase.filter(function(i){return i.status==='in_stock';}).length;
+    var shNow=s.total?nNow.length/s.total:0,shBase=b.total?nBase.length/b.total:0;
+    var rN=nNow.length?inNow/nNow.length:0,rB=nBase.length?inBase/nBase.length:0;
+    rateEff+=shBase*(rN-rB);mixEff+=(shNow-shBase)*rB;
+    contrib.push({c:c,pp:(shNow*rN-shBase*rB)*100,dSku:inNow-inBase});
+  });
+  contrib.sort(function(a,bx){return Math.abs(bx.pp)-Math.abs(a.pp);});
+  var top=contrib.filter(function(x){return Math.abs(x.pp)>=0.05;}).slice(0,3);
+  if(top.length){
+    lines.push('Class contribution to the '+(dpp>=0?'+':'')+dpp.toFixed(1)+'pp: '+
+      top.map(function(t){return esc(t.c)+' '+(t.pp>=0?'+':'')+t.pp.toFixed(1)+'pp ('+(t.dSku>=0?'+':'')+t.dSku+' SKUs)';}).join(', ')+'.');
+  }
+  var rePP=rateEff*100,mePP=mixEff*100,resPP=dpp-rePP-mePP;
+  lines.push('Decomposition: rate effect '+(rePP>=0?'+':'')+rePP.toFixed(1)+'pp, mix effect '+(mePP>=0?'+':'')+mePP.toFixed(1)+'pp'+
+    (Math.abs(resPP)>=0.05?', interaction '+(resPP>=0?'+':'')+resPP.toFixed(1)+'pp':'')+
+    (Math.abs(mePP)<0.1?' — change is driven by within-class availability, not portfolio mix.':' — portfolio mix shifted WoW.'));
+  function riskVal(arr){var v=0;arr.forEach(function(i){var p=i[pf];if(p&&i.status==='out_of_stock')v+=(i.total_open_demand||0)*p;});return v;}
+  var rvNow=riskVal(items),rvBase=riskVal(baseItems);
+  lines.push('Committable value '+iFR(cvNow,cur_)+' ('+(cvNow-cvBase>=0?'+':'−')+iFR(Math.abs(cvNow-cvBase),cur_)+' WoW); demand at risk on OOS '+
+    iFR(rvNow,cur_)+' ('+(rvNow-rvBase>=0?'+':'−')+iFR(Math.abs(rvNow-rvBase),cur_)+').');
+  var drv=[];
+  if(entered.length)drv.push(esc(entered[0].i.item_name)+' entered stock ('+iFR(entered[0].v,cur_)+' open demand)');
+  if(exited.length)drv.push(esc(exited[0].i.item_name)+' went OOS ('+iFR(exited[0].v,cur_)+')');
+  if(slipped.length)drv.push(esc(slipped[0].i.item_name)+' slipped +'+slipped[0].days+'d');
+  if(drv.length)lines.push('Top single-SKU drivers: '+drv.join('; ')+'.');
+  if(last&&lastTot){
+    var mid=wave[Math.min(2,wave.length-1)],midTot=mid.inS+mid.inc+mid.out;
+    lines.push('Projection: in-stock reaches '+(midTot?Math.round(mid.inS/midTot*100):0)+'% by '+mid.label+' and '+
+      Math.round(last.inS/lastTot*100)+'% by '+last.label+'; '+last.out+' SKUs ('+
+      (lastTot?Math.round(last.out/lastTot*100):0)+'%) have no scheduled supply within 12 months.');
+  }
+  document.getElementById('wc-sum').textContent=(dpp>=0?'+':'')+dpp.toFixed(1)+'pp in-stock WoW';
+  document.getElementById('wc-body').innerHTML=lines.map(function(l){return'<div class="wbr-com-line">'+l+'</div>';}).join('');
 }
 
 boot();
