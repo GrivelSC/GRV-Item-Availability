@@ -268,6 +268,44 @@ def run_all_queries(session, config):
         f"ORDER BY tl.expectedshipdate, t.id",
         description="Q4 Open SOs (FG-filtered, incl. status A=Pending Approval for eComm pre-orders)")
 
+    # Q4D — Open SOs, DTC channels only (separate pass for "Avail Today - DTC").
+    # Identical to Q4 plus a GT Order Type filter (custbody_gt_order_type).
+    # DTC type internal IDs come from config settings.dtc_order_type_ids:
+    #   14 = Shopify Sell, 28 = Private Sport Shop Order,
+    #   29 = Outdoor Pro Link Order, 32 = Amazon Order
+    # ("Shopify Sell with Invoice" has never been used on any transaction —
+    #  verified live 12 Jun 2026 — intentionally not included.)
+    # If the setting is missing/empty, q4d is None: q4d.json is not written
+    # and the engine leaves available_today_dtc null (column shows "—").
+    dtc_ids = config.get("settings", {}).get("dtc_order_type_ids", [])
+    if dtc_ids:
+        dtc_ids_str = ",".join(str(i) for i in dtc_ids)
+        q4d = run_suiteql(session,
+            f"SELECT t.id AS so_id, t.tranid AS so_number, "
+            f"t.subsidiary AS subsidiary_id, BUILTIN.DF(t.subsidiary) AS subsidiary_name, "
+            f"tl.item AS item_id, BUILTIN.DF(tl.item) AS item_name, "
+            f"(-tl.quantity) AS ordered_qty, "
+            f"NVL(tl.quantityshiprecv, 0) AS shipped_qty, "
+            f"(-tl.quantity - NVL(tl.quantityshiprecv, 0)) AS open_qty, "
+            f"tl.expectedshipdate AS expected_ship_date "
+            f"FROM transaction t "
+            f"JOIN transactionline tl ON tl.transaction = t.id "
+            f"WHERE t.type = 'SalesOrd' "
+            f"AND t.status IN ('A', 'B', 'D') "
+            f"AND t.subsidiary IN (1, 3) "
+            f"AND tl.mainline = 'F' "
+            f"AND tl.quantity < 0 "
+            f"AND (-tl.quantity) > NVL(tl.quantityshiprecv, 0) "
+            f"AND tl.isclosed = 'F' "
+            f"AND tl.item IN ({fg_ids_str}) "
+            f"AND t.custbody_gt_order_type IN ({dtc_ids_str}) "
+            f"ORDER BY tl.expectedshipdate, t.id",
+            description="Q4D Open SOs (DTC channels only)")
+    else:
+        q4d = None
+        print("  Note: settings.dtc_order_type_ids missing/empty — skipping Q4D "
+              "(Avail DTC column will be blank)")
+
     # Q7 — Unit rate + open qty per SO line for weighted-average price computation.
     # Kept as row-level (no GROUP BY / no aggregate arithmetic) to stay within
     # SuiteQL's supported syntax. Weighted average is computed in Python by
@@ -311,7 +349,7 @@ def run_all_queries(session, config):
         "ORDER BY tl.expectedreceiptdate, t.id",
         description="Q5 Open POs (incl. status E)")
 
-    return {
+    out = {
         "q1": q1,
         "q2a": q2a,
         "q2b": all_q2b,
@@ -320,6 +358,9 @@ def run_all_queries(session, config):
         "q5": q5,
         "q7": q7,
     }
+    if q4d is not None:
+        out["q4d"] = q4d
+    return out
 
 
 # ---------------------------------------------------------------------------

@@ -129,6 +129,43 @@ QUERIES = {
             "Subsidiary 1=Verrayes, 3=USA-3PL. ~500 rows (down from 11,000+ unfiltered)."
         ),
     },
+    "Q4D": {
+        "description": "Open approved SO lines, DTC channels only (for 'Avail Today - DTC')",
+        "sql": (
+            "SELECT t.id AS so_id, t.tranid AS so_number, "
+            "t.subsidiary AS subsidiary_id, BUILTIN.DF(t.subsidiary) AS subsidiary_name, "
+            "tl.item AS item_id, BUILTIN.DF(tl.item) AS item_name, "
+            "(-tl.quantity) AS ordered_qty, "
+            "NVL(tl.quantityshiprecv, 0) AS shipped_qty, "
+            "(-tl.quantity - NVL(tl.quantityshiprecv, 0)) AS open_qty, "
+            "tl.expectedshipdate AS expected_ship_date "
+            "FROM transaction t "
+            "JOIN transactionline tl ON tl.transaction = t.id "
+            "WHERE t.type = 'SalesOrd' "
+            "AND t.status IN ('A', 'B', 'D') "
+            "AND t.subsidiary IN (1, 3) "
+            "AND tl.mainline = 'F' "
+            "AND tl.quantity < 0 "
+            "AND (-tl.quantity) > NVL(tl.quantityshiprecv, 0) "
+            "AND tl.isclosed = 'F' "
+            "AND tl.item IN ({fg_ids}) "
+            "AND t.custbody_gt_order_type IN ({dtc_ids}) "
+            "ORDER BY tl.expectedshipdate, t.id"
+        ),
+        "paginate": True,
+        "page_size": 1000,
+        "notes": (
+            "Identical to Q4 plus the GT Order Type filter. "
+            "{dtc_ids} from config settings.dtc_order_type_ids: "
+            "14=Shopify Sell, 28=Private Sport Shop Order, "
+            "29=Outdoor Pro Link Order, 32=Amazon Order. "
+            "ExpertVoice (23) intentionally excluded (internally treated as B2B). "
+            "'Shopify Sell with Invoice' never used on any transaction (verified 12 Jun 2026). "
+            "Feeds an independent second compute_staircase pass whose only published "
+            "output is available_today_dtc — the channel-ceiling 'what if only DTC "
+            "demand existed'. Always >= available_today by construction."
+        ),
+    },
     "Q5": {
         "description": "Open PO lines (incoming vendor + intercompany supply)",
         "sql": (
@@ -878,6 +915,20 @@ def run(config_path, data_dir, output_path, metadata_path):
         q7 = []
         print("  Note: q7.json not found — price fields will be null (run refresh to generate)")
 
+    # Q4D — DTC-only open SO lines (optional: written only when
+    # settings.dtc_order_type_ids is configured).  Drives the fully separated
+    # second staircase pass for "Avail Today - DTC".  None (file absent) means
+    # the DTC pass is skipped and available_today_dtc stays null; an EMPTY
+    # list is valid (no open DTC demand → DTC ceiling = supply-driven minimum).
+    try:
+        with open(f"{data_dir}/q4d.json") as f:
+            q4d = json.load(f)
+        print(f"  q4d.json loaded ({len(q4d)} rows)")
+    except FileNotFoundError:
+        q4d = None
+        print("  Note: q4d.json not found — available_today_dtc will be null "
+              "(set settings.dtc_order_type_ids and re-run refresh to enable)")
+
     # Weighted average: accumulate revenue_sum and qty_sum per (item, subsidiary)
     # then divide in Python.  Subsidiary 1 = EUR (Italy), Subsidiary 3 = USD (USA).
     _price_rev = {}   # {(item_id, sub_id): revenue_sum}
@@ -952,11 +1003,39 @@ def run(config_path, data_dir, output_path, metadata_path):
                 # Apply manual override (bypasses calculation) if one exists for
                 # this (FG, location).  Prices above are preserved so the app's
                 # €/$ toggle can still value the overridden quantities.
+                # available_today_dtc defaults to null; the DTC pass below only
+                # runs for non-overridden records (override bypasses ALL calc).
+                record["available_today_dtc"] = None
                 ov = override_lookup.get((fg_id, loc))
                 if ov is not None:
                     apply_override(record, ov)
                 else:
                     record["overridden"] = False
+                    # ── DTC-only demand pass ("Avail Today - DTC") ──
+                    # Same engine, same supply, demand restricted to the DTC
+                    # order types (Q4D).  Fully separated second pass: the main
+                    # record computed above is never touched by this block
+                    # except for the single available_today_dtc field.  A
+                    # failure here degrades to null instead of erroring the
+                    # whole record.
+                    if q4d is not None:
+                        try:
+                            record_dtc = compute_staircase(
+                                fg_item_id=fg_id,
+                                location=loc,
+                                inventory_raw=q3,
+                                bom_tree=bom_tree,
+                                po_lines=q5,
+                                so_lines=q4d,
+                                exclusion_set=excl_ids,
+                                embargo_list=embargo_list,
+                                settings=settings,
+                                item_meta=item_meta,
+                            )
+                            record["available_today_dtc"] = \
+                                record_dtc["available_today"]
+                        except Exception as e:
+                            print(f"  WARN: DTC pass failed on FG {fg_id} / {loc}: {e}")
                 results.append(record)
             except Exception as e:
                 print(f"  ERROR on FG {fg_id} / {loc}: {e}")
@@ -983,6 +1062,7 @@ def run(config_path, data_dir, output_path, metadata_path):
         "sku_count_verrayes":   sum(1 for r in results if r.get("location") == "verrayes"),
         "sku_count_usa3pl":     sum(1 for r in results if r.get("location") == "usa3pl"),
         "override_count":       sum(1 for r in results if r.get("overridden")),
+        "dtc_pass":             "ok" if q4d is not None else "skipped",
         "status":               "ok",
         "warnings":             [],
     }
@@ -1076,6 +1156,7 @@ def apply_override(record, ov):
     record["available_today"]     = today_avail          # may be None (empty)
     record["next_available_date"] = next_avail           # may be None (empty)
     record["next_available_qty"]  = next_qty             # may be None (empty)
+    record["available_today_dtc"] = None                 # DTC pass not computed
 
     # Blanked computed fields (None → rendered as "—" / empty in UI & exports)
     record["max_buildable_today"]   = None
