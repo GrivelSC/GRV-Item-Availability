@@ -145,6 +145,7 @@ QUERIES = {
             "AND t.status IN ('A', 'B', 'D', 'E') "
             "AND t.subsidiary IN (1, 3) "
             "AND tl.mainline = 'F' "
+            "AND tl.isclosed = 'F' "
             "AND tl.quantity > NVL(tl.quantityshiprecv, 0) "
             "ORDER BY tl.expectedreceiptdate, t.id"
         ),
@@ -157,6 +158,7 @@ QUERIES = {
             "PO quantities are POSITIVE. open_qty = quantity - quantityshiprecv. "
             "Sub 1 = vendor POs for Verrayes raw materials. Sub 3 = intercompany POs for USA-3PL FGs. "
             "Overdue POs (receipt date < today) rescheduled to today + buffer in engine."
+            "tl.isclosed = 'F' excludes manually closed lines not yet fully received."
         ),
     },
     "Q7": {
@@ -357,8 +359,11 @@ def build_inventory_snapshot(inventory_raw, po_lines, cutoff_date, location,
         receipt_date = _parse_date(rd)
         if receipt_date is None:
             continue
-        # Overdue POs: reschedule to today + buffer
-        if receipt_date < today:
+        # Overdue POs: reschedule to today + buffer.
+        # <= today (not < today): a PO due today that still has open_qty has not
+        # been received into the system yet, so it must not count as supply at
+        # t=0.  It will appear as a +buffer-day event in the staircase instead.
+        if receipt_date <= today:
             receipt_date = today + timedelta(days=overdue_buffer_days)
         if receipt_date > cutoff_date:
             continue
@@ -458,7 +463,7 @@ def find_limiting_components(fg_item_id, snapshot, bom_tree, po_lines,
                 rd = _parse_date(po.get("expected_receipt_date"))
                 if rd is None:
                     continue
-                is_overdue   = rd < today
+                is_overdue   = rd <= today  # today-dated = not yet received → treat as overdue
                 effective_rd = today + timedelta(days=overdue_buffer_days) if is_overdue else rd
                 if next_po_date is None or effective_rd < next_po_date:
                     next_po_date    = effective_rd
@@ -567,7 +572,7 @@ def compute_staircase(fg_item_id, location, inventory_raw, bom_tree,
         rd = _parse_date(po.get("expected_receipt_date"))
         if rd is None:
             continue
-        if rd < today:
+        if rd <= today:  # today-dated POs not yet received: push to today + buffer
             rd = today + timedelta(days=overdue_buffer)
         if today < rd:
             event_dates.add(rd)
@@ -668,21 +673,46 @@ def compute_staircase(fg_item_id, location, inventory_raw, bom_tree,
     if embargo_date:
         staircase = apply_embargo(staircase, embargo_date)
 
+    # ── ATP curve (suffix-min of net availability) ──
+    # atp[i] = min(net_available[j] for all j >= i): the worst future point of
+    # the net curve from this step onward.  This is "cumulative ATP with
+    # lookahead": the units promisable from step i that no already-booked
+    # later demand can ever claw back.  Computed AFTER dedup and embargo so
+    # the curve matches exactly the numbers shown to the user.
+    _run_min = None
+    for _step in reversed(staircase):
+        if _run_min is None or _step["net_available"] < _run_min:
+            _run_min = _step["net_available"]
+        _step["atp"] = int(_run_min)
+
+    # ── First shortfall (D3) ──
+    # First step where booked demand fully consumes or exceeds supply
+    # (computed from buildable vs cumulative demand, NOT from net, so the
+    # embargo zeroing cannot produce a false shortfall).  None if the booked
+    # demand never catches up with supply within the staircase.
+    first_shortfall_date = None
+    for _step in staircase:
+        if (_step["cumulative_demand"] > 0
+                and _step["cumulative_demand"] >= _step["buildable"]):
+            first_shortfall_date = _step["display_date"]
+            break
+
     # ── Summary fields ──
     today_step = staircase[0] if staircase else None
 
     # ── ATP (Available to Promise): find the first future supply event where
     # freely committable units survive through the entire horizon.
-    # For each candidate step (where net increases and is > 0), compute
-    # ATP = min(net from that step through end).  If ATP > 0, this is the
-    # first window with real committable supply — select it.  If ATP = 0,
-    # demand eventually drains all supply from that window, so skip it and
-    # keep scanning.  Save first skipped candidate as fallback so that items
-    # with supply-fully-committed-to-demand still show INCOMING (not OOS).
+    # For each candidate step (where net increases and is > 0), read the
+    # precomputed atp (= min net from that step through end).  If atp > 0,
+    # this is the first window with real committable supply — select it.
+    # If atp = 0, demand eventually drains all supply from that window, so
+    # skip it and keep scanning.  Save first skipped candidate as fallback so
+    # items with supply-fully-committed-to-demand still show INCOMING/COMMITTED
+    # rather than OOS.  Behaviour identical to the previous nested-min scan.
     #
     # Example — RAG12LT.DME:
-    #   Window 2 (22 Jun, buildable=240): net [20,10,4,0,0,0] → ATP=0 → skip
-    #   Window 3 (24 Aug, buildable=1115): net [853,1103,...] → ATP=641 → SELECT
+    #   Window 2 (22 Jun, buildable=240): net [20,10,4,0,0,0] → atp=0 → skip
+    #   Window 3 (24 Aug, buildable=1115): net [853,1103,...] → atp=641 → SELECT
     next_step           = None
     _fallback           = None
     next_available_qty  = None
@@ -690,7 +720,7 @@ def compute_staircase(fg_item_id, location, inventory_raw, bom_tree,
         _snet = staircase[_ni]["net_available"]
         _pnet = staircase[_ni - 1]["net_available"]
         if _snet > _pnet and _snet > 0:
-            _atp = min(s["net_available"] for s in staircase[_ni:])
+            _atp = staircase[_ni]["atp"]
             if _atp > 0:
                 next_step = staircase[_ni]
                 next_available_qty = _atp
@@ -701,22 +731,24 @@ def compute_staircase(fg_item_id, location, inventory_raw, bom_tree,
         next_step = _fallback
         next_available_qty = 0
 
-    # True available_today: the minimum net_available across all staircase steps
-    # where buildable has not yet increased beyond today's level.
-    # This captures the reality that near-term demand can already consume today's
-    # supply before any new PO arrives — so today's units are not truly available
-    # for new orders if they are already spoken for by upcoming shipments.
+    # ── ATS (Available to Sell today) ──
+    # available_today = atp[0]: the through-horizon minimum of the net curve.
+    # These are units sellable TODAY (e.g. loadable to Shopify) that no
+    # already-booked future order can claw back before replenishment covers
+    # it.  If the existing demand book, spread over time, ever drives net
+    # availability to 0 before supply catches up, ATS = 0 and nothing should
+    # be promised today — even if physical stock is on the shelf.
     today_buildable = today_step["buildable"] if today_step else 0
-    available_today = min(
-        (s["net_available"] for s in staircase
-         if s["buildable"] <= today_buildable),
-        default=0,
-    )
+    available_today = staircase[0]["atp"] if staircase else 0
 
     if embargo_date and today < embargo_date:
         status = "embargoed"
     elif available_today > 0:
         status = "in_stock"
+    elif today_buildable > 0:
+        # Physical/buildable stock exists today, but it is fully spoken for
+        # by the existing order book before replenishment covers the gap.
+        status = "committed"
     elif next_step:
         status = "incoming"
     else:
@@ -752,6 +784,7 @@ def compute_staircase(fg_item_id, location, inventory_raw, bom_tree,
         "max_buildable_horizon": max_buildable_horizon,
         "next_available_date": next_step["display_date"] if next_step else None,
         "next_available_qty":  next_available_qty,
+        "first_shortfall_date": first_shortfall_date,
         "limiting_components": today_step["limiting_components"] if today_step else [],
         "availability_staircase": staircase,
     }
@@ -775,7 +808,7 @@ def _find_usa3pl_incoming(fg_item_id, po_lines, relevant_sub,
         rd = _parse_date(po.get("expected_receipt_date"))
         if rd is None:
             continue
-        effective_date = rd if rd >= today else today + timedelta(days=overdue_buffer)
+        effective_date = rd if rd > today else today + timedelta(days=overdue_buffer)  # today-dated → buffer
         incoming.append({
             "item_id":   str(fg_item_id),
             "item_name": fg_name,
@@ -783,7 +816,7 @@ def _find_usa3pl_incoming(fg_item_id, po_lines, relevant_sub,
             "supportable_fg_units": int(float(po.get("open_qty", 0))),
             "next_po_date": effective_date.isoformat(),
             "next_po_qty":  float(po.get("open_qty", 0)),
-            "overdue":      rd < today,
+            "overdue":      rd <= today,  # today-dated = not yet received → overdue
         })
 
     incoming.sort(key=lambda x: x["next_po_date"])
@@ -1048,6 +1081,7 @@ def apply_override(record, ov):
     record["max_buildable_today"]   = None
     record["max_buildable_horizon"] = None
     record["committable"]           = None
+    record["first_shortfall_date"]  = None
     record["limiting_components"]   = []
     record["availability_staircase"] = []
 

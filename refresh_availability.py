@@ -306,6 +306,7 @@ def run_all_queries(session, config):
         "AND t.status IN ('A','B', 'D', 'E') "
         "AND t.subsidiary IN (1, 3) "
         "AND tl.mainline = 'F' "
+        "AND tl.isclosed = 'F' "
         "AND tl.quantity > NVL(tl.quantityshiprecv, 0) "
         "ORDER BY tl.expectedreceiptdate, t.id",
         description="Q5 Open POs (incl. status E)")
