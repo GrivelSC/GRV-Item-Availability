@@ -3229,35 +3229,35 @@
     {
       "item_id": "7066",
       "location": "verrayes",
-      "today_avail": 20,
+      "today_avail": 5,
       "next_avail": "7/15/2026",
       "next_qty": 50
     },
     {
       "item_id": "7067",
       "location": "verrayes",
-      "today_avail": 20,
+      "today_avail": 5,
       "next_avail": "7/15/2026",
       "next_qty": 50
     },
     {
       "item_id": "7068",
       "location": "verrayes",
-      "today_avail": 20,
+      "today_avail": 5,
       "next_avail": "7/15/2026",
       "next_qty": 50
     },
     {
       "item_id": "7069",
       "location": "verrayes",
-      "today_avail": 20,
+      "today_avail": 5,
       "next_avail": "7/15/2026",
       "next_qty": 50
     },
     {
       "item_id": "7070",
       "location": "verrayes",
-      "today_avail": 20,
+      "today_avail": 5,
       "next_avail": "7/15/2026",
       "next_qty": 50
     },
@@ -3313,42 +3313,42 @@
     {
       "item_id": "7078",
       "location": "verrayes",
-      "today_avail": 20,
+      "today_avail": 0,
       "next_avail": "7/15/2026",
       "next_qty": 50
     },
     {
       "item_id": "7079",
       "location": "verrayes",
-      "today_avail": 20,
+      "today_avail": 0,
       "next_avail": "7/15/2026",
       "next_qty": 50
     },
     {
       "item_id": "7080",
       "location": "verrayes",
-      "today_avail": 20,
+      "today_avail": 0,
       "next_avail": "7/15/2026",
       "next_qty": 50
     },
     {
       "item_id": "7081",
       "location": "verrayes",
-      "today_avail": 20,
+      "today_avail": 10,
       "next_avail": "7/15/2026",
       "next_qty": 50
     },
     {
       "item_id": "7082",
       "location": "verrayes",
-      "today_avail": 20,
+      "today_avail": 15,
       "next_avail": "7/15/2026",
       "next_qty": 50
     },
     {
       "item_id": "7083",
       "location": "verrayes",
-      "today_avail": 20,
+      "today_avail": 0,
       "next_avail": "7/15/2026",
       "next_qty": 50
     },
@@ -3376,28 +3376,28 @@
     {
       "item_id": "7087",
       "location": "verrayes",
-      "today_avail": 20,
+      "today_avail": 0,
       "next_avail": "7/15/2026",
       "next_qty": 50
     },
     {
       "item_id": "7088",
       "location": "verrayes",
-      "today_avail": 20,
+      "today_avail": 5,
       "next_avail": "7/15/2026",
       "next_qty": 50
     },
     {
       "item_id": "7089",
       "location": "verrayes",
-      "today_avail": 20,
+      "today_avail": 0,
       "next_avail": "7/15/2026",
       "next_qty": 50
     },
     {
       "item_id": "7090",
       "location": "verrayes",
-      "today_avail": 20,
+      "today_avail": 0,
       "next_avail": "7/15/2026",
       "next_qty": 50
     },
@@ -3456,6 +3456,76 @@
       "today_avail": 0,
       "next_avail": "9/30/2026",
       "next_qty": 100
+    },
+    {
+      "item_id": "6865",
+      "location": "verrayes",
+      "today_avail": 0,
+      "next_avail": "9/30/2026",
+      "next_qty": 20
+    },
+    {
+      "item_id": "6866",
+      "location": "verrayes",
+      "today_avail": 0,
+      "next_avail": "9/30/2026",
+      "next_qty": 20
+    },
+    {
+      "item_id": "6867",
+      "location": "verrayes",
+      "today_avail": 0,
+      "next_avail": "9/30/2026",
+      "next_qty": 20
+    },
+    {
+      "item_id": "6868",
+      "location": "verrayes",
+      "today_avail": 0,
+      "next_avail": "9/30/2026",
+      "next_qty": 20
+    },
+    {
+      "item_id": "6869",
+      "location": "verrayes",
+      "today_avail": 0,
+      "next_avail": "9/30/2026",
+      "next_qty": 20
+    },
+    {
+      "item_id": "6865",
+      "location": "usa3pl",
+      "today_avail": 0,
+      "next_avail": "10/30/2026",
+      "next_qty": 20
+    },
+    {
+      "item_id": "6866",
+      "location": "usa3pl",
+      "today_avail": 0,
+      "next_avail": "10/30/2026",
+      "next_qty": 20
+    },
+    {
+      "item_id": "6867",
+      "location": "usa3pl",
+      "today_avail": 0,
+      "next_avail": "10/30/2026",
+      "next_qty": 20
+    },
+    {
+      "item_id": "6868",
+      "location": "usa3pl",
+      "today_avail": 0,
+      "next_avail": "10/30/2026",
+      "next_qty": 20
+    },
+    {
+      "item_id": "6869",
+      "location": "usa3pl",
+      "today_avail": 0,
+      "next_avail": "10/30/2026",
+      "next_qty": 20
     }
   ]
 }
