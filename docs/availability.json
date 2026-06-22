@@ -26105,11 +26105,11 @@
       "status": "committed",
       "available_today": 0,
       "total_open_demand": 384,
-      "committable": 1518,
+      "committable": 1555,
       "max_buildable_today": 5,
-      "max_buildable_horizon": 1902,
+      "max_buildable_horizon": 1939,
       "next_available_date": "2026-07-06",
-      "next_available_qty": 337,
+      "next_available_qty": 374,
       "first_shortfall_date": "2026-06-22",
       "limiting_components": [
         {
@@ -26193,14 +26193,14 @@
         {
           "date": "2026-06-29",
           "display_date": "2026-07-06",
-          "buildable": 438,
+          "buildable": 475,
           "cumulative_demand": 60,
-          "net_available": 378,
+          "net_available": 415,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 438,
+              "supportable_fg_units": 475,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -26231,19 +26231,19 @@
               "source": "PO"
             }
           ],
-          "atp": 337
+          "atp": 374
         },
         {
           "date": "2026-06-30",
           "display_date": "2026-07-07",
-          "buildable": 438,
+          "buildable": 475,
           "cumulative_demand": 93,
-          "net_available": 345,
+          "net_available": 382,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 438,
+              "supportable_fg_units": 475,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -26274,19 +26274,19 @@
               "source": "PO"
             }
           ],
-          "atp": 337
+          "atp": 374
         },
         {
           "date": "2026-07-03",
           "display_date": "2026-07-10",
-          "buildable": 442,
+          "buildable": 479,
           "cumulative_demand": 93,
-          "net_available": 349,
+          "net_available": 386,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 442,
+              "supportable_fg_units": 479,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -26317,19 +26317,19 @@
               "source": "PO"
             }
           ],
-          "atp": 337
+          "atp": 374
         },
         {
           "date": "2026-07-05",
           "display_date": "2026-07-12",
-          "buildable": 442,
+          "buildable": 479,
           "cumulative_demand": 104,
-          "net_available": 338,
+          "net_available": 375,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 442,
+              "supportable_fg_units": 479,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -26360,19 +26360,19 @@
               "source": "PO"
             }
           ],
-          "atp": 337
+          "atp": 374
         },
         {
           "date": "2026-07-15",
           "display_date": "2026-07-22",
-          "buildable": 442,
+          "buildable": 479,
           "cumulative_demand": 105,
-          "net_available": 337,
+          "net_available": 374,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 442,
+              "supportable_fg_units": 479,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -26403,19 +26403,19 @@
               "source": "PO"
             }
           ],
-          "atp": 337
+          "atp": 374
         },
         {
           "date": "2026-07-17",
           "display_date": "2026-07-24",
-          "buildable": 1652,
+          "buildable": 1689,
           "cumulative_demand": 105,
-          "net_available": 1547,
+          "net_available": 1584,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1652,
+              "supportable_fg_units": 1689,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -26446,19 +26446,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1271
+          "atp": 1308
         },
         {
           "date": "2026-08-03",
           "display_date": "2026-08-10",
-          "buildable": 1652,
+          "buildable": 1689,
           "cumulative_demand": 107,
-          "net_available": 1545,
+          "net_available": 1582,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1652,
+              "supportable_fg_units": 1689,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -26489,19 +26489,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1271
+          "atp": 1308
         },
         {
           "date": "2026-08-31",
           "display_date": "2026-09-07",
-          "buildable": 1652,
+          "buildable": 1689,
           "cumulative_demand": 307,
-          "net_available": 1345,
+          "net_available": 1382,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1652,
+              "supportable_fg_units": 1689,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -26532,19 +26532,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1271
+          "atp": 1308
         },
         {
           "date": "2026-09-01",
           "display_date": "2026-09-08",
-          "buildable": 1652,
+          "buildable": 1689,
           "cumulative_demand": 332,
-          "net_available": 1320,
+          "net_available": 1357,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1652,
+              "supportable_fg_units": 1689,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -26575,19 +26575,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1271
+          "atp": 1308
         },
         {
           "date": "2026-09-15",
           "display_date": "2026-09-22",
-          "buildable": 1652,
+          "buildable": 1689,
           "cumulative_demand": 337,
-          "net_available": 1315,
+          "net_available": 1352,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1652,
+              "supportable_fg_units": 1689,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -26618,19 +26618,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1271
+          "atp": 1308
         },
         {
           "date": "2026-09-16",
           "display_date": "2026-09-23",
-          "buildable": 1652,
+          "buildable": 1689,
           "cumulative_demand": 339,
-          "net_available": 1313,
+          "net_available": 1350,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1652,
+              "supportable_fg_units": 1689,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -26661,19 +26661,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1271
+          "atp": 1308
         },
         {
           "date": "2026-10-01",
           "display_date": "2026-10-08",
-          "buildable": 1652,
+          "buildable": 1689,
           "cumulative_demand": 361,
-          "net_available": 1291,
+          "net_available": 1328,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1652,
+              "supportable_fg_units": 1689,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -26704,19 +26704,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1271
+          "atp": 1308
         },
         {
           "date": "2026-10-15",
           "display_date": "2026-10-22",
-          "buildable": 1652,
+          "buildable": 1689,
           "cumulative_demand": 362,
-          "net_available": 1290,
+          "net_available": 1327,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1652,
+              "supportable_fg_units": 1689,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -26747,19 +26747,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1271
+          "atp": 1308
         },
         {
           "date": "2026-11-01",
           "display_date": "2026-11-08",
-          "buildable": 1652,
+          "buildable": 1689,
           "cumulative_demand": 372,
-          "net_available": 1280,
+          "net_available": 1317,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1652,
+              "supportable_fg_units": 1689,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -26790,19 +26790,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1271
+          "atp": 1308
         },
         {
           "date": "2026-11-02",
           "display_date": "2026-11-09",
-          "buildable": 1652,
+          "buildable": 1689,
           "cumulative_demand": 381,
-          "net_available": 1271,
+          "net_available": 1308,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1652,
+              "supportable_fg_units": 1689,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -26833,19 +26833,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1271
+          "atp": 1308
         },
         {
           "date": "2026-11-17",
           "display_date": "2026-11-24",
-          "buildable": 1902,
+          "buildable": 1939,
           "cumulative_demand": 381,
-          "net_available": 1521,
+          "net_available": 1558,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1902,
+              "supportable_fg_units": 1939,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -26876,19 +26876,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1518
+          "atp": 1555
         },
         {
           "date": "2026-11-27",
           "display_date": "2026-12-04",
-          "buildable": 1902,
+          "buildable": 1939,
           "cumulative_demand": 382,
-          "net_available": 1520,
+          "net_available": 1557,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1902,
+              "supportable_fg_units": 1939,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -26919,19 +26919,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1518
+          "atp": 1555
         },
         {
           "date": "2026-12-14",
           "display_date": "2026-12-21",
-          "buildable": 1902,
+          "buildable": 1939,
           "cumulative_demand": 384,
-          "net_available": 1518,
+          "net_available": 1555,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1902,
+              "supportable_fg_units": 1939,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -26962,7 +26962,7 @@
               "source": "PO"
             }
           ],
-          "atp": 1518
+          "atp": 1555
         }
       ],
       "avg_eur_per_unit": 84.1008,
@@ -30606,11 +30606,11 @@
       "status": "committed",
       "available_today": 0,
       "total_open_demand": 257,
-      "committable": 1654,
+      "committable": 1691,
       "max_buildable_today": 14,
-      "max_buildable_horizon": 1911,
+      "max_buildable_horizon": 1948,
       "next_available_date": "2026-07-06",
-      "next_available_qty": 375,
+      "next_available_qty": 412,
       "first_shortfall_date": "2026-06-22",
       "limiting_components": [
         {
@@ -30694,14 +30694,14 @@
         {
           "date": "2026-06-29",
           "display_date": "2026-07-06",
-          "buildable": 447,
+          "buildable": 484,
           "cumulative_demand": 53,
-          "net_available": 394,
+          "net_available": 431,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 447,
+              "supportable_fg_units": 484,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -30732,19 +30732,19 @@
               "source": "PO"
             }
           ],
-          "atp": 375
+          "atp": 412
         },
         {
           "date": "2026-06-30",
           "display_date": "2026-07-07",
-          "buildable": 447,
+          "buildable": 484,
           "cumulative_demand": 64,
-          "net_available": 383,
+          "net_available": 420,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 447,
+              "supportable_fg_units": 484,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -30775,19 +30775,19 @@
               "source": "PO"
             }
           ],
-          "atp": 375
+          "atp": 412
         },
         {
           "date": "2026-07-03",
           "display_date": "2026-07-10",
-          "buildable": 451,
+          "buildable": 488,
           "cumulative_demand": 64,
-          "net_available": 387,
+          "net_available": 424,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 451,
+              "supportable_fg_units": 488,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -30818,19 +30818,19 @@
               "source": "PO"
             }
           ],
-          "atp": 375
+          "atp": 412
         },
         {
           "date": "2026-07-05",
           "display_date": "2026-07-12",
-          "buildable": 451,
+          "buildable": 488,
           "cumulative_demand": 76,
-          "net_available": 375,
+          "net_available": 412,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 451,
+              "supportable_fg_units": 488,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -30861,19 +30861,19 @@
               "source": "PO"
             }
           ],
-          "atp": 375
+          "atp": 412
         },
         {
           "date": "2026-07-17",
           "display_date": "2026-07-24",
-          "buildable": 1661,
+          "buildable": 1698,
           "cumulative_demand": 76,
-          "net_available": 1585,
+          "net_available": 1622,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1661,
+              "supportable_fg_units": 1698,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -30904,19 +30904,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1444
+          "atp": 1481
         },
         {
           "date": "2026-08-01",
           "display_date": "2026-08-08",
-          "buildable": 1661,
+          "buildable": 1698,
           "cumulative_demand": 78,
-          "net_available": 1583,
+          "net_available": 1620,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1661,
+              "supportable_fg_units": 1698,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -30947,19 +30947,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1444
+          "atp": 1481
         },
         {
           "date": "2026-09-01",
           "display_date": "2026-09-08",
-          "buildable": 1661,
+          "buildable": 1698,
           "cumulative_demand": 145,
-          "net_available": 1516,
+          "net_available": 1553,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1661,
+              "supportable_fg_units": 1698,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -30990,19 +30990,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1444
+          "atp": 1481
         },
         {
           "date": "2026-09-07",
           "display_date": "2026-09-14",
-          "buildable": 1661,
+          "buildable": 1698,
           "cumulative_demand": 146,
-          "net_available": 1515,
+          "net_available": 1552,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1661,
+              "supportable_fg_units": 1698,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -31033,19 +31033,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1444
+          "atp": 1481
         },
         {
           "date": "2026-09-08",
           "display_date": "2026-09-15",
-          "buildable": 1661,
+          "buildable": 1698,
           "cumulative_demand": 152,
-          "net_available": 1509,
+          "net_available": 1546,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1661,
+              "supportable_fg_units": 1698,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -31076,19 +31076,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1444
+          "atp": 1481
         },
         {
           "date": "2026-09-16",
           "display_date": "2026-09-23",
-          "buildable": 1661,
+          "buildable": 1698,
           "cumulative_demand": 157,
-          "net_available": 1504,
+          "net_available": 1541,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1661,
+              "supportable_fg_units": 1698,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -31119,19 +31119,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1444
+          "atp": 1481
         },
         {
           "date": "2026-10-01",
           "display_date": "2026-10-08",
-          "buildable": 1661,
+          "buildable": 1698,
           "cumulative_demand": 196,
-          "net_available": 1465,
+          "net_available": 1502,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1661,
+              "supportable_fg_units": 1698,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -31162,19 +31162,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1444
+          "atp": 1481
         },
         {
           "date": "2026-10-15",
           "display_date": "2026-10-22",
-          "buildable": 1661,
+          "buildable": 1698,
           "cumulative_demand": 201,
-          "net_available": 1460,
+          "net_available": 1497,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1661,
+              "supportable_fg_units": 1698,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -31205,19 +31205,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1444
+          "atp": 1481
         },
         {
           "date": "2026-10-30",
           "display_date": "2026-11-06",
-          "buildable": 1661,
+          "buildable": 1698,
           "cumulative_demand": 202,
-          "net_available": 1459,
+          "net_available": 1496,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1661,
+              "supportable_fg_units": 1698,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -31248,19 +31248,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1444
+          "atp": 1481
         },
         {
           "date": "2026-11-01",
           "display_date": "2026-11-08",
-          "buildable": 1661,
+          "buildable": 1698,
           "cumulative_demand": 216,
-          "net_available": 1445,
+          "net_available": 1482,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1661,
+              "supportable_fg_units": 1698,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -31291,19 +31291,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1444
+          "atp": 1481
         },
         {
           "date": "2026-11-02",
           "display_date": "2026-11-09",
-          "buildable": 1661,
+          "buildable": 1698,
           "cumulative_demand": 217,
-          "net_available": 1444,
+          "net_available": 1481,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1661,
+              "supportable_fg_units": 1698,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -31334,19 +31334,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1444
+          "atp": 1481
         },
         {
           "date": "2026-11-17",
           "display_date": "2026-11-24",
-          "buildable": 1911,
+          "buildable": 1948,
           "cumulative_demand": 217,
-          "net_available": 1694,
+          "net_available": 1731,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1911,
+              "supportable_fg_units": 1948,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -31377,19 +31377,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1654
+          "atp": 1691
         },
         {
           "date": "2026-11-25",
           "display_date": "2026-12-02",
-          "buildable": 1911,
+          "buildable": 1948,
           "cumulative_demand": 227,
-          "net_available": 1684,
+          "net_available": 1721,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1911,
+              "supportable_fg_units": 1948,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -31420,19 +31420,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1654
+          "atp": 1691
         },
         {
           "date": "2026-11-27",
           "display_date": "2026-12-04",
-          "buildable": 1911,
+          "buildable": 1948,
           "cumulative_demand": 229,
-          "net_available": 1682,
+          "net_available": 1719,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1911,
+              "supportable_fg_units": 1948,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -31463,19 +31463,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1654
+          "atp": 1691
         },
         {
           "date": "2026-12-02",
           "display_date": "2026-12-09",
-          "buildable": 1911,
+          "buildable": 1948,
           "cumulative_demand": 235,
-          "net_available": 1676,
+          "net_available": 1713,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1911,
+              "supportable_fg_units": 1948,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -31506,19 +31506,19 @@
               "source": "PO"
             }
           ],
-          "atp": 1654
+          "atp": 1691
         },
         {
           "date": "2026-12-15",
           "display_date": "2026-12-22",
-          "buildable": 1911,
+          "buildable": 1948,
           "cumulative_demand": 257,
-          "net_available": 1654,
+          "net_available": 1691,
           "limiting_components": [
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1911,
+              "supportable_fg_units": 1948,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -31549,7 +31549,7 @@
               "source": "PO"
             }
           ],
-          "atp": 1654
+          "atp": 1691
         }
       ],
       "avg_eur_per_unit": 88.6063,
@@ -35422,7 +35422,7 @@
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 437,
+              "supportable_fg_units": 474,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -35465,7 +35465,7 @@
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 437,
+              "supportable_fg_units": 474,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -35508,7 +35508,7 @@
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 441,
+              "supportable_fg_units": 478,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -35734,7 +35734,7 @@
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1651,
+              "supportable_fg_units": 1688,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -35777,7 +35777,7 @@
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1651,
+              "supportable_fg_units": 1688,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -35820,7 +35820,7 @@
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1651,
+              "supportable_fg_units": 1688,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -35863,7 +35863,7 @@
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1651,
+              "supportable_fg_units": 1688,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -35906,7 +35906,7 @@
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1651,
+              "supportable_fg_units": 1688,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -35949,7 +35949,7 @@
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1651,
+              "supportable_fg_units": 1688,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -35992,7 +35992,7 @@
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1651,
+              "supportable_fg_units": 1688,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -36035,7 +36035,7 @@
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1901,
+              "supportable_fg_units": 1938,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -36078,7 +36078,7 @@
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1901,
+              "supportable_fg_units": 1938,
               "next_po_date": "2026-06-29",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -52553,22 +52553,22 @@
       "status": "in_stock",
       "available_today": 119,
       "total_open_demand": 71,
-      "committable": 572,
+      "committable": 702,
       "max_buildable_today": 119,
-      "max_buildable_horizon": 643,
-      "next_available_date": "2026-07-10",
-      "next_available_qty": 125,
+      "max_buildable_horizon": 773,
+      "next_available_date": "2026-07-06",
+      "next_available_qty": 249,
       "first_shortfall_date": null,
       "limiting_components": [
         {
           "item_id": "7524",
           "item_name": "0MAGHEV.SY40",
           "supportable_fg_units": 119,
-          "next_po_date": "2026-07-03",
-          "next_po_original_date": null,
-          "next_po_qty": 6.0,
-          "overdue": false,
-          "po_number": "PO-IT-2600335",
+          "next_po_date": "2026-06-29",
+          "next_po_original_date": "2026-06-22",
+          "next_po_qty": 130.0,
+          "overdue": true,
+          "po_number": "PO-IT-2600072",
           "source": "PO"
         },
         {
@@ -52606,11 +52606,11 @@
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
               "supportable_fg_units": 119,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -52639,21 +52639,64 @@
           "atp": 119
         },
         {
-          "date": "2026-07-03",
-          "display_date": "2026-07-10",
-          "buildable": 125,
+          "date": "2026-06-29",
+          "display_date": "2026-07-06",
+          "buildable": 249,
           "cumulative_demand": 0,
-          "net_available": 125,
+          "net_available": 249,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 125,
-              "next_po_date": "2026-07-03",
+              "supportable_fg_units": 249,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
+              "source": "PO"
+            },
+            {
+              "item_id": "7518",
+              "item_name": "0TEGHOP.04NG",
+              "supportable_fg_units": 904,
+              "next_po_date": "2026-07-01",
               "next_po_original_date": null,
-              "next_po_qty": 6.0,
+              "next_po_qty": 1000.0,
               "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "po_number": "PO-IT-2600173",
+              "source": "PO"
+            },
+            {
+              "item_id": "420",
+              "item_name": "0NRD05I241",
+              "supportable_fg_units": 3524,
+              "next_po_date": "2026-07-24",
+              "next_po_original_date": null,
+              "next_po_qty": 5000.0,
+              "overdue": false,
+              "po_number": "PO-IT-2600275",
+              "source": "PO"
+            }
+          ],
+          "atp": 249
+        },
+        {
+          "date": "2026-07-03",
+          "display_date": "2026-07-10",
+          "buildable": 255,
+          "cumulative_demand": 0,
+          "net_available": 255,
+          "limiting_components": [
+            {
+              "item_id": "7524",
+              "item_name": "0MAGHEV.SY40",
+              "supportable_fg_units": 255,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -52679,24 +52722,24 @@
               "source": "PO"
             }
           ],
-          "atp": 125
+          "atp": 255
         },
         {
           "date": "2026-07-17",
           "display_date": "2026-07-24",
-          "buildable": 393,
+          "buildable": 523,
           "cumulative_demand": 0,
-          "net_available": 393,
+          "net_available": 523,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 393,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "supportable_fg_units": 523,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -52722,24 +52765,24 @@
               "source": "PO"
             }
           ],
-          "atp": 335
+          "atp": 465
         },
         {
           "date": "2026-07-24",
           "display_date": "2026-07-31",
-          "buildable": 393,
+          "buildable": 523,
           "cumulative_demand": 11,
-          "net_available": 382,
+          "net_available": 512,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 393,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "supportable_fg_units": 523,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -52765,24 +52808,24 @@
               "source": "PO"
             }
           ],
-          "atp": 335
+          "atp": 465
         },
         {
           "date": "2026-09-01",
           "display_date": "2026-09-08",
-          "buildable": 393,
+          "buildable": 523,
           "cumulative_demand": 32,
-          "net_available": 361,
+          "net_available": 491,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 393,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "supportable_fg_units": 523,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -52808,24 +52851,24 @@
               "source": "PO"
             }
           ],
-          "atp": 335
+          "atp": 465
         },
         {
           "date": "2026-09-08",
           "display_date": "2026-09-15",
-          "buildable": 393,
+          "buildable": 523,
           "cumulative_demand": 34,
-          "net_available": 359,
+          "net_available": 489,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 393,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "supportable_fg_units": 523,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -52851,24 +52894,24 @@
               "source": "PO"
             }
           ],
-          "atp": 335
+          "atp": 465
         },
         {
           "date": "2026-09-15",
           "display_date": "2026-09-22",
-          "buildable": 393,
+          "buildable": 523,
           "cumulative_demand": 41,
-          "net_available": 352,
+          "net_available": 482,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 393,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "supportable_fg_units": 523,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -52894,24 +52937,24 @@
               "source": "PO"
             }
           ],
-          "atp": 335
+          "atp": 465
         },
         {
           "date": "2026-09-16",
           "display_date": "2026-09-23",
-          "buildable": 393,
+          "buildable": 523,
           "cumulative_demand": 46,
-          "net_available": 347,
+          "net_available": 477,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 393,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "supportable_fg_units": 523,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -52937,24 +52980,24 @@
               "source": "PO"
             }
           ],
-          "atp": 335
+          "atp": 465
         },
         {
           "date": "2026-10-01",
           "display_date": "2026-10-08",
-          "buildable": 393,
+          "buildable": 523,
           "cumulative_demand": 57,
-          "net_available": 336,
+          "net_available": 466,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 393,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "supportable_fg_units": 523,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -52980,24 +53023,24 @@
               "source": "PO"
             }
           ],
-          "atp": 335
+          "atp": 465
         },
         {
           "date": "2026-10-13",
           "display_date": "2026-10-20",
-          "buildable": 393,
+          "buildable": 523,
           "cumulative_demand": 58,
-          "net_available": 335,
+          "net_available": 465,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 393,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "supportable_fg_units": 523,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -53023,24 +53066,24 @@
               "source": "PO"
             }
           ],
-          "atp": 335
+          "atp": 465
         },
         {
           "date": "2026-11-02",
           "display_date": "2026-11-09",
-          "buildable": 643,
+          "buildable": 773,
           "cumulative_demand": 59,
-          "net_available": 584,
+          "net_available": 714,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 643,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "supportable_fg_units": 773,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -53066,24 +53109,24 @@
               "source": "PO"
             }
           ],
-          "atp": 572
+          "atp": 702
         },
         {
           "date": "2026-11-27",
           "display_date": "2026-12-04",
-          "buildable": 643,
+          "buildable": 773,
           "cumulative_demand": 60,
-          "net_available": 583,
+          "net_available": 713,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 643,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "supportable_fg_units": 773,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -53109,24 +53152,24 @@
               "source": "PO"
             }
           ],
-          "atp": 572
+          "atp": 702
         },
         {
           "date": "2026-12-15",
           "display_date": "2026-12-22",
-          "buildable": 643,
+          "buildable": 773,
           "cumulative_demand": 70,
-          "net_available": 573,
+          "net_available": 703,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 643,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "supportable_fg_units": 773,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -53152,24 +53195,24 @@
               "source": "PO"
             }
           ],
-          "atp": 572
+          "atp": 702
         },
         {
           "date": "2026-12-31",
           "display_date": "2027-01-07",
-          "buildable": 643,
+          "buildable": 773,
           "cumulative_demand": 71,
-          "net_available": 572,
+          "net_available": 702,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 643,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "supportable_fg_units": 773,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -53195,7 +53238,7 @@
               "source": "PO"
             }
           ],
-          "atp": 572
+          "atp": 702
         }
       ],
       "avg_eur_per_unit": 65.0252,
@@ -56906,22 +56949,22 @@
       "status": "in_stock",
       "available_today": 139,
       "total_open_demand": 53,
-      "committable": 610,
+      "committable": 740,
       "max_buildable_today": 139,
-      "max_buildable_horizon": 663,
-      "next_available_date": "2026-07-10",
-      "next_available_qty": 145,
+      "max_buildable_horizon": 793,
+      "next_available_date": "2026-07-06",
+      "next_available_qty": 269,
       "first_shortfall_date": null,
       "limiting_components": [
         {
           "item_id": "7524",
           "item_name": "0MAGHEV.SY40",
           "supportable_fg_units": 139,
-          "next_po_date": "2026-07-03",
-          "next_po_original_date": null,
-          "next_po_qty": 6.0,
-          "overdue": false,
-          "po_number": "PO-IT-2600335",
+          "next_po_date": "2026-06-29",
+          "next_po_original_date": "2026-06-22",
+          "next_po_qty": 130.0,
+          "overdue": true,
+          "po_number": "PO-IT-2600072",
           "source": "PO"
         },
         {
@@ -56959,11 +57002,11 @@
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
               "supportable_fg_units": 139,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -56992,21 +57035,64 @@
           "atp": 139
         },
         {
-          "date": "2026-07-03",
-          "display_date": "2026-07-10",
-          "buildable": 145,
+          "date": "2026-06-29",
+          "display_date": "2026-07-06",
+          "buildable": 269,
           "cumulative_demand": 0,
-          "net_available": 145,
+          "net_available": 269,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 145,
-              "next_po_date": "2026-07-03",
+              "supportable_fg_units": 269,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
+              "source": "PO"
+            },
+            {
+              "item_id": "7523",
+              "item_name": "0TEGHOM.04NG",
+              "supportable_fg_units": 1055,
+              "next_po_date": "2026-07-01",
               "next_po_original_date": null,
-              "next_po_qty": 6.0,
+              "next_po_qty": 1000.0,
               "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "po_number": "PO-IT-2600173",
+              "source": "PO"
+            },
+            {
+              "item_id": "420",
+              "item_name": "0NRD05I241",
+              "supportable_fg_units": 3544,
+              "next_po_date": "2026-07-24",
+              "next_po_original_date": null,
+              "next_po_qty": 5000.0,
+              "overdue": false,
+              "po_number": "PO-IT-2600275",
+              "source": "PO"
+            }
+          ],
+          "atp": 269
+        },
+        {
+          "date": "2026-07-03",
+          "display_date": "2026-07-10",
+          "buildable": 275,
+          "cumulative_demand": 0,
+          "net_available": 275,
+          "limiting_components": [
+            {
+              "item_id": "7524",
+              "item_name": "0MAGHEV.SY40",
+              "supportable_fg_units": 275,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -57032,24 +57118,24 @@
               "source": "PO"
             }
           ],
-          "atp": 145
+          "atp": 275
         },
         {
           "date": "2026-07-17",
           "display_date": "2026-07-24",
-          "buildable": 413,
+          "buildable": 543,
           "cumulative_demand": 0,
-          "net_available": 413,
+          "net_available": 543,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 413,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "supportable_fg_units": 543,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -57075,24 +57161,24 @@
               "source": "PO"
             }
           ],
-          "atp": 360
+          "atp": 490
         },
         {
           "date": "2026-07-24",
           "display_date": "2026-07-31",
-          "buildable": 413,
+          "buildable": 543,
           "cumulative_demand": 2,
-          "net_available": 411,
+          "net_available": 541,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 413,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "supportable_fg_units": 543,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -57118,24 +57204,24 @@
               "source": "PO"
             }
           ],
-          "atp": 360
+          "atp": 490
         },
         {
           "date": "2026-08-31",
           "display_date": "2026-09-07",
-          "buildable": 413,
+          "buildable": 543,
           "cumulative_demand": 32,
-          "net_available": 381,
+          "net_available": 511,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 413,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "supportable_fg_units": 543,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -57161,24 +57247,24 @@
               "source": "PO"
             }
           ],
-          "atp": 360
+          "atp": 490
         },
         {
           "date": "2026-09-01",
           "display_date": "2026-09-08",
-          "buildable": 413,
+          "buildable": 543,
           "cumulative_demand": 40,
-          "net_available": 373,
+          "net_available": 503,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 413,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "supportable_fg_units": 543,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -57204,24 +57290,24 @@
               "source": "PO"
             }
           ],
-          "atp": 360
+          "atp": 490
         },
         {
           "date": "2026-09-15",
           "display_date": "2026-09-22",
-          "buildable": 413,
+          "buildable": 543,
           "cumulative_demand": 47,
-          "net_available": 366,
+          "net_available": 496,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 413,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "supportable_fg_units": 543,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -57247,24 +57333,24 @@
               "source": "PO"
             }
           ],
-          "atp": 360
+          "atp": 490
         },
         {
           "date": "2026-10-01",
           "display_date": "2026-10-08",
-          "buildable": 413,
+          "buildable": 543,
           "cumulative_demand": 52,
-          "net_available": 361,
+          "net_available": 491,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 413,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "supportable_fg_units": 543,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -57290,24 +57376,24 @@
               "source": "PO"
             }
           ],
-          "atp": 360
+          "atp": 490
         },
         {
           "date": "2026-10-05",
           "display_date": "2026-10-12",
-          "buildable": 413,
+          "buildable": 543,
           "cumulative_demand": 53,
-          "net_available": 360,
+          "net_available": 490,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 413,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "supportable_fg_units": 543,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -57333,24 +57419,24 @@
               "source": "PO"
             }
           ],
-          "atp": 360
+          "atp": 490
         },
         {
           "date": "2026-11-02",
           "display_date": "2026-11-09",
-          "buildable": 663,
+          "buildable": 793,
           "cumulative_demand": 53,
-          "net_available": 610,
+          "net_available": 740,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 663,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "supportable_fg_units": 793,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -57376,24 +57462,24 @@
               "source": "PO"
             }
           ],
-          "atp": 610
+          "atp": 740
         },
         {
           "date": "2026-12-11",
           "display_date": "2026-12-18",
-          "buildable": 663,
+          "buildable": 793,
           "cumulative_demand": 53,
-          "net_available": 610,
+          "net_available": 740,
           "limiting_components": [
             {
               "item_id": "7524",
               "item_name": "0MAGHEV.SY40",
-              "supportable_fg_units": 663,
-              "next_po_date": "2026-07-03",
-              "next_po_original_date": null,
-              "next_po_qty": 6.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600335",
+              "supportable_fg_units": 793,
+              "next_po_date": "2026-06-29",
+              "next_po_original_date": "2026-06-22",
+              "next_po_qty": 130.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600072",
               "source": "PO"
             },
             {
@@ -57419,7 +57505,7 @@
               "source": "PO"
             }
           ],
-          "atp": 610
+          "atp": 740
         }
       ],
       "avg_eur_per_unit": 64.99,
@@ -92854,9 +92940,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 26,
-      "committable": 85,
+      "committable": 95,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 111,
+      "max_buildable_horizon": 121,
       "next_available_date": "2026-07-06",
       "next_available_qty": 5,
       "first_shortfall_date": "2026-06-22",
@@ -92883,9 +92969,9 @@
           "item_id": "6899",
           "item_name": "RAGXLT.TME",
           "po_number": "PO-US-2600007",
-          "supportable_fg_units": 14,
+          "supportable_fg_units": 10,
           "next_po_date": "2026-08-22",
-          "next_po_qty": 14.0,
+          "next_po_qty": 10.0,
           "overdue": false
         }
       ],
@@ -92919,9 +93005,9 @@
               "item_id": "6899",
               "item_name": "RAGXLT.TME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 14,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 14.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
@@ -92956,9 +93042,9 @@
               "item_id": "6899",
               "item_name": "RAGXLT.TME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 14,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 14.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
@@ -92993,9 +93079,9 @@
               "item_id": "6899",
               "item_name": "RAGXLT.TME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 14,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 14.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
@@ -93030,9 +93116,9 @@
               "item_id": "6899",
               "item_name": "RAGXLT.TME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 14,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 14.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
@@ -93041,156 +93127,8 @@
         {
           "date": "2026-08-22",
           "display_date": "2026-08-29",
-          "buildable": 92,
+          "buildable": 102,
           "cumulative_demand": 12,
-          "net_available": 80,
-          "limiting_components": [
-            {
-              "item_id": "6899",
-              "item_name": "RAGXLT.TME",
-              "po_number": "PO-US-2600004",
-              "supportable_fg_units": 17,
-              "next_po_date": "2026-06-29",
-              "next_po_qty": 17.0,
-              "overdue": true
-            },
-            {
-              "item_id": "6899",
-              "item_name": "RAGXLT.TME",
-              "po_number": "PO-US-2600006",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-22",
-              "next_po_qty": 10.0,
-              "overdue": false
-            },
-            {
-              "item_id": "6899",
-              "item_name": "RAGXLT.TME",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 14,
-              "next_po_date": "2026-08-22",
-              "next_po_qty": 14.0,
-              "overdue": false
-            }
-          ],
-          "atp": 77
-        },
-        {
-          "date": "2026-09-01",
-          "display_date": "2026-09-08",
-          "buildable": 92,
-          "cumulative_demand": 14,
-          "net_available": 78,
-          "limiting_components": [
-            {
-              "item_id": "6899",
-              "item_name": "RAGXLT.TME",
-              "po_number": "PO-US-2600004",
-              "supportable_fg_units": 17,
-              "next_po_date": "2026-06-29",
-              "next_po_qty": 17.0,
-              "overdue": true
-            },
-            {
-              "item_id": "6899",
-              "item_name": "RAGXLT.TME",
-              "po_number": "PO-US-2600006",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-22",
-              "next_po_qty": 10.0,
-              "overdue": false
-            },
-            {
-              "item_id": "6899",
-              "item_name": "RAGXLT.TME",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 14,
-              "next_po_date": "2026-08-22",
-              "next_po_qty": 14.0,
-              "overdue": false
-            }
-          ],
-          "atp": 77
-        },
-        {
-          "date": "2026-09-05",
-          "display_date": "2026-09-12",
-          "buildable": 92,
-          "cumulative_demand": 15,
-          "net_available": 77,
-          "limiting_components": [
-            {
-              "item_id": "6899",
-              "item_name": "RAGXLT.TME",
-              "po_number": "PO-US-2600004",
-              "supportable_fg_units": 17,
-              "next_po_date": "2026-06-29",
-              "next_po_qty": 17.0,
-              "overdue": true
-            },
-            {
-              "item_id": "6899",
-              "item_name": "RAGXLT.TME",
-              "po_number": "PO-US-2600006",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-22",
-              "next_po_qty": 10.0,
-              "overdue": false
-            },
-            {
-              "item_id": "6899",
-              "item_name": "RAGXLT.TME",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 14,
-              "next_po_date": "2026-08-22",
-              "next_po_qty": 14.0,
-              "overdue": false
-            }
-          ],
-          "atp": 77
-        },
-        {
-          "date": "2026-09-27",
-          "display_date": "2026-10-04",
-          "buildable": 111,
-          "cumulative_demand": 15,
-          "net_available": 96,
-          "limiting_components": [
-            {
-              "item_id": "6899",
-              "item_name": "RAGXLT.TME",
-              "po_number": "PO-US-2600004",
-              "supportable_fg_units": 17,
-              "next_po_date": "2026-06-29",
-              "next_po_qty": 17.0,
-              "overdue": true
-            },
-            {
-              "item_id": "6899",
-              "item_name": "RAGXLT.TME",
-              "po_number": "PO-US-2600006",
-              "supportable_fg_units": 10,
-              "next_po_date": "2026-08-22",
-              "next_po_qty": 10.0,
-              "overdue": false
-            },
-            {
-              "item_id": "6899",
-              "item_name": "RAGXLT.TME",
-              "po_number": "PO-US-2600007",
-              "supportable_fg_units": 14,
-              "next_po_date": "2026-08-22",
-              "next_po_qty": 14.0,
-              "overdue": false
-            }
-          ],
-          "atp": 85
-        },
-        {
-          "date": "2026-11-01",
-          "display_date": "2026-11-08",
-          "buildable": 111,
-          "cumulative_demand": 21,
           "net_available": 90,
           "limiting_components": [
             {
@@ -93215,19 +93153,19 @@
               "item_id": "6899",
               "item_name": "RAGXLT.TME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 14,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 14.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
-          "atp": 85
+          "atp": 87
         },
         {
-          "date": "2026-11-02",
-          "display_date": "2026-11-09",
-          "buildable": 111,
-          "cumulative_demand": 23,
+          "date": "2026-09-01",
+          "display_date": "2026-09-08",
+          "buildable": 102,
+          "cumulative_demand": 14,
           "net_available": 88,
           "limiting_components": [
             {
@@ -93252,20 +93190,20 @@
               "item_id": "6899",
               "item_name": "RAGXLT.TME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 14,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 14.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
-          "atp": 85
+          "atp": 87
         },
         {
-          "date": "2026-12-10",
-          "display_date": "2026-12-17",
-          "buildable": 111,
-          "cumulative_demand": 26,
-          "net_available": 85,
+          "date": "2026-09-05",
+          "display_date": "2026-09-12",
+          "buildable": 102,
+          "cumulative_demand": 15,
+          "net_available": 87,
           "limiting_components": [
             {
               "item_id": "6899",
@@ -93289,13 +93227,161 @@
               "item_id": "6899",
               "item_name": "RAGXLT.TME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 14,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 14.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
-          "atp": 85
+          "atp": 87
+        },
+        {
+          "date": "2026-09-27",
+          "display_date": "2026-10-04",
+          "buildable": 121,
+          "cumulative_demand": 15,
+          "net_available": 106,
+          "limiting_components": [
+            {
+              "item_id": "6899",
+              "item_name": "RAGXLT.TME",
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 17,
+              "next_po_date": "2026-06-29",
+              "next_po_qty": 17.0,
+              "overdue": true
+            },
+            {
+              "item_id": "6899",
+              "item_name": "RAGXLT.TME",
+              "po_number": "PO-US-2600006",
+              "supportable_fg_units": 10,
+              "next_po_date": "2026-08-22",
+              "next_po_qty": 10.0,
+              "overdue": false
+            },
+            {
+              "item_id": "6899",
+              "item_name": "RAGXLT.TME",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 10,
+              "next_po_date": "2026-08-22",
+              "next_po_qty": 10.0,
+              "overdue": false
+            }
+          ],
+          "atp": 95
+        },
+        {
+          "date": "2026-11-01",
+          "display_date": "2026-11-08",
+          "buildable": 121,
+          "cumulative_demand": 21,
+          "net_available": 100,
+          "limiting_components": [
+            {
+              "item_id": "6899",
+              "item_name": "RAGXLT.TME",
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 17,
+              "next_po_date": "2026-06-29",
+              "next_po_qty": 17.0,
+              "overdue": true
+            },
+            {
+              "item_id": "6899",
+              "item_name": "RAGXLT.TME",
+              "po_number": "PO-US-2600006",
+              "supportable_fg_units": 10,
+              "next_po_date": "2026-08-22",
+              "next_po_qty": 10.0,
+              "overdue": false
+            },
+            {
+              "item_id": "6899",
+              "item_name": "RAGXLT.TME",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 10,
+              "next_po_date": "2026-08-22",
+              "next_po_qty": 10.0,
+              "overdue": false
+            }
+          ],
+          "atp": 95
+        },
+        {
+          "date": "2026-11-02",
+          "display_date": "2026-11-09",
+          "buildable": 121,
+          "cumulative_demand": 23,
+          "net_available": 98,
+          "limiting_components": [
+            {
+              "item_id": "6899",
+              "item_name": "RAGXLT.TME",
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 17,
+              "next_po_date": "2026-06-29",
+              "next_po_qty": 17.0,
+              "overdue": true
+            },
+            {
+              "item_id": "6899",
+              "item_name": "RAGXLT.TME",
+              "po_number": "PO-US-2600006",
+              "supportable_fg_units": 10,
+              "next_po_date": "2026-08-22",
+              "next_po_qty": 10.0,
+              "overdue": false
+            },
+            {
+              "item_id": "6899",
+              "item_name": "RAGXLT.TME",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 10,
+              "next_po_date": "2026-08-22",
+              "next_po_qty": 10.0,
+              "overdue": false
+            }
+          ],
+          "atp": 95
+        },
+        {
+          "date": "2026-12-10",
+          "display_date": "2026-12-17",
+          "buildable": 121,
+          "cumulative_demand": 26,
+          "net_available": 95,
+          "limiting_components": [
+            {
+              "item_id": "6899",
+              "item_name": "RAGXLT.TME",
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 17,
+              "next_po_date": "2026-06-29",
+              "next_po_qty": 17.0,
+              "overdue": true
+            },
+            {
+              "item_id": "6899",
+              "item_name": "RAGXLT.TME",
+              "po_number": "PO-US-2600006",
+              "supportable_fg_units": 10,
+              "next_po_date": "2026-08-22",
+              "next_po_qty": 10.0,
+              "overdue": false
+            },
+            {
+              "item_id": "6899",
+              "item_name": "RAGXLT.TME",
+              "po_number": "PO-US-2600007",
+              "supportable_fg_units": 10,
+              "next_po_date": "2026-08-22",
+              "next_po_qty": 10.0,
+              "overdue": false
+            }
+          ],
+          "atp": 95
         }
       ],
       "avg_eur_per_unit": 73.7035,
@@ -97267,9 +97353,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 12,
-      "committable": 165,
+      "committable": 124,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 177,
+      "max_buildable_horizon": 136,
       "next_available_date": "2026-07-06",
       "next_available_qty": 15,
       "first_shortfall_date": null,
@@ -97296,9 +97382,9 @@
           "item_id": "6902",
           "item_name": "RAATLT.COME",
           "po_number": "PO-US-2600007",
-          "supportable_fg_units": 51,
+          "supportable_fg_units": 10,
           "next_po_date": "2026-08-22",
-          "next_po_qty": 51.0,
+          "next_po_qty": 10.0,
           "overdue": false
         }
       ],
@@ -97332,9 +97418,9 @@
               "item_id": "6902",
               "item_name": "RAATLT.COME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 51,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 51.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
@@ -97369,9 +97455,9 @@
               "item_id": "6902",
               "item_name": "RAATLT.COME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 51,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 51.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
@@ -97406,9 +97492,9 @@
               "item_id": "6902",
               "item_name": "RAATLT.COME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 51,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 51.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
@@ -97417,9 +97503,9 @@
         {
           "date": "2026-08-22",
           "display_date": "2026-08-29",
-          "buildable": 144,
+          "buildable": 103,
           "cumulative_demand": 2,
-          "net_available": 142,
+          "net_available": 101,
           "limiting_components": [
             {
               "item_id": "6902",
@@ -97443,20 +97529,20 @@
               "item_id": "6902",
               "item_name": "RAATLT.COME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 51,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 51.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
-          "atp": 141
+          "atp": 100
         },
         {
           "date": "2026-09-05",
           "display_date": "2026-09-12",
-          "buildable": 144,
+          "buildable": 103,
           "cumulative_demand": 3,
-          "net_available": 141,
+          "net_available": 100,
           "limiting_components": [
             {
               "item_id": "6902",
@@ -97480,20 +97566,20 @@
               "item_id": "6902",
               "item_name": "RAATLT.COME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 51,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 51.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
-          "atp": 141
+          "atp": 100
         },
         {
           "date": "2026-09-13",
           "display_date": "2026-09-20",
-          "buildable": 160,
+          "buildable": 119,
           "cumulative_demand": 3,
-          "net_available": 157,
+          "net_available": 116,
           "limiting_components": [
             {
               "item_id": "6902",
@@ -97517,20 +97603,20 @@
               "item_id": "6902",
               "item_name": "RAATLT.COME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 51,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 51.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
-          "atp": 157
+          "atp": 116
         },
         {
           "date": "2026-10-11",
           "display_date": "2026-10-18",
-          "buildable": 177,
+          "buildable": 136,
           "cumulative_demand": 3,
-          "net_available": 174,
+          "net_available": 133,
           "limiting_components": [
             {
               "item_id": "6902",
@@ -97554,20 +97640,20 @@
               "item_id": "6902",
               "item_name": "RAATLT.COME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 51,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 51.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
-          "atp": 165
+          "atp": 124
         },
         {
           "date": "2026-11-01",
           "display_date": "2026-11-08",
-          "buildable": 177,
+          "buildable": 136,
           "cumulative_demand": 9,
-          "net_available": 168,
+          "net_available": 127,
           "limiting_components": [
             {
               "item_id": "6902",
@@ -97591,20 +97677,20 @@
               "item_id": "6902",
               "item_name": "RAATLT.COME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 51,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 51.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
-          "atp": 165
+          "atp": 124
         },
         {
           "date": "2026-12-10",
           "display_date": "2026-12-17",
-          "buildable": 177,
+          "buildable": 136,
           "cumulative_demand": 12,
-          "net_available": 165,
+          "net_available": 124,
           "limiting_components": [
             {
               "item_id": "6902",
@@ -97628,13 +97714,13 @@
               "item_id": "6902",
               "item_name": "RAATLT.COME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 51,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 51.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
-          "atp": 165
+          "atp": 124
         }
       ],
       "avg_eur_per_unit": 77.0797,
@@ -99262,9 +99348,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 16,
-      "committable": 126,
+      "committable": 99,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 142,
+      "max_buildable_horizon": 115,
       "next_available_date": "2026-07-06",
       "next_available_qty": 19,
       "first_shortfall_date": null,
@@ -99291,9 +99377,9 @@
           "item_id": "6903",
           "item_name": "RAATLT.DME",
           "po_number": "PO-US-2600007",
-          "supportable_fg_units": 27,
+          "supportable_fg_units": 10,
           "next_po_date": "2026-08-22",
-          "next_po_qty": 27.0,
+          "next_po_qty": 10.0,
           "overdue": false
         }
       ],
@@ -99327,9 +99413,9 @@
               "item_id": "6903",
               "item_name": "RAATLT.DME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 27.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
@@ -99364,9 +99450,9 @@
               "item_id": "6903",
               "item_name": "RAATLT.DME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 27.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
@@ -99401,9 +99487,9 @@
               "item_id": "6903",
               "item_name": "RAATLT.DME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 27.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
@@ -99412,9 +99498,9 @@
         {
           "date": "2026-08-22",
           "display_date": "2026-08-29",
-          "buildable": 95,
+          "buildable": 68,
           "cumulative_demand": 2,
-          "net_available": 93,
+          "net_available": 66,
           "limiting_components": [
             {
               "item_id": "6903",
@@ -99438,20 +99524,20 @@
               "item_id": "6903",
               "item_name": "RAATLT.DME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 27.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
-          "atp": 92
+          "atp": 65
         },
         {
           "date": "2026-09-05",
           "display_date": "2026-09-12",
-          "buildable": 95,
+          "buildable": 68,
           "cumulative_demand": 3,
-          "net_available": 92,
+          "net_available": 65,
           "limiting_components": [
             {
               "item_id": "6903",
@@ -99475,20 +99561,20 @@
               "item_id": "6903",
               "item_name": "RAATLT.DME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 27.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
-          "atp": 92
+          "atp": 65
         },
         {
           "date": "2026-09-20",
           "display_date": "2026-09-27",
-          "buildable": 116,
+          "buildable": 89,
           "cumulative_demand": 3,
-          "net_available": 113,
+          "net_available": 86,
           "limiting_components": [
             {
               "item_id": "6903",
@@ -99512,20 +99598,20 @@
               "item_id": "6903",
               "item_name": "RAATLT.DME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 27.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
-          "atp": 113
+          "atp": 86
         },
         {
           "date": "2026-10-18",
           "display_date": "2026-10-25",
-          "buildable": 142,
+          "buildable": 115,
           "cumulative_demand": 3,
-          "net_available": 139,
+          "net_available": 112,
           "limiting_components": [
             {
               "item_id": "6903",
@@ -99549,20 +99635,20 @@
               "item_id": "6903",
               "item_name": "RAATLT.DME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 27.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
-          "atp": 126
+          "atp": 99
         },
         {
           "date": "2026-11-01",
           "display_date": "2026-11-08",
-          "buildable": 142,
+          "buildable": 115,
           "cumulative_demand": 9,
-          "net_available": 133,
+          "net_available": 106,
           "limiting_components": [
             {
               "item_id": "6903",
@@ -99586,20 +99672,20 @@
               "item_id": "6903",
               "item_name": "RAATLT.DME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 27.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
-          "atp": 126
+          "atp": 99
         },
         {
           "date": "2026-12-01",
           "display_date": "2026-12-08",
-          "buildable": 142,
+          "buildable": 115,
           "cumulative_demand": 11,
-          "net_available": 131,
+          "net_available": 104,
           "limiting_components": [
             {
               "item_id": "6903",
@@ -99623,20 +99709,20 @@
               "item_id": "6903",
               "item_name": "RAATLT.DME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 27.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
-          "atp": 126
+          "atp": 99
         },
         {
           "date": "2026-12-10",
           "display_date": "2026-12-17",
-          "buildable": 142,
+          "buildable": 115,
           "cumulative_demand": 14,
-          "net_available": 128,
+          "net_available": 101,
           "limiting_components": [
             {
               "item_id": "6903",
@@ -99660,20 +99746,20 @@
               "item_id": "6903",
               "item_name": "RAATLT.DME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 27.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
-          "atp": 126
+          "atp": 99
         },
         {
           "date": "2026-12-31",
           "display_date": "2027-01-07",
-          "buildable": 142,
+          "buildable": 115,
           "cumulative_demand": 16,
-          "net_available": 126,
+          "net_available": 99,
           "limiting_components": [
             {
               "item_id": "6903",
@@ -99697,13 +99783,13 @@
               "item_id": "6903",
               "item_name": "RAATLT.DME",
               "po_number": "PO-US-2600007",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-08-22",
-              "next_po_qty": 27.0,
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
-          "atp": 126
+          "atp": 99
         }
       ],
       "avg_eur_per_unit": 81.0671,
