@@ -3080,20 +3080,6 @@
       "next_qty": 50
     },
     {
-      "item_id": "7126",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": "7/15/2026",
-      "next_qty": 250
-    },
-    {
-      "item_id": "7126",
-      "location": "usa3pl",
-      "today_avail": 0,
-      "next_avail": "8/15/2026",
-      "next_qty": 50
-    },
-    {
       "item_id": "6855",
       "location": "verrayes",
       "today_avail": 0,
@@ -3172,48 +3158,6 @@
     },
     {
       "item_id": "6869",
-      "location": "usa3pl",
-      "today_avail": 0,
-      "next_avail": null,
-      "next_qty": null
-    },
-    {
-      "item_id": "6861",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": null,
-      "next_qty": null
-    },
-    {
-      "item_id": "6860",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": null,
-      "next_qty": null
-    },
-    {
-      "item_id": "6862",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": null,
-      "next_qty": null
-    },
-    {
-      "item_id": "6861",
-      "location": "usa3pl",
-      "today_avail": 0,
-      "next_avail": null,
-      "next_qty": null
-    },
-    {
-      "item_id": "6860",
-      "location": "usa3pl",
-      "today_avail": 0,
-      "next_avail": null,
-      "next_qty": null
-    },
-    {
-      "item_id": "6862",
       "location": "usa3pl",
       "today_avail": 0,
       "next_avail": null,
