@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GRV · Item Availability</title>
+<link rel="icon" href="./logo.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="./xlsx.full.min.js"></script>
@@ -717,9 +718,11 @@ function row(i){
     ?'<div class="c-name">'+esc(lc.item_name||lc.item_id)+'</div><div class="c-po">'+(
         lc.next_po_date
           ?(lc.overdue
-              ?'⚠ '+fd(lc.next_po_original_date||lc.next_po_date)+'<span class="overdue-badge">OVERDUE</span>'
-              :'📦 '+fd(lc.next_po_date))
-          :'<span class="dim">no PO</span>')+'</div>'
+              ?(lc.source==='WO'?'🏭 ':'📦 ')+'⚠ '+fd(lc.next_po_original_date||lc.next_po_date)+'<span class="overdue-badge">OVERDUE</span>'
+              :(lc.source==='WO'
+                  ?'🏭 '+(lc.po_number?esc(lc.po_number)+' · ':'')+fd(lc.next_po_date)
+                  :'📦 '+fd(lc.next_po_date)))
+          :'<span class="dim">'+(lc.source==='WO'?'no WO':'no PO')+'</span>')+'</div>'
     :'<span class="dim">—</span>';
   var avail_cls=i.available_today>0?'pos':i.available_today<0?'neg':'dim';
   var dtc_cls=i.available_today_dtc>0?'pos':i.available_today_dtc<0?'neg':'dim';
@@ -1331,7 +1334,8 @@ function iVX(items,pf,cur,today,otherMap){
     if(!cm[name])cm[name]={name:name,fgs:0,uRisk:0,rRisk:0,
       poDate:lc.next_po_date||null,
       poOrigDate:lc.next_po_original_date||null,
-      overdue:lc.overdue||false};
+      overdue:lc.overdue||false,
+      src:lc.source||'PO'};
     cm[name].fgs++;
     var risk=Math.max(0,(item.total_open_demand||0)-(item.max_buildable_horizon||item.max_buildable_today||0));
     cm[name].uRisk+=risk;cm[name].rRisk+=risk*price;
@@ -1361,14 +1365,16 @@ function iVX(items,pf,cur,today,otherMap){
   if(interco.length)parts.push(interco.length+' intercompany gaps');
   document.getElementById('vx-sum').textContent=parts.join('  ·  ');
   function cRow(c,action){
-    // Show original overdue date if available, with badge
+    // Show original overdue date if available, with badge.
+    // Label as WO (outsourced work order) vs PO depending on the supply source.
+    var lbl=c.src==='WO'?'WO':'PO';
     var dateStr='';
     if(c.poOrigDate){
-      dateStr=' · PO was '+fd(c.poOrigDate)+'<span class="overdue-badge">OVERDUE</span>';
+      dateStr=' · '+lbl+' was '+fd(c.poOrigDate)+'<span class="overdue-badge">OVERDUE</span>';
     }else if(c.poDate){
-      dateStr=' · PO '+fd(c.poDate);
+      dateStr=' · '+lbl+' '+fd(c.poDate);
     }else{
-      dateStr=' · No PO on record';
+      dateStr=' · No '+lbl+' on record';
     }
     var det=c.fgs+' SKU'+(c.fgs!==1?'s':'')+' constrained'+dateStr;
     return '<div class="intel-row"><div class="intel-rl"><span class="intel-sku">'+esc(c.name)+'</span>'+
@@ -1377,8 +1383,8 @@ function iVX(items,pf,cur,today,otherMap){
       '<span class="intel-un">'+Math.round(c.uRisk)+' units at risk</span></div></div>';
   }
   var h='';
-  if(crit.length){h+='<div class="intel-cg"><div class="intel-ct hold">🔴 CRITICAL — No purchase order on record</div>';crit.slice(0,6).forEach(function(c){h+=cRow(c,'Raise PO immediately');});if(crit.length>6)h+='<div class="intel-more">+'+(crit.length-6)+' more</div>';h+='</div>';}
-  if(urg.length){h+='<div class="intel-cg"><div class="intel-ct watch">🟠 URGENT — Overdue or due this week</div>';urg.slice(0,6).forEach(function(c){h+=cRow(c,c.overdue?'PO overdue — chase vendor immediately for delivery confirmation':'Chase vendor — confirm firm delivery date');});h+='</div>';}
+  if(crit.length){h+='<div class="intel-cg"><div class="intel-ct hold">🔴 CRITICAL — No purchase order / work order on record</div>';crit.slice(0,6).forEach(function(c){h+=cRow(c,c.src==='WO'?'Issue work order immediately':'Raise PO immediately');});if(crit.length>6)h+='<div class="intel-more">+'+(crit.length-6)+' more</div>';h+='</div>';}
+  if(urg.length){h+='<div class="intel-cg"><div class="intel-ct watch">🟠 URGENT — Overdue or due this week</div>';urg.slice(0,6).forEach(function(c){h+=cRow(c,c.overdue?(c.src==='WO'?'WO overdue — chase subcontractor for firm completion date':'PO overdue — chase vendor immediately for delivery confirmation'):(c.src==='WO'?'Chase subcontractor — confirm firm completion date':'Chase vendor — confirm firm delivery date'));});h+='</div>';}
   if(warn.length){h+='<div class="intel-cg"><div class="intel-ct prepare">🟡 WARNING — PO on record, demand still at risk</div>';warn.slice(0,6).forEach(function(c){h+=cRow(c,'Monitor — request partial early delivery if possible');});h+='</div>';}
   if(!crit.length&&!urg.length&&!warn.length&&!interco.length){h='<div class="intel-empty">No component alerts in current filter.</div>';}
   if(interco.length){
