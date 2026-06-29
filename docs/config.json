@@ -3,6 +3,8 @@
     "verrayes_pad_days": 7,
     "usa3pl_pad_days": 7,
     "usa3pl_embargo_pad_days": 90,
+    "usa3pl_intransit_pad_days": 28,
+    "usa3pl_nopo_pad_days": 60,
     "overdue_po_buffer_days": 7,
     "dtc_order_type_ids": [
       14,
