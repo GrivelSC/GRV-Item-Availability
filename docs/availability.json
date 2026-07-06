@@ -34996,9 +34996,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 51,
-      "committable": 879,
+      "committable": 819,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 930,
+      "max_buildable_horizon": 870,
       "next_available_date": "2026-07-20",
       "next_available_qty": 593,
       "first_shortfall_date": "2026-07-06",
@@ -35017,7 +35017,7 @@
         {
           "item_id": "466",
           "item_name": "0CPGSLI.SP1",
-          "supportable_fg_units": 837,
+          "supportable_fg_units": 777,
           "next_po_date": "2026-08-03",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -35028,7 +35028,7 @@
         {
           "item_id": "465",
           "item_name": "0CPGSLI.PZ",
-          "supportable_fg_units": 913,
+          "supportable_fg_units": 853,
           "next_po_date": "2026-08-20",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -35059,7 +35059,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -35070,7 +35070,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -35102,7 +35102,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -35113,7 +35113,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -35145,7 +35145,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -35156,7 +35156,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -35170,14 +35170,14 @@
         {
           "date": "2026-07-17",
           "display_date": "2026-07-24",
-          "buildable": 837,
+          "buildable": 777,
           "cumulative_demand": 18,
-          "net_available": 819,
+          "net_available": 759,
           "limiting_components": [
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -35188,7 +35188,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -35199,7 +35199,93 @@
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false,
+              "po_number": null,
+              "source": "PO"
+            }
+          ],
+          "atp": 759
+        },
+        {
+          "date": "2026-08-03",
+          "display_date": "2026-08-10",
+          "buildable": 853,
+          "cumulative_demand": 18,
+          "net_available": 835,
+          "limiting_components": [
+            {
+              "item_id": "465",
+              "item_name": "0CPGSLI.PZ",
+              "supportable_fg_units": 853,
+              "next_po_date": "2026-08-20",
+              "next_po_original_date": null,
+              "next_po_qty": 1000.0,
+              "overdue": false,
+              "po_number": "PO-IT-2600275",
+              "source": "PO"
+            },
+            {
+              "item_id": "7682",
+              "item_name": "0CPGSLI.CP2.2",
+              "supportable_fg_units": 870,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false,
+              "po_number": null,
+              "source": "PO"
+            },
+            {
+              "item_id": "7514",
+              "item_name": "0MAATE.SY30",
+              "supportable_fg_units": 931,
+              "next_po_date": "2026-07-13",
+              "next_po_original_date": "2026-06-15",
+              "next_po_qty": 607.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600278",
+              "source": "PO"
+            }
+          ],
+          "atp": 819
+        },
+        {
+          "date": "2026-08-20",
+          "display_date": "2026-08-27",
+          "buildable": 870,
+          "cumulative_demand": 18,
+          "net_available": 852,
+          "limiting_components": [
+            {
+              "item_id": "7682",
+              "item_name": "0CPGSLI.CP2.2",
+              "supportable_fg_units": 870,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false,
+              "po_number": null,
+              "source": "PO"
+            },
+            {
+              "item_id": "7514",
+              "item_name": "0MAATE.SY30",
+              "supportable_fg_units": 931,
+              "next_po_date": "2026-07-13",
+              "next_po_original_date": "2026-06-15",
+              "next_po_qty": 607.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600278",
+              "source": "PO"
+            },
+            {
+              "item_id": "463",
+              "item_name": "0CPGSLI.CO1",
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -35211,102 +35297,16 @@
           "atp": 819
         },
         {
-          "date": "2026-08-03",
-          "display_date": "2026-08-10",
-          "buildable": 913,
-          "cumulative_demand": 18,
-          "net_available": 895,
-          "limiting_components": [
-            {
-              "item_id": "465",
-              "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
-              "next_po_date": "2026-08-20",
-              "next_po_original_date": null,
-              "next_po_qty": 1000.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600275",
-              "source": "PO"
-            },
-            {
-              "item_id": "7682",
-              "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            },
-            {
-              "item_id": "7514",
-              "item_name": "0MAATE.SY30",
-              "supportable_fg_units": 931,
-              "next_po_date": "2026-07-13",
-              "next_po_original_date": "2026-06-15",
-              "next_po_qty": 607.0,
-              "overdue": true,
-              "po_number": "PO-IT-2600278",
-              "source": "PO"
-            }
-          ],
-          "atp": 879
-        },
-        {
-          "date": "2026-08-20",
-          "display_date": "2026-08-27",
-          "buildable": 930,
-          "cumulative_demand": 18,
-          "net_available": 912,
-          "limiting_components": [
-            {
-              "item_id": "7682",
-              "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            },
-            {
-              "item_id": "7514",
-              "item_name": "0MAATE.SY30",
-              "supportable_fg_units": 931,
-              "next_po_date": "2026-07-13",
-              "next_po_original_date": "2026-06-15",
-              "next_po_qty": 607.0,
-              "overdue": true,
-              "po_number": "PO-IT-2600278",
-              "source": "PO"
-            },
-            {
-              "item_id": "463",
-              "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            }
-          ],
-          "atp": 879
-        },
-        {
           "date": "2026-09-01",
           "display_date": "2026-09-08",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 27,
-          "net_available": 903,
+          "net_available": 843,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -35328,7 +35328,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -35337,19 +35337,19 @@
               "source": "PO"
             }
           ],
-          "atp": 879
+          "atp": 819
         },
         {
           "date": "2026-09-07",
           "display_date": "2026-09-14",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 28,
-          "net_available": 902,
+          "net_available": 842,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -35371,7 +35371,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -35380,19 +35380,19 @@
               "source": "PO"
             }
           ],
-          "atp": 879
+          "atp": 819
         },
         {
           "date": "2026-09-08",
           "display_date": "2026-09-15",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 30,
-          "net_available": 900,
+          "net_available": 840,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -35414,7 +35414,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -35423,19 +35423,19 @@
               "source": "PO"
             }
           ],
-          "atp": 879
+          "atp": 819
         },
         {
           "date": "2026-10-01",
           "display_date": "2026-10-08",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 43,
-          "net_available": 887,
+          "net_available": 827,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -35457,7 +35457,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -35466,19 +35466,19 @@
               "source": "PO"
             }
           ],
-          "atp": 879
+          "atp": 819
         },
         {
           "date": "2026-11-01",
           "display_date": "2026-11-08",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 45,
-          "net_available": 885,
+          "net_available": 825,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -35500,7 +35500,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -35509,19 +35509,19 @@
               "source": "PO"
             }
           ],
-          "atp": 879
+          "atp": 819
         },
         {
           "date": "2026-11-02",
           "display_date": "2026-11-09",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 46,
-          "net_available": 884,
+          "net_available": 824,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -35543,7 +35543,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -35552,19 +35552,19 @@
               "source": "PO"
             }
           ],
-          "atp": 879
+          "atp": 819
         },
         {
           "date": "2026-11-27",
           "display_date": "2026-12-04",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 48,
-          "net_available": 882,
+          "net_available": 822,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -35586,7 +35586,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -35595,19 +35595,19 @@
               "source": "PO"
             }
           ],
-          "atp": 879
+          "atp": 819
         },
         {
           "date": "2026-12-27",
           "display_date": "2027-01-03",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 50,
-          "net_available": 880,
+          "net_available": 820,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -35629,7 +35629,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -35638,19 +35638,19 @@
               "source": "PO"
             }
           ],
-          "atp": 879
+          "atp": 819
         },
         {
           "date": "2026-12-31",
           "display_date": "2027-01-07",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 51,
-          "net_available": 879,
+          "net_available": 819,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -35672,7 +35672,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -35681,7 +35681,7 @@
               "source": "PO"
             }
           ],
-          "atp": 879
+          "atp": 819
         }
       ],
       "avg_eur_per_unit": 87.8214,
@@ -35802,9 +35802,9 @@
       "status": "committed",
       "available_today": 0,
       "total_open_demand": 167,
-      "committable": 763,
+      "committable": 703,
       "max_buildable_today": 1,
-      "max_buildable_horizon": 930,
+      "max_buildable_horizon": 870,
       "next_available_date": "2026-07-20",
       "next_available_qty": 389,
       "first_shortfall_date": "2026-07-06",
@@ -35823,7 +35823,7 @@
         {
           "item_id": "466",
           "item_name": "0CPGSLI.SP1",
-          "supportable_fg_units": 837,
+          "supportable_fg_units": 777,
           "next_po_date": "2026-08-03",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -35834,7 +35834,7 @@
         {
           "item_id": "465",
           "item_name": "0CPGSLI.PZ",
-          "supportable_fg_units": 913,
+          "supportable_fg_units": 853,
           "next_po_date": "2026-08-20",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -35865,7 +35865,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -35876,7 +35876,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -35908,7 +35908,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -35919,7 +35919,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -35951,7 +35951,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -35962,7 +35962,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -35976,14 +35976,14 @@
         {
           "date": "2026-07-17",
           "display_date": "2026-07-24",
-          "buildable": 837,
+          "buildable": 777,
           "cumulative_demand": 49,
-          "net_available": 788,
+          "net_available": 728,
           "limiting_components": [
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -35994,7 +35994,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -36005,7 +36005,7 @@
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -36014,19 +36014,19 @@
               "source": "PO"
             }
           ],
-          "atp": 763
+          "atp": 703
         },
         {
           "date": "2026-07-27",
           "display_date": "2026-08-03",
-          "buildable": 837,
+          "buildable": 777,
           "cumulative_demand": 51,
-          "net_available": 786,
+          "net_available": 726,
           "limiting_components": [
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -36037,7 +36037,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -36048,7 +36048,7 @@
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -36057,19 +36057,19 @@
               "source": "PO"
             }
           ],
-          "atp": 763
+          "atp": 703
         },
         {
           "date": "2026-07-30",
           "display_date": "2026-08-06",
-          "buildable": 837,
+          "buildable": 777,
           "cumulative_demand": 55,
-          "net_available": 782,
+          "net_available": 722,
           "limiting_components": [
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -36080,7 +36080,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -36091,7 +36091,7 @@
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -36100,19 +36100,19 @@
               "source": "PO"
             }
           ],
-          "atp": 763
+          "atp": 703
         },
         {
           "date": "2026-08-01",
           "display_date": "2026-08-08",
-          "buildable": 837,
+          "buildable": 777,
           "cumulative_demand": 56,
-          "net_available": 781,
+          "net_available": 721,
           "limiting_components": [
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -36123,7 +36123,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -36134,7 +36134,7 @@
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -36143,19 +36143,19 @@
               "source": "PO"
             }
           ],
-          "atp": 763
+          "atp": 703
         },
         {
           "date": "2026-08-03",
           "display_date": "2026-08-10",
-          "buildable": 913,
+          "buildable": 853,
           "cumulative_demand": 56,
-          "net_available": 857,
+          "net_available": 797,
           "limiting_components": [
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -36166,7 +36166,7 @@
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -36177,7 +36177,7 @@
             {
               "item_id": "464",
               "item_name": "0CPGSLI.B6",
-              "supportable_fg_units": 1073,
+              "supportable_fg_units": 1013,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -36186,19 +36186,19 @@
               "source": "PO"
             }
           ],
-          "atp": 763
+          "atp": 703
         },
         {
           "date": "2026-08-20",
           "display_date": "2026-08-27",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 56,
-          "net_available": 874,
+          "net_available": 814,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -36209,7 +36209,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -36229,320 +36229,19 @@
               "source": "PO"
             }
           ],
-          "atp": 763
+          "atp": 703
         },
         {
           "date": "2026-09-01",
           "display_date": "2026-09-08",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 103,
-          "net_available": 827,
-          "limiting_components": [
-            {
-              "item_id": "7682",
-              "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            },
-            {
-              "item_id": "463",
-              "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            },
-            {
-              "item_id": "7515",
-              "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1648,
-              "next_po_date": "2026-07-13",
-              "next_po_original_date": "2026-06-15",
-              "next_po_qty": 433.0,
-              "overdue": true,
-              "po_number": "PO-IT-2600278",
-              "source": "PO"
-            }
-          ],
-          "atp": 763
-        },
-        {
-          "date": "2026-09-07",
-          "display_date": "2026-09-14",
-          "buildable": 930,
-          "cumulative_demand": 104,
-          "net_available": 826,
-          "limiting_components": [
-            {
-              "item_id": "7682",
-              "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            },
-            {
-              "item_id": "463",
-              "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            },
-            {
-              "item_id": "7515",
-              "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1648,
-              "next_po_date": "2026-07-13",
-              "next_po_original_date": "2026-06-15",
-              "next_po_qty": 433.0,
-              "overdue": true,
-              "po_number": "PO-IT-2600278",
-              "source": "PO"
-            }
-          ],
-          "atp": 763
-        },
-        {
-          "date": "2026-09-08",
-          "display_date": "2026-09-15",
-          "buildable": 930,
-          "cumulative_demand": 107,
-          "net_available": 823,
-          "limiting_components": [
-            {
-              "item_id": "7682",
-              "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            },
-            {
-              "item_id": "463",
-              "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            },
-            {
-              "item_id": "7515",
-              "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1648,
-              "next_po_date": "2026-07-13",
-              "next_po_original_date": "2026-06-15",
-              "next_po_qty": 433.0,
-              "overdue": true,
-              "po_number": "PO-IT-2600278",
-              "source": "PO"
-            }
-          ],
-          "atp": 763
-        },
-        {
-          "date": "2026-09-15",
-          "display_date": "2026-09-22",
-          "buildable": 930,
-          "cumulative_demand": 108,
-          "net_available": 822,
-          "limiting_components": [
-            {
-              "item_id": "7682",
-              "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            },
-            {
-              "item_id": "463",
-              "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            },
-            {
-              "item_id": "7515",
-              "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1648,
-              "next_po_date": "2026-07-13",
-              "next_po_original_date": "2026-06-15",
-              "next_po_qty": 433.0,
-              "overdue": true,
-              "po_number": "PO-IT-2600278",
-              "source": "PO"
-            }
-          ],
-          "atp": 763
-        },
-        {
-          "date": "2026-10-01",
-          "display_date": "2026-10-08",
-          "buildable": 930,
-          "cumulative_demand": 141,
-          "net_available": 789,
-          "limiting_components": [
-            {
-              "item_id": "7682",
-              "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            },
-            {
-              "item_id": "463",
-              "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            },
-            {
-              "item_id": "7515",
-              "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1648,
-              "next_po_date": "2026-07-13",
-              "next_po_original_date": "2026-06-15",
-              "next_po_qty": 433.0,
-              "overdue": true,
-              "po_number": "PO-IT-2600278",
-              "source": "PO"
-            }
-          ],
-          "atp": 763
-        },
-        {
-          "date": "2026-11-01",
-          "display_date": "2026-11-08",
-          "buildable": 930,
-          "cumulative_demand": 161,
-          "net_available": 769,
-          "limiting_components": [
-            {
-              "item_id": "7682",
-              "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            },
-            {
-              "item_id": "463",
-              "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            },
-            {
-              "item_id": "7515",
-              "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1648,
-              "next_po_date": "2026-07-13",
-              "next_po_original_date": "2026-06-15",
-              "next_po_qty": 433.0,
-              "overdue": true,
-              "po_number": "PO-IT-2600278",
-              "source": "PO"
-            }
-          ],
-          "atp": 763
-        },
-        {
-          "date": "2026-11-02",
-          "display_date": "2026-11-09",
-          "buildable": 930,
-          "cumulative_demand": 162,
-          "net_available": 768,
-          "limiting_components": [
-            {
-              "item_id": "7682",
-              "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            },
-            {
-              "item_id": "463",
-              "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            },
-            {
-              "item_id": "7515",
-              "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1648,
-              "next_po_date": "2026-07-13",
-              "next_po_original_date": "2026-06-15",
-              "next_po_qty": 433.0,
-              "overdue": true,
-              "po_number": "PO-IT-2600278",
-              "source": "PO"
-            }
-          ],
-          "atp": 763
-        },
-        {
-          "date": "2026-11-27",
-          "display_date": "2026-12-04",
-          "buildable": 930,
-          "cumulative_demand": 163,
           "net_available": 767,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -36553,7 +36252,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -36564,7 +36263,7 @@
             {
               "item_id": "7515",
               "item_name": "0MAATE.SY35",
-              "supportable_fg_units": 1898,
+              "supportable_fg_units": 1648,
               "next_po_date": "2026-07-13",
               "next_po_original_date": "2026-06-15",
               "next_po_qty": 433.0,
@@ -36573,19 +36272,62 @@
               "source": "PO"
             }
           ],
-          "atp": 763
+          "atp": 703
         },
         {
-          "date": "2026-12-27",
-          "display_date": "2027-01-03",
-          "buildable": 930,
-          "cumulative_demand": 167,
+          "date": "2026-09-07",
+          "display_date": "2026-09-14",
+          "buildable": 870,
+          "cumulative_demand": 104,
+          "net_available": 766,
+          "limiting_components": [
+            {
+              "item_id": "7682",
+              "item_name": "0CPGSLI.CP2.2",
+              "supportable_fg_units": 870,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false,
+              "po_number": null,
+              "source": "PO"
+            },
+            {
+              "item_id": "463",
+              "item_name": "0CPGSLI.CO1",
+              "supportable_fg_units": 1191,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false,
+              "po_number": null,
+              "source": "PO"
+            },
+            {
+              "item_id": "7515",
+              "item_name": "0MAATE.SY35",
+              "supportable_fg_units": 1648,
+              "next_po_date": "2026-07-13",
+              "next_po_original_date": "2026-06-15",
+              "next_po_qty": 433.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600278",
+              "source": "PO"
+            }
+          ],
+          "atp": 703
+        },
+        {
+          "date": "2026-09-08",
+          "display_date": "2026-09-15",
+          "buildable": 870,
+          "cumulative_demand": 107,
           "net_available": 763,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -36596,7 +36338,222 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false,
+              "po_number": null,
+              "source": "PO"
+            },
+            {
+              "item_id": "7515",
+              "item_name": "0MAATE.SY35",
+              "supportable_fg_units": 1648,
+              "next_po_date": "2026-07-13",
+              "next_po_original_date": "2026-06-15",
+              "next_po_qty": 433.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600278",
+              "source": "PO"
+            }
+          ],
+          "atp": 703
+        },
+        {
+          "date": "2026-09-15",
+          "display_date": "2026-09-22",
+          "buildable": 870,
+          "cumulative_demand": 108,
+          "net_available": 762,
+          "limiting_components": [
+            {
+              "item_id": "7682",
+              "item_name": "0CPGSLI.CP2.2",
+              "supportable_fg_units": 870,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false,
+              "po_number": null,
+              "source": "PO"
+            },
+            {
+              "item_id": "463",
+              "item_name": "0CPGSLI.CO1",
+              "supportable_fg_units": 1191,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false,
+              "po_number": null,
+              "source": "PO"
+            },
+            {
+              "item_id": "7515",
+              "item_name": "0MAATE.SY35",
+              "supportable_fg_units": 1648,
+              "next_po_date": "2026-07-13",
+              "next_po_original_date": "2026-06-15",
+              "next_po_qty": 433.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600278",
+              "source": "PO"
+            }
+          ],
+          "atp": 703
+        },
+        {
+          "date": "2026-10-01",
+          "display_date": "2026-10-08",
+          "buildable": 870,
+          "cumulative_demand": 141,
+          "net_available": 729,
+          "limiting_components": [
+            {
+              "item_id": "7682",
+              "item_name": "0CPGSLI.CP2.2",
+              "supportable_fg_units": 870,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false,
+              "po_number": null,
+              "source": "PO"
+            },
+            {
+              "item_id": "463",
+              "item_name": "0CPGSLI.CO1",
+              "supportable_fg_units": 1191,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false,
+              "po_number": null,
+              "source": "PO"
+            },
+            {
+              "item_id": "7515",
+              "item_name": "0MAATE.SY35",
+              "supportable_fg_units": 1648,
+              "next_po_date": "2026-07-13",
+              "next_po_original_date": "2026-06-15",
+              "next_po_qty": 433.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600278",
+              "source": "PO"
+            }
+          ],
+          "atp": 703
+        },
+        {
+          "date": "2026-11-01",
+          "display_date": "2026-11-08",
+          "buildable": 870,
+          "cumulative_demand": 161,
+          "net_available": 709,
+          "limiting_components": [
+            {
+              "item_id": "7682",
+              "item_name": "0CPGSLI.CP2.2",
+              "supportable_fg_units": 870,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false,
+              "po_number": null,
+              "source": "PO"
+            },
+            {
+              "item_id": "463",
+              "item_name": "0CPGSLI.CO1",
+              "supportable_fg_units": 1191,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false,
+              "po_number": null,
+              "source": "PO"
+            },
+            {
+              "item_id": "7515",
+              "item_name": "0MAATE.SY35",
+              "supportable_fg_units": 1648,
+              "next_po_date": "2026-07-13",
+              "next_po_original_date": "2026-06-15",
+              "next_po_qty": 433.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600278",
+              "source": "PO"
+            }
+          ],
+          "atp": 703
+        },
+        {
+          "date": "2026-11-02",
+          "display_date": "2026-11-09",
+          "buildable": 870,
+          "cumulative_demand": 162,
+          "net_available": 708,
+          "limiting_components": [
+            {
+              "item_id": "7682",
+              "item_name": "0CPGSLI.CP2.2",
+              "supportable_fg_units": 870,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false,
+              "po_number": null,
+              "source": "PO"
+            },
+            {
+              "item_id": "463",
+              "item_name": "0CPGSLI.CO1",
+              "supportable_fg_units": 1191,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false,
+              "po_number": null,
+              "source": "PO"
+            },
+            {
+              "item_id": "7515",
+              "item_name": "0MAATE.SY35",
+              "supportable_fg_units": 1648,
+              "next_po_date": "2026-07-13",
+              "next_po_original_date": "2026-06-15",
+              "next_po_qty": 433.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600278",
+              "source": "PO"
+            }
+          ],
+          "atp": 703
+        },
+        {
+          "date": "2026-11-27",
+          "display_date": "2026-12-04",
+          "buildable": 870,
+          "cumulative_demand": 163,
+          "net_available": 707,
+          "limiting_components": [
+            {
+              "item_id": "7682",
+              "item_name": "0CPGSLI.CP2.2",
+              "supportable_fg_units": 870,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false,
+              "po_number": null,
+              "source": "PO"
+            },
+            {
+              "item_id": "463",
+              "item_name": "0CPGSLI.CO1",
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -36616,7 +36573,50 @@
               "source": "PO"
             }
           ],
-          "atp": 763
+          "atp": 703
+        },
+        {
+          "date": "2026-12-27",
+          "display_date": "2027-01-03",
+          "buildable": 870,
+          "cumulative_demand": 167,
+          "net_available": 703,
+          "limiting_components": [
+            {
+              "item_id": "7682",
+              "item_name": "0CPGSLI.CP2.2",
+              "supportable_fg_units": 870,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false,
+              "po_number": null,
+              "source": "PO"
+            },
+            {
+              "item_id": "463",
+              "item_name": "0CPGSLI.CO1",
+              "supportable_fg_units": 1191,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false,
+              "po_number": null,
+              "source": "PO"
+            },
+            {
+              "item_id": "7515",
+              "item_name": "0MAATE.SY35",
+              "supportable_fg_units": 1898,
+              "next_po_date": "2026-07-13",
+              "next_po_original_date": "2026-06-15",
+              "next_po_qty": 433.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600278",
+              "source": "PO"
+            }
+          ],
+          "atp": 703
         }
       ],
       "avg_eur_per_unit": 92.587,
@@ -36765,9 +36765,9 @@
       "status": "committed",
       "available_today": 0,
       "total_open_demand": 258,
-      "committable": 672,
+      "committable": 612,
       "max_buildable_today": 1,
-      "max_buildable_horizon": 930,
+      "max_buildable_horizon": 870,
       "next_available_date": "2026-07-20",
       "next_available_qty": 455,
       "first_shortfall_date": "2026-07-06",
@@ -36786,7 +36786,7 @@
         {
           "item_id": "466",
           "item_name": "0CPGSLI.SP1",
-          "supportable_fg_units": 837,
+          "supportable_fg_units": 777,
           "next_po_date": "2026-08-03",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -36797,7 +36797,7 @@
         {
           "item_id": "465",
           "item_name": "0CPGSLI.PZ",
-          "supportable_fg_units": 913,
+          "supportable_fg_units": 853,
           "next_po_date": "2026-08-20",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -36828,7 +36828,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -36839,7 +36839,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -36871,7 +36871,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -36882,7 +36882,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -36914,7 +36914,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -36925,7 +36925,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -36957,7 +36957,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -36968,7 +36968,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -36982,14 +36982,14 @@
         {
           "date": "2026-07-17",
           "display_date": "2026-07-24",
-          "buildable": 837,
+          "buildable": 777,
           "cumulative_demand": 96,
-          "net_available": 741,
+          "net_available": 681,
           "limiting_components": [
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -37000,7 +37000,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -37011,7 +37011,7 @@
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37020,19 +37020,19 @@
               "source": "PO"
             }
           ],
-          "atp": 672
+          "atp": 612
         },
         {
           "date": "2026-07-27",
           "display_date": "2026-08-03",
-          "buildable": 837,
+          "buildable": 777,
           "cumulative_demand": 97,
-          "net_available": 740,
+          "net_available": 680,
           "limiting_components": [
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -37043,7 +37043,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -37054,7 +37054,7 @@
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37063,19 +37063,19 @@
               "source": "PO"
             }
           ],
-          "atp": 672
+          "atp": 612
         },
         {
           "date": "2026-07-30",
           "display_date": "2026-08-06",
-          "buildable": 837,
+          "buildable": 777,
           "cumulative_demand": 100,
-          "net_available": 737,
+          "net_available": 677,
           "limiting_components": [
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -37086,7 +37086,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -37097,7 +37097,7 @@
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37106,19 +37106,19 @@
               "source": "PO"
             }
           ],
-          "atp": 672
+          "atp": 612
         },
         {
           "date": "2026-08-01",
           "display_date": "2026-08-08",
-          "buildable": 837,
+          "buildable": 777,
           "cumulative_demand": 101,
-          "net_available": 736,
+          "net_available": 676,
           "limiting_components": [
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -37129,7 +37129,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -37140,7 +37140,7 @@
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37149,19 +37149,19 @@
               "source": "PO"
             }
           ],
-          "atp": 672
+          "atp": 612
         },
         {
           "date": "2026-08-03",
           "display_date": "2026-08-10",
-          "buildable": 913,
+          "buildable": 853,
           "cumulative_demand": 101,
-          "net_available": 812,
+          "net_available": 752,
           "limiting_components": [
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -37172,7 +37172,7 @@
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37183,7 +37183,7 @@
             {
               "item_id": "464",
               "item_name": "0CPGSLI.B6",
-              "supportable_fg_units": 1073,
+              "supportable_fg_units": 1013,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -37192,19 +37192,19 @@
               "source": "PO"
             }
           ],
-          "atp": 672
+          "atp": 612
         },
         {
           "date": "2026-08-20",
           "display_date": "2026-08-27",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 101,
-          "net_available": 829,
+          "net_available": 769,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37215,7 +37215,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37226,7 +37226,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 1837,
+              "supportable_fg_units": 1777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -37235,19 +37235,19 @@
               "source": "PO"
             }
           ],
-          "atp": 672
+          "atp": 612
         },
         {
           "date": "2026-09-01",
           "display_date": "2026-09-08",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 162,
-          "net_available": 768,
+          "net_available": 708,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37258,7 +37258,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37269,7 +37269,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 1837,
+              "supportable_fg_units": 1777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -37278,19 +37278,19 @@
               "source": "PO"
             }
           ],
-          "atp": 672
+          "atp": 612
         },
         {
           "date": "2026-09-07",
           "display_date": "2026-09-14",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 163,
-          "net_available": 767,
+          "net_available": 707,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37301,7 +37301,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37312,7 +37312,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 1837,
+              "supportable_fg_units": 1777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -37321,19 +37321,19 @@
               "source": "PO"
             }
           ],
-          "atp": 672
+          "atp": 612
         },
         {
           "date": "2026-09-08",
           "display_date": "2026-09-15",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 166,
-          "net_available": 764,
+          "net_available": 704,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37344,7 +37344,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37355,7 +37355,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 1837,
+              "supportable_fg_units": 1777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -37364,19 +37364,19 @@
               "source": "PO"
             }
           ],
-          "atp": 672
+          "atp": 612
         },
         {
           "date": "2026-09-15",
           "display_date": "2026-09-22",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 167,
-          "net_available": 763,
+          "net_available": 703,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37387,7 +37387,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37398,7 +37398,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 1837,
+              "supportable_fg_units": 1777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -37407,19 +37407,19 @@
               "source": "PO"
             }
           ],
-          "atp": 672
+          "atp": 612
         },
         {
           "date": "2026-10-01",
           "display_date": "2026-10-08",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 213,
-          "net_available": 717,
+          "net_available": 657,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37430,7 +37430,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37441,7 +37441,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 1837,
+              "supportable_fg_units": 1777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -37450,19 +37450,19 @@
               "source": "PO"
             }
           ],
-          "atp": 672
+          "atp": 612
         },
         {
           "date": "2026-11-01",
           "display_date": "2026-11-08",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 248,
-          "net_available": 682,
+          "net_available": 622,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37473,7 +37473,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37493,19 +37493,19 @@
               "source": "PO"
             }
           ],
-          "atp": 672
+          "atp": 612
         },
         {
           "date": "2026-11-02",
           "display_date": "2026-11-09",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 249,
-          "net_available": 681,
+          "net_available": 621,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37516,7 +37516,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37536,19 +37536,19 @@
               "source": "PO"
             }
           ],
-          "atp": 672
+          "atp": 612
         },
         {
           "date": "2026-11-27",
           "display_date": "2026-12-04",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 250,
-          "net_available": 680,
+          "net_available": 620,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37559,7 +37559,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37579,19 +37579,19 @@
               "source": "PO"
             }
           ],
-          "atp": 672
+          "atp": 612
         },
         {
           "date": "2026-12-25",
           "display_date": "2027-01-01",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 255,
-          "net_available": 675,
+          "net_available": 615,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37602,7 +37602,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37613,7 +37613,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 2837,
+              "supportable_fg_units": 2777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -37622,19 +37622,19 @@
               "source": "PO"
             }
           ],
-          "atp": 672
+          "atp": 612
         },
         {
           "date": "2026-12-27",
           "display_date": "2027-01-03",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 257,
-          "net_available": 673,
+          "net_available": 613,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37645,7 +37645,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37656,7 +37656,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 2837,
+              "supportable_fg_units": 2777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -37665,19 +37665,19 @@
               "source": "PO"
             }
           ],
-          "atp": 672
+          "atp": 612
         },
         {
           "date": "2026-12-31",
           "display_date": "2027-01-07",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 258,
-          "net_available": 672,
+          "net_available": 612,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37688,7 +37688,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -37699,7 +37699,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 2837,
+              "supportable_fg_units": 2777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -37708,7 +37708,7 @@
               "source": "PO"
             }
           ],
-          "atp": 672
+          "atp": 612
         }
       ],
       "avg_eur_per_unit": 91.7999,
@@ -37930,9 +37930,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 124,
-      "committable": 806,
+      "committable": 746,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 930,
+      "max_buildable_horizon": 870,
       "next_available_date": "2026-07-24",
       "next_available_qty": 674,
       "first_shortfall_date": "2026-07-06",
@@ -37951,7 +37951,7 @@
         {
           "item_id": "466",
           "item_name": "0CPGSLI.SP1",
-          "supportable_fg_units": 837,
+          "supportable_fg_units": 777,
           "next_po_date": "2026-08-03",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -37962,7 +37962,7 @@
         {
           "item_id": "465",
           "item_name": "0CPGSLI.PZ",
-          "supportable_fg_units": 913,
+          "supportable_fg_units": 853,
           "next_po_date": "2026-08-20",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -37993,7 +37993,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -38004,7 +38004,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -38036,7 +38036,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -38047,7 +38047,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -38079,7 +38079,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -38090,7 +38090,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -38122,7 +38122,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -38133,7 +38133,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -38165,7 +38165,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 837,
+              "supportable_fg_units": 777,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -38176,7 +38176,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 913,
+              "supportable_fg_units": 853,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -38190,14 +38190,14 @@
         {
           "date": "2026-08-25",
           "display_date": "2026-09-01",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 41,
-          "net_available": 889,
+          "net_available": 829,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -38219,7 +38219,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -38228,19 +38228,19 @@
               "source": "PO"
             }
           ],
-          "atp": 806
+          "atp": 746
         },
         {
           "date": "2026-09-01",
           "display_date": "2026-09-08",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 70,
-          "net_available": 860,
+          "net_available": 800,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -38262,7 +38262,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -38271,19 +38271,19 @@
               "source": "PO"
             }
           ],
-          "atp": 806
+          "atp": 746
         },
         {
           "date": "2026-09-08",
           "display_date": "2026-09-15",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 72,
-          "net_available": 858,
+          "net_available": 798,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -38305,7 +38305,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -38314,19 +38314,19 @@
               "source": "PO"
             }
           ],
-          "atp": 806
+          "atp": 746
         },
         {
           "date": "2026-09-15",
           "display_date": "2026-09-22",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 73,
-          "net_available": 857,
+          "net_available": 797,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -38348,7 +38348,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -38357,19 +38357,19 @@
               "source": "PO"
             }
           ],
-          "atp": 806
+          "atp": 746
         },
         {
           "date": "2026-10-01",
           "display_date": "2026-10-08",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 98,
-          "net_available": 832,
+          "net_available": 772,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -38391,7 +38391,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -38400,19 +38400,30 @@
               "source": "PO"
             }
           ],
-          "atp": 806
+          "atp": 746
         },
         {
           "date": "2026-11-01",
           "display_date": "2026-11-08",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 116,
-          "net_available": 814,
+          "net_available": 754,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false,
+              "po_number": null,
+              "source": "PO"
+            },
+            {
+              "item_id": "463",
+              "item_name": "0CPGSLI.CO1",
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -38430,32 +38441,32 @@
               "overdue": true,
               "po_number": "PO-IT-2600278",
               "source": "PO"
-            },
-            {
-              "item_id": "463",
-              "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
             }
           ],
-          "atp": 806
+          "atp": 746
         },
         {
           "date": "2026-11-02",
           "display_date": "2026-11-09",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 117,
-          "net_available": 813,
+          "net_available": 753,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false,
+              "po_number": null,
+              "source": "PO"
+            },
+            {
+              "item_id": "463",
+              "item_name": "0CPGSLI.CO1",
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -38473,32 +38484,32 @@
               "overdue": true,
               "po_number": "PO-IT-2600278",
               "source": "PO"
-            },
-            {
-              "item_id": "463",
-              "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
             }
           ],
-          "atp": 806
+          "atp": 746
         },
         {
           "date": "2026-11-27",
           "display_date": "2026-12-04",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 118,
-          "net_available": 812,
+          "net_available": 752,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false,
+              "po_number": null,
+              "source": "PO"
+            },
+            {
+              "item_id": "463",
+              "item_name": "0CPGSLI.CO1",
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -38516,32 +38527,21 @@
               "overdue": true,
               "po_number": "PO-IT-2600278",
               "source": "PO"
-            },
-            {
-              "item_id": "463",
-              "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
             }
           ],
-          "atp": 806
+          "atp": 746
         },
         {
           "date": "2026-12-25",
           "display_date": "2027-01-01",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 119,
-          "net_available": 811,
+          "net_available": 751,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -38552,7 +38552,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -38572,19 +38572,19 @@
               "source": "PO"
             }
           ],
-          "atp": 806
+          "atp": 746
         },
         {
           "date": "2026-12-27",
           "display_date": "2027-01-03",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 123,
-          "net_available": 807,
+          "net_available": 747,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -38595,7 +38595,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -38615,19 +38615,19 @@
               "source": "PO"
             }
           ],
-          "atp": 806
+          "atp": 746
         },
         {
           "date": "2026-12-31",
           "display_date": "2027-01-07",
-          "buildable": 930,
+          "buildable": 870,
           "cumulative_demand": 124,
-          "net_available": 806,
+          "net_available": 746,
           "limiting_components": [
             {
               "item_id": "7682",
               "item_name": "0CPGSLI.CP2.2",
-              "supportable_fg_units": 930,
+              "supportable_fg_units": 870,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -38638,7 +38638,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1251,
+              "supportable_fg_units": 1191,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -38658,7 +38658,7 @@
               "source": "PO"
             }
           ],
-          "atp": 806
+          "atp": 746
         }
       ],
       "avg_eur_per_unit": 91.0178,
@@ -42331,7 +42331,7 @@
         {
           "item_id": "7681",
           "item_name": "0CPGSLI.CP1.2",
-          "supportable_fg_units": 596,
+          "supportable_fg_units": 556,
           "next_po_date": null,
           "next_po_original_date": null,
           "next_po_qty": 0,
@@ -42342,7 +42342,7 @@
         {
           "item_id": "466",
           "item_name": "0CPGSLI.SP1",
-          "supportable_fg_units": 792,
+          "supportable_fg_units": 592,
           "next_po_date": "2026-08-03",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -42373,7 +42373,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 596,
+              "supportable_fg_units": 556,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42384,7 +42384,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 792,
+              "supportable_fg_units": 592,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -42416,7 +42416,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 596,
+              "supportable_fg_units": 556,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42427,7 +42427,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 792,
+              "supportable_fg_units": 592,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -42459,7 +42459,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 596,
+              "supportable_fg_units": 556,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42470,7 +42470,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 792,
+              "supportable_fg_units": 592,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -42502,7 +42502,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 596,
+              "supportable_fg_units": 556,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42513,7 +42513,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1206,
+              "supportable_fg_units": 1006,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42545,7 +42545,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 596,
+              "supportable_fg_units": 556,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42556,7 +42556,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1206,
+              "supportable_fg_units": 1006,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42588,7 +42588,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 596,
+              "supportable_fg_units": 556,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42599,7 +42599,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1206,
+              "supportable_fg_units": 1006,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42631,7 +42631,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 596,
+              "supportable_fg_units": 556,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42642,7 +42642,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1206,
+              "supportable_fg_units": 1006,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42674,7 +42674,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 596,
+              "supportable_fg_units": 556,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42685,7 +42685,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1206,
+              "supportable_fg_units": 1006,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42717,7 +42717,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 596,
+              "supportable_fg_units": 556,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42728,7 +42728,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1206,
+              "supportable_fg_units": 1006,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42760,7 +42760,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 596,
+              "supportable_fg_units": 556,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42771,7 +42771,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1206,
+              "supportable_fg_units": 1006,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -42950,7 +42950,7 @@
         {
           "item_id": "7681",
           "item_name": "0CPGSLI.CP1.2",
-          "supportable_fg_units": 596,
+          "supportable_fg_units": 556,
           "next_po_date": null,
           "next_po_original_date": null,
           "next_po_qty": 0,
@@ -42961,7 +42961,7 @@
         {
           "item_id": "466",
           "item_name": "0CPGSLI.SP1",
-          "supportable_fg_units": 792,
+          "supportable_fg_units": 592,
           "next_po_date": "2026-08-03",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -42992,7 +42992,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 596,
+              "supportable_fg_units": 556,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43003,7 +43003,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 792,
+              "supportable_fg_units": 592,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -43035,7 +43035,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 596,
+              "supportable_fg_units": 556,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43046,7 +43046,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 792,
+              "supportable_fg_units": 592,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -43078,7 +43078,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 596,
+              "supportable_fg_units": 556,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43089,7 +43089,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 792,
+              "supportable_fg_units": 592,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -43121,7 +43121,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 596,
+              "supportable_fg_units": 556,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43132,7 +43132,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1206,
+              "supportable_fg_units": 1006,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43164,7 +43164,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 596,
+              "supportable_fg_units": 556,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43175,7 +43175,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1206,
+              "supportable_fg_units": 1006,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43207,7 +43207,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 596,
+              "supportable_fg_units": 556,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43218,7 +43218,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1206,
+              "supportable_fg_units": 1006,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43250,7 +43250,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 596,
+              "supportable_fg_units": 556,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43261,7 +43261,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1206,
+              "supportable_fg_units": 1006,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43293,7 +43293,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 596,
+              "supportable_fg_units": 556,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43304,7 +43304,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1206,
+              "supportable_fg_units": 1006,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43336,7 +43336,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 596,
+              "supportable_fg_units": 556,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43347,7 +43347,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1206,
+              "supportable_fg_units": 1006,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43379,7 +43379,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 596,
+              "supportable_fg_units": 556,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43390,7 +43390,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1206,
+              "supportable_fg_units": 1006,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43605,7 +43605,7 @@
         {
           "item_id": "7681",
           "item_name": "0CPGSLI.CP1.2",
-          "supportable_fg_units": 604,
+          "supportable_fg_units": 564,
           "next_po_date": null,
           "next_po_original_date": null,
           "next_po_qty": 0,
@@ -43616,7 +43616,7 @@
         {
           "item_id": "466",
           "item_name": "0CPGSLI.SP1",
-          "supportable_fg_units": 800,
+          "supportable_fg_units": 600,
           "next_po_date": "2026-08-03",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -43647,7 +43647,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 604,
+              "supportable_fg_units": 564,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43658,7 +43658,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 800,
+              "supportable_fg_units": 600,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -43690,7 +43690,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 604,
+              "supportable_fg_units": 564,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43701,7 +43701,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 800,
+              "supportable_fg_units": 600,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -43733,7 +43733,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 604,
+              "supportable_fg_units": 564,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43744,7 +43744,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 800,
+              "supportable_fg_units": 600,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -43776,7 +43776,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 604,
+              "supportable_fg_units": 564,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43787,7 +43787,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1214,
+              "supportable_fg_units": 1014,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43819,7 +43819,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 604,
+              "supportable_fg_units": 564,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43830,7 +43830,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1214,
+              "supportable_fg_units": 1014,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43862,7 +43862,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 604,
+              "supportable_fg_units": 564,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43873,7 +43873,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1214,
+              "supportable_fg_units": 1014,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43905,7 +43905,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 604,
+              "supportable_fg_units": 564,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43916,7 +43916,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1214,
+              "supportable_fg_units": 1014,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43948,7 +43948,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 604,
+              "supportable_fg_units": 564,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43959,7 +43959,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1214,
+              "supportable_fg_units": 1014,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -43991,7 +43991,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 604,
+              "supportable_fg_units": 564,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44002,7 +44002,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1214,
+              "supportable_fg_units": 1014,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44034,7 +44034,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 604,
+              "supportable_fg_units": 564,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44045,7 +44045,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1214,
+              "supportable_fg_units": 1014,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44077,7 +44077,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 604,
+              "supportable_fg_units": 564,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44088,7 +44088,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1214,
+              "supportable_fg_units": 1014,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44340,7 +44340,7 @@
         {
           "item_id": "7681",
           "item_name": "0CPGSLI.CP1.2",
-          "supportable_fg_units": 603,
+          "supportable_fg_units": 563,
           "next_po_date": null,
           "next_po_original_date": null,
           "next_po_qty": 0,
@@ -44351,7 +44351,7 @@
         {
           "item_id": "466",
           "item_name": "0CPGSLI.SP1",
-          "supportable_fg_units": 799,
+          "supportable_fg_units": 599,
           "next_po_date": "2026-08-03",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -44382,7 +44382,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 603,
+              "supportable_fg_units": 563,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44393,7 +44393,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 799,
+              "supportable_fg_units": 599,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -44425,7 +44425,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 603,
+              "supportable_fg_units": 563,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44436,7 +44436,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 799,
+              "supportable_fg_units": 599,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -44468,7 +44468,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 603,
+              "supportable_fg_units": 563,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44479,7 +44479,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 799,
+              "supportable_fg_units": 599,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -44511,7 +44511,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 603,
+              "supportable_fg_units": 563,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44522,7 +44522,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1213,
+              "supportable_fg_units": 1013,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44554,7 +44554,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 603,
+              "supportable_fg_units": 563,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44565,7 +44565,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1213,
+              "supportable_fg_units": 1013,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44597,7 +44597,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 603,
+              "supportable_fg_units": 563,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44608,7 +44608,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1213,
+              "supportable_fg_units": 1013,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44640,7 +44640,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 603,
+              "supportable_fg_units": 563,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44651,7 +44651,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1213,
+              "supportable_fg_units": 1013,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44683,7 +44683,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 603,
+              "supportable_fg_units": 563,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44694,7 +44694,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1213,
+              "supportable_fg_units": 1013,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44726,7 +44726,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 603,
+              "supportable_fg_units": 563,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44737,7 +44737,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1213,
+              "supportable_fg_units": 1013,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44769,7 +44769,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 603,
+              "supportable_fg_units": 563,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44780,7 +44780,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1213,
+              "supportable_fg_units": 1013,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44812,7 +44812,7 @@
             {
               "item_id": "7681",
               "item_name": "0CPGSLI.CP1.2",
-              "supportable_fg_units": 603,
+              "supportable_fg_units": 563,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -44823,7 +44823,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1213,
+              "supportable_fg_units": 1013,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -77680,7 +77680,7 @@
         {
           "item_id": "466",
           "item_name": "0CPGSLI.SP1",
-          "supportable_fg_units": 795,
+          "supportable_fg_units": 635,
           "next_po_date": "2026-08-03",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -77691,7 +77691,7 @@
         {
           "item_id": "465",
           "item_name": "0CPGSLI.PZ",
-          "supportable_fg_units": 871,
+          "supportable_fg_units": 711,
           "next_po_date": "2026-08-20",
           "next_po_original_date": null,
           "next_po_qty": 1000.0,
@@ -77722,7 +77722,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 795,
+              "supportable_fg_units": 635,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -77733,7 +77733,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 871,
+              "supportable_fg_units": 711,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -77765,7 +77765,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 795,
+              "supportable_fg_units": 635,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -77776,7 +77776,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 871,
+              "supportable_fg_units": 711,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -77808,7 +77808,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1209,
+              "supportable_fg_units": 1049,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -77819,7 +77819,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 1795,
+              "supportable_fg_units": 1635,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -77851,7 +77851,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1209,
+              "supportable_fg_units": 1049,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -77862,7 +77862,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 1795,
+              "supportable_fg_units": 1635,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -77894,7 +77894,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1209,
+              "supportable_fg_units": 1049,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -77905,7 +77905,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 1795,
+              "supportable_fg_units": 1635,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -77937,7 +77937,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1209,
+              "supportable_fg_units": 1049,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -77948,7 +77948,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 1795,
+              "supportable_fg_units": 1635,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -77980,7 +77980,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1209,
+              "supportable_fg_units": 1049,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -77991,7 +77991,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 1795,
+              "supportable_fg_units": 1635,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -78023,7 +78023,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1209,
+              "supportable_fg_units": 1049,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -78034,7 +78034,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 1795,
+              "supportable_fg_units": 1635,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -78066,7 +78066,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1209,
+              "supportable_fg_units": 1049,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -78077,7 +78077,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 1795,
+              "supportable_fg_units": 1635,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -78109,7 +78109,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1209,
+              "supportable_fg_units": 1049,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -78120,7 +78120,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 1795,
+              "supportable_fg_units": 1635,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -78152,7 +78152,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1209,
+              "supportable_fg_units": 1049,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -78163,7 +78163,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 1795,
+              "supportable_fg_units": 1635,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -78195,7 +78195,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1209,
+              "supportable_fg_units": 1049,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -78206,7 +78206,7 @@
             {
               "item_id": "465",
               "item_name": "0CPGSLI.PZ",
-              "supportable_fg_units": 1871,
+              "supportable_fg_units": 1711,
               "next_po_date": "2026-08-20",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -78238,7 +78238,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1209,
+              "supportable_fg_units": 1049,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -78249,7 +78249,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 2795,
+              "supportable_fg_units": 2635,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -78281,7 +78281,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1209,
+              "supportable_fg_units": 1049,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -78292,7 +78292,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 2795,
+              "supportable_fg_units": 2635,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -78324,7 +78324,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1209,
+              "supportable_fg_units": 1049,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -78335,7 +78335,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 2795,
+              "supportable_fg_units": 2635,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -78367,7 +78367,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1209,
+              "supportable_fg_units": 1049,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -78378,7 +78378,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 2795,
+              "supportable_fg_units": 2635,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -78410,7 +78410,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1209,
+              "supportable_fg_units": 1049,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -78421,7 +78421,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 2795,
+              "supportable_fg_units": 2635,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
@@ -78453,7 +78453,7 @@
             {
               "item_id": "463",
               "item_name": "0CPGSLI.CO1",
-              "supportable_fg_units": 1209,
+              "supportable_fg_units": 1049,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -78464,7 +78464,7 @@
             {
               "item_id": "466",
               "item_name": "0CPGSLI.SP1",
-              "supportable_fg_units": 2795,
+              "supportable_fg_units": 2635,
               "next_po_date": "2026-08-03",
               "next_po_original_date": null,
               "next_po_qty": 1000.0,
