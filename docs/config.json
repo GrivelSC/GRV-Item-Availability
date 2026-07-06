@@ -2904,7 +2904,48 @@
       "reason": ""
     }
   ],
-  "embargo_list": [],
+  "embargo_list": [
+    {
+      "item_id": "7057",
+      "item_name": "7/31/2026",
+      "embargo_date": "HAGRC.S"
+    },
+    {
+      "item_id": "7058",
+      "item_name": "7/31/2026",
+      "embargo_date": "HAGRC.M"
+    },
+    {
+      "item_id": "7059",
+      "item_name": "7/31/2026",
+      "embargo_date": "HAGRC.L"
+    },
+    {
+      "item_id": "7060",
+      "item_name": "7/31/2026",
+      "embargo_date": "HAGRC.XL"
+    },
+    {
+      "item_id": "7061",
+      "item_name": "7/31/2026",
+      "embargo_date": "HAVNX.S"
+    },
+    {
+      "item_id": "7062",
+      "item_name": "7/31/2026",
+      "embargo_date": "HAVNX.M"
+    },
+    {
+      "item_id": "7063",
+      "item_name": "7/31/2026",
+      "embargo_date": "HAVNX.L"
+    },
+    {
+      "item_id": "7064",
+      "item_name": "7/31/2026",
+      "embargo_date": "HAVNX.XL"
+    }
+  ],
   "overrides_list": [
     {
       "item_id": "7066",
