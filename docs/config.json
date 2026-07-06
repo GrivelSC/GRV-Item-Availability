@@ -2907,43 +2907,43 @@
   "embargo_list": [
     {
       "item_id": "7057",
-      "item_name": "7/31/2026",
-      "embargo_date": "HAGRC.S"
+      "item_name": "HAGRC.S",
+      "embargo_date": "7/31/2026"
     },
     {
       "item_id": "7058",
-      "item_name": "7/31/2026",
-      "embargo_date": "HAGRC.M"
+      "item_name": "HAGRC.M",
+      "embargo_date": "7/31/2026"
     },
     {
       "item_id": "7059",
-      "item_name": "7/31/2026",
-      "embargo_date": "HAGRC.L"
+      "item_name": "HAGRC.L",
+      "embargo_date": "7/31/2026"
     },
     {
       "item_id": "7060",
-      "item_name": "7/31/2026",
-      "embargo_date": "HAGRC.XL"
+      "item_name": "HAGRC.XL",
+      "embargo_date": "7/31/2026"
     },
     {
       "item_id": "7061",
-      "item_name": "7/31/2026",
-      "embargo_date": "HAVNX.S"
+      "item_name": "HAVNX.S",
+      "embargo_date": "7/31/2026"
     },
     {
       "item_id": "7062",
-      "item_name": "7/31/2026",
-      "embargo_date": "HAVNX.M"
+      "item_name": "HAVNX.M",
+      "embargo_date": "7/31/2026"
     },
     {
       "item_id": "7063",
-      "item_name": "7/31/2026",
-      "embargo_date": "HAVNX.L"
+      "item_name": "HAVNX.L",
+      "embargo_date": "7/31/2026"
     },
     {
       "item_id": "7064",
-      "item_name": "7/31/2026",
-      "embargo_date": "HAVNX.XL"
+      "item_name": "HAVNX.XL",
+      "embargo_date": "7/31/2026"
     }
   ],
   "overrides_list": [
