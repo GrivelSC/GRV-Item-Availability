@@ -1,6 +1,6 @@
 {
   "settings": {
-    "verrayes_pad_days": 7,
+    "verrayes_pad_days": 3,
     "usa3pl_pad_days": 7,
     "usa3pl_embargo_pad_days": 90,
     "usa3pl_intransit_pad_days": 28,
