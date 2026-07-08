@@ -1,10 +1,12 @@
 {
-  "refreshed_at": "2026-07-08T16:41:43.110313",
+  "refreshed_at": "2026-07-09T00:42:08.314962",
   "refreshed_by": "scheduled",
   "sku_count_verrayes": 318,
   "sku_count_usa3pl": 318,
   "override_count": 41,
   "dtc_pass": "ok",
+  "manufacturing_pass": "ok",
+  "manufacturing_wo_count": 2382,
   "status": "ok",
   "warnings": [
     "2 promoted parent(s) have open Work Orders with no completion date in NetSuite; supply was scheduled from the WO transaction date as a fallback: 0IMCOEACPE03GN, 0RTTDKNI.B. Set end dates or close stale WOs.",
