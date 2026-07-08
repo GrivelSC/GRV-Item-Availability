@@ -1,5 +1,5 @@
 {
-  "refreshed_at": "2026-07-07T10:09:01.497519",
+  "refreshed_at": "2026-07-08T11:12:18.750513",
   "refreshed_by": "scheduled",
   "sku_count_verrayes": 318,
   "sku_count_usa3pl": 318,
@@ -8,6 +8,6 @@
   "status": "ok",
   "warnings": [
     "2 promoted parent(s) have open Work Orders with no completion date in NetSuite; supply was scheduled from the WO transaction date as a fallback: 0IMCOEACPE03GN, 0RTTDKNI.B. Set end dates or close stale WOs.",
-    "1244 intercompany US PO line(s) present (31 with prior receipts) but Q9 returned 0 in-transit rows; USA-3PL fell back to PO-date behaviour. If unexpected, check Item Fulfillment visibility for the refresh role."
+    "1171 intercompany US PO line(s) present (25 with prior receipts) but Q9 returned 0 in-transit rows; USA-3PL fell back to PO-date behaviour. If unexpected, check Item Fulfillment visibility for the refresh role."
   ]
 }
