@@ -400,6 +400,9 @@ pre code {
       <a href="#statuses" class="nav-link">Status Definitions</a>
       <a href="#fields" class="nav-link">Field Reference</a>
       <a href="#locations" class="nav-link">VERRAYES vs USA-3PL</a>
+      <a href="#logic" class="nav-link">How Availability Is Calculated</a>
+      <a href="#logic-verrayes" class="nav-link sub">↳ VERRAYES logic</a>
+      <a href="#logic-usa" class="nav-link sub">↳ USA-3PL cascade</a>
     </div>
 
     <div class="nav-section">
@@ -731,6 +734,67 @@ pre code {
     <div class="callout warn">
       <div class="callout-title">USA-3PL note</div>
       <p>Available units at USA-3PL are what is physically in the US warehouse plus committed incoming intercompany shipments. Even if VERRAYES shows a product In Stock, USA-3PL may show Out of Stock if no intercompany PO has been raised to ship it across.</p>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ── CALCULATION LOGIC ──────────────────────────────── -->
+  <section id="logic">
+    <h2>How Availability Is Calculated</h2>
+
+    <p>Every SKU is calculated twice — once for <strong>VERRAYES</strong> and once for <strong>USA-3PL</strong> — and each produces the same two headline numbers:</p>
+
+    <table class="doc-table">
+      <thead><tr><th>Metric</th><th>Column</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td><strong>ATS</strong> — Available to Sell</td><td>Avail Today</td><td>What you can promise and ship <em>today</em> that no already-booked order will reclaim later. It is the lowest point of Net Available across the whole staircase, not just today's stock.</td></tr>
+        <tr><td><strong>ATP</strong> — Available to Promise</td><td>Next Avail / Next Qty / Committable</td><td>When and how much new supply becomes safely promisable in the future. Next Avail is the first future date where promisable units increase; Committable is the peak future capacity minus all open demand.</td></tr>
+      </tbody>
+    </table>
+
+    <p>Both come from the same <strong>staircase</strong>: a time-phased list of every supply and demand event, where each step recomputes Buildable, Cumulative Demand and Net Available. What differs between the two locations is <em>how supply gets onto the staircase</em>.</p>
+
+    <h3 id="logic-verrayes">VERRAYES logic (manufacturing)</h3>
+    <ul>
+      <li><strong>Buildable</strong> = full multi-level <strong>BOM explosion</strong>: how many finished units the components on hand (plus components arriving on open POs / work orders by that date) can produce. The scarcest component sets the ceiling and is shown as the <strong>Top Constraint</strong>.</li>
+      <li><strong>Supply events</strong> = component PO receipts and subcontract Work Order completions. Each event date gets a small manufacturing pad (<code>+7 days</code>); overdue POs are rescheduled to <code>today + 7</code>.</li>
+      <li><strong>ATS</strong> = the minimum Net Available across the staircase (looks ahead so near-term booked orders can't be double-promised). <strong>Next Avail</strong> = the first future step where promisable units rise.</li>
+    </ul>
+
+    <h3 id="logic-usa">USA-3PL logic (the intercompany in-transit cascade)</h3>
+
+    <p><strong>ATS (Avail Today) is simple and unchanged:</strong> finished-goods on hand in the US warehouse, netted against US orders. Goods still travelling from Italy are <em>not</em> on hand, so they never inflate today's number.</p>
+
+    <p><strong>ATP (the timing of incoming supply) is the smart part.</strong> The US is supplied by intercompany POs shipped from Italy, but the PO's expected receipt date is not trustworthy on its own — Italy may not have shipped yet even though the date is near. So each intercompany PO's open quantity is split into pieces and each piece is dated by physical reality:</p>
+
+    <table class="doc-table">
+      <thead><tr><th>Branch</th><th>When it applies</th><th>Date used</th></tr></thead>
+      <tbody>
+        <tr><td><strong>1 · In transit</strong></td><td>Units already shipped from Italy (confirmed by Italy's fulfilments) but not yet received in the US.</td><td>Actual ship date <strong>+ 28 days</strong> transit. If that has already passed, it falls to <code>today + 7</code>.</td></tr>
+        <tr><td><strong>2 · Ship-now (Verrayes has stock)</strong></td><td>Not yet shipped, but VERRAYES has free stock to send. Bounded by VERRAYES Avail Today.</td><td><strong>The later of</strong> the PO receipt date <strong>or</strong> <code>today + 28 days</code> — because nothing has shipped, the soonest the US can receive is one transit away (the "transit floor").</td></tr>
+        <tr><td><strong>3 · Wait for replenishment</strong></td><td>Not yet shipped and VERRAYES has no free stock now (Committed / Incoming).</td><td>VERRAYES Next Avail date <strong>+ 28 days</strong> transit.</td></tr>
+        <tr><td><strong>4 · No replenishment</strong></td><td>VERRAYES is Out of Stock with no replenishment date.</td><td>Does not land — contributes to US Out of Stock.</td></tr>
+        <tr><td><strong>5 · No PO yet (planning signal)</strong></td><td>VERRAYES has stock but no intercompany PO has been raised.</td><td><code>today + 60 days</code>, for the shortfall — assumes a PO is triggered soon. (The only branch not backed by an existing order.)</td></tr>
+      </tbody>
+    </table>
+
+    <p>Direct-vendor US POs (not intercompany) keep trusting their own PO date.</p>
+
+    <div class="callout info">
+      <div class="callout-title">Worked example — why a date can be later than the PO says</div>
+      <p>A SKU has an intercompany PO for 10 units with a receipt date of <strong>15 Jul</strong>, but Italy has shipped none of them, and VERRAYES has stock. Because nothing is in transit, the earliest the US could receive — if Italy shipped today — is one transit away. With today at 29 Jun, that floor is <strong>27 Jul</strong> (today + 28). So Next Avail shows <strong>27 Jul</strong>, not the optimistic 15 Jul. This is branch 2 (ship-now with the transit floor) in action.</p>
+    </div>
+
+    <div class="callout tip">
+      <div class="callout-title">Manual overrides feed the cascade</div>
+      <p>The US calculation reads VERRAYES's <em>final</em> numbers, so if a VERRAYES SKU is manually overridden, that override drives the US timing too. If VERRAYES is genuinely out of stock and not overridden, the not-yet-shipped US units will not appear as incoming.</p>
+    </div>
+
+    <div class="callout warn">
+      <div class="callout-title">Pads are admin-configurable</div>
+      <p>The 28-day transit, the 60-day no-PO lead time, and the 7-day buffers all live in <code>config.json</code> settings (<code>usa3pl_intransit_pad_days</code>, <code>usa3pl_nopo_pad_days</code>, <code>overdue_po_buffer_days</code>) and can be tuned without code changes.</p>
     </div>
   </section>
 

@@ -231,6 +231,40 @@ tr.is-overridden td:first-child{box-shadow:inset 3px 0 0 var(--amber);}
 .wbr-com-line{font-size:12px;color:var(--text);padding:.26rem 0;border-bottom:1px solid var(--border);line-height:1.45;}
 .wbr-com-line:last-child{border-bottom:none;}
 .wbr-note{font-size:11px;color:var(--dim);padding:.6rem 0;}
+/* ── Manufacturing Status ─────────────────────────────────── */
+.mfg-filters{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;padding:.4rem 0 .8rem;}
+.mfg-badge{display:inline-flex;align-items:center;gap:.3rem;font-size:10px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:.2rem .55rem;border-radius:20px;white-space:nowrap;}
+.mfg-badge::before{content:'';width:5px;height:5px;border-radius:50%;}
+.mfg-badge.ready {color:var(--green);background:var(--green-bg);} .mfg-badge.ready::before{background:var(--green);}
+.mfg-badge.partial{color:var(--amber);background:var(--amber-bg);} .mfg-badge.partial::before{background:var(--amber);}
+.mfg-badge.blocked{color:var(--red);background:var(--red-bg);} .mfg-badge.blocked::before{background:var(--red);}
+.mfg-badge.blocked_no_supply{color:var(--red);background:var(--red-bg);border:1px solid var(--red);} .mfg-badge.blocked_no_supply::before{background:var(--red);animation:pulse 1.5s ease-in-out infinite;}
+.mfg-badge.cl{color:var(--purple);background:var(--purple-bg);} .mfg-badge.cl::before{background:var(--purple);}
+.mfg-badge.released{color:var(--muted);background:var(--surface2);} .mfg-badge.released::before{background:var(--muted);}
+.mfg-badge.in_process{color:var(--blue);background:var(--blue-bg);} .mfg-badge.in_process::before{background:var(--blue);}
+.mfg-prog{display:inline-block;width:56px;height:5px;background:var(--surface2);border-radius:3px;vertical-align:middle;margin-left:.4rem;overflow:hidden;}
+.mfg-prog i{display:block;height:100%;background:var(--blue);border-radius:3px;}
+.mfg-charts{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;padding:0 0 .8rem;}
+.mfg-chart{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:.7rem .9rem;}
+.mfg-chart-title{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:.6rem;}
+.mfg-hrow{display:flex;align-items:center;gap:.5rem;font-size:11px;font-family:var(--mono);margin:.28rem 0;}
+.mfg-hrow .n{width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--text);}
+.mfg-hrow .bar{flex:1;height:8px;background:var(--bg);border-radius:4px;overflow:hidden;}
+.mfg-hrow .bar i{display:block;height:100%;background:var(--red);border-radius:4px;}
+.mfg-hrow .v{color:var(--muted);white-space:nowrap;}
+.mfg-wk{display:flex;align-items:flex-end;gap:5px;height:96px;}
+.mfg-wk .col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:3px;height:100%;min-width:0;}
+.mfg-wk .col .b{width:100%;background:var(--green);border-radius:3px 3px 0 0;min-height:2px;}
+.mfg-wk .col .l{font-size:9px;font-family:var(--mono);color:var(--dim);white-space:nowrap;}
+.mfg-wk .col .u{font-size:9px;font-family:var(--mono);color:var(--muted);white-space:nowrap;}
+.mfg-comp{width:100%;border-collapse:collapse;font-size:11px;font-family:var(--mono);margin-top:.3rem;}
+.mfg-comp td{padding:.22rem .5rem;border-bottom:1px solid var(--border);}
+.mfg-comp tr:last-child td{border-bottom:none;}
+.mfg-comp .h td{color:var(--dim);text-transform:uppercase;font-size:9px;letter-spacing:.06em;border-bottom:1px solid var(--border2);}
+.mfg-hint{display:inline-block;font-size:11px;margin-top:.5rem;padding:.3rem .7rem;border-radius:var(--r);background:var(--amber-bg);color:var(--amber);}
+.mfg-empty{padding:2.5rem 1rem;text-align:center;color:var(--muted);font-size:13px;}
+.mfg-late{color:var(--red);font-size:10px;}
+.mfg-fb{color:var(--dim);cursor:help;}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 </head>
@@ -245,6 +279,7 @@ tr.is-overridden td:first-child{box-shadow:inset 3px 0 0 var(--amber);}
   <div class="h-sep"></div>
   <div class="view-nav">
     <button class="view-tab active" id="vtab-avail" onclick="switchView('availability')">Item Availability</button>
+    <button class="view-tab" id="vtab-mfg" onclick="switchView('manufacturing')">Manufacturing</button>
     <button class="view-tab" id="vtab-wbr" onclick="switchView('wbr')">WBR</button>
     <button class="view-tab intel-tab" id="vtab-intel" onclick="switchView('intelligence')">✦ Intelligence</button>
   </div>
@@ -402,6 +437,19 @@ tr.is-overridden td:first-child{box-shadow:inset 3px 0 0 var(--amber);}
 
 </div>
 <!-- ── end WBR Panel ──────────────────────────────────────── -->
+
+<!-- ── Manufacturing Status Panel ─────────────────────────── -->
+<div id="mfg-panel" class="intel-panel" style="display:none;">
+  <div class="intel-hdr">
+    <div>
+      <span class="intel-title">Manufacturing Status · Open Work Orders</span>
+      <span class="intel-ctx" id="mfg-ctx">—</span>
+    </div>
+    <button class="intel-recalc" onclick="loadMfg(true)">↺ Reload</button>
+  </div>
+  <div id="mfg-body"></div>
+</div>
+<!-- ── end Manufacturing Status Panel ─────────────────────── -->
 
 <div class="charts-bar" id="charts-bar">
   <div class="chart-panel">
@@ -613,6 +661,7 @@ function filter(){
   document.getElementById('f-count').textContent=shown.length+' / '+total+' SKUs';
   if(activeView==='intelligence'){generateIntel();return;}
   if(activeView==='wbr'){generateWbr();return;}
+  if(activeView==='manufacturing'){renderMfg();return;}
   render();
 }
 
@@ -1225,17 +1274,21 @@ var activeView='availability';
 function switchView(v){
   activeView=v;
   document.getElementById('vtab-avail').classList.toggle('active',v==='availability');
+  document.getElementById('vtab-mfg').classList.toggle('active',v==='manufacturing');
   document.getElementById('vtab-wbr').classList.toggle('active',v==='wbr');
   document.getElementById('vtab-intel').classList.toggle('active',v==='intelligence');
   document.getElementById('intel-panel').style.display=v==='intelligence'?'block':'none';
   document.getElementById('wbr-panel').style.display=v==='wbr'?'block':'none';
+  document.getElementById('mfg-panel').style.display=v==='manufacturing'?'block':'none';
   if(v==='availability'){
     document.getElementById('content').style.display='';
     filter();
   }else{
     document.getElementById('charts-bar').classList.remove('visible');
     document.getElementById('content').style.display='none';
-    if(v==='intelligence')generateIntel();else generateWbr();
+    if(v==='intelligence')generateIntel();
+    else if(v==='wbr')generateWbr();
+    else loadMfg();
   }
 }
 function iPf(){return loc==='verrayes'?'avg_eur_per_unit':'avg_usd_per_unit';}
@@ -1699,6 +1752,199 @@ function generateWbr(){
 
 boot();
 loadConfig();
+
+// ═══════════════════════════════════════════════════════════════
+// Manufacturing Status view (manufacturing.json — WO feasibility)
+// ═══════════════════════════════════════════════════════════════
+var mfgData=null,mfgLoading=false,mfgErr=null;
+var mfgF={feas:'',wost:'',due:'',cls:'',q:''};
+var mfgOpen=new Set(),mfgSK='due_date',mfgSD=1;
+
+async function loadMfg(force){
+  if(mfgData&&!force){renderMfg();return;}
+  if(mfgLoading)return;
+  mfgLoading=true;mfgErr=null;
+  document.getElementById('mfg-body').innerHTML='<div class="mfg-empty">Loading manufacturing data…</div>';
+  try{
+    var r=await fetch('/GRV-Item-Availability/manufacturing.json');
+    if(!r.ok)throw new Error(r.status===404?'manufacturing.json not published yet — run a refresh to generate it.':'HTTP '+r.status);
+    mfgData=await r.json();
+  }catch(e){mfgErr=e.message||String(e);mfgData=null;}
+  mfgLoading=false;
+  renderMfg();
+}
+
+function mfgNum(x){return x==null?'—':Math.round(x).toLocaleString('en-US');}
+function mfgQty(x){if(x==null)return '—';var v=Math.round(x*1000)/1000;return v.toLocaleString('en-US',{maximumFractionDigits:3});}
+function mfgWk(w){return w?w.replace(/^\d{4}-/,''):'—';}
+function mfgDue(w){
+  if(!w.due_date)return '<span class="mfg-fb" title="No date on the WO">no date</span>';
+  var s=fd(w.due_date);
+  if(w.overdue_days>0)s+=' <span class="mfg-late">+'+w.overdue_days+'d</span>';
+  if(w.date_is_fallback)s+=' <span class="mfg-fb" title="No completion date in NetSuite — transaction date used as fallback">≈</span>';
+  return s;
+}
+var MFG_FEAS_LABEL={ready:'Ready',partial:'Partial',blocked:'Blocked',blocked_no_supply:'No Supply',cl:'CL'};
+function mfgFeasBadge(w){
+  if(w.feasibility==='cl')return '<span class="mfg-badge cl" title="Conto lavoro — components at the subcontractor location, outside the Verrayes stock pool">CL · not pooled</span>';
+  var lbl=MFG_FEAS_LABEL[w.feasibility]||w.feasibility;
+  if(w.feasibility==='partial')lbl+=' '+w.coverage_pct+'%';
+  return '<span class="mfg-badge '+w.feasibility+'">'+lbl+'</span>';
+}
+function mfgSetF(k,v){mfgF[k]=v;renderMfg();}
+function mfgCard(k,v){
+  // Card click-to-filter: feasibility tiers set feas; overdue/stale map to due/special
+  if(k==='all'){mfgF={feas:'',wost:'',due:'',cls:'',q:''};}
+  else if(k==='overdue'){mfgF.feas='';mfgF.due=mfgF.due==='overdue'?'':'overdue';}
+  else if(k==='stale'){mfgF.feas=mfgF.feas==='stale'?'':'stale';}
+  else{mfgF.feas=mfgF.feas===k?'':k;}
+  renderMfg();
+}
+function mfgSort(k){if(mfgSK===k)mfgSD*=-1;else{mfgSK=k;mfgSD=1;}renderMfg();}
+function mfgToggle(id){if(mfgOpen.has(id))mfgOpen.delete(id);else mfgOpen.add(id);renderMfg();}
+
+function mfgFiltered(){
+  var q=mfgF.q.toLowerCase().trim();
+  return mfgData.work_orders.filter(function(w){
+    if(mfgF.feas==='stale'){if(!w.stale)return false;}
+    else if(mfgF.feas&&w.feasibility!==mfgF.feas)return false;
+    if(mfgF.wost&&w.status!==mfgF.wost)return false;
+    if(mfgF.due==='overdue'&&!(w.overdue_days>0))return false;
+    if(mfgF.due==='w30'&&(w.overdue_days>0||!w.due_date||mfgDays(w)>30))return false;
+    if(mfgF.due==='w90'&&(w.overdue_days>0||!w.due_date||mfgDays(w)<=30||mfgDays(w)>90))return false;
+    if(mfgF.due==='w90p'&&(w.overdue_days>0||!w.due_date||mfgDays(w)<=90))return false;
+    if(mfgF.cls&&w.item_class!==mfgF.cls)return false;
+    if(q&&!w.wo_number.toLowerCase().includes(q)&&!w.item_name.toLowerCase().includes(q)&&!(w.display_name||'').toLowerCase().includes(q))return false;
+    return true;
+  });
+}
+function mfgDays(w){
+  var p=w.due_date.split('-');
+  var due=new Date(parseInt(p[0]),parseInt(p[1])-1,parseInt(p[2]));
+  return Math.round((due-new Date())/86400000);
+}
+
+function renderMfg(){
+  var el=document.getElementById('mfg-body');
+  var ctx=document.getElementById('mfg-ctx');
+  if(mfgErr){el.innerHTML='<div class="mfg-empty">'+esc(mfgErr)+'</div>';ctx.textContent='—';return;}
+  if(!mfgData){if(!mfgLoading)loadMfg();return;}
+  if(loc==='usa3pl'){
+    el.innerHTML='<div class="mfg-empty">No work orders at USA · 3PL — production is Verrayes-only.<br>Switch to the VERRAYES tab to see manufacturing status.</div>';
+    ctx.textContent='USA · 3PL';
+    return;
+  }
+  var s=mfgData.summary;
+  ctx.textContent=s.total_wos+' open WOs · generated '+fd(mfgData.generated_at);
+
+  var rows=mfgFiltered();
+  rows.sort(function(a,b){
+    var av=a[mfgSK],bv=b[mfgSK];
+    if(mfgSK==='coverage_pct'){av=a.coverage_pct==null?-1:a.coverage_pct;bv=b.coverage_pct==null?-1:b.coverage_pct;}
+    if(av==null)av=mfgSD>0?Infinity:-Infinity;
+    if(bv==null)bv=mfgSD>0?Infinity:-Infinity;
+    if(typeof av==='string')return String(av).localeCompare(String(bv))*mfgSD;
+    return (av-bv)*mfgSD;
+  });
+
+  // ── Summary cards (click to filter) ──
+  function card(cls,label,key,count,units,pct){
+    return '<div class="stat '+cls+'" style="cursor:pointer;" onclick="mfgCard(\''+key+'\')">'+
+      '<div class="stat-label">'+label+'</div><div class="stat-val">'+mfgNum(count)+
+      (pct!=null?'<div class="stat-pct">'+pct+'%</div>':'')+'</div>'+
+      (units!=null?'<div class="stat-pct">'+mfgNum(units)+' units</div>':'')+'</div>';
+  }
+  var pooledTot=s.total_wos-s.cl.count;
+  function pc(n){return pooledTot?Math.round(n/pooledTot*100):0;}
+  var cards='<div class="summary" style="padding:.6rem 0 .8rem;">'+
+    card('s-all','Open WOs','all',s.total_wos,s.total_open_units,null)+
+    card('s-ok','Ready','ready',s.ready.count,s.ready.units,pc(s.ready.count))+
+    card('s-cmt','Partial','partial',s.partial.count,s.partial.units,pc(s.partial.count))+
+    card('s-out','Blocked','blocked',s.blocked.count,s.blocked.units,pc(s.blocked.count))+
+    card('s-out','No Supply','blocked_no_supply',s.blocked_no_supply.count,s.blocked_no_supply.units,pc(s.blocked_no_supply.count))+
+    card('s-emb','CL · not pooled','cl',s.cl.count,s.cl.units,null)+
+    card('s-cmt','Overdue','overdue',s.overdue,null,null)+
+    card('s-emb','Stale &gt;'+s.stale_days_threshold+'d','stale',s.stale,null,null)+
+    '</div>';
+
+  // ── Charts (engine aggregates over ALL pooled WOs) ──
+  var bl=(mfgData.top_blockers||[]).slice(0,8);
+  var maxH=bl.length?Math.max.apply(null,bl.map(function(b){return b.units_held;})):1;
+  var blHtml=bl.length?bl.map(function(b){
+    return '<div class="mfg-hrow"><span class="n" title="'+esc(b.item_name)+'">'+esc(b.item_name)+'</span>'+
+      '<span class="bar"><i style="width:'+Math.max(2,Math.round(b.units_held/maxH*100))+'%"></i></span>'+
+      '<span class="v">'+mfgNum(b.wos)+' WO · '+mfgNum(b.units_held)+' u</span></div>';
+  }).join(''):'<div class="mfg-empty" style="padding:1rem;">No blocking components 🎉</div>';
+  var ol=(mfgData.outlook||[]).slice(0,12);
+  var maxC=ol.length?ol[ol.length-1].cumulative:1;
+  var olHtml=ol.length?'<div class="mfg-wk">'+ol.map(function(o){
+    return '<div class="col" title="'+o.week+': +'+mfgNum(o.units)+' (cum '+mfgNum(o.cumulative)+')">'+
+      '<span class="u">'+(o.cumulative>=1000?Math.round(o.cumulative/1000)+'k':o.cumulative)+'</span>'+
+      '<div class="b" style="height:'+Math.max(2,Math.round(o.cumulative/maxC*72))+'px"></div>'+
+      '<span class="l">'+mfgWk(o.week)+'</span></div>';
+  }).join('')+'</div>':'<div class="mfg-empty" style="padding:1rem;">No unlock events.</div>';
+  var charts='<div class="mfg-charts">'+
+    '<div class="mfg-chart"><div class="mfg-chart-title">Top blocking components — WOs held · units held (all pooled WOs)</div>'+blHtml+'</div>'+
+    '<div class="mfg-chart"><div class="mfg-chart-title">Execution outlook — cumulative buildable units by ISO week (all pooled WOs)</div>'+olHtml+'</div>'+
+    '</div>';
+
+  // ── Filter row ──
+  var classes={};mfgData.work_orders.forEach(function(w){if(w.item_class)classes[w.item_class]=1;});
+  function opt(v,l,cur){return '<option value="'+v+'"'+(cur===v?' selected':'')+'>'+l+'</option>';}
+  var fr='<div class="mfg-filters">'+
+    '<select onchange="mfgSetF(\'feas\',this.value)">'+opt('','All feasibility',mfgF.feas)+opt('ready','Ready',mfgF.feas)+opt('partial','Partial',mfgF.feas)+opt('blocked','Blocked',mfgF.feas)+opt('blocked_no_supply','No Supply',mfgF.feas)+opt('cl','CL · not pooled',mfgF.feas)+opt('stale','Stale',mfgF.feas)+'</select>'+
+    '<select onchange="mfgSetF(\'wost\',this.value)">'+opt('','All WO statuses',mfgF.wost)+opt('released','Released',mfgF.wost)+opt('in_process','In Process',mfgF.wost)+'</select>'+
+    '<select onchange="mfgSetF(\'due\',this.value)">'+opt('','All due dates',mfgF.due)+opt('overdue','Overdue',mfgF.due)+opt('w30','Next 30 days',mfgF.due)+opt('w90','31–90 days',mfgF.due)+opt('w90p','Beyond 90 days',mfgF.due)+'</select>'+
+    '<select onchange="mfgSetF(\'cls\',this.value)">'+opt('','All classes',mfgF.cls)+Object.keys(classes).sort().map(function(c){return opt(c,c,mfgF.cls);}).join('')+'</select>'+
+    '<div class="srch"><span class="srch-icon">⌕</span><input type="text" value="'+esc(mfgF.q)+'" placeholder="Search WO# or SKU…" oninput="mfgF.q=this.value;renderMfg();"></div>'+
+    '<span class="f-count">'+rows.length+' / '+s.total_wos+' WOs</span></div>';
+
+  // ── Table ──
+  function th(k,l,num){var a=mfgSK===k?(mfgSD>0?' ▲':' ▼'):'';return '<th'+(num?' style="text-align:right;"':'')+' onclick="mfgSort(\''+k+'\')" class="'+(mfgSK===k?'sorted':'')+'">'+l+a+'</th>';}
+  var body=rows.map(function(w){
+    var openRow=mfgOpen.has(w.wo_id);
+    var prog=w.planned_qty>0?Math.round(w.built_qty/w.planned_qty*100):0;
+    var ts=w.top_shortage?'<span class="mono" style="font-size:11px;" title="gap '+mfgQty(w.top_shortage.gap)+'">'+esc(w.top_shortage.item_name)+'</span>':'<span style="color:var(--dim);">—</span>';
+    var exec=w.feasibility==='ready'?'now':(w.executable_week?w.executable_week:(w.no_full_supply?'<span class="mfg-late">no full supply</span>':'—'));
+    var tr='<tr class="'+(openRow?'expanded':'')+'" onclick="mfgToggle('+w.wo_id+')" style="cursor:pointer;">'+
+      '<td><span class="sku-code">'+esc(w.wo_number)+'</span><span class="sku-name" title="'+esc(w.display_name||w.item_name)+'">'+esc(w.item_name)+'</span></td>'+
+      '<td style="font-size:12px;color:var(--muted);">'+esc(w.item_class||'—')+'</td>'+
+      '<td><span class="mfg-badge '+w.status+'">'+(w.status==='in_process'?'In Process':'Released')+'</span></td>'+
+      '<td class="r">'+mfgQty(w.built_qty)+' / '+mfgQty(w.planned_qty)+'<span class="mfg-prog"><i style="width:'+prog+'%"></i></span></td>'+
+      '<td style="font-size:11px;font-family:var(--mono);">'+mfgDue(w)+'</td>'+
+      '<td>'+mfgFeasBadge(w)+(w.stale?' <span class="mfg-badge cl" title="Overdue &gt;'+s.stale_days_threshold+'d with 0 built — candidate for closing or rescheduling in NetSuite">stale</span>':'')+'</td>'+
+      '<td class="r">'+mfgNum(w.buildable_now)+'</td>'+
+      '<td style="font-size:11px;font-family:var(--mono);">'+exec+'</td>'+
+      '<td>'+ts+'</td>'+
+      '<td style="color:var(--dim);">'+(openRow?'▾':'▸')+'</td></tr>';
+    if(!openRow)return tr;
+    // ── Detail row: component checklist + unlock profile + action hint ──
+    var comps=w.components||[];
+    var ct=comps.length?'<table class="mfg-comp"><tr class="h"><td>component</td><td style="text-align:right;">need</td><td style="text-align:right;">allocated</td><td style="text-align:right;">gap</td><td>next supply</td><td>full by</td><td style="text-align:center;">ok</td></tr>'+
+      comps.map(function(c){
+        var ns=c.next_supply?(c.next_supply.src==='WO'?'🏭 ':'📦 ')+esc(c.next_supply.ref)+' · '+fd(c.next_supply.date)+' · '+mfgQty(c.next_supply.qty):'<span style="color:var(--dim);">—</span>';
+        var ok=c.allocated==null?'<span style="color:var(--purple);">CL</span>':(c.gap<=0?'<span style="color:var(--green);">✓</span>':(c.allocated>0?'<span style="color:var(--amber);">⚠</span>':'<span style="color:var(--red);">✕</span>'));
+        return '<tr><td>'+esc(c.item_name)+'</td><td style="text-align:right;">'+mfgQty(c.need)+'</td><td style="text-align:right;">'+mfgQty(c.allocated)+'</td><td style="text-align:right;'+(c.gap>0?'color:var(--red);':'')+'">'+mfgQty(c.gap)+'</td><td>'+ns+'</td><td>'+(c.full_week||'—')+'</td><td style="text-align:center;">'+ok+'</td></tr>';
+      }).join('')+'</table>':'<div style="font-size:11px;color:var(--muted);padding:.3rem 0;">No outstanding component needs (already fully issued to the floor).</div>';
+    var up=(w.unlock_profile||[]).map(function(p){return p.week+': +'+mfgNum(p.qty);}).join(' · ');
+    var hint='';
+    if(w.feasibility==='cl')hint='<div class="mfg-hint" style="background:var(--purple-bg);color:var(--purple);">Conto lavoro WO — components are at the subcontractor location; feasibility is not computed against the Verrayes pool.</div>';
+    else if(w.feasibility==='blocked_no_supply')hint='<div class="mfg-hint" style="background:var(--red-bg);color:var(--red);">⚡ No incoming supply covers the shortage — a purchase (or upstream WO) is needed to unblock '+mfgNum(w.open_qty)+' units.</div>';
+    else if(w.top_shortage&&w.top_shortage.next_supply)hint='<div class="mfg-hint">⚡ Buildable now: '+mfgNum(w.buildable_now)+' of '+mfgNum(w.open_qty)+' — full execution unlocked by '+esc(w.top_shortage.next_supply.ref)+' ('+fd(w.top_shortage.next_supply.date)+')'+(w.top_shortage.next_supply.src==='PO'?' — expedite to pull forward':'')+'.</div>';
+    var detail='<tr class="detail-row"><td class="detail-cell" colspan="10" style="padding:.6rem 1rem;">'+
+      '<div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--dim);margin-bottom:.2rem;">Component checklist — remaining build: '+mfgQty(w.open_qty)+' units'+(comps.length?' · fully issued components not shown':'')+'</div>'+ct+
+      (up?'<div style="font-size:11px;font-family:var(--mono);color:var(--muted);margin-top:.5rem;">Weekly unlock: '+up+'</div>':'')+hint+'</td></tr>';
+    return tr+detail;
+  }).join('');
+  var table='<div class="tbl-wrap" style="max-height:none;"><table><thead><tr>'+
+    th('wo_number','WO / Assembly')+th('item_class','Class')+th('status','Status')+
+    th('built_qty','Progress',1)+th('due_date','Due')+th('feasibility','Feasibility')+
+    th('buildable_now','Buildable Now',1)+th('executable_week','Executable')+
+    th('top_shortage','Top Shortage')+'<th></th>'+
+    '</tr></thead><tbody>'+(body||'<tr><td colspan="10" class="mfg-empty">No work orders match the filters.</td></tr>')+'</tbody></table></div>';
+
+  el.innerHTML=cards+charts+fr+table;
+}
 </script>
 </body>
 </html>
