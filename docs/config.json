@@ -2904,48 +2904,7 @@
       "reason": ""
     }
   ],
-  "embargo_list": [
-    {
-      "item_id": "7057",
-      "item_name": "HAGRC.S",
-      "embargo_date": "7/31/2026"
-    },
-    {
-      "item_id": "7058",
-      "item_name": "HAGRC.M",
-      "embargo_date": "7/31/2026"
-    },
-    {
-      "item_id": "7059",
-      "item_name": "HAGRC.L",
-      "embargo_date": "7/31/2026"
-    },
-    {
-      "item_id": "7060",
-      "item_name": "HAGRC.XL",
-      "embargo_date": "7/31/2026"
-    },
-    {
-      "item_id": "7061",
-      "item_name": "HAVNX.S",
-      "embargo_date": "7/31/2026"
-    },
-    {
-      "item_id": "7062",
-      "item_name": "HAVNX.M",
-      "embargo_date": "7/31/2026"
-    },
-    {
-      "item_id": "7063",
-      "item_name": "HAVNX.L",
-      "embargo_date": "7/31/2026"
-    },
-    {
-      "item_id": "7064",
-      "item_name": "HAVNX.XL",
-      "embargo_date": "7/31/2026"
-    }
-  ],
+  "embargo_list": [],
   "overrides_list": [
     {
       "item_id": "7066",
@@ -3163,76 +3122,6 @@
       "today_avail": 0,
       "next_avail": "9/30/2026",
       "next_qty": 100
-    },
-    {
-      "item_id": "6865",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": null,
-      "next_qty": null
-    },
-    {
-      "item_id": "6866",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": null,
-      "next_qty": null
-    },
-    {
-      "item_id": "6867",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": null,
-      "next_qty": null
-    },
-    {
-      "item_id": "6868",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": null,
-      "next_qty": null
-    },
-    {
-      "item_id": "6869",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": null,
-      "next_qty": null
-    },
-    {
-      "item_id": "6865",
-      "location": "usa3pl",
-      "today_avail": 0,
-      "next_avail": null,
-      "next_qty": null
-    },
-    {
-      "item_id": "6866",
-      "location": "usa3pl",
-      "today_avail": 0,
-      "next_avail": null,
-      "next_qty": null
-    },
-    {
-      "item_id": "6867",
-      "location": "usa3pl",
-      "today_avail": 0,
-      "next_avail": null,
-      "next_qty": null
-    },
-    {
-      "item_id": "6868",
-      "location": "usa3pl",
-      "today_avail": 0,
-      "next_avail": null,
-      "next_qty": null
-    },
-    {
-      "item_id": "6869",
-      "location": "usa3pl",
-      "today_avail": 0,
-      "next_avail": null,
-      "next_qty": null
     }
   ]
 }
