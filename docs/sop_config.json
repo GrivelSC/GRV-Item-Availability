@@ -2992,7 +2992,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Harnesses",
-      "value": 216.048,
+      "value": 216048,
       "units": 4
     },
     {
@@ -3080,7 +3080,7 @@
       "location": "usa3pl",
       "channel": "B2B",
       "class": "Harnesses",
-      "value": 513.114,
+      "value": 513114,
       "units": 8
     },
     {
@@ -3168,7 +3168,7 @@
       "location": "usa3pl",
       "channel": "DTC",
       "class": "Harnesses",
-      "value": 27.006,
+      "value": 27006,
       "units": 0
     },
     {
@@ -3344,7 +3344,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Harnesses",
-      "value": 463.304,
+      "value": 463304,
       "units": 8
     },
     {
@@ -3520,7 +3520,7 @@
       "location": "usa3pl",
       "channel": "DTC",
       "class": "Harnesses",
-      "value": 57.913,
+      "value": 57913,
       "units": 1
     },
     {
@@ -4080,7 +4080,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Spare",
-      "value": 125.988,
+      "value": 125988,
       "units": 9
     },
     {
@@ -4400,7 +4400,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Harnesses",
-      "value": 113.196,
+      "value": 113196,
       "units": 2
     },
     {
@@ -5456,7 +5456,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Harnesses",
-      "value": 118.132,
+      "value": 118132,
       "units": 2
     },
     {
@@ -6864,7 +6864,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Harnesses",
-      "value": 142.639,
+      "value": 142639,
       "units": 2
     },
     {
@@ -8792,7 +8792,7 @@
       "location": "usa3pl",
       "channel": "DTC",
       "class": "Traction Devices",
-      "value": 335.415,
+      "value": 335415,
       "units": 15
     },
     {
@@ -9320,7 +9320,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Traction Devices",
-      "value": 481.612,
+      "value": 481612,
       "units": 35
     },
     {
@@ -10504,7 +10504,7 @@
       "location": "usa3pl",
       "channel": "B2B",
       "class": "Spare",
-      "value": 417.905,
+      "value": 417905,
       "units": 34
     },
     {
@@ -10592,7 +10592,7 @@
       "location": "usa3pl",
       "channel": "DTC",
       "class": "Spare",
-      "value": 21.995,
+      "value": 21995,
       "units": 2
     },
     {
@@ -11080,7 +11080,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Traction Devices",
-      "value": 692.097,
+      "value": 692097,
       "units": 55
     },
     {
@@ -11464,7 +11464,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Poles",
-      "value": 997.036,
+      "value": 997036,
       "units": 16
     },
     {
@@ -13064,7 +13064,7 @@
       "location": "usa3pl",
       "channel": "DTC",
       "class": "Ice Axes",
-      "value": 485.527,
+      "value": 485527,
       "units": 10
     },
     {
@@ -13208,7 +13208,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Helmets",
-      "value": 985.936,
+      "value": 985936,
       "units": 24
     },
     {
@@ -13384,7 +13384,7 @@
       "location": "usa3pl",
       "channel": "DTC",
       "class": "Helmets",
-      "value": 123.242,
+      "value": 123242,
       "units": 3
     },
     {
@@ -13432,7 +13432,7 @@
       "location": "usa3pl",
       "channel": "DTC",
       "class": "Carabiners",
-      "value": 164.727,
+      "value": 164727,
       "units": 23
     },
     {
@@ -13496,7 +13496,7 @@
       "location": "verrayes",
       "channel": "B2B",
       "class": "Spare",
-      "value": 894.672,
+      "value": 894672,
       "units": 62
     },
     {
@@ -13584,7 +13584,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Spare",
-      "value": 99.408,
+      "value": 99408,
       "units": 7
     },
     {
@@ -13672,7 +13672,7 @@
       "location": "usa3pl",
       "channel": "B2B",
       "class": "Spare",
-      "value": 236.094,
+      "value": 236094,
       "units": 16
     },
     {
@@ -13760,7 +13760,7 @@
       "location": "usa3pl",
       "channel": "DTC",
       "class": "Spare",
-      "value": 12.426,
+      "value": 12426,
       "units": 1
     },
     {
@@ -14552,7 +14552,7 @@
       "location": "verrayes",
       "channel": "B2B",
       "class": "Spare",
-      "value": 799.452,
+      "value": 799452,
       "units": 73
     },
     {
@@ -14600,7 +14600,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Traction Devices",
-      "value": 220.128,
+      "value": 220128,
       "units": 16
     },
     {
@@ -14640,7 +14640,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Spare",
-      "value": 88.828,
+      "value": 88828,
       "units": 8
     },
     {
@@ -14688,7 +14688,7 @@
       "location": "usa3pl",
       "channel": "B2B",
       "class": "Traction Devices",
-      "value": 522.804,
+      "value": 522804,
       "units": 39
     },
     {
@@ -14776,7 +14776,7 @@
       "location": "usa3pl",
       "channel": "DTC",
       "class": "Traction Devices",
-      "value": 27.516,
+      "value": 27516,
       "units": 2
     },
     {
@@ -17416,7 +17416,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Traction Devices",
-      "value": 114.488,
+      "value": 114488,
       "units": 5
     },
     {
@@ -17504,7 +17504,7 @@
       "location": "usa3pl",
       "channel": "B2B",
       "class": "Traction Devices",
-      "value": 271.909,
+      "value": 271909,
       "units": 13
     },
     {
@@ -17592,7 +17592,7 @@
       "location": "usa3pl",
       "channel": "DTC",
       "class": "Traction Devices",
-      "value": 14.311,
+      "value": 14311,
       "units": 1
     },
     {
@@ -18120,7 +18120,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Traction Devices",
-      "value": 718.408,
+      "value": 718408,
       "units": 48
     },
     {
@@ -18296,7 +18296,7 @@
       "location": "usa3pl",
       "channel": "DTC",
       "class": "Traction Devices",
-      "value": 89.801,
+      "value": 89801,
       "units": 6
     },
     {
@@ -22032,7 +22032,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Spare",
-      "value": 150.756,
+      "value": 150756,
       "units": 16
     },
     {
@@ -24128,7 +24128,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Ice Protection",
-      "value": 629.992,
+      "value": 629992,
       "units": 21
     },
     {
@@ -24144,7 +24144,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Spare",
-      "value": 229.848,
+      "value": 229848,
       "units": 10
     },
     {
@@ -24232,7 +24232,7 @@
       "location": "usa3pl",
       "channel": "B2B",
       "class": "Spare",
-      "value": 545.889,
+      "value": 545889,
       "units": 25
     },
     {
@@ -24304,7 +24304,7 @@
       "location": "usa3pl",
       "channel": "DTC",
       "class": "Ice Protection",
-      "value": 78.749,
+      "value": 78749,
       "units": 3
     },
     {
@@ -24320,7 +24320,7 @@
       "location": "usa3pl",
       "channel": "DTC",
       "class": "Spare",
-      "value": 28.731,
+      "value": 28731,
       "units": 1
     },
     {
@@ -25184,7 +25184,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Ice Protection",
-      "value": 710.592,
+      "value": 710592,
       "units": 24
     },
     {
@@ -25360,7 +25360,7 @@
       "location": "usa3pl",
       "channel": "DTC",
       "class": "Ice Protection",
-      "value": 88.824,
+      "value": 88824,
       "units": 3
     },
     {
@@ -25888,7 +25888,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Ice Protection",
-      "value": 436.964,
+      "value": 436964,
       "units": 12
     },
     {
@@ -26232,7 +26232,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Helmets",
-      "value": 793.268,
+      "value": 793268,
       "units": 20
     },
     {
@@ -26240,7 +26240,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Ice Protection",
-      "value": 437.872,
+      "value": 437872,
       "units": 17
     },
     {
@@ -26416,7 +26416,7 @@
       "location": "usa3pl",
       "channel": "DTC",
       "class": "Ice Protection",
-      "value": 54.734,
+      "value": 54734,
       "units": 2
     },
     {
@@ -26520,7 +26520,7 @@
       "location": "verrayes",
       "channel": "B2B",
       "class": "Spare",
-      "value": 624.528,
+      "value": 624528,
       "units": 22
     },
     {
@@ -26608,7 +26608,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Spare",
-      "value": 69.392,
+      "value": 69392,
       "units": 2
     },
     {
@@ -26696,7 +26696,7 @@
       "location": "usa3pl",
       "channel": "B2B",
       "class": "Spare",
-      "value": 164.806,
+      "value": 164806,
       "units": 6
     },
     {
@@ -26784,7 +26784,7 @@
       "location": "usa3pl",
       "channel": "DTC",
       "class": "Spare",
-      "value": 8.674,
+      "value": 8674,
       "units": 0
     },
     {
@@ -27304,7 +27304,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Poles",
-      "value": 566.524,
+      "value": 566524,
       "units": 13
     },
     {
@@ -28000,7 +28000,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Ice Protection",
-      "value": 124.376,
+      "value": 124376,
       "units": 5
     },
     {
@@ -28016,7 +28016,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Spare",
-      "value": 134.414,
+      "value": 134414,
       "units": 12
     },
     {
@@ -28088,7 +28088,7 @@
       "location": "usa3pl",
       "channel": "B2B",
       "class": "Ice Protection",
-      "value": 506.388,
+      "value": 506388,
       "units": 21
     },
     {
@@ -28104,7 +28104,7 @@
       "location": "usa3pl",
       "channel": "B2B",
       "class": "Spare",
-      "value": 547.257,
+      "value": 547257,
       "units": 48
     },
     {
@@ -28176,7 +28176,7 @@
       "location": "usa3pl",
       "channel": "DTC",
       "class": "Ice Protection",
-      "value": 26.652,
+      "value": 26652,
       "units": 1
     },
     {
@@ -28192,7 +28192,7 @@
       "location": "usa3pl",
       "channel": "DTC",
       "class": "Spare",
-      "value": 28.803,
+      "value": 28803,
       "units": 3
     },
     {
@@ -29744,7 +29744,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Harnesses",
-      "value": 371.952,
+      "value": 371952,
       "units": 9
     },
     {
@@ -29832,7 +29832,7 @@
       "location": "usa3pl",
       "channel": "B2B",
       "class": "Harnesses",
-      "value": 883.386,
+      "value": 883386,
       "units": 22
     },
     {
@@ -29920,7 +29920,7 @@
       "location": "usa3pl",
       "channel": "DTC",
       "class": "Harnesses",
-      "value": 46.494,
+      "value": 46494,
       "units": 1
     },
     {
@@ -30088,7 +30088,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Traction Devices",
-      "value": 714.876,
+      "value": 714876,
       "units": 34
     },
     {
@@ -30112,7 +30112,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Ice Protection",
-      "value": 843.972,
+      "value": 843972,
       "units": 24
     },
     {
@@ -30128,7 +30128,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Spare",
-      "value": 241.664,
+      "value": 241664,
       "units": 12
     },
     {
@@ -30216,7 +30216,7 @@
       "location": "usa3pl",
       "channel": "B2B",
       "class": "Spare",
-      "value": 573.952,
+      "value": 573952,
       "units": 28
     },
     {
@@ -30304,7 +30304,7 @@
       "location": "usa3pl",
       "channel": "DTC",
       "class": "Spare",
-      "value": 30.208,
+      "value": 30208,
       "units": 1
     },
     {
@@ -30480,7 +30480,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Spare",
-      "value": 120.556,
+      "value": 120556,
       "units": 5
     },
     {
@@ -31800,7 +31800,7 @@
       "location": "verrayes",
       "channel": "B2B",
       "class": "Spare",
-      "value": 11.424,
+      "value": 11424,
       "units": 1
     },
     {
@@ -31856,7 +31856,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Harnesses",
-      "value": 93.695,
+      "value": 93695,
       "units": 2
     },
     {
@@ -31888,7 +31888,7 @@
       "location": "verrayes",
       "channel": "DTC",
       "class": "Spare",
-      "value": 2.856,
+      "value": 2856,
       "units": 0
     },
     {
@@ -31976,7 +31976,7 @@
       "location": "usa3pl",
       "channel": "B2B",
       "class": "Spare",
-      "value": 5.814,
+      "value": 5814,
       "units": 0
     },
     {
@@ -32064,7 +32064,7 @@
       "location": "usa3pl",
       "channel": "DTC",
       "class": "Spare",
-      "value": 0.306,
+      "value": 306,
       "units": 0
     },
     {
@@ -32102,5 +32102,10 @@
   ],
   "cover_targets": [],
   "planning_fx": null,
-  "updated_at": "2026-07-16"
+  "updated_at": "2026-07-16",
+  "excluded_classes": [
+    "OEM POLES",
+    "Poles - Anodized",
+    "Poles - Painted"
+  ]
 }
