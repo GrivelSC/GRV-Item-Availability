@@ -158,6 +158,8 @@ tr.is-overridden td:first-child{box-shadow:inset 3px 0 0 var(--amber);}
 .sop-neg{color:var(--red);}
 .sop-legacy{color:var(--dim);}
 .sop-late{color:var(--amber);}
+.sop-ind{padding-left:1.5rem!important;}
+.sop-cov-hi{color:#3b82f6;}
 .sop-ctoggle{user-select:none;}
 .sop-empty{padding:2.5rem 1rem;text-align:center;color:var(--muted);font-size:12px;}
 /* ADMIN */
@@ -2112,10 +2114,14 @@ async function loadSop(force){
   sopLoading=true;sopErr=null;
   document.getElementById('sop-body').innerHTML='<div class="sop-empty">Loading S&amp;OP data…</div>';
   try{
-    var r=await fetch(SOP_BASE+'sop.json');
+    // ?t= cache-buster: GitHub Pages serves ~10-min cache headers, and two
+    // same-day refreshes produce identical "generated" dates — without this,
+    // Reload can silently return the earlier publish (bug found 16 Jul 2026).
+    var bust='?t='+Date.now();
+    var r=await fetch(SOP_BASE+'sop.json'+bust);
     if(!r.ok)throw new Error(r.status===404?'sop.json not published yet — run a refresh to generate it.':'HTTP '+r.status);
     sopData=await r.json();
-    try{var rs=await fetch(SOP_BASE+'sop_snapshots.json');sopSnaps=rs.ok?await rs.json():null;}catch(e){sopSnaps=null;}
+    try{var rs=await fetch(SOP_BASE+'sop_snapshots.json'+bust);sopSnaps=rs.ok?await rs.json():null;}catch(e){sopSnaps=null;}
     await ensureSopCfg(force);
   }catch(e){sopErr=e.message||String(e);sopData=null;}
   sopLoading=false;
@@ -2126,7 +2132,7 @@ async function loadSop(force){
 async function ensureSopCfg(force){
   if(sopCfg&&!force)return sopCfg;
   try{
-    var r=await fetch(SOP_BASE+'sop_config.json');
+    var r=await fetch(SOP_BASE+'sop_config.json?t='+Date.now());
     sopCfg=r.ok?await r.json():null;
   }catch(e){sopCfg=null;}
   if(!sopCfg||typeof sopCfg!=='object')sopCfg={};
@@ -2309,7 +2315,12 @@ function sopSeries(kind,asp,budAsp){
     (sopData.open_demand||[]).forEach(function(r){
       if(r.location!==loc||!sopClassMatch(r)||sopExcluded(r["class"]))return;
       if(r.month==='unscheduled')return;
-      add(r.month,+r.units||0);
+      var u=+r.units||0;
+      if(sopUnitMode==='value'){
+        var a=sopFcAsp(r["class"],r.month,asp,budAsp);
+        if(a==null)return;
+        add(r.month,u*a);
+      }else add(r.month,u);
     });
   }
   return out;
@@ -2317,7 +2328,12 @@ function sopSeries(kind,asp,budAsp){
 
 function sopFmt(v){
   if(v==null||isNaN(v))return '—';
-  if(sopUnitMode==='value')return iFR(v,iCur());
+  if(sopUnitMode==='value'){
+    var cur=iCur(),a=Math.abs(v);
+    if(a>=1e6)return cur+(v/1e6).toFixed(1)+'M';
+    var k=v/1000;
+    return cur+(Math.abs(k)>=10?Math.round(k):k.toFixed(1))+'k';
+  }
   if(Math.abs(v)>=100000)return Math.round(v/1000)+'k';
   return Math.round(v).toLocaleString('en-US');
 }
@@ -2330,8 +2346,8 @@ function renderSop(){
   document.getElementById('sop-ctx').textContent=
     (loc==='verrayes'?'VERRAYES':'USA · 3PL')+' · generated '+(sopData.generated_at||'—');
   if(sopView==='demand')renderSopDemand(body);
-  else if(sopView==='supply')body.innerHTML='<div class="sop-empty">Supply Review arrives in Phase B2 — planned and firm supply data is already being collected on every refresh.</div>';
-  else body.innerHTML='<div class="sop-empty">Projected Inventory arrives in Phase B2 — monthly inventory snapshots are already accumulating ('+((sopSnaps&&sopSnaps.snapshots)?sopSnaps.snapshots.length:0)+' so far).</div>';
+  else if(sopView==='supply')renderSopSupply(body);
+  else renderSopInventory(body);
 }
 
 // ── Demand Review ───────────────────────────────────────────────
@@ -2349,7 +2365,7 @@ function renderSopDemand(body){
     act[ch][r.month]=(act[ch][r.month]||0)+v;
   });
   var budAsp=sopBudAspMap();
-  var fc=sopSeries('fc',asp,budAsp), bud=sopSeries('bud',asp), ob=sopSeries('ob',asp);
+  var fc=sopSeries('fc',asp,budAsp), bud=sopSeries('bud',asp), ob=sopSeries('ob',asp,budAsp);
   var fcTtm=(sopUnitMode==='value')?sopSeries('fcttm',asp):null;
   var hasBudget=Object.keys(bud).length>0;
   var hasLegacy=(sopCfg.legacy_actuals||[]).some(function(r){return r.location===loc;});
@@ -2390,6 +2406,10 @@ function renderSopDemand(body){
     data:months.map(function(m){return m>=now?(fcTtm[m]!=null?fcTtm[m]:null):null;}),
     borderColor:sopChannel==='all'?'rgba(232,84,10,.45)':'rgba(74,82,104,.5)',
     backgroundColor:'transparent',borderWidth:1.5,borderDash:[2,3],pointRadius:0,spanGaps:true,tension:.25});
+  ds.push({type:'bar',label:'Order book',stack:'ob',
+    data:months.map(function(m){return ob[m]!=null&&ob[m]!==0?ob[m]:null;}),
+    backgroundColor:months.map(function(m){return m<now?'rgba(245,158,11,.6)':'rgba(59,130,246,.5)';}),
+    borderWidth:0});
   if(hasBudget)ds.push({type:'line',label:'Budget',
     data:months.map(function(m){return bud[m]!=null?bud[m]:null;}),
     borderColor:'#f59e0b',backgroundColor:'transparent',borderDash:[6,4],
@@ -2419,7 +2439,7 @@ function sopDemandMatrix(months,now,asp){
     // units regardless of the display toggle; ASP needs both).
     sopClass=c;
     sopUnitMode='value';
-    var aV=sopSeries('act',asp),fV=sopSeries('fc',asp,budAsp),bV=sopSeries('bud',asp);
+    var aV=sopSeries('act',asp),fV=sopSeries('fc',asp,budAsp),bV=sopSeries('bud',asp),oV=sopSeries('ob',asp,budAsp);
     sopUnitMode='units';
     var aU=sopSeries('act',asp),fU=sopSeries('fc',asp),bU=sopSeries('bud',asp),oU=sopSeries('ob',asp);
     sopClass=savedClass; sopUnitMode=savedMode;
@@ -2437,7 +2457,7 @@ function sopDemandMatrix(months,now,asp){
     if(col)return;
     rows+='<tr class="sop-sub"><td>· forecast</td>'+cells(f,function(v){return sopFmt(v);})+'</tr>';
     rows+='<tr class="sop-sub"><td>· budget</td>'+cells(b,function(v){return sopFmt(v);})+'</tr>';
-    rows+='<tr class="sop-sub"><td>· vs budget</td>'+months.map(function(m){
+    rows+='<tr class="sop-sub"><td class="sop-ind">· fcst / bdg</td>'+months.map(function(m){
       // current month: partial actuals vs full-month budget is meaningless,
       // so the current month compares forecast (m<now = closed months only)
       var ref=(m<now)?a[m]:f[m];
@@ -2460,26 +2480,283 @@ function sopDemandMatrix(months,now,asp){
         (s==null?'<span class="dim">—</span>':s)+'</td>';
     }).join('')+'</tr>';
     rows+='<tr class="sop-sub"><td>· order book</td>'+months.map(function(m){
-      var u=oU[m];
-      if(u==null||u===0)return '<td'+(m===now?' class="sop-fwd"':'')+'><span class="dim">—</span></td>';
-      var v=u;
-      if(savedMode==='value'){
-        var pa=sopFcAsp(c,m,asp,budAsp);
-        v=(pa!=null)?u*pa:null;
-      }
-      var s=(v==null)?'<span class="dim">—</span>':sopFmt(v);
+      var v=(savedMode==='value')?oV[m]:oU[m];
+      if(v==null||v===0)return '<td'+(m===now?' class="sop-fwd"':'')+'><span class="dim">—</span></td>';
+      var s=sopFmt(v);
       // past months with open orders = backlog (late vs expected ship date)
       if(m<now)s='<span class="sop-late" title="Backlog: open SO lines with expected ship date in a past month">'+s+'</span>';
       return '<td'+(m===now?' class="sop-fwd"':'')+'>'+s+'</td>';
     }).join('')+'</tr>';
-    rows+='<tr class="sop-sub"><td>· order book / fcst</td>'+months.map(function(m){
-      if(m<now)return '<td><span class="dim">—</span></td>';
-      var f0=fU[m],o0=oU[m];
-      if(!f0||f0<=0)return '<td'+(m===now?' class="sop-fwd"':'')+'><span class="dim">—</span></td>';
-      return '<td'+(m===now?' class="sop-fwd"':'')+'>'+Math.round((o0||0)/f0*100)+'%</td>';
-    }).join('')+'</tr>';
+    function ratioRow(label,num,den){
+      return '<tr class="sop-sub"><td class="sop-ind">'+label+'</td>'+months.map(function(m){
+        if(m<now)return '<td><span class="dim">—</span></td>';
+        var d0=den[m];
+        if(!d0||d0<=0)return '<td'+(m===now?' class="sop-fwd"':'')+'><span class="dim">—</span></td>';
+        var pct=Math.round((num[m]||0)/d0*100);
+        var cls=pct>=100?'sop-pos':'sop-neg';
+        return '<td'+(m===now?' class="sop-fwd"':'')+'><span class="'+cls+'">'+pct+'%</span></td>';
+      }).join('')+'</tr>';
+    }
+    rows+=ratioRow('· order book / fcst',oU,fU);
+    rows+=ratioRow('· order book / bdg',oU,bU);
   });
   return '<div class="sop-matrix-wrap"><table class="sop-matrix"><thead>'+head+'</thead><tbody>'+rows+'</tbody></table></div>';
+}
+
+// ═══════════════════════════════════════════════════════════════
+// S&OP Phase B2 — Supply Review + Projected Inventory
+// ═══════════════════════════════════════════════════════════════
+
+// Month->units maps for supply, filtered to the active location and class.
+// conv: optional (cls,month)->ASP resolver to express units as value.
+function sopSupplyMaps(cls,conv){
+  function match(r){return r.location===loc&&!sopExcluded(r["class"])&&(cls==='all'||r["class"]===cls);}
+  function put(t,r){
+    if(r.month==='unscheduled')return;
+    var u=+r.units||0;
+    if(conv){var a=conv(r["class"],r.month);if(a==null)return;u=u*a;}
+    t[r.month]=(t[r.month]||0)+u;
+  }
+  var fw={},fp={},pw={},pp={};
+  (sopData.firm_supply||[]).forEach(function(r){if(match(r))put(r.source==='WO'?fw:fp,r);});
+  (sopData.planned_supply||[]).forEach(function(r){if(match(r))put(r.source==='WO'?pw:pp,r);});
+  return {fw:fw,fp:fp,pw:pw,pp:pp};
+}
+function sopCapMap(cls){
+  var m={};
+  (sopCfg&&sopCfg.capacity||[]).forEach(function(r){
+    if(sopExcluded(r["class"]))return;
+    if(cls!=='all'&&r["class"]!==cls)return;
+    m[r.month]=(m[r.month]||0)+(+r.units||0);
+  });
+  return m;
+}
+function sopSumMaps(){
+  var out={};
+  for(var i=0;i<arguments.length;i++){
+    var mp=arguments[i];
+    Object.keys(mp).forEach(function(k){out[k]=(out[k]||0)+mp[k];});
+  }
+  return out;
+}
+
+// ── Supply Review ───────────────────────────────────────────────
+function renderSopSupply(body){
+  var months=sopMonths();
+  var now=sopThisMonth();
+  var val=(sopUnitMode==='value');
+  var asp=sopAspMap(), budAsp=sopBudAspMap();
+  var conv=val?function(c,m){return sopFcAsp(c,m,asp,budAsp);}:null;
+  var maps=sopSupplyMaps(sopClass,conv);
+  var cap=sopCapMap(sopClass);
+  var isV=(loc==='verrayes');
+
+  var html='<div class="sop-chart-wrap"><canvas id="sop-chart-supply"></canvas></div>';
+  var notes=[];
+  notes.push(isV?'VERRAYES supply = open + planned Work Orders (production, incl. conto lavoro) and open + planned Purchase Orders (bought-out FGs).':'USA·3PL supply = open intercompany POs + MRP planned POs into the US location.');
+  if(val)notes.push('Supply valued at the forecast ASP convention (approximation — PO/WO line values are not pulled). Capacity and load are units-only concepts and hide in value mode.');
+  if(isV&&Object.keys(cap).length===0&&!val)notes.push('No capacity loaded — upload it in the Admin Panel (S&OP · Production Capacity) to see the capacity line and load %.');
+  html+='<div class="sop-note">'+notes.join(' · ')+'</div>';
+  html+=sopSupplyMatrix(months,now,conv);
+  body.innerHTML=html;
+
+  if(sopChart){sopChart.destroy();sopChart=null;}
+  var ctx=document.getElementById('sop-chart-supply').getContext('2d');
+  function bar(label,map,color){
+    return {type:'bar',label:label,stack:'sup',
+      data:months.map(function(m){return map[m]!=null&&map[m]!==0?map[m]:null;}),
+      backgroundColor:color,borderWidth:0};
+  }
+  var ds=[
+    bar('Firm WO',maps.fw,'rgba(34,197,94,.85)'),
+    bar('Planned WO',maps.pw,'rgba(34,197,94,.35)'),
+    bar('Firm PO',maps.fp,'rgba(59,130,246,.85)'),
+    bar('Planned PO',maps.pp,'rgba(59,130,246,.35)')
+  ];
+  if(isV&&!val&&Object.keys(cap).length>0){
+    ds.push({type:'line',label:'Capacity',stepped:true,
+      data:months.map(function(m){return cap[m]!=null?cap[m]:null;}),
+      borderColor:'#f59e0b',backgroundColor:'transparent',
+      borderWidth:1.5,pointRadius:0,spanGaps:false});
+  }
+  sopChart=new Chart(ctx,{data:{labels:months.map(sopMLabel),datasets:ds},
+    options:{responsive:true,maintainAspectRatio:false,
+      interaction:{mode:'index',intersect:false},
+      plugins:{legend:{labels:{color:'#7a8296',font:{size:10},boxWidth:12}},
+        tooltip:{callbacks:{label:function(c){return c.dataset.label+': '+sopFmt(c.parsed.y);}}}},
+      scales:{x:{stacked:true,ticks:{color:'#7a8296',font:{size:9},maxRotation:60},grid:{color:'#252b35'}},
+        y:{stacked:true,ticks:{color:'#7a8296',font:{size:9},callback:function(v){return sopFmt(v);}},grid:{color:'#252b35'}}}}});
+}
+
+function sopSupplyMatrix(months,now,conv){
+  var classes=sopClass==='all'?sopClassList():[sopClass];
+  var isV=(loc==='verrayes');
+  var units=(sopUnitMode!=='value');
+  var head='<tr><th>Class / month</th>'+months.map(function(m){
+    return '<th'+(m===now?' class="sop-fwd"':'')+'>'+sopMLabel(m)+'</th>';}).join('')+'</tr>';
+  var rows='';
+  classes.forEach(function(c){
+    var mp=sopSupplyMaps(c,conv);
+    var mpU=conv?sopSupplyMaps(c,null):mp;   // capacity math always in units
+    var firm=sopSumMaps(mp.fw,mp.fp), plan=sopSumMaps(mp.pw,mp.pp), tot=sopSumMaps(firm,plan);
+    var totU=conv?sopSumMaps(mpU.fw,mpU.fp,mpU.pw,mpU.pp):tot;
+    var cap=sopCapMap(c);
+    function cells(map){
+      return months.map(function(m){
+        var v=map[m];
+        return '<td'+(m===now?' class="sop-fwd"':'')+'>'+
+          (v==null||v===0?'<span class="dim">—</span>':sopFmt(v))+'</td>';
+      }).join('');
+    }
+    var col=!!sopCollapsed[c];
+    rows+='<tr class="sop-crow"><td class="sop-ctoggle" data-c="'+sopEsc(c)+'" onclick="sopToggleClass(this.dataset.c)" style="cursor:pointer;" title="'+(col?'Expand':'Collapse')+'">'+(col?'▸ ':'▾ ')+sopEsc(c)+'</td>'+cells(tot)+'</tr>';
+    if(col)return;
+    rows+='<tr class="sop-sub"><td>· firm (WO + PO)</td>'+cells(firm)+'</tr>';
+    rows+='<tr class="sop-sub"><td>· planned (MRP)</td>'+cells(plan)+'</tr>';
+    if(isV&&units){
+      rows+='<tr class="sop-sub"><td>· capacity</td>'+cells(cap)+'</tr>';
+      rows+='<tr class="sop-sub"><td class="sop-ind">· load / capacity</td>'+months.map(function(m){
+        var c0=cap[m];
+        if(!c0||c0<=0)return '<td'+(m===now?' class="sop-fwd"':'')+'><span class="dim">—</span></td>';
+        var pct=Math.round((totU[m]||0)/c0*100);
+        var cls=pct>100?'sop-neg':(pct>=85?'sop-late':'sop-pos');
+        return '<td'+(m===now?' class="sop-fwd"':'')+'><span class="'+cls+'">'+pct+'%</span></td>';
+      }).join('')+'</tr>';
+    }
+  });
+  return '<div class="sop-matrix-wrap"><table class="sop-matrix"><thead>'+head+'</thead><tbody>'+rows+'</tbody></table></div>';
+}
+
+// ── Projected Inventory ─────────────────────────────────────────
+// projected(m) = projected(m-1) + supply(m) - demand(m), seeded with
+// inventory_today. supply = firm + planned units (MRP plans net of firm, so
+// additive is correct). demand(m) = max(forecast, order book) per month
+// ("greater-of" consumption); order-book backlog (past expected ship dates)
+// and unscheduled order lines consume in the CURRENT month.
+function renderSopInventory(body){
+  var now=sopThisMonth();
+  var months=sopMonthRange(now,sopMonthAdd(now,12));
+  var val=(sopUnitMode==='value');
+  var asp=sopAspMap(), budAsp=sopBudAspMap();
+  var classes=sopClass==='all'?sopClassList():[sopClass];
+  var savedClass=sopClass, savedMode=sopUnitMode;
+
+  // cover targets by class (case-insensitive)
+  var tgt={};
+  (sopCfg&&sopCfg.cover_targets||[]).forEach(function(r){
+    if(r["class"])tgt[String(r["class"]).toLowerCase()]={min:+r.min_weeks||0,max:+r.max_weeks||0};
+  });
+
+  var perClass={}, totalProj={}, anyNeg=false;
+  classes.forEach(function(c){
+    var inv0=0;
+    (sopData.inventory_today||[]).forEach(function(r){
+      if(r.location===loc&&r["class"]===c)inv0+=(+r.units||0);
+    });
+    var mp=sopSupplyMaps(c,null);
+    var sup=sopSumMaps(mp.fw,mp.fp,mp.pw,mp.pp);
+    sopClass=c; sopUnitMode='units';
+    var fcU=sopSeries('fc',asp), obU=sopSeries('ob',asp);
+    sopClass=savedClass; sopUnitMode=savedMode;
+    // roll backlog + unscheduled into the current month's order book
+    var late=0;
+    Object.keys(obU).forEach(function(m){if(m<now){late+=obU[m];}});
+    (sopData.open_demand||[]).forEach(function(r){
+      if(r.location===loc&&r["class"]===c&&r.month==='unscheduled')late+=(+r.units||0);
+    });
+    // overdue firm supply also lands in the current month
+    var lateSup=0;
+    Object.keys(sup).forEach(function(m){if(m<now){lateSup+=sup[m];}});
+    var proj={},supEff={},demEff={},woc={};
+    var prev=inv0;
+    months.forEach(function(m,i){
+      var s=(sup[m]||0)+(i===0?lateSup:0);
+      var ob=(obU[m]||0)+(i===0?late:0);
+      var d=Math.max(fcU[m]||0,ob);
+      var p=prev+s-d;
+      supEff[m]=s;demEff[m]=d;proj[m]=p;prev=p;
+      if(p<0)anyNeg=true;
+      // weeks of cover: next 3 months of forecast / 13 weeks
+      var f3=0;
+      for(var k=1;k<=3;k++){f3+=(fcU[sopMonthAdd(m,k)]||0);}
+      woc[m]=(f3>0)?(p/(f3/13)):null;
+      totalProj[m]=(totalProj[m]||0)+p;
+    });
+    perClass[c]={proj:proj,sup:supEff,dem:demEff,woc:woc,inv0:inv0};
+  });
+
+  var html='<div class="sop-chart-wrap"><canvas id="sop-chart-inv"></canvas></div>';
+  var notes=[];
+  notes.push('projected(m) = previous + supply (firm + planned) − demand, demand = greater of forecast and order book; backlog, unscheduled orders and overdue supply land in the current month.');
+  notes.push('Weeks of cover = projected units ÷ average weekly forecast of the following quarter; colored against the cover-target bands'+(Object.keys(tgt).length===0?' (none loaded — Admin Panel → S&OP · Inventory Cover Targets)':'')+'.');
+  if(val)notes.push('Inventory valued at the forecast ASP convention (sales value, NOT cost).');
+  var sn=(sopSnaps&&sopSnaps.snapshots)?sopSnaps.snapshots.length:0;
+  if(sn>0)notes.push(sn+' monthly snapshot'+(sn>1?'s':'')+' accumulated for future actual-vs-projected tracking.');
+  html+='<div class="sop-note">'+notes.join(' · ')+'</div>';
+
+  // matrix
+  var head='<tr><th>Class / month</th>'+months.map(function(m){
+    return '<th'+(m===now?' class="sop-fwd"':'')+'>'+sopMLabel(m)+'</th>';}).join('')+'</tr>';
+  var rows='';
+  classes.forEach(function(c){
+    var d=perClass[c];
+    function fmt(u,m){
+      if(u==null)return '<span class="dim">—</span>';
+      var v=u;
+      if(val){var pa=sopFcAsp(c,m,asp,budAsp);v=(pa!=null)?u*pa:null;}
+      if(v==null)return '<span class="dim">—</span>';
+      return sopFmt(v);
+    }
+    var col=!!sopCollapsed[c];
+    rows+='<tr class="sop-crow"><td class="sop-ctoggle" data-c="'+sopEsc(c)+'" onclick="sopToggleClass(this.dataset.c)" style="cursor:pointer;" title="'+(col?'Expand':'Collapse')+'">'+(col?'▸ ':'▾ ')+sopEsc(c)+'</td>'+months.map(function(m){
+      var p=d.proj[m];
+      var s=fmt(p,m);
+      if(p<0)s='<span class="sop-neg">'+s+'</span>';
+      return '<td'+(m===now?' class="sop-fwd"':'')+'>'+s+'</td>';
+    }).join('')+'</tr>';
+    if(col)return;
+    rows+='<tr class="sop-sub"><td>· supply (firm + planned)</td>'+months.map(function(m){
+      return '<td'+(m===now?' class="sop-fwd"':'')+'>'+(d.sup[m]?fmt(d.sup[m],m):'<span class="dim">—</span>')+'</td>';}).join('')+'</tr>';
+    rows+='<tr class="sop-sub"><td>· demand (max fc, ob)</td>'+months.map(function(m){
+      return '<td'+(m===now?' class="sop-fwd"':'')+'>'+(d.dem[m]?fmt(d.dem[m],m):'<span class="dim">—</span>')+'</td>';}).join('')+'</tr>';
+    var t=tgt[String(c).toLowerCase()];
+    rows+='<tr class="sop-sub"><td class="sop-ind">· weeks of cover</td>'+months.map(function(m){
+      var w=d.woc[m];
+      if(w==null)return '<td'+(m===now?' class="sop-fwd"':'')+'><span class="dim">—</span></td>';
+      var cls='';
+      if(d.proj[m]<0)cls='sop-neg';
+      else if(t){cls=(w<t.min)?'sop-late':((w>t.max)?'sop-cov-hi':'sop-pos');}
+      var s=(w>=100?Math.round(w):w.toFixed(1));
+      return '<td'+(m===now?' class="sop-fwd"':'')+'>'+(cls?'<span class="'+cls+'">'+s+'</span>':s)+'</td>';
+    }).join('')+'</tr>';
+  });
+  html+='<div class="sop-matrix-wrap"><table class="sop-matrix"><thead>'+head+'</thead><tbody>'+rows+'</tbody></table></div>';
+  body.innerHTML=html;
+
+  if(sopChart){sopChart.destroy();sopChart=null;}
+  var ctx=document.getElementById('sop-chart-inv').getContext('2d');
+  var lineData=months.map(function(m){
+    var u=totalProj[m];
+    if(u==null)return null;
+    if(!val)return u;
+    // total value: sum per-class projections at each class ASP
+    var v=0,ok=false;
+    classes.forEach(function(c){
+      var pa=sopFcAsp(c,m,asp,budAsp);
+      if(pa!=null){v+=perClass[c].proj[m]*pa;ok=true;}
+    });
+    return ok?v:null;
+  });
+  sopChart=new Chart(ctx,{data:{labels:months.map(sopMLabel),datasets:[
+    {type:'line',label:(sopClass==='all'?'Projected inventory (all classes)':'Projected inventory — '+sopClass),
+     data:lineData,borderColor:'#e8540a',backgroundColor:'rgba(232,84,10,.08)',
+     fill:true,borderWidth:2,pointRadius:2,tension:.25}]},
+    options:{responsive:true,maintainAspectRatio:false,
+      interaction:{mode:'index',intersect:false},
+      plugins:{legend:{labels:{color:'#7a8296',font:{size:10},boxWidth:12}},
+        tooltip:{callbacks:{label:function(c){return c.dataset.label+': '+sopFmt(c.parsed.y);}}}},
+      scales:{x:{ticks:{color:'#7a8296',font:{size:9},maxRotation:60},grid:{color:'#252b35'}},
+        y:{ticks:{color:'#7a8296',font:{size:9},callback:function(v){return sopFmt(v);}},grid:{color:'#252b35'}}}}});
 }
 
 // Robust numeric parser: accepts Italian (1.234,56) and English (1,234.56)
