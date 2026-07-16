@@ -32,7 +32,18 @@
       37,
       38
     ],
-    "sop_history_start": "2025-01-01"
+    "sop_history_start": "2025-01-01",
+    "sop_excluded_order_type_ids": [
+      1,
+      5,
+      6,
+      7,
+      8,
+      15,
+      20,
+      23,
+      26
+    ]
   },
   "fg_list": [
     {
