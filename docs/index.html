@@ -2134,7 +2134,7 @@ async function ensureSopCfg(force){
   sopCfg.cover_targets=sopCfg.cover_targets||[];
   if(sopCfg.planning_fx===undefined)sopCfg.planning_fx=null;
   if(!Array.isArray(sopCfg.excluded_classes))
-    sopCfg.excluded_classes=['OEM POLES','Poles - Anodized','Poles - Painted'];
+    sopCfg.excluded_classes=['GRIVEL','OEM POLES','Poles - Anodized','Poles - Painted'];
   return sopCfg;
 }
 
@@ -2213,6 +2213,44 @@ function sopFillClassSelect(){
 }
 function sopClassMatch(r){return sopClass==='all'||r["class"]===sopClass;}
 
+// Budget-implied ASP per class at the active location (channel-total).
+// Primary forecast valuation (Option B convention, 15 Jul 2026): forecast
+// value = units × budget ASP, so forecast-vs-budget reads as a clean VOLUME
+// signal. Cascade per cell: month-level budget ASP → class overall budget
+// ASP → trailing-12M realized ASP fallback (classes absent from the budget).
+function sopBudAspMap(){
+  var acc={};
+  (sopCfg&&sopCfg.budget||[]).forEach(function(r){
+    if(r.location!==loc||!r["class"]||sopExcluded(r["class"]))return;
+    var u=(r.units!=null&&r.units!=='')?(+r.units||0):0;
+    var v=+r.value||0;
+    if(u<=0)return;
+    var c=r["class"];
+    if(!acc[c])acc[c]={v:0,u:0,monthly:{}};
+    acc[c].v+=v;acc[c].u+=u;
+    if(!acc[c].monthly[r.month])acc[c].monthly[r.month]={v:0,u:0};
+    acc[c].monthly[r.month].v+=v;acc[c].monthly[r.month].u+=u;
+  });
+  var out={};
+  Object.keys(acc).forEach(function(c){
+    var m={};
+    Object.keys(acc[c].monthly).forEach(function(k){
+      var e=acc[c].monthly[k];
+      if(e.u>0)m[k]=e.v/e.u;
+    });
+    out[c]={overall:acc[c].u>0?acc[c].v/acc[c].u:null,monthly:m};
+  });
+  return out;
+}
+function sopFcAsp(c,m,asp,budAsp){
+  var b=budAsp&&budAsp[c];
+  if(b){
+    if(b.monthly[m]!=null)return b.monthly[m];
+    if(b.overall!=null)return b.overall;
+  }
+  return asp?asp[c]:null;
+}
+
 // Trailing-12-month implied ASP per class at the active location
 // (total-channel; approved Phase B design decision — IDPs are units-only).
 function sopAspMap(){
@@ -2233,7 +2271,7 @@ function sopAspMap(){
 }
 
 // Aggregate one measure into {month: number}. kind: 'act'|'fc'|'bud'|'ob'
-function sopSeries(kind,asp){
+function sopSeries(kind,asp,budAsp){
   var out={};
   function add(m,v){if(!m)return;out[m]=(out[m]||0)+v;}
   if(kind==='act'){
@@ -2242,12 +2280,12 @@ function sopSeries(kind,asp){
       if(sopChannel!=='all'&&(r.channel||'B2B')!==sopChannel)return;
       add(r.month,sopUnitMode==='value'?(+r.value||0):(+r.units||0));
     });
-  }else if(kind==='fc'){
+  }else if(kind==='fc'||kind==='fcttm'){
     (sopData.forecast||[]).forEach(function(r){
       if(r.location!==loc||!sopClassMatch(r)||sopExcluded(r["class"]))return;
       var u=(+r.units||0);
       if(sopUnitMode==='value'){
-        var a=asp[r["class"]];
+        var a=(kind==='fc')?sopFcAsp(r["class"],r.month,asp,budAsp):asp[r["class"]];
         if(a==null)return;
         add(r.month,u*a);
       }else add(r.month,u);
@@ -2302,13 +2340,15 @@ function renderSopDemand(body){
     if(!r.month)return;
     act[ch][r.month]=(act[ch][r.month]||0)+v;
   });
-  var fc=sopSeries('fc',asp), bud=sopSeries('bud',asp), ob=sopSeries('ob',asp);
+  var budAsp=sopBudAspMap();
+  var fc=sopSeries('fc',asp,budAsp), bud=sopSeries('bud',asp), ob=sopSeries('ob',asp);
+  var fcTtm=(sopUnitMode==='value')?sopSeries('fcttm',asp):null;
   var hasBudget=Object.keys(bud).length>0;
   var hasLegacy=(sopCfg.legacy_actuals||[]).some(function(r){return r.location===loc;});
 
   var html='<div class="sop-chart-wrap"><canvas id="sop-chart-demand"></canvas></div>';
   var notes=[];
-  if(sopUnitMode==='value')notes.push('Values are net of invoice discounts (allocated pro-rata within month/channel). Forecast valued at trailing-12-month implied class ASP from net actuals.');
+  if(sopUnitMode==='value')notes.push('Values net of invoice discounts (allocated pro-rata within month/channel). Solid forecast valued at budget-implied class ASP (volume signal vs budget); lighter line = same units at trailing-12M realized ASP — the gap between the two is price/mix erosion.');
   if(sopChannel!=='all')notes.push('Forecast is total-channel (demand plans carry no channel) — shown muted under a channel filter.');
   if(!hasBudget)notes.push('No budget loaded for this location — upload it in the Admin Panel (S&amp;OP · Budget).');
   if(hasLegacy)notes.push('Muted bars are pre-NetSuite legacy history (assortment changed Apr 2026).');
@@ -2332,6 +2372,10 @@ function renderSopDemand(body){
     data:months.map(function(m){return m>=now?(fc[m]!=null?fc[m]:null):null;}),
     borderColor:sopChannel==='all'?'#e8540a':'#4a5268',
     backgroundColor:'transparent',borderWidth:2,pointRadius:2,spanGaps:true,tension:.25});
+  if(fcTtm)ds.push({type:'line',label:'Fcst @ TTM ASP',
+    data:months.map(function(m){return m>=now?(fcTtm[m]!=null?fcTtm[m]:null):null;}),
+    borderColor:sopChannel==='all'?'rgba(232,84,10,.45)':'rgba(74,82,104,.5)',
+    backgroundColor:'transparent',borderWidth:1.5,borderDash:[2,3],pointRadius:0,spanGaps:true,tension:.25});
   if(hasBudget)ds.push({type:'line',label:'Budget',
     data:months.map(function(m){return bud[m]!=null?bud[m]:null;}),
     borderColor:'#f59e0b',backgroundColor:'transparent',borderDash:[6,4],
@@ -2346,25 +2390,30 @@ function renderSopDemand(body){
 }
 
 function sopDemandMatrix(months,now,asp){
+  var budAsp=sopBudAspMap();
   var classes=sopClass==='all'?sopClassList():[sopClass];
   var head='<tr><th>Class / month</th>'+months.map(function(m){
     return '<th'+(m===now?' class="sop-fwd"':'')+'>'+sopMLabel(m)+'</th>';}).join('')+'</tr>';
   var rows='';
-  var savedClass=sopClass;
+  var savedClass=sopClass, savedMode=sopUnitMode;
+  function aspFmt(v){
+    if(v==null||!isFinite(v))return null;
+    return iCur()+(v>=100?Math.round(v):v.toFixed(1));
+  }
   classes.forEach(function(c){
-    sopClass=c;   // reuse the series builders per class
-    var a=sopSeries('act',asp),f=sopSeries('fc',asp),b=sopSeries('bud',asp),o=sopSeries('ob',asp);
-    sopClass=savedClass;
-    var fu={},ou={};
-    if(sopUnitMode==='value'){ // coverage is computed in units regardless of toggle
-      var um=sopUnitMode; sopUnitMode='units'; sopClass=c;
-      fu=sopSeries('fc',asp); ou=sopSeries('ob',asp);
-      sopClass=savedClass; sopUnitMode=um;
-    }else{fu=f;ou=o;}
-    function cells(map,fmt,cls){
+    // Build value AND unit maps per class (coverage and implied ASP need
+    // units regardless of the display toggle; ASP needs both).
+    sopClass=c;
+    sopUnitMode='value';
+    var aV=sopSeries('act',asp),fV=sopSeries('fc',asp,budAsp),bV=sopSeries('bud',asp);
+    sopUnitMode='units';
+    var aU=sopSeries('act',asp),fU=sopSeries('fc',asp),bU=sopSeries('bud',asp),oU=sopSeries('ob',asp);
+    sopClass=savedClass; sopUnitMode=savedMode;
+    var a=savedMode==='value'?aV:aU, f=savedMode==='value'?fV:fU, b=savedMode==='value'?bV:bU;
+    function cells(map,fmt){
       return months.map(function(m){
         var v=map[m];
-        return '<td'+(m===now?' class="sop-fwd'+(cls?' '+cls:'')+'"':(cls?' class="'+cls+'"':''))+'>'+
+        return '<td'+(m===now?' class="sop-fwd"':'')+'>'+
           (v==null?'<span class="dim">—</span>':fmt(v,m))+'</td>';
       }).join('');
     }
@@ -2380,9 +2429,21 @@ function sopDemandMatrix(months,now,asp){
       var cls=d>=0?'sop-pos':'sop-neg';
       return '<td'+(m===now?' class="sop-fwd"':'')+'><span class="'+cls+'">'+(d>=0?'+':'')+Math.round(d)+'%</span></td>';
     }).join('')+'</tr>';
+    // Implied ASP: past months = realized net ASP (act value / act units);
+    // forward months = budget-implied ASP (bud value / bud units, only where
+    // the budget CSV carried units). Keeps the volume-vs-price wedge visible
+    // every month.
+    rows+='<tr class="sop-sub"><td>· implied ASP (act → bud)</td>'+months.map(function(m){
+      var v=null;
+      if(m<=now){if(aU[m]>0&&aV[m]!=null)v=aV[m]/aU[m];}
+      else{if(bU[m]>0&&bV[m]!=null)v=bV[m]/bU[m];}
+      var s=aspFmt(v);
+      return '<td'+(m===now?' class="sop-fwd"':'')+'>'+
+        (s==null?'<span class="dim">—</span>':s)+'</td>';
+    }).join('')+'</tr>';
     rows+='<tr class="sop-sub"><td>· order book / fcst</td>'+months.map(function(m){
       if(m<now)return '<td><span class="dim">—</span></td>';
-      var f0=fu[m],o0=ou[m];
+      var f0=fU[m],o0=oU[m];
       if(!f0||f0<=0)return '<td'+(m===now?' class="sop-fwd"':'')+'><span class="dim">—</span></td>';
       return '<td'+(m===now?' class="sop-fwd"':'')+'>'+Math.round((o0||0)/f0*100)+'%</td>';
     }).join('')+'</tr>';
