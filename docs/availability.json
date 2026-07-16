@@ -3192,19 +3192,19 @@
       "embargoed": false,
       "embargo_date": null,
       "status": "in_stock",
-      "available_today": 27,
+      "available_today": 26,
       "total_open_demand": 973,
-      "committable": 3027,
-      "max_buildable_today": 1000,
-      "max_buildable_horizon": 4000,
+      "committable": 3026,
+      "max_buildable_today": 999,
+      "max_buildable_horizon": 3999,
       "next_available_date": "2027-02-18",
-      "next_available_qty": 3027,
+      "next_available_qty": 3026,
       "first_shortfall_date": null,
       "limiting_components": [
         {
           "item_id": "6748",
           "item_name": "0CAK03GH.BM",
-          "supportable_fg_units": 1000,
+          "supportable_fg_units": 999,
           "next_po_date": "2027-02-15",
           "next_po_original_date": null,
           "next_po_qty": 3000.0,
@@ -3217,14 +3217,14 @@
         {
           "date": "2026-07-16",
           "display_date": "2026-07-16",
-          "buildable": 1000,
+          "buildable": 999,
           "cumulative_demand": 46,
-          "net_available": 954,
+          "net_available": 953,
           "limiting_components": [
             {
               "item_id": "6748",
               "item_name": "0CAK03GH.BM",
-              "supportable_fg_units": 1000,
+              "supportable_fg_units": 999,
               "next_po_date": "2027-02-15",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -3233,19 +3233,19 @@
               "source": "PO"
             }
           ],
-          "atp": 27
+          "atp": 26
         },
         {
           "date": "2026-07-17",
           "display_date": "2026-07-20",
-          "buildable": 1000,
+          "buildable": 999,
           "cumulative_demand": 364,
-          "net_available": 636,
+          "net_available": 635,
           "limiting_components": [
             {
               "item_id": "6748",
               "item_name": "0CAK03GH.BM",
-              "supportable_fg_units": 1000,
+              "supportable_fg_units": 999,
               "next_po_date": "2027-02-15",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -3254,19 +3254,19 @@
               "source": "PO"
             }
           ],
-          "atp": 27
+          "atp": 26
         },
         {
           "date": "2026-07-22",
           "display_date": "2026-07-25",
-          "buildable": 1000,
+          "buildable": 999,
           "cumulative_demand": 368,
-          "net_available": 632,
+          "net_available": 631,
           "limiting_components": [
             {
               "item_id": "6748",
               "item_name": "0CAK03GH.BM",
-              "supportable_fg_units": 1000,
+              "supportable_fg_units": 999,
               "next_po_date": "2027-02-15",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -3275,19 +3275,19 @@
               "source": "PO"
             }
           ],
-          "atp": 27
+          "atp": 26
         },
         {
           "date": "2026-07-31",
           "display_date": "2026-08-03",
-          "buildable": 1000,
+          "buildable": 999,
           "cumulative_demand": 583,
-          "net_available": 417,
+          "net_available": 416,
           "limiting_components": [
             {
               "item_id": "6748",
               "item_name": "0CAK03GH.BM",
-              "supportable_fg_units": 1000,
+              "supportable_fg_units": 999,
               "next_po_date": "2027-02-15",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -3296,19 +3296,19 @@
               "source": "PO"
             }
           ],
-          "atp": 27
+          "atp": 26
         },
         {
           "date": "2026-08-01",
           "display_date": "2026-08-04",
-          "buildable": 1000,
+          "buildable": 999,
           "cumulative_demand": 593,
-          "net_available": 407,
+          "net_available": 406,
           "limiting_components": [
             {
               "item_id": "6748",
               "item_name": "0CAK03GH.BM",
-              "supportable_fg_units": 1000,
+              "supportable_fg_units": 999,
               "next_po_date": "2027-02-15",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -3317,19 +3317,19 @@
               "source": "PO"
             }
           ],
-          "atp": 27
+          "atp": 26
         },
         {
           "date": "2026-09-01",
           "display_date": "2026-09-04",
-          "buildable": 1000,
+          "buildable": 999,
           "cumulative_demand": 679,
-          "net_available": 321,
+          "net_available": 320,
           "limiting_components": [
             {
               "item_id": "6748",
               "item_name": "0CAK03GH.BM",
-              "supportable_fg_units": 1000,
+              "supportable_fg_units": 999,
               "next_po_date": "2027-02-15",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -3338,19 +3338,19 @@
               "source": "PO"
             }
           ],
-          "atp": 27
+          "atp": 26
         },
         {
           "date": "2026-09-07",
           "display_date": "2026-09-10",
-          "buildable": 1000,
+          "buildable": 999,
           "cumulative_demand": 685,
-          "net_available": 315,
+          "net_available": 314,
           "limiting_components": [
             {
               "item_id": "6748",
               "item_name": "0CAK03GH.BM",
-              "supportable_fg_units": 1000,
+              "supportable_fg_units": 999,
               "next_po_date": "2027-02-15",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -3359,19 +3359,19 @@
               "source": "PO"
             }
           ],
-          "atp": 27
+          "atp": 26
         },
         {
           "date": "2026-10-01",
           "display_date": "2026-10-04",
-          "buildable": 1000,
+          "buildable": 999,
           "cumulative_demand": 722,
-          "net_available": 278,
+          "net_available": 277,
           "limiting_components": [
             {
               "item_id": "6748",
               "item_name": "0CAK03GH.BM",
-              "supportable_fg_units": 1000,
+              "supportable_fg_units": 999,
               "next_po_date": "2027-02-15",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -3380,19 +3380,19 @@
               "source": "PO"
             }
           ],
-          "atp": 27
+          "atp": 26
         },
         {
           "date": "2026-10-05",
           "display_date": "2026-10-08",
-          "buildable": 1000,
+          "buildable": 999,
           "cumulative_demand": 737,
-          "net_available": 263,
+          "net_available": 262,
           "limiting_components": [
             {
               "item_id": "6748",
               "item_name": "0CAK03GH.BM",
-              "supportable_fg_units": 1000,
+              "supportable_fg_units": 999,
               "next_po_date": "2027-02-15",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -3401,19 +3401,19 @@
               "source": "PO"
             }
           ],
-          "atp": 27
+          "atp": 26
         },
         {
           "date": "2026-10-12",
           "display_date": "2026-10-15",
-          "buildable": 1000,
+          "buildable": 999,
           "cumulative_demand": 777,
-          "net_available": 223,
+          "net_available": 222,
           "limiting_components": [
             {
               "item_id": "6748",
               "item_name": "0CAK03GH.BM",
-              "supportable_fg_units": 1000,
+              "supportable_fg_units": 999,
               "next_po_date": "2027-02-15",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -3422,19 +3422,19 @@
               "source": "PO"
             }
           ],
-          "atp": 27
+          "atp": 26
         },
         {
           "date": "2026-10-19",
           "display_date": "2026-10-22",
-          "buildable": 1000,
+          "buildable": 999,
           "cumulative_demand": 784,
-          "net_available": 216,
+          "net_available": 215,
           "limiting_components": [
             {
               "item_id": "6748",
               "item_name": "0CAK03GH.BM",
-              "supportable_fg_units": 1000,
+              "supportable_fg_units": 999,
               "next_po_date": "2027-02-15",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -3443,19 +3443,19 @@
               "source": "PO"
             }
           ],
-          "atp": 27
+          "atp": 26
         },
         {
           "date": "2026-11-02",
           "display_date": "2026-11-05",
-          "buildable": 1000,
+          "buildable": 999,
           "cumulative_demand": 789,
-          "net_available": 211,
+          "net_available": 210,
           "limiting_components": [
             {
               "item_id": "6748",
               "item_name": "0CAK03GH.BM",
-              "supportable_fg_units": 1000,
+              "supportable_fg_units": 999,
               "next_po_date": "2027-02-15",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -3464,19 +3464,19 @@
               "source": "PO"
             }
           ],
-          "atp": 27
+          "atp": 26
         },
         {
           "date": "2026-11-27",
           "display_date": "2026-11-30",
-          "buildable": 1000,
+          "buildable": 999,
           "cumulative_demand": 801,
-          "net_available": 199,
+          "net_available": 198,
           "limiting_components": [
             {
               "item_id": "6748",
               "item_name": "0CAK03GH.BM",
-              "supportable_fg_units": 1000,
+              "supportable_fg_units": 999,
               "next_po_date": "2027-02-15",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -3485,19 +3485,19 @@
               "source": "PO"
             }
           ],
-          "atp": 27
+          "atp": 26
         },
         {
           "date": "2026-12-01",
           "display_date": "2026-12-04",
-          "buildable": 1000,
+          "buildable": 999,
           "cumulative_demand": 831,
-          "net_available": 169,
+          "net_available": 168,
           "limiting_components": [
             {
               "item_id": "6748",
               "item_name": "0CAK03GH.BM",
-              "supportable_fg_units": 1000,
+              "supportable_fg_units": 999,
               "next_po_date": "2027-02-15",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -3506,19 +3506,19 @@
               "source": "PO"
             }
           ],
-          "atp": 27
+          "atp": 26
         },
         {
           "date": "2026-12-14",
           "display_date": "2026-12-17",
-          "buildable": 1000,
+          "buildable": 999,
           "cumulative_demand": 848,
-          "net_available": 152,
+          "net_available": 151,
           "limiting_components": [
             {
               "item_id": "6748",
               "item_name": "0CAK03GH.BM",
-              "supportable_fg_units": 1000,
+              "supportable_fg_units": 999,
               "next_po_date": "2027-02-15",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -3527,19 +3527,19 @@
               "source": "PO"
             }
           ],
-          "atp": 27
+          "atp": 26
         },
         {
           "date": "2026-12-15",
           "display_date": "2026-12-18",
-          "buildable": 1000,
+          "buildable": 999,
           "cumulative_demand": 898,
-          "net_available": 102,
+          "net_available": 101,
           "limiting_components": [
             {
               "item_id": "6748",
               "item_name": "0CAK03GH.BM",
-              "supportable_fg_units": 1000,
+              "supportable_fg_units": 999,
               "next_po_date": "2027-02-15",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -3548,19 +3548,19 @@
               "source": "PO"
             }
           ],
-          "atp": 27
+          "atp": 26
         },
         {
           "date": "2026-12-16",
           "display_date": "2026-12-19",
-          "buildable": 1000,
+          "buildable": 999,
           "cumulative_demand": 948,
-          "net_available": 52,
+          "net_available": 51,
           "limiting_components": [
             {
               "item_id": "6748",
               "item_name": "0CAK03GH.BM",
-              "supportable_fg_units": 1000,
+              "supportable_fg_units": 999,
               "next_po_date": "2027-02-15",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -3569,19 +3569,19 @@
               "source": "PO"
             }
           ],
-          "atp": 27
+          "atp": 26
         },
         {
           "date": "2026-12-24",
           "display_date": "2026-12-27",
-          "buildable": 1000,
+          "buildable": 999,
           "cumulative_demand": 958,
-          "net_available": 42,
+          "net_available": 41,
           "limiting_components": [
             {
               "item_id": "6748",
               "item_name": "0CAK03GH.BM",
-              "supportable_fg_units": 1000,
+              "supportable_fg_units": 999,
               "next_po_date": "2027-02-15",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -3590,19 +3590,19 @@
               "source": "PO"
             }
           ],
-          "atp": 27
+          "atp": 26
         },
         {
           "date": "2026-12-27",
           "display_date": "2026-12-30",
-          "buildable": 1000,
+          "buildable": 999,
           "cumulative_demand": 973,
-          "net_available": 27,
+          "net_available": 26,
           "limiting_components": [
             {
               "item_id": "6748",
               "item_name": "0CAK03GH.BM",
-              "supportable_fg_units": 1000,
+              "supportable_fg_units": 999,
               "next_po_date": "2027-02-15",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -3611,19 +3611,19 @@
               "source": "PO"
             }
           ],
-          "atp": 27
+          "atp": 26
         },
         {
           "date": "2027-02-15",
           "display_date": "2027-02-18",
-          "buildable": 4000,
+          "buildable": 3999,
           "cumulative_demand": 973,
-          "net_available": 3027,
+          "net_available": 3026,
           "limiting_components": [
             {
               "item_id": "6748",
               "item_name": "0CAK03GH.BM",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3999,
               "next_po_date": "2027-02-15",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -3632,12 +3632,12 @@
               "source": "PO"
             }
           ],
-          "atp": 3027
+          "atp": 3026
         }
       ],
       "avg_eur_per_unit": 6.0387,
       "avg_usd_per_unit": 11.9988,
-      "available_today_dtc": 1000,
+      "available_today_dtc": 999,
       "overridden": false
     },
     {
@@ -3663,18 +3663,18 @@
           "item_id": "6783",
           "item_name": "RSK3GH.BM",
           "po_number": "PO-US-2600015",
-          "supportable_fg_units": 27,
+          "supportable_fg_units": 26,
           "next_po_date": "2026-08-13",
-          "next_po_qty": 27.0,
+          "next_po_qty": 26.0,
           "overdue": false
         },
         {
           "item_id": "6783",
           "item_name": "RSK3GH.BM",
           "po_number": "PO-US-2600015",
-          "supportable_fg_units": 154,
+          "supportable_fg_units": 155,
           "next_po_date": "2027-03-18",
-          "next_po_qty": 154.0,
+          "next_po_qty": 155.0,
           "overdue": false
         },
         {
@@ -3699,18 +3699,18 @@
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 26,
               "next_po_date": "2026-08-13",
-              "next_po_qty": 27.0,
+              "next_po_qty": 26.0,
               "overdue": false
             },
             {
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 154,
+              "supportable_fg_units": 155,
               "next_po_date": "2027-03-18",
-              "next_po_qty": 154.0,
+              "next_po_qty": 155.0,
               "overdue": false
             },
             {
@@ -3736,18 +3736,18 @@
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 26,
               "next_po_date": "2026-08-13",
-              "next_po_qty": 27.0,
+              "next_po_qty": 26.0,
               "overdue": false
             },
             {
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 154,
+              "supportable_fg_units": 155,
               "next_po_date": "2027-03-18",
-              "next_po_qty": 154.0,
+              "next_po_qty": 155.0,
               "overdue": false
             },
             {
@@ -3765,7 +3765,7 @@
         {
           "date": "2026-08-13",
           "display_date": "2026-08-13",
-          "buildable": 27,
+          "buildable": 26,
           "cumulative_demand": 58,
           "net_available": 0,
           "limiting_components": [
@@ -3773,18 +3773,18 @@
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 26,
               "next_po_date": "2026-08-13",
-              "next_po_qty": 27.0,
+              "next_po_qty": 26.0,
               "overdue": false
             },
             {
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 154,
+              "supportable_fg_units": 155,
               "next_po_date": "2027-03-18",
-              "next_po_qty": 154.0,
+              "next_po_qty": 155.0,
               "overdue": false
             },
             {
@@ -3802,7 +3802,7 @@
         {
           "date": "2026-08-17",
           "display_date": "2026-08-17",
-          "buildable": 27,
+          "buildable": 26,
           "cumulative_demand": 76,
           "net_available": 0,
           "limiting_components": [
@@ -3810,18 +3810,18 @@
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 26,
               "next_po_date": "2026-08-13",
-              "next_po_qty": 27.0,
+              "next_po_qty": 26.0,
               "overdue": false
             },
             {
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 154,
+              "supportable_fg_units": 155,
               "next_po_date": "2027-03-18",
-              "next_po_qty": 154.0,
+              "next_po_qty": 155.0,
               "overdue": false
             },
             {
@@ -3839,7 +3839,7 @@
         {
           "date": "2026-08-31",
           "display_date": "2026-08-31",
-          "buildable": 27,
+          "buildable": 26,
           "cumulative_demand": 86,
           "net_available": 0,
           "limiting_components": [
@@ -3847,18 +3847,18 @@
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 26,
               "next_po_date": "2026-08-13",
-              "next_po_qty": 27.0,
+              "next_po_qty": 26.0,
               "overdue": false
             },
             {
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 154,
+              "supportable_fg_units": 155,
               "next_po_date": "2027-03-18",
-              "next_po_qty": 154.0,
+              "next_po_qty": 155.0,
               "overdue": false
             },
             {
@@ -3876,7 +3876,7 @@
         {
           "date": "2026-09-01",
           "display_date": "2026-09-01",
-          "buildable": 27,
+          "buildable": 26,
           "cumulative_demand": 111,
           "net_available": 0,
           "limiting_components": [
@@ -3884,18 +3884,18 @@
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 26,
               "next_po_date": "2026-08-13",
-              "next_po_qty": 27.0,
+              "next_po_qty": 26.0,
               "overdue": false
             },
             {
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 154,
+              "supportable_fg_units": 155,
               "next_po_date": "2027-03-18",
-              "next_po_qty": 154.0,
+              "next_po_qty": 155.0,
               "overdue": false
             },
             {
@@ -3913,7 +3913,7 @@
         {
           "date": "2026-10-01",
           "display_date": "2026-10-01",
-          "buildable": 27,
+          "buildable": 26,
           "cumulative_demand": 115,
           "net_available": 0,
           "limiting_components": [
@@ -3921,18 +3921,18 @@
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 26,
               "next_po_date": "2026-08-13",
-              "next_po_qty": 27.0,
+              "next_po_qty": 26.0,
               "overdue": false
             },
             {
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 154,
+              "supportable_fg_units": 155,
               "next_po_date": "2027-03-18",
-              "next_po_qty": 154.0,
+              "next_po_qty": 155.0,
               "overdue": false
             },
             {
@@ -3950,7 +3950,7 @@
         {
           "date": "2026-11-02",
           "display_date": "2026-11-02",
-          "buildable": 27,
+          "buildable": 26,
           "cumulative_demand": 119,
           "net_available": 0,
           "limiting_components": [
@@ -3958,18 +3958,18 @@
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 26,
               "next_po_date": "2026-08-13",
-              "next_po_qty": 27.0,
+              "next_po_qty": 26.0,
               "overdue": false
             },
             {
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 154,
+              "supportable_fg_units": 155,
               "next_po_date": "2027-03-18",
-              "next_po_qty": 154.0,
+              "next_po_qty": 155.0,
               "overdue": false
             },
             {
@@ -3987,7 +3987,7 @@
         {
           "date": "2026-12-01",
           "display_date": "2026-12-01",
-          "buildable": 27,
+          "buildable": 26,
           "cumulative_demand": 122,
           "net_available": 0,
           "limiting_components": [
@@ -3995,18 +3995,18 @@
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 26,
               "next_po_date": "2026-08-13",
-              "next_po_qty": 27.0,
+              "next_po_qty": 26.0,
               "overdue": false
             },
             {
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 154,
+              "supportable_fg_units": 155,
               "next_po_date": "2027-03-18",
-              "next_po_qty": 154.0,
+              "next_po_qty": 155.0,
               "overdue": false
             },
             {
@@ -4024,7 +4024,7 @@
         {
           "date": "2027-02-02",
           "display_date": "2027-02-02",
-          "buildable": 27,
+          "buildable": 26,
           "cumulative_demand": 147,
           "net_available": 0,
           "limiting_components": [
@@ -4032,18 +4032,18 @@
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 26,
               "next_po_date": "2026-08-13",
-              "next_po_qty": 27.0,
+              "next_po_qty": 26.0,
               "overdue": false
             },
             {
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 154,
+              "supportable_fg_units": 155,
               "next_po_date": "2027-03-18",
-              "next_po_qty": 154.0,
+              "next_po_qty": 155.0,
               "overdue": false
             },
             {
@@ -4069,18 +4069,18 @@
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 26,
               "next_po_date": "2026-08-13",
-              "next_po_qty": 27.0,
+              "next_po_qty": 26.0,
               "overdue": false
             },
             {
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 154,
+              "supportable_fg_units": 155,
               "next_po_date": "2027-03-18",
-              "next_po_qty": 154.0,
+              "next_po_qty": 155.0,
               "overdue": false
             },
             {
@@ -4106,18 +4106,18 @@
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 26,
               "next_po_date": "2026-08-13",
-              "next_po_qty": 27.0,
+              "next_po_qty": 26.0,
               "overdue": false
             },
             {
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 154,
+              "supportable_fg_units": 155,
               "next_po_date": "2027-03-18",
-              "next_po_qty": 154.0,
+              "next_po_qty": 155.0,
               "overdue": false
             },
             {
@@ -4143,18 +4143,18 @@
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 26,
               "next_po_date": "2026-08-13",
-              "next_po_qty": 27.0,
+              "next_po_qty": 26.0,
               "overdue": false
             },
             {
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 154,
+              "supportable_fg_units": 155,
               "next_po_date": "2027-03-18",
-              "next_po_qty": 154.0,
+              "next_po_qty": 155.0,
               "overdue": false
             },
             {
@@ -4180,18 +4180,18 @@
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 26,
               "next_po_date": "2026-08-13",
-              "next_po_qty": 27.0,
+              "next_po_qty": 26.0,
               "overdue": false
             },
             {
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 154,
+              "supportable_fg_units": 155,
               "next_po_date": "2027-03-18",
-              "next_po_qty": 154.0,
+              "next_po_qty": 155.0,
               "overdue": false
             },
             {
@@ -4217,18 +4217,18 @@
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 27,
+              "supportable_fg_units": 26,
               "next_po_date": "2026-08-13",
-              "next_po_qty": 27.0,
+              "next_po_qty": 26.0,
               "overdue": false
             },
             {
               "item_id": "6783",
               "item_name": "RSK3GH.BM",
               "po_number": "PO-US-2600015",
-              "supportable_fg_units": 154,
+              "supportable_fg_units": 155,
               "next_po_date": "2027-03-18",
-              "next_po_qty": 154.0,
+              "next_po_qty": 155.0,
               "overdue": false
             },
             {
@@ -6366,19 +6366,19 @@
       "embargoed": false,
       "embargo_date": null,
       "status": "in_stock",
-      "available_today": 453,
+      "available_today": 450,
       "total_open_demand": 1791,
-      "committable": 2209,
-      "max_buildable_today": 2000,
-      "max_buildable_horizon": 4000,
+      "committable": 2206,
+      "max_buildable_today": 1997,
+      "max_buildable_horizon": 3997,
       "next_available_date": "2026-11-19",
-      "next_available_qty": 2209,
+      "next_available_qty": 2206,
       "first_shortfall_date": null,
       "limiting_components": [
         {
           "item_id": "6740",
           "item_name": "0CAK01N0.BS",
-          "supportable_fg_units": 2000,
+          "supportable_fg_units": 1997,
           "next_po_date": "2026-11-16",
           "next_po_original_date": null,
           "next_po_qty": 2000.0,
@@ -6391,14 +6391,14 @@
         {
           "date": "2026-07-16",
           "display_date": "2026-07-16",
-          "buildable": 2000,
+          "buildable": 1997,
           "cumulative_demand": 76,
-          "net_available": 1924,
+          "net_available": 1921,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 2000,
+              "supportable_fg_units": 1997,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6407,19 +6407,19 @@
               "source": "PO"
             }
           ],
-          "atp": 453
+          "atp": 450
         },
         {
           "date": "2026-07-17",
           "display_date": "2026-07-20",
-          "buildable": 2000,
+          "buildable": 1997,
           "cumulative_demand": 460,
-          "net_available": 1540,
+          "net_available": 1537,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 2000,
+              "supportable_fg_units": 1997,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6428,19 +6428,19 @@
               "source": "PO"
             }
           ],
-          "atp": 453
+          "atp": 450
         },
         {
           "date": "2026-07-25",
           "display_date": "2026-07-28",
-          "buildable": 2000,
+          "buildable": 1997,
           "cumulative_demand": 465,
-          "net_available": 1535,
+          "net_available": 1532,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 2000,
+              "supportable_fg_units": 1997,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6449,19 +6449,19 @@
               "source": "PO"
             }
           ],
-          "atp": 453
+          "atp": 450
         },
         {
           "date": "2026-07-31",
           "display_date": "2026-08-03",
-          "buildable": 2000,
+          "buildable": 1997,
           "cumulative_demand": 658,
-          "net_available": 1342,
+          "net_available": 1339,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 2000,
+              "supportable_fg_units": 1997,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6470,19 +6470,19 @@
               "source": "PO"
             }
           ],
-          "atp": 453
+          "atp": 450
         },
         {
           "date": "2026-08-01",
           "display_date": "2026-08-04",
-          "buildable": 2000,
+          "buildable": 1997,
           "cumulative_demand": 663,
-          "net_available": 1337,
+          "net_available": 1334,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 2000,
+              "supportable_fg_units": 1997,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6491,19 +6491,19 @@
               "source": "PO"
             }
           ],
-          "atp": 453
+          "atp": 450
         },
         {
           "date": "2026-09-01",
           "display_date": "2026-09-04",
-          "buildable": 2000,
+          "buildable": 1997,
           "cumulative_demand": 1338,
-          "net_available": 662,
+          "net_available": 659,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 2000,
+              "supportable_fg_units": 1997,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6512,19 +6512,19 @@
               "source": "PO"
             }
           ],
-          "atp": 453
+          "atp": 450
         },
         {
           "date": "2026-09-07",
           "display_date": "2026-09-10",
-          "buildable": 2000,
+          "buildable": 1997,
           "cumulative_demand": 1346,
-          "net_available": 654,
+          "net_available": 651,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 2000,
+              "supportable_fg_units": 1997,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6533,19 +6533,19 @@
               "source": "PO"
             }
           ],
-          "atp": 453
+          "atp": 450
         },
         {
           "date": "2026-09-16",
           "display_date": "2026-09-19",
-          "buildable": 2000,
+          "buildable": 1997,
           "cumulative_demand": 1376,
-          "net_available": 624,
+          "net_available": 621,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 2000,
+              "supportable_fg_units": 1997,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6554,19 +6554,19 @@
               "source": "PO"
             }
           ],
-          "atp": 453
+          "atp": 450
         },
         {
           "date": "2026-10-01",
           "display_date": "2026-10-04",
-          "buildable": 2000,
+          "buildable": 1997,
           "cumulative_demand": 1453,
-          "net_available": 547,
+          "net_available": 544,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 2000,
+              "supportable_fg_units": 1997,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6575,19 +6575,19 @@
               "source": "PO"
             }
           ],
-          "atp": 453
+          "atp": 450
         },
         {
           "date": "2026-10-05",
           "display_date": "2026-10-08",
-          "buildable": 2000,
+          "buildable": 1997,
           "cumulative_demand": 1458,
-          "net_available": 542,
+          "net_available": 539,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 2000,
+              "supportable_fg_units": 1997,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6596,19 +6596,19 @@
               "source": "PO"
             }
           ],
-          "atp": 453
+          "atp": 450
         },
         {
           "date": "2026-10-13",
           "display_date": "2026-10-16",
-          "buildable": 2000,
+          "buildable": 1997,
           "cumulative_demand": 1462,
-          "net_available": 538,
+          "net_available": 535,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 2000,
+              "supportable_fg_units": 1997,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6617,19 +6617,19 @@
               "source": "PO"
             }
           ],
-          "atp": 453
+          "atp": 450
         },
         {
           "date": "2026-10-15",
           "display_date": "2026-10-18",
-          "buildable": 2000,
+          "buildable": 1997,
           "cumulative_demand": 1466,
-          "net_available": 534,
+          "net_available": 531,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 2000,
+              "supportable_fg_units": 1997,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6638,19 +6638,19 @@
               "source": "PO"
             }
           ],
-          "atp": 453
+          "atp": 450
         },
         {
           "date": "2026-10-30",
           "display_date": "2026-11-02",
-          "buildable": 2000,
+          "buildable": 1997,
           "cumulative_demand": 1476,
-          "net_available": 524,
+          "net_available": 521,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 2000,
+              "supportable_fg_units": 1997,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6659,19 +6659,19 @@
               "source": "PO"
             }
           ],
-          "atp": 453
+          "atp": 450
         },
         {
           "date": "2026-11-01",
           "display_date": "2026-11-04",
-          "buildable": 2000,
+          "buildable": 1997,
           "cumulative_demand": 1526,
-          "net_available": 474,
+          "net_available": 471,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 2000,
+              "supportable_fg_units": 1997,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6680,19 +6680,19 @@
               "source": "PO"
             }
           ],
-          "atp": 453
+          "atp": 450
         },
         {
           "date": "2026-11-02",
           "display_date": "2026-11-05",
-          "buildable": 2000,
+          "buildable": 1997,
           "cumulative_demand": 1547,
-          "net_available": 453,
+          "net_available": 450,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 2000,
+              "supportable_fg_units": 1997,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6701,19 +6701,19 @@
               "source": "PO"
             }
           ],
-          "atp": 453
+          "atp": 450
         },
         {
           "date": "2026-11-16",
           "display_date": "2026-11-19",
-          "buildable": 4000,
+          "buildable": 3997,
           "cumulative_demand": 1547,
-          "net_available": 2453,
+          "net_available": 2450,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3997,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6722,19 +6722,19 @@
               "source": "PO"
             }
           ],
-          "atp": 2209
+          "atp": 2206
         },
         {
           "date": "2026-11-27",
           "display_date": "2026-11-30",
-          "buildable": 4000,
+          "buildable": 3997,
           "cumulative_demand": 1582,
-          "net_available": 2418,
+          "net_available": 2415,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3997,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6743,19 +6743,19 @@
               "source": "PO"
             }
           ],
-          "atp": 2209
+          "atp": 2206
         },
         {
           "date": "2026-12-15",
           "display_date": "2026-12-18",
-          "buildable": 4000,
+          "buildable": 3997,
           "cumulative_demand": 1732,
-          "net_available": 2268,
+          "net_available": 2265,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3997,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6764,19 +6764,19 @@
               "source": "PO"
             }
           ],
-          "atp": 2209
+          "atp": 2206
         },
         {
           "date": "2026-12-16",
           "display_date": "2026-12-19",
-          "buildable": 4000,
+          "buildable": 3997,
           "cumulative_demand": 1782,
-          "net_available": 2218,
+          "net_available": 2215,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3997,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6785,19 +6785,19 @@
               "source": "PO"
             }
           ],
-          "atp": 2209
+          "atp": 2206
         },
         {
           "date": "2026-12-27",
           "display_date": "2026-12-30",
-          "buildable": 4000,
+          "buildable": 3997,
           "cumulative_demand": 1791,
-          "net_available": 2209,
+          "net_available": 2206,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3997,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6806,12 +6806,12 @@
               "source": "PO"
             }
           ],
-          "atp": 2209
+          "atp": 2206
         }
       ],
       "avg_eur_per_unit": 7.1049,
       "avg_usd_per_unit": 9.59,
-      "available_today_dtc": 2000,
+      "available_today_dtc": 1997,
       "overridden": false
     },
     {
