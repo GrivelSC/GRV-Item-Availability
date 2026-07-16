@@ -1,5 +1,5 @@
 {
-  "refreshed_at": "2026-07-16T09:36:23.049833",
+  "refreshed_at": "2026-07-16T10:03:59.991473",
   "refreshed_by": "scheduled",
   "sku_count_verrayes": 318,
   "sku_count_usa3pl": 318,
@@ -10,6 +10,7 @@
   "sop_pass": "ok",
   "sop_row_counts": {
     "q13": 831,
+    "q13b": 57,
     "q14": 180,
     "q15": 190,
     "q17": 27
