@@ -157,6 +157,8 @@ tr.is-overridden td:first-child{box-shadow:inset 3px 0 0 var(--amber);}
 .sop-pos{color:var(--green);}
 .sop-neg{color:var(--red);}
 .sop-legacy{color:var(--dim);}
+.sop-late{color:var(--amber);}
+.sop-ctoggle{user-select:none;}
 .sop-empty{padding:2.5rem 1rem;text-align:center;color:var(--muted);font-size:12px;}
 /* ADMIN */
 .admin-btn{background:none;border:1px solid var(--border);border-radius:4px;color:var(--muted);cursor:pointer;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:14px;transition:all .15s;}
@@ -2212,6 +2214,12 @@ function sopFillClassSelect(){
   if(sel.value!==cur){sopClass='all';sel.value='all';}
 }
 function sopClassMatch(r){return sopClass==='all'||r["class"]===sopClass;}
+var sopCollapsed={};
+function sopToggleClass(name){
+  sopCollapsed[name]=!sopCollapsed[name];
+  renderSop();
+}
+function sopEsc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 
 // Budget-implied ASP per class at the active location (channel-total).
 // Primary forecast valuation (Option B convention, 15 Jul 2026): forecast
@@ -2348,10 +2356,16 @@ function renderSopDemand(body){
 
   var html='<div class="sop-chart-wrap"><canvas id="sop-chart-demand"></canvas></div>';
   var notes=[];
-  if(sopUnitMode==='value')notes.push('Values net of invoice discounts (allocated pro-rata within month/channel). Solid forecast valued at budget-implied class ASP (volume signal vs budget); lighter line = same units at trailing-12M realized ASP — the gap between the two is price/mix erosion.');
+  if(sopUnitMode==='value')notes.push('Values net of invoice discounts (allocated pro-rata within month/channel). Solid forecast valued at budget-implied class ASP (volume signal vs budget); lighter line = same units at trailing-12M implied ASP — the gap between the two is price/mix erosion.');
   if(sopChannel!=='all')notes.push('Forecast is total-channel (demand plans carry no channel) — shown muted under a channel filter.');
   if(!hasBudget)notes.push('No budget loaded for this location — upload it in the Admin Panel (S&amp;OP · Budget).');
   if(hasLegacy)notes.push('Muted bars are pre-NetSuite legacy history (assortment changed Apr 2026).');
+  var unsched=0;
+  (sopData.open_demand||[]).forEach(function(r){
+    if(r.location===loc&&r.month==='unscheduled'&&!sopExcluded(r["class"])&&(sopClass==='all'||r["class"]===sopClass))unsched+=(+r.units||0);
+  });
+  if(unsched>0)notes.push(Math.round(unsched).toLocaleString('en-US')+' order-book units carry no expected ship date (not shown in the matrix).');
+  if(sopUnitMode==='value')notes.push('Order book valued at the forecast ASP convention (approximation — SO line values are not pulled).');
   html+='<div class="sop-note">'+notes.join(' · ')+'</div>';
   html+=sopDemandMatrix(months,now,asp);
   body.innerHTML=html;
@@ -2372,7 +2386,7 @@ function renderSopDemand(body){
     data:months.map(function(m){return m>=now?(fc[m]!=null?fc[m]:null):null;}),
     borderColor:sopChannel==='all'?'#e8540a':'#4a5268',
     backgroundColor:'transparent',borderWidth:2,pointRadius:2,spanGaps:true,tension:.25});
-  if(fcTtm)ds.push({type:'line',label:'Fcst @ TTM ASP',
+  if(fcTtm)ds.push({type:'line',label:'Fcst @ implied ASP',
     data:months.map(function(m){return m>=now?(fcTtm[m]!=null?fcTtm[m]:null):null;}),
     borderColor:sopChannel==='all'?'rgba(232,84,10,.45)':'rgba(74,82,104,.5)',
     backgroundColor:'transparent',borderWidth:1.5,borderDash:[2,3],pointRadius:0,spanGaps:true,tension:.25});
@@ -2417,12 +2431,16 @@ function sopDemandMatrix(months,now,asp){
           (v==null?'<span class="dim">—</span>':fmt(v,m))+'</td>';
       }).join('');
     }
-    rows+='<tr class="sop-crow"><td>'+c+'</td>'+cells(a,function(v,m){
+    var col=!!sopCollapsed[c];
+    rows+='<tr class="sop-crow"><td class="sop-ctoggle" data-c="'+sopEsc(c)+'" onclick="sopToggleClass(this.dataset.c)" style="cursor:pointer;" title="'+(col?'Expand':'Collapse')+'">'+(col?'▸ ':'▾ ')+sopEsc(c)+'</td>'+cells(a,function(v,m){
       return '<span'+(m<'2025-01'?' class="sop-legacy"':'')+'>'+sopFmt(v)+'</span>';})+'</tr>';
+    if(col)return;
     rows+='<tr class="sop-sub"><td>· forecast</td>'+cells(f,function(v){return sopFmt(v);})+'</tr>';
     rows+='<tr class="sop-sub"><td>· budget</td>'+cells(b,function(v){return sopFmt(v);})+'</tr>';
     rows+='<tr class="sop-sub"><td>· vs budget</td>'+months.map(function(m){
-      var ref=(m<=now)?a[m]:f[m];
+      // current month: partial actuals vs full-month budget is meaningless,
+      // so the current month compares forecast (m<now = closed months only)
+      var ref=(m<now)?a[m]:f[m];
       var bv=b[m];
       if(ref==null||bv==null||bv===0)return '<td'+(m===now?' class="sop-fwd"':'')+'><span class="dim">—</span></td>';
       var d=(ref-bv)/bv*100;
@@ -2440,6 +2458,19 @@ function sopDemandMatrix(months,now,asp){
       var s=aspFmt(v);
       return '<td'+(m===now?' class="sop-fwd"':'')+'>'+
         (s==null?'<span class="dim">—</span>':s)+'</td>';
+    }).join('')+'</tr>';
+    rows+='<tr class="sop-sub"><td>· order book</td>'+months.map(function(m){
+      var u=oU[m];
+      if(u==null||u===0)return '<td'+(m===now?' class="sop-fwd"':'')+'><span class="dim">—</span></td>';
+      var v=u;
+      if(savedMode==='value'){
+        var pa=sopFcAsp(c,m,asp,budAsp);
+        v=(pa!=null)?u*pa:null;
+      }
+      var s=(v==null)?'<span class="dim">—</span>':sopFmt(v);
+      // past months with open orders = backlog (late vs expected ship date)
+      if(m<now)s='<span class="sop-late" title="Backlog: open SO lines with expected ship date in a past month">'+s+'</span>';
+      return '<td'+(m===now?' class="sop-fwd"':'')+'>'+s+'</td>';
     }).join('')+'</tr>';
     rows+='<tr class="sop-sub"><td>· order book / fcst</td>'+months.map(function(m){
       if(m<now)return '<td><span class="dim">—</span></td>';
