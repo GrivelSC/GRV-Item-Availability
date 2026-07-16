@@ -693,6 +693,11 @@ tr.is-overridden td:first-child{box-shadow:inset 3px 0 0 var(--amber);}
 
       <div class="admin-section">
         <div class="admin-section-title">S&amp;OP · Publish Inputs</div>
+        <div class="admin-row" style="margin-bottom:.6rem;">
+          <span class="admin-label">Excluded classes:</span>
+          <input type="text" class="sop-select mono" id="sop-excluded" style="flex:1;min-width:280px;" onchange="setSopExcluded(this.value)">
+        </div>
+        <div class="admin-section-desc">Comma-separated class names removed from every S&amp;OP view (case-insensitive, substring match). Default: the OEM Poles business.</div>
         <div class="admin-section-desc">S&amp;OP inputs live in a separate <span class="mono">sop_config.json</span> (config.json is untouched). After downloading, place it in <span class="mono">C:\GRV-Availability\</span> — it publishes on the next refresh.</div>
         <button class="download-btn" onclick="downloadSopConfig()">⬇ Download Updated sop_config.json</button>
       </div>
@@ -2128,6 +2133,8 @@ async function ensureSopCfg(force){
   sopCfg.legacy_actuals=sopCfg.legacy_actuals||[];
   sopCfg.cover_targets=sopCfg.cover_targets||[];
   if(sopCfg.planning_fx===undefined)sopCfg.planning_fx=null;
+  if(!Array.isArray(sopCfg.excluded_classes))
+    sopCfg.excluded_classes=['OEM POLES','Poles - Anodized','Poles - Painted'];
   return sopCfg;
 }
 
@@ -2186,13 +2193,13 @@ function sopMLabel(m){
 function sopActualRows(){
   var rows=(sopData&&sopData.sales_actuals||[]).slice();
   (sopCfg&&sopCfg.legacy_actuals||[]).forEach(function(r){rows.push(r);});
-  return rows.filter(function(r){return r.location===loc;});
+  return rows.filter(function(r){return r.location===loc&&!sopExcluded(r["class"]);});
 }
 function sopClassList(){
   var s={};
   sopActualRows().forEach(function(r){if(r["class"])s[r["class"]]=1;});
-  (sopData&&sopData.forecast||[]).forEach(function(r){if(r.location===loc&&r["class"])s[r["class"]]=1;});
-  (sopCfg&&sopCfg.budget||[]).forEach(function(r){if(r.location===loc&&r["class"])s[r["class"]]=1;});
+  (sopData&&sopData.forecast||[]).forEach(function(r){if(r.location===loc&&r["class"]&&!sopExcluded(r["class"]))s[r["class"]]=1;});
+  (sopCfg&&sopCfg.budget||[]).forEach(function(r){if(r.location===loc&&r["class"]&&!sopExcluded(r["class"]))s[r["class"]]=1;});
   return Object.keys(s).sort();
 }
 function sopFillClassSelect(){
@@ -2237,7 +2244,7 @@ function sopSeries(kind,asp){
     });
   }else if(kind==='fc'){
     (sopData.forecast||[]).forEach(function(r){
-      if(r.location!==loc||!sopClassMatch(r))return;
+      if(r.location!==loc||!sopClassMatch(r)||sopExcluded(r["class"]))return;
       var u=(+r.units||0);
       if(sopUnitMode==='value'){
         var a=asp[r["class"]];
@@ -2247,14 +2254,14 @@ function sopSeries(kind,asp){
     });
   }else if(kind==='bud'){
     (sopCfg.budget||[]).forEach(function(r){
-      if(r.location!==loc||!sopClassMatch(r))return;
+      if(r.location!==loc||!sopClassMatch(r)||sopExcluded(r["class"]))return;
       if(sopChannel!=='all'&&(r.channel||'B2B')!==sopChannel)return;
       if(sopUnitMode==='value')add(r.month,+r.value||0);
       else if(r.units!=null&&r.units!=='')add(r.month,+r.units||0);
     });
   }else if(kind==='ob'){
     (sopData.open_demand||[]).forEach(function(r){
-      if(r.location!==loc||!sopClassMatch(r))return;
+      if(r.location!==loc||!sopClassMatch(r)||sopExcluded(r["class"]))return;
       if(r.month==='unscheduled')return;
       add(r.month,+r.units||0);
     });
@@ -2301,7 +2308,7 @@ function renderSopDemand(body){
 
   var html='<div class="sop-chart-wrap"><canvas id="sop-chart-demand"></canvas></div>';
   var notes=[];
-  if(sopUnitMode==='value')notes.push('Forecast valued at trailing-12-month implied class ASP from invoiced actuals.');
+  if(sopUnitMode==='value')notes.push('Values are net of invoice discounts (allocated pro-rata within month/channel). Forecast valued at trailing-12-month implied class ASP from net actuals.');
   if(sopChannel!=='all')notes.push('Forecast is total-channel (demand plans carry no channel) — shown muted under a channel filter.');
   if(!hasBudget)notes.push('No budget loaded for this location — upload it in the Admin Panel (S&amp;OP · Budget).');
   if(hasLegacy)notes.push('Muted bars are pre-NetSuite legacy history (assortment changed Apr 2026).');
@@ -2383,6 +2390,39 @@ function sopDemandMatrix(months,now,asp){
   return '<div class="sop-matrix-wrap"><table class="sop-matrix"><thead>'+head+'</thead><tbody>'+rows+'</tbody></table></div>';
 }
 
+// Robust numeric parser: accepts Italian (1.234,56) and English (1,234.56)
+// thousand/decimal conventions plus plain numbers. Legacy exports from the
+// pre-NetSuite system use the Italian format — parseFloat alone read
+// "3.213" units as 3.213 (the Phase B1 legacy-units understatement bug).
+function sopNum(s){
+  if(s==null)return NaN;
+  var t=String(s).trim().replace(/[\s\u00a0]/g,'');
+  if(t==='')return NaN;
+  if(/^-?\d{1,3}(\.\d{3})+(,\d+)?$/.test(t))return parseFloat(t.replace(/\./g,'').replace(',','.'));
+  if(/^-?\d{1,3}(,\d{3})+(\.\d+)?$/.test(t))return parseFloat(t.replace(/,/g,''));
+  if(/^-?\d+,\d+$/.test(t))return parseFloat(t.replace(',','.'));
+  return parseFloat(t.replace(/,/g,''));
+}
+// Class exclusions (default: OEM Poles business, out of S&OP scope).
+// Case-insensitive; an entry also matches as a substring so hierarchical
+// names ("OEM POLES : Poles - Anodized") are caught by the parent entry.
+function sopExcluded(c){
+  if(!c||!sopCfg)return false;
+  var n=String(c).toLowerCase();
+  return (sopCfg.excluded_classes||[]).some(function(x){
+    x=String(x).toLowerCase().trim();
+    return x!==''&&(n===x||n.indexOf(x)>-1);
+  });
+}
+function setSopExcluded(v){
+  ensureSopCfg().then(function(){
+    sopCfg.excluded_classes=String(v||'').split(',').map(function(s){return s.trim();}).filter(function(s){return s!=='';});
+    sopCfg.updated_at=new Date().toISOString().slice(0,10);
+    sopFillClassSelect();
+    if(sopData)renderSop();
+  });
+}
+
 // ── Admin: S&OP inputs (CSV → sop_config.json) ─────────────────
 function sopParseCsvTable(text,required){
   var lines=text.split(/\r?\n/).filter(function(l){return l.trim()!=='';});
@@ -2420,23 +2460,23 @@ function handleSopCsv(input,kind){
           var l=normOvrLoc(r.location);
           if(!sopValidMonth(r.month)||!l||!r["class"])return null;
           var o={month:r.month,location:l,channel:sopNormChannel(r.channel),
-                 "class":r["class"],value:parseFloat(String(r.value).replace(/,/g,''))||0};
-          if(r.units!=null&&r.units!=='')o.units=parseFloat(String(r.units).replace(/,/g,''))||0;
+                 "class":r["class"],value:sopNum(r.value)||0};
+          if(r.units!=null&&r.units!=='')o.units=sopNum(r.units)||0;
           return o;}},
         capacity:{req:['month','class','capacity_units'],map:function(r){
           if(!sopValidMonth(r.month)||!r["class"])return null;
           return {month:r.month,"class":r["class"],
-                  units:parseFloat(String(r.capacity_units).replace(/,/g,''))||0};}},
+                  units:sopNum(r.capacity_units)||0};}},
         legacy_actuals:{req:['month','location','channel','class','value'],map:function(r){
           var l=normOvrLoc(r.location);
           if(!sopValidMonth(r.month)||!l||!r["class"])return null;
           return {month:r.month,location:l,channel:sopNormChannel(r.channel),
-                  "class":r["class"],value:parseFloat(String(r.value).replace(/,/g,''))||0,
-                  units:parseFloat(String(r.units).replace(/,/g,''))||0};}},
+                  "class":r["class"],value:sopNum(r.value)||0,
+                  units:sopNum(r.units)||0};}},
         cover_targets:{req:['class','min_weeks','max_weeks'],map:function(r){
           if(!r["class"])return null;
-          return {"class":r["class"],min_weeks:parseFloat(r.min_weeks)||0,
-                  max_weeks:parseFloat(r.max_weeks)||0};}}
+          return {"class":r["class"],min_weeks:sopNum(r.min_weeks)||0,
+                  max_weeks:sopNum(r.max_weeks)||0};}}
       }[kind];
       var parsed=sopParseCsvTable(e.target.result,spec.req);
       if(parsed.err){errEl.textContent=parsed.err;errEl.style.display='block';return;}
@@ -2457,7 +2497,7 @@ function handleSopCsv(input,kind){
 }
 function setSopFx(v){
   ensureSopCfg().then(function(){
-    var n=parseFloat(String(v).replace(/,/g,'.'));
+    var n=sopNum(v);
     sopCfg.planning_fx=isNaN(n)?null:n;
     sopCfg.updated_at=new Date().toISOString().slice(0,10);
   });
@@ -2470,6 +2510,8 @@ function refreshSopAdminDisplay(){
   });
   var fx=document.getElementById('sop-fx');
   if(fx)fx.value=sopCfg.planning_fx==null?'':sopCfg.planning_fx;
+  var ex=document.getElementById('sop-excluded');
+  if(ex)ex.value=(sopCfg.excluded_classes||[]).join(', ');
 }
 function downloadSopConfig(){
   ensureSopCfg().then(function(){
