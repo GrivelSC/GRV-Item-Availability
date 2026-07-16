@@ -133,6 +133,31 @@ tr.is-overridden td:first-child{box-shadow:inset 3px 0 0 var(--amber);}
 .err-box{background:var(--red-bg);border:1px solid var(--red);border-radius:var(--r);padding:.75rem 1rem;color:var(--red);font-size:12px;max-width:400px;text-align:center;}
 .empty-row td{text-align:center;padding:3rem;color:var(--dim);}
 
+/* S&OP */
+.sop-subtabs{display:flex;gap:.25rem;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:.2rem;width:max-content;margin-bottom:.7rem;}
+.sop-filters{display:flex;align-items:center;gap:.45rem;flex-wrap:wrap;margin-bottom:.9rem;}
+.sop-flabel{font-size:11px;color:var(--dim);}
+.sop-select{background:var(--surface);border:1px solid var(--border);border-radius:4px;color:var(--text);font-size:11px;font-family:var(--sans);padding:.25rem .4rem;}
+.sop-chips{display:inline-flex;gap:.2rem;}
+.sop-chip{padding:.22rem .6rem;border-radius:12px;font-size:11px;cursor:pointer;color:var(--muted);border:1px solid var(--border);background:transparent;font-family:var(--sans);transition:all .15s;}
+.sop-chip:hover{border-color:var(--border2);color:var(--text);}
+.sop-chip.active{background:var(--accent-s);border-color:var(--accent);color:var(--accent);}
+.sop-chart-wrap{position:relative;height:300px;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:.7rem;margin-bottom:.5rem;}
+.sop-note{font-size:11px;color:var(--dim);margin-bottom:1rem;line-height:1.5;}
+.sop-matrix-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:6px;margin-bottom:1rem;}
+.sop-matrix{border-collapse:collapse;font-size:11px;width:100%;}
+.sop-matrix th,.sop-matrix td{padding:.32rem .55rem;text-align:right;white-space:nowrap;border-bottom:1px solid var(--border);}
+.sop-matrix th{color:var(--muted);font-weight:500;background:var(--surface);position:sticky;top:0;}
+.sop-matrix th:first-child,.sop-matrix td:first-child{text-align:left;position:sticky;left:0;background:var(--surface);z-index:1;min-width:150px;}
+.sop-matrix td:first-child{background:var(--bg);}
+.sop-crow td{font-weight:600;color:var(--text);border-top:1px solid var(--border2);background:var(--surface);}
+.sop-crow td:first-child{background:var(--surface);}
+.sop-sub td{color:var(--muted);}
+.sop-fwd{border-left:1px solid var(--border2);}
+.sop-pos{color:var(--green);}
+.sop-neg{color:var(--red);}
+.sop-legacy{color:var(--dim);}
+.sop-empty{padding:2.5rem 1rem;text-align:center;color:var(--muted);font-size:12px;}
 /* ADMIN */
 .admin-btn{background:none;border:1px solid var(--border);border-radius:4px;color:var(--muted);cursor:pointer;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:14px;transition:all .15s;}
 .admin-btn:hover{border-color:var(--border2);color:var(--text);background:var(--surface2);}
@@ -281,6 +306,7 @@ tr.is-overridden td:first-child{box-shadow:inset 3px 0 0 var(--amber);}
     <button class="view-tab active" id="vtab-avail" onclick="switchView('availability')">Item Availability</button>
     <button class="view-tab" id="vtab-mfg" onclick="switchView('manufacturing')">Manufacturing</button>
     <button class="view-tab" id="vtab-wbr" onclick="switchView('wbr')">WBR</button>
+    <button class="view-tab" id="vtab-sop" onclick="switchView('sop')">S&amp;OP</button>
     <button class="view-tab intel-tab" id="vtab-intel" onclick="switchView('intelligence')">✦ Intelligence</button>
   </div>
   <div class="h-right">
@@ -451,6 +477,44 @@ tr.is-overridden td:first-child{box-shadow:inset 3px 0 0 var(--amber);}
 </div>
 <!-- ── end Manufacturing Status Panel ─────────────────────── -->
 
+<!-- ── S&OP Panel ─────────────────────────────────────────── -->
+<div id="sop-panel" class="intel-panel" style="display:none;">
+  <div class="intel-hdr">
+    <div>
+      <span class="intel-title">S&amp;OP · Sales &amp; Operations Planning</span>
+      <span class="intel-ctx" id="sop-ctx">—</span>
+    </div>
+    <button class="intel-recalc" onclick="loadSop(true)">↺ Reload</button>
+  </div>
+  <div class="sop-subtabs">
+    <button class="loc-tab active" id="sop-tab-demand" onclick="setSopView('demand')">Demand Review</button>
+    <button class="loc-tab" id="sop-tab-supply" onclick="setSopView('supply')">Supply Review</button>
+    <button class="loc-tab" id="sop-tab-inventory" onclick="setSopView('inventory')">Projected Inventory</button>
+  </div>
+  <div class="sop-filters">
+    <span class="sop-flabel">Class</span>
+    <select class="sop-select" id="sop-class" onchange="sopClass=this.value;renderSop()"><option value="all">All classes</option></select>
+    <span class="sop-flabel">Channel</span>
+    <span class="sop-chips">
+      <button class="sop-chip active" id="sop-ch-all" onclick="setSopChannel('all')">All</button>
+      <button class="sop-chip" id="sop-ch-B2B" onclick="setSopChannel('B2B')">B2B</button>
+      <button class="sop-chip" id="sop-ch-DTC" onclick="setSopChannel('DTC')">DTC</button>
+    </span>
+    <span class="sop-flabel">Window</span>
+    <select class="sop-select" id="sop-range" onchange="sopRange=this.value;renderSop()">
+      <option value="roll">6m back + 12m fwd</option>
+      <option value="all">All history + 12m fwd</option>
+    </select>
+    <span class="sop-flabel" style="margin-left:auto;">Show</span>
+    <span class="sop-chips">
+      <button class="sop-chip active" id="sop-um-value" onclick="setSopUnitMode('value')">Value</button>
+      <button class="sop-chip" id="sop-um-units" onclick="setSopUnitMode('units')">Units</button>
+    </span>
+  </div>
+  <div id="sop-body"></div>
+</div>
+<!-- ── end S&OP Panel ─────────────────────────────────────── -->
+
 <div class="charts-bar" id="charts-bar">
   <div class="chart-panel">
     <div class="chart-title">Top Bottleneck Components</div>
@@ -558,6 +622,81 @@ tr.is-overridden td:first-child{box-shadow:inset 3px 0 0 var(--amber);}
         </div>
       </div>
 
+      <div class="admin-section">
+        <div class="admin-section-title">S&amp;OP · Budget</div>
+        <div class="admin-section-desc">Revenue budget for the S&amp;OP Demand Review. CSV with header: <span class="mono">month,location,channel,class,value,units</span>. month = YYYY-MM; location = <span class="mono">Verrayes</span> or <span class="mono">USA - 3PL</span>; channel = B2B or DTC; value in the location currency (€ / $); units optional. Stored in sop_config.json.</div>
+        <div class="admin-row">
+          <span class="admin-label">Budget rows:</span>
+          <span class="admin-value mono" id="sop-budget-count">0</span>
+        </div>
+        <div class="admin-row" style="margin-top:.5rem;">
+          <label class="upload-btn">
+            📄 Upload Budget CSV
+            <input type="file" accept=".csv,.txt" onchange="handleSopCsv(this,'budget')" style="display:none">
+          </label>
+        </div>
+        <div class="admin-section-desc" id="sop-budget-err" style="color:var(--red);display:none;"></div>
+      </div>
+
+      <div class="admin-section">
+        <div class="admin-section-title">S&amp;OP · Production Capacity</div>
+        <div class="admin-section-desc">Rough-cut monthly capacity per class (VERRAYES production). CSV with header: <span class="mono">month,class,capacity_units</span>. Months without a row show no capacity line. Include shutdown months (e.g. August) with reduced or zero capacity.</div>
+        <div class="admin-row">
+          <span class="admin-label">Capacity rows:</span>
+          <span class="admin-value mono" id="sop-capacity-count">0</span>
+        </div>
+        <div class="admin-row" style="margin-top:.5rem;">
+          <label class="upload-btn">
+            📄 Upload Capacity CSV
+            <input type="file" accept=".csv,.txt" onchange="handleSopCsv(this,'capacity')" style="display:none">
+          </label>
+        </div>
+        <div class="admin-section-desc" id="sop-capacity-err" style="color:var(--red);display:none;"></div>
+      </div>
+
+      <div class="admin-section">
+        <div class="admin-section-title">S&amp;OP · Legacy Sales History</div>
+        <div class="admin-section-desc">Pre-NetSuite invoiced sales (2023–2024) for seasonality and YoY. CSV with header: <span class="mono">month,location,channel,class,value,units</span>. Class names may include legacy-only classes; they display as-is. Rendered muted in charts.</div>
+        <div class="admin-row">
+          <span class="admin-label">Legacy rows:</span>
+          <span class="admin-value mono" id="sop-legacy_actuals-count">0</span>
+        </div>
+        <div class="admin-row" style="margin-top:.5rem;">
+          <label class="upload-btn">
+            📄 Upload Legacy History CSV
+            <input type="file" accept=".csv,.txt" onchange="handleSopCsv(this,'legacy_actuals')" style="display:none">
+          </label>
+        </div>
+        <div class="admin-section-desc" id="sop-legacy_actuals-err" style="color:var(--red);display:none;"></div>
+      </div>
+
+      <div class="admin-section">
+        <div class="admin-section-title">S&amp;OP · Inventory Cover Targets</div>
+        <div class="admin-section-desc">Weeks-of-cover policy bands per class, used to color the Projected Inventory view. CSV with header: <span class="mono">class,min_weeks,max_weeks</span>.</div>
+        <div class="admin-row">
+          <span class="admin-label">Cover target rows:</span>
+          <span class="admin-value mono" id="sop-cover_targets-count">0</span>
+        </div>
+        <div class="admin-row" style="margin-top:.5rem;">
+          <label class="upload-btn">
+            📄 Upload Cover Targets CSV
+            <input type="file" accept=".csv,.txt" onchange="handleSopCsv(this,'cover_targets')" style="display:none">
+          </label>
+        </div>
+        <div class="admin-section-desc" id="sop-cover_targets-err" style="color:var(--red);display:none;"></div>
+        <div class="admin-row" style="margin-top:.7rem;">
+          <span class="admin-label">Planning FX (EUR per 1 USD):</span>
+          <input type="text" class="sop-select mono" id="sop-fx" style="width:70px;" onchange="setSopFx(this.value)">
+          <span class="admin-label" style="color:var(--dim);">reserved for a future consolidated view</span>
+        </div>
+      </div>
+
+      <div class="admin-section">
+        <div class="admin-section-title">S&amp;OP · Publish Inputs</div>
+        <div class="admin-section-desc">S&amp;OP inputs live in a separate <span class="mono">sop_config.json</span> (config.json is untouched). After downloading, place it in <span class="mono">C:\GRV-Availability\</span> — it publishes on the next refresh.</div>
+        <button class="download-btn" onclick="downloadSopConfig()">⬇ Download Updated sop_config.json</button>
+      </div>
+
       <div class="admin-section" style="border-bottom:none;">
         <button class="download-btn" onclick="downloadConfig()">⬇ Download Updated config.json</button>
         <div class="admin-section-desc" style="margin-top:.5rem;">After downloading, upload this file to GitHub at <span class="mono">docs/config.json</span> and trigger a refresh in Claude.</div>
@@ -603,6 +742,7 @@ function setLoc(l){
   document.getElementById('tab-u').classList.toggle('active',l==='usa3pl');
   open_.clear();filter();
   if(activeView==='intelligence')generateIntel();
+  if(activeView==='sop')renderSop();
 }
 
 // Render a quantity field, honoring the Units/Value toggle and override-blanks.
@@ -1156,7 +1296,7 @@ function refreshAdminDisplay(){
   else ov.textContent='(none)';
 }
 
-function openAdmin(){ document.getElementById('admin-modal').classList.add('open'); }
+function openAdmin(){ document.getElementById('admin-modal').classList.add('open'); ensureSopCfg().then(refreshSopAdminDisplay); }
 function closeAdmin(){ document.getElementById('admin-modal').classList.remove('open'); }
 
 function parseCsvIds(text){
@@ -1277,9 +1417,11 @@ function switchView(v){
   document.getElementById('vtab-mfg').classList.toggle('active',v==='manufacturing');
   document.getElementById('vtab-wbr').classList.toggle('active',v==='wbr');
   document.getElementById('vtab-intel').classList.toggle('active',v==='intelligence');
+  document.getElementById('vtab-sop').classList.toggle('active',v==='sop');
   document.getElementById('intel-panel').style.display=v==='intelligence'?'block':'none';
   document.getElementById('wbr-panel').style.display=v==='wbr'?'block':'none';
   document.getElementById('mfg-panel').style.display=v==='manufacturing'?'block':'none';
+  document.getElementById('sop-panel').style.display=v==='sop'?'block':'none';
   if(v==='availability'){
     document.getElementById('content').style.display='';
     filter();
@@ -1288,6 +1430,7 @@ function switchView(v){
     document.getElementById('content').style.display='none';
     if(v==='intelligence')generateIntel();
     else if(v==='wbr')generateWbr();
+    else if(v==='sop')loadSop();
     else loadMfg();
   }
 }
@@ -1944,6 +2087,400 @@ function renderMfg(){
     '</tr></thead><tbody>'+(body||'<tr><td colspan="10" class="mfg-empty">No work orders match the filters.</td></tr>')+'</tbody></table></div>';
 
   el.innerHTML=cards+charts+fr+table;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// S&OP view (sop.json + sop_config.json + sop_snapshots.json)
+// Phase B1: Demand Review + admin inputs. Supply Review and
+// Projected Inventory render placeholders until Phase B2.
+// ═══════════════════════════════════════════════════════════════
+var sopData=null, sopCfg=null, sopSnaps=null;
+var sopLoading=false, sopErr=null, sopChart=null;
+var sopView='demand', sopClass='all', sopChannel='all', sopUnitMode='value', sopRange='roll';
+var SOP_BASE='/GRV-Item-Availability/';
+
+async function loadSop(force){
+  if(sopData&&!force){renderSop();return;}
+  if(sopLoading)return;
+  sopLoading=true;sopErr=null;
+  document.getElementById('sop-body').innerHTML='<div class="sop-empty">Loading S&amp;OP data…</div>';
+  try{
+    var r=await fetch(SOP_BASE+'sop.json');
+    if(!r.ok)throw new Error(r.status===404?'sop.json not published yet — run a refresh to generate it.':'HTTP '+r.status);
+    sopData=await r.json();
+    try{var rs=await fetch(SOP_BASE+'sop_snapshots.json');sopSnaps=rs.ok?await rs.json():null;}catch(e){sopSnaps=null;}
+    await ensureSopCfg(force);
+  }catch(e){sopErr=e.message||String(e);sopData=null;}
+  sopLoading=false;
+  sopFillClassSelect();
+  renderSop();
+}
+
+async function ensureSopCfg(force){
+  if(sopCfg&&!force)return sopCfg;
+  try{
+    var r=await fetch(SOP_BASE+'sop_config.json');
+    sopCfg=r.ok?await r.json():null;
+  }catch(e){sopCfg=null;}
+  if(!sopCfg||typeof sopCfg!=='object')sopCfg={};
+  sopCfg.budget=sopCfg.budget||[];
+  sopCfg.capacity=sopCfg.capacity||[];
+  sopCfg.legacy_actuals=sopCfg.legacy_actuals||[];
+  sopCfg.cover_targets=sopCfg.cover_targets||[];
+  if(sopCfg.planning_fx===undefined)sopCfg.planning_fx=null;
+  return sopCfg;
+}
+
+function setSopView(v){
+  sopView=v;
+  ['demand','supply','inventory'].forEach(function(k){
+    document.getElementById('sop-tab-'+k).classList.toggle('active',k===v);
+  });
+  renderSop();
+}
+function setSopChannel(c){
+  sopChannel=c;
+  ['all','B2B','DTC'].forEach(function(k){
+    document.getElementById('sop-ch-'+k).classList.toggle('active',k===c);
+  });
+  renderSop();
+}
+function setSopUnitMode(m){
+  sopUnitMode=m;
+  document.getElementById('sop-um-value').classList.toggle('active',m==='value');
+  document.getElementById('sop-um-units').classList.toggle('active',m==='units');
+  renderSop();
+}
+
+// ── month axis helpers ──────────────────────────────────────────
+function sopMonthAdd(m,n){
+  var y=parseInt(m.slice(0,4)),mo=parseInt(m.slice(5,7))-1+n;
+  var d=new Date(y,mo,1);
+  return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0');
+}
+function sopThisMonth(){
+  var d=new Date();
+  return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0');
+}
+function sopMonthRange(a,b){
+  var out=[],m=a;
+  while(m<=b){out.push(m);m=sopMonthAdd(m,1);if(out.length>240)break;}
+  return out;
+}
+function sopMonths(){
+  var now=sopThisMonth();
+  var end=sopMonthAdd(now,12);
+  if(sopRange==='all'){
+    var start=now;
+    sopActualRows().forEach(function(r){if(r.month&&r.month<start)start=r.month;});
+    return sopMonthRange(start,end);
+  }
+  return sopMonthRange(sopMonthAdd(now,-6),end);
+}
+function sopMLabel(m){
+  var mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][parseInt(m.slice(5,7))-1];
+  return mo+' '+m.slice(2,4);
+}
+
+// ── data slicing (all filtered by the active location tab) ─────
+function sopActualRows(){
+  var rows=(sopData&&sopData.sales_actuals||[]).slice();
+  (sopCfg&&sopCfg.legacy_actuals||[]).forEach(function(r){rows.push(r);});
+  return rows.filter(function(r){return r.location===loc;});
+}
+function sopClassList(){
+  var s={};
+  sopActualRows().forEach(function(r){if(r["class"])s[r["class"]]=1;});
+  (sopData&&sopData.forecast||[]).forEach(function(r){if(r.location===loc&&r["class"])s[r["class"]]=1;});
+  (sopCfg&&sopCfg.budget||[]).forEach(function(r){if(r.location===loc&&r["class"])s[r["class"]]=1;});
+  return Object.keys(s).sort();
+}
+function sopFillClassSelect(){
+  var sel=document.getElementById('sop-class');
+  var cur=sopClass;
+  var opts='<option value="all">All classes</option>';
+  sopClassList().forEach(function(c){opts+='<option value="'+c.replace(/"/g,'&quot;')+'">'+c+'</option>';});
+  sel.innerHTML=opts;
+  sel.value=cur;
+  if(sel.value!==cur){sopClass='all';sel.value='all';}
+}
+function sopClassMatch(r){return sopClass==='all'||r["class"]===sopClass;}
+
+// Trailing-12-month implied ASP per class at the active location
+// (total-channel; approved Phase B design decision — IDPs are units-only).
+function sopAspMap(){
+  var latest=null;
+  sopActualRows().forEach(function(r){if(r.month&&(!latest||r.month>latest))latest=r.month;});
+  if(!latest)return {};
+  var from=sopMonthAdd(latest,-11);
+  var acc={};
+  sopActualRows().forEach(function(r){
+    if(r.month<from||r.month>latest)return;
+    var c=r["class"]||'Unclassified';
+    if(!acc[c])acc[c]={v:0,u:0};
+    acc[c].v+=(+r.value||0); acc[c].u+=(+r.units||0);
+  });
+  var out={};
+  Object.keys(acc).forEach(function(c){if(acc[c].u>0)out[c]=acc[c].v/acc[c].u;});
+  return out;
+}
+
+// Aggregate one measure into {month: number}. kind: 'act'|'fc'|'bud'|'ob'
+function sopSeries(kind,asp){
+  var out={};
+  function add(m,v){if(!m)return;out[m]=(out[m]||0)+v;}
+  if(kind==='act'){
+    sopActualRows().forEach(function(r){
+      if(!sopClassMatch(r))return;
+      if(sopChannel!=='all'&&(r.channel||'B2B')!==sopChannel)return;
+      add(r.month,sopUnitMode==='value'?(+r.value||0):(+r.units||0));
+    });
+  }else if(kind==='fc'){
+    (sopData.forecast||[]).forEach(function(r){
+      if(r.location!==loc||!sopClassMatch(r))return;
+      var u=(+r.units||0);
+      if(sopUnitMode==='value'){
+        var a=asp[r["class"]];
+        if(a==null)return;
+        add(r.month,u*a);
+      }else add(r.month,u);
+    });
+  }else if(kind==='bud'){
+    (sopCfg.budget||[]).forEach(function(r){
+      if(r.location!==loc||!sopClassMatch(r))return;
+      if(sopChannel!=='all'&&(r.channel||'B2B')!==sopChannel)return;
+      if(sopUnitMode==='value')add(r.month,+r.value||0);
+      else if(r.units!=null&&r.units!=='')add(r.month,+r.units||0);
+    });
+  }else if(kind==='ob'){
+    (sopData.open_demand||[]).forEach(function(r){
+      if(r.location!==loc||!sopClassMatch(r))return;
+      if(r.month==='unscheduled')return;
+      add(r.month,+r.units||0);
+    });
+  }
+  return out;
+}
+
+function sopFmt(v){
+  if(v==null||isNaN(v))return '—';
+  if(sopUnitMode==='value')return iFR(v,iCur());
+  if(Math.abs(v)>=100000)return Math.round(v/1000)+'k';
+  return Math.round(v).toLocaleString('en-US');
+}
+
+function renderSop(){
+  if(activeView!=='sop')return;
+  var body=document.getElementById('sop-body');
+  if(sopErr){body.innerHTML='<div class="sop-empty">'+sopErr+'</div>';return;}
+  if(!sopData){body.innerHTML='<div class="sop-empty">No S&amp;OP data loaded.</div>';return;}
+  document.getElementById('sop-ctx').textContent=
+    (loc==='verrayes'?'VERRAYES':'USA · 3PL')+' · generated '+(sopData.generated_at||'—');
+  if(sopView==='demand')renderSopDemand(body);
+  else if(sopView==='supply')body.innerHTML='<div class="sop-empty">Supply Review arrives in Phase B2 — planned and firm supply data is already being collected on every refresh.</div>';
+  else body.innerHTML='<div class="sop-empty">Projected Inventory arrives in Phase B2 — monthly inventory snapshots are already accumulating ('+((sopSnaps&&sopSnaps.snapshots)?sopSnaps.snapshots.length:0)+' so far).</div>';
+}
+
+// ── Demand Review ───────────────────────────────────────────────
+function renderSopDemand(body){
+  var months=sopMonths();
+  var now=sopThisMonth();
+  var asp=sopAspMap();
+  var act={B2B:{},DTC:{}};
+  sopActualRows().forEach(function(r){
+    if(!sopClassMatch(r))return;
+    var ch=(r.channel==='DTC')?'DTC':'B2B';
+    if(sopChannel!=='all'&&ch!==sopChannel)return;
+    var v=sopUnitMode==='value'?(+r.value||0):(+r.units||0);
+    if(!r.month)return;
+    act[ch][r.month]=(act[ch][r.month]||0)+v;
+  });
+  var fc=sopSeries('fc',asp), bud=sopSeries('bud',asp), ob=sopSeries('ob',asp);
+  var hasBudget=Object.keys(bud).length>0;
+  var hasLegacy=(sopCfg.legacy_actuals||[]).some(function(r){return r.location===loc;});
+
+  var html='<div class="sop-chart-wrap"><canvas id="sop-chart-demand"></canvas></div>';
+  var notes=[];
+  if(sopUnitMode==='value')notes.push('Forecast valued at trailing-12-month implied class ASP from invoiced actuals.');
+  if(sopChannel!=='all')notes.push('Forecast is total-channel (demand plans carry no channel) — shown muted under a channel filter.');
+  if(!hasBudget)notes.push('No budget loaded for this location — upload it in the Admin Panel (S&amp;OP · Budget).');
+  if(hasLegacy)notes.push('Muted bars are pre-NetSuite legacy history (assortment changed Apr 2026).');
+  html+='<div class="sop-note">'+notes.join(' · ')+'</div>';
+  html+=sopDemandMatrix(months,now,asp);
+  body.innerHTML=html;
+
+  if(sopChart){sopChart.destroy();sopChart=null;}
+  var ctx=document.getElementById('sop-chart-demand').getContext('2d');
+  function barColors(base,legacyCol){
+    return months.map(function(m){return m<'2025-01'?legacyCol:base;});
+  }
+  var ds=[];
+  if(sopChannel!=='DTC')ds.push({type:'bar',label:'Actuals B2B',stack:'act',
+    data:months.map(function(m){return m<=now?(act.B2B[m]||null):null;}),
+    backgroundColor:barColors('rgba(34,197,94,.55)','rgba(122,130,150,.35)'),borderWidth:0});
+  if(sopChannel!=='B2B')ds.push({type:'bar',label:'Actuals DTC',stack:'act',
+    data:months.map(function(m){return m<=now?(act.DTC[m]||null):null;}),
+    backgroundColor:barColors('rgba(34,197,94,.9)','rgba(122,130,150,.6)'),borderWidth:0});
+  ds.push({type:'line',label:'Forecast',
+    data:months.map(function(m){return m>=now?(fc[m]!=null?fc[m]:null):null;}),
+    borderColor:sopChannel==='all'?'#e8540a':'#4a5268',
+    backgroundColor:'transparent',borderWidth:2,pointRadius:2,spanGaps:true,tension:.25});
+  if(hasBudget)ds.push({type:'line',label:'Budget',
+    data:months.map(function(m){return bud[m]!=null?bud[m]:null;}),
+    borderColor:'#f59e0b',backgroundColor:'transparent',borderDash:[6,4],
+    borderWidth:1.5,pointRadius:0,spanGaps:true});
+  sopChart=new Chart(ctx,{data:{labels:months.map(sopMLabel),datasets:ds},
+    options:{responsive:true,maintainAspectRatio:false,
+      interaction:{mode:'index',intersect:false},
+      plugins:{legend:{labels:{color:'#7a8296',font:{size:10},boxWidth:12}},
+        tooltip:{callbacks:{label:function(c){return c.dataset.label+': '+sopFmt(c.parsed.y);}}}},
+      scales:{x:{stacked:true,ticks:{color:'#7a8296',font:{size:9},maxRotation:60},grid:{color:'#252b35'}},
+        y:{stacked:false,ticks:{color:'#7a8296',font:{size:9},callback:function(v){return sopFmt(v);}},grid:{color:'#252b35'}}}}});
+}
+
+function sopDemandMatrix(months,now,asp){
+  var classes=sopClass==='all'?sopClassList():[sopClass];
+  var head='<tr><th>Class / month</th>'+months.map(function(m){
+    return '<th'+(m===now?' class="sop-fwd"':'')+'>'+sopMLabel(m)+'</th>';}).join('')+'</tr>';
+  var rows='';
+  var savedClass=sopClass;
+  classes.forEach(function(c){
+    sopClass=c;   // reuse the series builders per class
+    var a=sopSeries('act',asp),f=sopSeries('fc',asp),b=sopSeries('bud',asp),o=sopSeries('ob',asp);
+    sopClass=savedClass;
+    var fu={},ou={};
+    if(sopUnitMode==='value'){ // coverage is computed in units regardless of toggle
+      var um=sopUnitMode; sopUnitMode='units'; sopClass=c;
+      fu=sopSeries('fc',asp); ou=sopSeries('ob',asp);
+      sopClass=savedClass; sopUnitMode=um;
+    }else{fu=f;ou=o;}
+    function cells(map,fmt,cls){
+      return months.map(function(m){
+        var v=map[m];
+        return '<td'+(m===now?' class="sop-fwd'+(cls?' '+cls:'')+'"':(cls?' class="'+cls+'"':''))+'>'+
+          (v==null?'<span class="dim">—</span>':fmt(v,m))+'</td>';
+      }).join('');
+    }
+    rows+='<tr class="sop-crow"><td>'+c+'</td>'+cells(a,function(v,m){
+      return '<span'+(m<'2025-01'?' class="sop-legacy"':'')+'>'+sopFmt(v)+'</span>';})+'</tr>';
+    rows+='<tr class="sop-sub"><td>· forecast</td>'+cells(f,function(v){return sopFmt(v);})+'</tr>';
+    rows+='<tr class="sop-sub"><td>· budget</td>'+cells(b,function(v){return sopFmt(v);})+'</tr>';
+    rows+='<tr class="sop-sub"><td>· vs budget</td>'+months.map(function(m){
+      var ref=(m<=now)?a[m]:f[m];
+      var bv=b[m];
+      if(ref==null||bv==null||bv===0)return '<td'+(m===now?' class="sop-fwd"':'')+'><span class="dim">—</span></td>';
+      var d=(ref-bv)/bv*100;
+      var cls=d>=0?'sop-pos':'sop-neg';
+      return '<td'+(m===now?' class="sop-fwd"':'')+'><span class="'+cls+'">'+(d>=0?'+':'')+Math.round(d)+'%</span></td>';
+    }).join('')+'</tr>';
+    rows+='<tr class="sop-sub"><td>· order book / fcst</td>'+months.map(function(m){
+      if(m<now)return '<td><span class="dim">—</span></td>';
+      var f0=fu[m],o0=ou[m];
+      if(!f0||f0<=0)return '<td'+(m===now?' class="sop-fwd"':'')+'><span class="dim">—</span></td>';
+      return '<td'+(m===now?' class="sop-fwd"':'')+'>'+Math.round((o0||0)/f0*100)+'%</td>';
+    }).join('')+'</tr>';
+  });
+  return '<div class="sop-matrix-wrap"><table class="sop-matrix"><thead>'+head+'</thead><tbody>'+rows+'</tbody></table></div>';
+}
+
+// ── Admin: S&OP inputs (CSV → sop_config.json) ─────────────────
+function sopParseCsvTable(text,required){
+  var lines=text.split(/\r?\n/).filter(function(l){return l.trim()!=='';});
+  if(lines.length<2)return {err:'File has no data rows.'};
+  var hdr=lines[0].split(',').map(function(h){return h.trim().toLowerCase();});
+  for(var i=0;i<required.length;i++){
+    if(hdr.indexOf(required[i])<0)return {err:'Missing required column: '+required[i]};
+  }
+  var rows=[],bad=0;
+  for(var li=1;li<lines.length;li++){
+    var parts=lines[li].split(',');
+    var r={};
+    hdr.forEach(function(h,ix){r[h]=(parts[ix]||'').trim();});
+    rows.push(r);
+  }
+  return {rows:rows,bad:bad};
+}
+function sopNormChannel(s){
+  var t=String(s||'').toLowerCase();
+  if(t.indexOf('dtc')>-1||t.indexOf('ecom')>-1||t.indexOf('e-com')>-1)return 'DTC';
+  return 'B2B';
+}
+function sopValidMonth(m){return /^\d{4}-\d{2}$/.test(m);}
+
+function handleSopCsv(input,kind){
+  var file=input.files[0];
+  if(!file)return;
+  var reader=new FileReader();
+  reader.onload=function(e){
+    ensureSopCfg().then(function(){
+      var errEl=document.getElementById('sop-'+kind+'-err');
+      errEl.style.display='none';errEl.textContent='';
+      var spec={
+        budget:{req:['month','location','channel','class','value'],map:function(r){
+          var l=normOvrLoc(r.location);
+          if(!sopValidMonth(r.month)||!l||!r["class"])return null;
+          var o={month:r.month,location:l,channel:sopNormChannel(r.channel),
+                 "class":r["class"],value:parseFloat(String(r.value).replace(/,/g,''))||0};
+          if(r.units!=null&&r.units!=='')o.units=parseFloat(String(r.units).replace(/,/g,''))||0;
+          return o;}},
+        capacity:{req:['month','class','capacity_units'],map:function(r){
+          if(!sopValidMonth(r.month)||!r["class"])return null;
+          return {month:r.month,"class":r["class"],
+                  units:parseFloat(String(r.capacity_units).replace(/,/g,''))||0};}},
+        legacy_actuals:{req:['month','location','channel','class','value'],map:function(r){
+          var l=normOvrLoc(r.location);
+          if(!sopValidMonth(r.month)||!l||!r["class"])return null;
+          return {month:r.month,location:l,channel:sopNormChannel(r.channel),
+                  "class":r["class"],value:parseFloat(String(r.value).replace(/,/g,''))||0,
+                  units:parseFloat(String(r.units).replace(/,/g,''))||0};}},
+        cover_targets:{req:['class','min_weeks','max_weeks'],map:function(r){
+          if(!r["class"])return null;
+          return {"class":r["class"],min_weeks:parseFloat(r.min_weeks)||0,
+                  max_weeks:parseFloat(r.max_weeks)||0};}}
+      }[kind];
+      var parsed=sopParseCsvTable(e.target.result,spec.req);
+      if(parsed.err){errEl.textContent=parsed.err;errEl.style.display='block';return;}
+      var out=[],skipped=0;
+      parsed.rows.forEach(function(r){
+        var m=spec.map(r);
+        if(m)out.push(m);else skipped++;
+      });
+      sopCfg[kind]=out;
+      sopCfg.updated_at=new Date().toISOString().slice(0,10);
+      if(skipped>0){errEl.textContent=skipped+' row(s) skipped (bad month/location/class).';errEl.style.display='block';}
+      refreshSopAdminDisplay();
+      if(sopData)renderSop();
+    });
+  };
+  reader.readAsText(file);
+  input.value='';
+}
+function setSopFx(v){
+  ensureSopCfg().then(function(){
+    var n=parseFloat(String(v).replace(/,/g,'.'));
+    sopCfg.planning_fx=isNaN(n)?null:n;
+    sopCfg.updated_at=new Date().toISOString().slice(0,10);
+  });
+}
+function refreshSopAdminDisplay(){
+  if(!sopCfg)return;
+  ['budget','capacity','legacy_actuals','cover_targets'].forEach(function(k){
+    var el=document.getElementById('sop-'+k+'-count');
+    if(el)el.textContent=(sopCfg[k]||[]).length;
+  });
+  var fx=document.getElementById('sop-fx');
+  if(fx)fx.value=sopCfg.planning_fx==null?'':sopCfg.planning_fx;
+}
+function downloadSopConfig(){
+  ensureSopCfg().then(function(){
+    var blob=new Blob([JSON.stringify(sopCfg,null,2)],{type:'application/json'});
+    var url=URL.createObjectURL(blob);
+    var a=document.createElement('a');
+    a.href=url; a.download='sop_config.json';
+    document.body.appendChild(a); a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  });
 }
 </script>
 </body>
