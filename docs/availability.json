@@ -6366,19 +6366,19 @@
       "embargoed": false,
       "embargo_date": null,
       "status": "in_stock",
-      "available_today": 450,
+      "available_today": 441,
       "total_open_demand": 1791,
-      "committable": 2206,
-      "max_buildable_today": 1997,
-      "max_buildable_horizon": 3997,
+      "committable": 2197,
+      "max_buildable_today": 1988,
+      "max_buildable_horizon": 3988,
       "next_available_date": "2026-11-19",
-      "next_available_qty": 2206,
+      "next_available_qty": 2197,
       "first_shortfall_date": null,
       "limiting_components": [
         {
           "item_id": "6740",
           "item_name": "0CAK01N0.BS",
-          "supportable_fg_units": 1997,
+          "supportable_fg_units": 1988,
           "next_po_date": "2026-11-16",
           "next_po_original_date": null,
           "next_po_qty": 2000.0,
@@ -6391,14 +6391,14 @@
         {
           "date": "2026-07-16",
           "display_date": "2026-07-16",
-          "buildable": 1997,
+          "buildable": 1988,
           "cumulative_demand": 76,
-          "net_available": 1921,
+          "net_available": 1912,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 1997,
+              "supportable_fg_units": 1988,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6407,19 +6407,19 @@
               "source": "PO"
             }
           ],
-          "atp": 450
+          "atp": 441
         },
         {
           "date": "2026-07-17",
           "display_date": "2026-07-20",
-          "buildable": 1997,
+          "buildable": 1988,
           "cumulative_demand": 460,
-          "net_available": 1537,
+          "net_available": 1528,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 1997,
+              "supportable_fg_units": 1988,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6428,19 +6428,19 @@
               "source": "PO"
             }
           ],
-          "atp": 450
+          "atp": 441
         },
         {
           "date": "2026-07-25",
           "display_date": "2026-07-28",
-          "buildable": 1997,
+          "buildable": 1988,
           "cumulative_demand": 465,
-          "net_available": 1532,
+          "net_available": 1523,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 1997,
+              "supportable_fg_units": 1988,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6449,19 +6449,19 @@
               "source": "PO"
             }
           ],
-          "atp": 450
+          "atp": 441
         },
         {
           "date": "2026-07-31",
           "display_date": "2026-08-03",
-          "buildable": 1997,
+          "buildable": 1988,
           "cumulative_demand": 658,
-          "net_available": 1339,
+          "net_available": 1330,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 1997,
+              "supportable_fg_units": 1988,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6470,19 +6470,19 @@
               "source": "PO"
             }
           ],
-          "atp": 450
+          "atp": 441
         },
         {
           "date": "2026-08-01",
           "display_date": "2026-08-04",
-          "buildable": 1997,
+          "buildable": 1988,
           "cumulative_demand": 663,
-          "net_available": 1334,
+          "net_available": 1325,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 1997,
+              "supportable_fg_units": 1988,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6491,19 +6491,19 @@
               "source": "PO"
             }
           ],
-          "atp": 450
+          "atp": 441
         },
         {
           "date": "2026-09-01",
           "display_date": "2026-09-04",
-          "buildable": 1997,
+          "buildable": 1988,
           "cumulative_demand": 1338,
-          "net_available": 659,
+          "net_available": 650,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 1997,
+              "supportable_fg_units": 1988,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6512,19 +6512,19 @@
               "source": "PO"
             }
           ],
-          "atp": 450
+          "atp": 441
         },
         {
           "date": "2026-09-07",
           "display_date": "2026-09-10",
-          "buildable": 1997,
+          "buildable": 1988,
           "cumulative_demand": 1346,
-          "net_available": 651,
+          "net_available": 642,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 1997,
+              "supportable_fg_units": 1988,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6533,19 +6533,19 @@
               "source": "PO"
             }
           ],
-          "atp": 450
+          "atp": 441
         },
         {
           "date": "2026-09-16",
           "display_date": "2026-09-19",
-          "buildable": 1997,
+          "buildable": 1988,
           "cumulative_demand": 1376,
-          "net_available": 621,
+          "net_available": 612,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 1997,
+              "supportable_fg_units": 1988,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6554,61 +6554,19 @@
               "source": "PO"
             }
           ],
-          "atp": 450
+          "atp": 441
         },
         {
           "date": "2026-10-01",
           "display_date": "2026-10-04",
-          "buildable": 1997,
+          "buildable": 1988,
           "cumulative_demand": 1453,
-          "net_available": 544,
-          "limiting_components": [
-            {
-              "item_id": "6740",
-              "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 1997,
-              "next_po_date": "2026-11-16",
-              "next_po_original_date": null,
-              "next_po_qty": 2000.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600260",
-              "source": "PO"
-            }
-          ],
-          "atp": 450
-        },
-        {
-          "date": "2026-10-05",
-          "display_date": "2026-10-08",
-          "buildable": 1997,
-          "cumulative_demand": 1458,
-          "net_available": 539,
-          "limiting_components": [
-            {
-              "item_id": "6740",
-              "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 1997,
-              "next_po_date": "2026-11-16",
-              "next_po_original_date": null,
-              "next_po_qty": 2000.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600260",
-              "source": "PO"
-            }
-          ],
-          "atp": 450
-        },
-        {
-          "date": "2026-10-13",
-          "display_date": "2026-10-16",
-          "buildable": 1997,
-          "cumulative_demand": 1462,
           "net_available": 535,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 1997,
+              "supportable_fg_units": 1988,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6617,19 +6575,61 @@
               "source": "PO"
             }
           ],
-          "atp": 450
+          "atp": 441
+        },
+        {
+          "date": "2026-10-05",
+          "display_date": "2026-10-08",
+          "buildable": 1988,
+          "cumulative_demand": 1458,
+          "net_available": 530,
+          "limiting_components": [
+            {
+              "item_id": "6740",
+              "item_name": "0CAK01N0.BS",
+              "supportable_fg_units": 1988,
+              "next_po_date": "2026-11-16",
+              "next_po_original_date": null,
+              "next_po_qty": 2000.0,
+              "overdue": false,
+              "po_number": "PO-IT-2600260",
+              "source": "PO"
+            }
+          ],
+          "atp": 441
+        },
+        {
+          "date": "2026-10-13",
+          "display_date": "2026-10-16",
+          "buildable": 1988,
+          "cumulative_demand": 1462,
+          "net_available": 526,
+          "limiting_components": [
+            {
+              "item_id": "6740",
+              "item_name": "0CAK01N0.BS",
+              "supportable_fg_units": 1988,
+              "next_po_date": "2026-11-16",
+              "next_po_original_date": null,
+              "next_po_qty": 2000.0,
+              "overdue": false,
+              "po_number": "PO-IT-2600260",
+              "source": "PO"
+            }
+          ],
+          "atp": 441
         },
         {
           "date": "2026-10-15",
           "display_date": "2026-10-18",
-          "buildable": 1997,
+          "buildable": 1988,
           "cumulative_demand": 1466,
-          "net_available": 531,
+          "net_available": 522,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 1997,
+              "supportable_fg_units": 1988,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6638,19 +6638,19 @@
               "source": "PO"
             }
           ],
-          "atp": 450
+          "atp": 441
         },
         {
           "date": "2026-10-30",
           "display_date": "2026-11-02",
-          "buildable": 1997,
+          "buildable": 1988,
           "cumulative_demand": 1476,
-          "net_available": 521,
+          "net_available": 512,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 1997,
+              "supportable_fg_units": 1988,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6659,19 +6659,19 @@
               "source": "PO"
             }
           ],
-          "atp": 450
+          "atp": 441
         },
         {
           "date": "2026-11-01",
           "display_date": "2026-11-04",
-          "buildable": 1997,
+          "buildable": 1988,
           "cumulative_demand": 1526,
-          "net_available": 471,
+          "net_available": 462,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 1997,
+              "supportable_fg_units": 1988,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6680,19 +6680,19 @@
               "source": "PO"
             }
           ],
-          "atp": 450
+          "atp": 441
         },
         {
           "date": "2026-11-02",
           "display_date": "2026-11-05",
-          "buildable": 1997,
+          "buildable": 1988,
           "cumulative_demand": 1547,
-          "net_available": 450,
+          "net_available": 441,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 1997,
+              "supportable_fg_units": 1988,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6701,19 +6701,19 @@
               "source": "PO"
             }
           ],
-          "atp": 450
+          "atp": 441
         },
         {
           "date": "2026-11-16",
           "display_date": "2026-11-19",
-          "buildable": 3997,
+          "buildable": 3988,
           "cumulative_demand": 1547,
-          "net_available": 2450,
+          "net_available": 2441,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 3997,
+              "supportable_fg_units": 3988,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6722,19 +6722,19 @@
               "source": "PO"
             }
           ],
-          "atp": 2206
+          "atp": 2197
         },
         {
           "date": "2026-11-27",
           "display_date": "2026-11-30",
-          "buildable": 3997,
+          "buildable": 3988,
           "cumulative_demand": 1582,
-          "net_available": 2415,
+          "net_available": 2406,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 3997,
+              "supportable_fg_units": 3988,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6743,19 +6743,19 @@
               "source": "PO"
             }
           ],
-          "atp": 2206
+          "atp": 2197
         },
         {
           "date": "2026-12-15",
           "display_date": "2026-12-18",
-          "buildable": 3997,
+          "buildable": 3988,
           "cumulative_demand": 1732,
-          "net_available": 2265,
+          "net_available": 2256,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 3997,
+              "supportable_fg_units": 3988,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6764,40 +6764,19 @@
               "source": "PO"
             }
           ],
-          "atp": 2206
+          "atp": 2197
         },
         {
           "date": "2026-12-16",
           "display_date": "2026-12-19",
-          "buildable": 3997,
+          "buildable": 3988,
           "cumulative_demand": 1782,
-          "net_available": 2215,
-          "limiting_components": [
-            {
-              "item_id": "6740",
-              "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 3997,
-              "next_po_date": "2026-11-16",
-              "next_po_original_date": null,
-              "next_po_qty": 2000.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600260",
-              "source": "PO"
-            }
-          ],
-          "atp": 2206
-        },
-        {
-          "date": "2026-12-27",
-          "display_date": "2026-12-30",
-          "buildable": 3997,
-          "cumulative_demand": 1791,
           "net_available": 2206,
           "limiting_components": [
             {
               "item_id": "6740",
               "item_name": "0CAK01N0.BS",
-              "supportable_fg_units": 3997,
+              "supportable_fg_units": 3988,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -6806,12 +6785,33 @@
               "source": "PO"
             }
           ],
-          "atp": 2206
+          "atp": 2197
+        },
+        {
+          "date": "2026-12-27",
+          "display_date": "2026-12-30",
+          "buildable": 3988,
+          "cumulative_demand": 1791,
+          "net_available": 2197,
+          "limiting_components": [
+            {
+              "item_id": "6740",
+              "item_name": "0CAK01N0.BS",
+              "supportable_fg_units": 3988,
+              "next_po_date": "2026-11-16",
+              "next_po_original_date": null,
+              "next_po_qty": 2000.0,
+              "overdue": false,
+              "po_number": "PO-IT-2600260",
+              "source": "PO"
+            }
+          ],
+          "atp": 2197
         }
       ],
       "avg_eur_per_unit": 7.1049,
       "avg_usd_per_unit": 9.59,
-      "available_today_dtc": 1997,
+      "available_today_dtc": 1988,
       "overridden": false
     },
     {
@@ -7137,19 +7137,19 @@
       "embargoed": false,
       "embargo_date": null,
       "status": "in_stock",
-      "available_today": 952,
+      "available_today": 951,
       "total_open_demand": 3472,
-      "committable": 6528,
-      "max_buildable_today": 4000,
-      "max_buildable_horizon": 10000,
+      "committable": 6527,
+      "max_buildable_today": 3999,
+      "max_buildable_horizon": 9999,
       "next_available_date": "2026-11-19",
-      "next_available_qty": 3528,
+      "next_available_qty": 3527,
       "first_shortfall_date": null,
       "limiting_components": [
         {
           "item_id": "6741",
           "item_name": "0CAK03N0.BS",
-          "supportable_fg_units": 4000,
+          "supportable_fg_units": 3999,
           "next_po_date": "2026-11-16",
           "next_po_original_date": null,
           "next_po_qty": 3000.0,
@@ -7162,14 +7162,14 @@
         {
           "date": "2026-07-16",
           "display_date": "2026-07-16",
-          "buildable": 4000,
+          "buildable": 3999,
           "cumulative_demand": 330,
-          "net_available": 3670,
+          "net_available": 3669,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7178,19 +7178,19 @@
               "source": "PO"
             }
           ],
-          "atp": 952
+          "atp": 951
         },
         {
           "date": "2026-07-17",
           "display_date": "2026-07-20",
-          "buildable": 4000,
+          "buildable": 3999,
           "cumulative_demand": 1170,
-          "net_available": 2830,
+          "net_available": 2829,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7199,19 +7199,19 @@
               "source": "PO"
             }
           ],
-          "atp": 952
+          "atp": 951
         },
         {
           "date": "2026-07-20",
           "display_date": "2026-07-23",
-          "buildable": 4000,
+          "buildable": 3999,
           "cumulative_demand": 1270,
-          "net_available": 2730,
+          "net_available": 2729,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7220,19 +7220,19 @@
               "source": "PO"
             }
           ],
-          "atp": 952
+          "atp": 951
         },
         {
           "date": "2026-07-22",
           "display_date": "2026-07-25",
-          "buildable": 4000,
+          "buildable": 3999,
           "cumulative_demand": 1286,
-          "net_available": 2714,
+          "net_available": 2713,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7241,19 +7241,19 @@
               "source": "PO"
             }
           ],
-          "atp": 952
+          "atp": 951
         },
         {
           "date": "2026-07-25",
           "display_date": "2026-07-28",
-          "buildable": 4000,
+          "buildable": 3999,
           "cumulative_demand": 1290,
-          "net_available": 2710,
+          "net_available": 2709,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7262,40 +7262,19 @@
               "source": "PO"
             }
           ],
-          "atp": 952
+          "atp": 951
         },
         {
           "date": "2026-07-31",
           "display_date": "2026-08-03",
-          "buildable": 4000,
+          "buildable": 3999,
           "cumulative_demand": 1612,
-          "net_available": 2388,
-          "limiting_components": [
-            {
-              "item_id": "6741",
-              "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 4000,
-              "next_po_date": "2026-11-16",
-              "next_po_original_date": null,
-              "next_po_qty": 3000.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600196",
-              "source": "PO"
-            }
-          ],
-          "atp": 952
-        },
-        {
-          "date": "2026-08-01",
-          "display_date": "2026-08-04",
-          "buildable": 4000,
-          "cumulative_demand": 1613,
           "net_available": 2387,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7304,19 +7283,40 @@
               "source": "PO"
             }
           ],
-          "atp": 952
+          "atp": 951
+        },
+        {
+          "date": "2026-08-01",
+          "display_date": "2026-08-04",
+          "buildable": 3999,
+          "cumulative_demand": 1613,
+          "net_available": 2386,
+          "limiting_components": [
+            {
+              "item_id": "6741",
+              "item_name": "0CAK03N0.BS",
+              "supportable_fg_units": 3999,
+              "next_po_date": "2026-11-16",
+              "next_po_original_date": null,
+              "next_po_qty": 3000.0,
+              "overdue": false,
+              "po_number": "PO-IT-2600196",
+              "source": "PO"
+            }
+          ],
+          "atp": 951
         },
         {
           "date": "2026-08-03",
           "display_date": "2026-08-06",
-          "buildable": 4000,
+          "buildable": 3999,
           "cumulative_demand": 1683,
-          "net_available": 2317,
+          "net_available": 2316,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7325,19 +7325,19 @@
               "source": "PO"
             }
           ],
-          "atp": 952
+          "atp": 951
         },
         {
           "date": "2026-09-01",
           "display_date": "2026-09-04",
-          "buildable": 4000,
+          "buildable": 3999,
           "cumulative_demand": 2587,
-          "net_available": 1413,
+          "net_available": 1412,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7346,19 +7346,19 @@
               "source": "PO"
             }
           ],
-          "atp": 952
+          "atp": 951
         },
         {
           "date": "2026-09-07",
           "display_date": "2026-09-10",
-          "buildable": 4000,
+          "buildable": 3999,
           "cumulative_demand": 2595,
-          "net_available": 1405,
+          "net_available": 1404,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7367,19 +7367,19 @@
               "source": "PO"
             }
           ],
-          "atp": 952
+          "atp": 951
         },
         {
           "date": "2026-09-08",
           "display_date": "2026-09-11",
-          "buildable": 4000,
+          "buildable": 3999,
           "cumulative_demand": 2625,
-          "net_available": 1375,
+          "net_available": 1374,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7388,19 +7388,19 @@
               "source": "PO"
             }
           ],
-          "atp": 952
+          "atp": 951
         },
         {
           "date": "2026-09-28",
           "display_date": "2026-10-01",
-          "buildable": 4000,
+          "buildable": 3999,
           "cumulative_demand": 2635,
-          "net_available": 1365,
+          "net_available": 1364,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7409,19 +7409,19 @@
               "source": "PO"
             }
           ],
-          "atp": 952
+          "atp": 951
         },
         {
           "date": "2026-10-01",
           "display_date": "2026-10-04",
-          "buildable": 4000,
+          "buildable": 3999,
           "cumulative_demand": 2797,
-          "net_available": 1203,
+          "net_available": 1202,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7430,19 +7430,19 @@
               "source": "PO"
             }
           ],
-          "atp": 952
+          "atp": 951
         },
         {
           "date": "2026-10-05",
           "display_date": "2026-10-08",
-          "buildable": 4000,
+          "buildable": 3999,
           "cumulative_demand": 2817,
-          "net_available": 1183,
+          "net_available": 1182,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7451,19 +7451,19 @@
               "source": "PO"
             }
           ],
-          "atp": 952
+          "atp": 951
         },
         {
           "date": "2026-10-10",
           "display_date": "2026-10-13",
-          "buildable": 4000,
+          "buildable": 3999,
           "cumulative_demand": 2827,
-          "net_available": 1173,
+          "net_available": 1172,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7472,19 +7472,19 @@
               "source": "PO"
             }
           ],
-          "atp": 952
+          "atp": 951
         },
         {
           "date": "2026-10-12",
           "display_date": "2026-10-15",
-          "buildable": 4000,
+          "buildable": 3999,
           "cumulative_demand": 2842,
-          "net_available": 1158,
+          "net_available": 1157,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7493,19 +7493,19 @@
               "source": "PO"
             }
           ],
-          "atp": 952
+          "atp": 951
         },
         {
           "date": "2026-10-19",
           "display_date": "2026-10-22",
-          "buildable": 4000,
+          "buildable": 3999,
           "cumulative_demand": 2857,
-          "net_available": 1143,
+          "net_available": 1142,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7514,19 +7514,19 @@
               "source": "PO"
             }
           ],
-          "atp": 952
+          "atp": 951
         },
         {
           "date": "2026-10-30",
           "display_date": "2026-11-02",
-          "buildable": 4000,
+          "buildable": 3999,
           "cumulative_demand": 2867,
-          "net_available": 1133,
+          "net_available": 1132,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7535,19 +7535,19 @@
               "source": "PO"
             }
           ],
-          "atp": 952
+          "atp": 951
         },
         {
           "date": "2026-11-01",
           "display_date": "2026-11-04",
-          "buildable": 4000,
+          "buildable": 3999,
           "cumulative_demand": 2981,
-          "net_available": 1019,
+          "net_available": 1018,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7556,19 +7556,19 @@
               "source": "PO"
             }
           ],
-          "atp": 952
+          "atp": 951
         },
         {
           "date": "2026-11-02",
           "display_date": "2026-11-05",
-          "buildable": 4000,
+          "buildable": 3999,
           "cumulative_demand": 3048,
-          "net_available": 952,
+          "net_available": 951,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 4000,
+              "supportable_fg_units": 3999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7577,19 +7577,19 @@
               "source": "PO"
             }
           ],
-          "atp": 952
+          "atp": 951
         },
         {
           "date": "2026-11-16",
           "display_date": "2026-11-19",
-          "buildable": 7000,
+          "buildable": 6999,
           "cumulative_demand": 3048,
-          "net_available": 3952,
+          "net_available": 3951,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 7000,
+              "supportable_fg_units": 6999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7598,19 +7598,19 @@
               "source": "PO"
             }
           ],
-          "atp": 3528
+          "atp": 3527
         },
         {
           "date": "2026-11-27",
           "display_date": "2026-11-30",
-          "buildable": 7000,
+          "buildable": 6999,
           "cumulative_demand": 3103,
-          "net_available": 3897,
+          "net_available": 3896,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 7000,
+              "supportable_fg_units": 6999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7619,19 +7619,19 @@
               "source": "PO"
             }
           ],
-          "atp": 3528
+          "atp": 3527
         },
         {
           "date": "2026-12-01",
           "display_date": "2026-12-04",
-          "buildable": 7000,
+          "buildable": 6999,
           "cumulative_demand": 3113,
-          "net_available": 3887,
+          "net_available": 3886,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 7000,
+              "supportable_fg_units": 6999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7640,19 +7640,19 @@
               "source": "PO"
             }
           ],
-          "atp": 3528
+          "atp": 3527
         },
         {
           "date": "2026-12-14",
           "display_date": "2026-12-17",
-          "buildable": 7000,
+          "buildable": 6999,
           "cumulative_demand": 3128,
-          "net_available": 3872,
+          "net_available": 3871,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 7000,
+              "supportable_fg_units": 6999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7661,19 +7661,19 @@
               "source": "PO"
             }
           ],
-          "atp": 3528
+          "atp": 3527
         },
         {
           "date": "2026-12-15",
           "display_date": "2026-12-18",
-          "buildable": 7000,
+          "buildable": 6999,
           "cumulative_demand": 3378,
-          "net_available": 3622,
+          "net_available": 3621,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 7000,
+              "supportable_fg_units": 6999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7682,19 +7682,19 @@
               "source": "PO"
             }
           ],
-          "atp": 3528
+          "atp": 3527
         },
         {
           "date": "2026-12-16",
           "display_date": "2026-12-19",
-          "buildable": 7000,
+          "buildable": 6999,
           "cumulative_demand": 3408,
-          "net_available": 3592,
+          "net_available": 3591,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 7000,
+              "supportable_fg_units": 6999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7703,19 +7703,19 @@
               "source": "PO"
             }
           ],
-          "atp": 3528
+          "atp": 3527
         },
         {
           "date": "2026-12-24",
           "display_date": "2026-12-27",
-          "buildable": 7000,
+          "buildable": 6999,
           "cumulative_demand": 3418,
-          "net_available": 3582,
+          "net_available": 3581,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 7000,
+              "supportable_fg_units": 6999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7724,19 +7724,19 @@
               "source": "PO"
             }
           ],
-          "atp": 3528
+          "atp": 3527
         },
         {
           "date": "2026-12-27",
           "display_date": "2026-12-30",
-          "buildable": 7000,
+          "buildable": 6999,
           "cumulative_demand": 3472,
-          "net_available": 3528,
+          "net_available": 3527,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 7000,
+              "supportable_fg_units": 6999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7745,19 +7745,19 @@
               "source": "PO"
             }
           ],
-          "atp": 3528
+          "atp": 3527
         },
         {
           "date": "2027-02-15",
           "display_date": "2027-02-18",
-          "buildable": 10000,
+          "buildable": 9999,
           "cumulative_demand": 3472,
-          "net_available": 6528,
+          "net_available": 6527,
           "limiting_components": [
             {
               "item_id": "6741",
               "item_name": "0CAK03N0.BS",
-              "supportable_fg_units": 10000,
+              "supportable_fg_units": 9999,
               "next_po_date": "2026-11-16",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -7766,12 +7766,12 @@
               "source": "PO"
             }
           ],
-          "atp": 6528
+          "atp": 6527
         }
       ],
       "avg_eur_per_unit": 7.1219,
       "avg_usd_per_unit": 10.9329,
-      "available_today_dtc": 3993,
+      "available_today_dtc": 3992,
       "overridden": false
     },
     {
