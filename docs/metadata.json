@@ -1,18 +1,18 @@
 {
-  "refreshed_at": "2026-08-03T10:22:33.445237",
+  "refreshed_at": "2026-08-04T10:12:15.403826",
   "refreshed_by": "scheduled",
   "sku_count_verrayes": 318,
   "sku_count_usa3pl": 318,
   "override_count": 31,
   "dtc_pass": "ok",
   "manufacturing_pass": "ok",
-  "manufacturing_wo_count": 2720,
+  "manufacturing_wo_count": 2716,
   "sop_pass": "ok",
   "sop_row_counts": {
-    "q13": 797,
-    "q13b": 59,
+    "q13": 818,
+    "q13b": 60,
     "q14": 150,
-    "q15": 191,
+    "q15": 194,
     "q17": 27
   },
   "status": "ok",
