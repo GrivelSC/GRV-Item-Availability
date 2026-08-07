@@ -6010,10 +6010,10 @@
       "embargo_date": null,
       "status": "committed",
       "available_today": 0,
-      "total_open_demand": 2218,
+      "total_open_demand": 2216,
       "committable": 5600,
-      "max_buildable_today": 1818,
-      "max_buildable_horizon": 7818,
+      "max_buildable_today": 1816,
+      "max_buildable_horizon": 7816,
       "next_available_date": "2026-12-28",
       "next_available_qty": 2635,
       "first_shortfall_date": "2026-11-30",
@@ -6021,7 +6021,7 @@
         {
           "item_id": "6743",
           "item_name": "0CAK06N0.BS",
-          "supportable_fg_units": 1818,
+          "supportable_fg_units": 1816,
           "next_po_date": "2026-12-25",
           "next_po_original_date": null,
           "next_po_qty": 3000.0,
@@ -6034,14 +6034,14 @@
         {
           "date": "2026-08-07",
           "display_date": "2026-08-07",
-          "buildable": 1818,
-          "cumulative_demand": 14,
+          "buildable": 1816,
+          "cumulative_demand": 12,
           "net_available": 1804,
           "limiting_components": [
             {
               "item_id": "6743",
               "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 1818,
+              "supportable_fg_units": 1816,
               "next_po_date": "2026-12-25",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -6055,14 +6055,14 @@
         {
           "date": "2026-08-21",
           "display_date": "2026-08-24",
-          "buildable": 1818,
-          "cumulative_demand": 84,
+          "buildable": 1816,
+          "cumulative_demand": 82,
           "net_available": 1734,
           "limiting_components": [
             {
               "item_id": "6743",
               "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 1818,
+              "supportable_fg_units": 1816,
               "next_po_date": "2026-12-25",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -6076,14 +6076,14 @@
         {
           "date": "2026-09-01",
           "display_date": "2026-09-04",
-          "buildable": 1818,
-          "cumulative_demand": 1044,
+          "buildable": 1816,
+          "cumulative_demand": 1042,
           "net_available": 774,
           "limiting_components": [
             {
               "item_id": "6743",
               "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 1818,
+              "supportable_fg_units": 1816,
               "next_po_date": "2026-12-25",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -6097,14 +6097,14 @@
         {
           "date": "2026-09-07",
           "display_date": "2026-09-10",
-          "buildable": 1818,
-          "cumulative_demand": 1052,
+          "buildable": 1816,
+          "cumulative_demand": 1050,
           "net_available": 766,
           "limiting_components": [
             {
               "item_id": "6743",
               "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 1818,
+              "supportable_fg_units": 1816,
               "next_po_date": "2026-12-25",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -6118,14 +6118,14 @@
         {
           "date": "2026-09-16",
           "display_date": "2026-09-19",
-          "buildable": 1818,
-          "cumulative_demand": 1062,
+          "buildable": 1816,
+          "cumulative_demand": 1060,
           "net_available": 756,
           "limiting_components": [
             {
               "item_id": "6743",
               "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 1818,
+              "supportable_fg_units": 1816,
               "next_po_date": "2026-12-25",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -6139,14 +6139,14 @@
         {
           "date": "2026-10-01",
           "display_date": "2026-10-04",
-          "buildable": 1818,
-          "cumulative_demand": 1517,
+          "buildable": 1816,
+          "cumulative_demand": 1515,
           "net_available": 301,
           "limiting_components": [
             {
               "item_id": "6743",
               "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 1818,
+              "supportable_fg_units": 1816,
               "next_po_date": "2026-12-25",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -6160,14 +6160,14 @@
         {
           "date": "2026-10-13",
           "display_date": "2026-10-16",
-          "buildable": 1818,
-          "cumulative_demand": 1526,
+          "buildable": 1816,
+          "cumulative_demand": 1524,
           "net_available": 292,
           "limiting_components": [
             {
               "item_id": "6743",
               "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 1818,
+              "supportable_fg_units": 1816,
               "next_po_date": "2026-12-25",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -6181,14 +6181,14 @@
         {
           "date": "2026-10-15",
           "display_date": "2026-10-18",
-          "buildable": 1818,
-          "cumulative_demand": 1530,
+          "buildable": 1816,
+          "cumulative_demand": 1528,
           "net_available": 288,
           "limiting_components": [
             {
               "item_id": "6743",
               "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 1818,
+              "supportable_fg_units": 1816,
               "next_po_date": "2026-12-25",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -6202,14 +6202,14 @@
         {
           "date": "2026-11-01",
           "display_date": "2026-11-04",
-          "buildable": 1818,
-          "cumulative_demand": 1730,
+          "buildable": 1816,
+          "cumulative_demand": 1728,
           "net_available": 88,
           "limiting_components": [
             {
               "item_id": "6743",
               "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 1818,
+              "supportable_fg_units": 1816,
               "next_po_date": "2026-12-25",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -6223,14 +6223,14 @@
         {
           "date": "2026-11-02",
           "display_date": "2026-11-05",
-          "buildable": 1818,
-          "cumulative_demand": 1741,
+          "buildable": 1816,
+          "cumulative_demand": 1739,
           "net_available": 77,
           "limiting_components": [
             {
               "item_id": "6743",
               "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 1818,
+              "supportable_fg_units": 1816,
               "next_po_date": "2026-12-25",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -6244,14 +6244,14 @@
         {
           "date": "2026-11-16",
           "display_date": "2026-11-19",
-          "buildable": 1818,
-          "cumulative_demand": 1771,
+          "buildable": 1816,
+          "cumulative_demand": 1769,
           "net_available": 47,
           "limiting_components": [
             {
               "item_id": "6743",
               "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 1818,
+              "supportable_fg_units": 1816,
               "next_po_date": "2026-12-25",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -6265,14 +6265,14 @@
         {
           "date": "2026-11-27",
           "display_date": "2026-11-30",
-          "buildable": 1818,
-          "cumulative_demand": 1862,
+          "buildable": 1816,
+          "cumulative_demand": 1860,
           "net_available": 0,
           "limiting_components": [
             {
               "item_id": "6743",
               "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 1818,
+              "supportable_fg_units": 1816,
               "next_po_date": "2026-12-25",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -6286,14 +6286,14 @@
         {
           "date": "2026-12-01",
           "display_date": "2026-12-04",
-          "buildable": 1818,
-          "cumulative_demand": 1872,
+          "buildable": 1816,
+          "cumulative_demand": 1870,
           "net_available": 0,
           "limiting_components": [
             {
               "item_id": "6743",
               "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 1818,
+              "supportable_fg_units": 1816,
               "next_po_date": "2026-12-25",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -6307,14 +6307,14 @@
         {
           "date": "2026-12-15",
           "display_date": "2026-12-18",
-          "buildable": 1818,
-          "cumulative_demand": 2122,
+          "buildable": 1816,
+          "cumulative_demand": 2120,
           "net_available": 0,
           "limiting_components": [
             {
               "item_id": "6743",
               "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 1818,
+              "supportable_fg_units": 1816,
               "next_po_date": "2026-12-25",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -6328,14 +6328,14 @@
         {
           "date": "2026-12-16",
           "display_date": "2026-12-19",
-          "buildable": 1818,
-          "cumulative_demand": 2152,
+          "buildable": 1816,
+          "cumulative_demand": 2150,
           "net_available": 0,
           "limiting_components": [
             {
               "item_id": "6743",
               "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 1818,
+              "supportable_fg_units": 1816,
               "next_po_date": "2026-12-25",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -6349,14 +6349,14 @@
         {
           "date": "2026-12-24",
           "display_date": "2026-12-27",
-          "buildable": 1818,
-          "cumulative_demand": 2167,
+          "buildable": 1816,
+          "cumulative_demand": 2165,
           "net_available": 0,
           "limiting_components": [
             {
               "item_id": "6743",
               "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 1818,
+              "supportable_fg_units": 1816,
               "next_po_date": "2026-12-25",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -6370,14 +6370,14 @@
         {
           "date": "2026-12-25",
           "display_date": "2026-12-28",
-          "buildable": 4818,
-          "cumulative_demand": 2168,
+          "buildable": 4816,
+          "cumulative_demand": 2166,
           "net_available": 2650,
           "limiting_components": [
             {
               "item_id": "6743",
               "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 4818,
+              "supportable_fg_units": 4816,
               "next_po_date": "2026-12-25",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -6391,14 +6391,14 @@
         {
           "date": "2026-12-27",
           "display_date": "2026-12-30",
-          "buildable": 4818,
-          "cumulative_demand": 2183,
+          "buildable": 4816,
+          "cumulative_demand": 2181,
           "net_available": 2635,
           "limiting_components": [
             {
               "item_id": "6743",
               "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 4818,
+              "supportable_fg_units": 4816,
               "next_po_date": "2026-12-25",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -6412,14 +6412,14 @@
         {
           "date": "2027-01-11",
           "display_date": "2027-01-14",
-          "buildable": 7818,
-          "cumulative_demand": 2183,
+          "buildable": 7816,
+          "cumulative_demand": 2181,
           "net_available": 5635,
           "limiting_components": [
             {
               "item_id": "6743",
               "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 7818,
+              "supportable_fg_units": 7816,
               "next_po_date": "2026-12-25",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -6433,14 +6433,14 @@
         {
           "date": "2027-01-26",
           "display_date": "2027-01-29",
-          "buildable": 7818,
-          "cumulative_demand": 2205,
+          "buildable": 7816,
+          "cumulative_demand": 2203,
           "net_available": 5613,
           "limiting_components": [
             {
               "item_id": "6743",
               "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 7818,
+              "supportable_fg_units": 7816,
               "next_po_date": "2026-12-25",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -6454,14 +6454,14 @@
         {
           "date": "2027-02-01",
           "display_date": "2027-02-04",
-          "buildable": 7818,
-          "cumulative_demand": 2218,
+          "buildable": 7816,
+          "cumulative_demand": 2216,
           "net_available": 5600,
           "limiting_components": [
             {
               "item_id": "6743",
               "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 7818,
+              "supportable_fg_units": 7816,
               "next_po_date": "2026-12-25",
               "next_po_original_date": null,
               "next_po_qty": 3000.0,
@@ -6473,7 +6473,7 @@
           "atp": 5600
         }
       ],
-      "avg_eur_per_unit": 7.4801,
+      "avg_eur_per_unit": 7.4755,
       "avg_usd_per_unit": 10.19,
       "available_today_dtc": 1816,
       "overridden": false
@@ -6786,7 +6786,7 @@
           "atp": 316
         }
       ],
-      "avg_eur_per_unit": 7.4801,
+      "avg_eur_per_unit": 7.4755,
       "avg_usd_per_unit": 10.19,
       "available_today_dtc": 121,
       "overridden": false
@@ -13182,12 +13182,12 @@
       "embargo_date": null,
       "status": "committed",
       "available_today": 0,
-      "total_open_demand": 236,
-      "committable": 5774,
+      "total_open_demand": 234,
+      "committable": 5776,
       "max_buildable_today": 10,
       "max_buildable_horizon": 6010,
       "next_available_date": "2026-12-28",
-      "next_available_qty": 2774,
+      "next_available_qty": 2776,
       "first_shortfall_date": "2026-08-07",
       "limiting_components": [
         {
@@ -13207,7 +13207,7 @@
           "date": "2026-08-07",
           "display_date": "2026-08-07",
           "buildable": 10,
-          "cumulative_demand": 94,
+          "cumulative_demand": 92,
           "net_available": 0,
           "limiting_components": [
             {
@@ -13228,7 +13228,7 @@
           "date": "2026-09-01",
           "display_date": "2026-09-04",
           "buildable": 10,
-          "cumulative_demand": 151,
+          "cumulative_demand": 149,
           "net_available": 0,
           "limiting_components": [
             {
@@ -13249,7 +13249,7 @@
           "date": "2026-09-07",
           "display_date": "2026-09-10",
           "buildable": 10,
-          "cumulative_demand": 157,
+          "cumulative_demand": 155,
           "net_available": 0,
           "limiting_components": [
             {
@@ -13270,7 +13270,7 @@
           "date": "2026-10-01",
           "display_date": "2026-10-04",
           "buildable": 10,
-          "cumulative_demand": 182,
+          "cumulative_demand": 180,
           "net_available": 0,
           "limiting_components": [
             {
@@ -13291,7 +13291,7 @@
           "date": "2026-10-15",
           "display_date": "2026-10-18",
           "buildable": 10,
-          "cumulative_demand": 192,
+          "cumulative_demand": 190,
           "net_available": 0,
           "limiting_components": [
             {
@@ -13312,7 +13312,7 @@
           "date": "2026-11-02",
           "display_date": "2026-11-05",
           "buildable": 10,
-          "cumulative_demand": 197,
+          "cumulative_demand": 195,
           "net_available": 0,
           "limiting_components": [
             {
@@ -13333,7 +13333,7 @@
           "date": "2026-11-23",
           "display_date": "2026-11-26",
           "buildable": 10,
-          "cumulative_demand": 203,
+          "cumulative_demand": 201,
           "net_available": 0,
           "limiting_components": [
             {
@@ -13354,7 +13354,7 @@
           "date": "2026-11-25",
           "display_date": "2026-11-28",
           "buildable": 10,
-          "cumulative_demand": 206,
+          "cumulative_demand": 204,
           "net_available": 0,
           "limiting_components": [
             {
@@ -13375,7 +13375,7 @@
           "date": "2026-12-01",
           "display_date": "2026-12-04",
           "buildable": 10,
-          "cumulative_demand": 213,
+          "cumulative_demand": 211,
           "net_available": 0,
           "limiting_components": [
             {
@@ -13396,7 +13396,7 @@
           "date": "2026-12-16",
           "display_date": "2026-12-19",
           "buildable": 10,
-          "cumulative_demand": 233,
+          "cumulative_demand": 231,
           "net_available": 0,
           "limiting_components": [
             {
@@ -13417,8 +13417,8 @@
           "date": "2026-12-25",
           "display_date": "2026-12-28",
           "buildable": 3010,
-          "cumulative_demand": 233,
-          "net_available": 2777,
+          "cumulative_demand": 231,
+          "net_available": 2779,
           "limiting_components": [
             {
               "item_id": "6759",
@@ -13432,14 +13432,14 @@
               "source": "PO"
             }
           ],
-          "atp": 2774
+          "atp": 2776
         },
         {
           "date": "2026-12-27",
           "display_date": "2026-12-30",
           "buildable": 3010,
-          "cumulative_demand": 236,
-          "net_available": 2774,
+          "cumulative_demand": 234,
+          "net_available": 2776,
           "limiting_components": [
             {
               "item_id": "6759",
@@ -13453,14 +13453,14 @@
               "source": "PO"
             }
           ],
-          "atp": 2774
+          "atp": 2776
         },
         {
           "date": "2027-02-25",
           "display_date": "2027-02-28",
           "buildable": 6010,
-          "cumulative_demand": 236,
-          "net_available": 5774,
+          "cumulative_demand": 234,
+          "net_available": 5776,
           "limiting_components": [
             {
               "item_id": "6759",
@@ -13474,12 +13474,12 @@
               "source": "PO"
             }
           ],
-          "atp": 5774
+          "atp": 5776
         }
       ],
-      "avg_eur_per_unit": 6.4341,
+      "avg_eur_per_unit": 6.3813,
       "avg_usd_per_unit": 9.59,
-      "available_today_dtc": 8,
+      "available_today_dtc": 10,
       "overridden": false
     },
     {
@@ -13605,7 +13605,7 @@
           "atp": 178
         }
       ],
-      "avg_eur_per_unit": 6.4341,
+      "avg_eur_per_unit": 6.3813,
       "avg_usd_per_unit": 9.59,
       "available_today_dtc": 2,
       "overridden": false
@@ -54631,7 +54631,7 @@
           "atp": 177
         }
       ],
-      "avg_eur_per_unit": 58.0653,
+      "avg_eur_per_unit": 58.1046,
       "avg_usd_per_unit": 79.19,
       "available_today_dtc": 89,
       "overridden": false
@@ -54684,7 +54684,7 @@
           "atp": 11
         }
       ],
-      "avg_eur_per_unit": 58.0653,
+      "avg_eur_per_unit": 58.1046,
       "avg_usd_per_unit": 79.19,
       "available_today_dtc": 13,
       "overridden": false
@@ -79415,12 +79415,12 @@
       "embargo_date": null,
       "status": "committed",
       "available_today": 0,
-      "total_open_demand": 99,
-      "committable": 301,
+      "total_open_demand": 100,
+      "committable": 300,
       "max_buildable_today": 30,
       "max_buildable_horizon": 400,
       "next_available_date": "2026-08-17",
-      "next_available_qty": 13,
+      "next_available_qty": 12,
       "first_shortfall_date": "2026-08-07",
       "limiting_components": [
         {
@@ -79462,7 +79462,7 @@
           "date": "2026-08-07",
           "display_date": "2026-08-07",
           "buildable": 30,
-          "cumulative_demand": 58,
+          "cumulative_demand": 59,
           "net_available": 0,
           "limiting_components": [
             {
@@ -79505,8 +79505,8 @@
           "date": "2026-08-14",
           "display_date": "2026-08-17",
           "buildable": 81,
-          "cumulative_demand": 58,
-          "net_available": 23,
+          "cumulative_demand": 59,
+          "net_available": 22,
           "limiting_components": [
             {
               "item_id": "608",
@@ -79542,14 +79542,14 @@
               "source": "PO"
             }
           ],
-          "atp": 13
+          "atp": 12
         },
         {
           "date": "2026-08-31",
           "display_date": "2026-09-03",
           "buildable": 81,
-          "cumulative_demand": 63,
-          "net_available": 18,
+          "cumulative_demand": 64,
+          "net_available": 17,
           "limiting_components": [
             {
               "item_id": "608",
@@ -79585,14 +79585,14 @@
               "source": "PO"
             }
           ],
-          "atp": 13
+          "atp": 12
         },
         {
           "date": "2026-09-01",
           "display_date": "2026-09-04",
           "buildable": 81,
-          "cumulative_demand": 68,
-          "net_available": 13,
+          "cumulative_demand": 69,
+          "net_available": 12,
           "limiting_components": [
             {
               "item_id": "608",
@@ -79628,14 +79628,14 @@
               "source": "PO"
             }
           ],
-          "atp": 13
+          "atp": 12
         },
         {
           "date": "2026-09-08",
           "display_date": "2026-09-11",
           "buildable": 234,
-          "cumulative_demand": 68,
-          "net_available": 166,
+          "cumulative_demand": 69,
+          "net_available": 165,
           "limiting_components": [
             {
               "item_id": "611",
@@ -79671,54 +79671,11 @@
               "source": "PO"
             }
           ],
-          "atp": 161
+          "atp": 160
         },
         {
           "date": "2026-09-16",
           "display_date": "2026-09-19",
-          "buildable": 234,
-          "cumulative_demand": 71,
-          "net_available": 163,
-          "limiting_components": [
-            {
-              "item_id": "611",
-              "item_name": "0PUNPLE.01AV",
-              "supportable_fg_units": 234,
-              "next_po_date": "2026-08-14",
-              "next_po_original_date": "2026-07-20",
-              "next_po_qty": 200.0,
-              "overdue": true,
-              "po_number": "PO-IT-2600169",
-              "source": "PO"
-            },
-            {
-              "item_id": "617",
-              "item_name": "0CPPIA.01",
-              "supportable_fg_units": 379,
-              "next_po_date": "2026-12-18",
-              "next_po_original_date": null,
-              "next_po_qty": 1000.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600286",
-              "source": "PO"
-            },
-            {
-              "item_id": "616",
-              "item_name": "0TE022.03AV",
-              "supportable_fg_units": 430,
-              "next_po_date": "2026-08-14",
-              "next_po_original_date": "2026-07-20",
-              "next_po_qty": 200.0,
-              "overdue": true,
-              "po_number": "PO-IT-2600169",
-              "source": "PO"
-            }
-          ],
-          "atp": 161
-        },
-        {
-          "date": "2026-09-20",
-          "display_date": "2026-09-23",
           "buildable": 234,
           "cumulative_demand": 72,
           "net_available": 162,
@@ -79757,11 +79714,11 @@
               "source": "PO"
             }
           ],
-          "atp": 161
+          "atp": 160
         },
         {
-          "date": "2026-09-22",
-          "display_date": "2026-09-25",
+          "date": "2026-09-20",
+          "display_date": "2026-09-23",
           "buildable": 234,
           "cumulative_demand": 73,
           "net_available": 161,
@@ -79800,14 +79757,57 @@
               "source": "PO"
             }
           ],
-          "atp": 161
+          "atp": 160
+        },
+        {
+          "date": "2026-09-22",
+          "display_date": "2026-09-25",
+          "buildable": 234,
+          "cumulative_demand": 74,
+          "net_available": 160,
+          "limiting_components": [
+            {
+              "item_id": "611",
+              "item_name": "0PUNPLE.01AV",
+              "supportable_fg_units": 234,
+              "next_po_date": "2026-08-14",
+              "next_po_original_date": "2026-07-20",
+              "next_po_qty": 200.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600169",
+              "source": "PO"
+            },
+            {
+              "item_id": "617",
+              "item_name": "0CPPIA.01",
+              "supportable_fg_units": 379,
+              "next_po_date": "2026-12-18",
+              "next_po_original_date": null,
+              "next_po_qty": 1000.0,
+              "overdue": false,
+              "po_number": "PO-IT-2600286",
+              "source": "PO"
+            },
+            {
+              "item_id": "616",
+              "item_name": "0TE022.03AV",
+              "supportable_fg_units": 430,
+              "next_po_date": "2026-08-14",
+              "next_po_original_date": "2026-07-20",
+              "next_po_qty": 200.0,
+              "overdue": true,
+              "po_number": "PO-IT-2600169",
+              "source": "PO"
+            }
+          ],
+          "atp": 160
         },
         {
           "date": "2026-09-24",
           "display_date": "2026-09-27",
           "buildable": 379,
-          "cumulative_demand": 73,
-          "net_available": 306,
+          "cumulative_demand": 74,
+          "net_available": 305,
           "limiting_components": [
             {
               "item_id": "617",
@@ -79843,14 +79843,14 @@
               "source": "PO"
             }
           ],
-          "atp": 286
+          "atp": 285
         },
         {
           "date": "2026-10-01",
           "display_date": "2026-10-04",
           "buildable": 379,
-          "cumulative_demand": 84,
-          "net_available": 295,
+          "cumulative_demand": 85,
+          "net_available": 294,
           "limiting_components": [
             {
               "item_id": "617",
@@ -79886,14 +79886,14 @@
               "source": "PO"
             }
           ],
-          "atp": 286
+          "atp": 285
         },
         {
           "date": "2026-11-02",
           "display_date": "2026-11-05",
           "buildable": 379,
-          "cumulative_demand": 91,
-          "net_available": 288,
+          "cumulative_demand": 92,
+          "net_available": 287,
           "limiting_components": [
             {
               "item_id": "617",
@@ -79929,14 +79929,14 @@
               "source": "PO"
             }
           ],
-          "atp": 286
+          "atp": 285
         },
         {
           "date": "2026-11-27",
           "display_date": "2026-11-30",
           "buildable": 379,
-          "cumulative_demand": 93,
-          "net_available": 286,
+          "cumulative_demand": 94,
+          "net_available": 285,
           "limiting_components": [
             {
               "item_id": "617",
@@ -79972,14 +79972,14 @@
               "source": "PO"
             }
           ],
-          "atp": 286
+          "atp": 285
         },
         {
           "date": "2026-12-18",
           "display_date": "2026-12-21",
           "buildable": 400,
-          "cumulative_demand": 93,
-          "net_available": 307,
+          "cumulative_demand": 94,
+          "net_available": 306,
           "limiting_components": [
             {
               "item_id": "611",
@@ -80015,14 +80015,14 @@
               "source": "PO"
             }
           ],
-          "atp": 301
+          "atp": 300
         },
         {
           "date": "2026-12-27",
           "display_date": "2026-12-30",
           "buildable": 400,
-          "cumulative_demand": 99,
-          "net_available": 301,
+          "cumulative_demand": 100,
+          "net_available": 300,
           "limiting_components": [
             {
               "item_id": "611",
@@ -80058,10 +80058,10 @@
               "source": "PO"
             }
           ],
-          "atp": 301
+          "atp": 300
         }
       ],
-      "avg_eur_per_unit": 95.5362,
+      "avg_eur_per_unit": 95.6057,
       "avg_usd_per_unit": 154.79,
       "available_today_dtc": 29,
       "overridden": false
@@ -80162,7 +80162,7 @@
           "atp": 37
         }
       ],
-      "avg_eur_per_unit": 95.5362,
+      "avg_eur_per_unit": 95.6057,
       "avg_usd_per_unit": 154.79,
       "available_today_dtc": 1,
       "overridden": false
@@ -90662,7 +90662,7 @@
           "atp": 0
         }
       ],
-      "avg_eur_per_unit": 19.5001,
+      "avg_eur_per_unit": 19.5156,
       "avg_usd_per_unit": 26.39,
       "available_today_dtc": 37,
       "overridden": false
@@ -90736,7 +90736,7 @@
           "atp": 20
         }
       ],
-      "avg_eur_per_unit": 19.5001,
+      "avg_eur_per_unit": 19.5156,
       "avg_usd_per_unit": 26.39,
       "available_today_dtc": 7,
       "overridden": false
@@ -123916,7 +123916,7 @@
           "atp": 3277
         }
       ],
-      "avg_eur_per_unit": 89.3235,
+      "avg_eur_per_unit": 89.3161,
       "avg_usd_per_unit": 138.59,
       "available_today_dtc": 227,
       "overridden": false
@@ -124599,7 +124599,7 @@
           "atp": 180
         }
       ],
-      "avg_eur_per_unit": 89.3235,
+      "avg_eur_per_unit": 89.3161,
       "avg_usd_per_unit": 138.59,
       "available_today_dtc": 9,
       "overridden": false
@@ -135981,9 +135981,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 198,
-      "committable": 557,
+      "committable": 504,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 755,
+      "max_buildable_horizon": 702,
       "next_available_date": "2026-08-26",
       "next_available_qty": 187,
       "first_shortfall_date": "2026-08-07",
@@ -136464,9 +136464,9 @@
         {
           "date": "2026-12-25",
           "display_date": "2026-12-25",
-          "buildable": 755,
+          "buildable": 702,
           "cumulative_demand": 147,
-          "net_available": 608,
+          "net_available": 555,
           "limiting_components": [
             {
               "item_id": "6919",
@@ -136496,14 +136496,14 @@
               "overdue": false
             }
           ],
-          "atp": 557
+          "atp": 504
         },
         {
           "date": "2026-12-31",
           "display_date": "2026-12-31",
-          "buildable": 755,
+          "buildable": 702,
           "cumulative_demand": 149,
-          "net_available": 606,
+          "net_available": 553,
           "limiting_components": [
             {
               "item_id": "6919",
@@ -136533,14 +136533,14 @@
               "overdue": false
             }
           ],
-          "atp": 557
+          "atp": 504
         },
         {
           "date": "2027-02-01",
           "display_date": "2027-02-01",
-          "buildable": 755,
+          "buildable": 702,
           "cumulative_demand": 161,
-          "net_available": 594,
+          "net_available": 541,
           "limiting_components": [
             {
               "item_id": "6919",
@@ -136570,14 +136570,14 @@
               "overdue": false
             }
           ],
-          "atp": 557
+          "atp": 504
         },
         {
           "date": "2027-02-02",
           "display_date": "2027-02-02",
-          "buildable": 755,
+          "buildable": 702,
           "cumulative_demand": 163,
-          "net_available": 592,
+          "net_available": 539,
           "limiting_components": [
             {
               "item_id": "6919",
@@ -136607,14 +136607,14 @@
               "overdue": false
             }
           ],
-          "atp": 557
+          "atp": 504
         },
         {
           "date": "2027-03-15",
           "display_date": "2027-03-15",
-          "buildable": 755,
+          "buildable": 702,
           "cumulative_demand": 179,
-          "net_available": 576,
+          "net_available": 523,
           "limiting_components": [
             {
               "item_id": "6919",
@@ -136644,14 +136644,14 @@
               "overdue": false
             }
           ],
-          "atp": 557
+          "atp": 504
         },
         {
           "date": "2027-05-01",
           "display_date": "2027-05-01",
-          "buildable": 755,
+          "buildable": 702,
           "cumulative_demand": 191,
-          "net_available": 564,
+          "net_available": 511,
           "limiting_components": [
             {
               "item_id": "6919",
@@ -136681,14 +136681,14 @@
               "overdue": false
             }
           ],
-          "atp": 557
+          "atp": 504
         },
         {
           "date": "2027-05-10",
           "display_date": "2027-05-10",
-          "buildable": 755,
+          "buildable": 702,
           "cumulative_demand": 193,
-          "net_available": 562,
+          "net_available": 509,
           "limiting_components": [
             {
               "item_id": "6919",
@@ -136718,14 +136718,14 @@
               "overdue": false
             }
           ],
-          "atp": 557
+          "atp": 504
         },
         {
           "date": "2027-06-10",
           "display_date": "2027-06-10",
-          "buildable": 755,
+          "buildable": 702,
           "cumulative_demand": 198,
-          "net_available": 557,
+          "net_available": 504,
           "limiting_components": [
             {
               "item_id": "6919",
@@ -136755,7 +136755,7 @@
               "overdue": false
             }
           ],
-          "atp": 557
+          "atp": 504
         }
       ],
       "avg_eur_per_unit": 12.4159,
@@ -140337,19 +140337,19 @@
       "embargoed": false,
       "embargo_date": null,
       "status": "in_stock",
-      "available_today": 2581,
-      "total_open_demand": 109,
+      "available_today": 2580,
+      "total_open_demand": 108,
       "committable": 5073,
-      "max_buildable_today": 2682,
-      "max_buildable_horizon": 5182,
+      "max_buildable_today": 2681,
+      "max_buildable_horizon": 5181,
       "next_available_date": "2026-08-29",
-      "next_available_qty": 2831,
+      "next_available_qty": 2830,
       "first_shortfall_date": null,
       "limiting_components": [
         {
           "item_id": "7419",
           "item_name": "0ARAT.01",
-          "supportable_fg_units": 2682,
+          "supportable_fg_units": 2681,
           "next_po_date": "2026-08-26",
           "next_po_original_date": null,
           "next_po_qty": 500.0,
@@ -140360,7 +140360,7 @@
         {
           "item_id": "477",
           "item_name": "0CR101.72A",
-          "supportable_fg_units": 4841,
+          "supportable_fg_units": 4840,
           "next_po_date": "2026-08-11",
           "next_po_original_date": null,
           "next_po_qty": 2000.0,
@@ -140371,7 +140371,7 @@
         {
           "item_id": "432",
           "item_name": "0NRLT34.OLB",
-          "supportable_fg_units": 15145,
+          "supportable_fg_units": 15144,
           "next_po_date": "2026-08-25",
           "next_po_original_date": null,
           "next_po_qty": 75000.0,
@@ -140384,14 +140384,14 @@
         {
           "date": "2026-08-07",
           "display_date": "2026-08-07",
-          "buildable": 2682,
+          "buildable": 2681,
           "cumulative_demand": 101,
-          "net_available": 2581,
+          "net_available": 2580,
           "limiting_components": [
             {
               "item_id": "7419",
               "item_name": "0ARAT.01",
-              "supportable_fg_units": 2682,
+              "supportable_fg_units": 2681,
               "next_po_date": "2026-08-26",
               "next_po_original_date": null,
               "next_po_qty": 500.0,
@@ -140402,7 +140402,7 @@
             {
               "item_id": "477",
               "item_name": "0CR101.72A",
-              "supportable_fg_units": 4841,
+              "supportable_fg_units": 4840,
               "next_po_date": "2026-08-11",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -140413,7 +140413,7 @@
             {
               "item_id": "432",
               "item_name": "0NRLT34.OLB",
-              "supportable_fg_units": 15145,
+              "supportable_fg_units": 15144,
               "next_po_date": "2026-08-25",
               "next_po_original_date": null,
               "next_po_qty": 75000.0,
@@ -140422,19 +140422,19 @@
               "source": "PO"
             }
           ],
-          "atp": 2581
+          "atp": 2580
         },
         {
           "date": "2026-08-26",
           "display_date": "2026-08-29",
-          "buildable": 2932,
+          "buildable": 2931,
           "cumulative_demand": 101,
-          "net_available": 2831,
+          "net_available": 2830,
           "limiting_components": [
             {
               "item_id": "7419",
               "item_name": "0ARAT.01",
-              "supportable_fg_units": 2932,
+              "supportable_fg_units": 2931,
               "next_po_date": "2026-08-26",
               "next_po_original_date": null,
               "next_po_qty": 500.0,
@@ -140445,7 +140445,7 @@
             {
               "item_id": "477",
               "item_name": "0CR101.72A",
-              "supportable_fg_units": 8341,
+              "supportable_fg_units": 8340,
               "next_po_date": "2026-08-11",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -140456,7 +140456,7 @@
             {
               "item_id": "432",
               "item_name": "0NRLT34.OLB",
-              "supportable_fg_units": 40145,
+              "supportable_fg_units": 40144,
               "next_po_date": "2026-08-25",
               "next_po_original_date": null,
               "next_po_qty": 75000.0,
@@ -140465,19 +140465,19 @@
               "source": "PO"
             }
           ],
-          "atp": 2831
+          "atp": 2830
         },
         {
           "date": "2026-08-27",
           "display_date": "2026-08-30",
-          "buildable": 3182,
+          "buildable": 3181,
           "cumulative_demand": 101,
-          "net_available": 3081,
+          "net_available": 3080,
           "limiting_components": [
             {
               "item_id": "7419",
               "item_name": "0ARAT.01",
-              "supportable_fg_units": 3182,
+              "supportable_fg_units": 3181,
               "next_po_date": "2026-08-26",
               "next_po_original_date": null,
               "next_po_qty": 500.0,
@@ -140488,7 +140488,7 @@
             {
               "item_id": "477",
               "item_name": "0CR101.72A",
-              "supportable_fg_units": 8341,
+              "supportable_fg_units": 8340,
               "next_po_date": "2026-08-11",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -140499,7 +140499,7 @@
             {
               "item_id": "432",
               "item_name": "0NRLT34.OLB",
-              "supportable_fg_units": 40145,
+              "supportable_fg_units": 40144,
               "next_po_date": "2026-08-25",
               "next_po_original_date": null,
               "next_po_qty": 75000.0,
@@ -140508,19 +140508,19 @@
               "source": "PO"
             }
           ],
-          "atp": 3077
+          "atp": 3076
         },
         {
           "date": "2026-09-01",
           "display_date": "2026-09-04",
-          "buildable": 3182,
+          "buildable": 3181,
           "cumulative_demand": 105,
-          "net_available": 3077,
+          "net_available": 3076,
           "limiting_components": [
             {
               "item_id": "7419",
               "item_name": "0ARAT.01",
-              "supportable_fg_units": 3182,
+              "supportable_fg_units": 3181,
               "next_po_date": "2026-08-26",
               "next_po_original_date": null,
               "next_po_qty": 500.0,
@@ -140531,7 +140531,7 @@
             {
               "item_id": "477",
               "item_name": "0CR101.72A",
-              "supportable_fg_units": 8341,
+              "supportable_fg_units": 8340,
               "next_po_date": "2026-08-11",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -140542,7 +140542,7 @@
             {
               "item_id": "432",
               "item_name": "0NRLT34.OLB",
-              "supportable_fg_units": 40145,
+              "supportable_fg_units": 40144,
               "next_po_date": "2026-08-25",
               "next_po_original_date": null,
               "next_po_qty": 75000.0,
@@ -140551,19 +140551,19 @@
               "source": "PO"
             }
           ],
-          "atp": 3077
+          "atp": 3076
         },
         {
           "date": "2026-09-30",
           "display_date": "2026-10-03",
-          "buildable": 3432,
+          "buildable": 3431,
           "cumulative_demand": 105,
-          "net_available": 3327,
+          "net_available": 3326,
           "limiting_components": [
             {
               "item_id": "7419",
               "item_name": "0ARAT.01",
-              "supportable_fg_units": 3432,
+              "supportable_fg_units": 3431,
               "next_po_date": "2026-08-26",
               "next_po_original_date": null,
               "next_po_qty": 500.0,
@@ -140574,7 +140574,7 @@
             {
               "item_id": "477",
               "item_name": "0CR101.72A",
-              "supportable_fg_units": 13341,
+              "supportable_fg_units": 13340,
               "next_po_date": "2026-08-11",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -140585,7 +140585,7 @@
             {
               "item_id": "430",
               "item_name": "0NRLT153.OB",
-              "supportable_fg_units": 42498,
+              "supportable_fg_units": 42497,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -140599,57 +140599,14 @@
         {
           "date": "2026-10-01",
           "display_date": "2026-10-04",
-          "buildable": 3432,
+          "buildable": 3431,
           "cumulative_demand": 106,
-          "net_available": 3326,
-          "limiting_components": [
-            {
-              "item_id": "7419",
-              "item_name": "0ARAT.01",
-              "supportable_fg_units": 3432,
-              "next_po_date": "2026-08-26",
-              "next_po_original_date": null,
-              "next_po_qty": 500.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600209",
-              "source": "PO"
-            },
-            {
-              "item_id": "477",
-              "item_name": "0CR101.72A",
-              "supportable_fg_units": 13341,
-              "next_po_date": "2026-08-11",
-              "next_po_original_date": null,
-              "next_po_qty": 2000.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600273",
-              "source": "PO"
-            },
-            {
-              "item_id": "430",
-              "item_name": "0NRLT153.OB",
-              "supportable_fg_units": 42498,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            }
-          ],
-          "atp": 3325
-        },
-        {
-          "date": "2026-10-06",
-          "display_date": "2026-10-09",
-          "buildable": 3432,
-          "cumulative_demand": 107,
           "net_available": 3325,
           "limiting_components": [
             {
               "item_id": "7419",
               "item_name": "0ARAT.01",
-              "supportable_fg_units": 3432,
+              "supportable_fg_units": 3431,
               "next_po_date": "2026-08-26",
               "next_po_original_date": null,
               "next_po_qty": 500.0,
@@ -140660,7 +140617,7 @@
             {
               "item_id": "477",
               "item_name": "0CR101.72A",
-              "supportable_fg_units": 13341,
+              "supportable_fg_units": 13340,
               "next_po_date": "2026-08-11",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -140671,7 +140628,7 @@
             {
               "item_id": "430",
               "item_name": "0NRLT153.OB",
-              "supportable_fg_units": 42498,
+              "supportable_fg_units": 42497,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -140685,14 +140642,14 @@
         {
           "date": "2026-10-14",
           "display_date": "2026-10-17",
-          "buildable": 3682,
-          "cumulative_demand": 107,
+          "buildable": 3681,
+          "cumulative_demand": 106,
           "net_available": 3575,
           "limiting_components": [
             {
               "item_id": "7419",
               "item_name": "0ARAT.01",
-              "supportable_fg_units": 3682,
+              "supportable_fg_units": 3681,
               "next_po_date": "2026-08-26",
               "next_po_original_date": null,
               "next_po_qty": 500.0,
@@ -140703,7 +140660,7 @@
             {
               "item_id": "477",
               "item_name": "0CR101.72A",
-              "supportable_fg_units": 13341,
+              "supportable_fg_units": 13340,
               "next_po_date": "2026-08-11",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -140714,7 +140671,7 @@
             {
               "item_id": "430",
               "item_name": "0NRLT153.OB",
-              "supportable_fg_units": 42498,
+              "supportable_fg_units": 42497,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -140728,14 +140685,14 @@
         {
           "date": "2026-10-27",
           "display_date": "2026-10-30",
-          "buildable": 3932,
-          "cumulative_demand": 107,
+          "buildable": 3931,
+          "cumulative_demand": 106,
           "net_available": 3825,
           "limiting_components": [
             {
               "item_id": "7419",
               "item_name": "0ARAT.01",
-              "supportable_fg_units": 3932,
+              "supportable_fg_units": 3931,
               "next_po_date": "2026-08-26",
               "next_po_original_date": null,
               "next_po_qty": 500.0,
@@ -140746,7 +140703,7 @@
             {
               "item_id": "477",
               "item_name": "0CR101.72A",
-              "supportable_fg_units": 13341,
+              "supportable_fg_units": 13340,
               "next_po_date": "2026-08-11",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -140757,7 +140714,7 @@
             {
               "item_id": "430",
               "item_name": "0NRLT153.OB",
-              "supportable_fg_units": 42498,
+              "supportable_fg_units": 42497,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -140771,14 +140728,14 @@
         {
           "date": "2026-11-10",
           "display_date": "2026-11-13",
-          "buildable": 4182,
-          "cumulative_demand": 107,
+          "buildable": 4181,
+          "cumulative_demand": 106,
           "net_available": 4075,
           "limiting_components": [
             {
               "item_id": "7419",
               "item_name": "0ARAT.01",
-              "supportable_fg_units": 4182,
+              "supportable_fg_units": 4181,
               "next_po_date": "2026-08-26",
               "next_po_original_date": null,
               "next_po_qty": 500.0,
@@ -140789,7 +140746,7 @@
             {
               "item_id": "477",
               "item_name": "0CR101.72A",
-              "supportable_fg_units": 13341,
+              "supportable_fg_units": 13340,
               "next_po_date": "2026-08-11",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -140800,7 +140757,7 @@
             {
               "item_id": "430",
               "item_name": "0NRLT153.OB",
-              "supportable_fg_units": 42498,
+              "supportable_fg_units": 42497,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -140814,14 +140771,14 @@
         {
           "date": "2026-11-24",
           "display_date": "2026-11-27",
-          "buildable": 4432,
-          "cumulative_demand": 107,
+          "buildable": 4431,
+          "cumulative_demand": 106,
           "net_available": 4325,
           "limiting_components": [
             {
               "item_id": "7419",
               "item_name": "0ARAT.01",
-              "supportable_fg_units": 4432,
+              "supportable_fg_units": 4431,
               "next_po_date": "2026-08-26",
               "next_po_original_date": null,
               "next_po_qty": 500.0,
@@ -140832,7 +140789,7 @@
             {
               "item_id": "477",
               "item_name": "0CR101.72A",
-              "supportable_fg_units": 13341,
+              "supportable_fg_units": 13340,
               "next_po_date": "2026-08-11",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -140843,7 +140800,7 @@
             {
               "item_id": "430",
               "item_name": "0NRLT153.OB",
-              "supportable_fg_units": 42498,
+              "supportable_fg_units": 42497,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -140857,14 +140814,14 @@
         {
           "date": "2026-12-02",
           "display_date": "2026-12-05",
-          "buildable": 4682,
-          "cumulative_demand": 107,
+          "buildable": 4681,
+          "cumulative_demand": 106,
           "net_available": 4575,
           "limiting_components": [
             {
               "item_id": "7419",
               "item_name": "0ARAT.01",
-              "supportable_fg_units": 4682,
+              "supportable_fg_units": 4681,
               "next_po_date": "2026-08-26",
               "next_po_original_date": null,
               "next_po_qty": 500.0,
@@ -140875,7 +140832,7 @@
             {
               "item_id": "477",
               "item_name": "0CR101.72A",
-              "supportable_fg_units": 13341,
+              "supportable_fg_units": 13340,
               "next_po_date": "2026-08-11",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -140886,7 +140843,7 @@
             {
               "item_id": "430",
               "item_name": "0NRLT153.OB",
-              "supportable_fg_units": 42498,
+              "supportable_fg_units": 42497,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -140900,14 +140857,14 @@
         {
           "date": "2026-12-09",
           "display_date": "2026-12-12",
-          "buildable": 4932,
-          "cumulative_demand": 107,
+          "buildable": 4931,
+          "cumulative_demand": 106,
           "net_available": 4825,
           "limiting_components": [
             {
               "item_id": "7419",
               "item_name": "0ARAT.01",
-              "supportable_fg_units": 4932,
+              "supportable_fg_units": 4931,
               "next_po_date": "2026-08-26",
               "next_po_original_date": null,
               "next_po_qty": 500.0,
@@ -140918,7 +140875,7 @@
             {
               "item_id": "477",
               "item_name": "0CR101.72A",
-              "supportable_fg_units": 13341,
+              "supportable_fg_units": 13340,
               "next_po_date": "2026-08-11",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -140929,7 +140886,7 @@
             {
               "item_id": "430",
               "item_name": "0NRLT153.OB",
-              "supportable_fg_units": 42498,
+              "supportable_fg_units": 42497,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -140943,14 +140900,14 @@
         {
           "date": "2026-12-22",
           "display_date": "2026-12-25",
-          "buildable": 5182,
-          "cumulative_demand": 107,
+          "buildable": 5181,
+          "cumulative_demand": 106,
           "net_available": 5075,
           "limiting_components": [
             {
               "item_id": "7419",
               "item_name": "0ARAT.01",
-              "supportable_fg_units": 5182,
+              "supportable_fg_units": 5181,
               "next_po_date": "2026-08-26",
               "next_po_original_date": null,
               "next_po_qty": 500.0,
@@ -140961,7 +140918,7 @@
             {
               "item_id": "477",
               "item_name": "0CR101.72A",
-              "supportable_fg_units": 13341,
+              "supportable_fg_units": 13340,
               "next_po_date": "2026-08-11",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -140972,7 +140929,7 @@
             {
               "item_id": "430",
               "item_name": "0NRLT153.OB",
-              "supportable_fg_units": 42498,
+              "supportable_fg_units": 42497,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -140986,14 +140943,14 @@
         {
           "date": "2026-12-24",
           "display_date": "2026-12-27",
-          "buildable": 5182,
-          "cumulative_demand": 109,
+          "buildable": 5181,
+          "cumulative_demand": 108,
           "net_available": 5073,
           "limiting_components": [
             {
               "item_id": "7419",
               "item_name": "0ARAT.01",
-              "supportable_fg_units": 5182,
+              "supportable_fg_units": 5181,
               "next_po_date": "2026-08-26",
               "next_po_original_date": null,
               "next_po_qty": 500.0,
@@ -141004,7 +140961,7 @@
             {
               "item_id": "477",
               "item_name": "0CR101.72A",
-              "supportable_fg_units": 13341,
+              "supportable_fg_units": 13340,
               "next_po_date": "2026-08-11",
               "next_po_original_date": null,
               "next_po_qty": 2000.0,
@@ -141015,7 +140972,7 @@
             {
               "item_id": "430",
               "item_name": "0NRLT153.OB",
-              "supportable_fg_units": 42498,
+              "supportable_fg_units": 42497,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -141027,9 +140984,9 @@
           "atp": 5073
         }
       ],
-      "avg_eur_per_unit": 27.1536,
+      "avg_eur_per_unit": 26.7546,
       "avg_usd_per_unit": null,
-      "available_today_dtc": 2682,
+      "available_today_dtc": 2681,
       "overridden": false
     },
     {
@@ -141192,7 +141149,7 @@
           "atp": 92
         }
       ],
-      "avg_eur_per_unit": 27.1536,
+      "avg_eur_per_unit": 26.7546,
       "avg_usd_per_unit": null,
       "available_today_dtc": 0,
       "overridden": false
@@ -143482,11 +143439,11 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 0,
-      "committable": 102,
+      "committable": 101,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 102,
+      "max_buildable_horizon": 101,
       "next_available_date": "2026-09-04",
-      "next_available_qty": 56,
+      "next_available_qty": 55,
       "first_shortfall_date": null,
       "limiting_components": [
         {
@@ -143511,9 +143468,9 @@
           "item_id": "6927",
           "item_name": "RBFP.G12",
           "po_number": "PO-US-2600014",
-          "supportable_fg_units": 41,
+          "supportable_fg_units": 40,
           "next_po_date": "2026-09-04",
-          "next_po_qty": 41.0,
+          "next_po_qty": 40.0,
           "overdue": false
         }
       ],
@@ -143547,9 +143504,9 @@
               "item_id": "6927",
               "item_name": "RBFP.G12",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 41,
+              "supportable_fg_units": 40,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 41.0,
+              "next_po_qty": 40.0,
               "overdue": false
             }
           ],
@@ -143558,9 +143515,9 @@
         {
           "date": "2026-09-04",
           "display_date": "2026-09-04",
-          "buildable": 56,
+          "buildable": 55,
           "cumulative_demand": 0,
-          "net_available": 56,
+          "net_available": 55,
           "limiting_components": [
             {
               "item_id": "6927",
@@ -143584,20 +143541,20 @@
               "item_id": "6927",
               "item_name": "RBFP.G12",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 41,
+              "supportable_fg_units": 40,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 41.0,
+              "next_po_qty": 40.0,
               "overdue": false
             }
           ],
-          "atp": 56
+          "atp": 55
         },
         {
           "date": "2026-09-15",
           "display_date": "2026-09-15",
-          "buildable": 102,
+          "buildable": 101,
           "cumulative_demand": 0,
-          "net_available": 102,
+          "net_available": 101,
           "limiting_components": [
             {
               "item_id": "6927",
@@ -143621,13 +143578,13 @@
               "item_id": "6927",
               "item_name": "RBFP.G12",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 41,
+              "supportable_fg_units": 40,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 41.0,
+              "next_po_qty": 40.0,
               "overdue": false
             }
           ],
-          "atp": 102
+          "atp": 101
         }
       ],
       "avg_eur_per_unit": 13.841,
@@ -153444,10 +153401,10 @@
       "embargo_date": null,
       "status": "in_stock",
       "available_today": 212,
-      "total_open_demand": 83,
+      "total_open_demand": 82,
       "committable": 1666,
-      "max_buildable_today": 249,
-      "max_buildable_horizon": 1749,
+      "max_buildable_today": 248,
+      "max_buildable_horizon": 1748,
       "next_available_date": "2026-08-17",
       "next_available_qty": 691,
       "first_shortfall_date": null,
@@ -153455,7 +153412,7 @@
         {
           "item_id": "7439",
           "item_name": "0CRSTF.39",
-          "supportable_fg_units": 249,
+          "supportable_fg_units": 248,
           "next_po_date": "2026-08-14",
           "next_po_original_date": "2026-07-24",
           "next_po_qty": 1000.0,
@@ -153468,35 +153425,14 @@
         {
           "date": "2026-08-07",
           "display_date": "2026-08-07",
-          "buildable": 249,
+          "buildable": 248,
           "cumulative_demand": 36,
-          "net_available": 213,
-          "limiting_components": [
-            {
-              "item_id": "7439",
-              "item_name": "0CRSTF.39",
-              "supportable_fg_units": 249,
-              "next_po_date": "2026-08-14",
-              "next_po_original_date": "2026-07-24",
-              "next_po_qty": 1000.0,
-              "overdue": true,
-              "po_number": "PO-IT-2600282",
-              "source": "PO"
-            }
-          ],
-          "atp": 212
-        },
-        {
-          "date": "2026-08-09",
-          "display_date": "2026-08-12",
-          "buildable": 249,
-          "cumulative_demand": 37,
           "net_available": 212,
           "limiting_components": [
             {
               "item_id": "7439",
               "item_name": "0CRSTF.39",
-              "supportable_fg_units": 249,
+              "supportable_fg_units": 248,
               "next_po_date": "2026-08-14",
               "next_po_original_date": "2026-07-24",
               "next_po_qty": 1000.0,
@@ -153510,14 +153446,14 @@
         {
           "date": "2026-08-14",
           "display_date": "2026-08-17",
-          "buildable": 749,
-          "cumulative_demand": 37,
+          "buildable": 748,
+          "cumulative_demand": 36,
           "net_available": 712,
           "limiting_components": [
             {
               "item_id": "7439",
               "item_name": "0CRSTF.39",
-              "supportable_fg_units": 749,
+              "supportable_fg_units": 748,
               "next_po_date": "2026-08-14",
               "next_po_original_date": "2026-07-24",
               "next_po_qty": 1000.0,
@@ -153531,14 +153467,14 @@
         {
           "date": "2026-09-01",
           "display_date": "2026-09-04",
-          "buildable": 749,
-          "cumulative_demand": 58,
+          "buildable": 748,
+          "cumulative_demand": 57,
           "net_available": 691,
           "limiting_components": [
             {
               "item_id": "7439",
               "item_name": "0CRSTF.39",
-              "supportable_fg_units": 749,
+              "supportable_fg_units": 748,
               "next_po_date": "2026-08-14",
               "next_po_original_date": "2026-07-24",
               "next_po_qty": 1000.0,
@@ -153552,14 +153488,14 @@
         {
           "date": "2026-09-02",
           "display_date": "2026-09-05",
-          "buildable": 1249,
-          "cumulative_demand": 58,
+          "buildable": 1248,
+          "cumulative_demand": 57,
           "net_available": 1191,
           "limiting_components": [
             {
               "item_id": "7439",
               "item_name": "0CRSTF.39",
-              "supportable_fg_units": 1249,
+              "supportable_fg_units": 1248,
               "next_po_date": "2026-08-14",
               "next_po_original_date": "2026-07-24",
               "next_po_qty": 1000.0,
@@ -153573,14 +153509,14 @@
         {
           "date": "2026-10-01",
           "display_date": "2026-10-04",
-          "buildable": 1249,
-          "cumulative_demand": 62,
+          "buildable": 1248,
+          "cumulative_demand": 61,
           "net_available": 1187,
           "limiting_components": [
             {
               "item_id": "7439",
               "item_name": "0CRSTF.39",
-              "supportable_fg_units": 1249,
+              "supportable_fg_units": 1248,
               "next_po_date": "2026-08-14",
               "next_po_original_date": "2026-07-24",
               "next_po_qty": 1000.0,
@@ -153594,14 +153530,14 @@
         {
           "date": "2026-11-01",
           "display_date": "2026-11-04",
-          "buildable": 1249,
-          "cumulative_demand": 77,
+          "buildable": 1248,
+          "cumulative_demand": 76,
           "net_available": 1172,
           "limiting_components": [
             {
               "item_id": "7439",
               "item_name": "0CRSTF.39",
-              "supportable_fg_units": 1249,
+              "supportable_fg_units": 1248,
               "next_po_date": "2026-08-14",
               "next_po_original_date": "2026-07-24",
               "next_po_qty": 1000.0,
@@ -153615,14 +153551,14 @@
         {
           "date": "2026-11-18",
           "display_date": "2026-11-21",
-          "buildable": 1749,
-          "cumulative_demand": 77,
+          "buildable": 1748,
+          "cumulative_demand": 76,
           "net_available": 1672,
           "limiting_components": [
             {
               "item_id": "7439",
               "item_name": "0CRSTF.39",
-              "supportable_fg_units": 1749,
+              "supportable_fg_units": 1748,
               "next_po_date": "2026-08-14",
               "next_po_original_date": "2026-07-24",
               "next_po_qty": 1000.0,
@@ -153636,14 +153572,14 @@
         {
           "date": "2026-12-24",
           "display_date": "2026-12-27",
-          "buildable": 1749,
-          "cumulative_demand": 83,
+          "buildable": 1748,
+          "cumulative_demand": 82,
           "net_available": 1666,
           "limiting_components": [
             {
               "item_id": "7439",
               "item_name": "0CRSTF.39",
-              "supportable_fg_units": 1749,
+              "supportable_fg_units": 1748,
               "next_po_date": "2026-08-14",
               "next_po_original_date": "2026-07-24",
               "next_po_qty": 1000.0,
@@ -153655,7 +153591,7 @@
           "atp": 1666
         }
       ],
-      "avg_eur_per_unit": 8.6015,
+      "avg_eur_per_unit": 8.4544,
       "avg_usd_per_unit": 16.19,
       "available_today_dtc": 248,
       "overridden": false
@@ -153812,7 +153748,7 @@
           "atp": 90
         }
       ],
-      "avg_eur_per_unit": 8.6015,
+      "avg_eur_per_unit": 8.4544,
       "avg_usd_per_unit": 16.19,
       "available_today_dtc": 19,
       "overridden": false
@@ -157349,7 +157285,7 @@
           "atp": 3893
         }
       ],
-      "avg_eur_per_unit": 15.1639,
+      "avg_eur_per_unit": 15.2856,
       "avg_usd_per_unit": 25.79,
       "available_today_dtc": 1309,
       "overridden": false
@@ -157625,7 +157561,7 @@
           "atp": 92
         }
       ],
-      "avg_eur_per_unit": 15.1639,
+      "avg_eur_per_unit": 15.2856,
       "avg_usd_per_unit": 25.79,
       "available_today_dtc": 4,
       "overridden": false
@@ -190168,7 +190104,7 @@
           "atp": 195
         }
       ],
-      "avg_eur_per_unit": 6.9459,
+      "avg_eur_per_unit": 7.49,
       "avg_usd_per_unit": 9.59,
       "available_today_dtc": 316,
       "overridden": false
@@ -190481,7 +190417,7 @@
           "atp": 190
         }
       ],
-      "avg_eur_per_unit": 6.9459,
+      "avg_eur_per_unit": 7.49,
       "avg_usd_per_unit": 9.59,
       "available_today_dtc": 1,
       "overridden": false
@@ -190496,13 +190432,13 @@
       "embargoed": false,
       "embargo_date": null,
       "status": "in_stock",
-      "available_today": 11,
-      "total_open_demand": 365,
-      "committable": 100,
+      "available_today": 10,
+      "total_open_demand": 366,
+      "committable": 99,
       "max_buildable_today": 199,
       "max_buildable_horizon": 465,
       "next_available_date": "2026-08-31",
-      "next_available_qty": 11,
+      "next_available_qty": 10,
       "first_shortfall_date": null,
       "limiting_components": [
         {
@@ -190537,14 +190473,14 @@
               "source": "PO"
             }
           ],
-          "atp": 11
+          "atp": 10
         },
         {
-          "date": "2026-08-10",
-          "display_date": "2026-08-13",
+          "date": "2026-08-09",
+          "display_date": "2026-08-12",
           "buildable": 199,
-          "cumulative_demand": 156,
-          "net_available": 43,
+          "cumulative_demand": 95,
+          "net_available": 104,
           "limiting_components": [
             {
               "item_id": "679",
@@ -190558,14 +190494,35 @@
               "source": "PO"
             }
           ],
-          "atp": 11
+          "atp": 10
+        },
+        {
+          "date": "2026-08-10",
+          "display_date": "2026-08-13",
+          "buildable": 199,
+          "cumulative_demand": 157,
+          "net_available": 42,
+          "limiting_components": [
+            {
+              "item_id": "679",
+              "item_name": "0FGAAL10.120",
+              "supportable_fg_units": 199,
+              "next_po_date": "2026-08-28",
+              "next_po_original_date": null,
+              "next_po_qty": 66.0,
+              "overdue": false,
+              "po_number": "PO-IT-2600347",
+              "source": "PO"
+            }
+          ],
+          "atp": 10
         },
         {
           "date": "2026-08-28",
           "display_date": "2026-08-31",
           "buildable": 265,
-          "cumulative_demand": 156,
-          "net_available": 109,
+          "cumulative_demand": 157,
+          "net_available": 108,
           "limiting_components": [
             {
               "item_id": "679",
@@ -190579,14 +190536,14 @@
               "source": "PO"
             }
           ],
-          "atp": 11
+          "atp": 10
         },
         {
           "date": "2026-09-01",
           "display_date": "2026-09-04",
           "buildable": 265,
-          "cumulative_demand": 240,
-          "net_available": 25,
+          "cumulative_demand": 241,
+          "net_available": 24,
           "limiting_components": [
             {
               "item_id": "679",
@@ -190600,14 +190557,14 @@
               "source": "PO"
             }
           ],
-          "atp": 11
+          "atp": 10
         },
         {
           "date": "2026-09-07",
           "display_date": "2026-09-10",
           "buildable": 265,
-          "cumulative_demand": 244,
-          "net_available": 21,
+          "cumulative_demand": 245,
+          "net_available": 20,
           "limiting_components": [
             {
               "item_id": "679",
@@ -190621,14 +190578,14 @@
               "source": "PO"
             }
           ],
-          "atp": 11
+          "atp": 10
         },
         {
           "date": "2026-09-16",
           "display_date": "2026-09-19",
           "buildable": 265,
-          "cumulative_demand": 254,
-          "net_available": 11,
+          "cumulative_demand": 255,
+          "net_available": 10,
           "limiting_components": [
             {
               "item_id": "679",
@@ -190642,14 +190599,14 @@
               "source": "PO"
             }
           ],
-          "atp": 11
+          "atp": 10
         },
         {
           "date": "2026-09-18",
           "display_date": "2026-09-21",
           "buildable": 465,
-          "cumulative_demand": 254,
-          "net_available": 211,
+          "cumulative_demand": 255,
+          "net_available": 210,
           "limiting_components": [
             {
               "item_id": "679",
@@ -190663,14 +190620,14 @@
               "source": "PO"
             }
           ],
-          "atp": 100
+          "atp": 99
         },
         {
           "date": "2026-09-25",
           "display_date": "2026-09-28",
           "buildable": 465,
-          "cumulative_demand": 332,
-          "net_available": 133,
+          "cumulative_demand": 333,
+          "net_available": 132,
           "limiting_components": [
             {
               "item_id": "679",
@@ -190684,14 +190641,14 @@
               "source": "PO"
             }
           ],
-          "atp": 100
+          "atp": 99
         },
         {
           "date": "2026-10-05",
           "display_date": "2026-10-08",
           "buildable": 465,
-          "cumulative_demand": 337,
-          "net_available": 128,
+          "cumulative_demand": 338,
+          "net_available": 127,
           "limiting_components": [
             {
               "item_id": "679",
@@ -190705,14 +190662,14 @@
               "source": "PO"
             }
           ],
-          "atp": 100
+          "atp": 99
         },
         {
           "date": "2026-11-02",
           "display_date": "2026-11-05",
           "buildable": 465,
-          "cumulative_demand": 341,
-          "net_available": 124,
+          "cumulative_demand": 342,
+          "net_available": 123,
           "limiting_components": [
             {
               "item_id": "679",
@@ -190726,14 +190683,14 @@
               "source": "PO"
             }
           ],
-          "atp": 100
+          "atp": 99
         },
         {
           "date": "2026-11-27",
           "display_date": "2026-11-30",
           "buildable": 465,
-          "cumulative_demand": 345,
-          "net_available": 120,
+          "cumulative_demand": 346,
+          "net_available": 119,
           "limiting_components": [
             {
               "item_id": "679",
@@ -190747,14 +190704,14 @@
               "source": "PO"
             }
           ],
-          "atp": 100
+          "atp": 99
         },
         {
           "date": "2026-12-15",
           "display_date": "2026-12-18",
           "buildable": 465,
-          "cumulative_demand": 365,
-          "net_available": 100,
+          "cumulative_demand": 366,
+          "net_available": 99,
           "limiting_components": [
             {
               "item_id": "679",
@@ -190768,12 +190725,12 @@
               "source": "PO"
             }
           ],
-          "atp": 100
+          "atp": 99
         }
       ],
-      "avg_eur_per_unit": 9.2511,
+      "avg_eur_per_unit": 9.2815,
       "avg_usd_per_unit": 13.19,
-      "available_today_dtc": 199,
+      "available_today_dtc": 198,
       "overridden": false
     },
     {
@@ -190792,7 +190749,7 @@
       "max_buildable_today": 1,
       "max_buildable_horizon": 199,
       "next_available_date": "2026-09-14",
-      "next_available_qty": 9,
+      "next_available_qty": 8,
       "first_shortfall_date": "2026-08-07",
       "limiting_components": [
         {
@@ -190808,18 +190765,18 @@
           "item_id": "7024",
           "item_name": "RTRINGAL120.RD",
           "po_number": "PO-US-2600014",
-          "supportable_fg_units": 11,
+          "supportable_fg_units": 10,
           "next_po_date": "2026-09-14",
-          "next_po_qty": 11.0,
+          "next_po_qty": 10.0,
           "overdue": false
         },
         {
           "item_id": "7024",
           "item_name": "RTRINGAL120.RD",
           "po_number": "PO-US-2600014",
-          "supportable_fg_units": 64,
+          "supportable_fg_units": 65,
           "next_po_date": "2026-09-28",
-          "next_po_qty": 64.0,
+          "next_po_qty": 65.0,
           "overdue": false
         }
       ],
@@ -190844,18 +190801,18 @@
               "item_id": "7024",
               "item_name": "RTRINGAL120.RD",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 11,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-09-14",
-              "next_po_qty": 11.0,
+              "next_po_qty": 10.0,
               "overdue": false
             },
             {
               "item_id": "7024",
               "item_name": "RTRINGAL120.RD",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 64,
+              "supportable_fg_units": 65,
               "next_po_date": "2026-09-28",
-              "next_po_qty": 64.0,
+              "next_po_qty": 65.0,
               "overdue": false
             }
           ],
@@ -190881,18 +190838,18 @@
               "item_id": "7024",
               "item_name": "RTRINGAL120.RD",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 11,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-09-14",
-              "next_po_qty": 11.0,
+              "next_po_qty": 10.0,
               "overdue": false
             },
             {
               "item_id": "7024",
               "item_name": "RTRINGAL120.RD",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 64,
+              "supportable_fg_units": 65,
               "next_po_date": "2026-09-28",
-              "next_po_qty": 64.0,
+              "next_po_qty": 65.0,
               "overdue": false
             }
           ],
@@ -190918,18 +190875,18 @@
               "item_id": "7024",
               "item_name": "RTRINGAL120.RD",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 11,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-09-14",
-              "next_po_qty": 11.0,
+              "next_po_qty": 10.0,
               "overdue": false
             },
             {
               "item_id": "7024",
               "item_name": "RTRINGAL120.RD",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 64,
+              "supportable_fg_units": 65,
               "next_po_date": "2026-09-28",
-              "next_po_qty": 64.0,
+              "next_po_qty": 65.0,
               "overdue": false
             }
           ],
@@ -190938,9 +190895,9 @@
         {
           "date": "2026-09-14",
           "display_date": "2026-09-14",
-          "buildable": 17,
+          "buildable": 16,
           "cumulative_demand": 8,
-          "net_available": 9,
+          "net_available": 8,
           "limiting_components": [
             {
               "item_id": "7024",
@@ -190955,22 +190912,22 @@
               "item_id": "7024",
               "item_name": "RTRINGAL120.RD",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 11,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-09-14",
-              "next_po_qty": 11.0,
+              "next_po_qty": 10.0,
               "overdue": false
             },
             {
               "item_id": "7024",
               "item_name": "RTRINGAL120.RD",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 64,
+              "supportable_fg_units": 65,
               "next_po_date": "2026-09-28",
-              "next_po_qty": 64.0,
+              "next_po_qty": 65.0,
               "overdue": false
             }
           ],
-          "atp": 9
+          "atp": 8
         },
         {
           "date": "2026-09-28",
@@ -190992,18 +190949,18 @@
               "item_id": "7024",
               "item_name": "RTRINGAL120.RD",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 11,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-09-14",
-              "next_po_qty": 11.0,
+              "next_po_qty": 10.0,
               "overdue": false
             },
             {
               "item_id": "7024",
               "item_name": "RTRINGAL120.RD",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 64,
+              "supportable_fg_units": 65,
               "next_po_date": "2026-09-28",
-              "next_po_qty": 64.0,
+              "next_po_qty": 65.0,
               "overdue": false
             }
           ],
@@ -191029,25 +190986,25 @@
               "item_id": "7024",
               "item_name": "RTRINGAL120.RD",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 11,
+              "supportable_fg_units": 10,
               "next_po_date": "2026-09-14",
-              "next_po_qty": 11.0,
+              "next_po_qty": 10.0,
               "overdue": false
             },
             {
               "item_id": "7024",
               "item_name": "RTRINGAL120.RD",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 64,
+              "supportable_fg_units": 65,
               "next_po_date": "2026-09-28",
-              "next_po_qty": 64.0,
+              "next_po_qty": 65.0,
               "overdue": false
             }
           ],
           "atp": 188
         }
       ],
-      "avg_eur_per_unit": 9.2511,
+      "avg_eur_per_unit": 9.2815,
       "avg_usd_per_unit": 13.19,
       "available_today_dtc": 1,
       "overridden": false
@@ -197277,9 +197234,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 6,
-      "committable": 21,
+      "committable": 25,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 27,
+      "max_buildable_horizon": 31,
       "next_available_date": "2026-09-02",
       "next_available_qty": 7,
       "first_shortfall_date": "2026-08-07",
@@ -197306,9 +197263,9 @@
           "item_id": "7048",
           "item_name": "HAMLT.2",
           "po_number": "PO-US-2600014",
-          "supportable_fg_units": 4,
+          "supportable_fg_units": 8,
           "next_po_date": "2026-09-04",
-          "next_po_qty": 4.0,
+          "next_po_qty": 8.0,
           "overdue": false
         }
       ],
@@ -197342,9 +197299,9 @@
               "item_id": "7048",
               "item_name": "HAMLT.2",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 4,
+              "supportable_fg_units": 8,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 4.0,
+              "next_po_qty": 8.0,
               "overdue": false
             }
           ],
@@ -197379,9 +197336,9 @@
               "item_id": "7048",
               "item_name": "HAMLT.2",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 4,
+              "supportable_fg_units": 8,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 4.0,
+              "next_po_qty": 8.0,
               "overdue": false
             }
           ],
@@ -197416,9 +197373,9 @@
               "item_id": "7048",
               "item_name": "HAMLT.2",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 4,
+              "supportable_fg_units": 8,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 4.0,
+              "next_po_qty": 8.0,
               "overdue": false
             }
           ],
@@ -197427,9 +197384,9 @@
         {
           "date": "2026-09-04",
           "display_date": "2026-09-04",
-          "buildable": 17,
+          "buildable": 21,
           "cumulative_demand": 6,
-          "net_available": 11,
+          "net_available": 15,
           "limiting_components": [
             {
               "item_id": "7048",
@@ -197453,20 +197410,20 @@
               "item_id": "7048",
               "item_name": "HAMLT.2",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 4,
+              "supportable_fg_units": 8,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 4.0,
+              "next_po_qty": 8.0,
               "overdue": false
             }
           ],
-          "atp": 11
+          "atp": 15
         },
         {
           "date": "2026-09-15",
           "display_date": "2026-09-15",
-          "buildable": 27,
+          "buildable": 31,
           "cumulative_demand": 6,
-          "net_available": 21,
+          "net_available": 25,
           "limiting_components": [
             {
               "item_id": "7048",
@@ -197490,13 +197447,13 @@
               "item_id": "7048",
               "item_name": "HAMLT.2",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 4,
+              "supportable_fg_units": 8,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 4.0,
+              "next_po_qty": 8.0,
               "overdue": false
             }
           ],
-          "atp": 21
+          "atp": 25
         }
       ],
       "avg_eur_per_unit": 39.99,
@@ -198023,10 +197980,10 @@
       "embargo_date": null,
       "status": "in_stock",
       "available_today": 43,
-      "total_open_demand": 68,
+      "total_open_demand": 67,
       "committable": 255,
-      "max_buildable_today": 73,
-      "max_buildable_horizon": 323,
+      "max_buildable_today": 72,
+      "max_buildable_horizon": 322,
       "next_available_date": "2026-11-27",
       "next_available_qty": 255,
       "first_shortfall_date": null,
@@ -198034,7 +197991,7 @@
         {
           "item_id": "7050",
           "item_name": "HAHMN.1+",
-          "supportable_fg_units": 73,
+          "supportable_fg_units": 72,
           "next_po_date": "2026-11-24",
           "next_po_original_date": null,
           "next_po_qty": 250.0,
@@ -198047,14 +198004,14 @@
         {
           "date": "2026-08-07",
           "display_date": "2026-08-07",
-          "buildable": 73,
+          "buildable": 72,
           "cumulative_demand": 0,
-          "net_available": 73,
+          "net_available": 72,
           "limiting_components": [
             {
               "item_id": "7050",
               "item_name": "HAHMN.1+",
-              "supportable_fg_units": 73,
+              "supportable_fg_units": 72,
               "next_po_date": "2026-11-24",
               "next_po_original_date": null,
               "next_po_qty": 250.0,
@@ -198068,35 +198025,14 @@
         {
           "date": "2026-08-08",
           "display_date": "2026-08-11",
-          "buildable": 73,
+          "buildable": 72,
           "cumulative_demand": 1,
-          "net_available": 72,
-          "limiting_components": [
-            {
-              "item_id": "7050",
-              "item_name": "HAHMN.1+",
-              "supportable_fg_units": 73,
-              "next_po_date": "2026-11-24",
-              "next_po_original_date": null,
-              "next_po_qty": 250.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600261",
-              "source": "PO"
-            }
-          ],
-          "atp": 43
-        },
-        {
-          "date": "2026-08-09",
-          "display_date": "2026-08-12",
-          "buildable": 73,
-          "cumulative_demand": 2,
           "net_available": 71,
           "limiting_components": [
             {
               "item_id": "7050",
               "item_name": "HAHMN.1+",
-              "supportable_fg_units": 73,
+              "supportable_fg_units": 72,
               "next_po_date": "2026-11-24",
               "next_po_original_date": null,
               "next_po_qty": 250.0,
@@ -198110,14 +198046,14 @@
         {
           "date": "2026-09-01",
           "display_date": "2026-09-04",
-          "buildable": 73,
-          "cumulative_demand": 10,
+          "buildable": 72,
+          "cumulative_demand": 9,
           "net_available": 63,
           "limiting_components": [
             {
               "item_id": "7050",
               "item_name": "HAHMN.1+",
-              "supportable_fg_units": 73,
+              "supportable_fg_units": 72,
               "next_po_date": "2026-11-24",
               "next_po_original_date": null,
               "next_po_qty": 250.0,
@@ -198131,14 +198067,14 @@
         {
           "date": "2026-09-07",
           "display_date": "2026-09-10",
-          "buildable": 73,
-          "cumulative_demand": 11,
+          "buildable": 72,
+          "cumulative_demand": 10,
           "net_available": 62,
           "limiting_components": [
             {
               "item_id": "7050",
               "item_name": "HAHMN.1+",
-              "supportable_fg_units": 73,
+              "supportable_fg_units": 72,
               "next_po_date": "2026-11-24",
               "next_po_original_date": null,
               "next_po_qty": 250.0,
@@ -198152,14 +198088,14 @@
         {
           "date": "2026-10-01",
           "display_date": "2026-10-04",
-          "buildable": 73,
-          "cumulative_demand": 17,
+          "buildable": 72,
+          "cumulative_demand": 16,
           "net_available": 56,
           "limiting_components": [
             {
               "item_id": "7050",
               "item_name": "HAHMN.1+",
-              "supportable_fg_units": 73,
+              "supportable_fg_units": 72,
               "next_po_date": "2026-11-24",
               "next_po_original_date": null,
               "next_po_qty": 250.0,
@@ -198173,14 +198109,14 @@
         {
           "date": "2026-10-05",
           "display_date": "2026-10-08",
-          "buildable": 73,
-          "cumulative_demand": 19,
+          "buildable": 72,
+          "cumulative_demand": 18,
           "net_available": 54,
           "limiting_components": [
             {
               "item_id": "7050",
               "item_name": "HAHMN.1+",
-              "supportable_fg_units": 73,
+              "supportable_fg_units": 72,
               "next_po_date": "2026-11-24",
               "next_po_original_date": null,
               "next_po_qty": 250.0,
@@ -198194,14 +198130,14 @@
         {
           "date": "2026-11-10",
           "display_date": "2026-11-13",
-          "buildable": 73,
-          "cumulative_demand": 26,
+          "buildable": 72,
+          "cumulative_demand": 25,
           "net_available": 47,
           "limiting_components": [
             {
               "item_id": "7050",
               "item_name": "HAHMN.1+",
-              "supportable_fg_units": 73,
+              "supportable_fg_units": 72,
               "next_po_date": "2026-11-24",
               "next_po_original_date": null,
               "next_po_qty": 250.0,
@@ -198215,14 +198151,14 @@
         {
           "date": "2026-11-16",
           "display_date": "2026-11-19",
-          "buildable": 73,
-          "cumulative_demand": 30,
+          "buildable": 72,
+          "cumulative_demand": 29,
           "net_available": 43,
           "limiting_components": [
             {
               "item_id": "7050",
               "item_name": "HAHMN.1+",
-              "supportable_fg_units": 73,
+              "supportable_fg_units": 72,
               "next_po_date": "2026-11-24",
               "next_po_original_date": null,
               "next_po_qty": 250.0,
@@ -198236,14 +198172,14 @@
         {
           "date": "2026-11-24",
           "display_date": "2026-11-27",
-          "buildable": 323,
-          "cumulative_demand": 30,
+          "buildable": 322,
+          "cumulative_demand": 29,
           "net_available": 293,
           "limiting_components": [
             {
               "item_id": "7050",
               "item_name": "HAHMN.1+",
-              "supportable_fg_units": 323,
+              "supportable_fg_units": 322,
               "next_po_date": "2026-11-24",
               "next_po_original_date": null,
               "next_po_qty": 250.0,
@@ -198257,14 +198193,14 @@
         {
           "date": "2026-12-15",
           "display_date": "2026-12-18",
-          "buildable": 323,
-          "cumulative_demand": 35,
+          "buildable": 322,
+          "cumulative_demand": 34,
           "net_available": 288,
           "limiting_components": [
             {
               "item_id": "7050",
               "item_name": "HAHMN.1+",
-              "supportable_fg_units": 323,
+              "supportable_fg_units": 322,
               "next_po_date": "2026-11-24",
               "next_po_original_date": null,
               "next_po_qty": 250.0,
@@ -198278,14 +198214,14 @@
         {
           "date": "2026-12-16",
           "display_date": "2026-12-19",
-          "buildable": 323,
-          "cumulative_demand": 65,
+          "buildable": 322,
+          "cumulative_demand": 64,
           "net_available": 258,
           "limiting_components": [
             {
               "item_id": "7050",
               "item_name": "HAHMN.1+",
-              "supportable_fg_units": 323,
+              "supportable_fg_units": 322,
               "next_po_date": "2026-11-24",
               "next_po_original_date": null,
               "next_po_qty": 250.0,
@@ -198299,14 +198235,14 @@
         {
           "date": "2027-02-01",
           "display_date": "2027-02-04",
-          "buildable": 323,
-          "cumulative_demand": 67,
+          "buildable": 322,
+          "cumulative_demand": 66,
           "net_available": 256,
           "limiting_components": [
             {
               "item_id": "7050",
               "item_name": "HAHMN.1+",
-              "supportable_fg_units": 323,
+              "supportable_fg_units": 322,
               "next_po_date": "2026-11-24",
               "next_po_original_date": null,
               "next_po_qty": 250.0,
@@ -198320,14 +198256,14 @@
         {
           "date": "2027-03-01",
           "display_date": "2027-03-04",
-          "buildable": 323,
-          "cumulative_demand": 68,
+          "buildable": 322,
+          "cumulative_demand": 67,
           "net_available": 255,
           "limiting_components": [
             {
               "item_id": "7050",
               "item_name": "HAHMN.1+",
-              "supportable_fg_units": 323,
+              "supportable_fg_units": 322,
               "next_po_date": "2026-11-24",
               "next_po_original_date": null,
               "next_po_qty": 250.0,
@@ -198339,7 +198275,7 @@
           "atp": 255
         }
       ],
-      "avg_eur_per_unit": 37.8285,
+      "avg_eur_per_unit": 37.4755,
       "avg_usd_per_unit": null,
       "available_today_dtc": 72,
       "overridden": false
@@ -198541,7 +198477,7 @@
           "atp": 30
         }
       ],
-      "avg_eur_per_unit": 37.8285,
+      "avg_eur_per_unit": 37.4755,
       "avg_usd_per_unit": null,
       "available_today_dtc": 0,
       "overridden": false
@@ -199995,9 +199931,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 2,
-      "committable": 30,
+      "committable": 21,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 32,
+      "max_buildable_horizon": 23,
       "next_available_date": "2026-08-26",
       "next_available_qty": 6,
       "first_shortfall_date": null,
@@ -200023,10 +199959,10 @@
         {
           "item_id": "7053",
           "item_name": "HALVT.S",
-          "po_number": "PO-US-2600014",
-          "supportable_fg_units": 9,
-          "next_po_date": "2026-09-04",
-          "next_po_qty": 9.0,
+          "po_number": "PO-US-2600004",
+          "supportable_fg_units": 10,
+          "next_po_date": "2026-09-15",
+          "next_po_qty": 10.0,
           "overdue": false
         }
       ],
@@ -200059,10 +199995,10 @@
             {
               "item_id": "7053",
               "item_name": "HALVT.S",
-              "po_number": "PO-US-2600014",
-              "supportable_fg_units": 9,
-              "next_po_date": "2026-09-04",
-              "next_po_qty": 9.0,
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 10,
+              "next_po_date": "2026-09-15",
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
@@ -200096,10 +200032,10 @@
             {
               "item_id": "7053",
               "item_name": "HALVT.S",
-              "po_number": "PO-US-2600014",
-              "supportable_fg_units": 9,
-              "next_po_date": "2026-09-04",
-              "next_po_qty": 9.0,
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 10,
+              "next_po_date": "2026-09-15",
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
@@ -200133,58 +200069,21 @@
             {
               "item_id": "7053",
               "item_name": "HALVT.S",
-              "po_number": "PO-US-2600014",
-              "supportable_fg_units": 9,
-              "next_po_date": "2026-09-04",
-              "next_po_qty": 9.0,
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 10,
+              "next_po_date": "2026-09-15",
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
           "atp": 13
         },
         {
-          "date": "2026-09-04",
-          "display_date": "2026-09-04",
-          "buildable": 22,
-          "cumulative_demand": 0,
-          "net_available": 22,
-          "limiting_components": [
-            {
-              "item_id": "7053",
-              "item_name": "HALVT.S",
-              "po_number": "PO-US-2600016",
-              "supportable_fg_units": 6,
-              "next_po_date": "2026-08-26",
-              "next_po_qty": 6.0,
-              "overdue": false
-            },
-            {
-              "item_id": "7053",
-              "item_name": "HALVT.S",
-              "po_number": "PO-US-2600016",
-              "supportable_fg_units": 7,
-              "next_po_date": "2026-09-02",
-              "next_po_qty": 7.0,
-              "overdue": false
-            },
-            {
-              "item_id": "7053",
-              "item_name": "HALVT.S",
-              "po_number": "PO-US-2600014",
-              "supportable_fg_units": 9,
-              "next_po_date": "2026-09-04",
-              "next_po_qty": 9.0,
-              "overdue": false
-            }
-          ],
-          "atp": 22
-        },
-        {
           "date": "2026-09-15",
           "display_date": "2026-09-15",
-          "buildable": 32,
+          "buildable": 23,
           "cumulative_demand": 2,
-          "net_available": 30,
+          "net_available": 21,
           "limiting_components": [
             {
               "item_id": "7053",
@@ -200207,14 +200106,14 @@
             {
               "item_id": "7053",
               "item_name": "HALVT.S",
-              "po_number": "PO-US-2600014",
-              "supportable_fg_units": 9,
-              "next_po_date": "2026-09-04",
-              "next_po_qty": 9.0,
+              "po_number": "PO-US-2600004",
+              "supportable_fg_units": 10,
+              "next_po_date": "2026-09-15",
+              "next_po_qty": 10.0,
               "overdue": false
             }
           ],
-          "atp": 30
+          "atp": 21
         }
       ],
       "avg_eur_per_unit": 64.99,
@@ -201493,9 +201392,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 5,
-      "committable": 31,
+      "committable": 36,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 36,
+      "max_buildable_horizon": 41,
       "next_available_date": "2026-08-26",
       "next_available_qty": 5,
       "first_shortfall_date": "2026-08-07",
@@ -201522,9 +201421,9 @@
           "item_id": "7056",
           "item_name": "HALVT.XL",
           "po_number": "PO-US-2600014",
-          "supportable_fg_units": 13,
+          "supportable_fg_units": 18,
           "next_po_date": "2026-09-04",
-          "next_po_qty": 13.0,
+          "next_po_qty": 18.0,
           "overdue": false
         }
       ],
@@ -201558,9 +201457,9 @@
               "item_id": "7056",
               "item_name": "HALVT.XL",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
@@ -201595,9 +201494,9 @@
               "item_id": "7056",
               "item_name": "HALVT.XL",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
@@ -201632,9 +201531,9 @@
               "item_id": "7056",
               "item_name": "HALVT.XL",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
@@ -201643,9 +201542,9 @@
         {
           "date": "2026-09-04",
           "display_date": "2026-09-04",
-          "buildable": 26,
+          "buildable": 31,
           "cumulative_demand": 1,
-          "net_available": 25,
+          "net_available": 30,
           "limiting_components": [
             {
               "item_id": "7056",
@@ -201669,20 +201568,20 @@
               "item_id": "7056",
               "item_name": "HALVT.XL",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
-          "atp": 25
+          "atp": 30
         },
         {
           "date": "2026-09-15",
           "display_date": "2026-09-15",
-          "buildable": 36,
+          "buildable": 41,
           "cumulative_demand": 5,
-          "net_available": 31,
+          "net_available": 36,
           "limiting_components": [
             {
               "item_id": "7056",
@@ -201706,13 +201605,13 @@
               "item_id": "7056",
               "item_name": "HALVT.XL",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
-          "atp": 31
+          "atp": 36
         }
       ],
       "avg_eur_per_unit": 64.99,
@@ -202043,9 +201942,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 2,
-      "committable": 34,
+      "committable": 39,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 36,
+      "max_buildable_horizon": 41,
       "next_available_date": "2026-08-26",
       "next_available_qty": 6,
       "first_shortfall_date": null,
@@ -202072,9 +201971,9 @@
           "item_id": "7057",
           "item_name": "HAGRC.S",
           "po_number": "PO-US-2600014",
-          "supportable_fg_units": 13,
+          "supportable_fg_units": 18,
           "next_po_date": "2026-09-04",
-          "next_po_qty": 13.0,
+          "next_po_qty": 18.0,
           "overdue": false
         }
       ],
@@ -202108,9 +202007,9 @@
               "item_id": "7057",
               "item_name": "HAGRC.S",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
@@ -202145,9 +202044,9 @@
               "item_id": "7057",
               "item_name": "HAGRC.S",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
@@ -202182,9 +202081,9 @@
               "item_id": "7057",
               "item_name": "HAGRC.S",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
@@ -202193,9 +202092,9 @@
         {
           "date": "2026-09-04",
           "display_date": "2026-09-04",
-          "buildable": 26,
+          "buildable": 31,
           "cumulative_demand": 0,
-          "net_available": 26,
+          "net_available": 31,
           "limiting_components": [
             {
               "item_id": "7057",
@@ -202219,20 +202118,20 @@
               "item_id": "7057",
               "item_name": "HAGRC.S",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
-          "atp": 26
+          "atp": 31
         },
         {
           "date": "2026-09-15",
           "display_date": "2026-09-15",
-          "buildable": 36,
+          "buildable": 41,
           "cumulative_demand": 2,
-          "net_available": 34,
+          "net_available": 39,
           "limiting_components": [
             {
               "item_id": "7057",
@@ -202256,13 +202155,13 @@
               "item_id": "7057",
               "item_name": "HAGRC.S",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
-          "atp": 34
+          "atp": 39
         }
       ],
       "avg_eur_per_unit": 74.8985,
@@ -202593,9 +202492,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 12,
-      "committable": 24,
+      "committable": 29,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 36,
+      "max_buildable_horizon": 41,
       "next_available_date": "2026-09-02",
       "next_available_qty": 5,
       "first_shortfall_date": "2026-08-07",
@@ -202622,9 +202521,9 @@
           "item_id": "7058",
           "item_name": "HAGRC.M",
           "po_number": "PO-US-2600014",
-          "supportable_fg_units": 13,
+          "supportable_fg_units": 18,
           "next_po_date": "2026-09-04",
-          "next_po_qty": 13.0,
+          "next_po_qty": 18.0,
           "overdue": false
         }
       ],
@@ -202658,9 +202557,9 @@
               "item_id": "7058",
               "item_name": "HAGRC.M",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
@@ -202695,9 +202594,9 @@
               "item_id": "7058",
               "item_name": "HAGRC.M",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
@@ -202732,9 +202631,9 @@
               "item_id": "7058",
               "item_name": "HAGRC.M",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
@@ -202743,9 +202642,9 @@
         {
           "date": "2026-09-04",
           "display_date": "2026-09-04",
-          "buildable": 26,
+          "buildable": 31,
           "cumulative_demand": 8,
-          "net_available": 18,
+          "net_available": 23,
           "limiting_components": [
             {
               "item_id": "7058",
@@ -202769,20 +202668,20 @@
               "item_id": "7058",
               "item_name": "HAGRC.M",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
-          "atp": 18
+          "atp": 23
         },
         {
           "date": "2026-09-15",
           "display_date": "2026-09-15",
-          "buildable": 36,
+          "buildable": 41,
           "cumulative_demand": 12,
-          "net_available": 24,
+          "net_available": 29,
           "limiting_components": [
             {
               "item_id": "7058",
@@ -202806,13 +202705,13 @@
               "item_id": "7058",
               "item_name": "HAGRC.M",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
-          "atp": 24
+          "atp": 29
         }
       ],
       "avg_eur_per_unit": 74.9038,
@@ -203143,9 +203042,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 9,
-      "committable": 27,
+      "committable": 32,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 36,
+      "max_buildable_horizon": 41,
       "next_available_date": "2026-09-02",
       "next_available_qty": 10,
       "first_shortfall_date": "2026-08-07",
@@ -203172,9 +203071,9 @@
           "item_id": "7059",
           "item_name": "HAGRC.L",
           "po_number": "PO-US-2600014",
-          "supportable_fg_units": 13,
+          "supportable_fg_units": 18,
           "next_po_date": "2026-09-04",
-          "next_po_qty": 13.0,
+          "next_po_qty": 18.0,
           "overdue": false
         }
       ],
@@ -203208,9 +203107,9 @@
               "item_id": "7059",
               "item_name": "HAGRC.L",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
@@ -203245,9 +203144,9 @@
               "item_id": "7059",
               "item_name": "HAGRC.L",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
@@ -203282,9 +203181,9 @@
               "item_id": "7059",
               "item_name": "HAGRC.L",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
@@ -203319,9 +203218,9 @@
               "item_id": "7059",
               "item_name": "HAGRC.L",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
@@ -203330,9 +203229,9 @@
         {
           "date": "2026-09-04",
           "display_date": "2026-09-04",
-          "buildable": 26,
+          "buildable": 31,
           "cumulative_demand": 3,
-          "net_available": 23,
+          "net_available": 28,
           "limiting_components": [
             {
               "item_id": "7059",
@@ -203356,20 +203255,20 @@
               "item_id": "7059",
               "item_name": "HAGRC.L",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
-          "atp": 23
+          "atp": 28
         },
         {
           "date": "2026-09-15",
           "display_date": "2026-09-15",
-          "buildable": 36,
+          "buildable": 41,
           "cumulative_demand": 9,
-          "net_available": 27,
+          "net_available": 32,
           "limiting_components": [
             {
               "item_id": "7059",
@@ -203393,13 +203292,13 @@
               "item_id": "7059",
               "item_name": "HAGRC.L",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
-          "atp": 27
+          "atp": 32
         }
       ],
       "avg_eur_per_unit": 74.9263,
@@ -203625,9 +203524,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 5,
-      "committable": 31,
+      "committable": 36,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 36,
+      "max_buildable_horizon": 41,
       "next_available_date": "2026-08-26",
       "next_available_qty": 5,
       "first_shortfall_date": "2026-08-07",
@@ -203654,9 +203553,9 @@
           "item_id": "7060",
           "item_name": "HAGRC.XL",
           "po_number": "PO-US-2600014",
-          "supportable_fg_units": 13,
+          "supportable_fg_units": 18,
           "next_po_date": "2026-09-04",
-          "next_po_qty": 13.0,
+          "next_po_qty": 18.0,
           "overdue": false
         }
       ],
@@ -203690,9 +203589,9 @@
               "item_id": "7060",
               "item_name": "HAGRC.XL",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
@@ -203727,9 +203626,9 @@
               "item_id": "7060",
               "item_name": "HAGRC.XL",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
@@ -203764,9 +203663,9 @@
               "item_id": "7060",
               "item_name": "HAGRC.XL",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
@@ -203775,9 +203674,9 @@
         {
           "date": "2026-09-04",
           "display_date": "2026-09-04",
-          "buildable": 26,
+          "buildable": 31,
           "cumulative_demand": 1,
-          "net_available": 25,
+          "net_available": 30,
           "limiting_components": [
             {
               "item_id": "7060",
@@ -203801,20 +203700,20 @@
               "item_id": "7060",
               "item_name": "HAGRC.XL",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
-          "atp": 25
+          "atp": 30
         },
         {
           "date": "2026-09-15",
           "display_date": "2026-09-15",
-          "buildable": 36,
+          "buildable": 41,
           "cumulative_demand": 5,
-          "net_available": 31,
+          "net_available": 36,
           "limiting_components": [
             {
               "item_id": "7060",
@@ -203838,13 +203737,13 @@
               "item_id": "7060",
               "item_name": "HAGRC.XL",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
-          "atp": 31
+          "atp": 36
         }
       ],
       "avg_eur_per_unit": 74.99,
@@ -204133,9 +204032,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 4,
-      "committable": 32,
+      "committable": 37,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 36,
+      "max_buildable_horizon": 41,
       "next_available_date": "2026-08-26",
       "next_available_qty": 6,
       "first_shortfall_date": null,
@@ -204162,9 +204061,9 @@
           "item_id": "7061",
           "item_name": "HAVNX.S",
           "po_number": "PO-US-2600014",
-          "supportable_fg_units": 13,
+          "supportable_fg_units": 18,
           "next_po_date": "2026-09-04",
-          "next_po_qty": 13.0,
+          "next_po_qty": 18.0,
           "overdue": false
         }
       ],
@@ -204198,9 +204097,9 @@
               "item_id": "7061",
               "item_name": "HAVNX.S",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
@@ -204235,9 +204134,9 @@
               "item_id": "7061",
               "item_name": "HAVNX.S",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
@@ -204272,9 +204171,9 @@
               "item_id": "7061",
               "item_name": "HAVNX.S",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
@@ -204283,9 +204182,9 @@
         {
           "date": "2026-09-04",
           "display_date": "2026-09-04",
-          "buildable": 26,
+          "buildable": 31,
           "cumulative_demand": 0,
-          "net_available": 26,
+          "net_available": 31,
           "limiting_components": [
             {
               "item_id": "7061",
@@ -204309,20 +204208,20 @@
               "item_id": "7061",
               "item_name": "HAVNX.S",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
-          "atp": 26
+          "atp": 31
         },
         {
           "date": "2026-09-15",
           "display_date": "2026-09-15",
-          "buildable": 36,
+          "buildable": 39,
           "cumulative_demand": 4,
-          "net_available": 32,
+          "net_available": 35,
           "limiting_components": [
             {
               "item_id": "7061",
@@ -204346,13 +204245,50 @@
               "item_id": "7061",
               "item_name": "HAVNX.S",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 13,
+              "supportable_fg_units": 18,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 13.0,
+              "next_po_qty": 18.0,
               "overdue": false
             }
           ],
-          "atp": 32
+          "atp": 35
+        },
+        {
+          "date": "2026-12-25",
+          "display_date": "2026-12-25",
+          "buildable": 41,
+          "cumulative_demand": 4,
+          "net_available": 37,
+          "limiting_components": [
+            {
+              "item_id": "7061",
+              "item_name": "HAVNX.S",
+              "po_number": "PO-US-2600016",
+              "supportable_fg_units": 6,
+              "next_po_date": "2026-08-26",
+              "next_po_qty": 6.0,
+              "overdue": false
+            },
+            {
+              "item_id": "7061",
+              "item_name": "HAVNX.S",
+              "po_number": "PO-US-2600016",
+              "supportable_fg_units": 7,
+              "next_po_date": "2026-09-02",
+              "next_po_qty": 7.0,
+              "overdue": false
+            },
+            {
+              "item_id": "7061",
+              "item_name": "HAVNX.S",
+              "po_number": "PO-US-2600014",
+              "supportable_fg_units": 18,
+              "next_po_date": "2026-09-04",
+              "next_po_qty": 18.0,
+              "overdue": false
+            }
+          ],
+          "atp": 37
         }
       ],
       "avg_eur_per_unit": 49.99,
@@ -204662,9 +204598,9 @@
       "status": "incoming",
       "available_today": 0,
       "total_open_demand": 14,
-      "committable": 36,
+      "committable": 52,
       "max_buildable_today": 0,
-      "max_buildable_horizon": 50,
+      "max_buildable_horizon": 66,
       "next_available_date": "2026-08-26",
       "next_available_qty": 12,
       "first_shortfall_date": "2026-08-07",
@@ -204691,9 +204627,9 @@
           "item_id": "7062",
           "item_name": "HAVNX.M",
           "po_number": "PO-US-2600014",
-          "supportable_fg_units": 16,
+          "supportable_fg_units": 32,
           "next_po_date": "2026-09-04",
-          "next_po_qty": 16.0,
+          "next_po_qty": 32.0,
           "overdue": false
         }
       ],
@@ -204727,9 +204663,9 @@
               "item_id": "7062",
               "item_name": "HAVNX.M",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 16,
+              "supportable_fg_units": 32,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 16.0,
+              "next_po_qty": 32.0,
               "overdue": false
             }
           ],
@@ -204764,9 +204700,9 @@
               "item_id": "7062",
               "item_name": "HAVNX.M",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 16,
+              "supportable_fg_units": 32,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 16.0,
+              "next_po_qty": 32.0,
               "overdue": false
             }
           ],
@@ -204801,9 +204737,9 @@
               "item_id": "7062",
               "item_name": "HAVNX.M",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 16,
+              "supportable_fg_units": 32,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 16.0,
+              "next_po_qty": 32.0,
               "overdue": false
             }
           ],
@@ -204812,9 +204748,9 @@
         {
           "date": "2026-09-04",
           "display_date": "2026-09-04",
-          "buildable": 40,
+          "buildable": 56,
           "cumulative_demand": 8,
-          "net_available": 32,
+          "net_available": 48,
           "limiting_components": [
             {
               "item_id": "7062",
@@ -204838,20 +204774,20 @@
               "item_id": "7062",
               "item_name": "HAVNX.M",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 16,
+              "supportable_fg_units": 32,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 16.0,
+              "next_po_qty": 32.0,
               "overdue": false
             }
           ],
-          "atp": 32
+          "atp": 48
         },
         {
           "date": "2026-09-15",
           "display_date": "2026-09-15",
-          "buildable": 50,
+          "buildable": 66,
           "cumulative_demand": 14,
-          "net_available": 36,
+          "net_available": 52,
           "limiting_components": [
             {
               "item_id": "7062",
@@ -204875,13 +204811,13 @@
               "item_id": "7062",
               "item_name": "HAVNX.M",
               "po_number": "PO-US-2600014",
-              "supportable_fg_units": 16,
+              "supportable_fg_units": 32,
               "next_po_date": "2026-09-04",
-              "next_po_qty": 16.0,
+              "next_po_qty": 32.0,
               "overdue": false
             }
           ],
-          "atp": 36
+          "atp": 52
         }
       ],
       "avg_eur_per_unit": 49.99,
@@ -208538,7 +208474,7 @@
       "first_shortfall_date": null,
       "limiting_components": [],
       "availability_staircase": [],
-      "avg_eur_per_unit": 42.4289,
+      "avg_eur_per_unit": 42.1832,
       "avg_usd_per_unit": 60.59,
       "available_today_dtc": null,
       "overridden": true
@@ -208777,7 +208713,7 @@
           "atp": 19
         }
       ],
-      "avg_eur_per_unit": 42.4289,
+      "avg_eur_per_unit": 42.1832,
       "avg_usd_per_unit": 60.59,
       "available_today_dtc": 8,
       "overridden": false
@@ -210173,10 +210109,10 @@
       "embargo_date": null,
       "status": "in_stock",
       "available_today": 110,
-      "total_open_demand": 99,
+      "total_open_demand": 97,
       "committable": 110,
-      "max_buildable_today": 209,
-      "max_buildable_horizon": 209,
+      "max_buildable_today": 207,
+      "max_buildable_horizon": 207,
       "next_available_date": null,
       "next_available_qty": null,
       "first_shortfall_date": null,
@@ -210184,7 +210120,7 @@
         {
           "item_id": "7097",
           "item_name": "ZAALP.SPRTX.20",
-          "supportable_fg_units": 209,
+          "supportable_fg_units": 207,
           "next_po_date": null,
           "next_po_original_date": null,
           "next_po_qty": 0,
@@ -210197,35 +210133,14 @@
         {
           "date": "2026-08-07",
           "display_date": "2026-08-07",
-          "buildable": 209,
+          "buildable": 207,
           "cumulative_demand": 1,
-          "net_available": 208,
-          "limiting_components": [
-            {
-              "item_id": "7097",
-              "item_name": "ZAALP.SPRTX.20",
-              "supportable_fg_units": 209,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            }
-          ],
-          "atp": 110
-        },
-        {
-          "date": "2026-08-09",
-          "display_date": "2026-08-12",
-          "buildable": 209,
-          "cumulative_demand": 3,
           "net_available": 206,
           "limiting_components": [
             {
               "item_id": "7097",
               "item_name": "ZAALP.SPRTX.20",
-              "supportable_fg_units": 209,
+              "supportable_fg_units": 207,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -210239,14 +210154,14 @@
         {
           "date": "2026-08-15",
           "display_date": "2026-08-18",
-          "buildable": 209,
-          "cumulative_demand": 17,
+          "buildable": 207,
+          "cumulative_demand": 15,
           "net_available": 192,
           "limiting_components": [
             {
               "item_id": "7097",
               "item_name": "ZAALP.SPRTX.20",
-              "supportable_fg_units": 209,
+              "supportable_fg_units": 207,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -210260,14 +210175,14 @@
         {
           "date": "2026-08-28",
           "display_date": "2026-08-31",
-          "buildable": 209,
-          "cumulative_demand": 21,
+          "buildable": 207,
+          "cumulative_demand": 19,
           "net_available": 188,
           "limiting_components": [
             {
               "item_id": "7097",
               "item_name": "ZAALP.SPRTX.20",
-              "supportable_fg_units": 209,
+              "supportable_fg_units": 207,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -210281,14 +210196,14 @@
         {
           "date": "2026-09-01",
           "display_date": "2026-09-04",
-          "buildable": 209,
-          "cumulative_demand": 28,
+          "buildable": 207,
+          "cumulative_demand": 26,
           "net_available": 181,
           "limiting_components": [
             {
               "item_id": "7097",
               "item_name": "ZAALP.SPRTX.20",
-              "supportable_fg_units": 209,
+              "supportable_fg_units": 207,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -210302,14 +210217,14 @@
         {
           "date": "2026-09-25",
           "display_date": "2026-09-28",
-          "buildable": 209,
-          "cumulative_demand": 31,
+          "buildable": 207,
+          "cumulative_demand": 29,
           "net_available": 178,
           "limiting_components": [
             {
               "item_id": "7097",
               "item_name": "ZAALP.SPRTX.20",
-              "supportable_fg_units": 209,
+              "supportable_fg_units": 207,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -210323,14 +210238,14 @@
         {
           "date": "2026-10-01",
           "display_date": "2026-10-04",
-          "buildable": 209,
-          "cumulative_demand": 38,
+          "buildable": 207,
+          "cumulative_demand": 36,
           "net_available": 171,
           "limiting_components": [
             {
               "item_id": "7097",
               "item_name": "ZAALP.SPRTX.20",
-              "supportable_fg_units": 209,
+              "supportable_fg_units": 207,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -210344,14 +210259,14 @@
         {
           "date": "2026-10-15",
           "display_date": "2026-10-18",
-          "buildable": 209,
-          "cumulative_demand": 40,
+          "buildable": 207,
+          "cumulative_demand": 38,
           "net_available": 169,
           "limiting_components": [
             {
               "item_id": "7097",
               "item_name": "ZAALP.SPRTX.20",
-              "supportable_fg_units": 209,
+              "supportable_fg_units": 207,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -210365,14 +210280,14 @@
         {
           "date": "2026-11-01",
           "display_date": "2026-11-04",
-          "buildable": 209,
-          "cumulative_demand": 45,
+          "buildable": 207,
+          "cumulative_demand": 43,
           "net_available": 164,
           "limiting_components": [
             {
               "item_id": "7097",
               "item_name": "ZAALP.SPRTX.20",
-              "supportable_fg_units": 209,
+              "supportable_fg_units": 207,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -210386,14 +210301,14 @@
         {
           "date": "2026-11-02",
           "display_date": "2026-11-05",
-          "buildable": 209,
-          "cumulative_demand": 48,
+          "buildable": 207,
+          "cumulative_demand": 46,
           "net_available": 161,
           "limiting_components": [
             {
               "item_id": "7097",
               "item_name": "ZAALP.SPRTX.20",
-              "supportable_fg_units": 209,
+              "supportable_fg_units": 207,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -210407,14 +210322,14 @@
         {
           "date": "2026-11-25",
           "display_date": "2026-11-28",
-          "buildable": 209,
-          "cumulative_demand": 51,
+          "buildable": 207,
+          "cumulative_demand": 49,
           "net_available": 158,
           "limiting_components": [
             {
               "item_id": "7097",
               "item_name": "ZAALP.SPRTX.20",
-              "supportable_fg_units": 209,
+              "supportable_fg_units": 207,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -210428,14 +210343,14 @@
         {
           "date": "2026-12-02",
           "display_date": "2026-12-05",
-          "buildable": 209,
-          "cumulative_demand": 53,
+          "buildable": 207,
+          "cumulative_demand": 51,
           "net_available": 156,
           "limiting_components": [
             {
               "item_id": "7097",
               "item_name": "ZAALP.SPRTX.20",
-              "supportable_fg_units": 209,
+              "supportable_fg_units": 207,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -210449,14 +210364,14 @@
         {
           "date": "2026-12-15",
           "display_date": "2026-12-18",
-          "buildable": 209,
-          "cumulative_demand": 63,
+          "buildable": 207,
+          "cumulative_demand": 61,
           "net_available": 146,
           "limiting_components": [
             {
               "item_id": "7097",
               "item_name": "ZAALP.SPRTX.20",
-              "supportable_fg_units": 209,
+              "supportable_fg_units": 207,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -210470,14 +210385,14 @@
         {
           "date": "2026-12-16",
           "display_date": "2026-12-19",
-          "buildable": 209,
-          "cumulative_demand": 83,
+          "buildable": 207,
+          "cumulative_demand": 81,
           "net_available": 126,
           "limiting_components": [
             {
               "item_id": "7097",
               "item_name": "ZAALP.SPRTX.20",
-              "supportable_fg_units": 209,
+              "supportable_fg_units": 207,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -210491,14 +210406,14 @@
         {
           "date": "2026-12-21",
           "display_date": "2026-12-24",
-          "buildable": 209,
-          "cumulative_demand": 93,
+          "buildable": 207,
+          "cumulative_demand": 91,
           "net_available": 116,
           "limiting_components": [
             {
               "item_id": "7097",
               "item_name": "ZAALP.SPRTX.20",
-              "supportable_fg_units": 209,
+              "supportable_fg_units": 207,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -210512,14 +210427,14 @@
         {
           "date": "2026-12-24",
           "display_date": "2026-12-27",
-          "buildable": 209,
-          "cumulative_demand": 98,
+          "buildable": 207,
+          "cumulative_demand": 96,
           "net_available": 111,
           "limiting_components": [
             {
               "item_id": "7097",
               "item_name": "ZAALP.SPRTX.20",
-              "supportable_fg_units": 209,
+              "supportable_fg_units": 207,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -210533,14 +210448,14 @@
         {
           "date": "2027-05-03",
           "display_date": "2027-05-06",
-          "buildable": 209,
-          "cumulative_demand": 99,
+          "buildable": 207,
+          "cumulative_demand": 97,
           "net_available": 110,
           "limiting_components": [
             {
               "item_id": "7097",
               "item_name": "ZAALP.SPRTX.20",
-              "supportable_fg_units": 209,
+              "supportable_fg_units": 207,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -210552,7 +210467,7 @@
           "atp": 110
         }
       ],
-      "avg_eur_per_unit": 83.5203,
+      "avg_eur_per_unit": 82.4538,
       "avg_usd_per_unit": 137.591,
       "available_today_dtc": 207,
       "overridden": false
@@ -210791,7 +210706,7 @@
           "atp": 52
         }
       ],
-      "avg_eur_per_unit": 83.5203,
+      "avg_eur_per_unit": 82.4538,
       "avg_usd_per_unit": 137.591,
       "available_today_dtc": 0,
       "overridden": false
@@ -218796,9 +218711,9 @@
       "embargoed": false,
       "embargo_date": null,
       "status": "in_stock",
-      "available_today": 114,
-      "total_open_demand": 34,
-      "committable": 114,
+      "available_today": 111,
+      "total_open_demand": 37,
+      "committable": 111,
       "max_buildable_today": 148,
       "max_buildable_horizon": 148,
       "next_available_date": null,
@@ -218837,14 +218752,35 @@
               "source": "PO"
             }
           ],
-          "atp": 114
+          "atp": 111
+        },
+        {
+          "date": "2026-08-09",
+          "display_date": "2026-08-12",
+          "buildable": 148,
+          "cumulative_demand": 3,
+          "net_available": 145,
+          "limiting_components": [
+            {
+              "item_id": "7118",
+              "item_name": "ELMHAT.MSH",
+              "supportable_fg_units": 148,
+              "next_po_date": null,
+              "next_po_original_date": null,
+              "next_po_qty": 0,
+              "overdue": false,
+              "po_number": null,
+              "source": "PO"
+            }
+          ],
+          "atp": 111
         },
         {
           "date": "2026-09-07",
           "display_date": "2026-09-10",
           "buildable": 148,
-          "cumulative_demand": 2,
-          "net_available": 146,
+          "cumulative_demand": 5,
+          "net_available": 143,
           "limiting_components": [
             {
               "item_id": "7118",
@@ -218858,14 +218794,14 @@
               "source": "PO"
             }
           ],
-          "atp": 114
+          "atp": 111
         },
         {
           "date": "2026-09-16",
           "display_date": "2026-09-19",
           "buildable": 148,
-          "cumulative_demand": 10,
-          "net_available": 138,
+          "cumulative_demand": 13,
+          "net_available": 135,
           "limiting_components": [
             {
               "item_id": "7118",
@@ -218879,14 +218815,14 @@
               "source": "PO"
             }
           ],
-          "atp": 114
+          "atp": 111
         },
         {
           "date": "2026-10-01",
           "display_date": "2026-10-04",
           "buildable": 148,
-          "cumulative_demand": 17,
-          "net_available": 131,
+          "cumulative_demand": 20,
+          "net_available": 128,
           "limiting_components": [
             {
               "item_id": "7118",
@@ -218900,14 +218836,14 @@
               "source": "PO"
             }
           ],
-          "atp": 114
+          "atp": 111
         },
         {
           "date": "2026-11-27",
           "display_date": "2026-11-30",
           "buildable": 148,
-          "cumulative_demand": 19,
-          "net_available": 129,
+          "cumulative_demand": 22,
+          "net_available": 126,
           "limiting_components": [
             {
               "item_id": "7118",
@@ -218921,14 +218857,14 @@
               "source": "PO"
             }
           ],
-          "atp": 114
+          "atp": 111
         },
         {
           "date": "2026-12-15",
           "display_date": "2026-12-18",
           "buildable": 148,
-          "cumulative_demand": 29,
-          "net_available": 119,
+          "cumulative_demand": 32,
+          "net_available": 116,
           "limiting_components": [
             {
               "item_id": "7118",
@@ -218942,14 +218878,14 @@
               "source": "PO"
             }
           ],
-          "atp": 114
+          "atp": 111
         },
         {
           "date": "2026-12-16",
           "display_date": "2026-12-19",
           "buildable": 148,
-          "cumulative_demand": 34,
-          "net_available": 114,
+          "cumulative_demand": 37,
+          "net_available": 111,
           "limiting_components": [
             {
               "item_id": "7118",
@@ -218963,12 +218899,12 @@
               "source": "PO"
             }
           ],
-          "atp": 114
+          "atp": 111
         }
       ],
-      "avg_eur_per_unit": 27.49,
+      "avg_eur_per_unit": 28.9164,
       "avg_usd_per_unit": 40.19,
-      "available_today_dtc": 148,
+      "available_today_dtc": 145,
       "overridden": false
     },
     {
@@ -219123,7 +219059,7 @@
           "atp": 104
         }
       ],
-      "avg_eur_per_unit": 27.49,
+      "avg_eur_per_unit": 28.9164,
       "avg_usd_per_unit": 40.19,
       "available_today_dtc": 19,
       "overridden": false
