@@ -1,12 +1,12 @@
 {
-  "refreshed_at": "2026-08-07T16:26:01.391807",
+  "refreshed_at": "2026-08-07T17:57:00.132939",
   "refreshed_by": "scheduled",
   "sku_count_verrayes": 318,
   "sku_count_usa3pl": 318,
   "override_count": 31,
   "dtc_pass": "ok",
   "manufacturing_pass": "ok",
-  "manufacturing_wo_count": 2661,
+  "manufacturing_wo_count": 2659,
   "sop_pass": "ok",
   "sop_row_counts": {
     "q13": 832,
@@ -18,6 +18,8 @@
   "status": "ok",
   "warnings": [
     "2 promoted parent(s) have open Work Orders with no completion date in NetSuite; supply was scheduled from the WO transaction date as a fallback: 0IMCOEACPE03GN, 0RTTDKNI.B. Set end dates or close stale WOs.",
-    "2 intercompany PO(s) had computed in-transit exceeding the open PO quantity (clamped): PO-US-2600007, PO-US-2600008. Likely a receipt/quantity discrepancy \u2014 verify shipped vs received."
+    "2 intercompany PO(s) had computed in-transit exceeding the open PO quantity (clamped): PO-US-2600007, PO-US-2600008. Likely a receipt/quantity discrepancy \u2014 verify shipped vs received.",
+    "8 FG(s) have intercompany US PO quantity with no Verrayes coverage within the horizon (oversold ahead of the linked SO's queue position; residual supply not landed): ELMBAN.CK, ELMBEAN.MRLN, ELMBEAN.MRN, PIMBG.NW, PINXM.RS.CX, PJCV.AG, PJVS.WG, ZAALP.SPRT.30. Procurement action at Verrayes likely needed.",
+    "8 intercompany PO(s) have no open/dated linked Italian SO in Q4 (closed or dateless); queue anchor fell back to the PO receipt date: PO-US-2600004, PO-US-2600006, PO-US-2600007, PO-US-2600008, PO-US-2600010, PO-US-2600014, PO-US-2600015, PO-US-2600016."
   ]
 }
