@@ -43,6 +43,14 @@ header{background:var(--surface);border-bottom:1px solid var(--border);padding:0
 .h-title{font-size:13px;color:var(--muted);}
 .h-right{margin-left:auto;display:flex;align-items:center;gap:.75rem;}
 .freshness{display:flex;align-items:center;gap:.4rem;font-family:var(--mono);font-size:11px;color:var(--muted);}
+/* Engine warnings badge (metadata.json → warnings[]) */
+.warn-badge{display:none;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.45);border-radius:4px;color:#f59e0b;cursor:pointer;height:28px;padding:0 .5rem;align-items:center;gap:.3rem;font-family:var(--mono);font-size:11px;transition:all .15s;}
+.warn-badge.show{display:flex;}
+.warn-badge:hover{background:rgba(245,158,11,.2);}
+.warn-panel{display:none;position:fixed;top:56px;right:1.5rem;width:460px;max-width:92vw;max-height:60vh;overflow:auto;background:var(--surface);border:1px solid rgba(245,158,11,.45);border-radius:8px;box-shadow:0 12px 40px rgba(0,0,0,.5);z-index:150;padding:.5rem 0;}
+.warn-panel.open{display:block;}
+.warn-panel-title{font-size:11px;font-weight:600;color:#f59e0b;padding:.35rem 1rem .5rem;letter-spacing:.05em;text-transform:uppercase;}
+.warn-item{font-family:var(--mono);font-size:11px;color:var(--text);padding:.5rem 1rem;border-top:1px solid var(--border);line-height:1.5;}
 .f-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2.5s ease-in-out infinite;}
 @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
 @keyframes spin{to{transform:rotate(360deg);}}
@@ -314,6 +322,7 @@ tr.is-overridden td:first-child{box-shadow:inset 3px 0 0 var(--amber);}
     <button class="view-tab intel-tab" id="vtab-intel" onclick="switchView('intelligence')">✦ Intelligence</button>
   </div>
   <div class="h-right">
+    <button id="warn-badge" class="warn-badge" onclick="toggleWarnPanel(event)" title="Engine warnings from last refresh">⚠ <span id="warn-count"></span></button>
     <button class="admin-btn" onclick="openAdmin()" title="Admin Panel">⚙</button>
     <div class="freshness">
       <div class="f-dot"></div>
@@ -321,6 +330,10 @@ tr.is-overridden td:first-child{box-shadow:inset 3px 0 0 var(--amber);}
     </div>
   </div>
 </header>
+<div id="warn-panel" class="warn-panel">
+  <div class="warn-panel-title">Refresh warnings</div>
+  <div id="warn-list"></div>
+</div>
 
 <div class="filter-bar">
   <div class="loc-tabs">
@@ -739,11 +752,28 @@ async function boot(){
         'Data as of '+d.getDate()+' '+mo[d.getMonth()]+' '+d.getFullYear()+
         ' '+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');
     }
+    // Engine warnings badge — driven by metadata.json warnings[] (non-fatal
+    // hygiene/visibility warnings emitted by the compute engine).
+    if(Array.isArray(me.warnings)&&me.warnings.length){
+      document.getElementById('warn-count').textContent=me.warnings.length;
+      document.getElementById('warn-list').innerHTML=
+        me.warnings.map(w=>'<div class="warn-item">'+esc(w)+'</div>').join('');
+      document.getElementById('warn-badge').classList.add('show');
+    }
     filter();
   }catch(e){
     document.getElementById('content').innerHTML='<div class="state-wrap"><div class="err-box">Could not load data.<br><small>'+esc(e.message)+'</small></div></div>';
   }
 }
+
+function toggleWarnPanel(ev){
+  ev.stopPropagation();
+  document.getElementById('warn-panel').classList.toggle('open');
+}
+document.addEventListener('click',function(ev){
+  const p=document.getElementById('warn-panel');
+  if(p&&p.classList.contains('open')&&!p.contains(ev.target))p.classList.remove('open');
+});
 
 function setLoc(l){
   loc=l;
