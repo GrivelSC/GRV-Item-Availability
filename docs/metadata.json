@@ -1,5 +1,5 @@
 {
-  "refreshed_at": "2026-08-11T08:31:59.030886",
+  "refreshed_at": "2026-08-11T08:48:15.064271",
   "refreshed_by": "scheduled",
   "sku_count_verrayes": 318,
   "sku_count_usa3pl": 318,
@@ -30,7 +30,7 @@
     "8 FG(s) have intercompany US PO quantity with no Verrayes coverage within the horizon (oversold ahead of the linked SO's queue position; residual supply not landed): ELMBAN.CK, ELMBEAN.MRLN, ELMBEAN.MRN, PIMBG.NW, PINXM.RS.CX, PJCV.AG, PJVS.WG, ZAALP.SPRT.30. Procurement action at Verrayes likely needed.",
     "8 intercompany PO(s) have no open/dated linked Italian SO in Q4 (closed or dateless); queue anchor fell back to the PO receipt date: PO-US-2600004, PO-US-2600006, PO-US-2600007, PO-US-2600008, PO-US-2600010, PO-US-2600014, PO-US-2600015, PO-US-2600016.",
     "BOM tab: 68 finished good(s) have no active BOM and are shown as single-node buyouts costed from their own purchase history (57 of them have any). Their COGS is a purchase price, not a build-up, so the category split reads as one line.",
-    "BOM tab: 214 leaf component(s) have no cost in any source \u2014 their contribution to COGS is understated as zero. See the Cost gap panel.",
+    "BOM tab: 214 leaf component(s) have no cost in any source (194 packaging, 18 structural, 2 service) \u2014 their contribution to COGS is understated as zero. See the Cost gap panel.",
     "BOM tab: purchase unit differs from stock unit and no conversion is configured for 0TBDTR1228, 0TBETR1238, 9DP490_ADESEPO. Add settings.bom_uom_conversions.<item_id>.purchase_to_stock \u2014 these costs are wrong until you do."
   ]
 }
