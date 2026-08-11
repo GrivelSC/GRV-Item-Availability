@@ -396,6 +396,16 @@ pre code {
     </div>
 
     <div class="nav-section">
+      <div class="nav-section-title">The Other Tabs</div>
+      <a href="#tab-manufacturing" class="nav-link">Manufacturing</a>
+      <a href="#tab-wbr" class="nav-link">WBR · Weekly Review</a>
+      <a href="#tab-sop" class="nav-link">S&amp;OP</a>
+      <a href="#tab-bom" class="nav-link">BOM · Cost Build-up</a>
+      <a href="#bom-cascade" class="nav-link sub">↳ How costs are found</a>
+      <a href="#bom-compare" class="nav-link sub">↳ Comparing two SKUs</a>
+    </div>
+
+    <div class="nav-section">
       <div class="nav-section-title">Understanding the Data</div>
       <a href="#statuses" class="nav-link">Status Definitions</a>
       <a href="#fields" class="nav-link">Field Reference</a>
@@ -403,12 +413,12 @@ pre code {
       <a href="#logic" class="nav-link">How Availability Is Calculated</a>
       <a href="#logic-verrayes" class="nav-link sub">↳ VERRAYES logic</a>
       <a href="#logic-usa" class="nav-link sub">↳ USA-3PL cascade</a>
+      <a href="#asp" class="nav-link">Prices, ASP &amp; Margin</a>
     </div>
 
     <div class="nav-section">
       <div class="nav-section-title">Intelligence Module</div>
       <a href="#intel-insights" class="nav-link">Auto-Insights Panel</a>
-      <a href="#intel-chat" class="nav-link">AI Chat Assistant</a>
     </div>
 
     <div class="nav-section">
@@ -428,7 +438,7 @@ pre code {
   </nav>
 
   <div class="sidebar-footer">
-    Updated May 2026 · GRV v2
+    Updated Aug 2026 · GRV v3
   </div>
 </aside>
 
@@ -438,10 +448,10 @@ pre code {
   <div class="doc-header">
     <div class="doc-eyebrow">Grivel · Internal Documentation</div>
     <h1 class="doc-title">GRV Supply Chain Control Tower</h1>
-    <p class="doc-subtitle">Complete user guide for the item availability dashboard — for both regular users and administrators.</p>
+    <p class="doc-subtitle">Complete user guide for the control tower — availability, manufacturing, the weekly review, S&amp;OP and BOM cost analysis — for both regular users and administrators.</p>
     <div class="doc-meta">
-      <span>Version 2.0</span>
-      <span>Updated May 2026</span>
+      <span>Version 3.0</span>
+      <span>Updated Aug 2026</span>
       <span>grivelsc.github.io/GRV-Item-Availability/</span>
     </div>
   </div>
@@ -662,6 +672,183 @@ pre code {
 
 
   <!-- ── STATUSES ───────────────────────────────────────── -->
+
+  <!-- ── MANUFACTURING TAB ──────────────────────────────── -->
+  <section id="tab-manufacturing">
+    <div class="section-label">The Other Tabs</div>
+    <h2>Manufacturing</h2>
+
+    <p>The <strong>Manufacturing</strong> tab answers one question: for every open work order at Verrayes, can it actually be built right now with the components on hand — and if not, which component is holding it up and when does incoming supply unlock it?</p>
+
+    <div class="callout info">
+      <div class="callout-title">Verrayes only</div>
+      <p>Production happens in Italy. On the USA-3PL tab this view shows <em>"No work orders at USA · 3PL — production is Verrayes-only."</em></p>
+    </div>
+
+    <h3>Tier cards</h3>
+    <p>The cards along the top are both a summary and a filter — click one to filter the table below, click <strong>Open WOs</strong> to clear.</p>
+    <table class="doc-table">
+      <thead><tr><th>Card</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Ready</strong></td><td>Every component need can be allocated from stock today. Buildable in full.</td></tr>
+        <tr><td><strong>Partial</strong></td><td>Partially buildable. The percentage is the coverage of the worst component.</td></tr>
+        <tr><td><strong>Blocked</strong></td><td>Nothing buildable today, but every shortage is covered by supply that is already scheduled.</td></tr>
+        <tr><td><strong>No Supply</strong></td><td>Nothing buildable and at least one shortage has <em>no</em> incoming supply at all. This is the procurement-action tier.</td></tr>
+        <tr><td><strong>CL · not pooled</strong></td><td>Conto lavoro. The build happens at a subcontractor whose components sit outside the Verrayes stock pool, so feasibility is not computed. Listed for visibility only.</td></tr>
+        <tr><td><strong>Overdue</strong></td><td>Past its due date.</td></tr>
+        <tr><td><strong>Stale &gt;60d</strong></td><td>Zero units built and overdue by more than the stale threshold. These are candidates for closing or rescheduling in NetSuite.</td></tr>
+      </tbody>
+    </table>
+    <p>Percentages on the cards are calculated against pooled work orders — conto-lavoro WOs are excluded from the denominator because their feasibility is not measured.</p>
+
+    <h3>Charts</h3>
+    <p><strong>Top blocking components</strong> ranks the components holding back the most units across all pooled WOs. <strong>Execution outlook</strong> shows cumulative buildable units by ISO week — the shape of the recovery as supply lands.</p>
+
+    <h3>The work-order table</h3>
+    <p>Every column sorts. <strong>Executable</strong> reads <code>now</code> for ready WOs, otherwise the ISO week when the last shortage is covered, otherwise <em>no full supply</em>. A <code>≈</code> next to a due date means the work order has no completion date in NetSuite and the transaction date was used instead.</p>
+    <p>Click any row to expand the <strong>component checklist</strong>: need, allocated, gap, next supply (📦 for a purchase order, 🏭 for another work order), and an <code>ok</code> column — ✓ covered, ⚠ partially allocated, ✕ nothing allocated.</p>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ── WBR TAB ────────────────────────────────────────── -->
+  <section id="tab-wbr">
+    <div class="section-label">The Other Tabs</div>
+    <h2>WBR · Weekly Business Review</h2>
+
+    <p>The <strong>WBR</strong> tab turns whatever the filter bar is currently showing into a ready-to-read weekly review: what moved since last week, and how the portfolio recovers over the next twelve months.</p>
+
+    <div class="callout warn">
+      <div class="callout-title">What "week over week" actually compares against</div>
+      <p>The comparison anchor is the <strong>opening position of the previous refreshed week</strong> — not exactly seven days ago. Each refresh keeps the earliest snapshot of the current week; when a new week's first refresh runs, that snapshot is promoted to the baseline. If a week is skipped entirely, the baseline is the last week that was actually refreshed, and the date shown next to <em>WoW vs</em> in the header tells you which.</p>
+      <p>Until the first refresh of the following week runs, you will see <em>"Baseline forming — WoW metrics will appear after the first refresh of next week…"</em>. That is expected on a newly deployed dashboard.</p>
+    </div>
+
+    <p>The baseline is filtered with exactly the same rules as the live view, so the deltas are always like-for-like with your current location, lifecycle, class, status and search selection.</p>
+
+    <h3>KPI strip</h3>
+    <p>Six cards — Total SKUs, In Stock, Committed, Incoming, Out of Stock, and Committable value — each with a delta chip underneath showing the change in count and in percentage points of the portfolio. Green means movement in the good direction, red bad, grey neutral.</p>
+
+    <h3>The four sections</h3>
+    <ul>
+      <li><strong>WoW Commentary</strong> — a written narrative generated from the numbers. It covers the in-stock rate change, the SKUs that entered and left stock, which classes drove the move, and a decomposition splitting the change into a <em>rate effect</em> (availability genuinely changed) and a <em>mix effect</em> (the portfolio composition shifted). It closes with a projection of the in-stock rate at month 3 and month 12.</li>
+      <li><strong>Incoming Wave — Total</strong> — twelve forward months, each split into in stock, incoming and out of stock. This is the recovery profile of the whole selection.</li>
+      <li><strong>Incoming Wave — By Class</strong> — the same profile per product class, so you can see which categories recover and which stay flat.</li>
+      <li><strong>WoW Movers</strong> — the SKUs that entered stock, went out of stock, swung the most in value, or whose next-availability date slipped by more than a week.</li>
+    </ul>
+    <p>Every section collapses. Everything recalculates when you change a filter.</p>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ── S&OP TAB ───────────────────────────────────────── -->
+  <section id="tab-sop">
+    <div class="section-label">The Other Tabs</div>
+    <h2>S&amp;OP · Sales &amp; Operations Planning</h2>
+
+    <p>The <strong>S&amp;OP</strong> tab looks roughly six months back and twelve forward and asks whether the demand plan holds up against budget and the order book, whether supply and production capacity can meet it, and what inventory position that leaves.</p>
+
+    <p>Three sub-views, each a chart plus an expandable class-by-month matrix. Click a class name to collapse or expand its detail rows.</p>
+
+    <h3>Demand Review</h3>
+    <p>Actuals (split B2B and DTC), forecast, order book and budget on one timeline. Rows per class: forecast, budget, forecast versus budget, implied ASP, order book, and the order book as a percentage of forecast and of budget.</p>
+    <p>Two details worth knowing. Actuals are <strong>net of invoice discounts</strong>, allocated pro-rata within each month and channel. And the <em>forecast versus budget</em> row compares actuals to budget for closed months but forecast to budget from the current month forward — the current month is deliberately excluded from the actuals comparison because it is incomplete.</p>
+
+    <h3>Supply Review</h3>
+    <p>Firm and planned work orders and purchase orders, stacked by month. At Verrayes, in Units mode, a capacity line and a load-versus-capacity row appear once capacity has been uploaded — red above 100%, amber from 85%, green below.</p>
+
+    <h3>Projected Inventory</h3>
+    <p>The forward position, month by month: <code>projected = previous + supply − demand</code>, where demand is the greater of forecast and order book. Backlog, unscheduled orders and overdue supply all land in the current month. Weeks of cover is the projected quantity divided by the average weekly forecast of the following quarter, coloured against your uploaded cover-target bands.</p>
+
+    <div class="callout warn">
+      <div class="callout-title">S&amp;OP needs its own inputs</div>
+      <p>Budget, production capacity, legacy sales history and inventory cover targets are uploaded through the Admin Panel and stored in <code>sop_config.json</code>, separate from <code>config.json</code>. Without a budget, value mode falls back to a trailing twelve-month realised ASP and the budget lines simply do not appear. Uploads only change your browser copy — you must click <strong>⬇ Download Updated sop_config.json</strong> and place the file in <code>C:\GRV-Availability\</code> for them to survive the next refresh.</p>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ── BOM TAB ────────────────────────────────────────── -->
+  <section id="tab-bom">
+    <div class="section-label">The Other Tabs</div>
+    <h2>BOM · Cost Build-up</h2>
+
+    <p>The <strong>BOM</strong> tab is the one part of the control tower that is diagnostic rather than operational. It exists to explain what a finished good costs to make and why, not to drive a daily decision.</p>
+
+    <div class="callout info">
+      <div class="callout-title">What "COGS" means here</div>
+      <p>A deliberately narrow definition: <strong>the sum, over every leaf of the bill of materials, of that component's procurement cost multiplied by how much of it goes into one finished good.</strong></p>
+      <p>It therefore <em>excludes</em> internal labour and overhead, freight and duties, header-level discounts, and scrap or yield allowances. It <em>includes</em> outsourced operations, because a conto-lavoro service appears as its own line inside the parent's bill of materials.</p>
+      <p>This will not reconcile to an accounting COGS, and it is not meant to. It is a should-cost build-up from purchasing data.</p>
+    </div>
+
+    <p>Everything on this tab is Grivel S.r.l. and euros. Intercompany purchases are excluded everywhere, so no transfer price ever leaks into a cost.</p>
+
+    <h3>Choosing what you are looking at</h3>
+    <table class="doc-table">
+      <thead><tr><th>Control</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Finished good</strong></td><td>The SKU being costed. Former versions loaded through the FG Reference List appear here too, tagged <em>reference</em>.</td></tr>
+        <tr><td><strong>Compare with</strong></td><td>A second SKU. Leave it on <em>none</em> for a single-product view.</td></tr>
+        <tr><td><strong>Basis</strong></td><td><strong>Invoices</strong> (default) uses what was actually billed by suppliers. <strong>Purchase orders</strong> uses what was ordered. Invoices are the safer default — they reflect the price finally agreed.</td></tr>
+        <tr><td><strong>Statistic</strong></td><td><strong>Weighted avg</strong> is total spend over total quantity across the window. <strong>First</strong> is the oldest purchase, <strong>Latest</strong> the most recent. Comparing first against latest is the quickest way to see where input costs have moved.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout warn">
+      <div class="callout-title">"First" means first in NetSuite</div>
+      <p>Transaction history starts at the NetSuite go-live in May 2025. "First cost" is the oldest purchase <em>since migration</em>, not the true historical first.</p>
+    </div>
+
+    <h3>Reading the indented bill of materials</h3>
+    <p>The tree opens fully expanded down to the leaves; click any triangle to collapse a branch. Sub-assembly rows carry their own rolled-up cost, so you can read what a branch contributes without expanding it. <strong>Qty / FG</strong> is the cumulative usage per one finished good — the quantities multiplied all the way down the path — which is what the cost is calculated on.</p>
+    <p>Three inline flags can appear next to a component:</p>
+    <ul>
+      <li><strong>UOM</strong> — the item is purchased in a different unit from the one it is stocked in, and no conversion has been configured. <em>Its cost is unreliable until an administrator adds one.</em></li>
+      <li><strong>CL</strong> — a conto-lavoro sub-assembly: it contains an outsourced service line.</li>
+      <li><strong>BUY</strong> — the item has a bill of materials but is also purchased directly. A make-versus-buy hybrid worth a look.</li>
+    </ul>
+    <p>Some finished goods are bought in rather than built — packs, bags and traded accessories. They have no bill of materials, so they appear as a single line: the product is its own leaf, costed from its own purchase history.</p>
+
+    <h3 id="bom-cascade">How each component's cost is found</h3>
+    <p>Not every component has been purchased recently, so the tab works down a cascade and tells you on every row which rung it landed on. The badge in the <strong>Source</strong> column is the whole story — hover it for the detail.</p>
+    <table class="doc-table">
+      <thead><tr><th>Badge</th><th>Where the cost came from</th><th>Trust</th></tr></thead>
+      <tbody>
+        <tr><td><strong>BILL</strong></td><td>Supplier invoices inside the rolling window (12 months by default).</td><td>Highest</td></tr>
+        <tr><td><strong>PO</strong></td><td>Purchase orders inside the window. Shown when the PO basis is selected.</td><td>High</td></tr>
+        <tr><td><strong>HIST</strong></td><td>Nothing in the window, so the search widened to all history since go-live.</td><td>Dated but real</td></tr>
+        <tr><td><strong>VENDOR</strong></td><td>No purchase history at all — the price agreed with the preferred vendor in NetSuite.</td><td>Indicative</td></tr>
+        <tr><td><strong>LPP</strong></td><td>NetSuite's "last purchase price" field. <em>May include intercompany transfer prices</em> on anything that moves between subsidiaries.</td><td>Treat with care</td></tr>
+        <tr><td><strong>AVG</strong></td><td>NetSuite's average cost field. The last resort.</td><td>Treat with care</td></tr>
+        <tr><td><strong>—</strong></td><td>No cost found anywhere. The component contributes zero, so the COGS is understated.</td><td>None</td></tr>
+      </tbody>
+    </table>
+    <p>The <strong>Data coverage</strong> KPI is the share of the COGS backed by the top two rungs — real transactions inside the window. The <strong>Cost source coverage &amp; gaps</strong> panel lists every component that fell through to a fallback, ranked by how much money it represents, with the reason. That list is a to-do for procurement data hygiene as much as a caveat.</p>
+    <p>Unit costs are always derived as amount divided by quantity rather than from the rate field, which means they are net of discounts and converted to euros automatically even on purchases made in another currency.</p>
+
+    <h3>COGS by category</h3>
+    <p>The split is computed from the leaves only. Three categories today, and the rules are simple enough to keep in your head:</p>
+    <ul>
+      <li><strong>Outsourced services</strong> — anything whose NetSuite item type is a Service.</li>
+      <li><strong>Primary packaging</strong> — SKUs beginning <code>0LAB</code>, <code>0PACK</code>, <code>0XFUC</code> or <code>0XSAC</code>.</li>
+      <li><strong>Structural components</strong> — everything else.</li>
+    </ul>
+    <p>The prefix list is a configuration setting, so the taxonomy can be extended without touching code.</p>
+
+    <h3 id="bom-compare">Comparing two SKUs</h3>
+    <p>Pick a second finished good and the Comparative panel appears: the COGS difference, the difference within each category, and a component-level diff. Components present in both at the same quantity and cost are hidden — what remains is ranked by euro impact, so the top of the table is always the reason the two products cost differently. A red delta means the first SKU costs more.</p>
+    <p>This is the intended use of the FG Reference List: load the former version of a SKU, put it side by side with the current one, and read off exactly which change moved the cost.</p>
+
+    <h3>Downloads</h3>
+    <p><strong>CSV</strong> gives the indented bill of materials as shown. <strong>XLSX</strong> gives four sheets: <em>BOM Detail</em>, <em>COGS Summary</em> (including margin and coverage), <em>Cost Source Audit</em> (every leaf with its source and window) and, when a comparison is active, <em>Comparison</em>.</p>
+  </section>
+
+  <div class="section-divider"></div>
+
   <section id="statuses">
     <div class="section-label">Understanding the Data</div>
     <h2>Status Definitions</h2>
@@ -801,6 +988,77 @@ pre code {
   <div class="section-divider"></div>
 
 
+
+  <!-- ── PRICES, ASP & MARGIN ───────────────────────────── -->
+  <section id="asp">
+    <div class="section-label">Understanding the Data</div>
+    <h2>Prices, ASP &amp; Margin</h2>
+
+    <p>Several parts of the dashboard show money rather than units: the <strong>Value €/$</strong> toggle on the availability table, the revenue weighting behind the Intelligence signals, the committable value on the WBR cards, and the gross margin on the BOM tab. All of them are driven by one number per SKU per location — the <strong>average selling price</strong>, or ASP. This section explains exactly what goes into it, because the answer is less obvious than it looks.</p>
+
+    <div class="callout info">
+      <div class="callout-title">One definition, everywhere</div>
+      <p>As of August 2026 there is a single price engine shared by every tab. Before that, the availability tabs used a definition that turned out to have several problems; those are described at the end of this section so that anyone comparing old screenshots to new ones knows why the numbers moved.</p>
+    </div>
+
+    <h3>Two ways to measure a price</h3>
+    <p>The engine computes both and prefers the first:</p>
+    <table class="doc-table">
+      <thead><tr><th>Basis</th><th>What it measures</th><th>Weighted by</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Realised</strong></td><td>What customers actually paid — invoices and cash sales over the last twelve months.</td><td>Units invoiced</td></tr>
+        <tr><td><strong>Order book</strong></td><td>What is currently agreed but not yet shipped — open sales order lines.</td><td>Units still open</td></tr>
+      </tbody>
+    </table>
+    <p>Realised is used wherever it exists. Where a SKU has had no sales in the last twelve months, the order book fills the gap. This cascade is deliberate: measured across the current catalogue, realised prices exist for roughly 268 of 318 SKUs in Italy and 150 in the USA, while the order book covers 310 and 249. Using realised alone would have lost coverage; using the order book alone would have measured aspiration rather than outcome.</p>
+
+    <h3>What is included, and what is not</h3>
+    <p>Every price is:</p>
+    <ul>
+      <li><strong>Net of discounts.</strong> The figure used is the line's value divided by its quantity, which is what remains after any partner, volume or promotional discount. This matters more than it sounds — realised wholesale prices run materially below list.</li>
+      <li><strong>Net of VAT.</strong> Tax sits on its own line in NetSuite and never enters the calculation, on eCommerce orders or anywhere else.</li>
+      <li><strong>In the right currency.</strong> Italian figures are euros and US figures are dollars, regardless of the currency the customer was actually billed in. Orders taken in Swiss francs, sterling, Canadian dollars or Czech koruna are converted by NetSuite before they reach the calculation.</li>
+      <li><strong>Free of shipping and handling charges</strong>, which are separate lines and are excluded.</li>
+    </ul>
+
+    <h3>Which orders count</h3>
+    <p>Not every transaction represents a commercial sale, so a list of order types is excluded from every price calculation, on every tab:</p>
+    <table class="doc-table">
+      <thead><tr><th>Excluded</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Intercompany Sell</strong></td><td>Italy selling to the US subsidiary at transfer price. Not a market price.</td></tr>
+        <tr><td><strong>Gift</strong></td><td>Samples and giveaways. These carry a list price on the line but zero actual value.</td></tr>
+        <tr><td><strong>Product Athlete</strong>, <strong>ExpertVoice Order</strong></td><td>Sponsorship and pro-deal channels.</td></tr>
+        <tr><td><strong>Loan for use</strong>, <strong>Repair</strong>, <strong>Warranty Repair</strong>, <strong>Replacement Order</strong></td><td>Service movements, not sales.</td></tr>
+        <tr><td><strong>R&amp;D and Certifications</strong></td><td>Internal consumption.</td></tr>
+      </tbody>
+    </table>
+    <p>Everything else counts, including all the direct-to-consumer channels. Shopify, Amazon, Private Sport Shop and Outdoor Pro Link sell at retail prices well above wholesale, and they are <strong>deliberately blended in</strong>, weighted by volume. The ASP is therefore a true realised average across the channel mix, not a wholesale price list. A SKU with heavy eCommerce demand will show a higher ASP than one sold only through distributors, and that is the intended behaviour.</p>
+    <p>The excluded list is a configuration setting, so it can be changed without code. The same list governs the S&amp;OP tab, so demand values there are consistent with availability values.</p>
+
+    <h3>How margin is calculated on the BOM tab</h3>
+    <p>The BOM tab is stricter than the rest of the dashboard, for two reasons.</p>
+    <p>First, it uses <strong>realised prices only</strong>, with no order-book fallback. A margin quoted on cost of goods has to be measured against revenue actually earned; falling back to an order book would mix a real cost against an aspiration. Where a product has had no sales in the window, the margin simply reads as a dash rather than being estimated.</p>
+    <p>Second, it uses the <strong>Italian euro price only</strong>. The COGS on that tab is a euro procurement cost incurred at Verrayes; pairing it with a US landed selling price would compare two things that do not belong together. Read the BOM margin as an Italy wholesale-and-direct blended margin at factory cost.</p>
+
+    <div class="callout warn">
+      <div class="callout-title">The margin is not a P&amp;L margin</div>
+      <p>It is the realised ASP less the bill-of-materials cost. It carries none of the exclusions listed under the BOM tab — no internal labour, overhead, freight, duties or scrap — so it will read higher than any accounting gross margin. Use it to compare products against each other, not to report profitability.</p>
+    </div>
+
+    <h3>What changed in August 2026</h3>
+    <p>Prices in the availability and Intelligence tabs moved when this rework shipped. Four defects were fixed at once, all of them pushing in the same direction — the old figures were too high:</p>
+    <ul>
+      <li><strong>Discounts were invisible.</strong> The old calculation read the pre-discount unit price. NetSuite applies the discount to the line's value and repeats it on a separate line, so the price field never reflected it. On one crampon, the realised price was about seventeen per cent below the figure the dashboard was showing.</li>
+      <li><strong>Currencies were mixed.</strong> Orders placed in foreign currencies contributed their raw foreign amounts to a figure labelled euros. A Czech order was contributing a number roughly twenty-four times too large.</li>
+      <li><strong>Intercompany transfers counted as sales.</strong> Italy's transfer price to the US subsidiary was averaged into the Italian ASP across more than two hundred SKUs.</li>
+      <li><strong>Free samples counted at list price.</strong> Several hundred US sample lines carried a full retail price with zero value attached, inflating the USA-3PL figures.</li>
+    </ul>
+    <p>If you are comparing a current figure against a screenshot from before August 2026, expect the new number to be lower, and to be more correct.</p>
+  </section>
+
+  <div class="section-divider"></div>
+
   <!-- ── INTELLIGENCE: INSIGHTS ─────────────────────────── -->
   <section id="intel-insights">
     <div class="section-label">Intelligence Module</div>
@@ -830,44 +1088,6 @@ pre code {
 
 
   <!-- ── INTELLIGENCE: CHAT ──────────────────────────────── -->
-  <section id="intel-chat">
-    <h2>AI Chat Assistant</h2>
-
-    <p>The right column of the Intelligence view is an AI assistant powered by Claude (Anthropic). It has the current availability data — including the top out-of-stock items, bottleneck components, and demand figures — loaded as context. You can ask it questions in plain language.</p>
-
-    <h3>Setting Up the API Key</h3>
-    <p>The first time you open the Intelligence tab, you will see a <strong>🔑 API key</strong> row above the chat input. You need to enter an Anthropic API key for the chat to work.</p>
-
-    <div class="steps">
-      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Obtain an Anthropic API key</strong><span>From console.anthropic.com under API Keys.</span></div></div>
-      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Paste it into the field</strong><span>The field shows <code>sk-ant-…</code> as a placeholder. Paste your key and click <strong>Save Key</strong>.</span></div></div>
-      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>The key is stored in your browser session</strong><span>It is not sent to GitHub or any Grivel server. It disappears when you close the browser tab. You will need to re-enter it each session.</span></div></div>
-    </div>
-
-    <div class="callout warn">
-      <div class="callout-title">Security note</div>
-      <p>Your API key is stored in browser sessionStorage only and is transmitted directly to the Anthropic API. Never share your API key with others or enter it on a public or untrusted computer.</p>
-    </div>
-
-    <h3>Example Questions</h3>
-    <p>The chat has several pre-built question chips you can click. You can also type any question freely. Some useful examples:</p>
-    <ul>
-      <li><em>"Which crampons are critically out of stock with open orders?"</em></li>
-      <li><em>"What are the top 3 components blocking production right now?"</em></li>
-      <li><em>"Which incoming SKUs are arriving soonest?"</em></li>
-      <li><em>"Give me a summary of supply health for the Crampon class."</em></li>
-      <li><em>"Which items can I safely commit to new orders today?"</em></li>
-    </ul>
-
-    <div class="callout info">
-      <div class="callout-title">Conversation memory</div>
-      <p>The assistant remembers the last 12 messages in the current conversation. Refreshing the page starts a new conversation. The assistant does not retain information between separate browser sessions.</p>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-
   <!-- ── ADMIN: WHEN TO REFRESH ──────────────────────────── -->
   <section id="admin-when">
     <div class="section-label">Admin Guide <span class="admin-tag">Admin Only</span></div>
@@ -919,7 +1139,7 @@ pre code {
 
     <div id="admin-config">
       <h3>Finished Goods List</h3>
-      <p>The FG list defines which SKUs the dashboard tracks. It is a CSV file with <strong>one NetSuite internal ID per row, no header</strong>. Currently tracks 332 SKUs.</p>
+      <p>The FG list defines which SKUs the dashboard tracks. It is a CSV file with <strong>one NetSuite internal ID per row, no header</strong>. It currently tracks 318 SKUs.</p>
       <p>To update:</p>
       <ol>
         <li>Prepare a CSV file with the new set of internal IDs.</li>
@@ -933,6 +1153,18 @@ pre code {
 6896
 6897
 7199</code></pre>
+
+      <h3>FG Reference List</h3>
+      <p>A reference SKU is a <strong>former version of a product still on the FG list</strong>. Loading one lets the BOM tab cost it and put it side by side with the current version, which is the quickest way to see what a design or sourcing change did to the cost.</p>
+      <p>CSV format: <code>item_id, reference_of, item_name</code> — one row per item, no header. <code>reference_of</code> is the internal ID of the current finished good that this one replaced.</p>
+
+      <pre><code># Example FG reference list CSV
+1028, 6895, RAG10.NME</code></pre>
+
+      <div class="callout info">
+        <div class="callout-title">BOM tab only</div>
+        <p>Reference SKUs are exploded and costed for the BOM tab and appear in both of its dropdowns, tagged <em>reference</em>. They do <strong>not</strong> enter the availability calculation, the Manufacturing tab or S&amp;OP — those remain driven by the FG list alone.</p>
+      </div>
 
       <h3>Exclusion List</h3>
       <p>Items on the exclusion list are treated as having <strong>unlimited supply</strong> — they are excluded from BOM constraint calculations. Use this for items that are purchased from external suppliers on a non-constrained basis (e.g. retail packaging, labels).</p>
