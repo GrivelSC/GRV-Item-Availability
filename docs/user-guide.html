@@ -438,7 +438,7 @@ pre code {
   </nav>
 
   <div class="sidebar-footer">
-    Updated Aug 2026 · GRV v3
+    Updated 11 Aug 2026 · GRV v3.1
   </div>
 </aside>
 
@@ -450,8 +450,8 @@ pre code {
     <h1 class="doc-title">GRV Supply Chain Control Tower</h1>
     <p class="doc-subtitle">Complete user guide for the control tower — availability, manufacturing, the weekly review, S&amp;OP and BOM cost analysis — for both regular users and administrators.</p>
     <div class="doc-meta">
-      <span>Version 3.0</span>
-      <span>Updated Aug 2026</span>
+      <span>Version 3.1</span>
+      <span>Updated 11 Aug 2026</span>
       <span>grivelsc.github.io/GRV-Item-Availability/</span>
     </div>
   </div>
@@ -793,7 +793,7 @@ pre code {
       <tbody>
         <tr><td><strong>Finished good</strong></td><td>The SKU being costed. Former versions loaded through the FG Reference List appear here too, tagged <em>reference</em>.</td></tr>
         <tr><td><strong>Compare with</strong></td><td>A second SKU. Leave it on <em>none</em> for a single-product view.</td></tr>
-        <tr><td><strong>Basis</strong></td><td><strong>Invoices</strong> (default) uses what was actually billed by suppliers. <strong>Purchase orders</strong> uses what was ordered. Invoices are the safer default — they reflect the price finally agreed.</td></tr>
+        <tr><td><strong>Basis</strong></td><td><strong>Invoices</strong> uses what was actually billed by suppliers; <strong>Purchase orders</strong> uses what was ordered. Invoices are the better default because they reflect the price finally agreed, but the tab opens on whichever of the two actually has data — if one document type is missing entirely you will land on the other, with a note explaining why.</td></tr>
         <tr><td><strong>Statistic</strong></td><td><strong>Weighted avg</strong> is total spend over total quantity across the window. <strong>First</strong> is the oldest purchase, <strong>Latest</strong> the most recent. Comparing first against latest is the quickest way to see where input costs have moved.</td></tr>
       </tbody>
     </table>
@@ -821,30 +821,60 @@ pre code {
         <tr><td><strong>BILL</strong></td><td>Supplier invoices inside the rolling window (12 months by default).</td><td>Highest</td></tr>
         <tr><td><strong>PO</strong></td><td>Purchase orders inside the window. Shown when the PO basis is selected.</td><td>High</td></tr>
         <tr><td><strong>HIST</strong></td><td>Nothing in the window, so the search widened to all history since go-live.</td><td>Dated but real</td></tr>
-        <tr><td><strong>VENDOR</strong></td><td>No purchase history at all — the price agreed with the preferred vendor in NetSuite.</td><td>Indicative</td></tr>
+        <tr><td><strong>ALT</strong></td><td>The chosen basis had nothing at all, so the <em>other</em> document type was used — purchase orders when you asked for invoices, or the reverse. A real purchase is better evidence than a price list, so this is tried before any of the rungs below.</td><td>Good</td></tr>
+        <tr><td><strong>VENDOR</strong></td><td>No purchase history at all — the price agreed with the preferred vendor in NetSuite, converted to euros.</td><td>Indicative</td></tr>
         <tr><td><strong>LPP</strong></td><td>NetSuite's "last purchase price" field. <em>May include intercompany transfer prices</em> on anything that moves between subsidiaries.</td><td>Treat with care</td></tr>
         <tr><td><strong>AVG</strong></td><td>NetSuite's average cost field. The last resort.</td><td>Treat with care</td></tr>
         <tr><td><strong>—</strong></td><td>No cost found anywhere. The component contributes zero, so the COGS is understated.</td><td>None</td></tr>
       </tbody>
     </table>
-    <p>The <strong>Data coverage</strong> KPI is the share of the COGS backed by the top two rungs — real transactions inside the window. The <strong>Cost source coverage &amp; gaps</strong> panel lists every component that fell through to a fallback, ranked by how much money it represents, with the reason. That list is a to-do for procurement data hygiene as much as a caveat.</p>
+    <p>The <strong>Data coverage</strong> KPI is the share of the COGS backed by real transactions — the <strong>BILL</strong>, <strong>PO</strong> and <strong>ALT</strong> rungs. The <strong>Cost source coverage &amp; gaps</strong> panel lists every component that fell through to a fallback, ranked by how much money it represents, with the reason. That list is a to-do for procurement data hygiene as much as a caveat.</p>
     <p>Unit costs are always derived as amount divided by quantity rather than from the rate field, which means they are net of discounts and converted to euros automatically even on purchases made in another currency.</p>
 
     <h3>COGS by category</h3>
-    <p>The split is computed from the leaves only. Three categories today, and the rules are simple enough to keep in your head:</p>
-    <ul>
-      <li><strong>Outsourced services</strong> — anything whose NetSuite item type is a Service.</li>
-      <li><strong>Primary packaging</strong> — SKUs beginning <code>0LAB</code>, <code>0PACK</code>, <code>0XFUC</code> or <code>0XSAC</code>.</li>
-      <li><strong>Structural components</strong> — everything else.</li>
-    </ul>
-    <p>The prefix list is a configuration setting, so the taxonomy can be extended without touching code.</p>
+    <p>The split is computed from the leaves only. Nine categories, matched in order by item type, then SKU prefix, then a keyword in the description — first match wins, and anything unrecognised lands in <em>Other</em>.</p>
+    <table class="doc-table">
+      <thead><tr><th>Category</th><th>What lands here</th><th>Share of catalogue COGS</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Structural metal</strong></td><td>Formed steel and aluminium: crampon bodies, picks, shafts, bails, carabiners, tube.</td><td>52%</td></tr>
+        <tr><td><strong>Buyout</strong></td><td>Finished goods Grivel purchases complete rather than builds — helmets, apparel, packs, footwear.</td><td>20%</td></tr>
+        <tr><td><strong>Outsourced services</strong></td><td>Conto lavoro: sewing, sublimation, assembly, rubber coating.</td><td>8%</td></tr>
+        <tr><td><strong>Textile &amp; webbing</strong></td><td>Ribbon, slings, laces, straps, Dyneema and nylon.</td><td>8%</td></tr>
+        <tr><td><strong>Hardware &amp; fasteners</strong></td><td>Rivets, screws, bolts, nuts, buckles.</td><td>5%</td></tr>
+        <tr><td><strong>Adhesives &amp; chemicals</strong></td><td>Epoxies, glues, anodising additives.</td><td>4%</td></tr>
+        <tr><td><strong>Primary packaging</strong></td><td>SKUs beginning <code>0LAB</code>, <code>0PACK</code>, <code>0XFUC</code>, <code>0XSAC</code>.</td><td>2%</td></tr>
+        <tr><td><strong>Plastic, rubber &amp; compounds</strong></td><td>Moulding powders, TPU, Desmopan, colour additives, moulded buckles.</td><td>2%</td></tr>
+        <tr><td><strong>Other</strong></td><td>The catch-all. Currently one component, so the rules are covering the catalogue well.</td><td>&lt;1%</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Buyout is worth watching.</strong> A fifth of what the catalogue costs is bought complete rather than made, and that is the clearest make-versus-buy signal in the data.</p>
+    <p>The whole taxonomy is a configuration setting. Adding a category, or moving a family of SKUs between categories, is a config edit — no code change and no new release.</p>
+
+    <h3>Units and currencies</h3>
+    <p>Two things are handled quietly in the background that are worth knowing about, because both used to be silent sources of error.</p>
+    <p><strong>Currency.</strong> Everything on this tab is euros. Purchases made in another currency are converted using the rate NetSuite itself applied to that document, so the figures stay consistent with your own accounts rather than with an outside feed. This matters most for the preferred-vendor price list, which NetSuite stores in the <em>vendor's</em> currency — an American supplier quoting $23.90 would otherwise have read as €23.90, about 16% too high.</p>
+    <p><strong>Units.</strong> Where an item is bought in one unit and stocked in another, NetSuite usually converts on the transaction itself, and the tab leaves those costs alone. Where it does not convert — the epoxy adhesive is the one current case, bought by the pack and consumed in millilitres — a conversion is configured by hand and the row carries a small lowercase <code>uom</code> marker so the assumption stays visible. An uppercase <code>UOM</code> flag means the opposite: a mismatch with <em>no</em> conversion configured, and a cost you should not trust until an administrator adds one.</p>
+
+    <div class="callout warn">
+      <div class="callout-title">If a cost looks wrong, check the vendor price list first</div>
+      <p>The preferred-vendor price is a figure someone typed into NetSuite, while the last purchase price comes from goods actually received. When a component has no purchase history the tab falls back to the typed figure, and a stale entry can be several times out. The engine now flags any component where the two disagree by 3× or more; those appear in the warnings badge in the header. Four aluminium tubes were corrected this way on 11 August.</p>
+    </div>
 
     <h3 id="bom-compare">Comparing two SKUs</h3>
     <p>Pick a second finished good and the Comparative panel appears: the COGS difference, the difference within each category, and a component-level diff. Components present in both at the same quantity and cost are hidden — what remains is ranked by euro impact, so the top of the table is always the reason the two products cost differently. A red delta means the first SKU costs more.</p>
     <p>This is the intended use of the FG Reference List: load the former version of a SKU, put it side by side with the current one, and read off exactly which change moved the cost.</p>
 
     <h3>Downloads</h3>
-    <p><strong>CSV</strong> gives the indented bill of materials as shown. <strong>XLSX</strong> gives four sheets: <em>BOM Detail</em>, <em>COGS Summary</em> (including margin and coverage), <em>Cost Source Audit</em> (every leaf with its source and window) and, when a comparison is active, <em>Comparison</em>.</p>
+    <p>Both downloads cover <strong>every finished good</strong>, not just the one on screen. The tab is for browsing; the export is the analysis artefact. Whatever basis and statistic you have selected still applies, since those define what "cost" means.</p>
+    <p><strong>CSV</strong> is the indented bill of materials for the whole catalogue, around 4,300 rows, with the finished good on every line so it pivots cleanly.</p>
+    <p><strong>XLSX</strong> has five sheets:</p>
+    <ul>
+      <li><em>COGS Summary</em> — one row per finished good: unit COGS, data coverage, leaf count, BOM depth, vendor count, realised ASP, gross margin, and a euro and percentage column for every category.</li>
+      <li><em>BOM Detail</em> — the full indented tree.</li>
+      <li><em>Cost Source Audit</em> — every leaf of every product with the rung used, the reason, the vendor, the vendor's currency and its unit-conversion status.</li>
+      <li><em>Read me</em> — the COGS definition, the exchange rates used, a glossary of the source badges, and any warnings the engine raised on that run.</li>
+      <li><em>Comparison</em> — only when a second product is selected.</li>
+    </ul>
   </section>
 
   <div class="section-divider"></div>

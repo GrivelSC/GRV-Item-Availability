@@ -25,6 +25,8 @@
   --red:       #ef4444;  --red-bg:    rgba(239,68,68,.1);
   --blue:      #60a5fa;  --blue-bg:   rgba(96,165,250,.1);
   --purple:    #a78bfa;  --purple-bg: rgba(167,139,250,.1);
+  --teal:      #2dd4bf;  --teal-bg:  rgba(45,212,191,.1);
+  --pink:      #f472b6;  --pink-bg:  rgba(244,114,182,.1);
   --mono:      'DM Mono', monospace;
   --sans:      'Archivo', system-ui, sans-serif;
   --r:         6px;
@@ -257,14 +259,21 @@ table.bomtbl td.r{text-align:right;font-family:var(--mono);font-size:11.5px;}
 .bom-tg:hover{color:var(--accent);}
 .bom-tg.leaf{visibility:hidden;}
 .bom-pill{font-size:9.5px;padding:.1rem .45rem;border-radius:20px;white-space:nowrap;font-weight:600;letter-spacing:.03em;}
-.bom-pill.STRUCTURAL{color:var(--blue);background:var(--blue-bg);}
-.bom-pill.SERVICE{color:var(--purple);background:var(--purple-bg);}
-.bom-pill.PACKAGING{color:var(--green);background:var(--green-bg);}
+.bom-pill.c-blue{color:var(--blue);background:var(--blue-bg);}
+.bom-pill.c-purple{color:var(--purple);background:var(--purple-bg);}
+.bom-pill.c-green{color:var(--green);background:var(--green-bg);}
+.bom-pill.c-amber{color:var(--amber);background:var(--amber-bg);}
+.bom-pill.c-red{color:var(--red);background:var(--red-bg);}
+.bom-pill.c-accent{color:var(--accent);background:var(--accent-s);}
+.bom-pill.c-muted{color:var(--muted);background:var(--surface2);}
+.bom-pill.c-dim{color:var(--dim);background:var(--surface2);}
+.bom-pill.c-teal{color:var(--teal);background:var(--teal-bg);}
+.bom-pill.c-pink{color:var(--pink);background:var(--pink-bg);}
 .bom-pill.sub{color:var(--muted);background:var(--surface2);border:1px solid var(--border);}
 .bom-src{font-family:var(--mono);font-size:9.5px;padding:.1rem .4rem;border-radius:3px;letter-spacing:.04em;}
 .bom-src.BILL{color:var(--green);background:var(--green-bg);}
 .bom-src.PO{color:var(--blue);background:var(--blue-bg);}
-.bom-src.HIST{color:var(--amber);background:var(--amber-bg);}
+.bom-src.HIST,.bom-src.ALT{color:var(--amber);background:var(--amber-bg);}
 .bom-src.VENDOR{color:var(--muted);background:var(--surface2);}
 .bom-src.LPP,.bom-src.AVG{color:var(--dim);background:var(--surface2);}
 .bom-src.NONE{color:var(--red);background:var(--red-bg);}
@@ -2085,13 +2094,29 @@ var mfgOpen=new Set(),mfgSK='due_date',mfgSD=1;
 // pre-baked roll-ups, which keeps the payload small and the toggles instant.
 var bomData=null,bomLoading=false,bomErr=null;
 var bomA='',bomB='',bomBasis='bill',bomStat='wavg',bomCollapse={};
-var BOM_CATS=[['STRUCTURAL','Structural components','var(--blue)'],
-              ['SERVICE','Outsourced services','var(--purple)'],
-              ['PACKAGING','Primary packaging','var(--green)']];
+// Categories are published by the engine (config-driven), so the taxonomy can
+// grow without touching the dashboard. The fallback is the original trio.
+var BOM_COLS={blue:'var(--blue)',purple:'var(--purple)',green:'var(--green)',
+  amber:'var(--amber)',red:'var(--red)',muted:'var(--muted)',dim:'var(--dim)',
+  accent:'var(--accent)',teal:'var(--teal)',pink:'var(--pink)',text:'var(--text)'};
+var BOM_FALLBACK_CATS=[{key:'STRUCTURAL',label:'Structural components',color:'blue'},
+  {key:'SERVICE',label:'Outsourced services',color:'purple'},
+  {key:'PACKAGING',label:'Primary packaging',color:'green'}];
+function bomCats(){
+  var c=(bomData&&bomData.categories&&bomData.categories.length)?bomData.categories:BOM_FALLBACK_CATS;
+  return c.map(function(x){return {key:x.key,label:x.label||x.key,
+    name:(BOM_COLS[x.color]?x.color:'blue'),
+    col:BOM_COLS[x.color]||'var(--blue)'};});
+}
+function bomCatOf(k){
+  var all=bomCats();
+  for(var i=0;i<all.length;i++)if(all[i].key===k)return all[i];
+  return {key:k||'OTHER',label:bomCatLbl(k),name:'dim',col:'var(--dim)'};
+}
 var BOM_SRCLBL={BILL:'Invoice, in window',PO:'Purchase order, in window',
-  HIST:'Widened to all history',VENDOR:'Preferred-vendor price',
+  HIST:'Widened to all history',ALT:'Other document type used',VENDOR:'Preferred-vendor price',
   LPP:'NetSuite last purchase price',AVG:'NetSuite average cost',NONE:'No cost found'};
-var BOM_SRCCOL={BILL:'var(--green)',PO:'var(--blue)',HIST:'var(--amber)',
+var BOM_SRCCOL={BILL:'var(--green)',PO:'var(--blue)',HIST:'var(--amber)',ALT:'var(--amber)',
   VENDOR:'var(--muted)',LPP:'var(--dim)',AVG:'var(--dim)',NONE:'var(--red)'};
 
 async function loadBom(force){
@@ -2100,9 +2125,12 @@ async function loadBom(force){
   bomLoading=true;bomErr=null;
   document.getElementById('bom-body').innerHTML='<div class="bom-empty">Loading BOM cost data…</div>';
   try{
-    var r=await fetch('/GRV-Item-Availability/bom_cogs.json');
+    // ?t= cache-buster: same reason as loadSop() below — GitHub Pages serves
+    // ~10-min cache headers, so without this Reload can return an earlier publish.
+    var r=await fetch('/GRV-Item-Availability/bom_cogs.json?t='+Date.now());
     if(!r.ok)throw new Error(r.status===404?'bom_cogs.json not published yet — run a refresh to generate it.':'HTTP '+r.status);
     bomData=await r.json();
+    if(bomData.basis_default==='po'||bomData.basis_default==='bill')bomBasis=bomData.basis_default;
     var keys=Object.keys(bomData.fgs||{});
     if(!bomA||!bomData.fgs[bomA])bomA=keys.filter(function(k){return !bomData.fgs[k].is_reference;})[0]||keys[0]||'';
   }catch(e){bomErr=e.message||String(e);bomData=null;}
@@ -2118,12 +2146,25 @@ function bomLeaf(n){return !n.children||!n.children.length;}
 // Cost cascade — mirrors compute_bom_cogs()'s documented rungs exactly.
 function bomResolve(id){
   var c=(bomData.nodes[id]||{}).cost||{},s;
+  var other=bomBasis==='bill'?'po':'bill';
+  var oLbl=other==='bill'?'invoice':'purchase-order';
   s=c[bomBasis];
   if(s&&s[bomStat])return{u:s[bomStat],src:bomBasis==='bill'?'BILL':'PO',
     info:s.n+' doc'+(s.n>1?'s':'')+' · '+s.from+' → '+s.to+(s.vendor?' · '+s.vendor:'')};
   s=c['hist_'+bomBasis];
   if(s&&s[bomStat])return{u:s[bomStat],src:'HIST',
     info:'nothing in the '+bomData.window_months+'-month window — widened to all history from '+s.from};
+  // Before dropping to master data, use the OTHER transactional basis: a real
+  // purchase is always better evidence than a price-list figure. This is what
+  // keeps the tab usable when one document type is missing entirely (e.g. the
+  // refresh role cannot see Vendor Bills).
+  s=c[other];
+  if(s&&s[bomStat])return{u:s[bomStat],src:'ALT',
+    info:'no '+(bomBasis==='bill'?'invoice':'PO')+' data — '+oLbl+' used instead · '+
+         s.n+' doc'+(s.n>1?'s':'')+' · '+s.from+' → '+s.to+(s.vendor?' · '+s.vendor:'')};
+  s=c['hist_'+other];
+  if(s&&s[bomStat])return{u:s[bomStat],src:'ALT',
+    info:'no '+(bomBasis==='bill'?'invoice':'PO')+' data — '+oLbl+' history used instead, from '+s.from};
   if(c.vendor_price!=null)return{u:c.vendor_price,src:'VENDOR',info:'no purchase history — preferred-vendor price'};
   if(c.last_purchase!=null)return{u:c.last_purchase,src:'LPP',info:'NetSuite last purchase price (may include intercompany)'};
   if(c.avg_cost!=null)return{u:c.avg_cost,src:'AVG',info:'NetSuite average cost'};
@@ -2142,7 +2183,7 @@ function bomDepth(n){return bomLeaf(n)?n.level:Math.max.apply(null,n.children.ma
 function bomAnalyse(fg){
   var t=JSON.parse(JSON.stringify(bomData.trees[fg]));
   var total=bomRoll(t),lv=bomLeaves(t),cat={},src={},vend={};
-  BOM_CATS.forEach(function(c){cat[c[0]]={eur:0,n:0};});
+  bomCats().forEach(function(c){cat[c.key]={eur:0,n:0};});
   lv.forEach(function(l){
     var nd=bomData.nodes[l.item]||{},c=nd.cat||'STRUCTURAL';
     if(!cat[c])cat[c]={eur:0,n:0};
@@ -2150,7 +2191,7 @@ function bomAnalyse(fg){
     src[l._src]=(src[l._src]||0)+l._ext;
     if(nd.pref_vendor)vend[nd.pref_vendor]=(vend[nd.pref_vendor]||0)+l._ext;
   });
-  var hard=(src.BILL||0)+(src.PO||0);
+  var hard=(src.BILL||0)+(src.PO||0)+(src.ALT||0);
   return{fg:fg,tree:t,total:total,leaves:lv,cat:cat,src:src,
          coverage:total?hard/total*100:0,depth:bomDepth(t),
          vendors:Object.keys(vend).length};
@@ -2183,8 +2224,9 @@ function renderBom(){
      '</div><span class="bom-lbl">Statistic</span><div class="bom-seg">'+
      bomBtn('bomSetStat','wavg',bomStat,'Weighted avg')+bomBtn('bomSetStat','first',bomStat,'First')+
      bomBtn('bomSetStat','last',bomStat,'Latest')+'</div>'+
-     '<span class="bom-dl"><button onclick="bomCsv()">⬇ CSV</button>'+
-     '<button onclick="bomXlsx()">⬇ XLSX</button></span></div>';
+     '<span class="bom-dl">'+
+     '<button onclick="bomCsv()" title="Indented BOM for every finished good, at the selected basis and statistic">⬇ CSV · all SKUs</button>'+
+     '<button onclick="bomXlsx()" title="Workbook: COGS Summary, BOM Detail, Cost Source Audit, Read me'+(bomB?', Comparison':'')+' — all finished goods">⬇ XLSX · all SKUs</button></span></div>';
 
   // ── KPIs ──
   var f=fgs[bomA],asp=f.asp_eur,mrg=(asp&&asp>0)?(asp-a.total)/asp*100:null;
@@ -2259,6 +2301,9 @@ function bomRows(a){
         '<button class="bom-tg" onclick="bomTog(\''+key+'\')">'+(col?'▸':'▾')+'</button>';
       var flags='';
       if(nd.uom_flag)flags+=' <span class="bom-src HIST" title="Purchase unit differs from stock unit and no conversion is configured — this cost is unreliable">UOM</span>';
+      else if(nd.uom_conv)flags+=' <span class="bom-src VENDOR" title="'+
+        ((nd.uom_note||'A manual unit conversion was applied to this component.').replace(/"/g,'&quot;'))+
+        '">uom</span>';
       if(n.subcontract)flags+=' <span class="bom-pill sub" title="Conto lavoro — this sub-assembly contains an outsourced service line">CL</span>';
       if(n.buyout)flags+=' <span class="bom-pill sub" title="Has a BOM but is also purchased directly — make-vs-buy hybrid">BUY</span>';
       out.push('<tr class="'+(n.level===0?'bom-rowfg':leaf?'':'bom-rowsub')+'">'+
@@ -2266,7 +2311,7 @@ function bomRows(a){
         '<span><span class="bom-sku">'+(nd.name||n.item)+'</span>'+flags+
         '<span class="bom-desc">'+(nd.desc||'')+'</span></span></span></td>'+
         '<td><span class="bom-pill sub">'+(n.level===0?'FG':leaf?(nd.type||'—'):'SUB-ASSY')+'</span></td>'+
-        '<td>'+(leaf?'<span class="bom-pill '+(nd.cat||'STRUCTURAL')+'">'+bomCatLbl(nd.cat)+'</span>':'<span class="dim">—</span>')+'</td>'+
+        '<td>'+(leaf?bomPill(nd.cat):'<span class="dim">—</span>')+'</td>'+
         '<td class="r">'+(n.qty_per_parent==null?'<span class="dim">—</span>':bomQty(n.qty_per_parent))+'</td>'+
         '<td class="r">'+bomQty(n.cum_qty)+'</td>'+
         '<td class="r">'+(leaf?bomEur(n._u,4):'<span class="dim">'+bomEur(n._u,3)+'</span>')+'</td>'+
@@ -2280,15 +2325,27 @@ function bomRows(a){
   })(a.tree,false);
   return out.join('');
 }
-function bomCatLbl(c){return ({STRUCTURAL:'Structural',SERVICE:'Service',PACKAGING:'Packaging'})[c]||c||'—';}
+function bomCatLbl(c){
+  if(!c)return '—';
+  var all=(bomData&&bomData.categories)||[];
+  for(var i=0;i<all.length;i++)if(all[i].key===c)return all[i].label||c;
+  return ({STRUCTURAL:'Structural',SERVICE:'Service',PACKAGING:'Packaging'})[c]||
+         (c.charAt(0)+c.slice(1).toLowerCase());
+}
+function bomPill(k){
+  var c=bomCatOf(k);
+  return '<span class="bom-pill c-'+(c.name||'dim')+'">'+c.label+'</span>';
+}
 
 function bomCatCard(a){
   var st='',lg='',tb='';
-  BOM_CATS.forEach(function(c){
-    var e=a.cat[c[0]]||{eur:0,n:0},p=a.total?e.eur/a.total*100:0;
-    if(p>0)st+='<div style="width:'+p+'%;background:'+c[2]+'">'+(p>7?p.toFixed(1)+'%':'')+'</div>';
-    lg+='<span class="bom-lg"><i style="background:'+c[2]+'"></i>'+c[1]+'</span>';
-    tb+='<tr><td><span class="bom-pill '+c[0]+'">'+c[1]+'</span></td><td class="r">'+bomEur(e.eur,3)+
+  bomCats().slice().sort(function(x,y){
+      return (a.cat[y.key]||{eur:0}).eur-(a.cat[x.key]||{eur:0}).eur;})
+   .forEach(function(c){
+    var e=a.cat[c.key]||{eur:0,n:0},p=a.total?e.eur/a.total*100:0;
+    if(p>0)st+='<div style="width:'+p+'%;background:'+c.col+'">'+(p>7?p.toFixed(1)+'%':'')+'</div>';
+    lg+='<span class="bom-lg"><i style="background:'+c.col+'"></i>'+c.label+'</span>';
+    tb+='<tr><td>'+bomPill(c.key)+'</td><td class="r">'+bomEur(e.eur,3)+
         '</td><td class="r">'+p.toFixed(1)+'%</td><td class="r">'+e.n+'</td></tr>';
   });
   tb+='<tr style="border-top:1px solid var(--border2)"><td><b>Total unit COGS</b></td><td class="r"><b>'+
@@ -2303,7 +2360,7 @@ function bomDriverCard(a){
   var top=a.leaves.slice().sort(function(x,y){return y._ext-x._ext;}).slice(0,10);
   var mx=top.length?top[0]._ext:1,h='';
   top.forEach(function(l){
-    var nd=bomData.nodes[l.item]||{},cc=(BOM_CATS.filter(function(k){return k[0]===nd.cat;})[0]||BOM_CATS[0])[2];
+    var nd=bomData.nodes[l.item]||{},cc=bomCatOf(nd.cat).col;
     h+='<div class="bom-bar"><span class="nm" title="'+(nd.desc||'').replace(/"/g,'&quot;')+'">'+(nd.name||l.item)+'</span>'+
        '<span class="tr"><i style="width:'+(mx?l._ext/mx*100:0)+'%;background:'+cc+'"></i></span>'+
        '<span class="vl">'+bomEur(l._ext,3)+'</span></div>';
@@ -2316,19 +2373,19 @@ function bomDriverCard(a){
 }
 
 function bomGapCard(a){
-  var order=['BILL','PO','HIST','VENDOR','LPP','AVG','NONE'],h='';
+  var order=['BILL','PO','HIST','ALT','VENDOR','LPP','AVG','NONE'],h='';
   order.forEach(function(s){
     var v=a.src[s]||0;if(!v)return;
     h+='<div class="bom-bar"><span class="nm">'+BOM_SRCLBL[s]+'</span><span class="tr">'+
        '<i style="width:'+(a.total?v/a.total*100:0)+'%;background:'+BOM_SRCCOL[s]+'"></i></span>'+
        '<span class="vl">'+(a.total?(v/a.total*100).toFixed(1):'0.0')+'%</span></div>';
   });
-  var weak=a.leaves.filter(function(l){return ['HIST','VENDOR','LPP','AVG','NONE'].indexOf(l._src)>=0;})
+  var weak=a.leaves.filter(function(l){return ['HIST','ALT','VENDOR','LPP','AVG','NONE'].indexOf(l._src)>=0;})
                    .sort(function(x,y){return y._ext-x._ext;});
   var rows=weak.length?weak.map(function(l){
     var nd=bomData.nodes[l.item]||{};
     return '<tr><td><span class="bom-sku">'+(nd.name||l.item)+'</span><span class="bom-desc">'+(nd.desc||'')+'</span></td>'+
-      '<td><span class="bom-pill '+(nd.cat||'STRUCTURAL')+'">'+bomCatLbl(nd.cat)+'</span></td>'+
+      '<td>'+bomPill(nd.cat)+'</td>'+
       '<td class="r">'+bomQty(l.cum_qty)+'</td><td class="r">'+bomEur(l._u,4)+'</td>'+
       '<td class="r">'+bomEur(l._ext,4)+'</td><td><span class="bom-src '+l._src+'">'+l._src+'</span></td>'+
       '<td class="dim" style="font-size:10.5px;white-space:normal">'+l._info+'</td></tr>';
@@ -2347,9 +2404,10 @@ function bomCmpCard(a){
     return head+'<div class="bom-empty">Pick a second finished good above to compare — including a former version of the same SKU from the FG Reference List.</div></div>';
   var b=bomAnalyse(bomB),h='<div class="bom-cmpk">';
   h+=bomCk('Unit COGS',bomEur(a.total,3),bomEur(b.total,3),a.total-b.total);
-  BOM_CATS.forEach(function(c){
-    var av=(a.cat[c[0]]||{eur:0}).eur,bv=(b.cat[c[0]]||{eur:0}).eur;
-    h+=bomCk(c[1],bomEur(av,3),bomEur(bv,3),av-bv);});
+  bomCats().forEach(function(c){
+    var av=(a.cat[c.key]||{eur:0}).eur,bv=(b.cat[c.key]||{eur:0}).eur;
+    if(!av&&!bv)return;
+    h+=bomCk(c.label,bomEur(av,3),bomEur(bv,3),av-bv);});
   h+='</div>';
   var la={},lb={};
   a.leaves.forEach(function(l){la[l.item]=la[l.item]||{q:0,e:0};la[l.item].q+=l.cum_qty;la[l.item].e+=l._ext;});
@@ -2365,7 +2423,7 @@ function bomCmpCard(a){
     if(r.kind==='same'&&Math.abs(r.d)<0.0005){hidden++;return;}
     var nd=bomData.nodes[r.k]||{};
     body+='<tr><td><span class="bom-sku">'+(nd.name||r.k)+'</span><span class="bom-desc">'+(nd.desc||'')+'</span></td>'+
-      '<td><span class="bom-pill '+(nd.cat||'STRUCTURAL')+'">'+bomCatLbl(nd.cat)+'</span></td>'+
+      '<td>'+bomPill(nd.cat)+'</td>'+
       '<td><span class="bom-chip '+r.kind+'">'+KL[r.kind]+'</span></td>'+
       '<td class="r">'+(r.A?bomQty(r.A.q):'<span class="dim">—</span>')+'</td>'+
       '<td class="r">'+(r.B?bomQty(r.B.q):'<span class="dim">—</span>')+'</td>'+
@@ -2385,58 +2443,112 @@ function bomCk(l,va,vb,d){
 }
 
 // ── exports ────────────────────────────────────────────────────
-function bomFlat(a){
-  var rows=[['Level','SKU','Description','Type','Category','Qty per parent','Qty per FG',
-             'Unit cost EUR','Extended EUR','% of COGS','Cost source','Source detail','Vendor']];
-  (function w(n){
-    var nd=bomData.nodes[n.item]||{},leaf=bomLeaf(n);
-    rows.push([n.level,nd.name||n.item,nd.desc||'',
-      n.level===0?'FG':leaf?(nd.type||''):'SUB-ASSY',leaf?(nd.cat||''):'',
-      n.qty_per_parent==null?'':n.qty_per_parent,n.cum_qty,leaf?n._u:'',n._ext,
-      a.total?+(n._ext/a.total*100).toFixed(2):0,leaf?n._src:'',leaf?n._info:'',
-      leaf?(nd.pref_vendor||''):'']);
-    n.children.forEach(w);
-  })(a.tree);
+// Downloads cover the WHOLE dataset, not the SKU on screen: the tab is a
+// browsing surface, the export is the analysis artefact. The basis and
+// statistic currently selected still apply — they define what "cost" means.
+function bomStamp(){return (bomBasis==='bill'?'invoice':'po')+'_'+bomStat;}
+function bomAllFgs(){
+  return Object.keys(bomData.fgs).sort(function(x,y){
+    return bomData.fgs[x].label.localeCompare(bomData.fgs[y].label);});
+}
+function bomDetailRows(){
+  var rows=[['FG SKU','FG description','Reference?','Level','SKU','Description','Type',
+             'Category','Qty per parent','Qty per FG','Unit cost EUR','Extended EUR',
+             '% of FG COGS','Cost source','Source detail','Vendor']];
+  bomAllFgs().forEach(function(fg){
+    var a=bomAnalyse(fg),f=bomData.fgs[fg];
+    (function w(n){
+      var nd=bomData.nodes[n.item]||{},leaf=bomLeaf(n);
+      rows.push([f.label,f.desc||'',f.is_reference?'reference':'',n.level,
+        nd.name||n.item,nd.desc||'',
+        n.level===0?'FG':leaf?(nd.type||''):'SUB-ASSY',
+        leaf?bomCatLbl(nd.cat):'',
+        n.qty_per_parent==null?'':n.qty_per_parent,n.cum_qty,
+        leaf?n._u:'',n._ext,a.total?+(n._ext/a.total*100).toFixed(2):0,
+        leaf?n._src:'',leaf?n._info:'',leaf?(nd.pref_vendor||''):'']);
+      n.children.forEach(w);
+    })(a.tree);
+  });
   return rows;
 }
-function bomStamp(){return (bomBasis==='bill'?'invoice':'po')+'_'+bomStat;}
+function bomSummaryRows(){
+  var cats=bomCats();
+  var head=['FG SKU','Description','Class','Lifecycle','Reference?','Unit COGS EUR',
+            'Data coverage %','Leaf nodes','BOM depth','Vendors',
+            'Realised ASP EUR','Realised units','Gross margin %'];
+  cats.forEach(function(c){head.push(c.label+' EUR');});
+  cats.forEach(function(c){head.push(c.label+' %');});
+  var rows=[head];
+  bomAllFgs().forEach(function(fg){
+    var a=bomAnalyse(fg),f=bomData.fgs[fg],asp=f.asp_eur;
+    var r=[f.label,f.desc||'',f.class||'',f.lifecycle||'',f.is_reference?'reference':'',
+           +a.total.toFixed(4),+a.coverage.toFixed(2),a.leaves.length,a.depth+1,a.vendors,
+           asp==null?'':+asp.toFixed(4),f.asp_qty||'',
+           (asp&&asp>0)?+((asp-a.total)/asp*100).toFixed(2):''];
+    cats.forEach(function(c){r.push(+((a.cat[c.key]||{eur:0}).eur).toFixed(4));});
+    cats.forEach(function(c){r.push(a.total?+(((a.cat[c.key]||{eur:0}).eur)/a.total*100).toFixed(2):0);});
+    rows.push(r);
+  });
+  return rows;
+}
+function bomAuditRows(){
+  var rows=[['FG SKU','Component','Description','Category','Qty per FG','Unit cost EUR',
+             'Extended EUR','Cost source','Detail','Vendor','Vendor currency','UOM status']];
+  bomAllFgs().forEach(function(fg){
+    var a=bomAnalyse(fg),f=bomData.fgs[fg];
+    a.leaves.slice().sort(function(x,y){return y._ext-x._ext;}).forEach(function(l){
+      var nd=bomData.nodes[l.item]||{};
+      rows.push([f.label,nd.name||l.item,nd.desc||'',bomCatLbl(nd.cat),l.cum_qty,l._u,l._ext,
+                 l._src,l._info,nd.pref_vendor||'',nd.pref_currency||'',
+                 nd.uom_flag?'UNCONVERTED':(nd.uom_conv?('converted: '+(nd.uom_note||'')):'')]);
+    });
+  });
+  return rows;
+}
 function bomCsv(){
-  var a=bomAnalyse(bomA),csv=bomFlat(a).map(function(r){
+  var csv=bomDetailRows().map(function(r){
     return r.map(function(c){c=(c==null?'':String(c));
       return /[",;\n]/.test(c)?'"'+c.replace(/"/g,'""')+'"':c;}).join(';');}).join('\n');
-  var u=URL.createObjectURL(new Blob(['﻿'+csv],{type:'text/csv;charset=utf-8'}));
+  var u=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'}));
   var el=document.createElement('a');el.href=u;
-  el.download='BOM_'+bomData.fgs[bomA].label+'_'+bomStamp()+'.csv';
+  el.download='BOM_all_'+bomStamp()+'_'+bomData.generated+'.csv';
   document.body.appendChild(el);el.click();document.body.removeChild(el);URL.revokeObjectURL(u);
 }
 function bomXlsx(){
-  var a=bomAnalyse(bomA),wb=XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(bomFlat(a)),'BOM Detail');
+  var wb=XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(bomSummaryRows()),'COGS Summary');
+  XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(bomDetailRows()),'BOM Detail');
+  XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(bomAuditRows()),'Cost Source Audit');
 
-  var sum=[['Finished good',bomData.fgs[bomA].label],['Description',bomData.fgs[bomA].desc||''],
+  var meta=[['GRV Supply Chain Control Tower — BOM cost build-up'],[],
+    ['Generated',bomData.generated],
+    ['Cost window',bomData.window_months+' months from '+bomData.window_start],
     ['Basis',bomBasis==='bill'?'Invoices':'Purchase orders'],
     ['Statistic',{wavg:'Weighted average',first:'First',last:'Latest'}[bomStat]],
-    ['Window',bomData.window_months+' months from '+bomData.window_start],
-    ['Currency','EUR (Grivel S.r.l., intercompany excluded)'],[],
-    ['Category','EUR per unit','% of COGS','Leaves']];
-  BOM_CATS.forEach(function(c){var e=a.cat[c[0]]||{eur:0,n:0};
-    sum.push([c[1],+e.eur.toFixed(4),a.total?+(e.eur/a.total*100).toFixed(2):0,e.n]);});
-  sum.push(['Total unit COGS',+a.total.toFixed(4),100,a.leaves.length]);
-  var asp=bomData.fgs[bomA].asp_eur;
-  sum.push([],['Realised ASP EUR',asp==null?'n/a':+asp.toFixed(4)],
-    ['Realised units',bomData.fgs[bomA].asp_qty||0],
-    ['Gross margin %',(asp&&asp>0)?+((asp-a.total)/asp*100).toFixed(2):'n/a'],
-    ['Data coverage %',+a.coverage.toFixed(2)]);
-  XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(sum),'COGS Summary');
-
-  var audit=[['SKU','Description','Category','Qty per FG','Unit cost EUR','Extended EUR','Source','Detail','Vendor']];
-  a.leaves.slice().sort(function(x,y){return y._ext-x._ext;}).forEach(function(l){
-    var nd=bomData.nodes[l.item]||{};
-    audit.push([nd.name||l.item,nd.desc||'',nd.cat||'',l.cum_qty,l._u,l._ext,l._src,l._info,nd.pref_vendor||'']);});
-  XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(audit),'Cost Source Audit');
+    ['Scope','Grivel S.r.l. (sub 1), intercompany excluded'],
+    ['Currency','EUR'],['Finished goods',Object.keys(bomData.fgs).length],
+    ['Distinct components',Object.keys(bomData.nodes).length],[],
+    ['FX rates used (to EUR, from NetSuite postings)']];
+  Object.keys(bomData.fx||{}).sort().forEach(function(c){meta.push([c,bomData.fx[c]]);});
+  meta.push([],['COGS definition'],
+    ['Sum over BOM leaf nodes of procurement unit cost x cumulative usage per 1 finished good.'],
+    ['Excluded: internal labour and overhead, freight and duties, header-level discounts, scrap and yield.'],
+    ['Included: outsourced operations, which appear as Service leaves inside the parent BOM.'],[],
+    ['Cost source badges'],
+    ['BILL','Invoice inside the window'],['PO','Purchase order inside the window'],
+    ['HIST','Same basis, widened to all history'],
+    ['ALT','Other document type used because the chosen basis had nothing'],
+    ['VENDOR','Preferred-vendor price, converted to EUR'],
+    ['LPP','NetSuite last purchase price (may include intercompany)'],
+    ['AVG','NetSuite average cost'],['—','No cost found; contributes zero']);
+  if((bomData.warnings||[]).length){
+    meta.push([],['Engine warnings']);
+    bomData.warnings.forEach(function(w){meta.push([w]);});
+  }
+  XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(meta),'Read me');
 
   if(bomB&&bomData.trees[bomB]){
-    var b=bomAnalyse(bomB),la={},lb={};
+    var a=bomAnalyse(bomA),b=bomAnalyse(bomB),la={},lb={};
     a.leaves.forEach(function(l){la[l.item]=la[l.item]||{q:0,e:0};la[l.item].q+=l.cum_qty;la[l.item].e+=l._ext;});
     b.leaves.forEach(function(l){lb[l.item]=lb[l.item]||{q:0,e:0};lb[l.item].q+=l.cum_qty;lb[l.item].e+=l._ext;});
     var cmp=[['SKU','Description','Category','Diff',
@@ -2444,12 +2556,12 @@ function bomXlsx(){
       'EUR '+bomData.fgs[bomA].label,'EUR '+bomData.fgs[bomB].label,'Delta EUR']];
     Object.keys(la).concat(Object.keys(lb).filter(function(k){return !la[k];})).forEach(function(k){
       var A=la[k],B=lb[k],nd=bomData.nodes[k]||{},d=(A?A.e:0)-(B?B.e:0);
-      cmp.push([nd.name||k,nd.desc||'',nd.cat||'',
+      cmp.push([nd.name||k,nd.desc||'',bomCatLbl(nd.cat),
         !B?'only in A':!A?'only in B':(Math.abs(A.q-B.q)>1e-9?'qty differs':'identical'),
         A?A.q:'',B?B.q:'',A?A.e:'',B?B.e:'',d]);});
     XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(cmp),'Comparison');
   }
-  XLSX.writeFile(wb,'BOM_'+bomData.fgs[bomA].label+'_'+bomStamp()+'.xlsx');
+  XLSX.writeFile(wb,'BOM_all_'+bomStamp()+'_'+bomData.generated+'.xlsx');
 }
 
 async function loadMfg(force){
