@@ -79,7 +79,7 @@
         "txn_to_stock": 1000,
         "netsuite_to_stock": 1000,
         "vendor_to_stock": 50,
-        "note": "9DP490_ADESEPO \u00b7 stock unit is millilitres and NetSuite does NOT normalise this item. PO/bill and lastpurchaseprice are per PZ (1 PZ = 20 tubes x 50 ml = 1000 ml) so divide by 1000; the itemvendor price EUR 24.78 is per 50 ml tube so divide by 50. All three land on EUR 0.4956/ml. BOM lines are millilitres: 0.05 ml per shaft = EUR 0.02478 per ice axe."
+        "note": "9DP490_ADESEPO · stock unit is millilitres and NetSuite does NOT normalise this item. PO/bill and lastpurchaseprice are per PZ (1 PZ = 20 tubes x 50 ml = 1000 ml) so divide by 1000; the itemvendor price EUR 24.78 is per 50 ml tube so divide by 50. All three land on EUR 0.4956/ml. BOM lines are millilitres: 0.05 ml per shaft = EUR 0.02478 per ice axe."
       }
     },
     "bom_category_rules": [
@@ -123,17 +123,21 @@
           "0NV",
           "0NA",
           "0ND",
-          "0NM"
+          "0NM",
+          "0MRIVET",
+          "0MSPINA",
+          "0MVITE",
+          "0MDADO",
+          "0MRONDE"
         ],
         "keyword": [
           "rivet",
-          "screw",
-          "vite ",
-          "bolt",
-          "nut ",
+          "rivetto",
           "washer",
+          "rondella",
           "t.c.e.i",
-          "v.t.c"
+          "v.t.c",
+          "grub"
         ]
       },
       {
@@ -143,17 +147,24 @@
         "prefix": [
           "0DLOX",
           "9DP",
-          "0AADD"
+          "0AADD",
+          "0MNAST",
+          "0XNAST"
         ],
         "keyword": [
           "adhesive",
-          "adesiv",
+          "adesivo",
+          "adesiva",
           "glue",
           "colla",
           "loxeal",
           "epoxy",
           "additivo",
-          "anodal"
+          "anodal",
+          "sealant",
+          "scotch",
+          "tape",
+          "nastro adesivo"
         ]
       },
       {
@@ -163,8 +174,9 @@
         "prefix": [
           "0CI",
           "0FG",
-          "0TB",
-          "0CD"
+          "0P0.0STEAL",
+          "0P0.VELC",
+          "0CPGSLI.CO"
         ],
         "keyword": [
           "ribbon",
@@ -172,15 +184,31 @@
           "sling",
           "fettuccia",
           "dyneema",
-          "nylon",
           "webbing",
           "fabric",
           "cord",
+          "cordino",
           "lace",
           "strap",
           "cinturino",
           "mesh",
           "velcro"
+        ]
+      },
+      {
+        "key": "WOOD",
+        "label": "Wood",
+        "color": "text",
+        "prefix": [
+          "0MA020",
+          "0MALEG"
+        ],
+        "keyword": [
+          "wood",
+          "wooden",
+          "legno",
+          "frassino",
+          "ash wood"
         ]
       },
       {
@@ -192,21 +220,33 @@
           "0CT",
           "0GU",
           "GOMM",
-          "0GOM"
+          "0GOM",
+          "0CPGSLI.CP",
+          "0CPGSLI.LP",
+          "0CPGSLIACP",
+          "0CPGOMP",
+          "0CMGOM",
+          "0CRGOM",
+          "0IMP",
+          "0IN",
+          "0RGUA",
+          "0MINC"
         ],
         "keyword": [
           "plastic",
+          "plastica",
           "tpu",
           "desmopan",
           "polyur",
           "rubber",
           "gomma",
-          "additive",
+          "nylon",
           "injection",
           "moulding",
           "foam",
+          "guaina",
           "sheath",
-          "tape"
+          "eva"
         ]
       },
       {
@@ -218,11 +258,13 @@
           "0PR",
           "0CR",
           "0TE",
+          "0TB",
           "0MA",
           "3TA",
           "0CH",
           "0CA",
           "0CP",
+          "0CD",
           "0IM",
           "0IS",
           "0IJ",
@@ -240,16 +282,18 @@
           "0UP",
           "0VV",
           "0XF",
-          "0IN",
           "0DR",
           "0AC",
           "0AS",
           "3RL",
           "0BV",
-          "0ET"
+          "0ET",
+          "0MS",
+          "0MR"
         ],
         "keyword": [
           "steel",
+          "acciaio",
           "inox",
           "stainless",
           "alumin",
@@ -268,8 +312,9 @@
           "spacer",
           "boccola",
           "bush",
-          "pin ",
-          "bar "
+          "pin",
+          "bar",
+          "wire"
         ]
       },
       {
