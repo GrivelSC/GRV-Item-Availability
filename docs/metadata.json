@@ -1,5 +1,5 @@
 {
-  "refreshed_at": "2026-08-11T08:59:30.177987",
+  "refreshed_at": "2026-08-11T10:06:53.948492",
   "refreshed_by": "scheduled",
   "sku_count_verrayes": 318,
   "sku_count_usa3pl": 318,
@@ -9,7 +9,7 @@
   "manufacturing_wo_count": 2634,
   "sop_pass": "ok",
   "sop_row_counts": {
-    "q13": 833,
+    "q13": 835,
     "q13b": 61,
     "q14": 150,
     "q15": 196,
@@ -29,8 +29,7 @@
     "2 intercompany PO(s) had computed in-transit exceeding the open PO quantity (clamped): PO-US-2600007, PO-US-2600008. Likely a receipt/quantity discrepancy \u2014 verify shipped vs received.",
     "8 FG(s) have intercompany US PO quantity with no Verrayes coverage within the horizon (oversold ahead of the linked SO's queue position; residual supply not landed): ELMBAN.CK, ELMBEAN.MRLN, ELMBEAN.MRN, PIMBG.NW, PINXM.RS.CX, PJCV.AG, PJVS.WG, ZAALP.SPRT.30. Procurement action at Verrayes likely needed.",
     "8 intercompany PO(s) have no open/dated linked Italian SO in Q4 (closed or dateless); queue anchor fell back to the PO receipt date: PO-US-2600004, PO-US-2600006, PO-US-2600007, PO-US-2600008, PO-US-2600010, PO-US-2600014, PO-US-2600015, PO-US-2600016.",
-    "BOM tab: 68 finished good(s) have no active BOM and are shown as single-node buyouts costed from their own purchase history (57 of them have any). Their COGS is a purchase price, not a build-up, so the category split reads as one line.",
-    "BOM tab: 214 leaf component(s) have no cost in any source (194 packaging, 18 structural, 2 service) \u2014 their contribution to COGS is understated as zero. See the Cost gap panel.",
-    "BOM tab: purchase unit differs from stock unit and no conversion is configured for 0TBDTR1228, 0TBETR1238, 9DP490_ADESEPO. Add settings.bom_uom_conversions.<item_id>.purchase_to_stock \u2014 these costs are wrong until you do."
+    "BOM tab: 68 finished good(s) have no active BOM and are shown as single-node buyouts costed from their own purchase history (0 of them have any). Their COGS is a purchase price, not a build-up, so the category split reads as one line.",
+    "BOM tab: 677 leaf component(s) have no cost in any source (609 other, 68 buyout) \u2014 their contribution to COGS is understated as zero. See the Cost gap panel."
   ]
 }
