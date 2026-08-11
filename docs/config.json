@@ -49,7 +49,32 @@
       21,
       22,
       23
-    ]
+    ],
+    "excluded_order_type_ids": [
+      1,
+      5,
+      6,
+      7,
+      8,
+      15,
+      20,
+      23,
+      26
+    ],
+    "asp_window_months": 12,
+    "bom_cost_window_months": 12,
+    "bom_excluded_class_ids": [
+      21,
+      22,
+      23
+    ],
+    "bom_packaging_prefixes": [
+      "0LAB",
+      "0PACK",
+      "0XFUC",
+      "0XSAC"
+    ],
+    "bom_uom_conversions": {}
   },
   "fg_list": [
     {
@@ -1323,6 +1348,14 @@
     {
       "item_id": "1167",
       "item_name": ""
+    }
+  ],
+  "fg_reference_list": [
+    {
+      "item_id": "1028",
+      "reference_of": "6895",
+      "item_name": "RAG10.NME",
+      "note": "former G10 NewMatic"
     }
   ],
   "exclusion_list": [
