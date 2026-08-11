@@ -74,7 +74,226 @@
       "0XFUC",
       "0XSAC"
     ],
-    "bom_uom_conversions": {}
+    "bom_uom_conversions": {
+      "3865": {
+        "purchase_to_stock": 2.82,
+        "note": "0TBDTR1228 \u00b7 0.35461 kg/m -> 2.82000 m per kg purchased"
+      },
+      "3866": {
+        "purchase_to_stock": 3.47222,
+        "note": "0TBDTR164 \u00b7 0.28800 kg/m -> 3.47222 m per kg purchased"
+      },
+      "3867": {
+        "purchase_to_stock": 3.561,
+        "note": "0TBDTR784 \u00b7 0.28082 kg/m -> 3.56100 m per kg purchased"
+      },
+      "3868": {
+        "purchase_to_stock": 2.56555,
+        "note": "0TBETR1238 \u00b7 0.38978 kg/m -> 2.56555 m per kg purchased"
+      },
+      "419": {
+        "purchase_to_stock": 1000,
+        "bom_to_stock": 1,
+        "note": "9DP490_ADESEPO \u00b7 1 PZ = 20 tubes x 50 ml = 1000 ml (EUR 495.60/PZ = EUR 24.78/tube = EUR 0.4956/ml). BOM quantities taken as millilitres per Davide, 11 Aug 2026."
+      }
+    },
+    "bom_category_rules": [
+      {
+        "key": "SERVICE",
+        "label": "Outsourced services",
+        "color": "purple",
+        "type": [
+          "service"
+        ]
+      },
+      {
+        "key": "BUYOUT",
+        "label": "Buyout",
+        "color": "accent",
+        "type": [
+          "buyout_fg"
+        ],
+        "prefix": [
+          "0HE"
+        ]
+      },
+      {
+        "key": "PACKAGING",
+        "label": "Primary packaging",
+        "color": "green",
+        "prefix": [
+          "0LAB",
+          "0PACK",
+          "0XFUC",
+          "0XSAC",
+          "0XBUST"
+        ]
+      },
+      {
+        "key": "HARDWARE",
+        "label": "Hardware & fasteners",
+        "color": "muted",
+        "prefix": [
+          "0NR",
+          "0NV",
+          "0NA",
+          "0ND",
+          "0NM"
+        ],
+        "keyword": [
+          "rivet",
+          "screw",
+          "vite ",
+          "bolt",
+          "nut ",
+          "washer",
+          "t.c.e.i",
+          "v.t.c"
+        ]
+      },
+      {
+        "key": "ADHESIVE",
+        "label": "Adhesives & chemicals",
+        "color": "pink",
+        "prefix": [
+          "0DLOX",
+          "9DP",
+          "0AADD"
+        ],
+        "keyword": [
+          "adhesive",
+          "adesiv",
+          "glue",
+          "colla",
+          "loxeal",
+          "epoxy",
+          "additivo",
+          "anodal"
+        ]
+      },
+      {
+        "key": "TEXTILE",
+        "label": "Textile & webbing",
+        "color": "amber",
+        "prefix": [
+          "0CI",
+          "0FG",
+          "0TB",
+          "0CD"
+        ],
+        "keyword": [
+          "ribbon",
+          "nastro",
+          "sling",
+          "fettuccia",
+          "dyneema",
+          "nylon",
+          "webbing",
+          "fabric",
+          "cord",
+          "lace",
+          "strap",
+          "cinturino",
+          "mesh",
+          "velcro"
+        ]
+      },
+      {
+        "key": "POLYMER",
+        "label": "Plastic, rubber & compounds",
+        "color": "teal",
+        "prefix": [
+          "0L",
+          "0CT",
+          "0GU",
+          "GOMM",
+          "0GOM"
+        ],
+        "keyword": [
+          "plastic",
+          "tpu",
+          "desmopan",
+          "polyur",
+          "rubber",
+          "gomma",
+          "additive",
+          "injection",
+          "moulding",
+          "foam",
+          "sheath",
+          "tape"
+        ]
+      },
+      {
+        "key": "METAL",
+        "label": "Structural metal",
+        "color": "blue",
+        "prefix": [
+          "0AR",
+          "0PR",
+          "0CR",
+          "0TE",
+          "0MA",
+          "3TA",
+          "0CH",
+          "0CA",
+          "0CP",
+          "0IM",
+          "0IS",
+          "0IJ",
+          "3IJ",
+          "0RT",
+          "0RG",
+          "0RB",
+          "0RP",
+          "0SE",
+          "0P0",
+          "0PG",
+          "0PK",
+          "0PU",
+          "0PA",
+          "0UP",
+          "0VV",
+          "0XF",
+          "0IN",
+          "0DR",
+          "0AC",
+          "0AS",
+          "3RL",
+          "0BV",
+          "0ET"
+        ],
+        "keyword": [
+          "steel",
+          "inox",
+          "stainless",
+          "alumin",
+          "allumin",
+          "brass",
+          "ottone",
+          "forged",
+          "tube",
+          "tubo",
+          "blade",
+          "spring",
+          "molla",
+          "carabiner",
+          "bail",
+          "lever",
+          "spacer",
+          "boccola",
+          "bush",
+          "pin ",
+          "bar "
+        ]
+      },
+      {
+        "key": "OTHER",
+        "label": "Other",
+        "color": "dim",
+        "catch_all": true
+      }
+    ]
   },
   "fg_list": [
     {
