@@ -1,5 +1,5 @@
 {
-  "refreshed_at": "2026-08-14T17:30:42.211873",
+  "refreshed_at": "2026-08-17T07:17:19.950324",
   "refreshed_by": "scheduled",
   "sku_count_verrayes": 318,
   "sku_count_usa3pl": 318,
@@ -12,7 +12,7 @@
     "q13": 841,
     "q13b": 61,
     "q14": 150,
-    "q15": 193,
+    "q15": 194,
     "q17": 27
   },
   "bom_pass": "ok",
@@ -21,7 +21,7 @@
     "sub1_realised": 268,
     "sub1_book": 307,
     "sub3_realised": 147,
-    "sub3_book": 178
+    "sub3_book": 180
   },
   "status": "ok",
   "warnings": [
