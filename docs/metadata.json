@@ -1,18 +1,18 @@
 {
-  "refreshed_at": "2026-08-17T10:03:27.811632",
+  "refreshed_at": "2026-08-18T10:08:13.901959",
   "refreshed_by": "scheduled",
   "sku_count_verrayes": 318,
   "sku_count_usa3pl": 318,
   "override_count": 31,
   "dtc_pass": "ok",
   "manufacturing_pass": "ok",
-  "manufacturing_wo_count": 2560,
+  "manufacturing_wo_count": 2546,
   "sop_pass": "ok",
   "sop_row_counts": {
     "q13": 841,
     "q13b": 61,
     "q14": 150,
-    "q15": 194,
+    "q15": 193,
     "q17": 27
   },
   "bom_pass": "ok",
@@ -21,14 +21,14 @@
     "sub1_realised": 268,
     "sub1_book": 307,
     "sub3_realised": 147,
-    "sub3_book": 180
+    "sub3_book": 181
   },
   "status": "ok",
   "warnings": [
     "2 promoted parent(s) have open Work Orders with no completion date in NetSuite; supply was scheduled from the WO transaction date as a fallback: 0IMCOEACPE03GN, 0RTTDKNI.B. Set end dates or close stale WOs.",
     "2 intercompany PO(s) had computed in-transit exceeding the open PO quantity (clamped): PO-US-2600007, PO-US-2600008. Likely a receipt/quantity discrepancy \u2014 verify shipped vs received.",
-    "8 FG(s) have intercompany US PO quantity with no Verrayes coverage within the horizon (oversold ahead of the linked SO's queue position; residual supply not landed): ELMBAN.CK, ELMBEAN.MRLN, ELMBEAN.MRN, PIMBG.NW, PINXM.RS.CX, PJCV.AG, PJVS.WG, ZAALP.SPRT.30. Procurement action at Verrayes likely needed.",
-    "8 intercompany PO(s) have no open/dated linked Italian SO in Q4 (closed or dateless); queue anchor fell back to the PO receipt date: PO-US-2600004, PO-US-2600006, PO-US-2600007, PO-US-2600008, PO-US-2600010, PO-US-2600014, PO-US-2600015, PO-US-2600016.",
+    "6 FG(s) have intercompany US PO quantity with no Verrayes coverage within the horizon (oversold ahead of the linked SO's queue position; residual supply not landed): ELMBEAN.MRN, PIMBG.NW, PINXM.RS.CX, PJCV.AG, PJVS.WG, ZAALP.SPRT.30. Procurement action at Verrayes likely needed.",
+    "9 intercompany PO(s) have no open/dated linked Italian SO in Q4 (closed or dateless); queue anchor fell back to the PO receipt date: PO-US-2600004, PO-US-2600006, PO-US-2600007, PO-US-2600008, PO-US-2600010, PO-US-2600014, PO-US-2600015, PO-US-2600016 (+1 more).",
     "BOM tab: 68 finished good(s) have no active BOM and are shown as single-node buyouts costed from their own purchase history (57 of them have any). Their COGS is a purchase price, not a build-up, so the category split reads as one line.",
     "BOM tab: 214 leaf component(s) have no cost in any source (194 packaging, 11 buyout, 2 polymer, 2 adhesive, 2 service, 1 other, 1 hardware, 1 metal) \u2014 their contribution to COGS is understated as zero. See the Cost gap panel.",
     "BOM tab: purchase unit differs from stock unit and no conversion is configured for 0TBDTR1228, 0TBETR1238. Add settings.bom_uom_conversions.<item_id>.purchase_to_stock \u2014 these costs are wrong until you do.",
