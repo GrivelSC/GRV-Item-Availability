@@ -732,10 +732,6 @@
       "item_name": ""
     },
     {
-      "item_id": "6883",
-      "item_name": ""
-    },
-    {
       "item_id": "6884",
       "item_name": ""
     },
@@ -3208,52 +3204,47 @@
   "embargo_list": [
     {
       "item_id": "6929",
-      "item_name": "12/15/2026",
+      "item_name": "2026-12-15",
       "embargo_date": "Front Parts G15"
     },
     {
       "item_id": "6899",
-      "item_name": "10/15/2026",
+      "item_name": "2026-10-15",
       "embargo_date": "GX Tmatic"
     },
     {
       "item_id": "6900",
-      "item_name": "10/15/2026",
+      "item_name": "2026-10-15",
       "embargo_date": "GX Hybrid SkiMatic+"
     },
     {
       "item_id": "6901",
-      "item_name": "10/15/2026",
+      "item_name": "2026-10-15",
       "embargo_date": "GX Hybrid Tmatic/COMSki"
     },
     {
       "item_id": "6937",
-      "item_name": "10/15/2026",
+      "item_name": "2026-10-15",
       "embargo_date": "Bars Bi-Fold 16"
     },
     {
       "item_id": "6938",
-      "item_name": "10/15/2026",
+      "item_name": "2026-10-15",
       "embargo_date": "Bars Bi-Fold 19"
     },
     {
       "item_id": "6939",
-      "item_name": "10/15/2026",
+      "item_name": "2026-10-15",
       "embargo_date": "Bars Bi-Fold 22"
     },
     {
       "item_id": "6855",
-      "item_name": "12/15/2026",
+      "item_name": "2026-12-15",
       "embargo_date": "Ghost Tech Razor Hammer Core Black 45"
     },
     {
-      "item_id": "6870",
-      "item_name": "12/15/2026",
-      "embargo_date": "Nexus Machine Razor Simple Carbon Look"
-    },
-    {
       "item_id": "7014",
-      "item_name": "12/15/2026",
+      "item_name": "2026-12-15",
       "embargo_date": "Adjustable Chain Vertix Adj"
     }
   ],
