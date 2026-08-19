@@ -3205,224 +3205,57 @@
       "reason": ""
     }
   ],
-  "embargo_list": [],
-  "overrides_list": [
+  "embargo_list": [
     {
-      "item_id": "7066",
-      "location": "verrayes",
-      "today_avail": 5,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
+      "item_id": "6929",
+      "item_name": "12/15/2026",
+      "embargo_date": "Front Parts G15"
     },
     {
-      "item_id": "7067",
-      "location": "verrayes",
-      "today_avail": 5,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
+      "item_id": "6899",
+      "item_name": "10/15/2026",
+      "embargo_date": "GX Tmatic"
     },
     {
-      "item_id": "7068",
-      "location": "verrayes",
-      "today_avail": 5,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
+      "item_id": "6900",
+      "item_name": "10/15/2026",
+      "embargo_date": "GX Hybrid SkiMatic+"
     },
     {
-      "item_id": "7069",
-      "location": "verrayes",
-      "today_avail": 5,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
+      "item_id": "6901",
+      "item_name": "10/15/2026",
+      "embargo_date": "GX Hybrid Tmatic/COMSki"
     },
     {
-      "item_id": "7070",
-      "location": "verrayes",
-      "today_avail": 5,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
+      "item_id": "6937",
+      "item_name": "10/15/2026",
+      "embargo_date": "Bars Bi-Fold 16"
     },
     {
-      "item_id": "7071",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
+      "item_id": "6938",
+      "item_name": "10/15/2026",
+      "embargo_date": "Bars Bi-Fold 19"
     },
     {
-      "item_id": "7072",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7073",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7074",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7075",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7076",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7077",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7078",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7079",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7080",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7081",
-      "location": "verrayes",
-      "today_avail": 10,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7082",
-      "location": "verrayes",
-      "today_avail": 15,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7083",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7084",
-      "location": "verrayes",
-      "today_avail": 20,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7085",
-      "location": "verrayes",
-      "today_avail": 20,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7086",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7087",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7088",
-      "location": "verrayes",
-      "today_avail": 5,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7089",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7090",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7091",
-      "location": "verrayes",
-      "today_avail": 20,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7092",
-      "location": "verrayes",
-      "today_avail": 20,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7093",
-      "location": "verrayes",
-      "today_avail": 20,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
-    },
-    {
-      "item_id": "7094",
-      "location": "verrayes",
-      "today_avail": 20,
-      "next_avail": "7/15/2026",
-      "next_qty": 50
+      "item_id": "6939",
+      "item_name": "10/15/2026",
+      "embargo_date": "Bars Bi-Fold 22"
     },
     {
       "item_id": "6855",
-      "location": "verrayes",
-      "today_avail": 0,
-      "next_avail": "9/30/2026",
-      "next_qty": 100
+      "item_name": "12/15/2026",
+      "embargo_date": "Ghost Tech Razor Hammer Core Black 45"
     },
     {
-      "item_id": "6855",
-      "location": "usa3pl",
-      "today_avail": 0,
-      "next_avail": "9/30/2026",
-      "next_qty": 100
+      "item_id": "6870",
+      "item_name": "12/15/2026",
+      "embargo_date": "Nexus Machine Razor Simple Carbon Look"
+    },
+    {
+      "item_id": "7014",
+      "item_name": "12/15/2026",
+      "embargo_date": "Adjustable Chain Vertix Adj"
     }
-  ]
+  ],
+  "overrides_list": []
 }
