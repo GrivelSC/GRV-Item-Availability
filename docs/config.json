@@ -3204,48 +3204,48 @@
   "embargo_list": [
     {
       "item_id": "6929",
-      "item_name": "2026-12-15",
-      "embargo_date": "Front Parts G15"
+      "item_name": "Front Parts G15",
+      "embargo_date": "12/15/2026"
     },
     {
       "item_id": "6899",
-      "item_name": "2026-10-15",
-      "embargo_date": "GX Tmatic"
+      "item_name": "GX Tmatic",
+      "embargo_date": "10/15/2026"
     },
     {
       "item_id": "6900",
-      "item_name": "2026-10-15",
-      "embargo_date": "GX Hybrid SkiMatic+"
+      "item_name": "GX Hybrid SkiMatic+",
+      "embargo_date": "10/15/2026"
     },
     {
       "item_id": "6901",
-      "item_name": "2026-10-15",
-      "embargo_date": "GX Hybrid Tmatic/COMSki"
+      "item_name": "GX Hybrid Tmatic/COMSki",
+      "embargo_date": "10/15/2026"
     },
     {
       "item_id": "6937",
-      "item_name": "2026-10-15",
-      "embargo_date": "Bars Bi-Fold 16"
+      "item_name": "Bars Bi-Fold 16",
+      "embargo_date": "10/15/2026"
     },
     {
       "item_id": "6938",
-      "item_name": "2026-10-15",
-      "embargo_date": "Bars Bi-Fold 19"
+      "item_name": "Bars Bi-Fold 19",
+      "embargo_date": "10/15/2026"
     },
     {
       "item_id": "6939",
-      "item_name": "2026-10-15",
-      "embargo_date": "Bars Bi-Fold 22"
+      "item_name": "Bars Bi-Fold 22",
+      "embargo_date": "10/15/2026"
     },
     {
       "item_id": "6855",
-      "item_name": "2026-12-15",
-      "embargo_date": "Ghost Tech Razor Hammer Core Black 45"
+      "item_name": "Ghost Tech Razor Hammer Core Black 45",
+      "embargo_date": "12/15/2026"
     },
     {
       "item_id": "7014",
-      "item_name": "2026-12-15",
-      "embargo_date": "Adjustable Chain Vertix Adj"
+      "item_name": "Adjustable Chain Vertix Adj",
+      "embargo_date": "12/15/2026"
     }
   ],
   "overrides_list": []
