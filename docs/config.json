@@ -1598,10 +1598,1479 @@
   ],
   "fg_reference_list": [
     {
+      "item_id": "892",
+      "reference_of": "PIGZE.LE.B58",
+      "item_name": "6812"
+    },
+    {
+      "item_id": "893",
+      "reference_of": "PIGZE.LE.B66",
+      "item_name": "6813"
+    },
+    {
+      "item_id": "894",
+      "reference_of": "PIGZE.LE.B74",
+      "item_name": "6814"
+    },
+    {
+      "item_id": "904",
+      "reference_of": "PIGON.LE.Y53",
+      "item_name": "6815"
+    },
+    {
+      "item_id": "905",
+      "reference_of": "PIGON.LE.Y58",
+      "item_name": "6816"
+    },
+    {
+      "item_id": "906",
+      "reference_of": "PIGON.LE.Y66",
+      "item_name": "6817"
+    },
+    {
+      "item_id": "907",
+      "reference_of": "PIGON.LE.Y74",
+      "item_name": "6818"
+    },
+    {
+      "item_id": "928",
+      "reference_of": "PIATE+.Y48",
+      "item_name": "6819"
+    },
+    {
+      "item_id": "929",
+      "reference_of": "PIATE+.Y53",
+      "item_name": "6820"
+    },
+    {
+      "item_id": "930",
+      "reference_of": "PIATE+.Y58",
+      "item_name": "6821"
+    },
+    {
+      "item_id": "931",
+      "reference_of": "PIATE+.Y66",
+      "item_name": "6822"
+    },
+    {
+      "item_id": "936",
+      "reference_of": "PIATE+LE.Y48",
+      "item_name": "6823"
+    },
+    {
+      "item_id": "937",
+      "reference_of": "PIATE+LE.Y53",
+      "item_name": "6824"
+    },
+    {
+      "item_id": "938",
+      "reference_of": "PIATE+LE.Y58",
+      "item_name": "6825"
+    },
+    {
+      "item_id": "939",
+      "reference_of": "PIATE+LE.Y66",
+      "item_name": "6826"
+    },
+    {
+      "item_id": "932",
+      "reference_of": "PIATE+GS.Y48",
+      "item_name": "6827"
+    },
+    {
+      "item_id": "933",
+      "reference_of": "PIATE+GS.Y53",
+      "item_name": "6828"
+    },
+    {
+      "item_id": "934",
+      "reference_of": "PIATE+GS.Y58",
+      "item_name": "6829"
+    },
+    {
+      "item_id": "935",
+      "reference_of": "PIATE+GS.Y66",
+      "item_name": "6830"
+    },
+    {
+      "item_id": "920",
+      "reference_of": "PIATL.S48",
+      "item_name": "6831"
+    },
+    {
+      "item_id": "921",
+      "reference_of": "PIATL.S53",
+      "item_name": "6832"
+    },
+    {
+      "item_id": "922",
+      "reference_of": "PIATL.S58",
+      "item_name": "6833"
+    },
+    {
+      "item_id": "923",
+      "reference_of": "PIATL.S66",
+      "item_name": "6834"
+    },
+    {
+      "item_id": "924",
+      "reference_of": "PIATL.GS.S48",
+      "item_name": "6835"
+    },
+    {
+      "item_id": "925",
+      "reference_of": "PIATL.GS.S53",
+      "item_name": "6836"
+    },
+    {
+      "item_id": "926",
+      "reference_of": "PIATL.GS.S58",
+      "item_name": "6837"
+    },
+    {
+      "item_id": "927",
+      "reference_of": "PIATL.GS.S66",
+      "item_name": "6838"
+    },
+    {
+      "item_id": "944",
+      "reference_of": "PIGHO.W45",
+      "item_name": "6839"
+    },
+    {
+      "item_id": "945",
+      "reference_of": "PIGHO.W50",
+      "item_name": "6840"
+    },
+    {
+      "item_id": "944",
+      "reference_of": "PIGHO.W45",
+      "item_name": "6841"
+    },
+    {
+      "item_id": "945",
+      "reference_of": "PIGHO.W50",
+      "item_name": "6842"
+    },
+    {
+      "item_id": "944",
+      "reference_of": "PIGHO.W45",
+      "item_name": "6843"
+    },
+    {
+      "item_id": "945",
+      "reference_of": "PIGHO.W50",
+      "item_name": "6844"
+    },
+    {
+      "item_id": "944",
+      "reference_of": "PIGHO.W45",
+      "item_name": "6845"
+    },
+    {
+      "item_id": "945",
+      "reference_of": "PIGHO.W50",
+      "item_name": "6846"
+    },
+    {
+      "item_id": "960",
+      "reference_of": "PIGHE.Y45",
+      "item_name": "6847"
+    },
+    {
+      "item_id": "961",
+      "reference_of": "PIGHE.Y50",
+      "item_name": "6848"
+    },
+    {
+      "item_id": "960",
+      "reference_of": "PIGHE.Y45",
+      "item_name": "6849"
+    },
+    {
+      "item_id": "961",
+      "reference_of": "PIGHE.Y50",
+      "item_name": "6850"
+    },
+    {
+      "item_id": "960",
+      "reference_of": "PIGHE.Y45",
+      "item_name": "6851"
+    },
+    {
+      "item_id": "961",
+      "reference_of": "PIGHE.Y50",
+      "item_name": "6852"
+    },
+    {
+      "item_id": "960",
+      "reference_of": "PIGHE.Y45",
+      "item_name": "6853"
+    },
+    {
+      "item_id": "961",
+      "reference_of": "PIGHE.Y50",
+      "item_name": "6854"
+    },
+    {
+      "item_id": "968",
+      "reference_of": "PIGHT.B45",
+      "item_name": "6855"
+    },
+    {
+      "item_id": "968",
+      "reference_of": "PIGHT.B45",
+      "item_name": "6856"
+    },
+    {
+      "item_id": "1439",
+      "reference_of": "PITNM.IAV.Y",
+      "item_name": "6857"
+    },
+    {
+      "item_id": "1439",
+      "reference_of": "PITNM.IAV.Y",
+      "item_name": "6858"
+    },
+    {
+      "item_id": "1441",
+      "reference_of": "PITNM.TSV.Y",
+      "item_name": "6859"
+    },
+    {
+      "item_id": "1445",
+      "reference_of": "PITNMC.IAV",
+      "item_name": "6860"
+    },
+    {
+      "item_id": "1445",
+      "reference_of": "PITNMC.IAV",
+      "item_name": "6861"
+    },
+    {
+      "item_id": "1447",
+      "reference_of": "PITNMC.KSV",
+      "item_name": "6862"
+    },
+    {
+      "item_id": "977",
+      "reference_of": "PIMACTEC.ISV",
+      "item_name": "6863"
+    },
+    {
+      "item_id": "978",
+      "reference_of": "PIMACTEC.TSV",
+      "item_name": "6864"
+    },
+    {
+      "item_id": "979",
+      "reference_of": "PIMACDAR.ISV",
+      "item_name": "6865"
+    },
+    {
+      "item_id": "980",
+      "reference_of": "PIMACDAR.TSV",
+      "item_name": "6866"
+    },
+    {
+      "item_id": "981",
+      "reference_of": "PIMACDAR.KSV",
+      "item_name": "6867"
+    },
+    {
+      "item_id": "982",
+      "reference_of": "PIMACDAX.ISV",
+      "item_name": "6868"
+    },
+    {
+      "item_id": "983",
+      "reference_of": "PIMACDAX.DSV",
+      "item_name": "6869"
+    },
+    {
+      "item_id": "988",
+      "reference_of": "PI022.65G",
+      "item_name": "6871"
+    },
+    {
+      "item_id": "986",
+      "reference_of": "PI022.65",
+      "item_name": "6872"
+    },
+    {
+      "item_id": "990",
+      "reference_of": "PIG200.65",
+      "item_name": "6873"
+    },
+    {
+      "item_id": "992",
+      "reference_of": "PJICEV",
+      "item_name": "6874"
+    },
+    {
+      "item_id": "992",
+      "reference_of": "PJICEV",
+      "item_name": "6875"
+    },
+    {
+      "item_id": "992",
+      "reference_of": "PJICEV",
+      "item_name": "6876"
+    },
+    {
+      "item_id": "992",
+      "reference_of": "PJICEV",
+      "item_name": "6877"
+    },
+    {
+      "item_id": "992",
+      "reference_of": "PJICEV",
+      "item_name": "6878"
+    },
+    {
+      "item_id": "997",
+      "reference_of": "PJSIMV",
+      "item_name": "6879"
+    },
+    {
+      "item_id": "998",
+      "reference_of": "PJTHORMV",
+      "item_name": "6880"
+    },
+    {
+      "item_id": "999",
+      "reference_of": "PJTHORV",
+      "item_name": "6881"
+    },
+    {
+      "item_id": "1000",
+      "reference_of": "PJADZV",
+      "item_name": "6882"
+    },
+    {
+      "item_id": "1000",
+      "reference_of": "PJADZV",
+      "item_name": "6883"
+    },
+    {
+      "item_id": "1000",
+      "reference_of": "PJADZV",
+      "item_name": "6884"
+    },
+    {
+      "item_id": "1014",
+      "reference_of": "PJSSPRINGL",
+      "item_name": "6885"
+    },
+    {
+      "item_id": "1015",
+      "reference_of": "PJSSPRINGL+",
+      "item_name": "6886"
+    },
+    {
+      "item_id": "1016",
+      "reference_of": "PJSSPRINGE",
+      "item_name": "6887"
+    },
+    {
+      "item_id": "1017",
+      "reference_of": "PJDSPRINGE",
+      "item_name": "6888"
+    },
+    {
+      "item_id": "1012",
+      "reference_of": "PJGSLIDER.1",
+      "item_name": "6889"
+    },
+    {
+      "item_id": "1013",
+      "reference_of": "PJGSLIDER.2",
+      "item_name": "6890"
+    },
+    {
+      "item_id": "1020",
+      "reference_of": "PJ049.22",
+      "item_name": "6891"
+    },
+    {
+      "item_id": "1021",
+      "reference_of": "PJ049.23",
+      "item_name": "6892"
+    },
+    {
+      "item_id": "1022",
+      "reference_of": "PJ049.17",
+      "item_name": "6893"
+    },
+    {
+      "item_id": "1023",
+      "reference_of": "PJATEC.B",
+      "item_name": "6894"
+    },
+    {
       "item_id": "1028",
-      "reference_of": "6895",
-      "item_name": "RAG10.NME",
-      "note": "former G10 NewMatic"
+      "reference_of": "RAG10.NME",
+      "item_name": "6895"
+    },
+    {
+      "item_id": "1029",
+      "reference_of": "RAG10.NCE.F",
+      "item_name": "6896"
+    },
+    {
+      "item_id": "1030",
+      "reference_of": "RAG10W.NME",
+      "item_name": "6897"
+    },
+    {
+      "item_id": "1031",
+      "reference_of": "RAG10W.NCE.F",
+      "item_name": "6898"
+    },
+    {
+      "item_id": "1031",
+      "reference_of": "RAG10W.NCE.F",
+      "item_name": "6899"
+    },
+    {
+      "item_id": "1031",
+      "reference_of": "RAG10W.NCE.F",
+      "item_name": "6900"
+    },
+    {
+      "item_id": "1031",
+      "reference_of": "RAG10W.NCE.F",
+      "item_name": "6901"
+    },
+    {
+      "item_id": "1032",
+      "reference_of": "RAAT.COME",
+      "item_name": "6902"
+    },
+    {
+      "item_id": "1033",
+      "reference_of": "RAAT.DME",
+      "item_name": "6903"
+    },
+    {
+      "item_id": "1034",
+      "reference_of": "RAAT.NME",
+      "item_name": "6904"
+    },
+    {
+      "item_id": "1035",
+      "reference_of": "RAAT.NCE.F",
+      "item_name": "6905"
+    },
+    {
+      "item_id": "1036",
+      "reference_of": "RAATH.DME.F",
+      "item_name": "6906"
+    },
+    {
+      "item_id": "1037",
+      "reference_of": "RAATH.NME.F",
+      "item_name": "6907"
+    },
+    {
+      "item_id": "1038",
+      "reference_of": "RAATL.COME.F",
+      "item_name": "6908"
+    },
+    {
+      "item_id": "1038",
+      "reference_of": "RAATL.COME.F",
+      "item_name": "6909"
+    },
+    {
+      "item_id": "1043",
+      "reference_of": "RAG12.COME",
+      "item_name": "6910"
+    },
+    {
+      "item_id": "1044",
+      "reference_of": "RAG12.DME",
+      "item_name": "6911"
+    },
+    {
+      "item_id": "1045",
+      "reference_of": "RAG12.NME",
+      "item_name": "6912"
+    },
+    {
+      "item_id": "1046",
+      "reference_of": "RAG12.NCE.F",
+      "item_name": "6913"
+    },
+    {
+      "item_id": "1047",
+      "reference_of": "RAG14.COME",
+      "item_name": "6914"
+    },
+    {
+      "item_id": "1051",
+      "reference_of": "RAG20P.COME",
+      "item_name": "6915"
+    },
+    {
+      "item_id": "1052",
+      "reference_of": "RAG20P.COME.K",
+      "item_name": "6916"
+    },
+    {
+      "item_id": "1055",
+      "reference_of": "RA089.00",
+      "item_name": "6917"
+    },
+    {
+      "item_id": "1095",
+      "reference_of": "RBCRSAFESM",
+      "item_name": "6918"
+    },
+    {
+      "item_id": "1094",
+      "reference_of": "RBCRSAFE",
+      "item_name": "6919"
+    },
+    {
+      "item_id": "1095",
+      "reference_of": "RBCRSAFESM",
+      "item_name": "6920"
+    },
+    {
+      "item_id": "1094",
+      "reference_of": "RBCRSAFE",
+      "item_name": "6921"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6922"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6923"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6924"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6925"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6926"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6927"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6928"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6929"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6930"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6931"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6932"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6933"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6934"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6935"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6936"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6937"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6938"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6939"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6940"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6941"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6942"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6943"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6944"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6945"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6946"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6947"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6948"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6949"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6950"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6951"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6952"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6953"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6954"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6955"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6956"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6957"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6958"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6959"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6960"
+    },
+    {
+      "item_id": "1085",
+      "reference_of": "RBFLEXB.16",
+      "item_name": "6961"
+    },
+    {
+      "item_id": "1098",
+      "reference_of": "ASEXP.S",
+      "item_name": "6962"
+    },
+    {
+      "item_id": "1099",
+      "reference_of": "ASEXP.M",
+      "item_name": "6963"
+    },
+    {
+      "item_id": "1100",
+      "reference_of": "ASEXP.L",
+      "item_name": "6964"
+    },
+    {
+      "item_id": "1101",
+      "reference_of": "ASEXP.XL",
+      "item_name": "6965"
+    },
+    {
+      "item_id": "1102",
+      "reference_of": "ASEXPL.S",
+      "item_name": "6966"
+    },
+    {
+      "item_id": "1103",
+      "reference_of": "ASEXPL.M",
+      "item_name": "6967"
+    },
+    {
+      "item_id": "1104",
+      "reference_of": "ASEXPL.L",
+      "item_name": "6968"
+    },
+    {
+      "item_id": "1105",
+      "reference_of": "ASEXPL.XL",
+      "item_name": "6969"
+    },
+    {
+      "item_id": "1107",
+      "reference_of": "IS720M16.S10C",
+      "item_name": "6970"
+    },
+    {
+      "item_id": "1107",
+      "reference_of": "IS720M16.S10C",
+      "item_name": "6971"
+    },
+    {
+      "item_id": "1108",
+      "reference_of": "IS260S",
+      "item_name": "6972"
+    },
+    {
+      "item_id": "1109",
+      "reference_of": "IS260M",
+      "item_name": "6973"
+    },
+    {
+      "item_id": "1110",
+      "reference_of": "IS260L",
+      "item_name": "6974"
+    },
+    {
+      "item_id": "1111",
+      "reference_of": "IS251S",
+      "item_name": "6975"
+    },
+    {
+      "item_id": "1112",
+      "reference_of": "IS251M",
+      "item_name": "6976"
+    },
+    {
+      "item_id": "1113",
+      "reference_of": "IS251L",
+      "item_name": "6977"
+    },
+    {
+      "item_id": "1116",
+      "reference_of": "IT245.00",
+      "item_name": "6978"
+    },
+    {
+      "item_id": "1117",
+      "reference_of": "ITBLAHOL5",
+      "item_name": "6979"
+    },
+    {
+      "item_id": "1118",
+      "reference_of": "RSK6G",
+      "item_name": "6780"
+    },
+    {
+      "item_id": "1121",
+      "reference_of": "RSK10GS",
+      "item_name": "6781"
+    },
+    {
+      "item_id": "1122",
+      "reference_of": "RSK10G",
+      "item_name": "6782"
+    },
+    {
+      "item_id": "1123",
+      "reference_of": "RSK3GH",
+      "item_name": "6783"
+    },
+    {
+      "item_id": "1124",
+      "reference_of": "RSVLAD",
+      "item_name": "6784"
+    },
+    {
+      "item_id": "1127",
+      "reference_of": "RSK6N",
+      "item_name": "6785"
+    },
+    {
+      "item_id": "1128",
+      "reference_of": "RSK5N",
+      "item_name": "6786"
+    },
+    {
+      "item_id": "1129",
+      "reference_of": "RSK1N",
+      "item_name": "6787"
+    },
+    {
+      "item_id": "1130",
+      "reference_of": "RSK3N",
+      "item_name": "6788"
+    },
+    {
+      "item_id": "1130",
+      "reference_of": "RSK3N",
+      "item_name": "6789"
+    },
+    {
+      "item_id": "1130",
+      "reference_of": "RSK3N",
+      "item_name": "6790"
+    },
+    {
+      "item_id": "1130",
+      "reference_of": "RSK3N",
+      "item_name": "6791"
+    },
+    {
+      "item_id": "1130",
+      "reference_of": "RSK3N",
+      "item_name": "6792"
+    },
+    {
+      "item_id": "1130",
+      "reference_of": "RSK3N",
+      "item_name": "6793"
+    },
+    {
+      "item_id": "1130",
+      "reference_of": "RSK3N",
+      "item_name": "6994"
+    },
+    {
+      "item_id": "1130",
+      "reference_of": "RSK3N",
+      "item_name": "6794"
+    },
+    {
+      "item_id": "1130",
+      "reference_of": "RSK3N",
+      "item_name": "6795"
+    },
+    {
+      "item_id": "1130",
+      "reference_of": "RSK3N",
+      "item_name": "6796"
+    },
+    {
+      "item_id": "1130",
+      "reference_of": "RSK3N",
+      "item_name": "6797"
+    },
+    {
+      "item_id": "1130",
+      "reference_of": "RSK3N",
+      "item_name": "6999"
+    },
+    {
+      "item_id": "1151",
+      "reference_of": "RSQALPE.10",
+      "item_name": "7000"
+    },
+    {
+      "item_id": "1152",
+      "reference_of": "RSQALPE.16",
+      "item_name": "7001"
+    },
+    {
+      "item_id": "1458",
+      "reference_of": "RSQALPE.10.6",
+      "item_name": "7002"
+    },
+    {
+      "item_id": "1459",
+      "reference_of": "RSQALPE.16.6",
+      "item_name": "7003"
+    },
+    {
+      "item_id": "1155",
+      "reference_of": "RSQALPDE.60",
+      "item_name": "7004"
+    },
+    {
+      "item_id": "1156",
+      "reference_of": "RSQALPDE.110",
+      "item_name": "7005"
+    },
+    {
+      "item_id": "1157",
+      "reference_of": "RSQARAL.11",
+      "item_name": "7006"
+    },
+    {
+      "item_id": "1158",
+      "reference_of": "RSQARAL.16",
+      "item_name": "7007"
+    },
+    {
+      "item_id": "1463",
+      "reference_of": "RSQARAL.11.6",
+      "item_name": "7008"
+    },
+    {
+      "item_id": "1464",
+      "reference_of": "RSQARAL.16.6",
+      "item_name": "7009"
+    },
+    {
+      "item_id": "1163",
+      "reference_of": "RSQSSTE.13",
+      "item_name": "7010"
+    },
+    {
+      "item_id": "1164",
+      "reference_of": "RSQSSTE.18",
+      "item_name": "7011"
+    },
+    {
+      "item_id": "1469",
+      "reference_of": "RSQSSTE.13.6",
+      "item_name": "7012"
+    },
+    {
+      "item_id": "1470",
+      "reference_of": "RSQSSTE.18.6",
+      "item_name": "7013"
+    },
+    {
+      "item_id": "1165",
+      "reference_of": "RTGDAISYE",
+      "item_name": "1165"
+    },
+    {
+      "item_id": "1165",
+      "reference_of": "RTGDAISYE",
+      "item_name": "1167"
+    },
+    {
+      "item_id": "1165",
+      "reference_of": "RTGDAISYE",
+      "item_name": "7014"
+    },
+    {
+      "item_id": "3682",
+      "reference_of": "RTSLAL10.6",
+      "item_name": "7015"
+    },
+    {
+      "item_id": "3683",
+      "reference_of": "RTSLAL16.6",
+      "item_name": "7016"
+    },
+    {
+      "item_id": "1173",
+      "reference_of": "RTSLALD60",
+      "item_name": "7017"
+    },
+    {
+      "item_id": "1174",
+      "reference_of": "RTSLALD110",
+      "item_name": "7018"
+    },
+    {
+      "item_id": "1175",
+      "reference_of": "RTSLAR11.5",
+      "item_name": "7019"
+    },
+    {
+      "item_id": "1176",
+      "reference_of": "RTSLAR16.5",
+      "item_name": "7020"
+    },
+    {
+      "item_id": "1177",
+      "reference_of": "RTSLSP13.5",
+      "item_name": "7021"
+    },
+    {
+      "item_id": "1178",
+      "reference_of": "RTSLSP18.5",
+      "item_name": "7022"
+    },
+    {
+      "item_id": "1179",
+      "reference_of": "RTRINGAL60",
+      "item_name": "7023"
+    },
+    {
+      "item_id": "1180",
+      "reference_of": "RTRINGAL120",
+      "item_name": "7024"
+    },
+    {
+      "item_id": "1181",
+      "reference_of": "RTRINGAL180",
+      "item_name": "7025"
+    },
+    {
+      "item_id": "1183",
+      "reference_of": "RTMAB",
+      "item_name": "6800"
+    },
+    {
+      "item_id": "1184",
+      "reference_of": "RTMAPB",
+      "item_name": "6801"
+    },
+    {
+      "item_id": "1186",
+      "reference_of": "RTMABCL",
+      "item_name": "6802"
+    },
+    {
+      "item_id": "1186",
+      "reference_of": "RTMABCL",
+      "item_name": "6803"
+    },
+    {
+      "item_id": "1188",
+      "reference_of": "RTMAPBCL",
+      "item_name": "6804"
+    },
+    {
+      "item_id": "1188",
+      "reference_of": "RTMAPBCL",
+      "item_name": "6805"
+    },
+    {
+      "item_id": "1192",
+      "reference_of": "RT8+",
+      "item_name": "6806"
+    },
+    {
+      "item_id": "1194",
+      "reference_of": "RTSCREAM",
+      "item_name": "6807"
+    },
+    {
+      "item_id": "1204",
+      "reference_of": "RTROLLM",
+      "item_name": "6808"
+    },
+    {
+      "item_id": "1471",
+      "reference_of": "HEMUT.S.BY",
+      "item_name": "7035"
+    },
+    {
+      "item_id": "1472",
+      "reference_of": "HEMUT.M.BY",
+      "item_name": "7036"
+    },
+    {
+      "item_id": "1473",
+      "reference_of": "HEMUT.L.BY",
+      "item_name": "7037"
+    },
+    {
+      "item_id": "1207",
+      "reference_of": "HEMUT.S.WB",
+      "item_name": "7038"
+    },
+    {
+      "item_id": "1208",
+      "reference_of": "HEMUT.M.WB",
+      "item_name": "7039"
+    },
+    {
+      "item_id": "1209",
+      "reference_of": "HEMUT.L.WB",
+      "item_name": "7040"
+    },
+    {
+      "item_id": "1213",
+      "reference_of": "HESTE.YEL",
+      "item_name": "7041"
+    },
+    {
+      "item_id": "1214",
+      "reference_of": "HESTE.TIT",
+      "item_name": "7042"
+    },
+    {
+      "item_id": "1215",
+      "reference_of": "HESTE.WHI",
+      "item_name": "7043"
+    },
+    {
+      "item_id": "1216",
+      "reference_of": "HESAL2YEL",
+      "item_name": "6809"
+    },
+    {
+      "item_id": "1217",
+      "reference_of": "HESAL2WHI",
+      "item_name": "6810"
+    },
+    {
+      "item_id": "1218",
+      "reference_of": "HESAL2BLA",
+      "item_name": "6811"
+    },
+    {
+      "item_id": "1224",
+      "reference_of": "HAMISL2",
+      "item_name": "7047"
+    },
+    {
+      "item_id": "1224",
+      "reference_of": "HAMISL2",
+      "item_name": "7048"
+    },
+    {
+      "item_id": "1224",
+      "reference_of": "HAMISL2",
+      "item_name": "7049"
+    },
+    {
+      "item_id": "1226",
+      "reference_of": "HAHIM1+",
+      "item_name": "7050"
+    },
+    {
+      "item_id": "1227",
+      "reference_of": "HAHIM2+",
+      "item_name": "7051"
+    },
+    {
+      "item_id": "1228",
+      "reference_of": "HAHIM3+",
+      "item_name": "7052"
+    },
+    {
+      "item_id": "1229",
+      "reference_of": "HALEV.S",
+      "item_name": "7053"
+    },
+    {
+      "item_id": "1230",
+      "reference_of": "HALEV.M",
+      "item_name": "7054"
+    },
+    {
+      "item_id": "1231",
+      "reference_of": "HALEV.L",
+      "item_name": "7055"
+    },
+    {
+      "item_id": "1232",
+      "reference_of": "HALEV.XL",
+      "item_name": "7056"
+    },
+    {
+      "item_id": "1232",
+      "reference_of": "HALEV.XL",
+      "item_name": "7057"
+    },
+    {
+      "item_id": "1232",
+      "reference_of": "HALEV.XL",
+      "item_name": "7058"
+    },
+    {
+      "item_id": "1232",
+      "reference_of": "HALEV.XL",
+      "item_name": "7059"
+    },
+    {
+      "item_id": "1232",
+      "reference_of": "HALEV.XL",
+      "item_name": "7060"
+    },
+    {
+      "item_id": "1246",
+      "reference_of": "HATREBL.S",
+      "item_name": "7061"
+    },
+    {
+      "item_id": "1247",
+      "reference_of": "HATREBL.M",
+      "item_name": "7062"
+    },
+    {
+      "item_id": "1248",
+      "reference_of": "HATREBL.L",
+      "item_name": "7063"
+    },
+    {
+      "item_id": "1249",
+      "reference_of": "HATREBL.XL",
+      "item_name": "7064"
+    },
+    {
+      "item_id": "1261",
+      "reference_of": "POANA.115P",
+      "item_name": "7066"
+    },
+    {
+      "item_id": "1262",
+      "reference_of": "POANA.120P",
+      "item_name": "7067"
+    },
+    {
+      "item_id": "1263",
+      "reference_of": "POANA.125P",
+      "item_name": "7068"
+    },
+    {
+      "item_id": "1264",
+      "reference_of": "POANA.130P",
+      "item_name": "7069"
+    },
+    {
+      "item_id": "1265",
+      "reference_of": "POANA.135P",
+      "item_name": "7070"
+    },
+    {
+      "item_id": "1266",
+      "reference_of": "POSTOU.120P",
+      "item_name": "7071"
+    },
+    {
+      "item_id": "1266",
+      "reference_of": "POSTOU.120P",
+      "item_name": "7072"
+    },
+    {
+      "item_id": "1267",
+      "reference_of": "POSTOU.125P",
+      "item_name": "7073"
+    },
+    {
+      "item_id": "1268",
+      "reference_of": "POSTOU.130P",
+      "item_name": "7074"
+    },
+    {
+      "item_id": "1269",
+      "reference_of": "POSTOU.135P",
+      "item_name": "7075"
+    },
+    {
+      "item_id": "1270",
+      "reference_of": "POSTOU.140P",
+      "item_name": "7076"
+    },
+    {
+      "item_id": "1271",
+      "reference_of": "POSTOU.145P",
+      "item_name": "7077"
+    },
+    {
+      "item_id": "1272",
+      "reference_of": "POSTOU.VP",
+      "item_name": "7078"
+    },
+    {
+      "item_id": "1273",
+      "reference_of": "POCONES.V",
+      "item_name": "7079"
+    },
+    {
+      "item_id": "1274",
+      "reference_of": "POCONES.VP",
+      "item_name": "7080"
+    },
+    {
+      "item_id": "1275",
+      "reference_of": "POTRA1.12P",
+      "item_name": "7081"
+    },
+    {
+      "item_id": "1276",
+      "reference_of": "POTRA1.22P",
+      "item_name": "7082"
+    },
+    {
+      "item_id": "1277",
+      "reference_of": "POTRA1.30P",
+      "item_name": "7083"
+    },
+    {
+      "item_id": "1278",
+      "reference_of": "POTRA3.12P",
+      "item_name": "7084"
+    },
+    {
+      "item_id": "1279",
+      "reference_of": "POTRA3.22P",
+      "item_name": "7085"
+    },
+    {
+      "item_id": "1280",
+      "reference_of": "POTRA3.30P",
+      "item_name": "7086"
+    },
+    {
+      "item_id": "1281",
+      "reference_of": "POTRAVP",
+      "item_name": "7087"
+    },
+    {
+      "item_id": "1282",
+      "reference_of": "POEXP3.VP",
+      "item_name": "7088"
+    },
+    {
+      "item_id": "1283",
+      "reference_of": "POCONEA.3",
+      "item_name": "7089"
+    },
+    {
+      "item_id": "1284",
+      "reference_of": "POCONEA.2",
+      "item_name": "7090"
+    },
+    {
+      "item_id": "1285",
+      "reference_of": "PPSSRS",
+      "item_name": "7091"
+    },
+    {
+      "item_id": "1474",
+      "reference_of": "PPMUTBAS",
+      "item_name": "7092"
+    },
+    {
+      "item_id": "1286",
+      "reference_of": "PPSUMBAS",
+      "item_name": "7093"
+    },
+    {
+      "item_id": "1287",
+      "reference_of": "PPWINBAS",
+      "item_name": "7094"
+    },
+    {
+      "item_id": "1315",
+      "reference_of": "ZAALP40",
+      "item_name": "7095"
+    },
+    {
+      "item_id": "1317",
+      "reference_of": "ZASPA30",
+      "item_name": "7096"
+    },
+    {
+      "item_id": "1317",
+      "reference_of": "ZASPA30",
+      "item_name": "7097"
+    },
+    {
+      "item_id": "1317",
+      "reference_of": "ZASPA30",
+      "item_name": "7098"
+    },
+    {
+      "item_id": "1317",
+      "reference_of": "ZASPA30",
+      "item_name": "7099"
+    },
+    {
+      "item_id": "1320",
+      "reference_of": "ZARPD18",
+      "item_name": "7100"
+    },
+    {
+      "item_id": "1324",
+      "reference_of": "ZAROCKER45B",
+      "item_name": "7101"
+    },
+    {
+      "item_id": "1327",
+      "reference_of": "ZAGRCAP40",
+      "item_name": "7102"
+    },
+    {
+      "item_id": "1328",
+      "reference_of": "ZALATOK70",
+      "item_name": "7103"
+    },
+    {
+      "item_id": "1328",
+      "reference_of": "ZALATOK70",
+      "item_name": "7104"
+    },
+    {
+      "item_id": "1328",
+      "reference_of": "ZALATOK70",
+      "item_name": "7105"
+    },
+    {
+      "item_id": "1328",
+      "reference_of": "ZALATOK70",
+      "item_name": "7106"
     }
   ],
   "exclusion_list": [
