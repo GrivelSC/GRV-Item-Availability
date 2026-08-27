@@ -238629,11 +238629,11 @@
       "location": "verrayes",
       "embargoed": false,
       "embargo_date": null,
-      "status": "incoming",
+      "status": "committed",
       "available_today": 0,
       "total_open_demand": 645,
       "committable": 0,
-      "max_buildable_today": 0,
+      "max_buildable_today": 201,
       "max_buildable_horizon": 608,
       "next_available_date": "2026-09-18",
       "next_available_qty": 0,
@@ -238642,10 +238642,10 @@
         {
           "item_id": "683",
           "item_name": "0FGDCE14.125",
-          "supportable_fg_units": 0,
+          "supportable_fg_units": 201,
           "next_po_date": "2026-09-15",
           "next_po_original_date": null,
-          "next_po_qty": 33.0,
+          "next_po_qty": 7.0,
           "overdue": false,
           "po_number": "PO-IT-2500512",
           "source": "PO"
@@ -238677,17 +238677,17 @@
         {
           "date": "2026-08-27",
           "display_date": "2026-08-27",
-          "buildable": 0,
+          "buildable": 201,
           "cumulative_demand": 220,
           "net_available": 0,
           "limiting_components": [
             {
               "item_id": "683",
               "item_name": "0FGDCE14.125",
-              "supportable_fg_units": 0,
+              "supportable_fg_units": 201,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -238720,17 +238720,17 @@
         {
           "date": "2026-08-31",
           "display_date": "2026-09-03",
-          "buildable": 0,
+          "buildable": 201,
           "cumulative_demand": 306,
           "net_available": 0,
           "limiting_components": [
             {
               "item_id": "683",
               "item_name": "0FGDCE14.125",
-              "supportable_fg_units": 0,
+              "supportable_fg_units": 201,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -238763,17 +238763,17 @@
         {
           "date": "2026-09-01",
           "display_date": "2026-09-04",
-          "buildable": 0,
+          "buildable": 201,
           "cumulative_demand": 390,
           "net_available": 0,
           "limiting_components": [
             {
               "item_id": "683",
               "item_name": "0FGDCE14.125",
-              "supportable_fg_units": 0,
+              "supportable_fg_units": 201,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -238806,17 +238806,17 @@
         {
           "date": "2026-09-07",
           "display_date": "2026-09-10",
-          "buildable": 0,
+          "buildable": 201,
           "cumulative_demand": 392,
           "net_available": 0,
           "limiting_components": [
             {
               "item_id": "683",
               "item_name": "0FGDCE14.125",
-              "supportable_fg_units": 0,
+              "supportable_fg_units": 201,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -238859,7 +238859,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -238902,7 +238902,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -238945,7 +238945,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -238988,7 +238988,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -239031,7 +239031,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -239074,7 +239074,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -239117,7 +239117,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -239160,7 +239160,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -239203,7 +239203,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -239246,7 +239246,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -239289,7 +239289,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -239332,7 +239332,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -239375,7 +239375,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -239418,7 +239418,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -239461,7 +239461,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -239504,7 +239504,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -239547,7 +239547,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -239590,7 +239590,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -239639,7 +239639,7 @@
           "used": "REAL"
         }
       },
-      "available_today_dtc": 0,
+      "available_today_dtc": 198,
       "overridden": false
     },
     {
@@ -239711,23 +239711,23 @@
       "location": "verrayes",
       "embargoed": false,
       "embargo_date": null,
-      "status": "incoming",
-      "available_today": 0,
+      "status": "in_stock",
+      "available_today": 114,
       "total_open_demand": 264,
       "committable": 344,
-      "max_buildable_today": 0,
+      "max_buildable_today": 201,
       "max_buildable_horizon": 608,
       "next_available_date": "2026-09-18",
       "next_available_qty": 344,
-      "first_shortfall_date": "2026-08-27",
+      "first_shortfall_date": null,
       "limiting_components": [
         {
           "item_id": "683",
           "item_name": "0FGDCE14.125",
-          "supportable_fg_units": 0,
+          "supportable_fg_units": 201,
           "next_po_date": "2026-09-15",
           "next_po_original_date": null,
-          "next_po_qty": 33.0,
+          "next_po_qty": 7.0,
           "overdue": false,
           "po_number": "PO-IT-2500512",
           "source": "PO"
@@ -239759,17 +239759,17 @@
         {
           "date": "2026-08-27",
           "display_date": "2026-08-27",
-          "buildable": 0,
+          "buildable": 201,
           "cumulative_demand": 70,
-          "net_available": 0,
+          "net_available": 131,
           "limiting_components": [
             {
               "item_id": "683",
               "item_name": "0FGDCE14.125",
-              "supportable_fg_units": 0,
+              "supportable_fg_units": 201,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -239797,22 +239797,22 @@
               "source": "PO"
             }
           ],
-          "atp": 0
+          "atp": 114
         },
         {
           "date": "2026-09-05",
           "display_date": "2026-09-08",
-          "buildable": 0,
+          "buildable": 201,
           "cumulative_demand": 85,
-          "net_available": 0,
+          "net_available": 116,
           "limiting_components": [
             {
               "item_id": "683",
               "item_name": "0FGDCE14.125",
-              "supportable_fg_units": 0,
+              "supportable_fg_units": 201,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -239840,22 +239840,22 @@
               "source": "PO"
             }
           ],
-          "atp": 0
+          "atp": 114
         },
         {
           "date": "2026-09-07",
           "display_date": "2026-09-10",
-          "buildable": 0,
+          "buildable": 201,
           "cumulative_demand": 87,
-          "net_available": 0,
+          "net_available": 114,
           "limiting_components": [
             {
               "item_id": "683",
               "item_name": "0FGDCE14.125",
-              "supportable_fg_units": 0,
+              "supportable_fg_units": 201,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -239883,7 +239883,7 @@
               "source": "PO"
             }
           ],
-          "atp": 0
+          "atp": 114
         },
         {
           "date": "2026-09-15",
@@ -239898,7 +239898,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -239941,7 +239941,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -239984,7 +239984,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -240027,7 +240027,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -240070,7 +240070,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -240113,7 +240113,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -240156,7 +240156,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -240199,7 +240199,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -240242,7 +240242,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -240285,7 +240285,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -240328,7 +240328,7 @@
               "supportable_fg_units": 608,
               "next_po_date": "2026-09-15",
               "next_po_original_date": null,
-              "next_po_qty": 33.0,
+              "next_po_qty": 7.0,
               "overdue": false,
               "po_number": "PO-IT-2500512",
               "source": "PO"
@@ -240371,7 +240371,7 @@
         },
         "usd": null
       },
-      "available_today_dtc": 0,
+      "available_today_dtc": 198,
       "overridden": false
     },
     {
@@ -240389,7 +240389,7 @@
       "committable": 10,
       "max_buildable_today": 0,
       "max_buildable_horizon": 15,
-      "next_available_date": "2026-10-16",
+      "next_available_date": "2026-09-24",
       "next_available_qty": 10,
       "first_shortfall_date": "2026-08-27",
       "limiting_components": [
@@ -240398,7 +240398,7 @@
           "item_name": "RTGDAISYE+",
           "po_number": "PO-US-2600016",
           "supportable_fg_units": 15,
-          "next_po_date": "2026-10-16",
+          "next_po_date": "2026-09-24",
           "next_po_qty": 15.0,
           "overdue": false
         }
@@ -240416,7 +240416,7 @@
               "item_name": "RTGDAISYE+",
               "po_number": "PO-US-2600016",
               "supportable_fg_units": 15,
-              "next_po_date": "2026-10-16",
+              "next_po_date": "2026-09-24",
               "next_po_qty": 15.0,
               "overdue": false
             }
@@ -240424,8 +240424,8 @@
           "atp": 0
         },
         {
-          "date": "2026-10-16",
-          "display_date": "2026-10-16",
+          "date": "2026-09-24",
+          "display_date": "2026-09-24",
           "buildable": 15,
           "cumulative_demand": 5,
           "net_available": 10,
@@ -240435,7 +240435,7 @@
               "item_name": "RTGDAISYE+",
               "po_number": "PO-US-2600016",
               "supportable_fg_units": 15,
-              "next_po_date": "2026-10-16",
+              "next_po_date": "2026-09-24",
               "next_po_qty": 15.0,
               "overdue": false
             }
