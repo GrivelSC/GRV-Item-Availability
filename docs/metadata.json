@@ -1,12 +1,12 @@
 {
-  "refreshed_at": "2026-08-27T08:56:07.611488",
+  "refreshed_at": "2026-08-27T10:06:34.799129",
   "refreshed_by": "scheduled",
   "sku_count_verrayes": 317,
   "sku_count_usa3pl": 317,
   "override_count": 0,
   "dtc_pass": "ok",
   "manufacturing_pass": "ok",
-  "manufacturing_wo_count": 2379,
+  "manufacturing_wo_count": 2359,
   "sop_pass": "ok",
   "sop_row_counts": {
     "q13": 844,
