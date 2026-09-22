@@ -324,6 +324,55 @@
         "color": "dim",
         "catch_all": true
       }
+    ],
+    "location_groups": {
+      "verrayes": [
+        14,
+        15,
+        17,
+        3
+      ],
+      "usa3pl": [
+        2
+      ]
+    },
+    "unsellable_location_ids": [
+      18,
+      19,
+      30,
+      40
+    ],
+    "unsellable_bins": [
+      {
+        "id": 3,
+        "name": "INB-QUARANTINE",
+        "location": 14,
+        "note": "Quarantine at INBOUND. Largest bucket. Bin 4 INB-CRETURNS is deliberately NOT excluded: customer returns awaiting inspection count as sellable."
+      },
+      {
+        "id": 10,
+        "name": "USA-UNSELLABLE",
+        "location": 2,
+        "note": "Unsellable at USA-3PL. Highest finished-goods impact."
+      },
+      {
+        "id": 1342,
+        "name": "0BGRADE-TEMP",
+        "location": null,
+        "note": "Empty today and its location could not be resolved (the bin record 403s under Lists -> Bins). Blacklisted by ID pre-emptively; it is the one bin whose name breaks the location-prefix convention, which is why an explicit ID list beats a name pattern."
+      },
+      {
+        "id": 1345,
+        "name": "MFG-UNSELLABLE",
+        "location": 15,
+        "note": "Unsellable at MANUFACTURING. Mostly tube sub-assemblies."
+      },
+      {
+        "id": 1355,
+        "name": "UN-QUARANTINE",
+        "location": 18,
+        "note": "Defensive only. Location 18 is already outside the location scope, so this bin can never appear in Q3X's result. Listed so the config stays complete if the scope ever widens."
+      }
     ]
   },
   "fg_list": [
