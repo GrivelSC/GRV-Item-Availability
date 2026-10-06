@@ -1,44 +1,42 @@
 {
-  "refreshed_at": "2026-10-05T11:00:15.939108",
+  "refreshed_at": "2026-10-06T10:06:56.907037",
   "refreshed_by": "scheduled",
   "sku_count_verrayes": 317,
   "sku_count_usa3pl": 317,
   "override_count": 0,
   "dtc_pass": "ok",
   "manufacturing_pass": "ok",
-  "manufacturing_wo_count": 1840,
+  "manufacturing_wo_count": 1818,
   "sop_pass": "ok",
   "sop_row_counts": {
-    "q13": 931,
+    "q13": 939,
     "q13b": 69,
     "q14": 270,
-    "q15": 305,
+    "q15": 306,
     "q17": 27
   },
   "bom_pass": "ok",
   "bom_fg_count": 515,
   "asp_coverage": {
     "sub1_realised": 288,
-    "sub1_book": 301,
+    "sub1_book": 300,
     "sub3_realised": 207,
-    "sub3_book": 186
+    "sub3_book": 183
   },
   "unsellable_netted": {
-    "items": 30,
-    "units": 5689.0,
-    "items_zeroed": 15,
-    "fg_items": 4,
-    "fg_items_zeroed": 2,
+    "items": 26,
+    "units": 5622.0,
+    "items_zeroed": 13,
+    "fg_items": 0,
+    "fg_items_zeroed": 0,
     "residual_units": 0.0,
     "by_bin": {
-      "10": 67.0,
       "1345": 3862.0,
       "3": 1760.0
     },
     "by_location": {
       "14": 1760.0,
-      "15": 3862.0,
-      "2": 67.0
+      "15": 3862.0
     }
   },
   "status": "ok",
@@ -50,6 +48,6 @@
     "BOM tab: 77 finished good(s) have no active BOM and are shown as single-node buyouts costed from their own purchase history (61 of them have any). Their COGS is a purchase price, not a build-up, so the category split reads as one line.",
     "BOM tab: 218 leaf component(s) have no cost in any source (193 packaging, 9 buyout, 7 other, 2 metal, 2 polymer, 2 adhesive, 2 service, 1 hardware) \u2014 their contribution to COGS is understated as zero. See the Cost gap panel.",
     "BOM tab: purchase unit differs from stock unit and no conversion is configured for 0TBDTR1228, 0TBDTR164, 0TBDTR784, 0TBETR1238. Add settings.bom_uom_conversions.<item_id>.purchase_to_stock \u2014 these costs are wrong until you do.",
-    "BOM tab: 21 component(s) have a preferred-vendor price that disagrees with NetSuite's last purchase price by 3x or more \u2014 0CPGSLI.CO1 (list 4.88 vs last purchase 0.21, 23.2x); 3TA0008180.010000133 (list 0.4519 vs last purchase 2.997, 0.2x); 3TA0008160.010000143 (list 0.3981 vs last purchase 2.748, 0.1x); 3TA0008180.010000128 (list 0.4182 vs last purchase 2.92, 0.1x) and others. The vendor price list is used ahead of last purchase price in the cascade, so a stale list entry wins wherever there is no purchase history. Worth a clean-up in the item master."
+    "BOM tab: 22 component(s) have a preferred-vendor price that disagrees with NetSuite's last purchase price by 3x or more \u2014 0CPGSLI.CO1 (list 4.88 vs last purchase 0.21, 23.2x); 0CAK03EW.AS (list 2.798 vs last purchase 0.6467, 4.3x); 3TA0008180.010000133 (list 0.4519 vs last purchase 2.997, 0.2x); 3TA0008160.010000143 (list 0.3981 vs last purchase 2.748, 0.1x) and others. The vendor price list is used ahead of last purchase price in the cascade, so a stale list entry wins wherever there is no purchase history. Worth a clean-up in the item master."
   ]
 }
