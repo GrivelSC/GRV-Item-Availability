@@ -127708,10 +127708,10 @@
       "embargo_date": null,
       "status": "in_stock",
       "available_today": 1008,
-      "total_open_demand": 163,
+      "total_open_demand": 162,
       "committable": 1008,
-      "max_buildable_today": 1171,
-      "max_buildable_horizon": 1171,
+      "max_buildable_today": 1170,
+      "max_buildable_horizon": 1170,
       "next_available_date": null,
       "next_available_qty": null,
       "first_shortfall_date": null,
@@ -127719,7 +127719,7 @@
         {
           "item_id": "7430",
           "item_name": "0CRBAR.FLX.19",
-          "supportable_fg_units": 1171,
+          "supportable_fg_units": 1170,
           "next_po_date": null,
           "next_po_original_date": null,
           "next_po_qty": 0,
@@ -127732,35 +127732,14 @@
         {
           "date": "2026-10-19",
           "display_date": "2026-10-19",
-          "buildable": 1171,
+          "buildable": 1170,
           "cumulative_demand": 11,
-          "net_available": 1160,
-          "limiting_components": [
-            {
-              "item_id": "7430",
-              "item_name": "0CRBAR.FLX.19",
-              "supportable_fg_units": 1171,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            }
-          ],
-          "atp": 1008
-        },
-        {
-          "date": "2026-10-21",
-          "display_date": "2026-10-24",
-          "buildable": 1171,
-          "cumulative_demand": 12,
           "net_available": 1159,
           "limiting_components": [
             {
               "item_id": "7430",
               "item_name": "0CRBAR.FLX.19",
-              "supportable_fg_units": 1171,
+              "supportable_fg_units": 1170,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -127774,14 +127753,14 @@
         {
           "date": "2026-10-30",
           "display_date": "2026-11-02",
-          "buildable": 1171,
-          "cumulative_demand": 52,
+          "buildable": 1170,
+          "cumulative_demand": 51,
           "net_available": 1119,
           "limiting_components": [
             {
               "item_id": "7430",
               "item_name": "0CRBAR.FLX.19",
-              "supportable_fg_units": 1171,
+              "supportable_fg_units": 1170,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -127795,14 +127774,14 @@
         {
           "date": "2026-11-27",
           "display_date": "2026-11-30",
-          "buildable": 1171,
-          "cumulative_demand": 56,
+          "buildable": 1170,
+          "cumulative_demand": 55,
           "net_available": 1115,
           "limiting_components": [
             {
               "item_id": "7430",
               "item_name": "0CRBAR.FLX.19",
-              "supportable_fg_units": 1171,
+              "supportable_fg_units": 1170,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -127816,14 +127795,14 @@
         {
           "date": "2026-12-14",
           "display_date": "2026-12-17",
-          "buildable": 1171,
-          "cumulative_demand": 76,
+          "buildable": 1170,
+          "cumulative_demand": 75,
           "net_available": 1095,
           "limiting_components": [
             {
               "item_id": "7430",
               "item_name": "0CRBAR.FLX.19",
-              "supportable_fg_units": 1171,
+              "supportable_fg_units": 1170,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -127837,14 +127816,14 @@
         {
           "date": "2026-12-15",
           "display_date": "2026-12-18",
-          "buildable": 1171,
-          "cumulative_demand": 111,
+          "buildable": 1170,
+          "cumulative_demand": 110,
           "net_available": 1060,
           "limiting_components": [
             {
               "item_id": "7430",
               "item_name": "0CRBAR.FLX.19",
-              "supportable_fg_units": 1171,
+              "supportable_fg_units": 1170,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -127858,14 +127837,14 @@
         {
           "date": "2026-12-24",
           "display_date": "2026-12-27",
-          "buildable": 1171,
-          "cumulative_demand": 131,
+          "buildable": 1170,
+          "cumulative_demand": 130,
           "net_available": 1040,
           "limiting_components": [
             {
               "item_id": "7430",
               "item_name": "0CRBAR.FLX.19",
-              "supportable_fg_units": 1171,
+              "supportable_fg_units": 1170,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -127879,14 +127858,14 @@
         {
           "date": "2026-12-27",
           "display_date": "2026-12-30",
-          "buildable": 1171,
-          "cumulative_demand": 132,
+          "buildable": 1170,
+          "cumulative_demand": 131,
           "net_available": 1039,
           "limiting_components": [
             {
               "item_id": "7430",
               "item_name": "0CRBAR.FLX.19",
-              "supportable_fg_units": 1171,
+              "supportable_fg_units": 1170,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -127900,14 +127879,14 @@
         {
           "date": "2027-03-05",
           "display_date": "2027-03-08",
-          "buildable": 1171,
-          "cumulative_demand": 133,
+          "buildable": 1170,
+          "cumulative_demand": 132,
           "net_available": 1038,
           "limiting_components": [
             {
               "item_id": "7430",
               "item_name": "0CRBAR.FLX.19",
-              "supportable_fg_units": 1171,
+              "supportable_fg_units": 1170,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -127921,14 +127900,14 @@
         {
           "date": "2027-04-13",
           "display_date": "2027-04-16",
-          "buildable": 1171,
-          "cumulative_demand": 163,
+          "buildable": 1170,
+          "cumulative_demand": 162,
           "net_available": 1008,
           "limiting_components": [
             {
               "item_id": "7430",
               "item_name": "0CRBAR.FLX.19",
-              "supportable_fg_units": 1171,
+              "supportable_fg_units": 1170,
               "next_po_date": null,
               "next_po_original_date": null,
               "next_po_qty": 0,
@@ -127958,7 +127937,7 @@
           "used": "REAL"
         }
       },
-      "available_today_dtc": 1171,
+      "available_today_dtc": 1170,
       "overridden": false
     },
     {
