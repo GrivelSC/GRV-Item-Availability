@@ -1,12 +1,12 @@
 {
-  "refreshed_at": "2026-10-29T11:51:54.474898",
+  "refreshed_at": "2026-10-30T10:02:39.096014",
   "refreshed_by": "scheduled",
   "sku_count_verrayes": 328,
   "sku_count_usa3pl": 328,
   "override_count": 0,
   "dtc_pass": "ok",
   "manufacturing_pass": "ok",
-  "manufacturing_wo_count": 2388,
+  "manufacturing_wo_count": 2365,
   "sop_pass": "ok",
   "sop_row_counts": {
     "q13": 959,
@@ -25,26 +25,26 @@
   },
   "unsellable_netted": {
     "items": 24,
-    "units": 5554.0,
+    "units": 5640.0,
     "items_zeroed": 15,
     "fg_items": 0,
     "fg_items_zeroed": 0,
     "residual_units": 0.0,
     "by_bin": {
-      "1345": 3794.0,
+      "1345": 3880.0,
       "3": 1760.0
     },
     "by_location": {
       "14": 1760.0,
-      "15": 3794.0
+      "15": 3880.0
     }
   },
   "status": "ok",
   "warnings": [
     "1 promoted parent(s) have open Work Orders with no completion date in NetSuite; supply was scheduled from the WO transaction date as a fallback: 0IMCOEACPE03GN. Set end dates or close stale WOs.",
-    "2 intercompany PO(s) had computed in-transit exceeding the open PO quantity (clamped): PO-US-2600007, PO-US-2600008. Likely a receipt/quantity discrepancy \u2014 verify shipped vs received.",
-    "5 FG(s) have intercompany US PO quantity with no Verrayes coverage within the horizon (oversold ahead of the linked SO's queue position; residual supply not landed): PINXM.RS.CX, POCEA.2, POCEA.3, POSKT.115, ZAALP.SPRT.30. Procurement action at Verrayes likely needed.",
-    "7 intercompany PO(s) have no open/dated linked Italian SO in Q4 (closed or dateless); queue anchor fell back to the PO receipt date: PO-US-2600006, PO-US-2600007, PO-US-2600008, PO-US-2600010, PO-US-2600015, PO-US-2600016, PO-US-2600022.",
+    "3 intercompany PO(s) had computed in-transit exceeding the open PO quantity (clamped): PO-US-2600007, PO-US-2600008, PO-US-2600017. Likely a receipt/quantity discrepancy \u2014 verify shipped vs received.",
+    "7 FG(s) have intercompany US PO quantity with no Verrayes coverage within the horizon (oversold ahead of the linked SO's queue position; residual supply not landed): PIDMC.IS.CX, PIGHO.CY50, PINXM.RS.CX, POCEA.2, POCEA.3, POSKT.115, ZAALP.SPRT.30. Procurement action at Verrayes likely needed.",
+    "8 intercompany PO(s) have no open/dated linked Italian SO in Q4 (closed or dateless); queue anchor fell back to the PO receipt date: PO-US-2600006, PO-US-2600007, PO-US-2600008, PO-US-2600010, PO-US-2600015, PO-US-2600016, PO-US-2600019, PO-US-2600022.",
     "BOM tab: 88 finished good(s) have no active BOM and are shown as single-node buyouts costed from their own purchase history (72 of them have any). Their COGS is a purchase price, not a build-up, so the category split reads as one line.",
     "BOM tab: 217 leaf component(s) have no cost in any source (192 packaging, 9 buyout, 7 other, 2 metal, 2 polymer, 2 adhesive, 2 service, 1 hardware) \u2014 their contribution to COGS is understated as zero. See the Cost gap panel.",
     "BOM tab: purchase unit differs from stock unit and no conversion is configured for 0TBDTR1228, 0TBDTR164, 0TBDTR784, 0TBETR1238. Add settings.bom_uom_conversions.<item_id>.purchase_to_stock \u2014 these costs are wrong until you do.",
