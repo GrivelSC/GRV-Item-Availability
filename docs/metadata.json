@@ -1,27 +1,27 @@
 {
-  "refreshed_at": "2026-11-03T11:02:58.218695",
+  "refreshed_at": "2026-11-04T11:07:06.731935",
   "refreshed_by": "scheduled",
   "sku_count_verrayes": 328,
   "sku_count_usa3pl": 328,
   "override_count": 0,
   "dtc_pass": "ok",
   "manufacturing_pass": "ok",
-  "manufacturing_wo_count": 2565,
+  "manufacturing_wo_count": 2561,
   "sop_pass": "ok",
   "sop_row_counts": {
-    "q13": 985,
+    "q13": 987,
     "q13b": 72,
     "q14": 330,
-    "q15": 344,
+    "q15": 343,
     "q17": 27
   },
   "bom_pass": "ok",
   "bom_fg_count": 526,
   "asp_coverage": {
     "sub1_realised": 297,
-    "sub1_book": 298,
+    "sub1_book": 299,
     "sub3_realised": 226,
-    "sub3_book": 179
+    "sub3_book": 181
   },
   "unsellable_netted": {
     "items": 24,
