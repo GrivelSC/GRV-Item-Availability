@@ -11016,7 +11016,7 @@
       "max_buildable_horizon": 2466,
       "next_available_date": "2027-02-28",
       "next_available_qty": 2461,
-      "first_shortfall_date": "2026-12-30",
+      "first_shortfall_date": null,
       "limiting_components": [
         {
           "item_id": "6751",
@@ -11075,43 +11075,11 @@
           "atp": 0
         },
         {
-          "date": "2026-12-27",
-          "display_date": "2026-12-30",
-          "buildable": 0,
-          "cumulative_demand": 1,
-          "net_available": 0,
-          "limiting_components": [
-            {
-              "item_id": "6751",
-              "item_name": "0CAK10G0.BM",
-              "supportable_fg_units": 0,
-              "next_po_date": "2027-02-25",
-              "next_po_original_date": null,
-              "next_po_qty": 3000.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600260",
-              "source": "PO"
-            },
-            {
-              "item_id": "8089",
-              "item_name": "0CDMAS0.AS",
-              "supportable_fg_units": 2466,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            }
-          ],
-          "atp": 0
-        },
-        {
           "date": "2027-02-25",
           "display_date": "2027-02-28",
           "buildable": 2466,
-          "cumulative_demand": 1,
-          "net_available": 2465,
+          "cumulative_demand": 0,
+          "net_available": 2466,
           "limiting_components": [
             {
               "item_id": "8089",
@@ -11139,40 +11107,8 @@
           "atp": 2461
         },
         {
-          "date": "2027-03-01",
-          "display_date": "2027-03-04",
-          "buildable": 2466,
-          "cumulative_demand": 4,
-          "net_available": 2462,
-          "limiting_components": [
-            {
-              "item_id": "8089",
-              "item_name": "0CDMAS0.AS",
-              "supportable_fg_units": 2466,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            },
-            {
-              "item_id": "6751",
-              "item_name": "0CAK10G0.BM",
-              "supportable_fg_units": 3000,
-              "next_po_date": "2027-02-25",
-              "next_po_original_date": null,
-              "next_po_qty": 3000.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600260",
-              "source": "PO"
-            }
-          ],
-          "atp": 2461
-        },
-        {
-          "date": "2027-03-05",
-          "display_date": "2027-03-08",
+          "date": "2027-02-28",
+          "display_date": "2027-03-03",
           "buildable": 2466,
           "cumulative_demand": 5,
           "net_available": 2461,
@@ -11363,7 +11299,7 @@
       "max_buildable_horizon": 2466,
       "next_available_date": "2026-12-19",
       "next_available_qty": 1825,
-      "first_shortfall_date": "2026-11-16",
+      "first_shortfall_date": null,
       "limiting_components": [
         {
           "item_id": "6743",
@@ -11393,7 +11329,7 @@
           "date": "2026-11-16",
           "display_date": "2026-11-16",
           "buildable": 0,
-          "cumulative_demand": 175,
+          "cumulative_demand": 0,
           "net_available": 0,
           "limiting_components": [
             {
@@ -11425,8 +11361,8 @@
           "date": "2026-12-16",
           "display_date": "2026-12-19",
           "buildable": 2466,
-          "cumulative_demand": 175,
-          "net_available": 2291,
+          "cumulative_demand": 0,
+          "net_available": 2466,
           "limiting_components": [
             {
               "item_id": "8089",
@@ -11454,104 +11390,8 @@
           "atp": 1825
         },
         {
-          "date": "2026-12-27",
-          "display_date": "2026-12-30",
-          "buildable": 2466,
-          "cumulative_demand": 176,
-          "net_available": 2290,
-          "limiting_components": [
-            {
-              "item_id": "8089",
-              "item_name": "0CDMAS0.AS",
-              "supportable_fg_units": 2466,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            },
-            {
-              "item_id": "6743",
-              "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 3000,
-              "next_po_date": "2026-12-16",
-              "next_po_original_date": null,
-              "next_po_qty": 3000.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600188",
-              "source": "PO"
-            }
-          ],
-          "atp": 1825
-        },
-        {
-          "date": "2026-12-28",
-          "display_date": "2026-12-31",
-          "buildable": 2466,
-          "cumulative_demand": 462,
-          "net_available": 2004,
-          "limiting_components": [
-            {
-              "item_id": "8089",
-              "item_name": "0CDMAS0.AS",
-              "supportable_fg_units": 2466,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            },
-            {
-              "item_id": "6743",
-              "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 3000,
-              "next_po_date": "2026-12-16",
-              "next_po_original_date": null,
-              "next_po_qty": 3000.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600188",
-              "source": "PO"
-            }
-          ],
-          "atp": 1825
-        },
-        {
-          "date": "2027-03-01",
-          "display_date": "2027-03-04",
-          "buildable": 2466,
-          "cumulative_demand": 640,
-          "net_available": 1826,
-          "limiting_components": [
-            {
-              "item_id": "8089",
-              "item_name": "0CDMAS0.AS",
-              "supportable_fg_units": 2466,
-              "next_po_date": null,
-              "next_po_original_date": null,
-              "next_po_qty": 0,
-              "overdue": false,
-              "po_number": null,
-              "source": "PO"
-            },
-            {
-              "item_id": "6743",
-              "item_name": "0CAK06N0.BS",
-              "supportable_fg_units": 3000,
-              "next_po_date": "2026-12-16",
-              "next_po_original_date": null,
-              "next_po_qty": 3000.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600188",
-              "source": "PO"
-            }
-          ],
-          "atp": 1825
-        },
-        {
-          "date": "2027-03-05",
-          "display_date": "2027-03-08",
+          "date": "2026-12-19",
+          "display_date": "2026-12-22",
           "buildable": 2466,
           "cumulative_demand": 641,
           "net_available": 1825,
@@ -42529,8 +42369,8 @@
       "embargo_date": null,
       "status": "in_stock",
       "available_today": 67,
-      "total_open_demand": 135,
-      "committable": 590,
+      "total_open_demand": 123,
+      "committable": 602,
       "max_buildable_today": 83,
       "max_buildable_horizon": 725,
       "next_available_date": "2026-11-21",
@@ -42871,7 +42711,7 @@
               "source": "PO"
             }
           ],
-          "atp": 369
+          "atp": 381
         },
         {
           "date": "2026-12-27",
@@ -42914,7 +42754,7 @@
               "source": "PO"
             }
           ],
-          "atp": 369
+          "atp": 381
         },
         {
           "date": "2026-12-31",
@@ -42957,57 +42797,14 @@
               "source": "PO"
             }
           ],
-          "atp": 369
-        },
-        {
-          "date": "2027-01-15",
-          "display_date": "2027-01-18",
-          "buildable": 425,
-          "cumulative_demand": 48,
-          "net_available": 377,
-          "limiting_components": [
-            {
-              "item_id": "7512",
-              "item_name": "0MAATL.SL54",
-              "supportable_fg_units": 425,
-              "next_po_date": "2026-11-18",
-              "next_po_original_date": null,
-              "next_po_qty": 10.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600136",
-              "source": "PO"
-            },
-            {
-              "item_id": "7353",
-              "item_name": "0TE029.02NN",
-              "supportable_fg_units": 5154,
-              "next_po_date": "2026-11-23",
-              "next_po_original_date": "2026-09-20",
-              "next_po_qty": 578.0,
-              "overdue": true,
-              "po_number": "PO-IT-2600268",
-              "source": "PO"
-            },
-            {
-              "item_id": "425",
-              "item_name": "0PUNINC45.VN",
-              "supportable_fg_units": 10181,
-              "next_po_date": "2026-12-11",
-              "next_po_original_date": null,
-              "next_po_qty": 2500.0,
-              "overdue": false,
-              "po_number": "PO-IT-2600286",
-              "source": "PO"
-            }
-          ],
-          "atp": 369
+          "atp": 381
         },
         {
           "date": "2027-02-01",
           "display_date": "2027-02-04",
           "buildable": 425,
-          "cumulative_demand": 56,
-          "net_available": 369,
+          "cumulative_demand": 44,
+          "net_available": 381,
           "limiting_components": [
             {
               "item_id": "7512",
@@ -43043,14 +42840,14 @@
               "source": "PO"
             }
           ],
-          "atp": 369
+          "atp": 381
         },
         {
           "date": "2027-02-26",
           "display_date": "2027-03-01",
           "buildable": 625,
-          "cumulative_demand": 56,
-          "net_available": 569,
+          "cumulative_demand": 44,
+          "net_available": 581,
           "limiting_components": [
             {
               "item_id": "7512",
@@ -43086,14 +42883,14 @@
               "source": "PO"
             }
           ],
-          "atp": 531
+          "atp": 543
         },
         {
           "date": "2027-03-01",
           "display_date": "2027-03-04",
           "buildable": 625,
-          "cumulative_demand": 61,
-          "net_available": 564,
+          "cumulative_demand": 49,
+          "net_available": 576,
           "limiting_components": [
             {
               "item_id": "7512",
@@ -43129,14 +42926,14 @@
               "source": "PO"
             }
           ],
-          "atp": 531
+          "atp": 543
         },
         {
           "date": "2027-03-05",
           "display_date": "2027-03-08",
           "buildable": 625,
-          "cumulative_demand": 62,
-          "net_available": 563,
+          "cumulative_demand": 50,
+          "net_available": 575,
           "limiting_components": [
             {
               "item_id": "7512",
@@ -43172,14 +42969,14 @@
               "source": "PO"
             }
           ],
-          "atp": 531
+          "atp": 543
         },
         {
           "date": "2027-03-07",
           "display_date": "2027-03-10",
           "buildable": 625,
-          "cumulative_demand": 65,
-          "net_available": 560,
+          "cumulative_demand": 53,
+          "net_available": 572,
           "limiting_components": [
             {
               "item_id": "7512",
@@ -43215,14 +43012,14 @@
               "source": "PO"
             }
           ],
-          "atp": 531
+          "atp": 543
         },
         {
           "date": "2027-03-10",
           "display_date": "2027-03-13",
           "buildable": 625,
-          "cumulative_demand": 69,
-          "net_available": 556,
+          "cumulative_demand": 57,
+          "net_available": 568,
           "limiting_components": [
             {
               "item_id": "7512",
@@ -43258,14 +43055,14 @@
               "source": "PO"
             }
           ],
-          "atp": 531
+          "atp": 543
         },
         {
           "date": "2027-03-15",
           "display_date": "2027-03-18",
           "buildable": 625,
-          "cumulative_demand": 93,
-          "net_available": 532,
+          "cumulative_demand": 81,
+          "net_available": 544,
           "limiting_components": [
             {
               "item_id": "7512",
@@ -43301,14 +43098,14 @@
               "source": "PO"
             }
           ],
-          "atp": 531
+          "atp": 543
         },
         {
           "date": "2027-03-18",
           "display_date": "2027-03-21",
           "buildable": 625,
-          "cumulative_demand": 94,
-          "net_available": 531,
+          "cumulative_demand": 82,
+          "net_available": 543,
           "limiting_components": [
             {
               "item_id": "7512",
@@ -43344,14 +43141,14 @@
               "source": "PO"
             }
           ],
-          "atp": 531
+          "atp": 543
         },
         {
           "date": "2027-03-26",
           "display_date": "2027-03-29",
           "buildable": 725,
-          "cumulative_demand": 94,
-          "net_available": 631,
+          "cumulative_demand": 82,
+          "net_available": 643,
           "limiting_components": [
             {
               "item_id": "7512",
@@ -43387,14 +43184,14 @@
               "source": "PO"
             }
           ],
-          "atp": 590
+          "atp": 602
         },
         {
           "date": "2027-04-12",
           "display_date": "2027-04-15",
           "buildable": 725,
-          "cumulative_demand": 95,
-          "net_available": 630,
+          "cumulative_demand": 83,
+          "net_available": 642,
           "limiting_components": [
             {
               "item_id": "7512",
@@ -43430,14 +43227,14 @@
               "source": "PO"
             }
           ],
-          "atp": 590
+          "atp": 602
         },
         {
           "date": "2027-04-13",
           "display_date": "2027-04-16",
           "buildable": 725,
-          "cumulative_demand": 105,
-          "net_available": 620,
+          "cumulative_demand": 93,
+          "net_available": 632,
           "limiting_components": [
             {
               "item_id": "7512",
@@ -43473,14 +43270,14 @@
               "source": "PO"
             }
           ],
-          "atp": 590
+          "atp": 602
         },
         {
           "date": "2027-04-26",
           "display_date": "2027-04-29",
           "buildable": 725,
-          "cumulative_demand": 110,
-          "net_available": 615,
+          "cumulative_demand": 98,
+          "net_available": 627,
           "limiting_components": [
             {
               "item_id": "7512",
@@ -43516,14 +43313,14 @@
               "source": "PO"
             }
           ],
-          "atp": 590
+          "atp": 602
         },
         {
           "date": "2027-05-15",
           "display_date": "2027-05-18",
           "buildable": 725,
-          "cumulative_demand": 130,
-          "net_available": 595,
+          "cumulative_demand": 118,
+          "net_available": 607,
           "limiting_components": [
             {
               "item_id": "7512",
@@ -43559,14 +43356,14 @@
               "source": "PO"
             }
           ],
-          "atp": 590
+          "atp": 602
         },
         {
           "date": "2027-07-15",
           "display_date": "2027-07-18",
           "buildable": 725,
-          "cumulative_demand": 135,
-          "net_available": 590,
+          "cumulative_demand": 123,
+          "net_available": 602,
           "limiting_components": [
             {
               "item_id": "7512",
@@ -43602,7 +43399,7 @@
               "source": "PO"
             }
           ],
-          "atp": 590
+          "atp": 602
         }
       ],
       "avg_eur_per_unit": 61.8785,
@@ -145125,8 +144922,8 @@
       "embargo_date": null,
       "status": "in_stock",
       "available_today": 118,
-      "total_open_demand": 196,
-      "committable": 541,
+      "total_open_demand": 216,
+      "committable": 521,
       "max_buildable_today": 187,
       "max_buildable_horizon": 737,
       "next_available_date": "2026-12-10",
@@ -145424,7 +145221,7 @@
               "source": "PO"
             }
           ],
-          "atp": 261
+          "atp": 241
         },
         {
           "date": "2026-12-15",
@@ -145467,7 +145264,7 @@
               "source": "PO"
             }
           ],
-          "atp": 261
+          "atp": 241
         },
         {
           "date": "2026-12-24",
@@ -145510,7 +145307,7 @@
               "source": "PO"
             }
           ],
-          "atp": 261
+          "atp": 241
         },
         {
           "date": "2026-12-27",
@@ -145553,14 +145350,14 @@
               "source": "PO"
             }
           ],
-          "atp": 261
+          "atp": 241
         },
         {
           "date": "2027-01-15",
           "display_date": "2027-01-18",
           "buildable": 387,
-          "cumulative_demand": 126,
-          "net_available": 261,
+          "cumulative_demand": 146,
+          "net_available": 241,
           "limiting_components": [
             {
               "item_id": "699",
@@ -145596,14 +145393,14 @@
               "source": "PO"
             }
           ],
-          "atp": 261
+          "atp": 241
         },
         {
           "date": "2027-01-25",
           "display_date": "2027-01-28",
           "buildable": 737,
-          "cumulative_demand": 126,
-          "net_available": 611,
+          "cumulative_demand": 146,
+          "net_available": 591,
           "limiting_components": [
             {
               "item_id": "699",
@@ -145639,14 +145436,14 @@
               "source": "PO"
             }
           ],
-          "atp": 541
+          "atp": 521
         },
         {
           "date": "2027-02-01",
           "display_date": "2027-02-04",
           "buildable": 737,
-          "cumulative_demand": 134,
-          "net_available": 603,
+          "cumulative_demand": 154,
+          "net_available": 583,
           "limiting_components": [
             {
               "item_id": "699",
@@ -145682,14 +145479,14 @@
               "source": "PO"
             }
           ],
-          "atp": 541
+          "atp": 521
         },
         {
           "date": "2027-03-05",
           "display_date": "2027-03-08",
           "buildable": 737,
-          "cumulative_demand": 135,
-          "net_available": 602,
+          "cumulative_demand": 155,
+          "net_available": 582,
           "limiting_components": [
             {
               "item_id": "699",
@@ -145725,14 +145522,14 @@
               "source": "PO"
             }
           ],
-          "atp": 541
+          "atp": 521
         },
         {
           "date": "2027-03-10",
           "display_date": "2027-03-13",
           "buildable": 737,
-          "cumulative_demand": 136,
-          "net_available": 601,
+          "cumulative_demand": 156,
+          "net_available": 581,
           "limiting_components": [
             {
               "item_id": "699",
@@ -145768,14 +145565,14 @@
               "source": "PO"
             }
           ],
-          "atp": 541
+          "atp": 521
         },
         {
           "date": "2027-03-15",
           "display_date": "2027-03-18",
           "buildable": 737,
-          "cumulative_demand": 171,
-          "net_available": 566,
+          "cumulative_demand": 191,
+          "net_available": 546,
           "limiting_components": [
             {
               "item_id": "699",
@@ -145811,14 +145608,14 @@
               "source": "PO"
             }
           ],
-          "atp": 541
+          "atp": 521
         },
         {
           "date": "2027-03-18",
           "display_date": "2027-03-21",
           "buildable": 737,
-          "cumulative_demand": 179,
-          "net_available": 558,
+          "cumulative_demand": 199,
+          "net_available": 538,
           "limiting_components": [
             {
               "item_id": "699",
@@ -145854,14 +145651,14 @@
               "source": "PO"
             }
           ],
-          "atp": 541
+          "atp": 521
         },
         {
           "date": "2027-04-26",
           "display_date": "2027-04-29",
           "buildable": 737,
-          "cumulative_demand": 182,
-          "net_available": 555,
+          "cumulative_demand": 202,
+          "net_available": 535,
           "limiting_components": [
             {
               "item_id": "699",
@@ -145897,14 +145694,14 @@
               "source": "PO"
             }
           ],
-          "atp": 541
+          "atp": 521
         },
         {
           "date": "2027-05-15",
           "display_date": "2027-05-18",
           "buildable": 737,
-          "cumulative_demand": 196,
-          "net_available": 541,
+          "cumulative_demand": 216,
+          "net_available": 521,
           "limiting_components": [
             {
               "item_id": "699",
@@ -145940,7 +145737,7 @@
               "source": "PO"
             }
           ],
-          "atp": 541
+          "atp": 521
         }
       ],
       "avg_eur_per_unit": 34.7615,
