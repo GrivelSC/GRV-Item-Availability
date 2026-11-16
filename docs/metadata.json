@@ -1,5 +1,5 @@
 {
-  "refreshed_at": "2026-11-16T08:48:20.952292",
+  "refreshed_at": "2026-11-16T09:34:02.733724",
   "refreshed_by": "scheduled",
   "sku_count_verrayes": 328,
   "sku_count_usa3pl": 328,
@@ -42,7 +42,7 @@
   "status": "ok",
   "warnings": [
     "2 intercompany PO(s) had computed in-transit exceeding the open PO quantity (clamped): PO-US-2600007, PO-US-2600008. Likely a receipt/quantity discrepancy \u2014 verify shipped vs received.",
-    "13 FG(s) have intercompany US PO quantity with no Verrayes coverage within the horizon (oversold ahead of the linked SO's queue position; residual supply not landed): PIDMC.IS.CX, PIDMC.KI.CX, PIDMC.TI.CX, PIDMX.IS.CX, PIDMX.TD.CX, PIGHO.CY45, PIGHO.CY50, PIGHO.SF50 (+5 more). Procurement action at Verrayes likely needed.",
+    "4 FG(s) have intercompany US PO quantity with no Verrayes coverage within the horizon (oversold ahead of the linked SO's queue position; residual supply not landed): PINXM.RS.CX, POCESV.1, POSKT.115, ZAALP.SPRT.30. Procurement action at Verrayes likely needed.",
     "6 intercompany PO(s) have no open/dated linked Italian SO in Q4 (closed or dateless); queue anchor fell back to the PO receipt date: PO-US-2600006, PO-US-2600007, PO-US-2600008, PO-US-2600010, PO-US-2600015, PO-US-2600016.",
     "BOM tab: 88 finished good(s) have no active BOM and are shown as single-node buyouts costed from their own purchase history (72 of them have any). Their COGS is a purchase price, not a build-up, so the category split reads as one line.",
     "BOM tab: 217 leaf component(s) have no cost in any source (192 packaging, 9 buyout, 7 other, 2 metal, 2 polymer, 2 adhesive, 2 service, 1 hardware) \u2014 their contribution to COGS is understated as zero. See the Cost gap panel.",
