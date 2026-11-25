@@ -1,15 +1,15 @@
 {
-  "refreshed_at": "2026-11-24T11:05:51.054579",
+  "refreshed_at": "2026-11-25T11:04:27.087650",
   "refreshed_by": "scheduled",
   "sku_count_verrayes": 328,
   "sku_count_usa3pl": 328,
   "override_count": 0,
   "dtc_pass": "ok",
   "manufacturing_pass": "ok",
-  "manufacturing_wo_count": 2495,
+  "manufacturing_wo_count": 2482,
   "sop_pass": "ok",
   "sop_row_counts": {
-    "q13": 1012,
+    "q13": 1014,
     "q13b": 73,
     "q14": 330,
     "q15": 359,
@@ -18,10 +18,10 @@
   "bom_pass": "ok",
   "bom_fg_count": 526,
   "asp_coverage": {
-    "sub1_realised": 299,
+    "sub1_realised": 300,
     "sub1_book": 299,
-    "sub3_realised": 245,
-    "sub3_book": 188
+    "sub3_realised": 247,
+    "sub3_book": 205
   },
   "unsellable_netted": {
     "items": 24,
@@ -43,10 +43,10 @@
   "warnings": [
     "2 intercompany PO(s) had computed in-transit exceeding the open PO quantity (clamped): PO-US-2600007, PO-US-2600008. Likely a receipt/quantity discrepancy \u2014 verify shipped vs received.",
     "5 FG(s) have intercompany US PO quantity with no Verrayes coverage within the horizon (oversold ahead of the linked SO's queue position; residual supply not landed): PINXM.RS.CX, POCEA.2, POCESV.1, POSKT.115, ZAALP.SPRT.30. Procurement action at Verrayes likely needed.",
-    "6 intercompany PO(s) have no open/dated linked Italian SO in Q4 (closed or dateless); queue anchor fell back to the PO receipt date: PO-US-2600006, PO-US-2600007, PO-US-2600008, PO-US-2600010, PO-US-2600015, PO-US-2600016.",
+    "7 intercompany PO(s) have no open/dated linked Italian SO in Q4 (closed or dateless); queue anchor fell back to the PO receipt date: PO-US-2600006, PO-US-2600007, PO-US-2600008, PO-US-2600010, PO-US-2600015, PO-US-2600016, PO-US-2600018.",
     "BOM tab: 88 finished good(s) have no active BOM and are shown as single-node buyouts costed from their own purchase history (72 of them have any). Their COGS is a purchase price, not a build-up, so the category split reads as one line.",
     "BOM tab: 217 leaf component(s) have no cost in any source (192 packaging, 9 buyout, 7 other, 2 metal, 2 polymer, 2 adhesive, 2 service, 1 hardware) \u2014 their contribution to COGS is understated as zero. See the Cost gap panel.",
     "BOM tab: purchase unit differs from stock unit and no conversion is configured for 0TBDTR1228, 0TBDTR164, 0TBDTR784, 0TBETR1238. Add settings.bom_uom_conversions.<item_id>.purchase_to_stock \u2014 these costs are wrong until you do.",
-    "BOM tab: 23 component(s) have a preferred-vendor price that disagrees with NetSuite's last purchase price by 3x or more \u2014 0CPGSLI.CO1 (list 4.88 vs last purchase 0.21, 23.2x); 0CAK03EW.AS (list 2.802 vs last purchase 0.6467, 4.3x); 3TA0008180.010000133 (list 0.4519 vs last purchase 2.997, 0.2x); 3TA0008160.010000143 (list 0.3981 vs last purchase 2.748, 0.1x) and others. The vendor price list is used ahead of last purchase price in the cascade, so a stale list entry wins wherever there is no purchase history. Worth a clean-up in the item master."
+    "BOM tab: 24 component(s) have a preferred-vendor price that disagrees with NetSuite's last purchase price by 3x or more \u2014 0CPGSLI.CO1 (list 4.88 vs last purchase 0.21, 23.2x); 0CAK03EW.AS (list 2.802 vs last purchase 0.6467, 4.3x); ZACLM.CHK (list 3.535 vs last purchase 17.56, 0.2x); 3TA0008180.010000133 (list 0.4519 vs last purchase 2.997, 0.2x) and others. The vendor price list is used ahead of last purchase price in the cascade, so a stale list entry wins wherever there is no purchase history. Worth a clean-up in the item master."
   ]
 }
